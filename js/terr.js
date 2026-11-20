@@ -109,23 +109,34 @@ const V_STATO = { nuovo: ["Nuovo / mai abitato", 1.06, 1.08], ottimo: ["Ottimo /
 const V_ALIAS = { ristrutturato: "ottimo", rinfrescare: "buono" };              // valutazioni salvate con i vecchi stati
 const V_BUONO = 450;                                                              // €/m²: da buono/abitabile a ottimo (bagno, cucina, pavimenti, pittura)
 const V_IMPREV = 0.10, V_DISAGIO = 0.03;                                         // da ristrutturare: +10% su lavori (progetto, pratiche, imprevisti) e 3% del valore per tempi e disagio
+/* coefficienti di mercato ricavati dagli annunci di Milano (data/coeff.js, tools/terr/coeff.py); se mancano, valori prudenti */
+const VC = (k, d) => (typeof COEFF !== "undefined" && COEFF.coef && COEFF.coef[k] != null) ? Math.exp(COEFF.coef[k]) : d;
+const V_F_NUOVO = () => VC("N", 1.06), V_F_BUONO = () => VC("B", 0.90), V_F_RISTR = () => VC("R", 0.84);
 /* prezzo al m² nello stato dell'immobile, partendo dal prezzo "ottimo" */
 function vStatoMq(vO, q) {
   const st = V_ALIAS[q.stato] || q.stato;
-  if (st === "nuovo") return vO * V_STATO.nuovo[1];
-  if (st === "buono") return vO - V_BUONO;
+  if (st === "nuovo") return vO * V_F_NUOVO();
+  if (st === "buono") return vO * V_F_BUONO();                                   // dal mercato: circa −10% rispetto a ottimo
   if (st === "ristrutturare") return vO - (+q.costoLavori || 1000) * (1 + V_IMPREV) - vO * V_DISAGIO;
   return vO;
 }
-/* piano e ascensore, rispetto al riferimento (1°–2° piano con ascensore) */
+/* piano e ascensore, rispetto al riferimento (2° piano con ascensore), dai prezzi degli annunci di Milano */
+function vPianoN(piano) {
+  const t = String(piano ?? "").toUpperCase().split(/[\/,]/).map(x => x.trim()).filter(Boolean);
+  const v = t.map(x => /^\d+/.test(x) ? parseInt(x) : x.startsWith("T") ? 0 : x.startsWith("R") ? 0.5 : x.startsWith("S") ? -0.5 : null).filter(x => x != null);
+  return v.length ? Math.max(...v) : 1;
+}
 function vPianoF(piano, asc, ultimo) {
-  const p = String(piano).toUpperCase(), n = /^\d+/.test(p) ? parseInt(p) : p.startsWith("T") ? 0 : p.startsWith("R") ? 0.5 : p.startsWith("S") ? -1 : 1;
-  let f = n < 0 ? 0.85 : n === 0 ? 0.93 : n === 0.5 ? 0.96 : n === 1 ? (asc ? 0.99 : 0.98) : n === 2 ? (asc ? 1 : 0.97) : asc ? (n >= 4 ? 1.03 : 1.01) : Math.max(0.82, 1 - 0.05 * (n - 1.6));
+  const n = vPianoN(piano);
+  let f = n < 0 ? VC("pT", 0.85) * 0.95 : n === 0 ? VC("pT", 0.85) : n === 0.5 ? VC("pR", 0.88) : n === 1 ? VC("p1", 0.96) : n === 2 ? (asc ? 1 : VC("p2n", 0.91))
+    : asc ? (n === 3 ? VC("p3a", 1) : n <= 5 ? VC("p4a", 1.01) : VC("p6a", 1.035)) : n === 3 ? VC("p3n", 0.87) : VC("p4n", 0.84);
   if (ultimo && asc && n >= 3) f *= 1.015;
   return f;
 }
+/* taglio: i piccoli costano di più al m², i grandi meno (elasticità dal mercato) */
+const vTaglioF = (mq, rif) => Math.pow(Math.max(20, mq) / Math.max(20, rif), (typeof COEFF !== "undefined" ? COEFF.coef.lmq : -0.18));
 /* accessori già compresi nel prezzo di un annuncio (dalle sue caratteristiche): quota da togliere per avere l'appartamento "nudo" */
-const V_ACC = { b: ["balcone", 0.015], t: ["terrazzo", 0.04], j: ["giardino", 0.03], c: ["cantina", 0.01] };
+const V_ACC = { b: ["balcone", 0.015], t: ["terrazzo", 0.07], j: ["giardino", 0.045], c: ["cantina", 0.01] };
 const V_CLASSE = { A: 1.06, B: 1.04, C: 1.02, D: 1.00, E: 0.99, F: 0.97, G: 0.96, "?": 0.99 };
 const V_EPOCA = { nuova: ["Dopo il 2015", 1.04], recente: ["1990–2015", 1.02], anni70: ["1970–1990", 0.98], anni50: ["1950–1970 (popolare)", 0.95],
   epoca: ["D'epoca signorile", 1.05], epocapop: ["D'epoca popolare", 0.97] };
@@ -140,7 +151,7 @@ function vCalcola(inp, ctx) {
   const cmp = ctx.milano && window.mmComps ? mmComps(ctx, q) : null;
   const Fm = ctx.milano && ctx.micro && TERR.milano.fasce?.micro?.[ctx.micro.n];
   const omi = ctx.milano && typeof omiMi === "function" ? omiMi(ctx.micro?.n) : null;
-  const vOfascia = Fm && Fm.b ? Fm.b[1] + V_BUONO : null;                                       // fascia "buono" della microzona + lavori leggeri
+  const vOfascia = Fm && Fm.b ? Fm.b[1] / V_F_BUONO() : null;                                       // fascia "buono" della microzona + lavori leggeri
   const vOomi = omi && omi.co ? (omi.co[0] + omi.co[1]) / 2 * 1.08 : null;                       // OMI ottimo (compravendite) + scarto tipico verso il prezzo richiesto
   // base OMI (o fascia della microzona) + comparabili pesati per somiglianza: 25% base, 75% comparabili
   const vObase = vOomi || vOfascia, fonteBase = vOomi ? "omi" : vOfascia ? "fascia" : null;
@@ -148,7 +159,7 @@ function vCalcola(inp, ctx) {
   if (cmp) { vO = vObase ? cmp.vO * 0.75 + vObase * 0.25 : cmp.vO; fonteO = "comparabili"; }
   else if (vOomi) { vO = vOomi; fonteO = "omi"; }
   else if (vOfascia) { vO = vOfascia; fonteO = "fascia"; }
-  else { vO = ctx.v + V_BUONO * (ctx.milano ? 1 : 0.6); fonteO = "media"; }
+  else { vO = ctx.v / (ctx.milano ? V_F_BUONO() : 0.94); fonteO = "media"; }
   const omiCheck = omi && omi.co ? { min: omi.co[0], max: omi.co[1], fuori: vO < omi.co[0] * 0.9 ? "sotto" : vO > omi.co[1] * 1.3 ? "sopra" : "" } : null;
   // 2. piano e ascensore
   const fP = q.tipo === "villetta" ? 1 : vPianoF(q.piano, q.ascensore, q.ultimo);
@@ -156,7 +167,7 @@ function vCalcola(inp, ctx) {
   const vOp = vO * fP, vS = vStatoMq(vOp, q);
   // 4. rettifiche di merito che gli annunci non dicono (massimo ±10% con i comparabili)
   const k = [], add = (t, f) => { if (Math.abs(f - 1) > 0.001) k.push([t, f]); };
-  if (!cmp) add("Taglio " + (mq < 40 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 110 ? "grande" : ""), mq < 40 ? 1.06 : mq < 60 ? 1.03 : mq > 150 ? 0.92 : mq > 110 ? 0.96 : 1);
+  if (!cmp) { const t = Math.min(1.15, Math.max(0.88, vTaglioF(mq, 70))); add("Taglio " + (mq < 45 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 100 ? "grande" : ""), t); }
   if (q.tipo === "attico") add("Attico", 1.08);
   if (q.tipo === "villetta") add("Villetta / casa indipendente", ctx.milano ? 1.05 : 1.0);
   if (q.tipo === "loft") add("Loft / open space", 0.95);
@@ -193,7 +204,10 @@ function vCalcola(inp, ctx) {
       fraz = { n: nF, mqU, eurMq: eurU, nCmp: cu.nNorm, ricavo, lavori: lav, margine: marg, valore: ricavo - lav - marg + box };
     }
   }
-  const incer = (cmp ? 0.05 : ctx.v ? 0.07 : 0.12) + (q.classe === "?" ? 0.01 : 0);
+  // forbice: stretta se i comparabili sono tanti e d'accordo, larga se pochi o discordi
+  const incer = (cmp ? Math.min(0.14, Math.max(0.035, 0.025 + 0.9 * cmp.disp / Math.sqrt(cmp.neff))) : ctx.v ? 0.08 : 0.12) + (q.classe === "?" ? 0.005 : 0);
+  const affid = { incer, liv: incer < 0.06 ? "alta" : incer < 0.09 ? "media" : "bassa",
+    perche: cmp ? `${num(cmp.neff, 1)} comparabili "effettivi", differenza media tra loro ${num(cmp.disp * 100, 0)}%` : "senza comparabili vicini: stima sulla media della zona" };
   // affitti
   const kAff = (mq < 45 ? 1.08 : mq > 110 ? 0.94 : 1) * (q.arredato ? 1.07 : 1) * (lavori ? V_STATO.ottimo[2] : st[2]) * (q.box !== "no" ? 1.04 : 1)
     * (q.posizione === "pregio" ? 1.04 : q.posizione === "rumorosa" ? 0.96 : 1) * (!ctx.milano && ctx.zonaCom === "centro" ? 1.05 : !ctx.milano && ctx.zonaCom === "periferia" ? 0.95 : 1);
@@ -208,7 +222,7 @@ function vCalcola(inp, ctx) {
   const im = { prezzo: acquisto, mq, lavori, arredato: q.arredato, spese: { condominio_mese: +q.condo || Math.round(mq * (ctx.milano ? 2.2 : 1.4)), imu_anno: 0 },
     affitti: { lungo: canone ? { canone } : null, medio: medio ? { canone: medio, mesi_occupati: 10, stima: true } : null, breve } };
   const sc = scenari(im, { offMax: acquisto });
-  return { cmp, wC: cmp ? 1 : 0, sup, supEst, k, kTot, st, fP, vO, vOp, vS, fonteO, vOfascia, vOomi, omiCheck, mqReale, base, box, valCasa, valore, fraz,
+  return { affid, cmp, wC: cmp ? 1 : 0, sup, supEst, k, kTot, st, fP, vO, vOp, vS, fonteO, vOfascia, vOomi, omiCheck, mqReale, base, box, valCasa, valore, fraz,
     m1: cmp ? sup * (cmp.vO * fP) * kTot : null, m2: cmp && vObase ? sup * vObase * fP * kTot : null, vObase, fonteBase,
     min: valore * (1 - incer), max: Math.max(valore * (1 + incer), fraz ? fraz.valore : 0), valDopo, lavori,
     canone, medio, breve, sc, acquisto, prezzo: +q.prezzo || 0, sconto: +q.prezzo > 0 ? (valore - q.prezzo) / valore : null,
@@ -270,7 +284,7 @@ function vRisultato(r, ctx) {
   const card = (key, t, sub) => L[key] ? `<div class="sc ${key === best ? "best" : ""}"><small>${t}</small><b class="${L[key].rendNetto >= .05 ? "s-good" : L[key].rendNetto >= .03 ? "s-warn" : "s-bad"}">${pct(L[key].rendNetto)}</b><span>${sub}<br>netto ${eur(L[key].netto)}/anno</span></div>`
     : `<div class="sc na"><small>${t}</small><b>—</b><span>dati non disponibili qui</span></div>`;
   return `<div class="vres">
-    <div class="vhead"><small>Valore di mercato stimato</small><b>${eur(r.valore)}</b><span>tra ${keur(r.min)} e ${keur(r.max)} · ${eur(r.valore / r.sup)}/m² commerciale</span></div>
+    <div class="vhead"><small>Valore di mercato stimato</small><b>${eur(r.valore)}</b><span>tra ${keur(r.min)} e ${keur(r.max)} · ${eur(r.valore / r.sup)}/m² commerciale</span><span>Affidabilità <b style="font-size:inherit;color:var(--cy2)">${r.affid.liv}</b> (±${num(r.affid.incer * 100, 0)}%): ${esc(r.affid.perche)}</span></div>
     ${ctx.mode && window.miModeBlock ? miModeBlock(r, ctx) : ""}
     <div class="offer" style="margin-top:10px">
       <div><small>Superficie commerciale</small><b>${num(r.sup, 1)} m²</b><em>con balconi, giardino, cantina</em></div>
@@ -288,9 +302,9 @@ function vRisultato(r, ctx) {
       <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)} · ${a.fonte}</span></div><b class="cy">${eur(a.mq2)}${a.peso != null ? `<small style="display:block;font-size:11px;font-style:normal;color:var(--muted)">peso ${Math.round(a.peso * 100)}%</small>` : ""}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
-        <tr><td>Prezzo al m² in stato ottimo, 1°–2° piano con ascensore, senza accessori (${r.fonteO === "comparabili" ? `${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m riportati a questo standard, media pesata per somiglianza (nessuno oltre il 30%): 75% · ${r.fonteBase === "omi" ? "OMI ottimo della zona" : "fascia della microzona"}: 25%` : r.fonteO === "fascia" ? "fascia buono della microzona + 450 €/m²" : r.fonteO === "omi" ? "OMI ottimo della zona" : "media della zona"})</td><td class="r">${eur(r.vO)}/m²</td></tr>
+        <tr><td>Prezzo al m² in stato ottimo, 2° piano con ascensore, stessa metratura, senza accessori (${r.fonteO === "comparabili" ? `${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m riportati a questo standard, media pesata per somiglianza (nessuno oltre il 30%): 75% · ${r.fonteBase === "omi" ? "OMI ottimo della zona" : "fascia della microzona"}: 25%` : r.fonteO === "fascia" ? "fascia buono della microzona + 450 €/m²" : r.fonteO === "omi" ? "OMI ottimo della zona" : "media della zona"})</td><td class="r">${eur(r.vO)}/m²</td></tr>
         ${Math.abs(r.fP - 1) > 0.001 ? `<tr><td>Piano e ascensore</td><td class="r">× ${num(r.fP, 3)}</td></tr>` : ""}
-        <tr><td>Stato: ${esc(r.st[0])}${q2.stato === "ristrutturare" ? ` (lavori ${eur(q2.costoLavori)}/m² +10% imprevisti, −3% per tempi)` : q2.stato === "buono" ? " (−450 €/m² per portarlo a ottimo)" : q2.stato === "nuovo" ? " (+6%)" : ""}</td><td class="r">${eur(r.vS)}/m²</td></tr>
+        <tr><td>Stato: ${esc(r.st[0])}${q2.stato === "ristrutturare" ? ` (lavori ${eur(q2.costoLavori)}/m² +10% imprevisti, −3% per tempi)` : q2.stato === "buono" ? ` (${num((1 - V_F_BUONO()) * 100, 0)}% sotto ottimo, dal mercato)` : q2.stato === "nuovo" ? ` (+${num((V_F_NUOVO() - 1) * 100, 0)}%)` : ""}</td><td class="r">${eur(r.vS)}/m²</td></tr>
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
         <tr><td>Superficie commerciale</td><td class="r">${num(r.sup, 1)} m²</td></tr>
         ${r.box ? `<tr><td>Box / posto auto</td><td class="r">+ ${eur(r.box)}</td></tr>` : ""}
@@ -325,6 +339,15 @@ function vCtxSalvata(x) {
   if (com) return { ...base, v: com.v, a: com.a, milano: com.n === "Milano", str: com.lat != null ? tStrVicino(com) : null, com, sel: k.sel || (com.lat != null ? { lat: com.lat, lon: com.lon, comune: com.n } : null) };
   return null;
 }
+/* trattativa vera della zona: dagli esiti (offerte / vendite) delle valutazioni salvate vicine */
+function vScontoZona(ctx) {
+  const s = ctx?.sel, L = store.get("valutazioni", []).filter(x => x.esito && (x.esito.vend || x.esito.off) && x.valore);
+  const vicini = L.filter(x => { const t = x.ck?.sel; if (s && t && t.lat != null && s.lat != null) return hav(s.lat, s.lon, t.lat, t.lon) < 1500;
+    return (ctx.micro && x.ck?.micro === ctx.micro.n) || (ctx.com && x.ck?.comune === ctx.com.n); });
+  if (!vicini.length) return { sconto: 0.05, n: 0 };
+  const r = median(vicini.map(x => (x.esito.vend || x.esito.off) / x.valore));
+  return { sconto: Math.min(0.15, Math.max(0, 1 - r)), n: vicini.length };
+}
 function vDettaglio(x, ctx) {
   const q = Object.assign({}, V_DEF, x.q), r = ctx ? vCalcola(q, ctx) : null, si = b => b ? "sì" : "no";
   const box = { no: "nessuno", posto: "posto auto", singolo: "box singolo", doppio: "box doppio" }[q.box] || q.box;
@@ -343,6 +366,10 @@ function vDettaglio(x, ctx) {
     <tr class="tot"><td>Valore salvato</td><td class="r">${eur(x.valore)}</td></tr>
     ${r && Math.abs(r.valore - x.valore) > 500 ? `<tr><td>Valore con i dati di oggi</td><td class="r">${eur(Math.round(r.valore))}</td></tr>` : ""}</tbody></table>
     <div class="btns">${r ? `<button class="btn pri" data-vpdf="${x.id}">Scarica il PDF</button>` : ""}<button class="btn sec" data-vriapri="${x.id}">Riapri nel valutatore</button></div>
+    <div class="vesito"><b>Com'è andata davvero</b><span class="note">Offerte e prezzo di vendita reali: servono a calcolare la trattativa vera della zona.</span>
+      <div class="vg"><label><span>Offerta migliore ricevuta</span><input type="number" inputmode="decimal" step="1000" min="0" data-eoff value="${x.esito?.off || ""}"><em>€</em></label>
+      <label><span>Venduto a</span><input type="number" inputmode="decimal" step="1000" min="0" data-evend value="${x.esito?.vend || ""}"><em>€</em></label></div>
+      <button class="btn sec" data-vesito="${x.id}">Salva l'esito</button>${x.esito ? `<span class="note"> salvato il ${esc(x.esito.data)}: ${x.esito.vend ? "venduto a " + eur(x.esito.vend) : "offerta " + eur(x.esito.off)} (${num(((x.esito.vend || x.esito.off) / x.valore - 1) * 100, 1)}% rispetto alla stima)</span>` : ""}</div>
     ${r ? "" : `<p class="note">Non ritrovo la zona di questa valutazione: riaprila nel valutatore e scegli la zona.</p>`}`;
 }
 document.addEventListener("click", e => {
@@ -352,6 +379,10 @@ document.addEventListener("click", e => {
     if (!d.hidden) { d.hidden = true; return; } d.innerHTML = vDettaglio(x, vCtxSalvata(x)); d.hidden = false; return; }
   const pd = e.target.closest("[data-vpdf]");
   if (pd) { const x = trova(pd.dataset.vpdf), ctx = x && vCtxSalvata(x); if (!ctx || !window.mmPdf) return; const q = Object.assign({}, V_DEF, x.q); mmPdf({ r: vCalcola(q, ctx), q, ctx }); return; }
+  const es = e.target.closest("[data-vesito]");
+  if (es) { const box = es.closest(".vesito"), off = +box.querySelector("[data-eoff]").value || 0, vend = +box.querySelector("[data-evend]").value || 0;
+    const L2 = L.map(x => x.id === es.dataset.vesito ? { ...x, esito: off || vend ? { off, vend, data: new Date().toLocaleDateString("it-IT") } : undefined } : x);
+    store.set("valutazioni", L2); const x = L2.find(y => y.id === es.dataset.vesito), d = document.querySelector(`[data-vdet="${x.id}"]`); if (d) d.innerHTML = vDettaglio(x, vCtxSalvata(x)); return; }
   const ri = e.target.closest("[data-vriapri]");
   if (ri) { const x = trova(ri.dataset.vriapri); if (!x) return; const ctx = vCtxSalvata(x);
     store.set("vform_" + x.dove, Object.assign({}, V_DEF, x.q));

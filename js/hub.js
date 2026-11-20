@@ -51,9 +51,9 @@ function miModeBlock(r, ctx) {
   const L = r.sc.list, costi = 1 + IMPOSTAZIONI.costi_acquisto_pct, lav = r.lavori || 0;
   const maxPer = (net, y) => net > 0 ? Math.max(0, net / y / costi - lav / costi) : null;
   if (ctx.mode === "cliente") {
-    const pub = Math.ceil(r.valore * 1.05 / 5000) * 5000, chiusura = Math.round(r.valore / 1000) * 1000;
-    return `<div class="mblock"><div><small>Prezzo consigliato di pubblicazione</small><b>${eur(pub)}</b><em>margine di trattativa del 5% circa</em></div>
-      <div><small>Prezzo di chiusura atteso</small><b>${eur(chiusura)}</b><em>tra ${keur(r.min)} e ${keur(r.max)}</em></div>
+    const Z = vScontoZona(ctx), pub = Math.round(r.valore / 5000) * 5000, chiusura = Math.round(r.valore * (1 - Z.sconto) / 1000) * 1000;
+    return `<div class="mblock"><div><small>Prezzo consigliato di pubblicazione</small><b>${eur(pub)}</b><em>in linea con le richieste di oggi · tra ${keur(r.min)} e ${keur(r.max)}</em></div>
+      <div><small>Prezzo di chiusura atteso</small><b>${eur(chiusura)}</b><em>${Z.n ? `trattativa ${num(Z.sconto * 100, 0)}%: ${Z.n} esit${Z.n === 1 ? "o reale" : "i reali"} in zona` : "trattativa 5% circa (stima generica: salva gli esiti reali per calcolarla)"}</em></div>
       <div><small>Al m² commerciale</small><b>${eur(r.valore / r.sup)}</b><em>${num(r.sup, 1)} m² commerciali</em></div></div>`;
   }
   if (ctx.mode === "inv") {

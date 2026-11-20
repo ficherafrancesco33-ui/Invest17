@@ -569,7 +569,7 @@ function mmAnnLayer(map) {
 const MM_GR = { R: "R", B: "B", O: "O", N: "O" };
 const V_GR = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
 /* stato di un annuncio → euro al m² per portarlo a "ottimo" (stesso principio della valutazione) */
-const MM_ST_OTT = { N: v => v / 1.06, O: v => v, B: v => v + 450, R: v => (v + 1000 * 1.10) / (1 - 0.03) };
+const MM_ST_OTT = { N: v => v / V_F_NUOVO(), O: v => v, B: v => v / V_F_BUONO(), R: v => v / V_F_RISTR() };   // riportati a "ottimo" con i coefficienti di mercato
 function mmComps(ctx, q) {
   if (!ctx || !ctx.milano || !ctx.micro) return null;
   const mq = +q.mq || 60, loc = +q.locali || Math.max(1, Math.round(mq / 28)), s = ctx.sel || ctx.micro;
@@ -581,7 +581,7 @@ function mmComps(ctx, q) {
   if (pool.length < 4) return null;
   // ogni annuncio riportato a: stato ottimo, piano di riferimento (1°–2° con ascensore), senza accessori (balcone, terrazzo, giardino, cantina, box)
   const vOf = a => {
-    let v = (MM_ST_OTT[a.st] || MM_ST_OTT.B)(a.mq2);
+    let v = (MM_ST_OTT[a.st] || MM_ST_OTT.B)(a.mq2) * vTaglioF(mq, a.mq);   // stato ottimo e stessa metratura del cliente
     v = v / vPianoF(a.piano, a.asc, false);
     let acc = 0; for (const c of a.ex || "") if (V_ACC[c]) acc += V_ACC[c][1];
     v = v * (1 - acc);
@@ -620,5 +620,7 @@ function mmComps(ctx, q) {
     c.forEach((a, i) => { a.peso = P[i]; }); }
   c.sort((a, b) => b.peso - a.peso);
   const vO = c.reduce((x, a) => x + a.vO * a.peso, 0);
-  return { lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
+  // affidabilità: quanto sono d'accordo i comparabili (dispersione pesata) e quanti contano davvero (numero effettivo)
+  const disp = Math.sqrt(c.reduce((x, a) => x + a.peso * (a.vO - vO) ** 2, 0)) / vO, neff = 1 / c.reduce((x, a) => x + a.peso ** 2, 0);
+  return { disp, neff, lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
 }
