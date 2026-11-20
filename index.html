@@ -69,7 +69,7 @@ img{max-width:100%}
 .logo b{font-family:var(--display);font-style:italic;font-weight:800;font-size:32px;letter-spacing:.05em;text-transform:uppercase;line-height:.95;color:var(--headtx)}
 .logo b small{display:block;font-family:var(--body);font-style:normal;font-weight:600;font-size:8.5px;letter-spacing:.2em;color:var(--cy);margin-top:3px;white-space:nowrap}
 .logo i svg{width:33px;height:33px;position:relative;z-index:1}
-.logo.spin i{animation:none}.logo.spin i svg{animation:lspin .7s cubic-bezier(.5,0,.3,1) infinite;transform-origin:50% 50%}.logo.spin b{animation:none;transform:none}
+.logo.ruota i{animation:lspin .7s cubic-bezier(.5,0,.3,1) infinite;transform-origin:50% 50%}
 .antw{position:relative;overflow:hidden;border-radius:8px;background:#fff;min-height:120px}.antf{position:absolute;left:0;top:0;width:794px;height:1123px;border:0;transform-origin:0 0;background:#fff}
 .plist{display:flex;flex-direction:column;gap:8px}
 .pcard{position:relative;display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 44px 12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;color:var(--tx)}
@@ -1054,7 +1054,7 @@ window.addEventListener("resize", hhSet);
 /* stile unico: Notte morbida */
 if (window.plSet) plSet();
 /* il logo ricarica i dati restando nella stessa pagina e allo stesso punto */
-$("#logo").addEventListener("click", e => { e.preventDefault(); $("#logo").classList.add("spin"); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} setTimeout(() => location.reload(), 650); });
+$("#logo").addEventListener("click", e => { e.preventDefault(); $("#logo").classList.add("ruota"); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} setTimeout(() => location.reload(), 650); });
 render();
 try { const y = sessionStorage.getItem("ks_y"); if (y != null) { sessionStorage.removeItem("ks_y"); const go = () => window.scrollTo(0, +y); go(); setTimeout(go, 400); setTimeout(go, 1200); } } catch {}
 </script>
