@@ -29,9 +29,9 @@ function vHomeK() {
   <div class="hello"><small>${esc(giorno)}</small><h1>${saluto}</h1><p class="sub">${AUTO.length ? `${AUTO.filter(x => x.trovato === oggi).length} immobili nuovi oggi · ` : "Nuovi annunci ogni mattina alle 10 · "}${seg.length} seguiti · ${ok.filter(x => x.A.score >= 70).length} affari in classifica</p></div>
   <div class="secs">
     <a class="sec" href="#inv"><small>Nord Italia entro 3 ore</small><b>Investimenti</b><span>Classifica generale, ricerca per zona, mappa B&amp;B, comuni</span><em>${all.length} immobili</em></a>
-    <a class="sec" href="#milano"><small>Agenzia e investimenti</small><b>Milano</b><span>Valutazioni ai clienti, B&amp;B, reddito, subaffitto, privati</span><em>${num(mmAnnunci().length)} annunci</em></a>
+    <a class="sec" href="#milano"><small>Agenzia e investimenti</small><b>Milano</b><span>Valutazioni ai clienti, investimenti, subaffitto, privati</span><em>${num(mmAnnunci().length)} annunci</em></a>
   </div>
-  <div class="quick">${[["#milano/cliente", "cliente", "Valuta per un cliente"], ["#milano/bnb", "bnb", "B&B a Milano"], ["#milano/sub", "sub", "Subaffitto"], ["#milano/privati", "privati", "Privati"], ["#inv/classifica", "classifica", "Classifica"], ["#inv/zona", "zona", "Cerca per zona"]]
+  <div class="quick">${[["#milano/cliente", "cliente", "Valuta per un cliente"], ["#milano/inv", "inv", "Investire a Milano"], ["#milano/sub", "sub", "Subaffitto"], ["#milano/privati", "privati", "Privati"], ["#inv/classifica", "classifica", "Classifica"], ["#inv/zona", "zona", "Cerca per zona"]]
     .map(([h, i, t]) => `<a href="${h}">${ico(i)}<span>${t}</span></a>`).join("")}</div>
   <h2>Osservatorio <small><a href="#seguiti">${seg.length ? "Tutti i seguiti" : "Come funziona"}</a></small></h2>
   <div class="itmap" id="itmap"><div class="mmload"><div class="spin"></div>Carico la mappa</div></div>

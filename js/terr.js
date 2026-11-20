@@ -226,7 +226,7 @@ function vRisultato(r, ctx) {
       <div><small>${r.valDopo ? "Valore dopo i lavori" : "Box / posto auto"}</small><b>${r.valDopo ? eur(r.valDopo) : r.box ? eur(r.box) : "—"}</b><em>${r.valDopo ? (r.margine >= 0 ? `margine +${keur(r.margine)} dopo costi` : `perdita ${keur(-r.margine)} dopo costi`) : "valore separato"}</em></div>
     </div>
     <h3 class="vh3">Quanto può rendere</h3>
-    <div class="scen">
+    <div class="scen" ${ctx.mode === "inv" ? "hidden" : ""}>
       ${card("lungo", "Affitto lungo", r.canone ? `${eur(r.canone)}/mese` : "")}
       ${card("medio", "Medio termine", r.medio ? `${eur(r.medio)}/mese × 10` : "")}
       ${card("breve", "B&B / Airbnb", r.breve ? `${eur(r.breve.adr)}/notte · ${pct(r.breve.occ, 0)}` : "")}

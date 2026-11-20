@@ -367,6 +367,16 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mblock small{display:block;font-family:var(--display);font-style:italic;font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .mblock b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:24px;color:var(--cy2);line-height:1.15}
 .mblock em{display:block;font-style:normal;font-size:11.5px;color:var(--tx2)}
+.invtgt{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 8px;font-size:13px;color:var(--tx2)}.invtgt select{width:auto}
+.usi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.uso{position:relative;border:1px solid var(--line);border-radius:14px;padding:12px;background:#131313;display:flex;flex-direction:column;gap:2px}
+.uso.best{border:2px solid var(--cy);background:linear-gradient(160deg,#211b09,#121212)}
+.uso small{font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.uso>b{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;line-height:1.1}
+.uso span{font-size:12px;color:var(--tx2)}.uso p{margin:6px 0 0;font-size:11.5px;color:var(--muted)}
+.umax{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}.umax b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:20px;color:var(--cy2)}.umax em{font-style:normal;font-size:11.5px;color:var(--tx2)}
+.ubest{position:absolute;top:-9px;right:10px;font-style:normal;font-family:var(--display);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--cy);color:var(--on);border-radius:999px;padding:2px 8px}
+@media (max-width:640px){.usi{grid-template-columns:1fr}}
 .verdict2{margin:12px 0;padding:10px 14px;border-radius:12px;font-weight:600;font-size:14px;border-left:4px solid}
 .verdict2.ok{border-color:var(--good);background:rgba(34,197,94,.08)}.verdict2.mid{border-color:var(--warn);background:rgba(245,158,11,.08)}.verdict2.ko{border-color:var(--bad);background:rgba(239,68,68,.08)}
 table.bp{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}

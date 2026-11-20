@@ -310,7 +310,7 @@ function mmScheda(s) {
       <div><small>Affitto</small><b>${num(c.a, 1)} €</b><em>al m² al mese</em></div>
       <div><small>Rendita</small><b class="cy">${pct(c.a * 12 / c.v, 1)}</b><em>lorda, lungo</em></div></div>` : `<p class="note">Qui non ho prezzi: tocca un punto dentro Milano o in un comune colorato.</p>`}
     ${near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} ${[...x.ln].map(l => `<span class="ml" style="--mc:${TERR.milano.metro_col[l]}">${l}</span>`).join("")} <em>${num(Math.round(x.d / 10) * 10)} m</em>`).join(" · ")}</p>` : ""}
-    ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>${{ bnb: "Calcola il B&B qui", lungo: "Calcola la rendita qui", sub: "Business plan qui", privati: "Vai all'elenco", cliente: "Valuta per il cliente" }[MM.mode] || "Valuta un immobile qui"}</button></div>` : ""}`;
+    ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>${{ inv: "Calcola l'investimento qui", sub: "Business plan qui", privati: "Vai all'elenco", cliente: "Valuta per il cliente" }[MM.mode] || "Valuta un immobile qui"}</button></div>` : ""}`;
 }
 
 /* ---------- vista Milano ---------- */
@@ -453,7 +453,7 @@ footer{margin-top:22px;border-top:1px solid #e6dccd;padding-top:8px;font-size:8.
 </style></head><body>
 <button class="printbtn" onclick="window.print()">Salva PDF / Stampa</button>
 <header><img src="${logo}" alt="Maison Collection"><div class="d sans">Valutazione immobiliare<br>${oggi}</div></header>
-<h1>${ctx.mode === "bnb" ? "Analisi investimento B&amp;B" : ctx.mode === "lungo" ? "Analisi investimento a reddito" : "Stima del valore di mercato"}</h1>
+<h1>${ctx.mode === "inv" ? "Analisi dell'investimento" : "Stima del valore di mercato"}</h1>
 ${ctx.cliente ? `<p class="addr" style="margin-bottom:2px">Preparata per <b>${esc(ctx.cliente)}</b></p>` : ""}
 <p class="addr">${esc(ctx.nome)}${s.nil ? ` · quartiere ${esc(s.nil)}` : ""}${ctx.micro ? ` · microzona ${esc(ctx.micro.n)}` : ""}</p>
 <div class="hero">

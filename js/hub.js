@@ -8,6 +8,7 @@
    · Seguiti (osservatorio): immobili e annunci con la stella
    ========================================================================== */
 const ICO = {
+  inv: '<path d="M4 20h16"/><path d="M6 20V10l6-5 6 5v10"/><path d="M10 14h4M12 12v4"/>',
   cliente: '<path d="M4 20h16"/><path d="M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/><path d="M15.5 8.5l3-3"/>',
   bnb: '<path d="M3 18h18"/><path d="M5 18V9l7-5 7 5v9"/><path d="M9 18v-4h6v4"/><circle cx="18.5" cy="5.5" r="2"/>',
   lungo: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9h16M9 3v4M15 3v4"/><path d="M8 14h3"/>',
@@ -27,10 +28,8 @@ const ico = (k, cls = "") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none
 const MI_MODI = {
   cliente: { t: "Valutazione per il cliente", c: "Per chi vende", d: "Stima professionale con comparabili e PDF Maison Collection da consegnare al proprietario.",
     sub: "Tocca il palazzo sulla mappa (o cerca l'indirizzo), inserisci le caratteristiche: ottieni valore, prezzo consigliato di pubblicazione e PDF con il logo.", form: "Dati dell'immobile del cliente" },
-  bnb: { t: "Investimento B&B", c: "Affitto breve", d: "Quanto rende comprare a Milano per affittare a notte: incasso, occupazione, netto, prezzo massimo da offrire.",
-    sub: "Scegli il punto sulla mappa e l'immobile che stai guardando: vedi subito quanto rende come B&B e fino a quanto conviene offrire.", form: "Immobile da comprare per B&B" },
-  lungo: { t: "Investimento a reddito", c: "Affitto lungo 4+4 / 3+2", d: "Canone di mercato, rendita netta e prezzo massimo per avere il rendimento che vuoi.",
-    sub: "Scegli la zona e l'immobile: canone di mercato, rendita netta dopo tasse e spese, prezzo massimo per il rendimento che cerchi.", form: "Immobile da comprare e affittare" },
+  inv: { t: "Investimento", c: "Compro e affitto", d: "Per l'immobile che guardi: B&B, medio termine e affitto lungo a confronto, il migliore e il prezzo massimo da offrire.",
+    sub: "Scegli il palazzo sulla mappa e inserisci l'immobile: vedi affiancati B&B, medio termine e affitto lungo, quale rende di più e fino a quanto offrire.", form: "Immobile da comprare e mettere a reddito" },
   sub: { t: "Subaffitto B&B", c: "Rent to rent", d: "Prendi in affitto un appartamento e lo riaffitti a notte: business plan, guadagno mensile e rientro dell'investimento.",
     sub: "Senza comprare: prendi in affitto (4+4) e gestisci come B&B con il consenso scritto del proprietario. Calcola canone sostenibile, guadagno e rientro.", form: "Business plan del subaffitto" },
   privati: { t: "Annunci dei privati", c: "Vendite senza agenzia", d: "Sulla mappa gli immobili messi in vendita da privati, con il link all'annuncio. I nuovi vengono segnalati.",
@@ -39,7 +38,7 @@ const MI_MODI = {
     sub: "Milano e hinterland in 3D: tocca un palazzo per vedere via, quartiere e prezzi. Microzone di prezzo, quartieri, metro, servizi e annunci.", form: "Valuta un immobile a Milano e hinterland" },
 };
 function miBread(mode) {
-  return `<nav class="bread"><a href="#milano">Milano</a>${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Investimento ", "").replace("Valutazione per il ", "Valuta "))}</span></a>`).join("")}</nav>`;
+  return `<nav class="bread"><a href="#milano">Milano</a>${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Valutazione per il ", "Valuta ").replace("Annunci dei privati", "Privati").replace("Mappa di Milano", "Mappa"))}</span></a>`).join("")}</nav>`;
 }
 function vMilanoHub() {
   const A = mmAnnunci(), np = A.filter(a => a.priv).length, visti = new Set(store.get("ann_visti", []));
@@ -63,18 +62,20 @@ function miModeBlock(r, ctx) {
       <div><small>Prezzo di chiusura atteso</small><b>${eur(chiusura)}</b><em>tra ${keur(r.min)} e ${keur(r.max)}</em></div>
       <div><small>Al m² commerciale</small><b>${eur(r.valore / r.sup)}</b><em>${num(r.sup, 1)} m² commerciali</em></div></div>`;
   }
-  if (ctx.mode === "bnb") {
-    const b = L.breve; if (!b || !r.breve) return `<p class="note">Qui non ho dati sugli affitti brevi.</p>`;
-    const lordo = r.breve.adr * r.breve.occ * 365;
-    return `<div class="mblock"><div><small>Incasso a notte</small><b>${eur(r.breve.adr)}</b><em>${pct(r.breve.occ, 0)} di occupazione · ${num(Math.round(r.breve.occ * 365))} notti</em></div>
-      <div><small>Netto all'anno</small><b class="${b.rendNetto >= .05 ? "s-good" : b.rendNetto >= .03 ? "s-warn" : "s-bad"}">${eur(b.netto)}</b><em>lordo ${keur(lordo)} · rendimento ${pct(b.rendNetto)}</em></div>
-      <div><small>Offri al massimo</small><b>${eur(maxPer(b.netto, 0.06))}</b><em>per avere il 6% netto${lav ? ", lavori inclusi" : ""}</em></div></div>`;
-  }
-  if (ctx.mode === "lungo") {
-    const b = L.lungo; if (!b) return "";
-    return `<div class="mblock"><div><small>Canone di mercato</small><b>${eur(r.canone)}</b><em>al mese · ${eur(r.canone * 12)} all'anno</em></div>
-      <div><small>Rendita netta</small><b class="${b.rendNetto >= .045 ? "s-good" : b.rendNetto >= .03 ? "s-warn" : "s-bad"}">${pct(b.rendNetto)}</b><em>${eur(b.netto)} netti all'anno</em></div>
-      <div><small>Offri al massimo</small><b>${eur(maxPer(b.netto, 0.045))}</b><em>per avere il 4,5% netto</em></div></div>`;
+  if (ctx.mode === "inv") {
+    const T = +store.get("inv_target", 0.055), USI = [["breve", "B&B", "affitto a notte", "Rende di più, ma va gestito ogni giorno: check-in, pulizie, recensioni. Serve il CIN."],
+      ["medio", "Medio termine", "1-18 mesi, transitorio", "Via di mezzo: studenti e lavoratori in trasferta, meno gestione del B&B."],
+      ["lungo", "Affitto lungo", "4+4 o 3+2", "Il più tranquillo: un inquilino, poca gestione, ma rende meno e c'è il rischio morosità."]];
+    const ok = USI.filter(([k]) => L[k]), best = ok.sort((a, b) => L[b[0]].rendNetto - L[a[0]].rendNetto)[0]?.[0];
+    const det = { breve: r.breve ? `${eur(r.breve.adr)} a notte · ${pct(r.breve.occ, 0)} occupazione` : "", medio: r.medio ? `${eur(r.medio)} al mese · 10 mesi l'anno` : "", lungo: r.canone ? `${eur(r.canone)} al mese` : "" };
+    return `<div class="invtgt"><span>Rendimento netto che vuoi</span><select data-target>${[0.04, 0.045, 0.05, 0.055, 0.06, 0.07, 0.08].map(v => `<option value="${v}" ${Math.abs(v - T) < 1e-9 ? "selected" : ""}>${pct(v, 1)}</option>`).join("")}</select></div>
+    <div class="usi">${USI.map(([k, t, c, nota]) => { const x = L[k]; if (!x) return `<div class="uso na"><small>${t}</small><b>—</b><em>dati non disponibili in questa zona</em></div>`;
+      const mx = maxPer(x.netto, T);
+      return `<div class="uso ${k === best ? "best" : ""}">${k === best ? `<i class="ubest">Il migliore</i>` : ""}<small>${t} · ${c}</small>
+        <b class="${x.rendNetto >= .05 ? "s-good" : x.rendNetto >= .035 ? "s-warn" : "s-bad"}">${pct(x.rendNetto)}</b>
+        <span>netto ${eur(x.netto)} all'anno · ${eur(x.netto / 12)} al mese</span><span>${det[k]}</span>
+        <div class="umax"><small>Offri al massimo</small><b>${eur(mx)}</b><em>per avere il ${pct(T, 1)} netto${lav ? ", lavori inclusi" : ""}${r.prezzo ? ` · chiesto ${eur(r.prezzo)} ${r.prezzo <= mx ? "✓" : "✗"}` : ""}</em></div>
+        <p>${nota}</p></div>`; }).join("")}</div>`;
   }
   return "";
 }
@@ -316,8 +317,10 @@ function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "z
 function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(b, c); }
 
 /* ---------------- collegamento al router ---------------- */
-TERR_VIEWS.milano = [a => !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "mappa"),
-  (a, b) => { if (!a) return afterMilanoHub(); MM.onSel = null; afterMilano3D(MI_MODI[a] ? (a === "mappa" ? b : null) : a); }];
+const MI_ALIAS = { bnb: "inv", lungo: "inv" };
+document.addEventListener("change", e => { const t = e.target.closest("[data-target]"); if (!t) return; store.set("inv_target", +t.value); $("#mvf")?.dispatchEvent(new Event("change", { bubbles: true })); });
+TERR_VIEWS.milano = [a => { a = MI_ALIAS[a] || a; return !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "mappa"); },
+  (a, b) => { a = MI_ALIAS[a] || a; if (!a) return afterMilanoHub(); MM.onSel = null; afterMilano3D(MI_MODI[a] ? (a === "mappa" ? b : null) : a); }];
 
 /* ---------------- illustrazioni per gli annunci senza foto ----------------
    Ogni immobile ha un disegno suo, sempre uguale (dipende dal suo id): tipo di casa,
