@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Keystone</title>
 <meta name="description" content="Analisi di immobili da mettere a reddito: valore, comparabili, rendimenti e notizie">
-<meta name="theme-color" content="#070707">
-<script>try{document.documentElement.dataset.th=JSON.parse(localStorage.getItem("i17_tema"))||"oro"}catch(e){document.documentElement.dataset.th="oro"}</script>
+<meta name="theme-color" content="#111823">
+<script>document.documentElement.dataset.th="notte"</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -39,8 +39,6 @@
 :root[data-th=dream] body{background:radial-gradient(900px 500px at 85% -10%,rgba(168,85,247,.25),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(59,130,246,.15),transparent 60%),linear-gradient(180deg,#1a0f4a,var(--bg) 40%)}
 :root[data-th=sabbia] body{background:var(--bg)}
 :root[data-th=notte] body{background:linear-gradient(180deg,#1d2635,var(--bg) 40%)}
-.temabtn{display:flex;align-items:center;gap:7px;border:1px solid var(--line2);background:rgba(255,255,255,.06);color:var(--headtx);border-radius:999px;padding:6px 11px 6px 7px;font-family:var(--display);font-style:italic;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
-.temabtn i{width:18px;height:18px;border-radius:50%;background:conic-gradient(var(--cy) 0 50%,var(--bg) 50% 100%);border:1.5px solid var(--headtx)}
 :root[data-th=sabbia] .nav a{color:#d6e3e6;background:rgba(255,255,255,.1)}
 :root[data-th=sabbia] .chip:not(.on),:root[data-th=sabbia] select,:root[data-th=sabbia] input,:root[data-th=sabbia] .hback{background:#fff;color:var(--tx)}
 :root[data-th=sabbia] .chip.on{color:var(--on)}
@@ -372,10 +370,12 @@ input[type=search]{border-radius:999px;font-size:13px}
   background:linear-gradient(160deg,var(--card2),var(--head));box-shadow:0 6px 16px rgba(0,0,0,.35);transition:transform .15s,border-color .15s}
 .hubc:hover{border-color:var(--cy);transform:translateY(-2px)}
 .hubc.big{grid-column:1/-1;background:linear-gradient(135deg,var(--soft),var(--card) 60%);border-color:var(--line2)}
-.hubc .hi{width:34px;height:34px;color:var(--cy2);margin-bottom:6px}
+.hubc .hi{width:30px;height:30px;color:var(--cy2);grid-row:1/4;align-self:center}
+.hubc{display:grid!important;grid-template-columns:42px minmax(0,1fr);column-gap:12px;row-gap:1px;padding:13px 14px!important}
+.hubc small,.hubc b,.hubc span,.hubc .hubf{grid-column:2}
 .hubc small{font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .hubc b{font-family:var(--display);font-style:italic;font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--cy2);line-height:1.05}
-.hubc.big b{font-size:28px}
+.hubc.big b{font-size:24px}
 .hubc span{font-size:13px;color:var(--tx2)}
 .hubn{position:absolute;top:12px;right:12px;font-style:normal;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--cy);color:var(--on);border-radius:999px;padding:3px 9px}
 .hubf{font-style:normal;font-size:11.5px;color:var(--muted);margin-top:4px}
@@ -409,6 +409,11 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .zsearch{position:relative;margin:14px 0 8px}.zsearch svg{position:absolute;left:14px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--cy)}
 .zsearch input{width:100%;background:var(--card);color:var(--tx);border:1.5px solid var(--line2);border-radius:999px;padding:13px 16px 13px 44px;font-size:16px;font-family:inherit}
 .zsearch input:focus{outline:none;border-color:var(--cy)}
+.clmapw{position:relative;margin:4px -14px 0}
+.clmap{height:62vh;min-height:360px;border-radius:0;border-left:0;border-right:0}
+.clmap.drawing{cursor:crosshair;touch-action:none;outline:3px solid var(--cy);outline-offset:-3px}
+.cltools{position:absolute;left:12px;right:12px;bottom:12px;z-index:500;display:flex;gap:8px;justify-content:center;pointer-events:none}.cltools .btn{pointer-events:auto;box-shadow:0 4px 14px rgba(0,0,0,.4);padding:9px 14px;font-size:15px}
+.clhint{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:500;background:var(--cy);color:var(--on);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;white-space:nowrap}
 .zres{display:grid;gap:6px;margin-bottom:10px}
 .zr{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:var(--card)}
 .zr .pill{font-size:17px;padding:2px 8px 1px;flex:none}.zr b{display:block;font-size:14px}.zr em{font-style:normal;font-size:12px;color:var(--tx2)}
@@ -489,6 +494,11 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 @media (max-width:560px){.hub{grid-template-columns:1fr}.mblock{grid-template-columns:1fr}.secs{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}.zsearch{position:relative;margin:14px 0 8px}.zsearch svg{position:absolute;left:14px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--cy)}
 .zsearch input{width:100%;background:var(--card);color:var(--tx);border:1.5px solid var(--line2);border-radius:999px;padding:13px 16px 13px 44px;font-size:16px;font-family:inherit}
 .zsearch input:focus{outline:none;border-color:var(--cy)}
+.clmapw{position:relative;margin:4px -14px 0}
+.clmap{height:62vh;min-height:360px;border-radius:0;border-left:0;border-right:0}
+.clmap.drawing{cursor:crosshair;touch-action:none;outline:3px solid var(--cy);outline-offset:-3px}
+.cltools{position:absolute;left:12px;right:12px;bottom:12px;z-index:500;display:flex;gap:8px;justify-content:center;pointer-events:none}.cltools .btn{pointer-events:auto;box-shadow:0 4px 14px rgba(0,0,0,.4);padding:9px 14px;font-size:15px}
+.clhint{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:500;background:var(--cy);color:var(--on);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;white-space:nowrap}
 .zres{display:grid;gap:6px;margin-bottom:10px}
 .zr{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:var(--card)}
 .zr .pill{font-size:17px;padding:2px 8px 1px;flex:none}.zr b{display:block;font-size:14px}.zr em{font-style:normal;font-size:12px;color:var(--tx2)}
@@ -501,7 +511,6 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
     <button class="hback" id="hback" aria-label="Indietro" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
     <a class="logo" href="#home" id="logo" title="Aggiorna la pagina"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V27a16 16 0 0 1 32 0v13" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M19.2 9.6h9.6l-1.6 11.2h-6.4z" fill="currentColor"/><circle cx="24" cy="31" r="3.1" fill="currentColor"/><path d="M24 33.5v5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></i><b>Keystone<small>Maison Collection</small></b></a>
     <span class="sp"></span>
-    <button class="temabtn" id="tema" aria-label="Cambia stile"><i></i><span id="temaN">Oro</span></button>
   </div>
   <nav class="nav" id="nav">
   <a href="#home" data-v="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Home</span></a>
@@ -999,12 +1008,8 @@ window.addEventListener("hashchange", () => { NAVN++; try { sessionStorage.setIt
 $("#hback").addEventListener("click", () => { const h = location.hash.slice(1) || "home"; if (NAVN > 0) { NAVN -= 2; history.back(); } else location.hash = PARENT(h); });
 const hhSet = () => document.documentElement.style.setProperty("--hh", $(".top").offsetHeight + "px");
 window.addEventListener("resize", hhSet);
-/* stile dell'app: Carbone e oro, Sabbia e terracotta, Notte morbida, Dreamers notte (un tocco = stile successivo) */
-const TEMI = [["oro", "Oro", "#070707"], ["sabbia", "Sabbia", "#2d4a53"], ["notte", "Notte", "#111823"], ["dream", "Dreamers", "#0d0726"]];
-function temaSet(k) { const t = TEMI.find(x => x[0] === k) || TEMI[0]; document.documentElement.dataset.th = t[0]; store.set("tema", t[0]);
-  $("#temaN").textContent = t[1]; document.querySelector('meta[name="theme-color"]')?.setAttribute("content", t[2]); if (window.plSet) plSet(); }
-temaSet(document.documentElement.dataset.th);
-$("#tema").addEventListener("click", () => { const i = TEMI.findIndex(x => x[0] === document.documentElement.dataset.th); temaSet(TEMI[(i + 1) % TEMI.length][0]); render(true); });
+/* stile unico: Notte morbida */
+if (window.plSet) plSet();
 /* il logo ricarica i dati restando nella stessa pagina e allo stesso punto */
 $("#logo").addEventListener("click", e => { e.preventDefault(); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} location.reload(); });
 render();

@@ -218,14 +218,13 @@ document.addEventListener("click", e => {
 
 /* ---------------- INVESTIMENTI (Nord Italia) ---------------- */
 const INV_MODI = {
-  classifica: { t: "Classifica generale", c: "Tutti gli immobili", d: "Gli immobili entro 3 ore ordinati per punteggio, con mappa del Nord Italia e filtri.", href: "#inv/classifica" },
-  zona: { t: "Ricerca per zona", c: "Comune, zona, via", d: "Scrivi dove vuoi cercare: la mappa ti porta lì e apri la scheda dell'immobile.", href: "#inv/zona" },
+  classifica: { t: "Classifiche", c: "Generale o per zona", d: "La classifica di tutti gli immobili, oppure di una zona: scrivi un posto o disegnala col dito sulla mappa.", href: "#inv/classifica" },
   dove: { t: "Dove cercare", c: "Tutti i comuni", d: "Rendimento netto di B&B e affitto normale comune per comune, con filtri lago, sci, ospedali, università e aziende.", href: "#inv/dove", i: "zona" },
   archivio: { t: "I miei immobili", c: "Archivio", d: "Gli annunci che hai mandato tu, analizzati uno per uno.", href: "#miei" },
   auto: { t: "Trovati in automatico", c: "Ogni mattina", d: "Gli immobili che arrivano dalle notifiche: qui finiscono anche i nuovi del banner.", href: "#auto" },
 };
 function invBread(k) {
-  return `<nav class="bread"><a href="#inv">Investimenti</a>${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Classifica generale", "Classifica").replace("Ricerca per zona", "Per zona").replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
+  return `<nav class="bread"><a href="#inv">Investimenti</a>${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
 }
 const invAll = () => [...MIEI.map(im => ({ im, src: "miei" })), ...AUTO.map(im => ({ im, src: "auto" }))];
 function vInvHub() {
@@ -260,22 +259,64 @@ function bindInvFiltri(key, f) {
 }
 const invPts = rows => rows.filter(x => x.im.lat != null).map(x => ({ lat: x.im.lat, lng: x.im.lng, col: stato(x.A.score).col,
   html: `<b>${esc(x.im.comune || "")}</b><br>${esc(x.im.titolo || "")}<br>${eur(x.im.prezzo)} · netto ${pct(x.A.rend)} · <b>${x.A.score ?? "—"}</b>${x.d ? `<br>${tOre(x.d.min)} da casa` : ""}<br><a class="go" href="#imm/${x.src}/${encodeURIComponent(x.im.id)}">Apri la scheda →</a>` }));
-function vInvClassifica() {
-  const f = Object.assign({}, INV_F0, store.get("f_inv", {})), rows = invRows(f), regs = [...new Set(invAll().map(x => x.im.regione).filter(Boolean))].sort();
+/* CLASSIFICHE: generale, oppure per la zona cercata (testo) o disegnata col dito sulla mappa */
+function clInPoly(lat, lng, P) { let c = false; for (let i = 0, j = P.length - 1; i < P.length; j = i++) { const [yi, xi] = P[i], [yj, xj] = P[j]; if ((yi > lat) !== (yj > lat) && lng < (xj - xi) * (lat - yi) / (yj - yi) + xi) c = !c; } return c; }
+function clRows() {
+  const f = Object.assign({}, INV_F0, store.get("f_inv", {})), q = store.get("cl_q", ""), P = store.get("cl_poly", null);
+  const t = tnorm(q).trim(), parole = t ? t.split(/\s+/) : [];
+  return invRows(f).filter(({ im }) => (!parole.length || parole.every(w => tnorm([im.comune, im.zona, im.provincia, im.regione, im.titolo].join(" ")).includes(w)))
+    && (!P || (im.lat != null && clInPoly(im.lat, im.lng, P))));
+}
+function clList() {
+  const f = Object.assign({}, INV_F0, store.get("f_inv", {})), rows = clRows(), q = store.get("cl_q", ""), P = store.get("cl_poly", null);
   const ok = rows.filter(x => x.A.score != null), med = median(ok.map(x => x.A.rend).filter(v => v != null));
-  return `${invBread("classifica")}<h1>Classifica generale</h1><p class="sub">Tutti gli immobili entro 3 ore, dal migliore. Tocca un puntino o una riga per aprire la scheda.</p>
-  ${invFiltri(f, regs)}
-  <div class="kpis"><div class="kpi"><small>Immobili</small><b>${rows.length}</b><span>con questi filtri</span></div>
+  const tit = P && q ? `Zona disegnata · "${esc(q)}"` : P ? "Zona disegnata" : q ? `"${esc(q)}"` : "Classifica generale";
+  return `<div class="kpis"><div class="kpi"><small>Immobili</small><b>${rows.length}</b><span>${P || q ? "in questa zona" : "con questi filtri"}</span></div>
     <div class="kpi"><small>Affari</small><b class="cy">${ok.filter(x => x.A.score >= 70).length}</b><span>punteggio 70+</span></div>
     <div class="kpi"><small>Netto medio</small><b>${pct(med)}</b><span>rendimento</span></div></div>
-  <div class="map" id="map" style="margin-top:12px"></div>
-  <div class="legend"><span><i style="background:#22c55e;color:#22c55e"></i>Affare (70+)</span><span><i style="background:#f59e0b;color:#f59e0b"></i>Da valutare</span><span><i style="background:#ef4444;color:#ef4444"></i>Debole</span></div>
-  <h2>Classifica <small>${rows.length} immobili</small></h2>
-  ${rows.length ? `<div class="list grid2">${rows.slice(0, 60).map((x, i) => cardIm(x.A, x.src, f.sort === "score" || f.sort === "rend" ? i + 1 : 0)).join("")}</div>${rows.length > 60 ? `<p class="note">Mostro i primi 60 su ${rows.length}: usa i filtri o la ricerca per zona.</p>` : ""}` : `<p class="sub">Nessun immobile con questi filtri.</p>`}`;
+  <h2>${tit} <small>${rows.length} immobili</small></h2>
+  ${rows.length ? `<div class="list grid2">${rows.slice(0, 80).map((x, i) => cardIm(x.A, x.src, f.sort === "score" || f.sort === "rend" ? i + 1 : 0)).join("")}</div>` : `<div class="empty"><b>Nessun immobile qui</b><p>${P ? "Disegna una zona più ampia o togli quella disegnata." : "Cambia la ricerca o i filtri."} Se ti interessa questa zona, mandami il link di una ricerca e la carico.</p></div>`}`;
+}
+function vInvClassifica() {
+  const f = Object.assign({}, INV_F0, store.get("f_inv", {})), regs = [...new Set(invAll().map(x => x.im.regione).filter(Boolean))].sort(), P = store.get("cl_poly", null);
+  return `${invBread("classifica")}<h1>Classifiche</h1><p class="sub">Classifica generale, oppure scrivi un posto o disegna col dito la zona che ti interessa: la classifica si aggiorna su quella zona.</p>
+  <div class="zsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+    <input type="search" id="clq" value="${esc(store.get("cl_q", ""))}" placeholder="Comune, zona, via, trilocale…" autocomplete="off" enterkeyhint="search"></div>
+  <div class="clmapw"><div class="map clmap" id="clmap"></div>
+    <div class="cltools"><button class="btn pri" id="cldraw">✏️ Disegna la zona</button><button class="btn sec" id="clclear" ${P ? "" : "hidden"}>✕ Togli la zona</button></div>
+    <div class="clhint" id="clhint" hidden>Tieni il dito premuto e disegna il contorno della zona</div></div>
+  ${invFiltri(f, regs)}
+  <div id="cllist">${clList()}</div>`;
 }
 function afterInvClassifica() {
-  const f = Object.assign({}, INV_F0, store.get("f_inv", {}));
-  drawMap($("#map"), invPts(invRows(f))); bindInvFiltri("f_inv", f);
+  const f = Object.assign({}, INV_F0, store.get("f_inv", {})), el = $("#clmap"), m = tMap(el, [[45.7, 9.6], 8]);
+  const lay = m ? L.layerGroup().addTo(m) : null; let polyLay = null;
+  const drawPts = () => { if (!lay) return; lay.clearLayers(); const rows = clRows(), b = [];
+    invPts(rows).forEach(p => { L.circleMarker([p.lat, p.lng], { radius: 8, color: "#000", weight: 1.5, fillColor: p.col, fillOpacity: .95 }).bindPopup(p.html).addTo(lay); b.push([p.lat, p.lng]); });
+    const P = store.get("cl_poly", null);
+    if (P) m.fitBounds(P, { padding: [20, 20] }); else if (b.length) m.fitBounds(b, { padding: [40, 40], maxZoom: 13 }); };
+  const showPoly = () => { if (!m) return; if (polyLay) { m.removeLayer(polyLay); polyLay = null; } const P = store.get("cl_poly", null);
+    if (P) polyLay = L.polygon(P, { color: getComputedStyle(document.documentElement).getPropertyValue("--cy").trim() || "#c9a227", weight: 3, fillOpacity: .12, dashArray: "6 4" }).addTo(m);
+    $("#clclear").hidden = !P; };
+  const refresh = () => { $("#cllist").innerHTML = clList(); drawPts(); };
+  showPoly(); drawPts();
+  // disegno a mano libera
+  let drawing = false, pts = [], line = null;
+  const btn = $("#cldraw"), hint = $("#clhint");
+  const stop = () => { drawing = false; el.classList.remove("drawing"); btn.textContent = "✏️ Disegna la zona"; hint.hidden = true; if (m) { m.dragging.enable(); m.touchZoom && m.touchZoom.enable(); } };
+  btn.addEventListener("click", () => { if (!m) return; if (drawing) return stop(); drawing = true; pts = []; el.classList.add("drawing"); btn.textContent = "Annulla"; hint.hidden = false;
+    m.dragging.disable(); m.touchZoom && m.touchZoom.disable(); });
+  const ll = e => { const r = el.getBoundingClientRect(), t = e.touches ? e.touches[0] : e; return m.containerPointToLatLng([t.clientX - r.left, t.clientY - r.top]); };
+  const down = e => { if (!drawing) return; e.preventDefault(); pts = [ll(e)]; if (line) m.removeLayer(line); line = L.polyline(pts, { color: getComputedStyle(document.documentElement).getPropertyValue("--cy").trim(), weight: 3 }).addTo(m); };
+  const move = e => { if (!drawing || !pts.length) return; e.preventDefault(); pts.push(ll(e)); line.setLatLngs(pts); };
+  const up = () => { if (!document.body.contains(el) || !drawing || !pts.length) return; if (line) { m.removeLayer(line); line = null; }
+    if (pts.length > 5) { const step = Math.max(1, Math.floor(pts.length / 120)); store.set("cl_poly", pts.filter((_, i) => i % step === 0).map(p => [+p.lat.toFixed(5), +p.lng.toFixed(5)])); }
+    pts = []; stop(); showPoly(); refresh(); };
+  if (m) { el.addEventListener("pointerdown", down); el.addEventListener("pointermove", move); window.addEventListener("pointerup", up, { once: false });
+    el.addEventListener("touchstart", down, { passive: false }); el.addEventListener("touchmove", move, { passive: false }); el.addEventListener("touchend", up); }
+  $("#clclear").addEventListener("click", () => { store.set("cl_poly", null); showPoly(); refresh(); if (m && !clRows().length) m.setView([45.7, 9.6], 8); });
+  let tq; $("#clq").addEventListener("input", e => { clearTimeout(tq); tq = setTimeout(() => { store.set("cl_q", e.target.value); refresh(); }, 220); });
+  bindInvFiltri("f_inv", f);
 }
 /* ---------------- DOVE CERCARE: tutti i comuni con rendimento netto B&B e affitto normale ---------------- */
 const DV_TAG = { lago: ["Lago", "🏞"], sci: ["Montagna e sci", "⛷"], ospedale: ["Ospedale", "🏥"], uni: ["Università", "🎓"], aziende: ["Aziende", "🏭"] };
@@ -342,50 +383,8 @@ function afterDove() {
     else render(true); });
 }
 
-/* ricerca per zona: una barra di ricerca (comune, zona, via, titolo) e la mappa */
-function invCerca(q) {
-  const t = tnorm(q || "").trim(), all = invAll().map(x => ({ ...x, A: analizza(x.im) }));
-  if (!t) return all;
-  const parole = t.split(/\s+/);
-  return all.filter(({ im }) => { const h = tnorm([im.comune, im.zona, im.provincia, im.regione, im.titolo].filter(Boolean).join(" ")); return parole.every(w => h.includes(w)); });
-}
-function vInvZona() {
-  const q = store.get("invz_q", "");
-  return `${invBread("zona")}<h1>Ricerca per zona</h1><p class="sub">Scrivi un comune, una zona, una via o un tipo di casa: la mappa ti porta lì. Tocca un immobile per aprire la scheda.</p>
-  <div class="zsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
-    <input type="search" id="zq" value="${esc(q)}" placeholder="Oneta, Scullera, trilocale…" autocomplete="off" enterkeyhint="search"></div>
-  <div class="map" id="zmap"></div>
-  <p class="note" id="zinfo"></p>
-  <div id="zres" class="zres"></div>`;
-}
-function afterInvZona() {
-  const inp = $("#zq"), res = $("#zres"), info = $("#zinfo"), m = tMap($("#zmap"), [[45.6, 9.6], 8]);
-  const lay = m ? L.layerGroup().addTo(m) : null;
-  const draw = () => {
-    const q = inp.value; store.set("invz_q", q);
-    const L1 = invCerca(q).sort((a, b) => (b.A.score ?? -1) - (a.A.score ?? -1));
-    res.innerHTML = q.trim() ? (L1.length ? L1.slice(0, 30).map(x => { const st = stato(x.A.score);
-      return `<a class="zr" href="#imm/${x.src}/${encodeURIComponent(x.im.id)}"><span class="pill" style="--pc:${st.col}">${x.A.score ?? "—"}</span><span><b>${esc(x.im.titolo || "Immobile")}</b><em>${esc([x.im.comune, x.im.zona].filter(Boolean).join(" · "))} · ${eur(x.im.prezzo)} · ${num(x.im.mq)} m²</em></span></a>`; }).join("")
-      + (L1.length > 30 ? `<p class="note">Altri ${L1.length - 30} sulla mappa.</p>` : "") : "") : "";
-    if (!lay) return;
-    lay.clearLayers(); const b = [];
-    L1.filter(x => x.im.lat != null).forEach(x => { const st = stato(x.A.score);
-      L.circleMarker([x.im.lat, x.im.lng], { radius: 9, color: "#000", weight: 1.5, fillColor: st.col, fillOpacity: .95 })
-        .bindPopup(`<b>${esc(x.im.titolo || "")}</b><br>${esc(x.im.comune || "")} · ${eur(x.im.prezzo)} · <b>${x.A.score ?? "—"}</b><br><a class="go" href="#imm/${x.src}/${encodeURIComponent(x.im.id)}">Apri la scheda →</a>`).addTo(lay);
-      b.push([x.im.lat, x.im.lng]); });
-    if (b.length) { m.fitBounds(b, { padding: [40, 40], maxZoom: 14 }); info.textContent = `${L1.length} immobil${L1.length === 1 ? "e" : "i"}${q.trim() ? ` per "${q.trim()}"` : " in archivio"}.`; }
-    else {
-      const c = q.trim().length > 2 && tIdx().com.find(c => tnorm(c.n).startsWith(tnorm(q.trim())));
-      if (c && c.lat != null) { m.setView([c.lat, c.lon], 12); info.textContent = `Nessun immobile in archivio a ${c.n}: mandami il link di una ricerca in questa zona e lo carico.`; }
-      else info.textContent = q.trim() ? `Nessun risultato per "${q.trim()}".` : "";
-    }
-  };
-  let t; inp.addEventListener("input", () => { clearTimeout(t); t = setTimeout(draw, 220); });
-  inp.addEventListener("keydown", e => { if (e.key === "Enter") { const f = res.querySelector("a.zr"); if (f) location.hash = f.getAttribute("href"); } });
-  draw();
-}
-function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : a === "dove" ? vDove() : vInvHub(); }
-function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
+function vInv(a, b, c) { if (a === "zona") a = "classifica"; return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : a === "dove" ? vDove() : vInvHub(); }
+function afterInv(a, b, c) { if (a === "zona") a = "classifica"; if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
 
 /* ---------------- collegamento al router ---------------- */
 const MI_ALIAS = { bnb: "inv", lungo: "inv" };
