@@ -1,0 +1,148 @@
+{
+ "data": "2026-11-20",
+ "controllati": {
+  "Lasnigo|CO": 0,
+  "Garzeno|CO": 0,
+  "Preseglie|BS": 0,
+  "Bene Lario|CO": 0,
+  "Lovero|SO": 0,
+  "Rezzago|CO": 0,
+  "Sormano|CO": 0,
+  "Mello|SO": 0,
+  "Tirano|SO": 1,
+  "Bellano|LC": 1,
+  "Edolo|BS": 0,
+  "Delebio|SO": 1,
+  "Omegna|VB": 0,
+  "Colico|LC": 0,
+  "Talamona|SO": 0
+ },
+ "coord": {
+  "Edolo": [
+   46.1786,
+   10.3327
+  ],
+  "Delebio": [
+   46.1373,
+   9.4638
+  ]
+ },
+ "annunci": [
+  {
+   "id": "134830179",
+   "comune": "Tirano",
+   "p": "SO",
+   "prezzo": 59000,
+   "mq": 75,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "3",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Cologna 2, Cologna, Tirano",
+   "titolo": "Terratetto con giardino e cantina a Cologna",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2059081919/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2059095697/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2059095703/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2059095715/m-c.jpg"
+   ],
+   "aggiornato": "17/11/2026",
+   "agenzia": "Tecnocasa Tirano",
+   "pro": [
+    "Zona tranquilla a pochi minuti da Tirano",
+    "Giardino e cantina, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Su tre piani senza ascensore",
+    "Classe energetica G"
+   ]
+  },
+  {
+   "id": "134259939",
+   "comune": "Bellano",
+   "p": "LC",
+   "prezzo": 60000,
+   "mq": 39,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "rialzato",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Frazione Lezzeno, Bellano",
+   "titolo": "Monolocale già usato come casa vacanze",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2045118977/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2045118999/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2045119023/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2045119037/m-c.jpg"
+   ],
+   "aggiornato": "30/10/2026",
+   "agenzia": "Molteni Real Estate",
+   "pro": [
+    "Già utilizzato come casa vacanze sul Lago di Como",
+    "Cantina e nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Classe energetica G",
+    "Frazione collinare, non sul lungolago"
+   ]
+  },
+  {
+   "id": "129636810",
+   "comune": "Delebio",
+   "p": "SO",
+   "prezzo": 42000,
+   "mq": 65,
+   "locali": 4,
+   "bagni": 2,
+   "piano": "terra",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Torrazza, Delebio",
+   "titolo": "Terratetto con giardino e box",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1938116658/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1938116624/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1938115656/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1938115682/m-c.jpg"
+   ],
+   "aggiornato": "16/11/2026",
+   "agenzia": "Immobiliare Marelli Lino",
+   "pro": [
+    "Libera su tre lati, con giardino privato e box",
+    "Zona tranquilla e panoramica, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Classe energetica G (consumi alti)",
+    "Su più livelli",
+    "Interni non fotografati nell'annuncio: chiedere foto o visita"
+   ]
+  }
+ ],
+ "scartati": [
+  {
+   "id": "129536228",
+   "comune": "Tirano",
+   "motivo": "foto: edificio vecchio in pietra, interni non convincenti"
+  },
+  {
+   "id": "131302092",
+   "comune": "Edolo",
+   "motivo": "foto: risulta VENDUTO"
+  },
+  {
+   "id": "106578785",
+   "comune": "Edolo",
+   "motivo": "foto: facciata e cucina datate, poco appetibile"
+  },
+  {
+   "id": "125489557",
+   "comune": "Delebio",
+   "motivo": "foto: stabile datato, nessuna foto degli interni"
+  }
+ ]
+}
