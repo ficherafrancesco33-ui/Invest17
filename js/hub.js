@@ -220,8 +220,6 @@ document.addEventListener("click", e => {
 const INV_MODI = {
   classifica: { t: "Classifiche", c: "Generale o per zona", d: "La classifica di tutti gli immobili, oppure di una zona: scrivi un posto o disegnala col dito sulla mappa.", href: "#inv/classifica" },
   dove: { t: "Dove cercare", c: "Tutti i comuni", d: "Rendimento netto di B&B e affitto normale comune per comune, con filtri lago, sci, ospedali, università e aziende.", href: "#inv/dove", i: "zona" },
-  archivio: { t: "I miei immobili", c: "Archivio", d: "Gli annunci che hai mandato tu, analizzati uno per uno.", href: "#miei" },
-  auto: { t: "Trovati in automatico", c: "Ogni mattina", d: "Gli immobili che arrivano dalle notifiche: qui finiscono anche i nuovi del banner.", href: "#auto" },
 };
 function invBread(k) {
   return `<nav class="bread"><a href="#inv">Investimenti</a>${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
@@ -233,9 +231,9 @@ function vInvHub() {
   return `<div class="hubhead"><small>Sezione</small><h1>Investimenti</h1><p class="sub">Nord Italia entro 3 ore da casa: ${all.length} immobili analizzati in ${reg} regioni${top ? `, il migliore è a ${esc(top.im.comune)} (${top.A.score} punti)` : ""}.</p></div>
   <div class="hub">${Object.entries(INV_MODI).map(([k, m]) => `<a class="hubc ${k === "classifica" ? "big" : ""}" href="${m.href}">${ico(m.i || k, "hi")}<small>${esc(m.c)}</small><b>${esc(m.t)}</b><span>${esc(m.d)}</span></a>`).join("")}</div>`;
 }
-const INV_F0 = { cat: "tutte", reg: "", ore: 0, max: 0, min: 0, sort: "score" };
+const INV_F0 = { cat: "tutte", reg: "", ore: 0, max: 0, min: 0, sort: "score", src: "" };
 function invRows(f, filtroZona) {
-  return invAll().filter(({ im }) => (!f.reg || im.regione === f.reg) && (!+f.max || im.prezzo <= +f.max) && (!filtroZona || filtroZona(im)))
+  return invAll().filter(({ im, src }) => (!f.src || (f.src === "oggi" ? src === "auto" && im.trovato === oggi : src === f.src)) && (!f.reg || im.regione === f.reg) && (!+f.max || im.prezzo <= +f.max) && (!filtroZona || filtroZona(im)))
     .map(x => ({ ...x, A: analizza(x.im, f.cat), d: tDist(x.im.lat, x.im.lng) }))
     .filter(x => (f.cat === "tutte" || x.A.use) && (!+f.ore || (x.d && x.d.min <= +f.ore)) && (!+f.min || (x.A.score ?? 0) >= +f.min))
     .sort({ score: (a, b) => (b.A.score ?? -1) - (a.A.score ?? -1), rend: (a, b) => (b.A.rend ?? -9) - (a.A.rend ?? -9), prezzo: (a, b) => a.im.prezzo - b.im.prezzo,
@@ -243,6 +241,7 @@ function invRows(f, filtroZona) {
 }
 function invFiltri(f, regs, noReg) {
   return `<div class="filters" id="invf">
+    <div class="chips">${[["", "Tutti"], ["miei", "Mandati da me"], ["auto", "Trovati in automatico"], ["oggi", "Nuovi oggi"]].map(([k, t]) => `<button class="chip ${(f.src || "") === k ? "on" : ""}" data-src="${k}">${t}</button>`).join("")}</div>
     <div class="chips">${[["tutte", "Tutti gli usi"], ...Object.entries(CAT)].map(([k, t]) => `<button class="chip ${f.cat === k ? "on" : ""}" data-cat="${k}">${t}</button>`).join("")}</div>
     <div class="selrow">
       ${noReg ? "" : `<select data-f="reg"><option value="">Tutte le regioni</option>${regs.map(r => `<option ${r === f.reg ? "selected" : ""}>${esc(r)}</option>`).join("")}</select>`}
@@ -254,7 +253,8 @@ function invFiltri(f, regs, noReg) {
 }
 function bindInvFiltri(key, f) {
   const box = $("#invf"); if (!box) return;
-  box.addEventListener("click", e => { const c = e.target.closest("[data-cat]"); if (c) { f.cat = c.dataset.cat; store.set(key, f); render(true); } });
+  box.addEventListener("click", e => { const c = e.target.closest("[data-cat]"), r = e.target.closest("[data-src]");
+    if (c) { f.cat = c.dataset.cat; store.set(key, f); render(true); } if (r) { f.src = r.dataset.src; store.set(key, f); render(true); } });
   box.addEventListener("change", e => { const k = e.target.dataset.f; if (!k) return; f[k] = e.target.value; store.set(key, f); render(true); });
 }
 const invPts = rows => rows.filter(x => x.im.lat != null).map(x => ({ lat: x.im.lat, lng: x.im.lng, col: stato(x.A.score).col,

@@ -790,7 +790,7 @@ function vScheda(src, id) {
   const S = A.sc.list[sel] || A.sc.list[A.best];
   const g = im.giudizio || {};
   const seg = window.segIds && segIds().has("i:" + src + ":" + im.id);
-  return `<div class="schtop"><a class="back" href="#${src}">← ${src === "miei" ? "I miei immobili" : "Ricerca automatica"}</a><button class="segbtn ${seg ? "on" : ""}" data-segim="${src}|${esc(im.id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>${seg ? "Seguito" : "Segui"}</span></button></div>
+  return `<div class="schtop"><a class="back" href="#inv/classifica">← Classifiche</a><button class="segbtn ${seg ? "on" : ""}" data-segim="${src}|${esc(im.id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>${seg ? "Seguito" : "Segui"}</span></button></div>
   <section class="hero">
     ${win(im, st.col)}
     <div class="card neon">
@@ -963,6 +963,7 @@ function render(keepScroll) {
   if (typeof HOME_MAP !== "undefined" && HOME_MAP) { try { HOME_MAP.remove(); } catch {} HOME_MAP = null; }
   const [v, a, b, c] = (location.hash.slice(1) || "home").split("/").map(decodeURIComponent);
   if (v === "valuta") { location.replace("#inv"); return; }
+  if (v === "miei" || v === "auto") { store.set("f_inv", { ...store.get("f_inv", {}), src: v }); location.replace("#inv/classifica"); return; }
   const app = $("#app"), y = window.scrollY;
   let html, after = () => {};
   if (v === "miei" || v === "auto") { html = vLista(v); after = () => afterLista(v); }
@@ -1001,7 +1002,7 @@ const tip = $("#tip");
 ["pointermove","pointerdown"].forEach(ev => document.addEventListener(ev, e => { const t = e.target.closest?.("[data-tip]"); if (!t) { tip.hidden = true; return; }
   tip.textContent = t.dataset.tip; tip.hidden = false; tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (e.clientY - 34) + "px"; }));
 /* tasto indietro come in Dreamers: torna alla pagina precedente dell'app, o al livello superiore */
-const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return a === "auto" ? "auto" : "miei"; if (["miei", "auto", "brevi"].includes(v)) return a ? v : "inv";
+const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return "inv/classifica"; if (["miei", "auto", "brevi"].includes(v)) return a ? v : "inv";
   if (v === "inv" || v === "milano") return c ? [v, a, b].join("/") : b ? [v, a].join("/") : a ? v : "home"; return "home"; };
 let NAVN = +(sessionStorage.getItem("ks_n") || 0);
 window.addEventListener("hashchange", () => { NAVN++; try { sessionStorage.setItem("ks_n", NAVN); } catch {} });
