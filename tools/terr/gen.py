@@ -199,7 +199,7 @@ def main():
                      imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (tutta Milano fino a 196.000 € + Milano Sud completa)", url="https://www.immobiliare.it/annunci/",
                               campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
     data["milano"]["fasce"] = fasce(data["annunci"]["imm"]["lista"])
-    s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
+    s = "// KEYSTONE — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)
     print(len(data["annunci"]["lista"]), "+", len(data["annunci"]["imm"]["lista"]), "annunci di Milano;", len(com), "comuni,", len(coord), "con coordinate,", len(st), "località affitti brevi,", len(ZONE), "zone di Milano")

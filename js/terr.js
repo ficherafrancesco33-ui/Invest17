@@ -1,6 +1,6 @@
 "use strict";
 /* ==========================================================================
-   INVEST17 — Analisi del territorio: Mappa B&B, Valutazione, Milano.
+   KEYSTONE — Analisi del territorio: Mappa B&B, Valutazione, Milano.
    Usa i dati di data/territorio.js e le funzioni dell'app (eur, pct, esc,
    store, scenari, IMPOSTAZIONI, maps). Caricato prima dello script principale.
    ========================================================================== */

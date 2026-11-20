@@ -1,4 +1,4 @@
-// INVEST17 — Guida per investire. Testo con mini-formattazione:
+// KEYSTONE — Guida per investire. Testo con mini-formattazione:
 // "## " titolo di paragrafo, "- " elenco, "**grassetto**". Riga vuota = nuovo paragrafo.
 const GUIDA = [
 {
@@ -10,7 +10,7 @@ const GUIDA = [
 - **OMI (Agenzia delle Entrate)**: valori minimi e massimi al m² per ogni zona del comune, aggiornati ogni sei mesi. Sono valori di compravendite reali, ma medi: non vedono il singolo appartamento.
 - **Comparabili**: annunci simili nella stessa zona (stessa tipologia, metratura vicina, stesso stato). Sono prezzi chiesti, non di vendita: di solito si chiude il 5-10% sotto.
 
-## Come li usa Invest17
+## Come li usa Keystone
 Il valore stimato unisce le due fonti: 60% comparabili (già scontati della trattativa tipica) e 40% centro della forbice OMI. Se i comparabili sono pochi pesa di più l'OMI.
 
 ## Segnali da guardare
@@ -38,7 +38,7 @@ La scheda indica una forbice: il tetto è il valore stimato (o il prezzo chiesto
 - Mesi vuoti: nessun affitto è pieno 12 mesi su 12.
 
 ## Che numeri aspettarsi
-Come ordine di grandezza: un netto del 4-5% è nella media, 6-7% è buono, sopra l'8% di solito c'è un rischio in più (zona debole, stagione corta, lavori sottovalutati). Invest17 assegna il punteggio pieno all'8% netto.`
+Come ordine di grandezza: un netto del 4-5% è nella media, 6-7% è buono, sopra l'8% di solito c'è un rischio in più (zona debole, stagione corta, lavori sottovalutati). Keystone assegna il punteggio pieno all'8% netto.`
 },
 {
   id: "breve-medio-lungo",
@@ -76,14 +76,14 @@ Se il breve rende meno di 1,5 volte il lungo, spesso non vale il lavoro in più.
 - Località di solo mare con 2-3 mesi pieni e nove vuoti, a meno che il prezzo sia molto basso.
 - Comuni che perdono abitanti: l'affitto lungo diventa difficile e la casa si rivende male.
 
-## Come lo mostra Invest17
+## Come lo mostra Keystone
 Nella scheda c'è il grafico dell'occupazione mese per mese e l'elenco di fiere, eventi e stagioni della zona.`
 },
 {
   id: "privata-o-srl",
   categoria: "Aspetti pratici",
   titolo: "Comprare come privata o con la società",
-  intro: "La scelta cambia le tasse: Invest17 mostra il netto in entrambi i casi.",
+  intro: "La scelta cambia le tasse: Keystone mostra il netto in entrambi i casi.",
   testo: `## Come persona fisica
 - Puoi scegliere la **cedolare secca**: 21% sugli affitti (per gli affitti brevi il 26% dalla seconda casa in poi; 10% con canone concordato dove previsto).
 - Le spese però non si scaricano.
@@ -95,7 +95,7 @@ Nella scheda c'è il grafico dell'occupazione mese per mese e l'elenco di fiere,
 - Più adatta se gli immobili sono tanti o se la società gestisce già affitti.
 
 ## Attenzione
-I numeri di Invest17 sono indicativi: imposte di acquisto, IMU e regime fiscale vanno verificati col commercialista prima dell'offerta.`
+I numeri di Keystone sono indicativi: imposte di acquisto, IMU e regime fiscale vanno verificati col commercialista prima dell'offerta.`
 },
 {
   id: "checklist",

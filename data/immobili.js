@@ -1,4 +1,4 @@
-// INVEST17 — "I miei immobili": archivio fatto a mano (link mandati da Imma e caricamenti per zona).
+// KEYSTONE — "I miei immobili": archivio fatto a mano (link mandati da Imma e caricamenti per zona).
 // Solo DATI: i conti li fa l'app. Schema in NOTE_SVILUPPO.md. Aggiornato il 20/11/2026.
 const MIEI = [
  {

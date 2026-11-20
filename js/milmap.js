@@ -1,6 +1,6 @@
 "use strict";
 /* ==========================================================================
-   INVEST17 — Mappa 3D di Milano e hinterland (MapLibre + OpenFreeMap)
+   KEYSTONE — Mappa 3D di Milano e hinterland (MapLibre + OpenFreeMap)
    Palazzi in 3D, vie e civici da OpenStreetMap; prezzi per microzona
    (immobiliare.it); confini dei quartieri (NIL, Comune di Milano) e dei comuni
    dell'hinterland (openpolis). Tocchi un palazzo → scheda → valutazione → PDF.

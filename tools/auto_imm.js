@@ -29,7 +29,7 @@ const out = raw.annunci.map(a => {
     valutazione: { omi: vMq ? { medio: vMq, fonte: `media degli annunci di vendita a ${a.comune} (Immobiliare.it)` } : null, comparabili: comps },
   };
 });
-const s = "// INVEST17 — \"Ricerca automatica\": immobili trovati da Claude su Immobiliare.it (non caricati a mano).\n// Stesso schema di data/immobili.js, più \"trovato\" (data AAAA-MM-GG).\n// Generato da tools/auto_imm.js con tools/auto_raw.json: non modificare a mano.\n"
+const s = "// KEYSTONE — \"Ricerca automatica\": immobili trovati da Claude su Immobiliare.it (non caricati a mano).\n// Stesso schema di data/immobili.js, più \"trovato\" (data AAAA-MM-GG).\n// Generato da tools/auto_imm.js con tools/auto_raw.json: non modificare a mano.\n"
   + "const AUTO = " + JSON.stringify(out, null, 0) + ";\n"
   + "// comuni già controllati (comune|provincia → annunci buoni trovati) e data del controllo\n"
   + "const AUTO_CONTROLLATI = " + JSON.stringify(raw.controllati) + ";\nconst AUTO_CONTROLLO_DATA = \"" + raw.data + "\";\n";

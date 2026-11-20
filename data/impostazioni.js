@@ -1,4 +1,4 @@
-// INVEST17 — parametri di calcolo usati da tutte le schede.
+// KEYSTONE — parametri di calcolo usati da tutte le schede.
 // Cambiare qui un valore aggiorna i conti di tutti gli immobili.
 // Ogni immobile può sovrascrivere un parametro nel proprio campo "parametri".
 const IMPOSTAZIONI = {

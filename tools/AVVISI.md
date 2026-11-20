@@ -1,6 +1,6 @@
 # Avvisi giornalieri Immobiliare → Keystone
 
-Procedura che Claude segue ogni mattina (attività programmata). Repo: `ficherafrancesco33-ui/invest17`.
+Procedura che Claude segue ogni mattina (attività programmata). Repo: `ficherafrancesco33-ui/Keystone`.
 Scopo: leggere gli avvisi email di Immobiliare.it che arrivano nella Gmail collegata (ricerche salvate da Imma), aprire ogni annuncio e caricarlo nell'app.
 
 ## Regole che non si toccano
