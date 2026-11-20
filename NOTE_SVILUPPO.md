@@ -72,3 +72,11 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - Scheda: valore stimato e offerta, grafico prezzo/valore/OMI/comparabili, tabella e mappa dei comparabili, tre scenari con business plan, stagionalità, eventi, pro e contro.
 - Selettore tasse Privata/SRL in alto (ricorda la scelta).
 - Guida: 6 articoli iniziali.
+
+### 20/11/2026 (2) — Stile Cyber come Dreamers
+- Colori dello stile Cyber di Dreamers: fondo #04070d, pannelli #0a1220/#101c33, bordi #1c3a63, ciano #00c8e0/#7df3ff, magenta #ff2bd6, giallo #facc15.
+- Intestazione a vetro con riflesso e riga ciano luminosa; logo "17" ciano lucido; schede di navigazione inclinate in alto (come Dreamers), non più barra in basso.
+- Titoli di sezione magenta spaziati; pannelli con riflesso; chip ciano; caselle dei dati con bordo viola come le statistiche di Dreamers.
+- "Finestre" degli immobili (funzione `win`): foto con vetro, riflesso in alto, bordo e alone nel colore del punteggio, pillola del punteggio nell'angolo. Senza foto mostra l'iniziale del comune.
+- Foto: campo `foto` con il link diretto all'immagine dell'annuncio (caricata con referrerpolicy no-referrer; se non si carica resta l'iniziale).
+- Grafici: prezzo chiesto giallo, valore stimato ciano, comparabili magenta, stagionalità in scala di ciano.
