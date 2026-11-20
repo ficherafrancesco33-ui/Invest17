@@ -893,7 +893,20 @@ function render(keepScroll) {
   const hb = $("#hback"); if (hb) hb.hidden = !location.hash || location.hash === "#home"; hhSet();
   window.scrollTo(0, keepScroll ? y : 0);
 }
-window.addEventListener("hashchange", () => render());
+/* come Dreamers: tornando indietro si ritorna allo stesso punto della pagina (es. all'annuncio aperto) */
+const POS = (() => { try { return JSON.parse(sessionStorage.getItem("ks_pos") || "{}"); } catch { return {}; } })();
+let STACK = (() => { try { return JSON.parse(sessionStorage.getItem("ks_stack") || "[]"); } catch { return []; } })();
+const curH = () => location.hash.slice(1) || "home";
+let lastH = curH(), tPos;
+window.addEventListener("scroll", () => { clearTimeout(tPos); const h = curH(), y = window.scrollY; tPos = setTimeout(() => { POS[h] = y; try { sessionStorage.setItem("ks_pos", JSON.stringify(POS)); } catch {} }, 120); }, { passive: true });
+window.addEventListener("hashchange", () => {
+  const h = curH(), back = STACK.length >= 2 && STACK[STACK.length - 2] === h;
+  if (back) STACK.pop(); else { if (STACK[STACK.length - 1] !== lastH) STACK.push(lastH); STACK.push(h); }
+  STACK = STACK.slice(-60); lastH = h; try { sessionStorage.setItem("ks_stack", JSON.stringify(STACK)); } catch {}
+  render();
+  if (back && POS[h] > 0) { const y = POS[h], go = () => window.scrollTo(0, y); go(); requestAnimationFrame(go); setTimeout(go, 250); setTimeout(go, 800); }
+});
+if (!STACK.length) STACK = [curH()];
 document.querySelector(".taxsw").addEventListener("click", e => { const b = e.target.closest("[data-tax]"); if (!b) return; TAX = b.dataset.tax; store.set("tax", TAX); render(true); });
 /* tooltip dei grafici */
 const tip = $("#tip");
