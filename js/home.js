@@ -19,66 +19,79 @@ function homeNovita() {
   }
   return nov;
 }
+function homeTop() {
+  return invAll().map(x => ({ ...x, A: analizza(x.im) })).filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
+}
 function vHomeK() {
-  const all = invAll().map(x => ({ ...x, A: analizza(x.im) })), ok = all.filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
-  const seg = segAll(), nov = homeNovita(), h = new Date().getHours();
-  const saluto = h < 13 ? "Buongiorno" : h < 18 ? "Buon pomeriggio" : "Buonasera";
-  const giorno = new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" });
+  const nov = homeNovita(), top = homeTop(), seg = segAll();
+  const A = mmAnnunci(), visti = new Set(store.get("ann_visti", [])), nuoviPriv = A.filter(a => a.priv && !visti.has(a.id)).length;
   const tick = nov.map(n => `<a class="tk" href="${n.h}"><i>${esc(n.tag)}</i><b>${esc(n.t)}</b>${n.s ? `<span>${esc(n.s)}</span>` : ""}</a>`).join("");
   return `<div class="ticker" aria-label="Novità"><div class="tkt">${tick}${tick}</div></div>
-  <div class="hello"><small>${esc(giorno)}</small><h1>${saluto}</h1><p class="sub">${AUTO.length ? `${AUTO.filter(x => x.trovato === oggi).length} immobili nuovi oggi · ` : "Nuovi annunci ogni mattina alle 10 · "}${seg.length} seguiti · ${ok.filter(x => x.A.score >= 70).length} affari in classifica</p></div>
-  <div class="secs">
-    <a class="sec" href="#inv"><small>Nord Italia entro 3 ore</small><b>Investimenti</b><span>Classifica generale, ricerca per zona, mappa B&amp;B, comuni</span><em>${all.length} immobili</em></a>
-    <a class="sec" href="#milano"><small>Agenzia e investimenti</small><b>Milano</b><span>Valutazioni ai clienti, investimenti, subaffitto, privati</span><em>${num(mmAnnunci().length)} annunci</em></a>
+  <h2>Investimenti <small><a href="#inv/classifica">Classifica completa</a></small></h2>
+  <div class="plancia">
+    <div class="plmap"><div id="itmap" class="itmap2"><div class="mmload"><div class="spin"></div>Carico la mappa</div></div>
+      <button class="plexp" id="plexp" aria-label="Ingrandisci la mappa">⤢</button></div>
+    <ol class="pltop">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score);
+      return `<li><a href="#imm/${x.src}/${encodeURIComponent(x.im.id)}" data-fly="${i}"><b>${i + 1}</b><span><em>${esc((x.im.titolo || "Casa").split(" ")[0])} · ${keur(x.im.prezzo)}</em><small>${esc(x.im.zona && x.im.zona !== x.im.comune ? x.im.zona : x.im.comune || "")}</small></span><i style="--pc:${st.col}">${x.A.score}</i></a></li>`; }).join("") || `<li class="note">Mandami un link per iniziare la classifica.</li>`}</ol>
   </div>
-  <div class="quick">${[["#milano/cliente", "cliente", "Valuta per un cliente"], ["#milano/inv", "inv", "Investire a Milano"], ["#milano/sub", "sub", "Subaffitto"], ["#milano/privati", "privati", "Privati"], ["#inv/classifica", "classifica", "Classifica"], ["#inv/zona", "zona", "Cerca per zona"]]
-    .map(([h, i, t]) => `<a href="${h}">${ico(i)}<span>${t}</span></a>`).join("")}</div>
-  <h2>Osservatorio <small><a href="#seguiti">${seg.length ? "Tutti i seguiti" : "Come funziona"}</a></small></h2>
-  <div class="itmap" id="itmap"><div class="mmload"><div class="spin"></div>Carico la mappa</div></div>
-  <p class="note">${seg.length ? "I puntini oro sono gli immobili e gli annunci che segui. Tocca un puntino per aprirlo." : "Non segui ancora niente: tocca ☆ Segui nella scheda di un immobile o sotto un annuncio di Milano. Intanto vedi i 12 migliori della classifica."}</p>
-  <h2>Podio <small><a href="#inv/classifica">Classifica completa</a></small></h2>
-  ${ok.length ? `<div class="list">${ok.slice(0, 3).map((x, i) => cardIm(x.A, x.src, i + 1)).join("")}</div>` : `<p class="sub">Nessun immobile analizzato.</p>`}
-  ${NOTIZIE.length ? `<h2>Ultime notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}
-  <h2>Dalla guida <small><a href="#guida">Tutta la guida</a></small></h2>
-  <div class="list">${GUIDA.slice(0, 2).map(cardGuida).join("")}</div>`;
+  <h2>Milano <small><a href="#milano">Tutta la sezione</a></small></h2>
+  <div class="btn4">
+    <a href="#milano/cliente">${ico("cliente")}<span>Valuta per un cliente</span></a>
+    <a href="#milano/inv">${ico("inv")}<span>Investire a Milano</span></a>
+    <a href="#milano/sub">${ico("sub")}<span>Subaffitto</span></a>
+    <a href="#milano/privati">${ico("privati")}<span>Privati${nuoviPriv ? ` <em>${nuoviPriv} nuovi</em>` : ""}</span></a>
+  </div>
+  ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
+  ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}`;
 }
-function homePunti() {
-  const seg = segAll().filter(x => x.lat != null);
-  if (seg.length) return seg.map(x => ({ lon: x.lon, lat: x.lat, t: x.t, s: x.s, h: x.href || x.url, ext: !!x.url, tipo: x.tipo }));
-  return invAll().map(x => ({ ...x, A: analizza(x.im) })).filter(x => x.A.score != null && x.im.lat != null).sort((a, b) => b.A.score - a.A.score).slice(0, 12)
-    .map(x => ({ lon: x.im.lng, lat: x.im.lat, t: `${x.im.comune} · ${x.A.score} punti`, s: eur(x.im.prezzo), h: `#imm/${x.src}/${encodeURIComponent(x.im.id)}` }));
-}
-/* stile leggero: solo terra, acqua, confini e nomi delle città */
+/* mappa d'Italia: stile Carbone e oro con rilievi (ombreggiatura delle montagne) e nomi di città, laghi e regioni */
 function itStile() {
   const S = "ofm";
   return { version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
-    sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
-    layers: plBase(S, { flat: true }) };
+    sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" },
+      dem: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: "Rilievi: Mapzen / AWS Terrain Tiles" } },
+    layers: [...plBase(S, { flat: true }).filter(l => l.id !== "place"),
+      { id: "hill", type: "hillshade", source: "dem", paint: { "hillshade-shadow-color": "#000000", "hillshade-highlight-color": "#6b5a2e", "hillshade-accent-color": "#2a2418", "hillshade-exaggeration": 0.55, "hillshade-illumination-direction": 315 } },
+      { id: "lake-lab", type: "symbol", source: S, "source-layer": "water_name", minzoom: 6,
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.08 }, paint: { "text-color": "#7fb3d1", "text-halo-color": "#0f2230", "text-halo-width": 1.2 } },
+      { id: "town", type: "symbol", source: S, "source-layer": "place", minzoom: 8, filter: ["match", ["get", "class"], ["town", "village"], true, false],
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["match", ["get", "class"], "town", 11, 9.5] }, paint: { "text-color": "#bdb39a", "text-halo-color": "#141414", "text-halo-width": 1.4 } },
+      { id: "city", type: "symbol", source: S, "source-layer": "place", filter: ["match", ["get", "class"], ["city"], true, false],
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 9, 14], "text-transform": "uppercase", "text-letter-spacing": 0.12 },
+        paint: { "text-color": "#f2cf5b", "text-halo-color": "#141414", "text-halo-width": 1.6 } },
+    ] };
 }
 let HOME_MAP = null;
-function afterHomeK() {
-  const el = $("#itmap"); if (!el) return;
+function homeMappa(el, P, opt = {}) {
   mmLoad().then(() => {
     if (!document.body.contains(el)) return;
     el.innerHTML = "";
-    const P = homePunti();
-    const map = new maplibregl.Map({ container: el, style: itStile(), center: [10.6, 45.25], zoom: 5.9, pitch: 48, bearing: -12, attributionControl: { compact: true }, maxPitch: 70 });
-    HOME_MAP = map; map.scrollZoom.disable();
-    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+    const map = new maplibregl.Map({ container: el, style: itStile(), center: [9.8, 45.75], zoom: 6.3, pitch: 40, bearing: -8, maxPitch: 70, attributionControl: { compact: true }, cooperativeGestures: false });
+    HOME_MAP = map; map.scrollZoom.disable(); map.touchZoomRotate.enable();
+    el.addEventListener("wheel", e => { if (e.ctrlKey) return; }, { passive: true });
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true, showCompass: false }), "bottom-right");
     map.on("load", () => {
-      map.addSource("p", { type: "geojson", data: { type: "FeatureCollection", features: P.map((p, i) => ({ type: "Feature", properties: { i }, geometry: { type: "Point", coordinates: [p.lon, p.lat] } })) } });
-      map.addLayer({ id: "glow", type: "circle", source: "p", paint: { "circle-radius": 16, "circle-color": "#c9a227", "circle-opacity": 0.25, "circle-blur": 0.8 } });
-      map.addLayer({ id: "dot", type: "circle", source: "p", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 5, 5, 12, 9], "circle-color": "#f2cf5b", "circle-stroke-color": "#141414", "circle-stroke-width": 2.5 } });
-      if (P.length) { const b = new maplibregl.LngLatBounds(); P.forEach(p => b.extend([p.lon, p.lat])); map.fitBounds(b, { padding: 60, maxZoom: 11, pitch: 48, bearing: -12, duration: 1800 }); }
-      map.on("click", "dot", e => { const p = P[e.features[0].properties.i];
-        new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(e.lngLat).setHTML(`<b>${esc(p.t)}</b><br>${esc(p.s || "")}<br><a class="go" href="${esc(p.h)}" ${p.ext ? 'target="_blank" rel="noopener"' : ""}>Apri →</a>`).addTo(map); });
+      try { map.setTerrain({ source: "dem", exaggeration: 1.25 }); } catch (e) {}
+      map.addSource("p", { type: "geojson", data: { type: "FeatureCollection", features: P.map((p, i) => ({ type: "Feature", properties: { i, r: p.rank || 0, c: p.col || "#f2cf5b" }, geometry: { type: "Point", coordinates: [p.lon, p.lat] } })) } });
+      map.addLayer({ id: "glow", type: "circle", source: "p", paint: { "circle-radius": ["case", [">", ["get", "r"], 0], ["case", ["<=", ["get", "r"], 3], 22, 14], 10], "circle-color": "#c9a227", "circle-opacity": 0.18, "circle-blur": 0.9 } });
+      map.addLayer({ id: "dot", type: "circle", source: "p", paint: { "circle-radius": ["case", ["all", [">", ["get", "r"], 0], ["<=", ["get", "r"], 3]], 11, [">", ["get", "r"], 0], 8, 5],
+        "circle-color": ["case", ["all", [">", ["get", "r"], 0], ["<=", ["get", "r"], 3]], "#facc15", ["get", "c"]], "circle-stroke-color": "#14100a", "circle-stroke-width": 2 } });
+      map.addLayer({ id: "rank", type: "symbol", source: "p", filter: [">", ["get", "r"], 0], layout: { "text-field": ["to-string", ["get", "r"]], "text-font": ["Noto Sans Regular"], "text-size": ["case", ["<=", ["get", "r"], 3], 12, 10], "text-allow-overlap": true }, paint: { "text-color": "#14100a" } });
+      if (P.length) { const b = new maplibregl.LngLatBounds(); P.forEach(p => b.extend([p.lon, p.lat])); map.fitBounds(b, { padding: 50, maxZoom: opt.maxZoom || 11, pitch: 45, bearing: -8, duration: 1600 }); }
+      const pop = (p, ll) => new maplibregl.Popup({ closeButton: false, offset: 14 }).setLngLat(ll).setHTML(`${p.rank ? `<small style="color:#c9a227">N. ${p.rank} in classifica</small><br>` : ""}<b>${esc(p.t)}</b><br>${esc(p.s || "")}<br><a class="go" href="${esc(p.h)}" ${p.ext ? 'target="_blank" rel="noopener"' : ""}>Apri la scheda →</a>`).addTo(map);
+      map.on("click", "dot", e => { const p = P[e.features[0].properties.i]; pop(p, e.features[0].geometry.coordinates); });
       map.on("mouseenter", "dot", () => map.getCanvas().style.cursor = "pointer"); map.on("mouseleave", "dot", () => map.getCanvas().style.cursor = "");
-      // lenta rotazione finché non la tocchi
-      let spin = true; const stop = () => spin = false; ["mousedown", "touchstart", "wheel"].forEach(ev => map.on(ev, stop));
-      const turn = () => { if (!spin || !document.body.contains(el)) return; map.easeTo({ bearing: map.getBearing() + 4, duration: 4000, easing: t => t }); };
-      map.on("moveend", () => spin && setTimeout(turn, 50)); setTimeout(turn, 2000);
+      HOME_MAP._fly = i => { const p = P[i]; if (!p) return; map.flyTo({ center: [p.lon, p.lat], zoom: 13, pitch: 55, duration: 1400 }); map.once("moveend", () => pop(p, [p.lon, p.lat])); };
     });
   }).catch(() => { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; });
+}
+function afterHomeK() {
+  const el = $("#itmap"); if (!el) return;
+  const top = homeTop();
+  const P = top.filter(x => x.im.lat != null).map((x, i) => ({ lon: x.im.lng, lat: x.im.lat, rank: i < 10 ? i + 1 : 0, col: stato(x.A.score).col,
+    t: x.im.titolo || x.im.comune, s: `${x.im.comune} · ${eur(x.im.prezzo)} · ${x.A.score} punti · netto ${pct(x.A.rend)}`, h: `#imm/${x.src}/${encodeURIComponent(x.im.id)}` }));
+  homeMappa(el, P);
+  $("#plexp")?.addEventListener("click", () => { const w = $(".plancia"); w.classList.toggle("big"); setTimeout(() => HOME_MAP && HOME_MAP.resize(), 320); });
 }
 function vSeguiti() {
   const L = segAll();
@@ -88,6 +101,7 @@ function vSeguiti() {
     : `<div class="empty"><b>Ancora niente</b><p>Apri un immobile in <a href="#inv/classifica">Investimenti</a> o un annuncio in <a href="#milano/privati">Milano</a> e tocca ☆ Segui.</p></div>`}`;
 }
 function afterSeguiti() {
-  if ($("#itmap")) afterHomeK();
+  const el = $("#itmap"); if (!el) return;
+  homeMappa(el, segAll().filter(x => x.lat != null).map(x => ({ lon: x.lon, lat: x.lat, t: x.t, s: x.s, h: x.href || x.url, ext: !!x.url })), { maxZoom: 13 });
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-unseg]"); if (!b) return; store.set("seguiti", segAll().filter(x => x.k !== b.dataset.unseg)); render(true); });
