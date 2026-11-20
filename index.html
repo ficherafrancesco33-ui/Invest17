@@ -93,7 +93,7 @@ h2 small a{color:var(--cy2);text-decoration:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex:none;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0)),var(--panel);color:var(--tx2);border-radius:999px;padding:6px 11px;font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
 .chip.on{background:linear-gradient(180deg,var(--cy2),var(--cy));border-color:var(--cy2);color:var(--on);box-shadow:0 0 12px rgba(201,162,39,.45)}
-.filters{display:grid;gap:8px;margin:12px -14px 14px;padding:10px 14px;position:sticky;top:var(--hh,112px);z-index:50;background:rgba(10,10,10,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #2a2418}
+.filters{display:grid;gap:8px;margin:12px -14px 14px;padding:10px 14px;background:#0e0e0e;border-top:1px solid #2a2418;border-bottom:1px solid #2a2418}
 .filters::before{content:"Filtri";font-family:var(--display);font-style:italic;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cy)}
 .filters .chips{flex-wrap:nowrap}
 .selrow{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}.selrow::-webkit-scrollbar{display:none}
@@ -144,7 +144,7 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 .map{height:44vh;min-height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0a0a0a;position:relative;box-shadow:0 0 0 1px rgba(201,162,39,.12),0 0 24px rgba(201,162,39,.15)}
 .map.small{height:240px;min-height:0;border-radius:16px}
 .mapfb{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:20px}
-.leaflet-container{background:#0a0a0a;font-family:var(--body)}
+.leaflet-container{background:#f2efe9;font-family:var(--body)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#1e1e1e;color:var(--tx);border:1px solid var(--line);box-shadow:0 0 18px rgba(201,162,39,.3)}
 .leaflet-popup-content{margin:10px 12px;font-size:13px}
 .leaflet-popup-content a.go{display:inline-block;margin-top:6px;font-weight:700;color:var(--cy2)}
@@ -243,6 +243,7 @@ ul.ev{margin:0;padding-left:18px;font-size:13.5px}
 
 /* ---- analisi del territorio ---- */
 .map.tall{height:58vh;min-height:320px}
+.howto{font-size:13px;color:var(--tx2);margin:6px 0 10px;padding:9px 12px;border-left:3px solid var(--cy);background:#141414;border-radius:0 10px 10px 0}.howto b{color:var(--cy2)}
 .tleg{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:12px;color:var(--tx2);margin:9px 2px 0}
 .tleg b{font-family:var(--display);font-style:italic;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:2px}
 .tleg i{display:inline-block;width:14px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px;border:1px solid rgba(255,255,255,.12)}
@@ -313,7 +314,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mmres button,.mmres span{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:var(--tx);padding:10px 12px;font-size:13px;cursor:pointer}
 .mmres button:hover{background:rgba(201,162,39,.1)}
 .mmwrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 0 1px rgba(201,162,39,.15),0 0 30px rgba(201,162,39,.18)}
-.mm3d{height:72vh;min-height:420px;background:#050505}
+.mm3d{height:72vh;min-height:420px;background:#f4efe3}
 .mmload{height:100%;display:grid;place-items:center;align-content:center;gap:12px;color:var(--cy2);font-family:var(--display);font-style:italic;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(242,207,91,.15);border-top-color:var(--cy2);animation:sp 0.9s linear infinite;box-shadow:0 0 18px rgba(201,162,39,.4)}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -399,7 +400,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
 .quick a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:10px;background:#131313;font-size:13px;font-weight:600}
 .quick svg{width:20px;height:20px;color:var(--cy2);flex:none}
-.itmap{position:relative;height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid #5a4818;background:#0c0c0c;box-shadow:0 0 30px rgba(201,162,39,.12)}
+.itmap{position:relative;height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid #5a4818;background:#f4efe3;box-shadow:0 0 30px rgba(201,162,39,.12)}
 .maplibregl-popup-content{background:#1a1a1a;color:var(--tx);border:1px solid var(--cy);border-radius:12px;font-size:13px}
 .maplibregl-popup-tip{border-top-color:var(--cy)!important;border-bottom-color:var(--cy)!important}
 .maplibregl-popup-content a.go{display:inline-block;margin-top:5px;font-weight:700;color:var(--cy2)}
@@ -574,10 +575,8 @@ function drawMap(el, points, opts = {}) {
   if (!window.L) { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; return; }
   const m = L.map(el, { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
   L.control.zoom({ position: "bottomright" }).addTo(m);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    maxZoom: 19, subdomains: "abcd",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>'
-  }).addTo(m);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(m);
   const b = [];
   for (const p of points) {
     if (p.lat == null || p.lng == null) continue;
