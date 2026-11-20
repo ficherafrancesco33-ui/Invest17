@@ -120,26 +120,42 @@ function pdfFoto(sn, W, H, cls = "") {
   return `<div class="mapw foto ${cls}" style="width:${W}px;height:${H}px"><img class="snap" src="${sn.url}" alt="">${P}<span class="osm">© OpenStreetMap · OpenFreeMap</span></div>`;
 }
 
-async function mmPdf(arg) {
-  if (window.__pdfHtml) return mmPdfHtml(arg, {});
-  const w = window.open("", "_blank");
-  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return; }
-  w.document.write(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Preparo il PDF…</title><body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;font:15px Georgia,serif;color:#6e1423;background:#fbf7f0"><div style="width:38px;height:38px;border:3px solid #ead9b8;border-top-color:#6e1423;border-radius:50%;animation:g 1s linear infinite"></div>Preparo la valutazione con la mappa 3D…<style>@keyframes g{to{transform:rotate(360deg)}}</style></body>`);
+/* Il PDF si prepara dentro l'app (così su iPhone la mappa satellite si disegna davvero),
+   poi si apre con un secondo tocco su "Apri il PDF" (Safari blocca le finestre aperte dopo un'attesa). */
+async function mmPdfFoto(arg) {
   const { ctx, q } = arg, s = ctx.sel || {};
   const lat = s.lat ?? ctx.micro?.lat ?? ctx.com?.lat, lon = s.lon ?? ctx.micro?.lon ?? ctx.com?.lon;
   const foto = {}, tema = store.get("pdf_tema", "sat"), selCol = (PDF_TEMI[tema] || PDF_TEMI.sat)[2];
-  if (lat != null) {
-    const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
-    foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 20000);
-    const C = arg.r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
-    const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
-    if (pts.length) {
-      const maxD = Math.max(400, ...C.lista.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
-      foto.cmp = await tm(pdfSnap({ lat, lon, zoom: maxD > 1400 ? 14 : maxD > 700 ? 15 : 15.8, w: 690, h: 270, pins: [...pts, { lat, lon, k: "me", t: "" }], evidenzia: true, geom: s.geom, tema: tema === "sat" ? "mc" : tema, selCol: tema === "sat" ? "#7a1628" : selCol }), 20000);
-    }
+  if (lat == null) return foto;
+  const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
+  foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 25000);
+  const C = arg.r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
+  const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
+  if (pts.length) {
+    const maxD = Math.max(400, ...C.lista.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
+    foto.cmp = await tm(pdfSnap({ lat, lon, zoom: maxD > 1400 ? 14 : maxD > 700 ? 15 : 15.8, w: 690, h: 270, pins: [...pts, { lat, lon, k: "me", t: "" }], evidenzia: true, geom: s.geom, tema: tema === "sat" ? "mc" : tema, selCol: tema === "sat" ? "#7a1628" : selCol }), 25000);
   }
+  return foto;
+}
+function pdfApri(html) {
+  const w = window.open("", "_blank");
+  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return false; }
+  w.document.open(); w.document.write(html); w.document.close(); return true;
+}
+async function mmPdf(arg) {
+  if (window.__pdfHtml) return mmPdfHtml(arg, {});
+  document.getElementById("pdfov")?.remove();
+  const ov = document.createElement("div"); ov.id = "pdfov";
+  ov.innerHTML = `<div class="pdfbox"><div class="spin"></div><b>Preparo il PDF</b><span>Disegno la mappa satellite e le pagine della valutazione…</span><button class="btn sec" data-pdfx>Annulla</button></div>`;
+  document.body.appendChild(ov);
+  let annullato = false;
+  ov.addEventListener("click", e => { if (e.target.closest("[data-pdfx]")) { annullato = true; ov.remove(); } });
+  const foto = await mmPdfFoto(arg);
+  if (annullato) return;
   const html = mmPdfHtml(arg, foto);
-  w.document.open(); w.document.write(html); w.document.close();
+  ov.querySelector(".pdfbox").innerHTML = `<b style="font-size:20px">Il PDF è pronto</b><span>${foto.cov ? "Con la mappa in copertina." : "La mappa non si è caricata: il PDF ha la cartina semplice."} Si apre in una nuova scheda: da lì "Salva PDF" e "Torna all'app".</span>
+    <button class="btn pri" data-pdfgo>Apri il PDF</button><button class="btn sec" data-pdfx>Chiudi</button>`;
+  ov.querySelector("[data-pdfgo]").addEventListener("click", () => { if (pdfApri(html)) ov.remove(); });
 }
 
 function mmPdfHtml({ r, q, ctx }, foto = {}) {
@@ -238,7 +254,7 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const mapComp = foto.cmp ? pdfFoto(foto.cmp, 690, 270) : lat != null && pins.length ? pdfMappa(lat, lon, zC, 690, 270, [...pins, { lat, lon, k: "me", t: "" }]) : "";
 
   const sec = (n, t, body, cls = "") => `<section class="${cls}"><h2><i>${n}</i>${t}</h2>${body}</section>`;
-  const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Valutazione ${esc(ctx.nome)}${ctx.cliente ? " – " + esc(ctx.cliente) : ""} – Maison Collection</title>
+  const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=840"><script>(function(){var w=Math.min(screen.width,innerWidth||screen.width);if(w<840)document.querySelector("meta[name=viewport]").setAttribute("content","width=840,initial-scale="+(w/840).toFixed(3))})()<\/script><title>Valutazione ${esc(ctx.nome)}${ctx.cliente ? " – " + esc(ctx.cliente) : ""} – Maison Collection</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @page{size:A4;margin:13mm 13mm 14mm}
@@ -336,11 +352,14 @@ tr.hl td{background:#fbf5ea}tr.hl td:first-child{box-shadow:inset 2.5pt 0 0 ${C.
 .two{display:grid;grid-template-columns:1fr 1fr;gap:4mm;break-inside:avoid}
 .pb{break-before:page}
 .endf{margin-top:6mm;padding-top:3mm;border-top:.8pt solid ${C.oro};display:flex;justify-content:space-between;align-items:center;font-size:7pt;color:${C.mut}}.endf img{height:10mm}
-@media screen{body{background:#e9e4dc}.wrap{max-width:210mm;margin:0 auto;background:#fff;padding:12mm;box-shadow:0 6px 30px rgba(0,0,0,.18)}
-.printbtn{position:fixed;right:16px;bottom:16px;background:${C.bx};color:#fff;border:1.5px solid ${C.oro2};border-radius:26px;padding:12px 20px;font:600 14px Montserrat,Arial;box-shadow:0 4px 16px rgba(0,0,0,.3);z-index:9}}
-@media print{.printbtn{display:none}.wrap{padding:0}}
+@media screen{body{background:#e9e4dc;min-width:840px;padding:64px 0 30px}.wrap{width:210mm;margin:0 auto;background:#fff;padding:12mm;box-shadow:0 6px 30px rgba(0,0,0,.18)}
+.appbar{position:fixed;left:0;right:0;top:0;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:rgba(251,247,240,.96);border-bottom:1px solid ${C.oro2};z-index:9;backdrop-filter:blur(6px)}
+.appbar button{border-radius:24px;padding:10px 18px;font:600 15px Montserrat,Arial;cursor:pointer}
+.appbar .back{background:#fff;color:${C.bx};border:1.5px solid ${C.oro}}.appbar .go{background:${C.bx};color:#fff;border:1.5px solid ${C.oro2}}
+}
+@media print{.appbar{display:none}.wrap{padding:0}}
 </style></head><body>
-<button class="printbtn" onclick="window.print()">Salva PDF / Stampa</button>
+<div class="appbar"><button class="back" onclick="try{window.opener&&window.opener.focus()}catch(e){};window.close();setTimeout(()=>{history.length>1?history.back():alert('Chiudi questa scheda per tornare all\'app')},300)">‹ Torna all'app</button><button class="go" onclick="window.print()">Salva PDF / Stampa</button></div>
 <div class="wrap">
 
 <div class="cover">
@@ -478,7 +497,7 @@ ${sec(comps.length ? (PZ ? 10 : 9) : 9, "Nota metodologica", `
 <script>
 (async()=>{try{await document.fonts.ready}catch(e){}
  await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r;setTimeout(r,4000)})));
- if(!/[?&]nostampa/.test(location.search)&&!window.__nostampa)setTimeout(()=>window.print(),300)})();
+ })();
 <\/script>
 </body></html>`;
   if (window.__pdfHtml) window.__pdfHtml(html);   // per i test
@@ -506,8 +525,7 @@ async function afterAnteprima() {
   const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
   $("#app").addEventListener("click", e => { const u = e.target.closest("[data-antuse]"); if (u) { store.set("pdf_tema", u.dataset.antuse); document.querySelectorAll("[data-antuse]").forEach(x => { const on = x === u; x.textContent = on ? "✓ In uso" : "Usa questa"; x.className = "btn " + (on ? "sec" : "pri"); }); return; }
     const b = e.target.closest("[data-antpdf]"); if (!b || !H[b.dataset.antpdf]) return;
-    const w = window.open("", "_blank"); if (!w) return alert("Consenti le finestre pop-up per aprire il PDF.");
-    w.document.open(); w.document.write(H[b.dataset.antpdf]); w.document.close(); });
+    pdfApri(H[b.dataset.antpdf]); });
   for (const k of Object.keys(PDF_TEMI)) {
     const box = document.querySelector(`[data-ant="${k}"]`); if (!box) return;
     const selCol = PDF_TEMI[k][2];

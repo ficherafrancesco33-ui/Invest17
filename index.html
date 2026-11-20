@@ -81,6 +81,9 @@ img{max-width:100%}
 .pvmap .tiles{position:absolute;inset:0;filter:grayscale(.2) brightness(.92)}.pvmap .tiles img{position:absolute;width:256px;height:256px}.pvmap .osm{position:absolute;right:4px;bottom:2px;font-size:9px;color:#333;background:rgba(255,255,255,.7);padding:0 3px}
 .pvmap .pin{position:absolute;transform:translate(-50%,-50%);width:22px;height:22px;border-radius:50%;background:#6e1423;border:3px solid #fff;box-shadow:0 0 0 2px #f2b84b,0 0 0 10px rgba(242,184,75,.25)}
 .pvtab{width:100%;border-collapse:collapse;font-size:14px}.pvtab td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:top}.pvtab td:first-child{color:var(--muted);width:38%}
+#pdfov{position:fixed;inset:0;z-index:5000;background:rgba(8,12,20,.72);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#pdfov .pdfbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px;max-width:360px;width:100%;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+#pdfov b{color:var(--strong);font-size:18px}#pdfov span{color:var(--muted);font-size:14px}#pdfov .btn{width:100%}
 .cmleg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:6px 0 10px}.cmleg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
 @keyframes lspin{to{transform:rotate(360deg)}}
 .pgback{display:inline-flex;align-items:center;gap:4px;margin:0 0 10px -2px;padding:6px 12px 6px 8px;border-radius:999px;border:1px solid var(--line2);background:var(--card);color:var(--cy2);
