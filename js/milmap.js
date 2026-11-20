@@ -42,6 +42,13 @@ function mmSegDist(p, a, b) {   // metri, approssimazione piana
   const dx = bx - ax, dy = by - ay, t = clamp(-(ax * dx + ay * dy) / (dx * dx + dy * dy || 1), 0, 1);
   return Math.hypot(ax + t * dx, ay + t * dy) * 111320;
 }
+function mmUnPalazzo(g, ll) {   // dalla forma (anche multipla) tiene solo il poligono toccato
+  if (!g) return null;
+  const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+  let best = polys.find(p => mmInRing(ll, p[0]));
+  if (!best) { let dm = 1e18; for (const p of polys) { for (const c of p[0]) { const d = (c[0] - ll[0]) ** 2 + (c[1] - ll[1]) ** 2; if (d < dm) { dm = d; best = p; } } } }
+  return best ? { type: "Polygon", coordinates: best } : null;
+}
 function mmLines(g) { return g.type === "LineString" ? [g.coordinates] : g.type === "MultiLineString" ? g.coordinates : []; }
 function mmFeatCentro(f) { const c = tCentro(f.geometry); return c ? [c[1], c[0]] : null; }
 
@@ -105,6 +112,16 @@ async function mmInit(el) {
   const map = new maplibregl.Map({ container: el, style: mmStile(), center: [9.19, 45.4642], zoom: 12.4, pitch: 52, bearing: -18, maxPitch: 75,
     attributionControl: { compact: true, customAttribution: "Dati: OpenStreetMap, OpenFreeMap, immobiliare.it, Comune di Milano, openpolis" }, antialias: true, fadeDuration: 0 });
   MM.map = map; maps.push(map);
+  map.scrollZoom.disable();
+  map.getCanvasContainer().addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const rotella = ev.deltaMode === 1 || (ev.deltaX === 0 && Math.abs(ev.deltaY) >= 50 && Number.isInteger(ev.deltaY));
+    if (ev.ctrlKey || rotella) {           // pizzico sul trackpad o rotellina: zoom verso il cursore
+      const r = map.getCanvas().getBoundingClientRect(), p = [ev.clientX - r.left, ev.clientY - r.top];
+      const dz = clamp(-ev.deltaY * (ev.ctrlKey ? 0.012 : 0.0025), -0.8, 0.8);
+      map.easeTo({ zoom: map.getZoom() + dz, around: map.unproject(p), duration: ev.ctrlKey ? 0 : 160 });
+    } else map.panBy([ev.deltaX, ev.deltaY], { duration: 0 });   // due dita sul trackpad: spostamento
+  }, { passive: false });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
   map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true } }), "bottom-right");
   map.on("load", async () => {
@@ -209,7 +226,8 @@ function mmApplyLayers() {
 function mmTap(e) {
   const map = MM.map, ll = [e.lngLat.lng, e.lngLat.lat];
   const b = map.queryRenderedFeatures(e.point, { layers: ["bld"] })[0];
-  const centro = b ? (mmFeatCentro(b) || ll) : ll;
+  const geomB = b ? mmUnPalazzo(b.geometry, ll) : null;
+  const centro = geomB ? (mmFeatCentro({ geometry: geomB }) || ll) : ll;
   // civico più vicino e via più vicina (dalle tessere già caricate)
   let civ = null, dc = 1e9, via = null, dv = 1e9;
   for (const f of map.querySourceFeatures("omt", { sourceLayer: "housenumber" })) {
@@ -225,7 +243,7 @@ function mmTap(e) {
   const com = !micro && MM.hint ? MM.hint.features.find(f => mmInGeom(centro, f.geometry))?.properties : null;
   const h = b ? (b.properties.render_height || null) : null;
   const sel = { lon: centro[0], lat: centro[1], via: dv < 120 ? via : null, civ: dc < 35 ? civ : null, micro: micro ? micro.n : null, zona: micro ? micro.z : null, nil, comune: micro ? "Milano" : com?.n || null,
-    h, piani: h ? Math.max(1, Math.round(h / 3.1)) : null, geom: b ? b.geometry : null };
+    h, piani: h ? Math.max(1, Math.round(h / 3.1)) : null, geom: geomB };
   MM.sel = sel; store.set("mm_sel", { ...sel, geom: null });
   mmShowSel(sel, true);
 }
@@ -272,6 +290,7 @@ function vMilano3D() {
   </div>
   <div class="mmwrap"><div class="mm3d" id="mm3d"></div><div class="mmsheet" id="mmsheet" hidden></div></div>
   <div id="mmleg">${mmLegend()}</div>
+  <p class="note">Da computer: due dita sul trackpad per spostarti, pizzico o rotellina per lo zoom, tasto destro (o Ctrl + trascina) per ruotare e inclinare. Da telefono: un dito sposta, due dita zoomano e ruotano.</p>
   <p class="note" id="mmnilnote" hidden>I confini ufficiali dei quartieri del Comune non si sono caricati: vedi le microzone di prezzo (linee azzurre).</p>
   <h2>Valuta un immobile a Milano e hinterland</h2>
   <div class="card">${vForm("mvf", `<fieldset><legend>Dove</legend><div class="vg">
