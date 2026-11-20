@@ -26,6 +26,7 @@ Tieni **solo** se tutte vere (ci investe soldi veri, meglio scartare un dubbio c
 - stato buono/abitabile, ottimo/ristrutturato o nuovo, e la descrizione lo conferma (scarta: "da ristrutturare", "da rivedere", "rustico", "allo stato grezzo", "fienile", "rudere", "ex", "da sistemare", "impianti da rifare");
 - non asta, non nuda proprietà, non quota, non "affittato con riscatto", non venduto/in trattativa;
 - almeno 4 foto e **almeno una degli interni** (cucina/bagno/camera citate nelle didascalie o nella descrizione). Se puoi, guarda le prime foto (WebFetch sull'URL della foto chiedendo di descriverla); se non riesci a vederle, scrivi in `contro`: "Foto da guardare prima di contattare".
+- niente appartamenti dal 3° piano in su senza ascensore (regola di Imma); salva sempre `ascensore: true/false` nell'annuncio;
 - 25 m² o più, prezzo ≤ 60.000 €, €/m² non assurdo (sotto 250 €/m² è quasi sempre un rudere).
 - comune entro 3 ore da Milano (Lombardia, Piemonte, Liguria, Veneto, Emilia occ.).
 

@@ -2113,6 +2113,7 @@ const MIEI = [
  },
  {
   "id": "oneta-p",
+  "escluso": "3° piano, ascensore non indicato (regola: niente 3° piano e oltre senza ascensore)",
   "titolo": "Trilocale all'ultimo piano, bagno rifatto, arredato",
   "url": "https://www.immobiliare.it/annunci/134056935/",
   "fonte": "Immobiliare.it / Idealista (via Caasa e Nestoria)",

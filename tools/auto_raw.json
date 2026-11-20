@@ -27,20 +27,20 @@
   "Somma Lombardo|VA": 1,
   "Verona|VR": 0,
   "Valeggio sul Mincio|VR": 0,
-  "Arona|NO": 1,
+  "Arona|NO": 0,
   "La Spezia|SP": 1,
   "Genova|GE": 0,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 2,
-  "Castel San Giovanni|PC": 1,
+  "Castel San Giovanni|PC": 0,
   "Vigevano|PV": 0,
-  "Stradella|PV": 1,
+  "Stradella|PV": 0,
   "Alessandria|AL": 1,
-  "Garlasco|PV": 1,
+  "Garlasco|PV": 0,
   "Ferno|VA": 0,
   "Codogno|LO": 1,
-  "Novi Ligure|AL": 1,
+  "Novi Ligure|AL": 0,
   "Lonate Pozzolo|VA": 0,
   "Cardano al Campo|VA": 1,
   "Tortona|AL": 1,
@@ -269,40 +269,6 @@
    "omi_zona": "D1"
   },
   {
-   "id": "97639908",
-   "comune": "Arona",
-   "p": "NO",
-   "prezzo": 55000,
-   "mq": 30,
-   "locali": 2,
-   "bagni": 1,
-   "piano": "4",
-   "stato": "buono",
-   "classe": "G",
-   "arredato": false,
-   "indirizzo": "Via Generale Armando Diaz 11, Centro, Arona",
-   "titolo": "Bilocale all'ultimo piano in centro ad Arona",
-   "foto": [
-    "https://pwm.im-cdn.it/image/1210635562/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1210635638/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1852137913/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1852137923/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1852137951/m-c.jpg"
-   ],
-   "aggiornato": "04/10/2026",
-   "agenzia": "privato",
-   "pro": [
-    "Centro di Arona, vista aperta, posto auto coperto incluso",
-    "Venduto da privato: niente provvigione d'agenzia"
-   ],
-   "contro": [
-    "Quarto piano senza ascensore",
-    "Solo 30 m², classe G"
-   ],
-   "spese_mese": 100,
-   "trovato": "2026-11-20"
-  },
-  {
    "id": "133374042",
    "comune": "Maccagno con Pino e Veddasca",
    "p": "VA",
@@ -470,75 +436,8 @@
     "Spese condominiali non indicate"
    ],
    "spese_mese": 60,
-   "trovato": "2026-11-20"
-  },
-  {
-   "id": "103419152",
-   "comune": "Castel San Giovanni",
-   "p": "PC",
-   "prezzo": 59000,
-   "mq": 64,
-   "locali": 3,
-   "bagni": 1,
-   "piano": "3",
-   "stato": "ristrutturato",
-   "classe": "G",
-   "arredato": true,
-   "indirizzo": "Via Mulini, Centro, Castel San Giovanni",
-   "titolo": "Trilocale ristrutturato in centro a Castel San Giovanni",
-   "foto": [
-    "https://pwm.im-cdn.it/image/1868904839/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1868904745/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1868904297/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1868904443/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1868904155/m-c.jpg"
-   ],
-   "aggiornato": "26/03/2026",
-   "agenzia": "Global Consulenti Immobiliari",
-   "pro": [
-    "Ristrutturato, due camere matrimoniali, bagno finestrato",
-    "Nessuna spesa condominiale, riscaldamento autonomo"
-   ],
-   "contro": [
-    "Terzo piano senza ascensore",
-    "Classe G"
-   ],
-   "spese_mese": 0,
-   "trovato": "2026-11-20"
-  },
-  {
-   "id": "134947273",
-   "comune": "Stradella",
-   "p": "PV",
-   "prezzo": 43000,
-   "mq": 92,
-   "locali": 3,
-   "bagni": 1,
-   "piano": "4",
-   "stato": "buono",
-   "classe": "G",
-   "arredato": false,
-   "indirizzo": "Piazza Meriggi 1, Centro, Stradella",
-   "titolo": "Trilocale panoramico in Piazza Meriggi, Stradella",
-   "foto": [
-    "https://pwm.im-cdn.it/image/2061792439/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2061792467/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2061792433/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2061792443/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2061792471/m-c.jpg"
-   ],
-   "aggiornato": "20/11/2026",
-   "agenzia": "Tecnocasa Stradella",
-   "pro": [
-    "92 m² a 43.000 €: circa 470 €/m², vicino all'ospedale",
-    "Luminoso e panoramico, cantina"
-   ],
-   "contro": [
-    "Quarto piano senza ascensore",
-    "Bagno e finiture datati, spese 125 €/mese"
-   ],
-   "spese_mese": 125,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "ascensore": true
   },
   {
    "id": "129515688",
@@ -573,75 +472,8 @@
    ],
    "spese_mese": 33,
    "trovato": "2026-11-20",
-   "omi_zona": "B1"
-  },
-  {
-   "id": "119810954",
-   "comune": "Garlasco",
-   "p": "PV",
-   "prezzo": 53000,
-   "mq": 70,
-   "locali": 3,
-   "bagni": 1,
-   "piano": "3",
-   "stato": "buono",
-   "classe": "F",
-   "arredato": false,
-   "indirizzo": "Piazza Piccola 5, Centro, Garlasco",
-   "titolo": "Trilocale in corte con terrazzo in centro a Garlasco",
-   "foto": [
-    "https://pwm.im-cdn.it/image/1707841760/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1707841968/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1707842436/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1707841652/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1683473906/m-c.jpg"
-   ],
-   "aggiornato": "16/05/2025",
-   "agenzia": "Studio Immobiliare Media Services",
-   "pro": [
-    "Corte ben tenuta con poche unità, termoautonomo",
-    "Terrazzo e cantina, nessuna spesa condominiale"
-   ],
-   "contro": [
-    "Ultimo piano senza ascensore",
-    "Annuncio non aggiornato da maggio 2025: verificare che sia disponibile"
-   ],
-   "spese_mese": 0,
-   "trovato": "2026-11-20"
-  },
-  {
-   "id": "122412740",
-   "comune": "Novi Ligure",
-   "p": "AL",
-   "prezzo": 59000,
-   "mq": 73,
-   "locali": 4,
-   "bagni": 1,
-   "piano": "4",
-   "stato": "nuovo",
-   "classe": "E",
-   "arredato": false,
-   "indirizzo": "Corso Piave 5, Centro, Novi Ligure",
-   "titolo": "Quadrilocale rinnovato in centro a Novi Ligure",
-   "foto": [
-    "https://pwm.im-cdn.it/image/1762298666/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1762298646/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1762298648/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1762298652/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1762298662/m-c.jpg"
-   ],
-   "aggiornato": "21/09/2026",
-   "agenzia": "Tecnocasa Novi Uno",
-   "pro": [
-    "Dichiarato come nuovo: pavimenti e infissi rifatti",
-    "Centro, terrazza e posto auto"
-   ],
-   "contro": [
-    "Quarto e ultimo piano senza ascensore",
-    "Spese 167 €/mese (riscaldamento centralizzato)"
-   ],
-   "spese_mese": 167,
-   "trovato": "2026-11-20"
+   "omi_zona": "B1",
+   "ascensore": true
   },
   {
    "id": "129927340",
@@ -743,7 +575,8 @@
     "Classe e spese non indicate"
    ],
    "spese_mese": 60,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "ascensore": true
   },
   {
    "id": "133829174",
@@ -777,7 +610,8 @@
     "Classe G, spese 80 €/mese"
    ],
    "spese_mese": 80,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "ascensore": true
   },
   {
    "id": "115236805",
@@ -996,6 +830,31 @@
    "id": "133326480",
    "comune": "Abbiategrasso",
    "motivo": "foto disordinate, ambienti datati: non valutabile"
+  },
+  {
+   "id": "97639908",
+   "comune": "Arona",
+   "motivo": "4° piano senza ascensore"
+  },
+  {
+   "id": "103419152",
+   "comune": "Castel San Giovanni",
+   "motivo": "3° piano senza ascensore"
+  },
+  {
+   "id": "134947273",
+   "comune": "Stradella",
+   "motivo": "4° piano senza ascensore"
+  },
+  {
+   "id": "119810954",
+   "comune": "Garlasco",
+   "motivo": "3° piano (ultimo) senza ascensore"
+  },
+  {
+   "id": "122412740",
+   "comune": "Novi Ligure",
+   "motivo": "4° piano senza ascensore"
   }
  ]
 }

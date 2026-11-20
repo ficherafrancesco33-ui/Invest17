@@ -260,7 +260,7 @@ const INV_MODI = {
 function invBread(k) {
   return `<nav class="bread tabs">${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
 }
-const invAll = () => [...MIEI.map(im => ({ im, src: "miei" })), ...AUTO.map(im => ({ im, src: "auto" }))];
+const invAll = () => [...MIEI.filter(im => !im.escluso).map(im => ({ im, src: "miei" })), ...AUTO.map(im => ({ im, src: "auto" }))];
 function vInvHub() {
   const all = invAll().map(x => ({ ...x, A: analizza(x.im) })), ok = all.filter(x => x.A.score != null);
   const top = ok.sort((a, b) => b.A.score - a.A.score)[0], reg = new Set(all.map(x => x.im.regione)).size;
