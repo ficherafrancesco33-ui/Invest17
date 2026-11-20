@@ -61,7 +61,69 @@ function pdfSpiega(t, f) {
   return "Coefficiente di merito d'uso comune nelle stime";
 }
 
-function mmPdf({ r, q, ctx }) {
+
+/* fotografia della mappa Keystone (stile Notte morbida, palazzi in 3D) da mettere nel PDF */
+async function pdfSnap(o) {
+  try { await mmLoad(); } catch (e) { return null; }
+  if (!window.maplibregl) return null;
+  const el = document.createElement("div");
+  el.style.cssText = `position:fixed;left:-${o.w + 80}px;top:0;width:${o.w}px;height:${o.h}px;pointer-events:none`;
+  document.body.appendChild(el);
+  let map;
+  const fine = () => { try { map && map.remove(); } catch (e) {} el.remove(); };
+  const idle = () => new Promise(r => { if (map.loaded() && !map.isMoving()) map.once("idle", r); else map.once("idle", r); setTimeout(r, 6000); });
+  try {
+    map = new maplibregl.Map({ container: el, style: mmStile(), center: [o.lon, o.lat], zoom: o.zoom, pitch: o.pitch || 0, bearing: o.bearing || 0,
+      interactive: false, preserveDrawingBuffer: true, pixelRatio: 2, attributionControl: false, fadeDuration: 0, antialias: true });
+    await new Promise((r, j) => { map.once("load", r); setTimeout(() => j(new Error("timeout")), 9000); });
+    map.addLayer({ id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 13,
+      paint: { "fill-extrusion-color": plRoof(), "fill-extrusion-height": o.pitch ? ["coalesce", ["get", "render_height"], 10] : 0,
+        "fill-extrusion-base": o.pitch ? ["coalesce", ["get", "render_min_height"], 0] : 0, "fill-extrusion-opacity": 0.95, "fill-extrusion-vertical-gradient": true } });
+    map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#f2cf5b", "fill-extrusion-height": o.pitch ? ["+", ["coalesce", ["get", "h"], 12], 1.5] : 0.5, "fill-extrusion-base": 0, "fill-extrusion-opacity": 1 } });
+    try { map.setLight({ anchor: "viewport", color: "#fff3d0", intensity: 0.4, position: [1.5, 210, 40] }); } catch (e) {}
+    await idle();
+    if (o.evidenzia) {
+      let g = o.geom ? { type: "Feature", properties: { h: o.hb || 12 }, geometry: o.geom } : null;
+      if (!g) { const f = map.queryRenderedFeatures(map.project([o.lon, o.lat]), { layers: ["bld"] })[0];
+        if (f) g = { type: "Feature", properties: { h: f.properties.render_height || 12 }, geometry: f.geometry }; }
+      if (g) { map.getSource("sel").setData({ type: "FeatureCollection", features: [g] }); await idle(); }
+      else (o.pins = o.pins || []).push({ lat: o.lat, lon: o.lon, k: "me", t: "" });
+    }
+    const pins = (o.pins || []).map(p => { const q = map.project([p.lon, p.lat]); return { ...p, x: q.x, y: q.y }; });
+    const url = map.getCanvas().toDataURL("image/jpeg", 0.88);
+    fine();
+    return url && url.length > 5000 ? { url, pins } : null;
+  } catch (e) { fine(); return null; }
+}
+function pdfFoto(sn, W, H, cls = "") {
+  const P = sn.pins.map(p => p.x < 6 || p.y < 6 || p.x > W - 6 || p.y > H - 6 ? "" : `<span class="pin ${p.k || ""}" style="left:${p.x.toFixed(1)}px;top:${p.y.toFixed(1)}px">${p.t ?? ""}</span>`).join("");
+  return `<div class="mapw foto ${cls}" style="width:${W}px;height:${H}px"><img class="snap" src="${sn.url}" alt="">${P}<span class="osm">© OpenStreetMap · OpenFreeMap</span></div>`;
+}
+
+async function mmPdf(arg) {
+  if (window.__pdfHtml) return mmPdfHtml(arg, {});
+  const w = window.open("", "_blank");
+  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return; }
+  w.document.write(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Preparo il PDF…</title><body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;font:15px Georgia,serif;color:#6e1423;background:#fbf7f0"><div style="width:38px;height:38px;border:3px solid #ead9b8;border-top-color:#6e1423;border-radius:50%;animation:g 1s linear infinite"></div>Preparo la valutazione con la mappa 3D…<style>@keyframes g{to{transform:rotate(360deg)}}</style></body>`);
+  const { ctx, q } = arg, s = ctx.sel || {};
+  const lat = s.lat ?? ctx.micro?.lat ?? ctx.com?.lat, lon = s.lon ?? ctx.micro?.lon ?? ctx.com?.lon;
+  const foto = {};
+  if (lat != null) {
+    const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
+    foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h }), 20000);
+    const C = arg.r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
+    const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
+    if (pts.length) {
+      const maxD = Math.max(400, ...C.lista.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
+      foto.cmp = await tm(pdfSnap({ lat, lon, zoom: maxD > 1400 ? 14 : maxD > 700 ? 15 : 15.8, w: 690, h: 270, pins: [...pts, { lat, lon, k: "me", t: "" }], evidenzia: true, geom: s.geom }), 20000);
+    }
+  }
+  const html = mmPdfHtml(arg, foto);
+  w.document.open(); w.document.write(html); w.document.close();
+}
+
+function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const M = TERR.milano, s = ctx.sel || {}, C = PDF_C;
   const oggi = new Date().toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric" });
   const oggiL = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
@@ -151,10 +213,10 @@ function mmPdf({ r, q, ctx }) {
 
   /* --- mappe --- */
   const pins = comps.filter(a => a.lat != null && !a.appross).map(a => ({ lat: a.lat, lon: a.lon, t: a.i, k: a.star ? "st" : "" }));
-  const mapCover = lat != null ? pdfMappa(lat, lon, 16, 615, 300, [{ lat, lon, k: "me", t: "" }], "cov") : "";
+  const mapCover = foto.cov ? pdfFoto(foto.cov, 615, 300, "cov") : lat != null ? pdfMappa(lat, lon, 16, 615, 300, [{ lat, lon, k: "me", t: "" }], "cov") : "";
   const maxD = Math.max(400, ...comps.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
   const zC = maxD > 1400 ? 14 : maxD > 700 ? 15 : 16;
-  const mapComp = lat != null && pins.length ? pdfMappa(lat, lon, zC, 690, 270, [...pins, { lat, lon, k: "me", t: "" }]) : "";
+  const mapComp = foto.cmp ? pdfFoto(foto.cmp, 690, 270) : lat != null && pins.length ? pdfMappa(lat, lon, zC, 690, 270, [...pins, { lat, lon, k: "me", t: "" }]) : "";
 
   const sec = (n, t, body, cls = "") => `<section class="${cls}"><h2><i>${n}</i>${t}</h2>${body}</section>`;
   const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Valutazione ${esc(ctx.nome)}${ctx.cliente ? " – " + esc(ctx.cliente) : ""} – Maison Collection</title>
@@ -189,6 +251,7 @@ body{margin:0;font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;font-weig
 .mapw{position:relative;overflow:hidden;break-inside:avoid;border:.6pt solid ${C.oro2};background:#efe8dc}
 .mapw .tiles{position:absolute;inset:0;filter:grayscale(1) sepia(.28) contrast(.92) brightness(1.06)}
 .mapw .tiles img{position:absolute;width:256px;height:256px}
+.mapw img.snap{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.mapw.foto{border-color:${C.oro};box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .mapw .osm{position:absolute;right:3px;bottom:2px;font-size:5.5pt;color:#6b5f58;background:rgba(255,255,255,.7);padding:0 3px}
 .pin{position:absolute;transform:translate(-50%,-50%);width:15px;height:15px;border-radius:50%;background:#fff;border:1.4px solid ${C.oro};color:${C.bx};font-size:6.5pt;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .pin.st{background:${C.oro};color:#fff;border-color:#fff}
@@ -399,8 +462,6 @@ ${sec(comps.length ? (PZ ? 10 : 9) : 9, "Nota metodologica", `
  if(!/[?&]nostampa/.test(location.search)&&!window.__nostampa)setTimeout(()=>window.print(),300)})();
 <\/script>
 </body></html>`;
-  if (window.__pdfHtml) { window.__pdfHtml(html); return; }   // per i test
-  const w = window.open("", "_blank");
-  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return; }
-  w.document.open(); w.document.write(html); w.document.close();
+  if (window.__pdfHtml) window.__pdfHtml(html);   // per i test
+  return html;
 }
