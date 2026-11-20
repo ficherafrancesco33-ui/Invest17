@@ -53,24 +53,34 @@ function homeTop() {
   return invAll().map(x => ({ ...x, A: analizza(x.im) })).filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
 }
 function vHomeK() {
-  const nov = homeNovita(), top = homeTop(), seg = segAll();
-  const A = mmAnnunci(), visti = new Set(store.get("ann_visti", [])), nuoviPriv = A.filter(a => a.priv && !visti.has(a.id)).length;
-  const tick = nov.map(n => `<a class="tk" href="${n.h}"><i>${esc(n.tag)}</i><b>${esc(n.t)}</b>${n.s ? `<span>${esc(n.s)}</span>` : ""}</a>`).join("");
-  return `${novBanner()}<div class="ticker" aria-label="Novità"><div class="tkt">${tick}${tick}</div></div>
-  <h2>I migliori 10 <small><a href="#inv/classifica">Classifica completa</a></small></h2>
+  const top = homeTop(), seg = segAll(), dal = novDati().dal || {};
+  // 1. arrivati da Immobiliare (fino a 60.000 €), i più recenti prima
+  const arr = top.filter(x => x.src === "auto").sort((a, b) => (b.im.trovato || "").localeCompare(a.im.trovato || "") || b.A.score - a.A.score).slice(0, 12);
+  // 2. affare del giorno: il punteggio più alto tra gli arrivi recenti
+  const rec = arr.filter(x => isNuovoInv(x.im)), aff = (rec.length ? rec : arr).slice().sort((a, b) => b.A.score - a.A.score)[0];
+  const perche = x => [x.im.mq ? `${eur(x.im.prezzo / x.im.mq)}/m²` : "", x.A.best ? `rende meglio come ${CATS[x.A.best].toLowerCase()}` : "", x.A.val?.sconto > 0.05 ? `${pct(x.A.val.sconto, 0)} sotto il mercato` : "", x.im.affitti?.lungo?.stima === false ? "già affittato" : ""].filter(Boolean).join(" · ");
+  // 3. privati di Milano sotto la media della microzona, i più recenti prima
+  const M = TERR.milano.micro, priv = mmAnnunci().filter(a => a.priv && a.micro).map(a => { const mi = M.find(m => m.n === a.micro); return { ...a, dlt: mi ? a.mq2 / mi.v - 1 : 0, dal: dal[String(a.id).replace(/^i/, "")] || "" }; })
+    .filter(a => a.dlt < -0.05).sort((a, b) => b.dal.localeCompare(a.dal) || a.dlt - b.dlt).slice(0, 4);
+  return `${novBanner()}
+  ${arr.length ? `<h2>Da Immobiliare <small><a href="#inv/classifica" data-src="auto">fino a 60.000 €</a></small></h2>
+  <div class="hrow">${arr.map(x => { const st = stato(x.A.score); return `<a class="hcard" href="#imm/auto/${encodeURIComponent(x.im.id)}">${win(x.im, st.col, isNuovoInv(x.im) ? `<span class="tag new hnew">nuovo</span>` : "")}
+    <b>${esc(x.im.comune)}</b><span>${eur(x.im.prezzo)} · ${num(x.im.mq)} m²</span><i style="--pc:${st.col}">${x.A.score}</i></a>`; }).join("")}</div>` : ""}
+  ${aff ? `<h2>L'affare del giorno</h2>
+  <a class="affare" href="#imm/${aff.src}/${encodeURIComponent(aff.im.id)}">${win(aff.im, stato(aff.A.score).col)}
+    <div><small>${esc(aff.im.comune)}${aff.im.provincia ? ` (${esc(aff.im.provincia)})` : ""}</small><b>${esc(aff.im.titolo || "Immobile")}</b>
+    <span>${eur(aff.im.prezzo)} · ${num(aff.im.mq)} m² · netto <strong>${pct(aff.A.rend)}</strong></span><em>${esc(perche(aff))}</em></div><i class="t10s" style="--pc:${stato(aff.A.score).col}">${aff.A.score}</i></a>` : ""}
+  <h2>Classifica generale <small><a href="#inv/classifica">Tutta</a></small></h2>
   <div class="t10">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score), im = x.im;
     return `<a class="t10r" href="#imm/${x.src}/${encodeURIComponent(im.id)}"><b class="t10n">${i + 1}</b>${win(im, st.col)}
       <span class="t10t"><small>${esc([im.comune, im.zona].filter(Boolean).join(" · "))}</small><em>${esc(im.titolo || "Immobile")}</em>
       <span>${eur(im.prezzo)} · ${num(im.mq)} m² · netto <strong>${pct(x.A.rend)}</strong>${x.A.best ? ` come ${CATS[x.A.best]}` : ""}</span></span>
-      <i class="t10s" style="--pc:${st.col}">${x.A.score}</i></a>`; }).join("") || `<p class="note">Mandami un link per iniziare la classifica.</p>`}</div>
-  <a class="homecm" href="#completa"><span><b>Completamento</b>Cosa manca a Milano e negli Investimenti</span><em>${cmMilano().ok}/${TERR.milano.micro.length}</em></a>
-  <h2>Dove cercare <small><a href="#inv/dove">Tutti i comuni</a></small></h2>
-  <div class="chips" id="dovek">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${k === store.get("dove_k", "breve") ? "on" : ""}" data-k="${k}">${t}</button>`).join("")}</div>
-  <div id="dove">${homeDove()}</div>
+      <i class="t10s" style="--pc:${st.col}">${x.A.score}</i></a>`; }).join("") || `<p class="note">Ancora nessun immobile in classifica.</p>`}</div>
+  ${priv.length ? `<h2>Milano · privati sotto la media <small><a href="#milano/privati">Tutti</a></small></h2>
+  <div class="plist">${priv.map(a => `<a class="pcard" href="#milano/privati/${encodeURIComponent(a.id)}"><div class="pc1"><b>${esc(a.via || a.micro)}</b><span>${esc(a.micro)} · ${a.mq} m²${a.dal ? ` · dal ${novData(a.dal)}` : ""}</span></div>
+    <div class="pc3"><b>${eur(a.p)}</b><em><i class="s-good">−${pct(-a.dlt, 0)} zona</i></em></div></a>`).join("")}</div>` : ""}
   ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
-  ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}
-  <h2>Guida <small><a href="#guida">Tutta la guida</a></small></h2>
-  <div class="list">${GUIDA.slice(0, 2).map(cardGuida).join("")}</div>`;
+  ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}`;
 }
 /* mappa d'Italia: stile Carbone e oro con rilievi (ombreggiatura delle montagne) e nomi di città, laghi e regioni */
 function itStile() {
@@ -117,8 +127,7 @@ function afterHomeK() {
   const nb = $("#novb"); if (nb) nb.addEventListener("click", e => {
     const u = novUltimo(); if (e.target.closest("[data-nov]")) { if (e.target.closest("[data-nov]").dataset.nov === "inv") store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "oggi" }); }
     if (e.target.closest("[data-nov],[data-novx]") && u) { store.set("nov_visto", u.data); if (e.target.closest("[data-novx]")) nb.remove(); } });
-  $("#dovek")?.addEventListener("click", e => { const c = e.target.closest("[data-k]"); if (!c) return; store.set("dove_k", c.dataset.k);
-    document.querySelectorAll("#dovek .chip").forEach(x => x.classList.toggle("on", x === c)); $("#dove").innerHTML = homeDove(); });
+  $("[data-src=auto]")?.addEventListener("click", () => store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "auto" }));
   const el = $("#itmap"); if (!el) return;
   const top = homeTop();
   const P = top.filter(x => x.im.lat != null).map((x, i) => ({ lon: x.im.lng, lat: x.im.lat, rank: i < 10 ? i + 1 : 0, col: stato(x.A.score).col,
