@@ -45,6 +45,9 @@ Per ciascuno apri la scheda e scrivi una riga in fondo a `tools/terr/raw_immobil
 - **Leggi sempre la descrizione** (anche per Milano): scarta e scrivi in `tools/terr/esclusi.txt` (`id;motivo`) quote o comproprietà ("vendo quota", "50%"), nude proprietà, usufrutto, aste, rent to buy, cessioni di contratto, posti letto o stanze singole, locali commerciali. Scarta anche "Progetto"/nuove costruzioni senza prezzo.
 - Per i **privati** che superano il controllo aggiungi l'id a `tools/terr/privati_ok.txt`: solo quelli compaiono in home.
 
+## 3b. Archivio permanente
+Salva ogni annuncio letto (con descrizione, foto, caratteristiche) in un json come quello di `tools/terr/archivio.py` e lancia `python3 tools/terr/archivio.py <file.json>`: unisce all'archivio `tools/terr/archivio_milano.json.gz` (con lo storico dei prezzi), aggiorna le righe, gli esclusi e i privati puliti.
+
 ## 4. Generare, registrare, pubblicare
 ```
 node tools/auto_imm.js

@@ -1,2 +1,226 @@
 # annunci di Milano esclusi dopo aver letto la descrizione: id;motivo
 132647020;vende una quota del 50% in comproprietà
+98104068;progetto / nuova costruzione
+99954196;non residenziale
+99954200;non residenziale
+100487104;progetto / nuova costruzione
+106626449;non residenziale
+109893241;non residenziale
+109969911;progetto / nuova costruzione
+111450135;progetto / nuova costruzione
+112672163;progetto / nuova costruzione
+112952807;asta
+114880987;progetto / nuova costruzione
+115908855;progetto / nuova costruzione
+117766451;non residenziale
+119272969;progetto / nuova costruzione
+119601379;progetto / nuova costruzione
+119937180;progetto / nuova costruzione
+121232008;progetto / nuova costruzione
+121919094;nuda proprietà
+122035660;nuda proprietà
+122135718;nuda proprietà
+122179218;nuda proprietà
+122903040;nuda proprietà
+123405211;nuda proprietà
+123565887;progetto / nuova costruzione
+123822493;uso non abitativo
+124055921;nuda proprietà
+124071977;nuda proprietà
+124158499;nuda proprietà
+124158865;nuda proprietà
+124175639;progetto / nuova costruzione
+124287605;affitto con riscatto
+124985455;non residenziale
+125527629;nuda proprietà
+125746345;non residenziale
+126709713;nuda proprietà
+126750289;nuda proprietà
+126867399;progetto / nuova costruzione
+126975081;nuda proprietà
+127228343;nuda proprietà
+127244619;asta
+127595256;non residenziale
+128051428;nuda proprietà
+128334722;non residenziale
+128459774;nuda proprietà
+128482510;asta
+128546154;nuda proprietà
+128550050;nuda proprietà
+128789204;nuda proprietà
+128810056;asta
+128835816;asta
+129017838;asta
+129270502;progetto / nuova costruzione
+129366130;non residenziale
+129426672;non residenziale
+129460454;progetto / nuova costruzione
+129533248;progetto / nuova costruzione
+129550350;non residenziale
+129552112;non residenziale
+129836374;nuda proprietà
+130016872;non residenziale
+130028734;non residenziale
+130330466;nuda proprietà
+130489348;non residenziale
+130569396;non residenziale
+130569402;non residenziale
+130569408;non residenziale
+130569410;non residenziale
+130569414;non residenziale
+130738028;uso non abitativo
+130739324;uso non abitativo
+130911582;nuda proprietà
+131277240;asta
+132184066;nuda proprietà
+132243994;non residenziale
+132264670;nuda proprietà
+132289594;non residenziale
+132400946;nuda proprietà
+132412772;nuda proprietà
+132414418;uso non abitativo
+132661552;progetto / nuova costruzione
+132881414;nuda proprietà
+132945992;non residenziale
+133168946;uso non abitativo
+133253396;nuda proprietà
+133257614;nuda proprietà
+133259356;nuda proprietà
+133326634;nuda proprietà
+133506072;nuda proprietà
+133547324;non residenziale
+133547428;non residenziale
+133549414;uso non abitativo
+133654382;nuda proprietà
+133722188;progetto / nuova costruzione
+133727024;asta
+133728504;asta
+133731342;asta
+133732322;asta
+133732892;asta
+133739936;asta
+133765834;asta
+133770652;uso non abitativo
+133773158;asta
+133773268;asta
+133794784;asta
+133796062;non residenziale
+133797484;asta
+133831614;nuda proprietà
+133857372;progetto / nuova costruzione
+133878890;asta
+133878958;asta
+133891520;uso non abitativo
+133891636;asta
+134006257;asta
+134017039;asta
+134054191;nuda proprietà
+134119707;nuda proprietà
+134128595;asta
+134255469;asta
+134266889;asta
+134267469;progetto / nuova costruzione
+134273127;uso non abitativo
+134333905;asta
+134335177;progetto / nuova costruzione
+134353499;uso non abitativo
+134354235;asta
+134368487;asta
+134386743;asta
+134387371;uso non abitativo
+134389695;asta
+134394085;asta
+134394349;asta
+134406279;asta
+134444223;asta
+134448109;asta
+134452897;asta
+134452899;asta
+134454613;asta
+134458977;asta
+134462787;asta
+134462909;asta
+134472189;asta
+134474817;asta
+134480001;non residenziale
+134481303;asta
+134492461;asta
+134492581;asta
+134493461;asta
+134499741;asta
+134506657;asta
+134519251;asta
+134524525;asta
+134525709;asta
+134525905;asta
+134525911;asta
+134529625;asta
+134536057;asta
+134556369;asta
+134571543;asta
+134578719;asta
+134590749;asta
+134591001;asta
+134591579;asta
+134613999;asta
+134628375;asta
+134630103;asta
+134643373;uso non abitativo
+134646361;asta
+134660969;asta
+134661237;asta
+134662003;asta
+134664831;asta
+134667611;nuda proprietà
+134667813;asta
+134677191;asta
+134678917;nuda proprietà
+134713911;asta
+134716319;asta
+134717751;nuda proprietà
+134718599;asta
+134764779;asta
+134764855;asta
+134775649;asta
+134777849;asta
+134791267;asta
+134793949;asta
+134794541;asta
+134797865;asta
+134798607;asta
+134807055;asta
+134809959;asta
+134811167;asta
+134811313;asta
+134811673;asta
+134811911;asta
+134813999;asta
+134820215;non residenziale
+134825321;asta
+134825459;asta
+134829987;asta
+134836021;asta
+134836347;asta
+134838881;asta
+134847989;asta
+134848033;asta
+134851147;asta
+134851149;asta
+134864567;asta
+134870921;nuda proprietà
+134871471;asta
+134876789;asta
+134876965;asta
+134908717;asta
+134909983;asta
+134910047;asta
+134913439;asta
+134917163;asta
+134917213;asta
+134924191;asta
+134933393;asta
+134934693;asta
+134938899;nuda proprietà
+134940941;nuda proprietà
+134945881;asta
+134947091;nuda proprietà
