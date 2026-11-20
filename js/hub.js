@@ -38,7 +38,7 @@ const MI_MODI = {
     sub: "Milano e hinterland in 3D: tocca un palazzo per vedere via, quartiere e prezzi. Microzone di prezzo, quartieri, metro, servizi e annunci.", form: "Valuta un immobile a Milano e hinterland" },
 };
 function miBread(mode) {
-  return `<nav class="bread"><a href="#milano">Milano</a>${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Valutazione per il ", "Valuta ").replace("Annunci dei privati", "Privati").replace("Mappa di Milano", "Mappa"))}</span></a>`).join("")}</nav>`;
+  return `<nav class="bread nob">${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Valutazione per il ", "Valuta ").replace("Annunci dei privati", "Privati").replace("Mappa di Milano", "Mappa"))}</span></a>`).join("")}</nav>`;
 }
 function vMilanoHub() {
   const A = mmAnnunci(), np = A.filter(a => a.priv).length, visti = new Set(store.get("ann_visti", []));

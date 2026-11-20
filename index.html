@@ -63,13 +63,17 @@ img{max-width:100%}
 .top{position:sticky;top:0;z-index:900;background:var(--head);box-shadow:0 2px 0 var(--cy),0 8px 20px rgba(0,0,0,.6);padding-top:env(safe-area-inset-top,0px)}
 .toprow{display:flex;align-items:center;gap:10px;padding:9px 12px 8px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--strong)}
-.logo i{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;font-size:22px;color:var(--on);
+.logo i{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;font-size:22px;color:var(--on);
   background:linear-gradient(180deg,var(--cy2),var(--cy));box-shadow:0 0 18px rgba(var(--accrgb),.55),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.18);position:relative;overflow:hidden}
 .logo i::after{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0));border-radius:12px 12px 40% 40%}
-.logo b{font-family:var(--display);font-style:italic;font-weight:800;font-size:26px;letter-spacing:.05em;text-transform:uppercase;line-height:.95;color:var(--headtx)}
+.logo b{font-family:var(--display);font-style:italic;font-weight:800;font-size:32px;letter-spacing:.05em;text-transform:uppercase;line-height:.95;color:var(--headtx)}
 .logo b small{display:block;font-family:var(--body);font-style:normal;font-weight:600;font-size:8.5px;letter-spacing:.2em;color:var(--cy);margin-top:3px;white-space:nowrap}
-.logo i svg{width:26px;height:26px;position:relative;z-index:1}
-.logo:active i{transform:rotate(-20deg);transition:transform .2s}
+.logo i svg{width:33px;height:33px;position:relative;z-index:1}
+.logo.spin i{animation:lspin .7s cubic-bezier(.5,0,.3,1) infinite}
+@keyframes lspin{to{transform:rotate(360deg)}}
+.pgback{display:inline-flex;align-items:center;gap:4px;margin:0 0 10px -2px;padding:6px 12px 6px 8px;border-radius:999px;border:1px solid var(--line2);background:var(--card);color:var(--cy2);
+  font-family:var(--display);font-style:italic;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.pgback svg{width:16px;height:16px}
 .top .sp{flex:1}
 .hback{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:12px;border:1px solid var(--line2);background:var(--card2);color:var(--cy2);cursor:pointer;margin-right:-4px}
 .hback svg{width:22px;height:22px}
@@ -360,7 +364,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 @media (max-width:400px){
   .scen{grid-template-columns:1fr}
   .kpi b{font-size:26px}
-  .logo b{font-size:23px}
+  .logo b{font-size:29px}
 }
 
 /* ===== Keystone: sezioni con scelta, percorsi, home ===== */
@@ -386,7 +390,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .bread a:first-child::before{content:"‹";font-style:normal;margin-right:2px}
 .bread a.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);border-color:transparent}
 .bread svg{width:15px;height:15px}
-.bread.tabs a:first-child::before{content:none}.bread.tabs a:first-child:not(.on){color:var(--muted);border-color:var(--line)}
+.bread.tabs a:first-child::before,.bread.nob a:first-child::before{content:none}.bread.nob a:first-child:not(.on){color:var(--muted);border-color:var(--line)}.bread.tabs a:first-child:not(.on){color:var(--muted);border-color:var(--line)}
 .bread.tabs{margin-bottom:10px}.bread.tabs a{flex:1;justify-content:center;font-size:15px;padding:8px 12px}
 .mblock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
 .mblock>div{border:1px solid var(--line2);border-radius:14px;padding:10px 12px;background:linear-gradient(160deg,var(--soft),var(--card))}
@@ -426,7 +430,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .star,.segbtn{display:inline-grid;place-items:center;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:9px;cursor:pointer}
 .star{width:30px;height:28px;vertical-align:middle;margin-left:4px}.star svg{width:16px;height:16px}
 .star.on,.segbtn.on{color:var(--on);background:var(--cy);border-color:var(--cy)}.star.on svg,.segbtn.on svg{fill:currentColor}
-.schtop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.schtop{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:-46px;min-height:36px}
 .segbtn{display:inline-flex;gap:6px;padding:7px 12px;font-family:var(--display);font-style:italic;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}.segbtn svg{width:16px;height:16px}
 .vs.ann{cursor:pointer}
 .ticker{overflow:hidden;margin:-18px -14px 16px;border-bottom:1px solid var(--soft);background:var(--deep);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
@@ -529,7 +533,6 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 <body>
 <header class="top">
   <div class="toprow">
-    <button class="hback" id="hback" aria-label="Indietro" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
     <a class="logo" href="#home" id="logo" title="Aggiorna la pagina"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V27a16 16 0 0 1 32 0v13" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M19.2 9.6h9.6l-1.6 11.2h-6.4z" fill="currentColor"/><circle cx="24" cy="31" r="3.1" fill="currentColor"/><path d="M24 33.5v5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></i><b>Keystone<small>Maison Collection</small></b></a>
     <span class="sp"></span>
   </div>
@@ -811,7 +814,7 @@ function vScheda(src, id) {
   const S = A.sc.list[sel] || A.sc.list[A.best];
   const g = im.giudizio || {};
   const seg = window.segIds && segIds().has("i:" + src + ":" + im.id);
-  return `<div class="schtop"><a class="back" href="#inv/classifica">← Classifiche</a><button class="segbtn ${seg ? "on" : ""}" data-segim="${src}|${esc(im.id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>${seg ? "Seguito" : "Segui"}</span></button></div>
+  return `<div class="schtop"><span></span><button class="segbtn ${seg ? "on" : ""}" data-segim="${src}|${esc(im.id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>${seg ? "Seguito" : "Segui"}</span></button></div>
   <section class="hero">
     ${win(im, st.col)}
     <div class="card neon">
@@ -998,10 +1001,11 @@ function render(keepScroll) {
   else { html = vHomeK(); after = afterHomeK; }
   const INVK = { miei: "archivio", auto: "auto", brevi: "dove" };
   if (INVK[v] && window.invBread) html = invBread(INVK[v]) + html;
+  if (v && v !== "home") html = `<button class="pgback" id="pgback" aria-label="Indietro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Indietro</button>` + html;
   app.innerHTML = html; after();
   const navv = v === "imm" || INVK[v] ? "inv" : v || "home";
   document.querySelectorAll("#nav a").forEach(x => { const on = x.dataset.v === navv; x.classList.toggle("on", on); if (on) x.scrollIntoView({ inline: "nearest", block: "nearest" }); });
-  const hb = $("#hback"); if (hb) hb.hidden = !location.hash || location.hash === "#home"; hhSet();
+  hhSet();
   window.scrollTo(0, keepScroll ? y : 0);
 }
 /* come Dreamers: tornando indietro si ritorna allo stesso punto della pagina (es. all'annuncio aperto) */
@@ -1028,13 +1032,13 @@ const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return
   if (v === "inv") return "home"; if (v === "milano") return c ? [v, a, b].join("/") : b ? [v, a].join("/") : a ? v : "home"; return "home"; };
 let NAVN = +(sessionStorage.getItem("ks_n") || 0);
 window.addEventListener("hashchange", () => { NAVN++; try { sessionStorage.setItem("ks_n", NAVN); } catch {} });
-$("#hback").addEventListener("click", () => { const h = location.hash.slice(1) || "home"; if (NAVN > 0) { NAVN -= 2; history.back(); } else location.hash = PARENT(h); });
+document.addEventListener("click", e => { if (!e.target.closest("#pgback")) return; const h = location.hash.slice(1) || "home"; if (NAVN > 0) { NAVN -= 2; history.back(); } else location.hash = PARENT(h); });
 const hhSet = () => document.documentElement.style.setProperty("--hh", $(".top").offsetHeight + "px");
 window.addEventListener("resize", hhSet);
 /* stile unico: Notte morbida */
 if (window.plSet) plSet();
 /* il logo ricarica i dati restando nella stessa pagina e allo stesso punto */
-$("#logo").addEventListener("click", e => { e.preventDefault(); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} location.reload(); });
+$("#logo").addEventListener("click", e => { e.preventDefault(); $("#logo").classList.add("spin"); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} setTimeout(() => location.reload(), 650); });
 render();
 try { const y = sessionStorage.getItem("ks_y"); if (y != null) { sessionStorage.removeItem("ks_y"); const go = () => window.scrollTo(0, +y); go(); setTimeout(go, 400); setTimeout(go, 1200); } } catch {}
 </script>
