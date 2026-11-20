@@ -360,7 +360,10 @@ for i, d in enumerate(L):
     out.append(im)
 
 oneta = json.load(open("tools/oneta.json"))
-allx = oneta + out
+# 20/11/2026: Imma tiene solo gli annunci arrivati dai suoi link (Oneta). I caricamenti fatti in autonomia
+# (Castione, Pisogne, Vercelli, Alessandria, Valle Intelvi, ecc.) restano qui sotto ma non vanno nell'app.
+INCLUDI_AUTONOMI = False
+allx = oneta + (out if INCLUDI_AUTONOMI else [])
 js = ("// INVEST17 — \"I miei immobili\": archivio fatto a mano (link mandati da Imma e caricamenti per zona).\n"
       "// Solo DATI: i conti li fa l'app. Schema in NOTE_SVILUPPO.md. Aggiornato il 20/11/2026.\n"
       "const MIEI = " + json.dumps(allx, ensure_ascii=False, indent=1) + ";\n")
