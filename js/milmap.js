@@ -32,32 +32,47 @@ function mmLoad() {
 
 
 /* ---------- stile "Plastico" (mini città): erba, asfalto, tetti colorati ---------- */
-const PL = { grass: "#141414", res: "#171717", ind: "#1b1b1d", wood: "#1f2c18", park: "#1d2a17", water: "#0f2230", road: "#2a2620", roadCase: "#1a1814", major: "#8a6d16", majorCase: "#4a3a0e",
-  roofs: ["#2e2a22", "#2a261f", "#332e25", "#2c2822", "#36302a", "#28241e"], lab: "#d9cfae", halo: "#141414" };
+const PL_T = {
+  oro: { grass: "#141414", res: "#171717", ind: "#1b1b1d", wood: "#1f2c18", park: "#1d2a17", water: "#0f2230", road: "#2a2620", roadCase: "#1a1814", major: "#8a6d16", majorCase: "#4a3a0e", dash: "#f2cf5b",
+    school: "#1e1b14", farm: "#181a14", sand: "#211d14", rock: "#1c1c1c", grassy: "#1a2116", path: "#221f19", rail: "#3a3326", bnd: "#8a6d16", out: "#3a3320",
+    roofs: ["#2e2a22", "#2a261f", "#332e25", "#2c2822", "#36302a", "#28241e"], lab: "#d9cfae", halo: "#141414", num: "#f2cf5b", accent: "#f2cf5b", city: "#f2cf5b", town: "#bdb39a", lake: "#7fb3d1" },
+  sabbia: { grass: "#f1e6d4", res: "#efe2cd", ind: "#e4e0dc", wood: "#b9cf9a", park: "#c7dba8", water: "#8fc3cf", road: "#fffaf2", roadCase: "#e3d2bd", major: "#f0c38f", majorCase: "#c98f55", dash: "#ffffff",
+    school: "#f3e1c4", farm: "#ece3c4", sand: "#f2e2b8", rock: "#ece8e2", grassy: "#d9e3bd", path: "#e9dcc7", rail: "#b9a892", bnd: "#c0582c", out: "#c9b39a",
+    roofs: ["#e6d3bb", "#dcc3a3", "#e9c9a8", "#d6b894", "#efd9c0", "#cfae8c"], lab: "#4a3d33", halo: "#fffaf2", num: "#a8471f", accent: "#c0582c", city: "#2d4a53", town: "#5b4c40", lake: "#2f6f80" },
+  notte: { grass: "#222c3b", res: "#263243", ind: "#2a3140", wood: "#22362d", park: "#24392f", water: "#163a55", road: "#3a4860", roadCase: "#1b2433", major: "#8a6a2a", majorCase: "#4a3a18", dash: "#f2b84b",
+    school: "#2c3142", farm: "#253042", sand: "#323244", rock: "#2b3343", grassy: "#25352f", path: "#2f3a4d", rail: "#4a5670", bnd: "#f2b84b", out: "#33415a",
+    roofs: ["#3a475c", "#36435a", "#404e66", "#344157", "#3d4a61", "#323e53"], lab: "#e6ebf2", halo: "#18202c", num: "#f2b84b", accent: "#f2b84b", city: "#f2b84b", town: "#c9d3e0", lake: "#8cc4e6" },
+  dream: { grass: "#170e40", res: "#1b1249", ind: "#1d1650", wood: "#1c1f4f", park: "#1e2350", water: "#0b1a52", road: "#2e2466", roadCase: "#120a33", major: "#7c3aed", majorCase: "#3b1d80", dash: "#e9ddff",
+    school: "#22185a", farm: "#1a1246", sand: "#251a5a", rock: "#211a52", grassy: "#1b1c4d", path: "#261c5e", rail: "#4c3a99", bnd: "#c084fc", out: "#3b2d7a",
+    roofs: ["#2a1f5c", "#30246a", "#261b56", "#352a75", "#2d2263", "#3a2e80"], lab: "#e9ddff", halo: "#120a33", num: "#d8b4fe", accent: "#d8b4fe", city: "#d8b4fe", town: "#b9a8e6", lake: "#7aa8ff" },
+};
+let PL = PL_T.oro;
+function plSet() { PL = PL_T[document.documentElement.dataset.th] || PL_T.oro; }
 const plRoof = () => ["match", ["%", ["round", ["*", ["coalesce", ["get", "render_height"], 9], 7.3]], 6], 0, PL.roofs[0], 1, PL.roofs[1], 2, PL.roofs[2], 3, PL.roofs[3], 4, PL.roofs[4], PL.roofs[5]];
 function plBase(S, opts = {}) {
+  plSet();
   const L = [
     { id: "bg", type: "background", paint: { "background-color": PL.grass } },
-    { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": ["match", ["get", "class"], ["residential", "suburb", "neighbourhood"], PL.res, ["commercial", "retail", "industrial", "railway"], PL.ind, ["school", "university", "college", "hospital"], "#1e1b14", ["cemetery"], PL.park, PL.res], "fill-opacity": 0.9 } },
-    { id: "landcover", type: "fill", source: S, "source-layer": "landcover", paint: { "fill-color": ["match", ["get", "class"], ["wood", "forest"], PL.wood, ["farmland"], "#181a14", ["sand"], "#211d14", ["ice", "rock"], "#1c1c1c", "#1a2116"], "fill-opacity": 0.9 } },
-    { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": PL.park, "fill-outline-color": "#2a3d20" } },
+    { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": ["match", ["get", "class"], ["residential", "suburb", "neighbourhood"], PL.res, ["commercial", "retail", "industrial", "railway"], PL.ind, ["school", "university", "college", "hospital"], PL.school, ["cemetery"], PL.park, PL.res], "fill-opacity": 0.9 } },
+    { id: "landcover", type: "fill", source: S, "source-layer": "landcover", paint: { "fill-color": ["match", ["get", "class"], ["wood", "forest"], PL.wood, ["farmland"], PL.farm, ["sand"], PL.sand, ["ice", "rock"], PL.rock, PL.grassy], "fill-opacity": 0.9 } },
+    { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": PL.park, "fill-outline-color": PL.wood } },
     { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": PL.water } },
     { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": PL.water, "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.8, 16, 5] } },
-    { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#3a3326", "line-width": 1.4, "line-dasharray": [3, 2] } },
+    { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": PL.rail, "line-width": 1.4, "line-dasharray": [3, 2] } },
     { id: "road-minor-case", type: "line", source: S, "source-layer": "transportation", minzoom: 13, filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street"], true, false],
       paint: { "line-color": PL.roadCase, "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.4, 16, 6, 18, 14] } },
     { id: "road-minor", type: "line", source: S, "source-layer": "transportation", minzoom: 12, filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street", "path"], true, false],
-      paint: { "line-color": ["match", ["get", "class"], "path", "#221f19", PL.road], "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.6, 16, 4, 18, 11] } },
+      paint: { "line-color": ["match", ["get", "class"], "path", PL.path, PL.road], "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.6, 16, 4, 18, 11] } },
     { id: "road-major-case", type: "line", source: S, "source-layer": "transportation", filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
       paint: { "line-color": PL.majorCase, "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.8, 14, 5.5, 18, 18] } },
     { id: "road-major", type: "line", source: S, "source-layer": "transportation", filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
       paint: { "line-color": PL.major, "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.5, 14, 4, 18, 14] } },
     { id: "road-dash", type: "line", source: S, "source-layer": "transportation", minzoom: 13, filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
-      paint: { "line-color": "#f2cf5b", "line-opacity": 0.35, "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.5, 18, 1.2], "line-dasharray": [4, 4] } },
+      paint: { "line-color": PL.dash, "line-opacity": 0.35, "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.5, 18, 1.2], "line-dasharray": [4, 4] } },
   ];
   if (opts.flat) L.push(
-    { id: "bld-flat", type: "fill", source: S, "source-layer": "building", minzoom: 13, paint: { "fill-color": plRoof(), "fill-outline-color": "#3a3320" } },
-    { id: "bnd", type: "line", source: S, "source-layer": "boundary", filter: ["<=", ["get", "admin_level"], 6], paint: { "line-color": "#8a6d16", "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.8, 10, 1.8], "line-dasharray": [2, 1.5], "line-opacity": 0.8 } },
+    { id: "bld-flat", type: "fill", source: S, "source-layer": "building", minzoom: 13, paint: { "fill-color": plRoof(), "fill-outline-color": PL.out } },
+    { id: "bnd", type: "line", source: S, "source-layer": "boundary", filter: ["<=", ["get", "admin_level"], 6], paint: { "line-color": PL.bnd, "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.8, 10, 1.8], "line-dasharray": [2, 1.5], "line-opacity": 0.8 } },
     { id: "place", type: "symbol", source: S, "source-layer": "place", filter: ["match", ["get", "class"], ["city", "town", "village"], true, false],
       layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["match", ["get", "class"], "city", 13, "town", 11.5, 10.5] },
       paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
@@ -207,13 +222,13 @@ async function mmInit(el) {
     // etichette: vie, civici, microzone, comuni
     map.addLayer({ id: "street-lab", type: "symbol", source: "omt", "source-layer": "transportation_name", minzoom: 14,
       layout: { "symbol-placement": "line", "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 14, 10, 18, 14], "text-max-angle": 30 },
-      paint: { "text-color": "#d9cfae", "text-halo-color": "#141414", "text-halo-width": 1.8 } });
+      paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
     map.addLayer({ id: "housenum", type: "symbol", source: "omt", "source-layer": "housenumber", minzoom: 17,
-      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#f2cf5b", "text-halo-color": "#141414", "text-halo-width": 1.6 } });
+      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": PL.num, "text-halo-color": PL.halo, "text-halo-width": 1.6 } });
     mmRelabel();
     map.addLayer({ id: "hint-lab", type: "symbol", source: "hintlab", minzoom: 9.5,
       layout: { "text-field": ["concat", ["get", "n"], ["case", ["!=", ["get", "v"], null], ["concat", "\n", ["to-string", ["get", "v"]], " €"], ""]], "text-font": ["Noto Sans Regular"], "text-size": 11 },
-      paint: { "text-color": "#d4cdb8", "text-halo-color": "#141414", "text-halo-width": 1.8 } });
+      paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
     // quartieri ufficiali (NIL): se il Comune risponde
     mmNil(map);
     mmAnnLayer(map); mmGeocodifica();
@@ -237,7 +252,7 @@ async function mmNil(map) {
       const lab = { type: "FeatureCollection", features: g.features.map(f => { const c = mmFeatCentro(f); return c ? { type: "Feature", properties: { n: f.properties.nil }, geometry: { type: "Point", coordinates: c } } : null; }).filter(Boolean) };
       map.addSource("nillab", { type: "geojson", data: lab });
       map.addLayer({ id: "nil-lab", type: "symbol", source: "nillab", minzoom: 12.2, maxzoom: 16, layout: { visibility: MM.lay.nil ? "visible" : "none", "text-field": ["upcase", ["get", "n"]], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.12 },
-        paint: { "text-color": "#e9c46a", "text-halo-color": "#141414", "text-halo-width": 1.6 } });
+        paint: { "text-color": PL.accent, "text-halo-color": PL.halo, "text-halo-width": 1.6 } });
       const b = $("#mmnilnote"); if (b) b.hidden = true;
       return;
     } catch (e) { /* provo la fonte successiva */ }
@@ -398,7 +413,7 @@ function mmRelabel() {
   const map = MM.map; if (!map || !map.getSource("celllab")) return;
   const fld = MM.metric === "a" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "a"], 10]], 10]], " €"] : MM.metric === "rl" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "rl"], 1000]], 10]], "%"] : ["concat", ["to-string", ["get", "v"]], " €"];
   map.addLayer({ id: "cell-lab", type: "symbol", source: "celllab", minzoom: 11.3, maxzoom: 15.5, layout: { visibility: MM.lay.prezzi ? "visible" : "none", "text-field": ["concat", ["get", "n"], "\n", fld], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 11.3, 9, 14, 12], "text-padding": 4 },
-    paint: { "text-color": "#f3efe2", "text-halo-color": "#141414", "text-halo-width": 1.8 } });
+    paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
 }
 function mmToForm() {
   const s = MM.sel, form = $("#mvf"); if (!s || !form) return;

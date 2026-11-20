@@ -57,19 +57,19 @@ function vHomeK() {
 }
 /* mappa d'Italia: stile Carbone e oro con rilievi (ombreggiatura delle montagne) e nomi di città, laghi e regioni */
 function itStile() {
-  const S = "ofm";
+  const S = "ofm"; plSet();
   return { version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
     sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" },
       dem: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 12, attribution: "Rilievi: Mapzen / AWS Terrain Tiles" } },
     layers: [...plBase(S, { flat: true }).filter(l => l.id !== "place"),
       { id: "hill", type: "hillshade", source: "dem", paint: { "hillshade-shadow-color": "#000000", "hillshade-highlight-color": "#6b5a2e", "hillshade-accent-color": "#2a2418", "hillshade-exaggeration": 0.55, "hillshade-illumination-direction": 315 } },
       { id: "lake-lab", type: "symbol", source: S, "source-layer": "water_name", minzoom: 6,
-        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.08 }, paint: { "text-color": "#7fb3d1", "text-halo-color": "#0f2230", "text-halo-width": 1.2 } },
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.08 }, paint: { "text-color": PL.lake, "text-halo-color": PL.halo, "text-halo-width": 1.2 } },
       { id: "town", type: "symbol", source: S, "source-layer": "place", minzoom: 8, filter: ["match", ["get", "class"], ["town", "village"], true, false],
-        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["match", ["get", "class"], "town", 11, 9.5] }, paint: { "text-color": "#bdb39a", "text-halo-color": "#141414", "text-halo-width": 1.4 } },
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["match", ["get", "class"], "town", 11, 9.5] }, paint: { "text-color": PL.town, "text-halo-color": PL.halo, "text-halo-width": 1.4 } },
       { id: "city", type: "symbol", source: S, "source-layer": "place", filter: ["match", ["get", "class"], ["city"], true, false],
         layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 9, 14], "text-transform": "uppercase", "text-letter-spacing": 0.12 },
-        paint: { "text-color": "#f2cf5b", "text-halo-color": "#141414", "text-halo-width": 1.6 } },
+        paint: { "text-color": PL.city, "text-halo-color": PL.halo, "text-halo-width": 1.6 } },
     ] };
 }
 let HOME_MAP = null;
