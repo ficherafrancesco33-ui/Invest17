@@ -58,7 +58,7 @@ function miModeBlock(r, ctx) {
       ${(() => { const q = vRisultato._q || {}, prova = +q.prezzo > 0 ? +q.prezzo : pub, C = window.mmConcorrenza ? mmConcorrenza(ctx, Object.assign({}, V_DEF, q), r, prova) : null;
         if (!C) return "";
         return `<div class="posiz"><small>Posizionamento rispetto alla concorrenza</small>
-          <div class="pbar"><span style="left:30%"></span><span style="left:60%"></span><span style="left:75%"></span><i style="left:${Math.round(C.pct * 100)}%"></i></div>
+          <div class="pbar"><span style="left:25%"></span><span style="left:65%"></span><span style="left:80%"></span><i style="left:${Math.round(C.pct * 100)}%"></i></div>
           <p>A <b>${eur(prova)}</b> sei più caro di <b>${C.sotto} annunci simili su ${C.n}</b> online entro ${num(C.raggio)} m (confrontati come se fossero uguali al tuo): <b class="cy">${C.giudizio[0]}</b>, ${C.giudizio[1]}.</p>
           <p class="note">${+q.prezzo > 0 ? "Calcolato sul prezzo chiesto che hai scritto nel modulo." : "Per provare un altro prezzo scrivilo in \"Prezzo chiesto\" (Se è in vendita)."}</p></div>`; })()}`;
   }

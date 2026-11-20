@@ -595,7 +595,7 @@ function mmConcorrenza(ctx, q, r, prezzo) {
   const L = base.filter(o => o.d <= R).map(o => vStatoMq(mmNorm(o.a, mq) * r.fP, q) * r.kTot * r.sup + r.box);
   if (L.length < 6) return null;
   const sotto = L.filter(v => v < prezzo).length, pct = sotto / L.length;
-  return { n: L.length, raggio: R, pct, sotto, giudizio: pct > 0.75 ? ["fuori mercato", "rischi di restare online a lungo e di dover ribassare"] : pct > 0.6 ? ["un po' alto", "tempi più lunghi della media, serve un immobile che si fa notare"] : pct >= 0.3 ? ["in linea", "tempi di vendita normali"] : ["aggressivo", "si vende in fretta, ma potresti lasciare soldi sul tavolo"] };
+  return { n: L.length, raggio: R, pct, sotto, giudizio: pct > 0.8 ? ["fuori mercato", "rischi di restare online a lungo e di dover ribassare"] : pct > 0.65 ? ["un po' alto", "tempi più lunghi della media, serve un immobile che si fa notare"] : pct >= 0.25 ? ["in linea", "tempi di vendita normali"] : ["aggressivo", "si vende in fretta, ma potresti lasciare soldi sul tavolo"] };
 }
 function mmComps(ctx, q) {
   if (!ctx || !ctx.milano || !ctx.micro) return null;
