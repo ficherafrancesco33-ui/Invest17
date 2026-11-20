@@ -221,7 +221,6 @@ const INV_MODI = {
   classifica: { t: "Classifica generale", c: "Tutti gli immobili", d: "Gli immobili entro 3 ore ordinati per punteggio, con mappa del Nord Italia e filtri.", href: "#inv/classifica" },
   zona: { t: "Ricerca per zona", c: "Comune, zona, via", d: "Scrivi dove vuoi cercare: la mappa ti porta lì e apri la scheda dell'immobile.", href: "#inv/zona" },
   brevi: { t: "Mappa B&B", c: "Affitti brevi", d: "Prezzo a notte, occupazione e rendita di " + TERR.brevi.length + " località turistiche.", href: "#brevi", i: "bnb" },
-  comuni: { t: "Valuta un comune", c: "Prezzi al m²", d: TERR.comuni.length.toLocaleString("it-IT") + " comuni con prezzi di vendita e affitto, e il valutatore.", href: "#valuta" },
   archivio: { t: "I miei immobili", c: "Archivio", d: "Gli annunci che hai mandato tu, analizzati uno per uno.", href: "#miei" },
   auto: { t: "Trovati in automatico", c: "Ogni mattina", d: "Gli immobili che arrivano dalle notifiche: qui finiscono anche i nuovi del banner.", href: "#auto" },
 };

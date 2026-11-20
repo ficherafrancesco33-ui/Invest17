@@ -379,7 +379,7 @@ function afterBreveScheda(nome) {
       <div class="sc ${br && lungo != null && br.netto > lungo ? "best" : ""}"><small>B&B</small><b>${br ? pct(br.rendNetto) : "—"}</b><span>${eur(r.breve.adr)} × ${pct(s.occ, 0)}<br>netto ${eur(br?.netto)}/anno</span></div>
     </div>
     <p class="note">Prezzo del bilocale: ${eur(r.acquisto)} (prezzo medio meno trattativa) + costi d'acquisto e arredo. ${be ? `<b>Il B&B conviene sopra il ${pct(be, 0)} di occupazione</b> (oggi la media è ${pct(s.occ, 0)}).` : ""}</p>
-    <div class="btns"><a class="btn pri" href="#valuta/${encodeURIComponent(s.n)}">Valuta un immobile qui</a></div>`;
+`;
 }
 
 /* ==========================================================================

@@ -886,6 +886,7 @@ function render(keepScroll) {
   maps.forEach(m => m.remove()); maps = [];
   if (typeof HOME_MAP !== "undefined" && HOME_MAP) { try { HOME_MAP.remove(); } catch {} HOME_MAP = null; }
   const [v, a, b, c] = (location.hash.slice(1) || "home").split("/").map(decodeURIComponent);
+  if (v === "valuta") { location.replace("#inv"); return; }
   const app = $("#app"), y = window.scrollY;
   let html, after = () => {};
   if (v === "miei" || v === "auto") { html = vLista(v); after = () => afterLista(v); }
@@ -896,7 +897,7 @@ function render(keepScroll) {
   else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
   else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
   else { html = vHomeK(); after = afterHomeK; }
-  const INVK = { miei: "archivio", auto: "auto", brevi: "brevi", valuta: "comuni" };
+  const INVK = { miei: "archivio", auto: "auto", brevi: "brevi" };
   if (INVK[v] && window.invBread) html = invBread(INVK[v]) + html;
   app.innerHTML = html; after();
   const navv = v === "imm" || INVK[v] ? "inv" : v || "home";
@@ -925,7 +926,7 @@ const tip = $("#tip");
 ["pointermove","pointerdown"].forEach(ev => document.addEventListener(ev, e => { const t = e.target.closest?.("[data-tip]"); if (!t) { tip.hidden = true; return; }
   tip.textContent = t.dataset.tip; tip.hidden = false; tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (e.clientY - 34) + "px"; }));
 /* tasto indietro come in Dreamers: torna alla pagina precedente dell'app, o al livello superiore */
-const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return a === "auto" ? "auto" : "miei"; if (["miei", "auto", "brevi", "valuta"].includes(v)) return a ? v : "inv";
+const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return a === "auto" ? "auto" : "miei"; if (["miei", "auto", "brevi"].includes(v)) return a ? v : "inv";
   if (v === "inv" || v === "milano") return c ? [v, a, b].join("/") : b ? [v, a].join("/") : a ? v : "home"; return "home"; };
 let NAVN = +(sessionStorage.getItem("ks_n") || 0);
 window.addEventListener("hashchange", () => { NAVN++; try { sessionStorage.setItem("ks_n", NAVN); } catch {} });
