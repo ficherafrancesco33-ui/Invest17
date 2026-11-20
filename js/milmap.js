@@ -519,7 +519,8 @@ function attrChiusa(map) {
 function mmAnnunci() {
   if (MM_ANN) return MM_ANN;
   const G = mmAnnGeo(), M = TERR.milano.micro, I = TERR.annunci.imm;
-  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex, bag]) => ({ id: "i" + id, p, mq, loc: +loc || null, bag: +bag || null, piano, asc, st, tip, lat, lon, via, micro: mic, ex: ex || "",
+  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex, bag, mk]) => ({ id: "i" + id, p, mq, loc: +loc || null, bag: +bag || null,
+    ...(m => ({ gg: +m[0] || 0, rib: +m[1] || 0, sp: m[2] === "1" }))(String(mk || "").split("|")), piano, asc, st, tip, lat, lon, via, micro: mic, ex: ex || "",
     priv, mq2: p / mq, url: I.url + id + "/", fonte: "Immobiliare.it",
     d: [tip, MM_ST[st]?.[0], piano ? (piano === "T" ? "piano terra" : piano === "R" ? "rialzato" : piano === "S" ? "seminterrato" : piano + "° piano") : "", asc ? "ascensore" : "", ...[...ex].map(x => MM_EX[x]), priv ? "privato" : ""].filter(Boolean).join(", ") }));
   const tro = TERR.annunci.lista.map(a => {
@@ -570,6 +571,32 @@ const MM_GR = { R: "R", B: "B", O: "O", N: "O" };
 const V_GR = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
 /* stato di un annuncio → euro al m² per portarlo a "ottimo" (stesso principio della valutazione) */
 const MM_ST_OTT = { N: v => v / V_F_NUOVO(), O: v => v, B: v => v / V_F_BUONO(), R: v => v / V_F_RISTR() };   // riportati a "ottimo" con i coefficienti di mercato
+/* un annuncio riportato all'immobile di riferimento: stato ottimo, stessa metratura, 2° piano con ascensore, senza accessori */
+function mmNorm(a, mq) {
+  let v = (MM_ST_OTT[a.st] || MM_ST_OTT.B)(a.mq2) * vTaglioF(mq, a.mq);
+  v = v / vPianoF(a.piano, a.asc, false);
+  let acc = 0; for (const c of a.ex || "") if (V_ACC[c]) acc += V_ACC[c][1];
+  v = v * (1 - acc);
+  if ((a.ex || "").includes("g")) v -= v * 15 * 0.45 * 0.5 / a.mq;   // box citato nell'annuncio: metà del valore di un box (spesso è a parte)
+  else if ((a.ex || "").includes("s")) v -= v * 15 * 0.45 * 0.25 / a.mq;
+  if ((a.ex || "").includes("p")) v /= 1.03;                          // portineria
+  if ((a.ex || "").includes("d")) v /= 1.02;                          // doppia esposizione
+  return v;
+}
+/* posizionamento: quanti annunci simili online in zona costerebbero meno del prezzo proposto, se fossero uguali al nostro */
+function mmConcorrenza(ctx, q, r, prezzo) {
+  if (!ctx || !ctx.milano || !r || !prezzo) return null;
+  const mq = +q.mq || 60, s = ctx.sel || ctx.micro; if (!s || s.lat == null) return null;
+  const casa = /villa|terratetto|casale|rustico|palazzo|edificio|capannone|negozio|ufficio|box/i, villa = q.tipo === "villa" || q.tipo === "villetta";
+  const esc = new Set((TERR.annunci.esclusi || []).map(String));
+  const base = mmAnnunci().filter(a => a.fonte === "Immobiliare.it" && a.lat != null && !a.appross && !a.sp && a.mq >= mq * 0.7 && a.mq <= mq * 1.4 && villa === casa.test(a.tip || "") && !esc.has(String(a.id).slice(1)))
+    .map(a => ({ a, d: hav(s.lat, s.lon, a.lat, a.lon) }));
+  const R = [700, 1000, 1500].find(x => base.filter(o => o.d <= x).length >= 12) || 1500;
+  const L = base.filter(o => o.d <= R).map(o => vStatoMq(mmNorm(o.a, mq) * r.fP, q) * r.kTot * r.sup + r.box);
+  if (L.length < 6) return null;
+  const sotto = L.filter(v => v < prezzo).length, pct = sotto / L.length;
+  return { n: L.length, raggio: R, pct, sotto, giudizio: pct > 0.75 ? ["fuori mercato", "rischi di restare online a lungo e di dover ribassare"] : pct > 0.6 ? ["un po' alto", "tempi più lunghi della media, serve un immobile che si fa notare"] : pct >= 0.3 ? ["in linea", "tempi di vendita normali"] : ["aggressivo", "si vende in fretta, ma potresti lasciare soldi sul tavolo"] };
+}
 function mmComps(ctx, q) {
   if (!ctx || !ctx.milano || !ctx.micro) return null;
   const mq = +q.mq || 60, loc = +q.locali || Math.max(1, Math.round(mq / 28)), s = ctx.sel || ctx.micro;
@@ -579,19 +606,7 @@ function mmComps(ctx, q) {
   let pool = mmAnnunci().filter(a => a.fonte === "Immobiliare.it" && a.lat != null && !a.appross && a.mq >= mq * 0.55 && a.mq <= mq * 1.7 && villa === casa.test(a.tip || "") && !esc.has(String(a.id).slice(1)))
     .map(a => ({ ...a, dist: hav(s.lat, s.lon, a.lat, a.lon) })).filter(a => a.dist < 1600);
   if (pool.length < 4) return null;
-  // ogni annuncio riportato a: stato ottimo, piano di riferimento (1°–2° con ascensore), senza accessori (balcone, terrazzo, giardino, cantina, box)
-  const vOf = a => {
-    let v = (MM_ST_OTT[a.st] || MM_ST_OTT.B)(a.mq2) * vTaglioF(mq, a.mq);   // stato ottimo e stessa metratura del cliente
-    v = v / vPianoF(a.piano, a.asc, false);
-    let acc = 0; for (const c of a.ex || "") if (V_ACC[c]) acc += V_ACC[c][1];
-    v = v * (1 - acc);
-    if ((a.ex || "").includes("g")) v -= v * 15 * 0.45 * 0.5 / a.mq;   // box citato nell'annuncio: metà del valore di un box (spesso è a parte)
-    else if ((a.ex || "").includes("s")) v -= v * 15 * 0.45 * 0.25 / a.mq;
-    if ((a.ex || "").includes("p")) v /= 1.03;                          // portineria
-    if ((a.ex || "").includes("d")) v /= 1.02;                          // doppia esposizione
-    return v;
-  };
-  pool.forEach(a => { a.vO = vOf(a); });
+  pool.forEach(a => { a.vO = mmNorm(a, mq); });
   // prezzi anomali: fuori da 0,7–1,45 volte la mediana vicina
   const medV = median(pool.filter(a => a.dist < 1000).map(a => a.vO)) || median(pool.map(a => a.vO));
   pool = pool.filter(a => a.vO > medV * 0.7 && a.vO < medV * 1.45);
@@ -610,11 +625,18 @@ function mmComps(ctx, q) {
           .reduce((x, [c, h]) => x + ((a.ex || "").includes(c) !== h ? 0.12 : 0), 0); };
   const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
     .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
-    .slice(0, 8);
+    .slice(0, 11);
   if (c.length < 4) return null;
   // media pesata: chi assomiglia di più pesa di più, ma senza estremi (il peso si dimezza ogni ~0,8 punti di scarto)
   // e nessun annuncio supera il 30% dei comparabili: se un annuncio è sbagliato, non trascina la stima
   c.forEach(a => { a.w = Math.exp(-0.9 * a.score); a.adj = a.vO; });
+  // divergenza (estimo): dopo le correzioni i prezzi dovrebbero somigliarsi; chi resta oltre il 15% dal centro ha qualcosa che non vediamo
+  { const ord = [...c].sort((x, y) => x.vO - y.vO), tw = c.reduce((x, a) => x + a.w, 0); let acc = 0, M = ord[0].vO;
+    for (const a of ord) { acc += a.w; if (acc >= tw / 2) { M = a.vO; break; } }
+    c.forEach(a => { a.div = a.vO / M - 1; if (Math.abs(a.div) > 0.15) { a.w *= 0.08; a.fuori = true; } }); }
+  // mercato (dai dati giornalieri): sparito in fretta = prezzo giusto, fermo da mesi o ribassato = chiedeva troppo
+  c.forEach(a => { if (a.sp && a.gg <= 75) { a.w *= 1.3; a.mkt = "venduto in fretta"; } else if (a.gg >= 150) { a.w *= 0.75; a.mkt = `online da ${Math.round(a.gg / 30)} mesi`; } if (a.rib > 0) { a.w *= 0.9; a.mkt = (a.mkt ? a.mkt + ", " : "") + `ribassato del ${a.rib}%`; } });
+  c.sort((x, y) => y.w - x.w); c.splice(8);
   { let P = c.map(a => a.w); for (let it = 0; it < 6; it++) { const t = P.reduce((x, y) => x + y, 0); P = P.map(w => w / t); if (!P.some(w => w > 0.30001)) break;
       const fuori = P.filter(w => w >= 0.3).length, resto = P.reduce((x, w) => x + (w < 0.3 ? w : 0), 0); P = P.map(w => w >= 0.3 ? 0.3 : w * (1 - 0.3 * fuori) / resto); }
     c.forEach((a, i) => { a.peso = P[i]; }); }
@@ -622,5 +644,6 @@ function mmComps(ctx, q) {
   const vO = c.reduce((x, a) => x + a.vO * a.peso, 0);
   // affidabilità: quanto sono d'accordo i comparabili (dispersione pesata) e quanti contano davvero (numero effettivo)
   const disp = Math.sqrt(c.reduce((x, a) => x + a.peso * (a.vO - vO) ** 2, 0)) / vO, neff = 1 / c.reduce((x, a) => x + a.peso ** 2, 0);
-  return { disp, neff, lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
+  const nuc = c.filter(a => !a.fuori).map(a => a.vO), diverg = nuc.length > 1 ? Math.max(...nuc) / Math.min(...nuc) - 1 : 0;
+  return { disp, neff, diverg, scartati: c.filter(a => a.fuori).length, lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
 }

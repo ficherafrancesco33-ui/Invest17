@@ -54,7 +54,13 @@ function miModeBlock(r, ctx) {
     const Z = vScontoZona(ctx), pub = Math.round(r.valore / 5000) * 5000, chiusura = Math.round(r.valore * (1 - Z.sconto) / 1000) * 1000;
     return `<div class="mblock"><div><small>Prezzo consigliato di pubblicazione</small><b>${eur(pub)}</b><em>in linea con le richieste di oggi · tra ${keur(r.min)} e ${keur(r.max)}</em></div>
       <div><small>Prezzo di chiusura atteso</small><b>${eur(chiusura)}</b><em>${Z.n ? `trattativa ${num(Z.sconto * 100, 0)}%: ${Z.n} esit${Z.n === 1 ? "o reale" : "i reali"} in zona` : "trattativa 5% circa (stima generica: salva gli esiti reali per calcolarla)"}</em></div>
-      <div><small>Al m² commerciale</small><b>${eur(r.valore / r.sup)}</b><em>${num(r.sup, 1)} m² commerciali</em></div></div>`;
+      <div><small>Al m² commerciale</small><b>${eur(r.valore / r.sup)}</b><em>${num(r.sup, 1)} m² commerciali</em></div></div>
+      ${(() => { const q = vRisultato._q || {}, prova = +q.prezzo > 0 ? +q.prezzo : pub, C = window.mmConcorrenza ? mmConcorrenza(ctx, Object.assign({}, V_DEF, q), r, prova) : null;
+        if (!C) return "";
+        return `<div class="posiz"><small>Posizionamento rispetto alla concorrenza</small>
+          <div class="pbar"><span style="left:30%"></span><span style="left:60%"></span><span style="left:75%"></span><i style="left:${Math.round(C.pct * 100)}%"></i></div>
+          <p>A <b>${eur(prova)}</b> sei più caro di <b>${C.sotto} annunci simili su ${C.n}</b> online entro ${num(C.raggio)} m (confrontati come se fossero uguali al tuo): <b class="cy">${C.giudizio[0]}</b>, ${C.giudizio[1]}.</p>
+          <p class="note">${+q.prezzo > 0 ? "Calcolato sul prezzo chiesto che hai scritto nel modulo." : "Per provare un altro prezzo scrivilo in \"Prezzo chiesto\" (Se è in vendita)."}</p></div>`; })()}`;
   }
   if (ctx.mode === "inv") {
     const T = +store.get("inv_target", 0.055), USI = [["breve", "B&B", "affitto a notte", "Rende di più, ma va gestito ogni giorno: check-in, pulizie, recensioni. Serve il CIN."],

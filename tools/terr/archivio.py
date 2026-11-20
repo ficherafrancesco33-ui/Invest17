@@ -48,6 +48,22 @@ ST = {"Nuovo": "N", "Ottimo": "O", "Buono": "B", "Da ristrutturare": "R"}
 # accessori: dalle caratteristiche e dal testo dell'annuncio (titolo, sottotitolo, descrizione)
 EX = [(r"balcon", "b"), (r"terrazz", "t"), (r"cantin", "c"), (r"\barredat", "a"), (r"\bbox\b(?! ?doccia)|autorimessa|\bgarage", "g"), (r"posto auto|posti auto", "s"),
       (r"giardino", "j"), (r"portier|portineria|custode", "p"), (r"esposizione doppia|doppia esposizione|tripla esposizione|doppio affaccio", "d"), (r"esposizione interna", "i")]
+# mercato: giorni online (dalla prima lettura), ribasso dal primo prezzo, sparito (la sua zona è stata riletta dopo e lui non c'era più)
+from datetime import date
+def gg(d): 
+    try: return date.fromisoformat(str(d)[:10])
+    except Exception: return None
+ultimaZona = {}
+for a in arc.values():
+    z, l = a.get("zonaLetta"), gg(a.get("letto"))
+    if z and l and (z not in ultimaZona or l > ultimaZona[z]): ultimaZona[z] = l
+def mercato(a):
+    p0, l, f = gg(a.get("primo")), gg(a.get("letto")), (a.get("storico") or [[None, a.get("prezzo")]])[0][1]
+    z = ultimaZona.get(a.get("zonaLetta"))
+    sp = 1 if (z and l and z > l) else 0
+    giorni = (l - p0).days if (p0 and l) else 0
+    rib = round((1 - a["prezzo"] / f) * 100, 1) if f and a.get("prezzo") and f > a["prezzo"] else 0
+    return f"{giorni}|{rib}|{sp}"
 righe, esc, pok = {}, {}, []
 for k, a in arc.items():
     m = motivo(a)
@@ -59,7 +75,7 @@ for k, a in arc.items():
     if "g" in ex: ex = ex.replace("s", "")
     piano = (a.get("pianoA") or "").replace(",", "/")
     righe[k] = ";".join(str(x) for x in [k, a["prezzo"], a["mq"], a.get("locali") or "", a.get("bagni") or "", piano, a.get("asc") or 0, st, a.get("tip") or "",
-                                         f'{a["lat"]:.5f}', f'{a["lon"]:.5f}', (a.get("via") or "").replace(";", ","), a.get("micro") or "", "Milano", a.get("priv") or 0, ex])
+                                         f'{a["lat"]:.5f}', f'{a["lon"]:.5f}', (a.get("via") or "").replace(";", ","), a.get("micro") or "", "Milano", a.get("priv") or 0, ex, mercato(a)])
     if a.get("priv"): pok.append(k)
 
 # raw: sostituisco le righe con id presente nell'archivio, tengo le altre (zone non rilette)
