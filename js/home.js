@@ -43,14 +43,13 @@ function vHomeK() {
   const A = mmAnnunci(), visti = new Set(store.get("ann_visti", [])), nuoviPriv = A.filter(a => a.priv && !visti.has(a.id)).length;
   const tick = nov.map(n => `<a class="tk" href="${n.h}"><i>${esc(n.tag)}</i><b>${esc(n.t)}</b>${n.s ? `<span>${esc(n.s)}</span>` : ""}</a>`).join("");
   return `<div class="ticker" aria-label="Novità"><div class="tkt">${tick}${tick}</div></div>
-  <h2>Investimenti <small><a href="#inv/classifica">Classifica completa</a></small></h2>
-  <div class="plancia">
-    <div class="plmap"><div id="itmap" class="itmap2"><div class="mmload"><div class="spin"></div>Carico la mappa</div></div>
-      <button class="plexp" id="plexp" aria-label="Ingrandisci la mappa">⤢</button></div>
-    <ol class="pltop">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score);
-      return `<li><a href="#imm/${x.src}/${encodeURIComponent(x.im.id)}" data-fly="${i}"><b>${i + 1}</b><span><em>${esc((x.im.titolo || "Casa").split(" ")[0])} · ${keur(x.im.prezzo)}</em><small>${esc(x.im.zona && x.im.zona !== x.im.comune ? x.im.zona : x.im.comune || "")}</small></span><i style="--pc:${st.col}">${x.A.score}</i></a></li>`; }).join("") || `<li class="note">Mandami un link per iniziare la classifica.</li>`}</ol>
-  </div>
-  <h2>Dove cercare <small>entro 3 ore</small></h2>
+  <h2>I migliori 10 <small><a href="#inv/classifica">Classifica completa</a></small></h2>
+  <div class="t10">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score), im = x.im;
+    return `<a class="t10r" href="#imm/${x.src}/${encodeURIComponent(im.id)}"><b class="t10n">${i + 1}</b>${win(im, st.col)}
+      <span class="t10t"><small>${esc([im.comune, im.zona].filter(Boolean).join(" · "))}</small><em>${esc(im.titolo || "Immobile")}</em>
+      <span>${eur(im.prezzo)} · ${num(im.mq)} m² · netto <strong>${pct(x.A.rend)}</strong>${x.A.best ? ` come ${CATS[x.A.best]}` : ""}</span></span>
+      <i class="t10s" style="--pc:${st.col}">${x.A.score}</i></a>`; }).join("") || `<p class="note">Mandami un link per iniziare la classifica.</p>`}</div>
+  <h2>Dove cercare <small><a href="#inv/dove">Tutti i comuni</a></small></h2>
   <div class="chips" id="dovek">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${k === store.get("dove_k", "breve") ? "on" : ""}" data-k="${k}">${t}</button>`).join("")}</div>
   <div id="dove">${homeDove()}</div>
   ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}

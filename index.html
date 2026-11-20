@@ -421,6 +421,16 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .pltop em{font-style:normal;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pltop small{font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pltop i{flex:none;font-style:italic;font-family:var(--display);font-weight:800;font-size:15px;color:var(--pc)}
+.t10{display:grid;gap:8px}
+.t10r{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:12px;align-items:center;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:18px;padding:8px 12px 8px 8px;background:var(--panel)}
+.t10r .win{height:72px;border-radius:12px;min-height:0}
+.t10n{position:absolute;top:-6px;left:-6px;z-index:3;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:800;font-size:15px;background:var(--panel2);color:var(--cy2);border:1px solid var(--line)}
+.t10r:nth-child(-n+3) .t10n{background:linear-gradient(180deg,#fde047,var(--yl));color:#1a1300;border:0}
+.t10t{min-width:0;display:flex;flex-direction:column;gap:1px}
+.t10t small{font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t10t em{font-style:normal;font-weight:700;font-size:14px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.t10t span{font-size:12px;color:var(--tx2)}.t10t strong{color:var(--good)}
+.t10s{font-style:italic;font-family:var(--display);font-weight:800;font-size:24px;color:var(--pc)}
 .dove{display:grid;gap:6px;margin-top:10px}
 .dv{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:9px 11px;background:#131313}
 .dv>b{flex:none;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:800;background:#2a2418;color:var(--cy2)}
@@ -431,6 +441,8 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .dv .tb{height:5px;border-radius:3px;background:#222;overflow:hidden}.dv .tb span{display:block;height:100%;background:linear-gradient(90deg,var(--cy),var(--cy2))}
 .dv>em{flex:none;font-style:italic;font-family:var(--display);font-weight:800;font-size:19px;color:var(--cy2);text-align:right}
 .dv>em a{display:block;font-family:var(--body);font-style:normal;font-weight:600;font-size:10.5px;color:var(--muted)}
+.dvt{display:flex;flex-wrap:wrap;gap:4px}.dvt span{font-size:10.5px;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--tx2)}
+.dvtags{flex-wrap:wrap!important}
 .btn4{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .btn4 a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);border:1px solid #3a3320;border-radius:16px;padding:12px;background:linear-gradient(160deg,#1b1b1b,#111);font-weight:600;font-size:14px}
 .btn4 svg{width:26px;height:26px;color:var(--cy2);flex:none}.btn4 em{display:block;font-style:normal;font-size:11px;color:var(--on);background:var(--cy);border-radius:999px;padding:0 7px;width:max-content;margin-top:2px}
@@ -483,6 +495,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 <script src="data/notizie.js"></script>
 <script src="data/guida.js"></script>
 <script src="data/territorio.js"></script>
+<script src="data/servizi.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="js/terr.js"></script>
 <script src="js/milmap.js"></script>
@@ -926,7 +939,7 @@ function render(keepScroll) {
   else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
   else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
   else { html = vHomeK(); after = afterHomeK; }
-  const INVK = { miei: "archivio", auto: "auto", brevi: "brevi" };
+  const INVK = { miei: "archivio", auto: "auto", brevi: "dove" };
   if (INVK[v] && window.invBread) html = invBread(INVK[v]) + html;
   app.innerHTML = html; after();
   const navv = v === "imm" || INVK[v] ? "inv" : v || "home";

@@ -220,7 +220,7 @@ document.addEventListener("click", e => {
 const INV_MODI = {
   classifica: { t: "Classifica generale", c: "Tutti gli immobili", d: "Gli immobili entro 3 ore ordinati per punteggio, con mappa del Nord Italia e filtri.", href: "#inv/classifica" },
   zona: { t: "Ricerca per zona", c: "Comune, zona, via", d: "Scrivi dove vuoi cercare: la mappa ti porta lì e apri la scheda dell'immobile.", href: "#inv/zona" },
-  brevi: { t: "Mappa B&B", c: "Affitti brevi", d: "Prezzo a notte, occupazione e rendita di " + TERR.brevi.length + " località turistiche.", href: "#brevi", i: "bnb" },
+  dove: { t: "Dove cercare", c: "Tutti i comuni", d: "Rendimento netto di B&B e affitto normale comune per comune, con filtri lago, sci, ospedali, università e aziende.", href: "#inv/dove", i: "zona" },
   archivio: { t: "I miei immobili", c: "Archivio", d: "Gli annunci che hai mandato tu, analizzati uno per uno.", href: "#miei" },
   auto: { t: "Trovati in automatico", c: "Ogni mattina", d: "Gli immobili che arrivano dalle notifiche: qui finiscono anche i nuovi del banner.", href: "#auto" },
 };
@@ -277,6 +277,71 @@ function afterInvClassifica() {
   const f = Object.assign({}, INV_F0, store.get("f_inv", {}));
   drawMap($("#map"), invPts(invRows(f))); bindInvFiltri("f_inv", f);
 }
+/* ---------------- DOVE CERCARE: tutti i comuni con rendimento netto B&B e affitto normale ---------------- */
+const DV_TAG = { lago: ["Lago", "🏞"], sci: ["Montagna e sci", "⛷"], ospedale: ["Ospedale", "🏥"], uni: ["Università", "🎓"], aziende: ["Aziende", "🏭"] };
+const DV_F0 = { uso: "breve", tags: [], ore: 180, prov: "", max: 0 };
+const DV_CACHE = new Map();
+function dvTags(c) {
+  const out = [];
+  for (const k in DV_TAG) { const r = SERVIZI.raggio[k] * 1000; if (SERVIZI[k].some(([, la, lo]) => hav(c.lat, c.lon, la, lo) <= r)) out.push(k); }
+  return out;
+}
+function dvCalc(c) {
+  const key = c.n + "|" + c.p; if (DV_CACHE.has(key)) return DV_CACHE.get(key);
+  const I = tIdx(), br = I.br.find(s => tnorm(s.n) === tnorm(c.n)), str = br ? { adr: br.adr, occ: br.occ, fonte: br.fonte } : tStrVicino(c);
+  const q = { mq: 50, locali: 2, stato: "buono", arredato: false };
+  let r = null; try { r = vCalcola(q, { v: c.v, a: c.aOk ? c.a : null, str, nome: c.n, milano: false }); } catch (e) {}
+  const o = { c, tags: dvTags(c), br, str, breve: r?.sc.list.breve?.rendNetto ?? null, lungo: c.rl && r?.sc.list.lungo ? r.sc.list.lungo.rendNetto : null,
+    prezzo: c.v * 50 * (1 - IMPOSTAZIONI.sconto_trattativa), adr: r?.breve?.adr, occ: r?.breve?.occ, canone: r?.canone, stima: !br };
+  DV_CACHE.set(key, o); return o;
+}
+function dvRows(f) {
+  const I = tIdx();
+  return I.com.filter(c => c.v && c.lat != null && (!f.prov || c.p === f.prov) && (!+f.max || c.v * 50 <= +f.max))
+    .map(c => ({ c, d: tDist(c.lat, c.lon) })).filter(x => x.d && x.d.min <= +f.ore)
+    .map(x => ({ ...dvCalc(x.c), d: x.d })).filter(o => o[f.uso] != null && f.tags.every(t => o.tags.includes(t)))
+    .sort((a, b) => b[f.uso] - a[f.uso]);
+}
+function vDove() {
+  const f = Object.assign({}, DV_F0, store.get("f_dove", {})), rows = dvRows(f), provs = Object.entries(TERR.prov).sort((a, b) => a[1].nome.localeCompare(b[1].nome));
+  const geoN = Object.keys(store.get("geo", {})).length;
+  return `${invBread("dove")}<h1>Dove cercare</h1><p class="sub">Tutti i comuni entro ${tOre(+f.ore)} da casa, dal più redditizio. Scegli tu cosa ti serve vicino; tocca un comune per aprire la ricerca su Immobiliare e mandami i link degli annunci che ti piacciono.</p>
+  <div class="filters" id="dvf">
+    <div class="chips">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${f.uso === k ? "on" : ""}" data-uso="${k}">${t}</button>`).join("")}</div>
+    <div class="chips dvtags">${Object.entries(DV_TAG).map(([k, [t, e]]) => `<button class="chip ${f.tags.includes(k) ? "on" : ""}" data-tag="${k}">${e} ${t}</button>`).join("")}</div>
+    <div class="selrow">
+      <select data-f="ore">${[60, 90, 120, 150, 180].map(v => `<option value="${v}" ${+f.ore === v ? "selected" : ""}>Entro ${tOre(v)}</option>`).join("")}</select>
+      <select data-f="prov"><option value="">Tutte le province</option>${provs.map(([k, p]) => `<option value="${k}" ${f.prov === k ? "selected" : ""}>${esc(p.nome)}</option>`).join("")}</select>
+      <select data-f="max"><option value="0">Ogni prezzo</option>${[60000, 100000, 150000, 250000].map(v => `<option value="${v}" ${+f.max === v ? "selected" : ""}>Bilocale fino a ${keur(v)}</option>`).join("")}</select>
+    </div>
+  </div>
+  <p class="note" id="dvnote">${rows.length} comuni${f.prov ? "" : ` · scegli una provincia per vedere anche i paesi più piccoli`}${f.tags.length ? ` · con ${f.tags.map(t => DV_TAG[t][0].toLowerCase()).join(" e ")} vicino` : ""}.</p>
+  <div class="map" id="dvmap"></div>
+  <div class="dove">${rows.slice(0, 80).map((o, i) => `<div class="dv"><b>${i + 1}</b><span><a href="https://www.immobiliare.it/vendita-case/${immSlug(o.c.n)}/" target="_blank" rel="noopener">${esc(o.c.n)} <i>(${esc(o.c.p)})</i> ↗</a>
+      <small>${f.uso === "breve" ? `${eur(o.adr)} a notte · ${pct(o.occ, 0)}${o.stima ? " (stima vicina)" : ""}` : `affitto ${eur(o.canone)}/mese`} · bilocale ~${keur(o.prezzo)} · ${tOre(o.d.min)}</small>
+      ${o.tags.length ? `<small class="dvt">${o.tags.map(t => `<span title="${DV_TAG[t][0]}">${DV_TAG[t][1]} ${DV_TAG[t][0]}</span>`).join("")}</small>` : ""}</span>
+      <em>${pct(o[f.uso], 1)}${o.br ? `<a href="#brevi/${encodeURIComponent(o.br.n)}">analisi</a>` : ""}</em></div>`).join("") || `<div class="empty"><b>Nessun comune</b><p>Togli un filtro o allarga il tempo di viaggio.</p></div>`}</div>
+  ${rows.length > 80 ? `<p class="note">Mostro i primi 80 su ${rows.length}.</p>` : ""}
+  <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (meno la trattativa, più costi d'acquisto e arredo), dopo spese e tasse da privata. B&amp;B: dati della località o, se non ci sono, della località turistica più vicina ridotti del 15%. Affitto normale solo dove i canoni del portale sono affidabili. Lago, sci, ospedali, università e aziende: distanza dai punti principali, indicativa.</p>`;
+}
+function afterDove() {
+  const f = Object.assign({}, DV_F0, store.get("f_dove", {})), save = () => { store.set("f_dove", f); render(true); };
+  const m = tMap($("#dvmap"), [[45.6, 9.4], 7]);
+  if (m) { const rows = dvRows(f), vals = rows.map(o => o[f.uso]), b = [];
+    const bins = [0.03, 0.045, 0.06, 0.08];
+    rows.slice(0, 300).forEach((o, i) => { L.circleMarker([o.c.lat, o.c.lon], { radius: i < 10 ? 8 : 5, color: "#000", weight: 1, fillColor: tCol(o[f.uso], bins), fillOpacity: .95 })
+      .bindPopup(`<b>${esc(o.c.n)}</b> (${o.c.p})<br>Netto ${f.uso === "breve" ? "B&B" : "affitto"}: <b>${pct(o[f.uso], 1)}</b><br>${tOre(o.d.min)} da casa${o.tags.length ? "<br>" + o.tags.map(t => DV_TAG[t][1] + " " + DV_TAG[t][0]).join(" · ") : ""}<br><a class="go" href="https://www.immobiliare.it/vendita-case/${immSlug(o.c.n)}/" target="_blank" rel="noopener">Cerca su Immobiliare ↗</a>`).addTo(m); b.push([o.c.lat, o.c.lon]); });
+    if (b.length) m.fitBounds(b, { padding: [20, 20], maxZoom: 11 });
+    tHomeMarkers && tHomeMarkers(m); }
+  const box = $("#dvf");
+  box.addEventListener("click", e => { const u = e.target.closest("[data-uso]"), t = e.target.closest("[data-tag]");
+    if (u) { f.uso = u.dataset.uso; save(); }
+    if (t) { const k = t.dataset.tag; f.tags = f.tags.includes(k) ? f.tags.filter(x => x !== k) : [...f.tags, k]; save(); } });
+  box.addEventListener("change", e => { const k = e.target.dataset.f; if (!k) return; f[k] = e.target.value; store.set("f_dove", f);
+    if (k === "prov" && f.prov && TERR.prov[f.prov]) { $("#dvnote").textContent = "Carico tutti i comuni della provincia…"; tGeo(TERR.prov[f.prov].istat).then(() => { DV_CACHE.clear(); render(true); }).catch(() => render(true)); }
+    else render(true); });
+}
+
 /* ricerca per zona: una barra di ricerca (comune, zona, via, titolo) e la mappa */
 function invCerca(q) {
   const t = tnorm(q || "").trim(), all = invAll().map(x => ({ ...x, A: analizza(x.im) }));
@@ -319,8 +384,8 @@ function afterInvZona() {
   inp.addEventListener("keydown", e => { if (e.key === "Enter") { const f = res.querySelector("a.zr"); if (f) location.hash = f.getAttribute("href"); } });
   draw();
 }
-function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : vInvHub(); }
-function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); }
+function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : a === "dove" ? vDove() : vInvHub(); }
+function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
 
 /* ---------------- collegamento al router ---------------- */
 const MI_ALIAS = { bnb: "inv", lungo: "inv" };
