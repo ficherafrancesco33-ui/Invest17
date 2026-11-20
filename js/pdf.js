@@ -127,7 +127,7 @@ async function mmPdf(arg) {
   w.document.write(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Preparo il PDF…</title><body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;font:15px Georgia,serif;color:#6e1423;background:#fbf7f0"><div style="width:38px;height:38px;border:3px solid #ead9b8;border-top-color:#6e1423;border-radius:50%;animation:g 1s linear infinite"></div>Preparo la valutazione con la mappa 3D…<style>@keyframes g{to{transform:rotate(360deg)}}</style></body>`);
   const { ctx, q } = arg, s = ctx.sel || {};
   const lat = s.lat ?? ctx.micro?.lat ?? ctx.com?.lat, lon = s.lon ?? ctx.micro?.lon ?? ctx.com?.lon;
-  const foto = {}, tema = store.get("pdf_tema", "notte"), selCol = (PDF_TEMI[tema] || PDF_TEMI.notte)[2];
+  const foto = {}, tema = store.get("pdf_tema", "sat"), selCol = (PDF_TEMI[tema] || PDF_TEMI.sat)[2];
   if (lat != null) {
     const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
     foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 20000);
@@ -494,7 +494,7 @@ function pdfEsempio() {
   return { r: vCalcola(q, ctx), q, ctx };
 }
 function vAnteprima() {
-  const scelto = store.get("pdf_tema", "notte");
+  const scelto = store.get("pdf_tema", "sat");
   return `<div class="hubhead"><small>Rendering</small><h1>Copertina del PDF</h1><p class="sub">Quattro versioni della mappa sulla stessa valutazione di esempio (Via Ripamonti 166). Le mappe si generano adesso, ci vogliono una decina di secondi. Tocca "Apri il PDF completo" per vederlo tutto.</p></div>
   ${Object.entries(PDF_TEMI).map(([k, [t, d]]) => `<div class="card" style="margin:0 0 18px;padding:14px">
     <h2 style="margin:0 0 2px">${esc(t)} ${k === scelto ? '<small style="color:var(--cy)">· in uso ora</small>' : ""}</h2><p class="note" style="margin:0 0 10px">${esc(d)}</p>
