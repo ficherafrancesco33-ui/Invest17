@@ -231,7 +231,7 @@ async function mmInit(el) {
       paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
     // quartieri ufficiali (NIL): se il Comune risponde
     mmNil(map);
-    mmAnnLayer(map); mmGeocodifica();
+    mmGeocodifica();   // pallini degli annunci tolti dalla mappa: restano come comparabili e nell'elenco dei privati
     map.on("click", e => { if (!e.originalEvent.__ann) mmTap(e); });
     map.on("mousemove", e => { map.getCanvas().style.cursor = map.queryRenderedFeatures(e.point, { layers: ["bld"] }).length ? "pointer" : ""; });
     MM.ready = true; mmApplyLayers();
@@ -265,7 +265,7 @@ function mmApplyLayers() {
   vis(["cell-fill", "cell-line", "cell-lab", "hint-fill"], MM.lay.prezzi);
   vis(["nil-line", "nil-lab"], MM.lay.nil);
   vis(["metro", "metro-glow", "metros"], MM.lay.metro);
-  vis(["poi"], MM.lay.poi); vis(["ann"], MM.lay.ann);
+  vis(["poi"], MM.lay.poi);
   map.setPaintProperty("bld", "fill-extrusion-height", MM.lay.d3 ? ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]] : 0);
   ["cell-fill", "hint-fill"].forEach(id => map.getLayer(id) && map.setPaintProperty(id, "fill-color", mmColorExpr(MM.metric)));
   if (MM.lay.d3 && map.getPitch() < 20) map.easeTo({ pitch: 52, duration: 600 }); if (!MM.lay.d3 && map.getPitch() > 0) map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
@@ -340,7 +340,7 @@ function vMilano3D(zona, mode = "mappa") {
   <div class="mmbar">
     <div class="mmsearch"><input type="search" id="mmq" placeholder="Cerca un indirizzo: via Tortona 27" autocomplete="off"><div id="mmres" class="mmres" hidden></div></div>
     <div class="chips" id="mmm">${Object.entries(MM_MET).map(([k, m]) => `<button class="chip ${k === MM.metric ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
-    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["ann", "Annunci"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#c9a227", ann: "#f5d76e", nil: "#e9c46a", metro: "#e3242b", poi: "#facc15", d3: "#f2cf5b" }[k]}"><i></i>${t}</button>`).join("")}</div>
+    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#c9a227", ann: "#f5d76e", nil: "#e9c46a", metro: "#e3242b", poi: "#facc15", d3: "#f2cf5b" }[k]}"><i></i>${t}</button>`).join("")}</div>
   </div>
   <div class="mmwrap"><div class="mm3d" id="mm3d"></div><div class="mmsheet" id="mmsheet" hidden></div></div>
   <div id="mmleg">${mmLegend()}</div>
