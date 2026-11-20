@@ -43,7 +43,7 @@ function vCompleta(tab) {
   tab = tab === "inv" ? "inv" : "milano";
   const T = tab === "milano" ? cmMilano() : ciInv();
   const head = `<div class="hubhead"><small>Raccolta dati</small><h1>Completamento</h1><p class="sub">Cosa abbiamo già e cosa manca. Si aggiorna da solo ogni volta che carico nuovi annunci, anche quelli letti con Chrome.</p></div>
-  <nav class="bread nob"><a href="#completa/milano" class="${tab === "milano" ? "on" : ""}">${ico("mappa")}<span>Milano</span></a><a href="#completa/inv" class="${tab === "inv" ? "on" : ""}">${ico("comuni")}<span>Investimenti</span></a></nav>
+  <nav class="bread nob" style="margin-top:16px;margin-bottom:16px"><a href="#completa/milano" class="${tab === "milano" ? "on" : ""}">${ico("mappa")}<span>Milano</span></a><a href="#completa/inv" class="${tab === "inv" ? "on" : ""}">${ico("comuni")}<span>Investimenti</span></a></nav>
   <div class="cmprog"><div class="cmbar"><span style="width:${T.ok / T.tot * 100}%"></span><span class="ap" style="width:${T.parz / T.tot * 100}%"></span></div>
     <b>${T.ok} su ${T.tot} ${tab === "milano" ? "microzone complete" : "comuni con annunci"}</b><span>${T.parz ? `${T.parz} ${tab === "milano" ? "parziali" : "con il link in cartella"}` : ""}</span></div>
   <div class="cmleg"><span><i style="background:${CM_COL.ok}"></i>${tab === "milano" ? "Completa" : "Annunci caricati"}</span><span><i style="background:${CM_COL.parz}"></i>${tab === "milano" ? "Parziale" : "Link in cartella"}</span><span><i style="background:${CM_COL.da}"></i>Da fare</span></div>
