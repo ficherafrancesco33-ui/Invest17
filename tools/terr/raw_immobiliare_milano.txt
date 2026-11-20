@@ -6,7 +6,7 @@
 134665423;293000;46;2;1;R;0;N;Bilocale;45.48690;9.22380;Viale Lombardia;Casoretto;Milano;0;ci
 133473932;399000;70;3;1;4;1;O;Trilocale;45.48940;9.15310;Viale Certosa;Ghisolfa - Mac Mahon;Milano;0;ca
 133379356;520000;135;4;2;4;1;B;Quadrilocale;45.42900;9.20280;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;bcd
-133181532;162000;52;2;2;T;1;O;Bilocale;45.42650;9.25110;Via Rogoredo 113/A;Santa Giulia;Milano;0;i
+133181532;162000;52;2;2;T;1;O;Bilocale;45.4265;9.2511;Via Rogoredo 113/A;Santa Giulia;Milano;0;a
 132812820;340000;90;3;1;1;1;B;Trilocale;45.49420;9.12600;Via Delle Ande;Gallaratese;Milano;0;bcd
 132531862;735000;130;3;2;T;1;O;Trilocale;45.45760;9.15502;Via Giorgio Washington;Washington;Milano;0;
 131174366;310000;60;2;1;T;1;B;Bilocale;45.49100;9.21280;Via Soperga;Pasteur;Milano;0;i
@@ -26,7 +26,7 @@
 116426109;876000;128;3 - 4;;;0;;Progetto;45.49390;9.20940;Via Cristoforo Gluck, 46;Cascina dei Pomi;Milano;0;
 112617481;4600000;600;5+;3+;3;0;B;Appartamento;45.44850;9.17694;ALZAIA NAVIGLIO PAVESE 60;Navigli - Darsena;Milano;0;btcd
 133293328;134000;39;1;1;S, 3;1;B;Monolocale;45.52600;9.17450;Viale Mario Rapisardi;Bruzzano;Milano;0;bcai
-112886759;143000;42;1 - 3;;;0;;Progetto;45.40400;9.16950;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+112886759;143000;42;1 - 3;;;0;;Progetto;45.404;9.1695;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
 127148715;149000;45;2;1;4 - 5;0;R;Bilocale;45.51970;9.22310;Via Fortezza;Villa San Giovanni;Milano;0;b
 130494454;135000;51;2;1;4;1;B;Bilocale;45.50120;9.13550;Via Barnaba Oriani, 31, 20156 Milano MI, Italia;Certosa;Milano;0;bd
 134133619;129000;25;1;1;4;0;B;Monolocale;45.45410;9.22679;Via Paolo Maspero 30;Molise - Cuoco;Milano;0;bi
@@ -36,7 +36,7 @@
 130919324;135000;31;1;1;5;1;B;Monolocale;45.43690;9.21380;Via Marco D'Agrate 19;Corvetto;Milano;0;b
 129577574;139000;37;1;1;1;0;B;Monolocale;45.43340;9.20190;Via dell'Assunta;Vigentino - Fatima;Milano;0;ai
 130875592;139000;27;1;1;3;0;B;Monolocale;45.48620;9.23230;Via Nicola Antonio Porpora;Casoretto;Milano;0;cai
-131340182;140000;46;2;1;T;1;B;Bilocale;45.40660;9.17313;Via saponaro;Gratosoglio;Milano;0;a
+131340182;140000;46;2;1;T;1;B;Bilocale;45.4066;9.17313;Via saponaro;Gratosoglio;Milano;0;a
 132812954;149000;35;1;1;6;1;R;Monolocale;45.50400;9.17560;Via Giuseppe Tartini;Dergano;Milano;0;b
 132418948;155000;20;1;1;5;1;B;Mansarda;45.48080;9.23300;Via alfonso corti 30;Città Studi;Milano;0;tcai
 134055399;155000;52;2;1;2;0;B;Bilocale;45.51830;9.15398;Via Bovisasca;Bovisasca;Milano;0;b
@@ -51,13 +51,13 @@
 133900949;155000;47;2;1;3;0;B;Bilocale;45.43810;9.22870;Viale Eugenio Brizi;Corvetto;Milano;0;d
 126130275;154000;35;1;1;S, 3;1;B;Monolocale;45.43680;9.21410;Via Marco d'Agrate;Corvetto;Milano;0;bc
 134565817;148000;28;1;1;4;1;;Monolocale;45.45690;9.24230;Via Mecenate;Viale Ungheria - Mecenate;Milano;0;b
-132339268;143000;42;1;1;T;1;N;Monolocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+132339268;143000;42;1;1;T;1;N;Monolocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
 133892953;153000;36;1;1;4;0;B;Monolocale;45.49900;9.14970;Via Console Marcello;Certosa;Milano;0;bai
 134610945;149000;30;2;1;1;1;R;Bilocale;45.43080;9.17890;Via Medeghino;Cermenate - Abbiategrasso;Milano;0;bi
 129758606;143000;40;2;1;2;0;R;Bilocale;45.49770;9.23100;Via Terenzio Mamiani;Cimiano;Milano;0;i
 134499507;154000;50;2;1;T;1;N;Bilocale;45.49700;9.14319;via baldo degli Ubaldi 6;Certosa;Milano;0;d
-134856369;120000;21;1;1;5;1;O;Monolocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
-134854987;110000;21;1;1;5;1;O;Monolocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
+134856369;120000;21;1;1;5;1;O;Monolocale;45.4185;9.1784;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
+134854987;110000;21;1;1;5;1;O;Monolocale;45.4185;9.1784;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
 134902223;139000;41;2;1;2;0;B;Mansarda;45.52950;9.17283;Via alberico da barbiano;Bruzzano;Milano;0;a
 134412049;139000;25;1;1;1;1;O;Monolocale;45.50010;9.22236;Via Matteo Maria Boiardo 11;Turro;Milano;0;ai
 125444687;150000;38;1;1;T;1;B;Monolocale;45.46970;9.13900;Via Daniele Ricciarelli;San Siro;Milano;0;
@@ -109,7 +109,7 @@
 133463100;155000;41;2;1;T;1;O;Bilocale;45.46610;9.08380;Via Ugo Frigerio;Baggio;Milano;0;ad
 133505696;110000;24;1;1;T;0;B;Monolocale;45.48900;9.20533;Via Sammartini;Centrale;Milano;0;
 124735221;137000;46;2;1;T;0;O;Bilocale;45.41890;9.15790;Via del Mare;Cantalupa - San Paolo;Milano;0;ad
-98273332;110000;40;1;1;8;1;B;Monolocale;45.41000;9.17390;Via Michele Saponaro;Gratosoglio;Milano;0;i
+98273332;110000;40;1;1;8;1;B;Monolocale;45.41;9.1739;Via Michele Saponaro;Gratosoglio;Milano;0;a
 134565195;41625;120;5;;1;1;B;Appartamento;45.47534;9.18586;via Palermo;Moscova;Milano;0;btcd
 134803441;129751;71;3;;1;1;B;Appartamento;45.52661;9.20524;Arezzo;Bignami - Ponale;Milano;0;btcd
 134871969;98250;60;3;;1;1;B;Appartamento;45.44793;9.12692;Via Angelo Inganni;Inganni;Milano;0;btcd
@@ -192,7 +192,7 @@
 131379900;145000;66;2;1;S;0;O;Bilocale;45.50050;9.22170;Via Matteo Maria Boiardo;Turro;Milano;0;
 128514156;127000;25;1;1;5;1;B;Monolocale;45.49240;9.21520;Via Nino Oxilia, 13, 20125 Milano MI, Italia;Pasteur;Milano;0;i
 129647570;149000;50;2;1;1;0;N;Bilocale;45.49670;9.13450;Via catullo;Certosa;Milano;0;ci
-131123740;85000;70;3;1;5;1;B;Trilocale;45.42690;9.25060;V. Rogoredo, 103, 20138 San Donato Milanese MI, Italia;Santa Giulia;Milano;0;bad
+131123740;85000;70;3;1;5;1;B;Trilocale;45.4269;9.2506;V. Rogoredo, 103, 20138 San Donato Milanese MI, Italia;Santa Giulia;Milano;0;ba
 127359821;119000;22;1;1;R;0;B;Monolocale;45.50390;9.17430;Via Bernardo Davanzati;Dergano;Milano;0;b
 134669553;115000;42;1;1;T;0;B;Monolocale;45.47630;9.09060;Via Di Vittorio;Quinto Romano;Milano;0;ca
 124407519;127000;35;1;1;1;0;O;Monolocale;45.49690;9.13440;Via catullo;Certosa;Milano;0;
@@ -206,9 +206,9 @@
 133374568;50000;50;2;1;S;0;B;Open space;45.43820;9.19270;Via Bernardino Verro;Ripamonti - Fondazione Prada;Milano;0;i
 132029188;115000;30;1;1;7;1;B;Monolocale;45.47050;9.24520;Via Tucidide;Ortica;Milano;0;
 129974402;110000;30;1;1;1;1;O;Monolocale;45.49190;9.22770;Via Ruggero Leoncavallo;Parco Trotter;Milano;0;ai
-132416914;125000;23;1;1;2;1;B;Monolocale;45.43460;9.23593;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
+132416914;125000;23;1;1;2;1;B;Monolocale;45.4346;9.23593;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
 132190324;139000;55;2;1;3;0;B;Bilocale;45.51130;9.19510;Via Ciriè;Prato Centenaro;Milano;0;bc
-130089282;149000;165;4;2;S;1;B;Loft;45.42648;9.25099;Via Rogoredo;Santa Giulia;Milano;1;
+130089282;149000;165;4;2;S;1;B;Loft;45.42647934;9.25098991;Via Rogoredo;Santa Giulia;Milano;1;
 128941170;150000;55;2;1;2;0;R;Bilocale;45.46120;9.09380;Via Francesco Rismondo;Baggio;Milano;0;ad
 134603883;125000;25;1;1;2;0;R;Monolocale;45.49080;9.15310;Viale Monte Ceneri;Ghisolfa - Mac Mahon;Milano;0;
 134672567;118000;33;1;1;1;0;R;Monolocale;45.51520;9.16930;Via Enrico Cialdini;Affori;Milano;0;i
@@ -276,14 +276,14 @@
 130451312;145000;36;1;1;R;1;B;Monolocale;45.49420;9.14610;Via Dario Niccodemi;Certosa;Milano;0;ca
 131484018;145000;55;2;1;3;1;O;Bilocale;45.44110;9.17370;Via Bordighera;Famagosta;Milano;0;bcai
 133831224;95000;30;1;1;S;1;O;Monolocale;45.45480;9.21790;Via Scipione Pistrucci;Martini - Insubria;Milano;0;
-133591684;150000;58;2;1;3;0;O;Bilocale;45.42600;9.25150;Via Rogoredo;Santa Giulia;Milano;0;cai
+133591684;150000;58;2;1;3;0;O;Bilocale;45.426;9.2515;Via Rogoredo;Santa Giulia;Milano;0;ca
 124183049;138000;51;1;1;5;1;B;Monolocale;45.49160;9.23840;Via Monfalcone;Udine;Milano;0;t
 129695362;149000;33;1;1;T;0;R;Open space;45.50080;9.22260;Via della Torre;Turro;Milano;0;cd
 133102378;127000;30;1;1;5;0;B;Monolocale;45.47140;9.24190;Via San Faustino;Ortica;Milano;0;bai
 129173734;149000;45;1;1;S;0;B;Monolocale;45.48540;9.22800;Via Accademia;Città Studi;Milano;0;ca
 134593135;105000;53;2;;R;0;B;Appartamento;45.52995;9.17153;Via Pesaro, 9 ;Bruzzano;Milano;0;
 132230008;140000;27;1;1;4;1;B;Monolocale;45.45100;9.14590;Via Giacinto Bruzzesi;Giambellino;Milano;0;bai
-133140802;130000;35;1;1;R;1;R;Monolocale;45.42650;9.25100;Via Rogoredo;Santa Giulia;Milano;0;
+133140802;130000;35;1;1;R;1;R;Monolocale;45.4265;9.251;Via Rogoredo;Santa Giulia;Milano;0;
 133722392;142500;81;3;;T;0;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi , 4 ;Crescenzago;Milano;0;b
 127968382;152000;60;2;1;5;1;B;Bilocale;45.51420;9.14700;Via Sabatino Lopez;Vialba;Milano;0;bcd
 133806562;140000;65;2;1;S;1;O;Loft;45.45540;9.21720;Via Scipione Pistrucci;Martini - Insubria;Milano;0;
@@ -314,7 +314,7 @@
 131322708;120000;14;1;1;4;0;B;Monolocale;45.45310;9.21810;Via Ennio;Martini - Insubria;Milano;0;ai
 134727639;155000;47;2;1;2;0;B;Bilocale;45.50160;9.23692;Via Padova;Cimiano;Milano;0;bc
 130739324;75000;54;2;1;S;0;O;Bilocale;45.43900;9.19950;Via Tirso;Ripamonti - Fondazione Prada;Milano;0;i
-120739834;132000;50;2;1;2;0;N;Bilocale;45.40340;9.16770;Via Costantino Baroni;Gratosoglio;Milano;0;i
+120739834;132000;50;2;1;2;0;N;Bilocale;45.4034;9.1677;Via Costantino Baroni;Gratosoglio;Milano;0;a
 133573186;125000;30;1;1;3;0;B;Monolocale;45.50150;9.23630;Via Treviso;Cimiano;Milano;0;bd
 133994877;149000;40;1;1;R;1;B;Monolocale;45.51770;9.20140;Via Lanfranco della Pila;Niguarda;Milano;0;cai
 133434548;135000;80;2;2;2;1;B;Bilocale;45.43260;9.18480;Via Felice Perussia;Chiesa Rossa;Milano;0;btcad
@@ -387,7 +387,7 @@
 132151958;135000;35;1;1;7;1;B;Monolocale;45.50140;9.11490;Via Cefalù;Gallaratese;Milano;0;bi
 134474933;102000;70;3;;2;0;B;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;c
 133434980;139000;40;1;1;S;0;O;Monolocale;45.51140;9.17430;Via Giovanni Nicotera;Affori;Milano;0;i
-128137868;89000;25;1;1;T;0;B;Monolocale;45.45210;9.18000;Piazza 24 Maggio;Ascanio Sforza;Milano;0;i
+128137868;89000;25;1;1;T;0;B;Monolocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;
 133602852;131240;94;5+;;3;1;;Appartamento;45.45330;9.07859;Via Dei Salici;;Milano;0;bcad
 130675182;58490;41;3;;2;0;;Appartamento;45.49442;9.14144;Viale Certosa;;Milano;0;bca
 85851606;145000;25;1;1;T;0;O;Monolocale;45.47080;9.24310;Via Ortica;Ortica;Milano;0;ai
@@ -430,7 +430,7 @@
 134800647;148125;80;3;;1;1;B;Appartamento;45.49349;9.07229;Via Filippo Anghileri;Figino;Milano;0;btcd
 124111937;155000;35;1;1;T;1;B;Monolocale;45.50980;9.17465;VIA GRAZIOLI;Affori;Milano;0;
 126812279;128000;25;1;1;5;1;B;Monolocale;45.49310;9.15130;Via Masolino da Panicale;Certosa;Milano;0;bi
-127309463;139000;61;2;1;2;0;B;Bilocale;45.40130;9.18300;Via Pescara;Gratosoglio;Milano;0;ai
+127309463;139000;61;2;1;2;0;B;Bilocale;45.4013;9.183;Via Pescara;Gratosoglio;Milano;0;a
 132334278;103132;66;3;;1;0;B;Appartamento;45.49367;9.10068;Via Fratelli Rizzardi, 25;Trenno;Milano;0;b
 134764917;155000;37;1;1;1;1;O;Monolocale;45.45190;9.14170;Piazza Pietro Frattini;Lorenteggio;Milano;0;ai
 134597779;129750;71;3;;R;0;B;Appartamento;45.52661;9.20524;Via Arezzo, 10/10;Bignami - Ponale;Milano;0;c
@@ -559,7 +559,7 @@
 126736965;129000;40;1;1;1;0;B;Monolocale;45.46180;9.10850;Via Cascina Barocco;San Carlo;Milano;0;ti
 133732152;146408;63;2;;2;0;B;Appartamento;45.49746;9.14934;Via Cesare Ajraghi, 3;Certosa;Milano;0;bcd
 134506657;37920;22;1;;4;0;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;bd
-130447876;149000;55;2;1;2;0;R;Bilocale;45.43680;9.23614;Via Toffetti, 18;Rogoredo;Milano;0;c
+130447876;149000;55;2;1;2;0;R;Bilocale;45.4368;9.23614;Via Toffetti, 18;Rogoredo;Milano;0;c
 134394341;148125;80;2;;T;1;B;Appartamento;45.49409;9.07220;Via F. ANGHILARI, 10;Figino;Milano;0;td
 133606800;131250;94;4;;3;0;B;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;bcd
 132924884;126000;37;1;1;T;0;B;Monolocale;45.46090;9.09120;Via delle Forze Armate;Baggio;Milano;0;i
@@ -612,7 +612,7 @@
 126201081;110000;35;2;1;1;1;B;Bilocale;45.43650;9.21348;Via Marco D'Agrate;Corvetto;Milano;0;bai
 133927235;139000;20;1;1;1;0;O;Monolocale;45.50860;9.23370;Via Treviglio;Ponte Nuovo;Milano;0;
 134387169;120000;40;2;1;1;0;B;Bilocale;45.52220;9.16951;VIA TERRACINA, 6;Affori;Milano;0;a
-132505314;115000;25;1;1;1;0;O;Monolocale;45.41400;9.16290;Via Icilio Calzolari;Gratosoglio;Milano;0;ad
+132505314;115000;25;1;1;1;0;O;Monolocale;45.414;9.1629;Via Icilio Calzolari;Gratosoglio;Milano;0;a
 129729652;155000;45;2;1;1;0;B;Bilocale;45.50520;9.23130;Via Iglesias;Gorla;Milano;0;bcad
 131436340;140000;56;2;1;1;0;B;Bilocale;45.53230;9.16170;Via Comasina;Comasina;Milano;0;bd
 123949471;115000;45;2;1;1;0;O;Bilocale;45.46090;9.09120;Via delle Forze Armate;Baggio;Milano;0;d
@@ -687,7 +687,7 @@
 134448123;80797;35;2;;3;1;B;Appartamento;45.43624;9.17921;Via De Sanctis, 33;Cermenate - Abbiategrasso;Milano;0;bc
 134387953;102000;71;2;;2;1;R;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli, 20;San Siro;Milano;0;bc
 133773264;151380;58;2;;T;1;B;Appartamento;45.47384;9.21855;Via Giovanni Pascoli, 4;Città Studi;Milano;0;c
-132329884;113794;63;2;;5;1;B;Appartamento;45.40639;9.17114;Via Costantino Baroni, 67;Gratosoglio;Milano;0;c
+132329884;113794;63;2;;5;1;B;Appartamento;45.40639114;9.17114067;Via Costantino Baroni, 67;Gratosoglio;Milano;0;ca
 131127466;144000;40;1;1;S;1;O;Loft;45.43630;9.17720;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;i
 134910039;142339;129;3;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;bc
 134266897;98250;62;2;;4;1;B;Appartamento;45.44793;9.12692;Via Angelo Inganni, 29;Inganni;Milano;0;b
@@ -704,7 +704,7 @@
 133459646;148125;80;2;;;1;B;Appartamento;45.49409;9.07220;Via F. ANGHILARI , 10;Figino;Milano;0;b
 133729996;151380;58;2;;;0;B;Appartamento;45.47384;9.21855;Via Giovanni Pascoli, 4;Città Studi;Milano;0;
 134829419;142339;86;2;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;bc
-129176492;116400;107;5;;2;0;B;Appartamento;45.43064;9.24122;Via George Orwell;Rogoredo;Milano;0;
+129176492;116400;107;5;;2;0;B;Appartamento;45.43064117;9.24122143;Via George Orwell;Rogoredo;Milano;0;
 131276824;72750;35;1;;4;0;;Appartamento;45.51353;9.19176;Via Luigi Bianchi d'Espinosa;Niguarda;Milano;0;
 134713911;47400;22;1;;4;0;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
 132709222;148000;59;2;;6;1;B;Appartamento;45.50626;9.24360;Via Padova , 256;Crescenzago;Milano;0;
@@ -716,7 +716,7 @@
 133153996;110000;50;;1;T;0;R;Appartamento;45.49320;9.22740;Via Arquà;Parco Trotter;Milano;0;
 132082636;49000;40;2;1;S;1;;Bilocale;45.52180;9.22710;Viale Monza;Villa San Giovanni;Milano;0;a
 134129585;131250;94;4;;3;1;B;Appartamento;45.45335;9.07857;Via dei salici, 67;Quartiere Olmi;Milano;0;
-134204037;102394;111;4;;T;1;N;Appartamento;45.40403;9.16951;Via Costantino Baroni;Gratosoglio;Milano;0;ai
+134204037;102394;111;4;;T;1;N;Appartamento;45.40402985;9.16950989;Via Costantino Baroni;Gratosoglio;Milano;0;a
 134919613;107990;111;4;;T;1;N;Appartamento;45.49948;9.23417;Via Padova;Cimiano;Milano;0;ai
 134519257;105000;53;3;;T;0;;Appartamento;45.52995;9.17153;via Pesaro, 9;Bruzzano;Milano;0;c
 133901589;55000;22;1;1;4;0;R;Monolocale;45.49060;9.22283;Via Padova;Parco Trotter;Milano;0;
@@ -730,7 +730,7 @@
 129082724;81000;48;4;;;0;B;Appartamento;45.51617;9.14185;Via Privata Maria Melato;Vialba;Milano;0;
 133261360;145000;24;1;1;R;0;B;Monolocale;45.50390;9.12860;Via Garegnano , 45;Musocco;Milano;0;bca
 133860502;69666;69;2;;1;0;B;Appartamento;45.50037;9.23461;Via Pietro Toselli;Cimiano;Milano;0;tad
-133294052;129000;40;1;1;2;0;R;Monolocale;45.41690;9.23860;Via San Bernardo;Quintosole - Chiaravalle;Milano;0;bd
+133294052;129000;40;1;1;2;0;R;Monolocale;45.4169;9.2386;Via San Bernardo;Quintosole - Chiaravalle;Milano;0;b
 134854013;89000;14;1;1;8;1;R;Monolocale;45.49410;9.14570;Via Dario Niccodemi;Certosa;Milano;0;
 133700442;148000;58;4;;6;1;;Appartamento;45.50626;9.24360;via Padova, 256;Crescenzago;Milano;0;bc
 129124164;80250;33;3;;;0;B;Appartamento;45.50502;9.17550;Via Tartini Giuseppe;Dergano;Milano;0;
@@ -761,7 +761,7 @@
 134871067;142339;80;5+;;1;0;;Appartamento;45.51761;9.17518;via Privata Pietro Bembo, 18;Affori;Milano;0;bc
 134598857;131250;94;5+;;3;1;B;Appartamento;45.45335;9.07857;Via dei Salici, ;Quartiere Olmi;Milano;0;bc
 134455145;148125;78;2;;T;0;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;bt
-132889358;155000;38;1;1;2;1;B;Monolocale;45.41690;9.17990;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
+132889358;155000;38;1;1;2;1;B;Monolocale;45.4169;9.1799;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
 128261994;115000;50;2;1;S;0;O;Bilocale;45.44160;9.18860;Via Bernardino Verro;Pezzotti - Meda;Milano;0;c
 133878952;148770;60;2;;1;0;;Appartamento;45.46892;9.23226;Via Illirico;Città Studi;Milano;0;
 134777849;37920;14;1;;4;0;R;Appartamento;45.44255;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;
@@ -795,16 +795,16 @@
 133831310;148125;84;2;;T;0;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;
 134367837;80797;35;1;;3;0;;Appartamento;45.43615;9.17968;Via De Sanctis nn. 33-35;Cermenate - Abbiategrasso;Milano;0;b
 134645883;80797;35;2;;;0;;Appartamento;45.43621;9.17908;Via de sanctis 33-35 ;Cermenate - Abbiategrasso;Milano;0;
-133794426;89667;587;5;;;1;B;Appartamento;45.40345;9.16780;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+133794426;89667;587;5;;;1;B;Appartamento;45.40345383;9.1678009;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
 134645889;98250;60;3;;;0;;Appartamento;45.44793;9.12692;Via angelo inganni 29 ;Inganni;Milano;0;
 133100108;145000;28;1;1;2;1;O;Appartamento;45.47046;9.24523;Via Tucidide;Ortica;Milano;1;a
 134569913;98000;60;2;;4;0;B;Appartamento;45.44793;9.12692;via inganni, 29;Inganni;Milano;0;b
 129640564;145000;45;2;1;1;0;N;Bilocale;45.46840;9.25614;via privata Taverna, 34;Ortica;Milano;0;
 134288669;102000;70;2;;;1;B;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;
-133541706;102404;98;5;;;1;B;Appartamento;45.40345;9.16780;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+133541706;102404;98;5;;;1;B;Appartamento;45.40345383;9.1678009;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
 132463488;120000;98;5;;;1;B;Appartamento;45.52359;9.19310;Via Guido Da Velate, 3;Niguarda;Milano;0;
 134646415;102000;70;2;;;0;;Appartamento;45.47007;9.13861;Via daniele ricciarelli 20 ;San Siro;Milano;0;
-134906293;135000;50;2;1;3;1;B;Bilocale;45.42630;9.25125;Via Rogoredo 113;Santa Giulia;Milano;0;b
+134906293;135000;50;2;1;3;1;B;Bilocale;45.4263;9.25125;Via Rogoredo 113;Santa Giulia;Milano;0;b
 134910489;125000;32;;1;R;1;O;Appartamento;45.51260;9.13575;;Quarto Oggiaro;Milano;0;ai
 133370528;142500;81;3;;R;0;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
 133654282;142500;81;3;;;1;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;
@@ -826,7 +826,7 @@
 134646497;105000;51;3;;;0;;Appartamento;45.52995;9.17153;Via pesaro 9 ;Bruzzano;Milano;0;
 134248551;102000;70;2;;2;0;;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;b
 134646361;37920;30;1;;;0;;Appartamento;45.44249;9.17617;Via Ascanio Sforza 73;Pezzotti - Meda;Milano;0;
-126262127;88000;23;1;;T;0;;Monolocale;45.43650;9.23180;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
+126262127;88000;23;1;;T;0;;Monolocale;45.4365;9.2318;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
 128657482;120000;170;;;S;1;B;Appartamento;45.44160;9.15180;Via Ettore Ponti;Barona;Milano;0;
 134494543;105000;51;2;;T;0;;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;
 134929803;50000;19;;;S;1;O;Appartamento;45.48910;9.14793;Via TRAIANO;Portello - Parco Vittoria;Milano;0;
@@ -862,9 +862,9 @@
 133256670;170000;45;1;1;R;1;O;Monolocale;45.45880;9.10050;Via Cividale del Friuli;Baggio;Milano;0;bcai
 133802608;185000;48;2;1;3;1;R;Bilocale;45.43870;9.21617;Via Riva di Trento 1;Corvetto;Milano;0;
 132541846;189000;55;2;1;3;0;B;Bilocale;45.50660;9.23560;Via Federico Jarach;Ponte Nuovo;Milano;0;bd
-132342568;183000;51;2;1;3;1;N;Bilocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+132342568;183000;51;2;1;3;1;N;Bilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
 133313478;190000;46;1 - 3;;;0;;Progetto;45.45430;9.24350;Via Gianfranco Malipiero, 6;Viale Ungheria - Mecenate;Milano;0;
-132343404;193000;52;2;1;3;1;N;Bilocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+132343404;193000;52;2;1;3;1;N;Bilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
 134936427;190000;50;2;1;9;1;B;Bilocale;45.42520;9.21100;Via Paolo Mezzanotte;Vigentino - Fatima;Milano;0;btcd
 131155650;169000;40;1;1;S;0;N;Monolocale;45.46430;9.23300;Via Negroli 26//2;Argonne - Corsica;Milano;0;i
 132342416;188000;89;3;1;2;0;B;Trilocale;45.51840;9.13146;Via val trompia;Roserio;Milano;0;bc
@@ -873,7 +873,7 @@
 127716630;195000;50;2;1;2;1;B;Bilocale;45.50700;9.24000;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;0;bd
 134630907;165000;38;2;1;4;1;B;Bilocale;45.51550;9.19250;Via Paulucci di Calbioli Fulcieri;Niguarda;Milano;0;bc
 134813573;180000;56;2;1;3;0;O;Bilocale;45.50470;9.17540;Via Giuseppe Tartini;Dergano;Milano;0;i
-133626808;190000;60;2;1;8;1;O;Bilocale;45.40380;9.17161;Via costantino baroni;Gratosoglio;Milano;0;b
+133626808;190000;60;2;1;8;1;O;Bilocale;45.4038;9.17161;Via costantino baroni;Gratosoglio;Milano;0;b
 130869594;170000;35;2;1;5;1;R;Bilocale;45.46250;9.22950;Viale Corsica;Argonne - Corsica;Milano;0;ai
 133603406;180000;42;1;1;3;1;B;Monolocale;45.46760;9.13570;Via Rembrandt;San Siro;Milano;0;bci
 130986486;189000;50;2;1;2;0;B;Bilocale;45.51250;9.22440;Via Giuseppe Pelitti 1;Precotto;Milano;0;cd
@@ -945,9 +945,9 @@
 134046003;159000;50;2;1;1;0;B;Bilocale;45.46550;9.09087;Via Terni;Baggio;Milano;0;c
 133368186;185000;20;1;1;1;1;B;Monolocale;45.46890;9.15280;Via Raffaello Sanzio;Amendola - Buonarroti;Milano;0;ai
 134266999;189000;27;1;1;8;1;O;Monolocale;45.45230;9.22020;Piazza Insubria;Martini - Insubria;Milano;0;bai
-134128457;165000;39;1;1;7;1;O;Monolocale;45.41590;9.17680;Via Ettore Bugatti;Gratosoglio;Milano;0;d
+134128457;165000;39;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
 133243860;185000;20;1;1;6;1;B;Mansarda;45.47620;9.20370;Via Lecco;Porta Venezia;Milano;0;ai
-133287956;190000;65;2;1;T;0;O;Bilocale;45.41540;9.16360;Via della Chiesa Rossa;Gratosoglio;Milano;0;i
+133287956;190000;65;2;1;T;0;O;Bilocale;45.4154;9.1636;Via della Chiesa Rossa;Gratosoglio;Milano;0;
 133629392;185000;57;2;1;1;0;R;Bilocale;45.51300;9.19110;Via Imperatore Graziano;Niguarda;Milano;0;bc
 129176120;190000;50;3;1;R;1;O;Trilocale;45.49480;9.22880;Via Padova;Parco Trotter;Milano;0;a
 134822265;180000;25;1;1;5;1;B;Monolocale;45.48130;9.17600;Via Paolo Sarpi;Paolo Sarpi;Milano;0;ai
@@ -997,7 +997,7 @@
 132405954;190000;31;1;1;3;1;B;Monolocale;45.48740;9.16719;via Cenisio;Cenisio;Milano;0;b
 132812914;169000;45;1;1;1;0;O;Monolocale;45.50250;9.12870;Via Garegnano;Musocco;Milano;0;bci
 130494260;175000;40;1;1;T;0;R;Monolocale;45.45090;9.22470;Piazzale Vincenzo Cuoco;Molise - Cuoco;Milano;0;bai
-134663185;170000;63;2;1;1;1;B;Bilocale;45.41850;9.17860;Via Fratelli Fraschini;Gratosoglio;Milano;0;ta
+134663185;170000;63;2;1;1;1;B;Bilocale;45.4185;9.1786;Via Fratelli Fraschini;Gratosoglio;Milano;0;ta
 133143842;190000;46;2;1;5;1;B;Bilocale;45.50640;9.16820;Via Don Giovanni Minzoni;Bovisa;Milano;0;a
 134744009;190000;67;2;1;S;0;B;Bilocale;45.50920;9.22540;Via Aristotele;Precotto;Milano;0;bi
 134902173;189000;45;1;1;3;1;B;Monolocale;45.43800;9.15190;Via Benevento;Tre Castelli - Faenza;Milano;0;b
@@ -1016,7 +1016,7 @@
 132161328;180000;54;2;1;1;1;R;Bilocale;45.49320;9.15593;viale Monteceneri, 14;Ghisolfa - Mac Mahon;Milano;0;bc
 125069411;165000;31;1;1;5;0;B;Monolocale;45.45880;9.24110;Via Maria Montessori 14;Quartiere Forlanini;Milano;0;
 127073237;169000;40;2;1;T;0;O;Loft;45.49740;9.23240;Via Anacreonte;Cimiano;Milano;0;i
-134345281;190000;45;2;1;5;0;O;Bilocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
+134345281;190000;45;2;1;5;0;O;Bilocale;45.4185;9.1784;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
 131445710;985000;135;4;2;2;1;B;Quadrilocale;45.4536;9.2032;Viale Monte Nero;Porta Romana - Medaglie d'Oro;Milano;0;bcd
 134603677;1295000;135;4;2;4;1;B;Quadrilocale;45.4516;9.2053;Via Bernardino Corio;Porta Romana - Medaglie d'Oro;Milano;0;tad
 119937180;1799000;135;3 - 4;;;0;;Progetto;45.4521;9.2032;Piazzale Medaglie d'Oro, 3;Porta Romana - Medaglie d'Oro;Milano;0;
@@ -1309,16 +1309,16 @@
 133432738;830000;142;3;2;R;1;B;Trilocale;45.4521;9.1867;Piazzale di Porta Lodovica;Ticinese;Milano;0;c
 134068593;449900;80;3;1;R;1;O;Trilocale;45.4513;9.1892;Viale Bligny;Bocconi;Milano;0;cad
 134930233;730000;104;3;1;R;1;O;Trilocale;45.4482;9.1887;Via Roberto Sarfatti;Bocconi;Milano;0;bcd
-133513448;685000;90;4;2;R;1;O;Quadrilocale;45.4515;9.1863;Via Pietro Teulié;Corso San Gottardo;Milano;0;bcad
+133513448;685000;90;4;2;R;1;O;Quadrilocale;45.4515;9.1863;Via Pietro Teulié;Corso San Gottardo;Milano;0;bca
 134932391;495000;75;3;1;3;1;O;Trilocale;45.4463;9.191;Viale Toscana;Bocconi;Milano;0;tcad
 129841826;670000;84;3;2;5;1;O;Trilocale;45.4523;9.1927;Via Luigi Anelli;Quadronno - Crocetta;Milano;0;ai
 129264720;895000;110;3;2;3;1;B;Trilocale;45.4518;9.1936;Viale Beatrice d'Este;Bocconi;Milano;0;bcad
 134047961;375000;50;2;1;R;1;B;Bilocale;45.45;9.1923;Via Salasco;Bocconi;Milano;0;ai
 129787224;377000;101;1;1;S - T;0;R;Open space;45.4484;9.1951;Via Giovanni Bellezza;Bocconi;Milano;0;i
-129920048;1250000;160;4;2;6;1;;Attico;45.4521;9.18689;porta Lodovica;Bocconi;Milano;0;btcd
+129920048;1250000;160;4;2;6;1;;Attico;45.4521;9.18689;porta Lodovica;Bocconi;Milano;0;btc
 134603735;2300000;217;5;3;4;1;O;Attico;45.4522;9.189;Viale Beatrice d'Este;Quadronno - Crocetta;Milano;0;btcd
 133797564;1500000;135;5;2;4;1;O;Appartamento;45.4523;9.1957;Milano, Milano, Lombardia,;Quadronno - Crocetta;Milano;0;tcd
-134664415;2200000;240;5;3;5;1;B;Appartamento;45.4526;9.1864;Corso Italia , 68;Ticinese;Milano;0;bt
+134664415;2200000;240;5;3;5;1;B;Appartamento;45.4526;9.1864;Corso Italia , 68;Ticinese;Milano;0;bta
 133760370;1020000;130;4;2;4;1;O;Quadrilocale;45.4495;9.1862;Via Gian Carlo Castelbarco;Bocconi;Milano;0;bcd
 134468519;818000;118;3;2;2;1;B;Trilocale;45.4522;9.1945;Via Alfredo Oriani;Quadronno - Crocetta;Milano;0;bcd
 134851967;2300000;190;5;3;4;1;;Attico;45.4523;9.1897;Via Santa Lucia;Quadronno - Crocetta;Milano;0;btcd
@@ -1344,7 +1344,7 @@
 134626443;950000;115;3;1;2;1;O;Trilocale;45.4509;9.1918;Viale Bligny;Bocconi;Milano;0;btcd
 134814059;950000;115;3;1;2;1;O;Trilocale;45.4509;9.1918;Viale Bligny;Bocconi;Milano;0;btcd
 133330286;495000;73;2;1;T;1;O;Loft;45.451;9.1936;Viale Bligny;Bocconi;Milano;0;cad
-133789624;450000;55;2;1;2;0;O;Bilocale;45.4521;9.1867;Piazzale di Porta Lodovica;Ticinese;Milano;0;d
+133789624;450000;55;2;1;2;0;O;Bilocale;45.4521;9.1867;Piazzale di Porta Lodovica;Ticinese;Milano;0;a
 133149634;1190000;145;4;2;1;1;O;Quadrilocale;45.4482;9.1869;Via Roberto Sarfatti;Bocconi;Milano;0;bcd
 133433268;395000;53;2;1;1;1;B;Bilocale;45.45;9.1914;Via Salasco;Bocconi;Milano;0;bai
 126304233;170000;28;1;1;5;0;B;Monolocale;45.4511;9.1946;Viale Bligny;Bocconi;Milano;0;ba
@@ -1451,7 +1451,7 @@
 134044843;1980000;181;5+;3;1;1;O;Appartamento;45.4569;9.1942;Corso di Porta Romana;Quadronno - Crocetta;Milano;0;btcdg
 133515824;820000;135;4;1;R;1;O;Quadrilocale;45.4531;9.1913;Piazza Arnoldo Mondadori;Quadronno - Crocetta;Milano;0;cd
 127145009;730000;89;3;2;R;1;N;Trilocale;45.4565;9.1986;Via Alfonso Lamarmora;Quadronno - Crocetta;Milano;0;i
-132332338;2600000;290;5+;3;2;1;B;Appartamento;45.4528;9.18676;Corso Italia, 68;Ticinese;Milano;0;cd
+132332338;2600000;290;5+;3;2;1;B;Appartamento;45.4528;9.18676;Corso Italia, 68;Ticinese;Milano;0;c
 133725382;1350000;100;4;1;2;1;O;Quadrilocale;45.455;9.1976;Corso di Porta Romana;Quadronno - Crocetta;Milano;0;bcd
 125842437;1040000;150;5;2;1;1;B;Appartamento;45.4534;9.1978;Via dei Pellegrini;Quadronno - Crocetta;Milano;0;bci
 134415003;1350000;167;4;2;S, 3;1;B;Quadrilocale;45.4547;9.1891;Via Giuseppe Vigoni;Quadronno - Crocetta;Milano;0;bcd
@@ -1492,13 +1492,13 @@
 132011664;1590000;198;5+;3;S, 5;1;B;Appartamento;45.4563;9.1889;Via Santa Sofia;Quadronno - Crocetta;Milano;0;bcd
 123416279;2980000;188;3;2;6;1;O;Attico;45.455;9.1976;Corso di Porta Romana;Quadronno - Crocetta;Milano;0;btcad
 133514546;2290000;195;5+;3+;7;1;O;Attico;45.4534;9.1927;Via Luigi Anelli;Quadronno - Crocetta;Milano;0;btd
-134506331;1119782;93;3;2;R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;d
-134506337;958611;130;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;
-134506343;1050861;135;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;d
-134506341;863395;118;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;d
-134506333;981798;135;4;1;S, R;1;N;Quadrilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;
+134506331;1119782;93;3;2;R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
+134506337;958611;130;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
+134506343;1050861;135;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
+134506341;863395;118;3;1;S, R;1;N;Trilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
+134506333;981798;135;4;1;S, R;1;N;Quadrilocale;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
 134934019;378000;35;2;1;4;1;O;Bilocale;45.455;9.1976;Corso di Porta Romana;Quadronno - Crocetta;Milano;0;cai
-134506329;1419139;169;5;2;S, R;1;N;Appartamento;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;d
+134506329;1419139;169;5;2;S, R;1;N;Appartamento;45.4527;9.1864;Corso Italia;Ticinese;Milano;0;a
 131914868;378000;35;2;1;4;1;O;Bilocale;45.455;9.2004;Via Orti;Quadronno - Crocetta;Milano;0;cai
 133517438;1130000;118;4;2;2;1;R;Quadrilocale;45.458;9.194;Via Francesco Sforza;Quadronno - Crocetta;Milano;0;bci
 134829987;1031250;164;5+;;7;1;B;Appartamento;45.45333099;9.19307995;Via Luigi Anelli;Quadronno - Crocetta;Milano;0;btc
@@ -1565,7 +1565,7 @@
 132082930;2300000;240;5+;3+;3;0;;Appartamento;45.455;9.1976;Corso di Porta Romana;Quadronno - Crocetta;Milano;0;btc
 134851147;1031250;208;2;;;1;B;Appartamento;45.45337677;9.19315147;Via Luigi Anelli, 7;Quadronno - Crocetta;Milano;0;
 134660969;1031250;208;5+;;7;1;B;Appartamento;45.45338058;9.19315147;Via LUIGI ANELLI, 7;Quadronno - Crocetta;Milano;0;btc
-131281542;445000;52;2;1;R;1;O;Appartamento;45.45463943;9.18686008;Corso Italia;Ticinese;Milano;1;
+131281542;445000;52;2;1;R;1;O;Appartamento;45.45463943;9.18686008;Corso Italia;Ticinese;Milano;1;a
 129824394;550000;130;4;2;4;1;B;Quadrilocale;45.429;9.2028;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;bcd
 134910719;211000;51;2;1;2;1;O;Bilocale;45.4223;9.2016;Via Giovanni Battista Ramusio;Vigentino - Fatima;Milano;0;c
 133722188;287000;57;2 - 3;;;0;;Progetto;45.4342;9.1989;Via Luigi Alamanni, 16/2;Vigentino - Fatima;Milano;0;
@@ -2492,11 +2492,11 @@
 119523691;228000;50;2;1;2;1;O;Bilocale;45.4371;9.2115;Via Cassano D'Adda;Corvetto;Milano;0;bc
 134828851;339000;80;4;2;5;0;O;Quadrilocale;45.4396;9.2134;Via Gardone;Corvetto;Milano;0;bad
 128327556;300000;80;3;1;1;1;B;Trilocale;45.4364;9.21252;Via Marco D'Agrate;Corvetto;Milano;0;b
-116301101;199000;65;3;1;R;1;B;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;bcad
+116301101;199000;65;3;1;R;1;B;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;bca
 134632951;260000;46;2;1;2;1;O;Bilocale;45.4386;9.2163;Via Bessarione;Corvetto;Milano;0;bci
 127768728;388000;75;3;1;4;1;O;Trilocale;45.4368;9.2138;Via Marco D'Agrate;Corvetto;Milano;0;ba
 123034245;328000;110;4;1;4;0;B;Quadrilocale;45.4364;9.2268;Via Giovanni Montemartini;Corvetto;Milano;0;bcd
-133341540;229000;80;3;1;2;0;B;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;btcad
+133341540;229000;80;3;1;2;0;B;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;btca
 132194736;419000;100;3;2;1;1;O;Trilocale;45.4356;9.2182;SAN DIONIGI;Corvetto;Milano;0;bcdg
 130855218;430000;97;3;2;4 - 5;1;O;Trilocale;45.4411;9.2254;Via Carlo Boncompagni;Corvetto;Milano;0;d
 126202691;355000;95;4;2;3;0;O;Quadrilocale;45.4396;9.21344;Via Gardone;Corvetto;Milano;0;ba
@@ -2565,7 +2565,7 @@
 134824015;250000;45;2;1;5;1;O;Bilocale;45.439;9.2269;Via Carlo Marochetti;Corvetto;Milano;0;bcai
 133008252;280000;72;3;1;3;1;O;Trilocale;45.4351;9.2194;Via Ravenna;Corvetto;Milano;0;bca
 128705788;375000;98;3;1;1;1;B;Trilocale;45.4398;9.2242;Piazzale Luigi Emanuele Corvetto;Corvetto;Milano;0;cd
-132180830;235000;85;3;1;4;0;O;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;bcd
+132180830;235000;85;3;1;4;0;O;Trilocale;45.433;9.2247;Viale Omero;Corvetto;Milano;0;bc
 130432518;185000;67;2;1;4;0;B;Bilocale;45.438;9.2166;Via Bessarione;Corvetto;Milano;0;c
 132029554;630000;110;3;2;T;1;O;Trilocale;45.4423;9.2216;Via Sebastiano Serlio;Corvetto;Milano;0;c
 132240130;158000;29;1;1;6;1;B;Monolocale;45.4358;9.2131;Via Marco D'Agrate;Corvetto;Milano;0;ba
@@ -4163,7 +4163,7 @@
 113226301;875000;122;4;2;5;1;O;Quadrilocale;45.4558;9.1724;Piazzale Antonio Cantore;Navigli - Darsena;Milano;0;bd
 131520748;349000;63;2;1;3;1;R;Bilocale;45.4435;9.1753;Viale Liguria;Famagosta;Milano;0;bcd
 125781269;445000;90;2;1;;0;R;Bilocale;45.4475;9.16318;Via Eugenio Villoresi;Navigli - Darsena;Milano;0;bt
-134373785;298000;45;2;1;6;1;;Bilocale;45.4547;9.1755;Viale Gabriele D'Annunzio 7;Corso Genova;Milano;0;i
+134373785;298000;45;2;1;6;1;;Bilocale;45.4547;9.1755;Viale Gabriele D'Annunzio 7;Corso Genova;Milano;0;
 128340486;495000;53;3;1;1;1;O;Trilocale;45.456;9.1738;PIAZZALE CANTORE;Corso Genova;Milano;0;
 132437008;420000;76;2;1;4;0;B;Bilocale;45.4524;9.17018;via Casale;Navigli - Darsena;Milano;0;bi
 128836112;560000;140;4;2;4;1;R;Quadrilocale;45.445;9.17666;via Ascanio Sforza;Ascanio Sforza;Milano;0;bcd
@@ -4431,7 +4431,7 @@
 128742958;349000;65;2;1;1;1;;Bilocale;45.4474;9.1632;Via Eugenio Villoresi;Navigli - Darsena;Milano;0;bai
 133512474;445000;55;2;1;5;1;O;Bilocale;45.4496;9.1776;Via Cardinale Ascanio Sforza;Ascanio Sforza;Milano;0;bci
 133509310;495000;65;2;1;5;1;N;Bilocale;45.4496;9.1776;Via Cardinale Ascanio Sforza;Ascanio Sforza;Milano;0;bci
-134910787;360000;70;2;1;R;0;B;Bilocale;45.4573;9.17149;Viale Papiniano;Corso Genova;Milano;0;i
+134910787;360000;70;2;1;R;0;B;Bilocale;45.4573;9.17149;Viale Papiniano;Corso Genova;Milano;0;
 134610461;330000;45;2;1;2;1;B;Bilocale;45.454;9.172;Via Alessandria;Navigli - Darsena;Milano;0;ad
 121118562;389000;90;3;1;5;1;B;Trilocale;45.4447;9.1673;Viale Romolo;Navigli - Darsena;Milano;0;bcadg
 133283116;420000;85;3;1;2;1;B;Trilocale;45.4492;9.163;Ripa di Porta Ticinese;Navigli - Darsena;Milano;0;bcad
@@ -4478,11 +4478,11 @@
 114568861;5000000;500;5+;3+;3;0;;Palazzo - Edificio;45.45153046;9.17444992;Ripa di Porta Ticinese;Navigli - Darsena;Milano;1;b
 131910506;250000;50;;;2;0;;Appartamento;45.44763184;9.15791035;Viale Cassala;Barona;Milano;1;
 134329393;950000;140;4;2;3;1;O;Quadrilocale;45.4467;9.18132;Via Tantardini;Corso San Gottardo;Milano;0;bcd
-134394367;320000;65;2;1;1;0;R;Bilocale;45.4525;9.1812;Piazza 24 Maggio;Ticinese;Milano;0;btcd
+134394367;320000;65;2;1;1;0;R;Bilocale;45.4525;9.1812;Piazza 24 Maggio;Ticinese;Milano;0;btc
 133236198;680000;94;3;1;1;1;O;Trilocale;45.4494;9.18;Corso San Gottardo;Corso San Gottardo;Milano;0;c
 134660371;470000;85;2;1;1;0;B;Bilocale;45.4511;9.1796;Corso San Gottardo;Corso San Gottardo;Milano;0;bad
 132190164;1100000;227;4;2;T;0;B;Quadrilocale;45.4506;9.1798;Corso San Gottardo;Ascanio Sforza;Milano;0;
-130914522;290000;70;2;1;2;0;R;Bilocale;45.452;9.1837;Viale Col di Lana;Corso San Gottardo;Milano;0;bd
+130914522;290000;70;2;1;2;0;R;Bilocale;45.452;9.1837;Viale Col di Lana;Corso San Gottardo;Milano;0;b
 134902883;530000;89;2;1;2 - 3;1;O;Bilocale;45.449;9.1812;Via Gentilino;Corso San Gottardo;Milano;0;bai
 131540326;698000;100;3;2;2;1;B;Trilocale;45.4498;9.1797;Corso San Gottardo;Ascanio Sforza;Milano;0;bcd
 132344060;890000;140;5;2;2;0;O;Appartamento;45.4464;9.181;via Tantardini;Corso San Gottardo;Milano;0;bcd
@@ -4501,29 +4501,29 @@
 134719845;270000;42;1;1;4;1;B;Monolocale;45.452;9.183;Viale Col Di Lana, 6 A;Corso San Gottardo;Milano;0;b
 134125169;335000;72;2;1;T, 1;0;B;Bilocale;45.447;9.1803;Via Francesco Brioschi;Corso San Gottardo;Milano;0;tai
 134631899;285000;50;2;;1;1;;Bilocale;45.4507;9.182;Via Pietro Custodi;Corso San Gottardo;Milano;0;bca
-134389651;575000;84;3;1;T;0;O;Trilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;cad
+134389651;575000;84;3;1;T;0;O;Trilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;ca
 132030816;365000;67;3;1;S;0;O;Trilocale;45.451;9.1856;Via Col del Rosso;Corso San Gottardo;Milano;0;ai
 134390885;375000;60;2;1;1;1;O;Bilocale;45.4523;9.1854;Viale Gian Galeazzo;Ticinese;Milano;0;a
 133783298;1100000;142;4;2;4;1;B;Quadrilocale;45.4448;9.17906;Via Giuseppe Meda, 14;Ascanio Sforza;Milano;0;bcd
-133887032;185000;30;1;1;5;0;O;Monolocale;45.452;9.1837;Viale Col di Lana;Corso San Gottardo;Milano;0;ai
-134834193;209000;35;1;1;2;1;R;Monolocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;cd
+133887032;185000;30;1;1;5;0;O;Monolocale;45.452;9.1837;Viale Col di Lana;Corso San Gottardo;Milano;0;a
+134834193;209000;35;1;1;2;1;R;Monolocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;c
 128634664;230000;30;1;1;T;0;O;Monolocale;45.446;9.1788;Via Evangelista Torricelli;Ascanio Sforza;Milano;0;ai
-134669625;259000;40;1;1;3;1;R;Monolocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;ad
+134669625;259000;40;1;1;3;1;R;Monolocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;a
 130238484;515000;60;3;1;8;1;O;Trilocale;45.4491;9.1811;Via Gentilino;Corso San Gottardo;Milano;0;btai
-133382082;339000;48;2;1;2;0;B;Bilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;cad
+133382082;339000;48;2;1;2;0;B;Bilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;ca
 129025112;395000;47;2;1;3;1;B;Bilocale;45.4495;9.1797;Corso S. Gottardo;Ascanio Sforza;Milano;0;baig
 134631983;230000;60;2;1;T;0;R;Bilocale;45.4505;9.1798;Corso San Gottardo;Ascanio Sforza;Milano;0;i
-133469804;339000;48;2;1;2;1;B;Bilocale;45.4521;9.1835;Viale Col di Lana;Ticinese;Milano;0;cai
-132079124;359000;55;2;1;5;1;O;Bilocale;45.4519;9.183;Viale Col di Lana;Corso San Gottardo;Milano;0;bad
+133469804;339000;48;2;1;2;1;B;Bilocale;45.4521;9.1835;Viale Col di Lana;Ticinese;Milano;0;ca
+132079124;359000;55;2;1;5;1;O;Bilocale;45.4519;9.183;Viale Col di Lana;Corso San Gottardo;Milano;0;ba
 127401511;950000;133;3;2;4 - 5;0;B;Trilocale;45.4462;9.182;Via Balilla;Corso San Gottardo;Milano;0;tad
 129126066;1890000;243;5+;3;4;1;B;Appartamento;45.4506;9.1853;Via Col Moschin;Corso San Gottardo;Milano;0;btad
 127474654;380000;55;2;1;4;1;O;Bilocale;45.4457;9.1792;Via Giuseppe Meda, 6, 20136 Milano MI, Italia;Ascanio Sforza;Milano;0;ba
 131395586;310000;63;3;2;3;1;R;Trilocale;45.4478;9.1797;Corso San Gottardo;Corso San Gottardo;Milano;0;d
-134632541;230000;60;2;1;T;0;R;Bilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;i
-126457737;495000;70;3;1;1;1;O;Trilocale;45.4525;9.1822;Via Gian Galeazzo;Ticinese;Milano;0;b
+134632541;230000;60;2;1;T;0;R;Bilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;
+126457737;495000;70;3;1;1;1;O;Trilocale;45.4525;9.1822;Via Gian Galeazzo;Ticinese;Milano;0;ba
 133276768;320000;65;3;1;1;0;R;Trilocale;45.4459;9.1795;Via Giuseppe Meda;Corso San Gottardo;Milano;0;btcd
-126833841;530000;80;2;1;5;1;B;Bilocale;45.4521;9.184;Viale Col di Lana;Ticinese;Milano;0;bd
-126582411;690000;140;2;2;T;0;O;Bilocale;45.4521;9.1835;Viale Col di Lana;Ticinese;Milano;0;
+126833841;530000;80;2;1;5;1;B;Bilocale;45.4521;9.184;Viale Col di Lana;Ticinese;Milano;0;b
+126582411;690000;140;2;2;T;0;O;Bilocale;45.4521;9.1835;Viale Col di Lana;Ticinese;Milano;0;a
 132666750;560000;101;3;2;T;1;B;Loft;45.4512;9.1821;VIA PIETRO CUSTODI;Corso San Gottardo;Milano;0;tcai
 134627357;298000;40;2;1;3;1;O;Bilocale;45.449;9.18018;Via Gentilino 5;Corso San Gottardo;Milano;0;a
 134792675;315000;36;2;1;T;1;O;Loft;45.4513;9.1821;Via CUSTODI;Corso San Gottardo;Milano;0;ai
@@ -4531,12 +4531,12 @@
 133504470;800000;95;3;2;1;1;O;Trilocale;45.4495;9.1799;Corso San Gottardo;Corso San Gottardo;Milano;0;ca
 134394369;320000;65;2;1;1;0;R;Bilocale;45.4459;9.1795;Via Giuseppe Meda;Corso San Gottardo;Milano;0;btcd
 134275863;320000;65;2;1;1;0;R;Bilocale;45.4459;9.1795;Via Giuseppe Meda;Corso San Gottardo;Milano;0;btcd
-132410054;475000;50;2;1;2;1;O;Bilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;bad
+132410054;475000;50;2;1;2;1;O;Bilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;ba
 134857617;289000;43;2;1;T;0;B;Loft;45.4471;9.1806;Via Francesco Brioschi;Corso San Gottardo;Milano;0;ad
 134501867;590000;97;3;2;R;0;O;Trilocale;45.4497;9.1803;Via Giovanni Bertacchi;Corso San Gottardo;Milano;0;i
 133473648;319000;55;2;1;R;1;O;Bilocale;45.4476;9.1804;Via Odoardo Tabacchi;Corso San Gottardo;Milano;0;cad
 130117924;560000;90;3;1;R;0;B;Trilocale;45.4465;9.1803;Via Antonio Tantardini;Corso San Gottardo;Milano;0;cad
-129947948;475000;50;2;1;2;1;O;Bilocale;45.4519;9.183;Viale Col di Lana;Corso San Gottardo;Milano;0;bad
+129947948;475000;50;2;1;2;1;O;Bilocale;45.4519;9.183;Viale Col di Lana;Corso San Gottardo;Milano;0;ba
 130845492;230000;45;2;1;R;1;R;Bilocale;45.4472;9.1789;Via Pavia;Ascanio Sforza;Milano;0;i
 127334997;845000;130;3;2;1;0;O;Trilocale;45.4483;9.1798;Corso San Gottardo;Corso San Gottardo;Milano;0;ci
 134566969;309000;55;2;1;R;1;O;Bilocale;45.4455;9.1809;Via Francesco Brioschi;Corso San Gottardo;Milano;0;ad
@@ -4554,7 +4554,7 @@
 132029102;325000;89;2;1;S;0;O;Bilocale;45.4465;9.1807;Via Antonio Tantardini;Corso San Gottardo;Milano;0;a
 129231352;599000;90;3;1;2;1;B;Trilocale;45.4505;9.1821;Via Pietro Custodi;Corso San Gottardo;Milano;0;bd
 132029234;299000;85;2;1;S;0;O;Bilocale;45.4465;9.1807;Via Antonio Tantardini;Corso San Gottardo;Milano;0;a
-126191193;360000;43;2;1;R;1;O;Bilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;i
+126191193;360000;43;2;1;R;1;O;Bilocale;45.452;9.1825;Viale Col di Lana;Corso San Gottardo;Milano;0;
 134907435;570000;85;3;1;T;1;O;Loft;45.4513;9.1802;Corso San Gottardo;Corso San Gottardo;Milano;0;ai
 134600553;410000;75;3;1;1;0;B;Trilocale;45.4492;9.1798;Corso San Gottardo;Corso San Gottardo;Milano;0;d
 130447674;1100000;227;3;2;T;0;B;Loft;45.4492;9.1798;Corso San Gottardo;Corso San Gottardo;Milano;0;
@@ -4582,10 +4582,10 @@
 134052041;745000;122;3;2;2;1;R;Trilocale;45.449;9.1812;Via Gentilino;Corso San Gottardo;Milano;0;bcdg
 134508473;3000000;267;5+;3;2;1;O;Appartamento;45.4523;9.18413;Viale Gian Galeazzo;Ticinese;Milano;0;bc
 129357662;310000;55;2;1;R;1;O;Bilocale;45.4473;9.1798;Via Odoardo Tabacchi;Corso San Gottardo;Milano;0;i
-133831846;1020000;130;4;2;4;1;O;Quadrilocale;45.4523;9.1858;Viale Gian Galeazzo;Ticinese;Milano;0;bcd
+133831846;1020000;130;4;2;4;1;O;Quadrilocale;45.4523;9.1858;Viale Gian Galeazzo;Ticinese;Milano;0;bca
 134509185;375000;65;3;1;R;1;O;Trilocale;45.4477;9.18302;Via Tabacchi;Corso San Gottardo;Milano;0;
 133615626;390000;50;2;1;R;1;B;Bilocale;45.451;9.18517;Via Col Moschin No Number;Corso San Gottardo;Milano;0;
-133705284;599000;80;3;1;3;1;B;Trilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;bcad
+133705284;599000;80;3;1;3;1;B;Trilocale;45.4521;9.18;Piazza 24 Maggio;Ascanio Sforza;Milano;0;bca
 132297422;258000;40;2;1;T;0;N;Bilocale;45.4492;9.17975;corso San Gottardo;Ascanio Sforza;Milano;0;
 132647062;325000;62;2;;3;1;B;Appartamento;45.45223999;9.1832304;Viale Col di Lana;Ticinese;Milano;0;b
 133700752;325000;62;3;;3;1;;Appartamento;45.45223999;9.18312454;viale Col di Lana, 5;Ticinese;Milano;0;b
@@ -4613,7 +4613,7 @@
 134329333;385000;45;2;1;4;1;O;Bilocale;45.4444;9.17884;Via Giuseppe Meda;Ascanio Sforza;Milano;0;b
 133278338;320000;40;2;1;2;1;O;Bilocale;45.4457;9.1784;Via Evangelista Torricelli;Ascanio Sforza;Milano;0;ad
 125257335;270000;31;1;1;2;1;B;Monolocale;45.4457;9.1784;Via Evangelista Torricelli;Ascanio Sforza;Milano;0;ad
-132290206;695000;120;3;2;T;1;O;Trilocale;45.4525;9.1798;Piazza 24 Maggio;Ticinese;Milano;0;i
+132290206;695000;120;3;2;T;1;O;Trilocale;45.4525;9.1798;Piazza 24 Maggio;Ticinese;Milano;0;a
 132322046;375000;60;3;2;T;1;O;Trilocale;45.4475;9.1783;Via Pavia;Ascanio Sforza;Milano;0;i
 129888508;319000;50;2;1;7;1;B;Bilocale;45.4469;9.1779;Via Ettore Troilo;Ascanio Sforza;Milano;0;tca
 127295447;315000;65;2;1;T;0;R;Bilocale;45.4467;9.17879;via CONCHETTA 6;Ascanio Sforza;Milano;0;i
@@ -4624,385 +4624,385 @@
 134554347;445000;48;2;1;1;1;O;Bilocale;45.4516;9.17848;Via Scoglio Di Quarto;Ascanio Sforza;Milano;0;a
 111868257;820000;95;3;1;7;1;B;Appartamento;45.44586182;9.1775198;Via Conchetta;Ascanio Sforza;Milano;1;ba
 133697418;519000;91;3;1;1;1;O;Trilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;ca
-133757130;900000;105;3;3;T;0;B;Palazzo - Edificio;45.45489883;9.18029976;Corso Di Porta Ticinese;Ticinese;Milano;0;i
+133757130;900000;105;3;3;T;0;B;Palazzo - Edificio;45.45489883;9.18029976;Corso Di Porta Ticinese;Ticinese;Milano;0;
 133831416;450000;48;2;1;1;0;O;Bilocale;45.4569;9.1806;Corso Di Porta Ticinese;Ticinese;Milano;0;a
-133702970;470000;60;2;1;2;0;R;Bilocale;45.4534;9.18;Vicolo Calusca;Ticinese;Milano;0;tcai
-132400614;1890000;190;4;2;2;1;B;Quadrilocale;45.4552;9.18616;Cosimo del Fante;Ticinese;Milano;0;bc
-132603320;780000;105;3;1;2;1;B;Trilocale;45.4537;9.1788;Piazza 24 Maggio;Ticinese;Milano;0;bip
-134578133;490000;70;2;1;T;0;O;Bilocale;45.4543;9.18;Via Scaldasole;Ticinese;Milano;0;cd
-130524892;1130000;98;3;3;T;1;N;Trilocale;45.4565;9.1777;Via Conca del Naviglio;Corso Genova;Milano;0;tci
-132463614;1975000;193;5;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;bti
-132463014;2199000;217;4;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;ti
-132464098;1998000;208;4;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;bti
+133702970;470000;60;2;1;2;0;R;Bilocale;45.4534;9.18;Vicolo Calusca;Ticinese;Milano;0;tca
+132400614;1890000;190;4;2;2;1;B;Quadrilocale;45.4552;9.18616;Cosimo del Fante;Ticinese;Milano;0;bca
+132603320;780000;105;3;1;2;1;B;Trilocale;45.4537;9.1788;Piazza 24 Maggio;Ticinese;Milano;0;b
+134578133;490000;70;2;1;T;0;O;Bilocale;45.4543;9.18;Via Scaldasole;Ticinese;Milano;0;c
+130524892;1130000;98;3;3;T;1;N;Trilocale;45.4565;9.1777;Via Conca del Naviglio;Corso Genova;Milano;0;tc
+132463614;1975000;193;5;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;bta
+132463014;2199000;217;4;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;ta
+132464098;1998000;208;4;3;;0;N;Villa a schiera;45.4556;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;bta
 128320628;640000;80;2;;;0;;Progetto;45.4554;9.1831;Via Antonio Banfi, 3;Ticinese;Milano;0;
 126431437;1650000;175;5+;3;1;1;O;Appartamento;45.456;9.18173;Via Vetere;Ticinese;Milano;0;btca
-133498874;1590000;176;5;3;1;1;B;Appartamento;45.456;9.1792;Via Arena;Ticinese;Milano;0;bcd
+133498874;1590000;176;5;3;1;1;B;Appartamento;45.456;9.1792;Via Arena;Ticinese;Milano;0;bc
 131256866;649000;69;2;2;1;1;O;Bilocale;45.4555;9.1832;Via Antonio Banfi;Ticinese;Milano;0;a
-130125414;500000;56;2;1;T;1;O;Bilocale;45.4568;9.18;via Arena;Ticinese;Milano;0;c
-134901051;930000;110;3;2;1;1;O;Trilocale;45.4553;9.1805;Corso di Porta Ticinese;Ticinese;Milano;0;t
-133651962;530000;55;2;1;2;1;O;Bilocale;45.4573;9.1805;Via Edmondo De Amicis;Ticinese;Milano;0;btai
-134931027;495000;80;2;1;T;1;O;Bilocale;45.4543;9.1801;Via Scaldasole, 4;Ticinese;Milano;0;cad
-131598342;738000;90;2;2;R;1;N;Bilocale;45.4553;9.1833;Via Banfi, 3;Ticinese;Milano;0;d
-131598170;696000;87;2;2;R;1;N;Bilocale;45.4553;9.1833;Via Banfi, 3;Ticinese;Milano;0;i
-134632333;469000;70;2;1;5;1;B;Bilocale;45.4545;9.184;Via Calatafimi;Ticinese;Milano;0;bai
-130617456;479000;94;3;2;S;1;O;Trilocale;45.4546;9.1855;Via San Luca;Ticinese;Milano;0;d
-132720836;780000;115;3;1;2;0;R;Trilocale;45.4547;9.1798;Corso di Porta Ticinese;Ticinese;Milano;0;bi
-129945758;5400000;350;5+;3+;2;1;O;Appartamento;45.455;9.183;Via Santa Croce, 20/2;Ticinese;Milano;0;bcad
-132943216;960000;113;3;2;3;1;B;Trilocale;45.4562;9.1859;Via Molino delle Armi;Ticinese;Milano;0;bd
-130307488;500000;54;2;1;3;1;O;Bilocale;45.4583;9.1795;Via dei Fabbri;Carrobbio;Milano;0;bcad
-133480652;1590000;176;5;3;1;1;B;Appartamento;45.456;9.1792;Via Arena;Ticinese;Milano;0;bcd
-133542540;370000;60;2;1;T;0;O;Bilocale;45.4533;9.1828;Via Sambuco;Ticinese;Milano;0;ad
-114293625;355000;49;1;1;R;1;O;Monolocale;45.4553;9.1805;Corso di Porta Ticinese;Ticinese;Milano;0;bcai
-132728218;1200000;136;5;2;4;1;;Appartamento;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;bcd
-132364504;1390000;160;4;2;5;1;O;Quadrilocale;45.455;9.1765;Via Gaudenzio Ferrari;Corso Genova;Milano;0;t
-130454598;995000;150;4;2;1;1;B;Quadrilocale;45.454;9.178;Via Pietro Panzeri;Ticinese;Milano;0;bcd
-134598867;740000;86;2;2;3;0;O;Attico;45.4564;9.1807;Corso di Porta Ticinese;Ticinese;Milano;0;bcd
+130125414;500000;56;2;1;T;1;O;Bilocale;45.4568;9.18;via Arena;Ticinese;Milano;0;ca
+134901051;930000;110;3;2;1;1;O;Trilocale;45.4553;9.1805;Corso di Porta Ticinese;Ticinese;Milano;0;ta
+133651962;530000;55;2;1;2;1;O;Bilocale;45.4573;9.1805;Via Edmondo De Amicis;Ticinese;Milano;0;bta
+134931027;495000;80;2;1;T;1;O;Bilocale;45.4543;9.1801;Via Scaldasole, 4;Ticinese;Milano;0;ca
+131598342;738000;90;2;2;R;1;N;Bilocale;45.4553;9.1833;Via Banfi, 3;Ticinese;Milano;0;
+131598170;696000;87;2;2;R;1;N;Bilocale;45.4553;9.1833;Via Banfi, 3;Ticinese;Milano;0;
+134632333;469000;70;2;1;5;1;B;Bilocale;45.4545;9.184;Via Calatafimi;Ticinese;Milano;0;ba
+130617456;479000;94;3;2;S;1;O;Trilocale;45.4546;9.1855;Via San Luca;Ticinese;Milano;0;
+132720836;780000;115;3;1;2;0;R;Trilocale;45.4547;9.1798;Corso di Porta Ticinese;Ticinese;Milano;0;b
+129945758;5400000;350;5+;3+;2;1;O;Appartamento;45.455;9.183;Via Santa Croce, 20/2;Ticinese;Milano;0;bca
+132943216;960000;113;3;2;3;1;B;Trilocale;45.4562;9.1859;Via Molino delle Armi;Ticinese;Milano;0;b
+130307488;500000;54;2;1;3;1;O;Bilocale;45.4583;9.1795;Via dei Fabbri;Carrobbio;Milano;0;bca
+133480652;1590000;176;5;3;1;1;B;Appartamento;45.456;9.1792;Via Arena;Ticinese;Milano;0;bc
+133542540;370000;60;2;1;T;0;O;Bilocale;45.4533;9.1828;Via Sambuco;Ticinese;Milano;0;a
+114293625;355000;49;1;1;R;1;O;Monolocale;45.4553;9.1805;Corso di Porta Ticinese;Ticinese;Milano;0;bca
+132728218;1200000;136;5;2;4;1;;Appartamento;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;bc
+132364504;1390000;160;4;2;5;1;O;Quadrilocale;45.455;9.1765;Via Gaudenzio Ferrari;Corso Genova;Milano;0;ta
+130454598;995000;150;4;2;1;1;B;Quadrilocale;45.454;9.178;Via Pietro Panzeri;Ticinese;Milano;0;bc
+134598867;740000;86;2;2;3;0;O;Attico;45.4564;9.1807;Corso di Porta Ticinese;Ticinese;Milano;0;bca
 132299042;620000;64;2;1;1;1;N;Bilocale;45.4563;9.18135;via Vetere;Ticinese;Milano;0;ca
-130587008;1590000;198;5+;3;5;1;R;Appartamento;45.4549;9.1831;Via Santa Croce;Ticinese;Milano;0;bcd
-129491458;989000;145;4;2;1;1;R;Quadrilocale;45.4528;9.1799;Piazza 24 Maggio;Ticinese;Milano;0;bcdg
-134019455;480000;65;2;1;2;0;O;Bilocale;45.4532;9.1796;Piazza 24 Maggio;Ticinese;Milano;0;bcd
-134791347;3000000;189;5+;3;4;1;O;Attico;45.4547;9.1849;Via San Luca;Ticinese;Milano;0;btai
+130587008;1590000;198;5+;3;5;1;R;Appartamento;45.4549;9.1831;Via Santa Croce;Ticinese;Milano;0;bc
+129491458;989000;145;4;2;1;1;R;Quadrilocale;45.4528;9.1799;Piazza 24 Maggio;Ticinese;Milano;0;bc
+134019455;480000;65;2;1;2;0;O;Bilocale;45.4532;9.1796;Piazza 24 Maggio;Ticinese;Milano;0;bca
+134791347;3000000;189;5+;3;4;1;O;Attico;45.4547;9.1849;Via San Luca;Ticinese;Milano;0;bta
 133296798;795000;80;3;1;1;1;O;Appartamento;45.45619965;9.18587971;Via Molino delle Armi;Ticinese;Milano;1;b
-133635854;1850000;170;4;2;2;1;O;Quadrilocale;45.456;9.1772;Via Marco d'Oggiono;Corso Genova;Milano;0;bcd
-126088929;550000;111;4;2;T;1;O;Loft;45.4547;9.179;Via Scaldasole;Ticinese;Milano;0;i
-133899001;289000;35;1;1;1;0;B;Monolocale;45.4549;9.179;Via Scaldasole;Ticinese;Milano;0;bad
+133635854;1850000;170;4;2;2;1;O;Quadrilocale;45.456;9.1772;Via Marco d'Oggiono;Corso Genova;Milano;0;bca
+126088929;550000;111;4;2;T;1;O;Loft;45.4547;9.179;Via Scaldasole;Ticinese;Milano;0;
+133899001;289000;35;1;1;1;0;B;Monolocale;45.4549;9.179;Via Scaldasole;Ticinese;Milano;0;ba
 134598939;375000;60;2;1;1;1;B;Bilocale;45.4545;9.184;Via Calatafimi;Ticinese;Milano;0;a
-133089472;2400000;428;5;3;R;1;R;Appartamento;45.4534;9.1858;Via Marco Burigozzo;Ticinese;Milano;0;tcd
+133089472;2400000;428;5;3;R;1;R;Appartamento;45.4534;9.1858;Via Marco Burigozzo;Ticinese;Milano;0;tc
 129387020;720000;85;2;1;1;0;B;Bilocale;45.4559;9.1857;Via Molino Delle Armi;Ticinese;Milano;0;ca
-134417681;1950000;193;5;3;2;1;O;Appartamento;45.4571;9.1822;Via Molino delle Armi;Carrobbio;Milano;0;bdp
-134862975;479000;60;2;1;R;1;O;Bilocale;45.4584;9.1784;Via Edmondo De Amicis;Corso Genova;Milano;0;c
-134829189;259000;40;1;1;1;1;R;Monolocale;45.4552;9.1807;Corso di Porta Ticinese;Ticinese;Milano;0;ad
-134598587;575000;84;3;1;R;0;O;Trilocale;45.4545;9.184;Via Calatafimi;Ticinese;Milano;0;cai
+134417681;1950000;193;5;3;2;1;O;Appartamento;45.4571;9.1822;Via Molino delle Armi;Carrobbio;Milano;0;ba
+134862975;479000;60;2;1;R;1;O;Bilocale;45.4584;9.1784;Via Edmondo De Amicis;Corso Genova;Milano;0;ca
+134829189;259000;40;1;1;1;1;R;Monolocale;45.4552;9.1807;Corso di Porta Ticinese;Ticinese;Milano;0;a
+134598587;575000;84;3;1;R;0;O;Trilocale;45.4545;9.184;Via Calatafimi;Ticinese;Milano;0;ca
 130617118;359000;74;2;1;S;1;O;Bilocale;45.4546;9.1855;Via San Luca;Ticinese;Milano;0;
 134783247;2850000;275;5+;3;2;1;R;Appartamento;45.4552;9.18611;Via Cosimo del Fante;Ticinese;Milano;0;bc
-134572127;449000;45;2;1;2;1;B;Bilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;ad
-134592199;369000;50;2;1;1;1;B;Bilocale;45.456;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;cd
-132123502;520000;60;2;1;1;0;B;Bilocale;45.4565;9.1807;CORSO PORTA TICINESE;Ticinese;Milano;0;ai
-129430832;645000;90;3;1;2;0;B;Trilocale;45.4562;9.1857;Via Molino delle Armi;Ticinese;Milano;0;ci
+134572127;449000;45;2;1;2;1;B;Bilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;a
+134592199;369000;50;2;1;1;1;B;Bilocale;45.456;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;ca
+132123502;520000;60;2;1;1;0;B;Bilocale;45.4565;9.1807;CORSO PORTA TICINESE;Ticinese;Milano;0;a
+129430832;645000;90;3;1;2;0;B;Trilocale;45.4562;9.1857;Via Molino delle Armi;Ticinese;Milano;0;c
 128820536;1650000;175;5+;3;1;1;O;Appartamento;45.456;9.1817;Via Vetere;Ticinese;Milano;0;btca
-134261903;1049000;115;3;2;5;1;;Attico;45.457;9.1836;Via Fernanda Wittgens;Carrobbio;Milano;0;bcd
-133410788;799000;80;3;2;1;1;O;Trilocale;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;ti
-132937512;1870000;237;5;3;8;1;B;Attico;45.4528;9.1831;Viale Gian Galeazzo;Ticinese;Milano;0;btcd
-134464633;427000;70;2;1;T;0;N;Bilocale;45.4533;9.1824;Via Sambuco;Ticinese;Milano;0;d
-134265157;469000;50;2;1;1;1;B;Bilocale;45.4575;9.1817;Via Pioppette;Carrobbio;Milano;0;ai
-133312802;1390000;160;4;2;5;1;O;Attico;45.455;9.1765;Via Gaudenzio Ferrari;Corso Genova;Milano;0;t
-124116361;298000;37;2;1;3;1;R;Bilocale;45.4548;9.1763;Via Gaetano Ronzoni;Corso Genova;Milano;0;ci
-99886474;1190000;133;3;2;3 - 4;0;B;Trilocale;45.4568;9.1809;Corso di Porta Ticinese;Ticinese;Milano;0;btcd
-134669605;440000;130;3;2;3;1;B;Trilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;bai
-114813497;750000;80;2;2;5;1;B;Bilocale;45.4562;9.1862;Via Molino delle Armi;Ticinese;Milano;0;bci
-134411365;967000;102;3;2;1;1;O;Trilocale;45.4561;9.1778;Via Conca del Naviglio;Corso Genova;Milano;0;d
-134627549;449000;40;2;1;2;1;B;Bilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;d
-132166076;930000;120;3;2;1;1;O;Trilocale;45.4544;9.1793;Via Scaldasole;Ticinese;Milano;0;bcd
+134261903;1049000;115;3;2;5;1;;Attico;45.457;9.1836;Via Fernanda Wittgens;Carrobbio;Milano;0;bc
+133410788;799000;80;3;2;1;1;O;Trilocale;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;ta
+132937512;1870000;237;5;3;8;1;B;Attico;45.4528;9.1831;Viale Gian Galeazzo;Ticinese;Milano;0;btc
+134464633;427000;70;2;1;T;0;N;Bilocale;45.4533;9.1824;Via Sambuco;Ticinese;Milano;0;
+134265157;469000;50;2;1;1;1;B;Bilocale;45.4575;9.1817;Via Pioppette;Carrobbio;Milano;0;a
+133312802;1390000;160;4;2;5;1;O;Attico;45.455;9.1765;Via Gaudenzio Ferrari;Corso Genova;Milano;0;ta
+124116361;298000;37;2;1;3;1;R;Bilocale;45.4548;9.1763;Via Gaetano Ronzoni;Corso Genova;Milano;0;c
+99886474;1190000;133;3;2;3 - 4;0;B;Trilocale;45.4568;9.1809;Corso di Porta Ticinese;Ticinese;Milano;0;btca
+134669605;440000;130;3;2;3;1;B;Trilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;ba
+114813497;750000;80;2;2;5;1;B;Bilocale;45.4562;9.1862;Via Molino delle Armi;Ticinese;Milano;0;bca
+134411365;967000;102;3;2;1;1;O;Trilocale;45.4561;9.1778;Via Conca del Naviglio;Corso Genova;Milano;0;a
+134627549;449000;40;2;1;2;1;B;Bilocale;45.4564;9.1808;Corso di Porta Ticinese;Ticinese;Milano;0;a
+132166076;930000;120;3;2;1;1;O;Trilocale;45.4544;9.1793;Via Scaldasole;Ticinese;Milano;0;bc
 132111848;395000;60;2;1;15;0;O;Bilocale;45.4568;9.1809;Corso di Porta Ticinese;Ticinese;Milano;0;a
-129070256;500000;40;2;1;2;0;O;Bilocale;45.4561;9.1848;Via Vettabbia;Ticinese;Milano;0;tai
-132600464;560000;101;3;2;T;1;B;Trilocale;45.4528;9.1802;Piazza 24 Maggio;Ticinese;Milano;0;tai
+129070256;500000;40;2;1;2;0;O;Bilocale;45.4561;9.1848;Via Vettabbia;Ticinese;Milano;0;ta
+132600464;560000;101;3;2;T;1;B;Trilocale;45.4528;9.1802;Piazza 24 Maggio;Ticinese;Milano;0;ta
 134944475;1950000;272;5;3;4;1;B;Appartamento;45.4533;9.18278;Via Sambuco, 9;Ticinese;Milano;0;bt
 128186264;630000;70;2;1;2;1;O;Bilocale;45.4544;9.1804;Corso di Porta Ticinese;Ticinese;Milano;0;a
-128631282;500000;54;2;1;3;1;O;Bilocale;45.4581;9.1793;Via Edmondo De Amicis;Ticinese;Milano;0;bcad
-134788189;585000;70;3;1;2;0;B;Trilocale;45.4533;9.1833;Via Sambuco;Ticinese;Milano;0;bcd
-128140602;500000;56;2;1;3;1;O;Bilocale;45.4579;9.1803;Via Edmondo De Amicis;Carrobbio;Milano;0;bad
-123441785;318000;50;2;1;4;1;O;Attico;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;tai
+128631282;500000;54;2;1;3;1;O;Bilocale;45.4581;9.1793;Via Edmondo De Amicis;Ticinese;Milano;0;bca
+134788189;585000;70;3;1;2;0;B;Trilocale;45.4533;9.1833;Via Sambuco;Ticinese;Milano;0;bc
+128140602;500000;56;2;1;3;1;O;Bilocale;45.4579;9.1803;Via Edmondo De Amicis;Carrobbio;Milano;0;ba
+123441785;318000;50;2;1;4;1;O;Attico;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;ta
 131272278;680000;69;2;2;1;1;O;Bilocale;45.4555;9.1832;Via Antonio Banfi;Ticinese;Milano;0;a
-129429862;690000;83;3;1;2;1;O;Trilocale;45.4564;9.18509;Via Molino Delle Armi;Ticinese;Milano;0;b
-134734537;1150000;120;3;2;3;1;B;Trilocale;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;bcd
-127518382;298000;37;2;1;3;1;R;Bilocale;45.4548;9.1763;Via Gaetano Ronzoni;Corso Genova;Milano;0;ci
+129429862;690000;83;3;1;2;1;O;Trilocale;45.4564;9.18509;Via Molino Delle Armi;Ticinese;Milano;0;ba
+134734537;1150000;120;3;2;3;1;B;Trilocale;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;bca
+127518382;298000;37;2;1;3;1;R;Bilocale;45.4548;9.1763;Via Gaetano Ronzoni;Corso Genova;Milano;0;c
 132431348;500000;54;2;1;3;1;O;Bilocale;45.4583;9.1795;Via dei Fabbri;Carrobbio;Milano;0;bca
-124726731;500000;55;2;1;2;0;O;Bilocale;45.456;9.1844;Via Vettabbia;Ticinese;Milano;0;tad
-130817358;318000;43;2;1;4;0;O;Attico;45.4558;9.1806;Corso di Porta Ticinese;Ticinese;Milano;0;tai
-128032452;690000;85;3;1;1;0;O;Trilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;bi
-134930649;495000;80;3;1;T;1;O;Loft;45.4543;9.1801;Via Scaldasole, 4;Ticinese;Milano;0;bcad
-128985096;510000;43;2;1;1;0;O;Bilocale;45.456;9.1817;Via Vetere;Ticinese;Milano;0;ai
-131041018;318000;43;2;1;4;1;O;Attico;45.4558;9.1806;Corso di Porta Ticinese;Ticinese;Milano;0;tai
+124726731;500000;55;2;1;2;0;O;Bilocale;45.456;9.1844;Via Vettabbia;Ticinese;Milano;0;ta
+130817358;318000;43;2;1;4;0;O;Attico;45.4558;9.1806;Corso di Porta Ticinese;Ticinese;Milano;0;ta
+128032452;690000;85;3;1;1;0;O;Trilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;b
+134930649;495000;80;3;1;T;1;O;Loft;45.4543;9.1801;Via Scaldasole, 4;Ticinese;Milano;0;bca
+128985096;510000;43;2;1;1;0;O;Bilocale;45.456;9.1817;Via Vetere;Ticinese;Milano;0;a
+131041018;318000;43;2;1;4;1;O;Attico;45.4558;9.1806;Corso di Porta Ticinese;Ticinese;Milano;0;ta
 128427156;375000;45;2;1;1;1;B;Bilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;ca
-129950704;720000;84;2;1;1;0;B;Bilocale;45.4562;9.1857;Via Molino delle Armi;Ticinese;Milano;0;bi
-128881304;525000;50;2;1;2;0;O;Bilocale;45.4563;9.1855;Via Molino delle Armi;Ticinese;Milano;0;ai
+129950704;720000;84;2;1;1;0;B;Bilocale;45.4562;9.1857;Via Molino delle Armi;Ticinese;Milano;0;ba
+128881304;525000;50;2;1;2;0;O;Bilocale;45.4563;9.1855;Via Molino delle Armi;Ticinese;Milano;0;a
 129059420;845000;80;3;2;1;1;O;Trilocale;45.4563;9.1851;Via Molino delle Armi;Ticinese;Milano;0;ta
-116239875;700000;130;3;2;S, R, 1;0;O;Trilocale;45.4531;9.1789;Piazza 24 Maggio;Ticinese;Milano;0;ai
-126805313;449000;50;2;1;R;0;O;Bilocale;45.4531;9.1789;Piazza 24 Maggio;Ticinese;Milano;0;ai
+116239875;700000;130;3;2;S, R, 1;0;O;Trilocale;45.4531;9.1789;Piazza 24 Maggio;Ticinese;Milano;0;a
+126805313;449000;50;2;1;R;0;O;Bilocale;45.4531;9.1789;Piazza 24 Maggio;Ticinese;Milano;0;a
 110437089;438000;77;2;1;1;0;B;Open space;45.4568;9.1809;Corso di Porta Ticinese;Ticinese;Milano;0;
 133408174;690000;85;3;1;1;0;O;Trilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;b
-129044174;1895000;170;4;2;2;1;O;Quadrilocale;45.4568;9.1774;Via Conca del Naviglio;Corso Genova;Milano;0;bcd
-134818573;755000;93;3;1;3;1;B;Trilocale;45.4529;9.1821;Viale Col di Lana;Ticinese;Milano;0;bcd
-129636874;250000;40;2;1;T;1;O;Bilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;cai
-127364029;1950000;200;5;2;2;1;O;Appartamento;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;bd
-128931440;500000;40;2;1;2;0;O;Bilocale;45.4565;9.1849;via molino delle armi;Carrobbio;Milano;0;tad
-114961721;590000;78;2;1;7;1;B;Attico;45.4554;9.1789;Via Arena;Ticinese;Milano;0;bcd
+129044174;1895000;170;4;2;2;1;O;Quadrilocale;45.4568;9.1774;Via Conca del Naviglio;Corso Genova;Milano;0;bca
+134818573;755000;93;3;1;3;1;B;Trilocale;45.4529;9.1821;Viale Col di Lana;Ticinese;Milano;0;bc
+129636874;250000;40;2;1;T;1;O;Bilocale;45.4552;9.181;Corso di Porta Ticinese;Ticinese;Milano;0;ca
+127364029;1950000;200;5;2;2;1;O;Appartamento;45.4569;9.1831;Via Molino delle Armi;Carrobbio;Milano;0;b
+128931440;500000;40;2;1;2;0;O;Bilocale;45.4565;9.1849;via molino delle armi;Carrobbio;Milano;0;ta
+114961721;590000;78;2;1;7;1;B;Attico;45.4554;9.1789;Via Arena;Ticinese;Milano;0;bc
 127108445;760000;85;2;1;2;0;O;Bilocale;45.4564;9.18531;Via Molino Delle Armi;Ticinese;Milano;0;b
 123734201;735000;85;3;2;3;1;O;Appartamento;45.45335007;9.17745686;Viale Gabriele D'Annunzio;Ticinese;Milano;1;b
-71616510;2950000;310;5;3+;4;1;N;Attico;45.4582;9.1749;;Corso Genova;Milano;0;btc
-79856783;3700000;3;5+;3+;T;0;B;Palazzo - Edificio;45.4184;9.1907;;Gratosoglio;Milano;0;
-87241672;364000;45;2;1;4;1;O;Bilocale;45.4556;9.1747;;Corso Genova;Milano;0;a
-99538338;2950000;225;5;3+;4;1;O;Attico;45.4583;9.1749;;Corso Genova;Milano;0;bt
-107128973;275000;110;4;1;1;0;R;Quadrilocale;45.4303;9.2425;;Rogoredo;Milano;0;bca
-110183951;4000000;2;5+;3+;T;0;O;Palazzo - Edificio;45.4248;9.2520;;Rogoredo;Milano;0;b
-111020363;227000;23;1;1;4;1;O;Monolocale;45.4583;9.1712;;Corso Genova;Milano;0;a
-113350873;1700000;225;5;3;3;1;N;Appartamento;45.4582;9.1749;;Corso Genova;Milano;0;bc
-115743833;290000;100;4;2;9;1;O;Quadrilocale;45.4047;9.1703;;Gratosoglio;Milano;0;bca
-116243665;510000;143;4;2;2;1;O;Quadrilocale;45.4166;9.1802;;Gratosoglio;Milano;0;bta
-117267627;2950000;310;5+;3;4;1;N;Attico;45.4582;9.1749;;Corso Genova;Milano;0;bt
-118634133;520000;86;3;1;2;0;;Trilocale;45.4579;9.1706;;Corso Genova;Milano;0;ba
-118751255;378000;129;3;2;3;1;B;Trilocale;45.4150;9.1651;;Gratosoglio;Milano;0;btc
-121108016;550000;105;3;2;R;1;R;Appartamento;45.4557;9.1756;Via Gaudenzio Ferrari;Corso Genova;Milano;1;
-122335356;530000;180;5+;3;;0;B;Villa;45.4025;9.1788;;Gratosoglio;Milano;0;b
-122907728;444000;130;4;2;5;1;N;Quadrilocale;45.4149;9.1648;;Gratosoglio;Milano;0;tc
-122921314;470000;51;2;1;3;1;B;Bilocale;45.4569;9.1735;;Corso Genova;Milano;0;a
-123275817;1450000;20;;;;0;R;Casale;45.4056;9.2086;Via Giuseppe Ripamonti;Quintosole - Chiaravalle;Milano;1;
-123731403;269000;100;3;1;3;1;B;Trilocale;45.4173;9.1739;;Gratosoglio;Milano;0;bca
-123814355;170000;70;2;1;S-T;0;N;Bilocale;45.4085;9.1709;;Gratosoglio;Milano;0;c
-124107669;258000;83;2;1;4;1;O;Bilocale;45.4148;9.1653;;Gratosoglio;Milano;0;tc
-124164953;990000;150;3;2;T;1;B;Trilocale;45.4566;9.1760;;Corso Genova;Milano;0;t
-126011215;200000;50;2;1;2;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;a
-126226141;1570000;170;4;2;1;0;O;Quadrilocale;45.4559;9.1754;;Corso Genova;Milano;0;btca
-126421107;259000;100;3;1;4;1;B;Trilocale;45.4081;9.1731;;Gratosoglio;Milano;0;btca
-126452261;630000;130;3;2;4;1;O;Attico;45.4198;9.1773;;Gratosoglio;Milano;0;bt
-126673173;470000;108;3;2;S;1;O;Trilocale;45.4578;9.1706;;Corso Genova;Milano;0;a
-126854839;210000;83;3;1;8;1;O;Trilocale;45.4078;9.1708;;Gratosoglio;Milano;0;bc
-126989417;2100000;180;5;3;4;1;O;Appartamento;45.4604;9.1715;;San Vittore;Milano;0;btca
-127195145;450000;125;3;2;3;1;O;Trilocale;45.4171;9.1791;;Gratosoglio;Milano;0;ta
-127254163;475000;59;3;1;5;1;O;Trilocale;45.4551;9.1754;;Corso Genova;Milano;0;a
-127366261;309000;75;2;1;4;1;O;Bilocale;45.4146;9.1631;;Gratosoglio;Milano;0;tca
-127534482;620000;90;2;1;2;1;B;Bilocale;45.4567;9.1765;;Corso Genova;Milano;0;bca
-127621836;371000;110;3;2;4;1;N;Trilocale;45.4148;9.1653;;Gratosoglio;Milano;0;tc
-127677932;185000;75;3;1;5;1;B;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bca
-127731390;379000;78;3;2;1;1;O;Trilocale;45.4363;9.2338;;Rogoredo;Milano;0;bca
-127837084;522000;149;3;2;1;1;N;Trilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;b
-127837188;360000;100;2;1;1;1;N;Bilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;b
-127837200;308000;88;2;2;T;1;N;Bilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;
-127837252;368000;105;3;2;T;1;N;Trilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;
-128082122;165000;37;1;1;4;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-128243540;700000;80;5+;2;2;1;B;Appartamento;45.4564;9.1859;Via Molino delle Armi;Carrobbio;Milano;1;a
-128275520;198000;90;2;1;T;0;B;Bilocale;45.4014;9.1824;;Gratosoglio;Milano;0;
-128327088;330000;72;2;1;2;1;O;Bilocale;45.4368;9.2335;;Rogoredo;Milano;0;ta
-128458116;690000;100;3;1;3;1;;Trilocale;45.4567;9.1765;;Corso Genova;Milano;0;c
-128583128;720000;193;5;2;1;0;;Appartamento;45.4146;9.2331;Via Sant'Arialdo;Quintosole - Chiaravalle;Milano;1;c
-128632624;235000;105;4;2;4;1;O;Quadrilocale;45.4030;9.1697;;Gratosoglio;Milano;0;bc
-128639956;455000;120;4;2;T;1;;Quadrilocale;45.4026;9.1792;;Gratosoglio;Milano;0;c
-128674666;220000;130;4;2;5;0;B;Quadrilocale;45.4077;9.1707;;Gratosoglio;Milano;0;bc
-128682400;580000;158;4;3;2;1;B;Quadrilocale;45.4172;9.1797;;Gratosoglio;Milano;0;bt
-128789636;1400000;100;3;2;4;1;O;Trilocale;45.4587;9.1732;;Corso Genova;Milano;0;
-128818022;269000;107;2;1;1;1;O;Loft;45.4150;9.1769;;Gratosoglio;Milano;0;t
-128961802;445000;52;2;1;R;1;O;Appartamento;45.4547;9.1849;Via San Luca;Ticinese;Milano;1;a
-129008710;239000;58;2;1;R;1;O;Bilocale;45.4367;9.2342;;Rogoredo;Milano;0;ca
-129040408;945000;96;3;2;1;1;O;Trilocale;45.4598;9.1759;;Corso Genova;Milano;0;ca
-129056452;175000;40;1;1;1;1;O;Monolocale;45.4351;9.2350;;Rogoredo;Milano;0;ta
-129085238;360000;135;4;3;2;0;O;Quadrilocale;45.4034;9.1682;;Gratosoglio;Milano;0;
-129173762;520000;55;2;1;1;1;O;Bilocale;45.4588;9.1755;;Corso Genova;Milano;0;ca
-129175810;205000;61;2;1;2;1;O;Bilocale;45.4027;9.2034;;Quintosole - Chiaravalle;Milano;0;tca
-129177108;160000;60;2;1;2;0;B;Bilocale;45.4160;9.1700;;Gratosoglio;Milano;0;
-129211344;169000;65;2;1;9;1;O;Bilocale;45.4118;9.1724;;Gratosoglio;Milano;0;bca
-129360518;458000;120;4;2;T;1;B;Quadrilocale;45.4025;9.1797;;Gratosoglio;Milano;0;tc
-129371282;335000;84;3;2;1;1;O;Trilocale;45.4023;9.1790;;Gratosoglio;Milano;0;bc
-129568086;650000;65;2;1;1;1;O;Appartamento;45.4564;9.1735;Piazzale Antonio Cantore;Corso Genova;Milano;1;ba
-129645496;375000;100;3;2;T;1;N;Trilocale;45.4146;9.1631;;Gratosoglio;Milano;0;bta
-129646984;269000;100;3;1;8;1;B;Trilocale;45.4181;9.1746;;Gratosoglio;Milano;0;bca
-129658642;359000;127;4;2;R;1;B;Quadrilocale;45.4170;9.1733;;Gratosoglio;Milano;0;bc
-129752204;1553000;100;5;;;0;B;Terratetto;45.4056;9.2086;;Quintosole - Chiaravalle;Milano;0;ca
-129775378;195000;45;2;1;1;0;O;Bilocale;45.4006;9.2051;;Quintosole - Chiaravalle;Milano;0;bca
-129952344;229000;73;3;1;4;1;B;Trilocale;45.4266;9.2511;;Santa Giulia;Milano;0;ba
-130026802;319000;100;3;2;3;0;O;Trilocale;45.4353;9.2347;;Rogoredo;Milano;0;ba
-130116068;420000;124;3;2;S, 7;1;O;Attico;45.4167;9.1784;;Gratosoglio;Milano;0;ta
-130418906;210000;83;3;1;9;1;B;Trilocale;45.4052;9.1704;;Gratosoglio;Milano;0;bc
-130448408;430000;60;2;1;5;1;O;Bilocale;45.4577;9.1760;;Corso Genova;Milano;0;ca
-130495524;549000;88;3;1;1;0;B;Trilocale;45.4569;9.1740;;Corso Genova;Milano;0;bca
-130522420;420000;57;2;1;T;1;O;Loft;45.4559;9.1763;;Corso Genova;Milano;0;a
-130528512;550000;50;2;1;1;1;N;Bilocale;45.4592;9.1725;;Corso Genova;Milano;0;c
-130529018;800000;70;3;1;1;1;N;Trilocale;45.4592;9.1725;;Corso Genova;Milano;0;c
-130662518;215000;50;2;1;3;1;O;Bilocale;45.4351;9.2362;;Rogoredo;Milano;0;tc
-130672654;359000;80;2;1;3;1;O;Bilocale;45.4368;9.2333;;Rogoredo;Milano;0;bta
-130717140;960000;100;4;2;3;1;O;Quadrilocale;45.4601;9.1732;;Corso Genova;Milano;0;ba
-130921662;528000;65;2;1;T;1;O;Bilocale;45.4551;9.1754;;Corso Genova;Milano;0;ta
-131093000;4175000;390;5+;3+;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;
-131121858;315000;125;4;2;6;1;B;Quadrilocale;45.4179;9.1745;;Gratosoglio;Milano;0;bc
-131160152;305000;115;3;1;1;1;N;Trilocale;45.4018;9.2020;;Quintosole - Chiaravalle;Milano;0;btc
-131160154;415000;130;4;1;1;1;N;Quadrilocale;45.4018;9.2020;;Quintosole - Chiaravalle;Milano;0;btc
-131176712;197000;68;2;1;T;0;O;Bilocale;45.4154;9.1637;;Gratosoglio;Milano;0;tca
-131243666;730000;200;4;2;5;1;B;Attico;45.4183;9.1816;;Gratosoglio;Milano;0;t
-131244614;235000;110;4;2;4;1;O;Quadrilocale;45.4032;9.1696;;Gratosoglio;Milano;0;bca
-131253770;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;a
-131254738;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;t
-131256192;1395000;127;3;2;4;1;N;Attico;45.4569;9.1735;;Corso Genova;Milano;0;t
-131257842;2780000;241;4;3;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;t
-131273722;590000;80;3;2;T;0;N;Trilocale;45.4575;9.1729;;Corso Genova;Milano;0;a
-131405104;1070000;107;4;2;S, 6;1;O;Attico;45.4581;9.1771;;Corso Genova;Milano;0;bca
-131441436;595000;155;2;1;S;0;O;Loft;45.4596;9.1743;;Corso Genova;Milano;0;a
-131900936;420000;146;5+;2;7;1;B;Appartamento;45.4178;9.1782;Via Fratelli Fraschini;Gratosoglio;Milano;1;tca
-132012586;630000;73;3;1;2;1;O;Trilocale;45.4568;9.1748;;Corso Genova;Milano;0;bc
-132018596;260000;110;5;2;4;1;O;Appartamento;45.4085;9.1709;;Gratosoglio;Milano;0;btca
-132031416;235000;75;3;1;4;1;;Trilocale;45.4100;9.1739;;Gratosoglio;Milano;0;btc
-132068240;445000;150;4;2;4;1;B;Quadrilocale;45.4166;9.1774;;Gratosoglio;Milano;0;ta
-132073612;395000;50;2;1;T;1;;Bilocale;45.4590;9.1728;;Corso Genova;Milano;0;ca
-132165746;298000;33;2;1;6;1;O;Bilocale;45.4587;9.1707;;Corso Genova;Milano;0;a
-132168456;1300000;160;5;2;1;1;B;Appartamento;45.4577;9.1727;;Corso Genova;Milano;0;ca
-132168886;695000;101;3;1;3;1;R;Trilocale;45.4575;9.1744;;Corso Genova;Milano;0;bc
-132182570;499000;185;3;1;T;0;B;Loft;45.4149;9.1773;;Gratosoglio;Milano;0;
-132212042;387000;90;3;1;7;1;O;Trilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-132256354;2700000;257;5+;3+;5;1;B;Appartamento;45.4594;9.1771;;Sant'Ambrogio;Milano;0;btc
-132293796;349000;130;3;;;0;B;Trilocale;45.4170;9.2402;;Quintosole - Chiaravalle;Milano;0;
-132294760;378000;90;3;1;6;1;O;Trilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-132341130;200000;51;2;1;3;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
-132343742;315000;89;3;2;4;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
-132344164;210000;57;2;1;4;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
-132344292;300000;85;3;2;4;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
-132344440;460000;128;3;2;5;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
-132358778;578000;165;4;2;8;1;B;Quadrilocale;45.4161;9.1781;;Gratosoglio;Milano;0;bt
-132382426;235000;48;1;1;6;1;O;Monolocale;45.4553;9.1754;;Corso Genova;Milano;0;ca
-132397420;890000;105;4;1;4;1;O;Quadrilocale;45.4575;9.1758;;Corso Genova;Milano;0;bca
-132405200;749000;94;3;1;R;1;B;Trilocale;45.4571;9.1772;;Corso Genova;Milano;0;
-132413020;340000;150;4;2;5;1;R;Attico;45.4138;9.1730;;Gratosoglio;Milano;0;bta
-132417522;265000;52;2;1;6;1;O;Bilocale;45.4553;9.1754;;Corso Genova;Milano;0;a
-132418548;1600000;455;5+;3+;;0;B;Villa;45.4331;9.2384;;Rogoredo;Milano;0;b
-132443186;310000;89;3;2;2;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;ba
-132505382;263000;89;3;1;3;1;O;Trilocale;45.4146;9.1718;;Gratosoglio;Milano;0;b
-132647020;250000;67;2;1;4;1;B;Appartamento;45.4587;9.1707;Piazza Sant'Agostino;Corso Genova;Milano;1;a
-132653856;229000;60;1;1;T;0;B;Monolocale;45.4367;9.2342;;Rogoredo;Milano;0;ca
-132662324;895000;230;5+;1;;0;O;Terratetto;45.4010;9.1831;;Gratosoglio;Milano;0;bta
-132751918;265000;48;2;1;T;1;O;Bilocale;45.4553;9.1763;;Corso Genova;Milano;0;a
-132809180;3500000;340;5+;3;5;1;R;Appartamento;45.4604;9.1755;;Sant'Ambrogio;Milano;0;bc
-132814416;860000;105;3;1;5;1;B;Trilocale;45.4577;9.1725;;Corso Genova;Milano;0;ba
-132889388;215000;54;2;1;2;1;B;Bilocale;45.4169;9.1799;;Gratosoglio;Milano;0;t
-132896664;249000;35;2;1;T;1;O;Bilocale;45.4578;9.1706;;Corso Genova;Milano;0;a
-132927390;430000;105;3;2;5;1;B;Trilocale;45.4162;9.1799;;Gratosoglio;Milano;0;bt
-133003100;1400000;215;5;3+;4;1;B;Appartamento;45.4589;9.1731;;Corso Genova;Milano;0;c
-133011614;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133011688;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133014328;190000;16;1;1;3;1;B;Monolocale;45.4573;9.1757;;Corso Genova;Milano;0;a
-133095750;250000;65;2;1;3;1;B;Bilocale;45.4181;9.1808;;Gratosoglio;Milano;0;t
-133152274;365000;45;2;1;1;1;O;Bilocale;45.4579;9.1706;;Corso Genova;Milano;0;b
-133178710;249000;68;3;1;2;1;O;Trilocale;45.4351;9.2350;;Rogoredo;Milano;0;bca
-133182254;247000;56;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133182256;169000;38;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133186446;229000;64;2;1;2;1;B;Appartamento;45.4143;9.1728;Via Achille Feraboli;Gratosoglio;Milano;1;b
-133194410;235000;47;2;1;S, 1;1;O;Loft;45.4150;9.1768;;Gratosoglio;Milano;0;bta
-133249738;219000;75;3;1;2;0;;Trilocale;45.4021;9.2048;;Quintosole - Chiaravalle;Milano;0;ca
-133276662;169000;41;2;1;T;0;B;Bilocale;45.4002;9.1825;;Gratosoglio;Milano;0;
-133276830;755000;200;4;2;5;1;O;Attico;45.4184;9.1801;;Gratosoglio;Milano;0;ta
-133280262;929000;119;4;2;1;1;B;Quadrilocale;45.4565;9.1733;;Corso Genova;Milano;0;bca
-133281226;695000;195;5;3;4;1;B;Attico;45.4190;9.1800;;Gratosoglio;Milano;0;bt
-133281436;255000;58;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133281438;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133281862;870000;85;3;2;2;1;O;Trilocale;45.4603;9.1717;;San Vittore;Milano;0;ba
-133335694;520000;133;4;2;2;1;B;Quadrilocale;45.4198;9.1790;;Gratosoglio;Milano;0;t
-133340716;275000;92;3;1;T, 1;1;B;Trilocale;45.4152;9.1687;;Gratosoglio;Milano;0;tca
-133370136;1292000;152;4;2;2;1;B;Quadrilocale;45.4601;9.1759;;Sant'Ambrogio;Milano;0;bc
-133370962;185000;18;1;1;2;1;B;Monolocale;45.4556;9.1747;;Corso Genova;Milano;0;
-133378612;170000;66;3;1;T;0;B;Trilocale;45.4172;9.2387;;Quintosole - Chiaravalle;Milano;0;a
-133382702;420000;150;4;2;4;0;B;Quadrilocale;45.4166;9.1802;;Gratosoglio;Milano;0;bt
-133400282;550000;50;2;1;1;1;O;Bilocale;45.4589;9.1731;;Corso Genova;Milano;0;
-133405228;298000;40;1;1;R;1;O;Monolocale;45.4562;9.1758;;Corso Genova;Milano;0;
-133415042;590000;122;3;2;S, 4;1;N;Attico;45.4351;9.2350;;Rogoredo;Milano;0;tc
-133416990;445000;90;3;1;S, 4;1;N;Attico;45.4351;9.2350;;Rogoredo;Milano;0;tc
-133417432;1375000;469;5+;3+;S, T, 1;0;B;Palazzo - Edificio;45.4362;9.2355;;Rogoredo;Milano;0;
-133460950;910000;100;3;2;1;1;O;Trilocale;45.4592;9.1769;;Corso Genova;Milano;0;c
-133475308;544000;135;4;2;4;1;B;Quadrilocale;45.4171;9.1784;;Gratosoglio;Milano;0;btc
-133484996;313000;100;3;1;1;1;O;Trilocale;45.4165;9.2397;;Quintosole - Chiaravalle;Milano;0;
-133497974;254000;95;4;2;1;0;O;Quadrilocale;45.4008;9.2059;;Quintosole - Chiaravalle;Milano;0;btca
-133519228;199000;65;2;1;4;1;O;Bilocale;45.4022;9.2051;;Quintosole - Chiaravalle;Milano;0;bc
-133535250;680000;98;3;1;2;1;R;Trilocale;45.4576;9.1736;;Corso Genova;Milano;0;bc
-133541814;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;tc
-133542992;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;btc
-133543166;2780000;241;5;3;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;tc
-133543580;200000;46;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133545126;280000;100;3;1;3;1;B;Trilocale;45.4194;9.1740;;Gratosoglio;Milano;0;bc
-133547596;355000;45;2;1;2;1;B;Bilocale;45.4556;9.1747;;Corso Genova;Milano;0;
-133603146;265000;86;3;1;R;0;B;Trilocale;45.4146;9.1718;;Gratosoglio;Milano;0;b
-133623904;565000;70;3;2;1;1;O;Trilocale;45.4579;9.1706;;Corso Genova;Milano;0;b
-133700736;219000;83;3;1;4;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;b
-133735456;210000;63;2;1;2;1;B;Bilocale;45.4018;9.1797;;Gratosoglio;Milano;0;c
-133738324;285000;131;4;2;S, 3;1;R;Quadrilocale;45.4153;9.1717;;Gratosoglio;Milano;0;btc
-133745876;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133776166;255000;70;3;1;R;0;O;Trilocale;45.4371;9.2350;;Rogoredo;Milano;0;ca
-133820166;212000;50;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-133829020;470000;124;4;3;3;1;O;Quadrilocale;45.4364;9.2330;;Rogoredo;Milano;0;btca
-133830498;540000;130;3;2;4;1;O;Trilocale;45.4198;9.1773;;Gratosoglio;Milano;0;bta
-133887348;945000;100;3;1;6;1;O;Attico;45.4567;9.1750;;Corso Genova;Milano;0;
-133890100;499000;165;5;2;;0;O;Villa;45.4026;9.1792;;Gratosoglio;Milano;0;c
-133997983;1700000;154;4;2;T;0;R;Loft;45.4591;9.1732;Via Ausonio;Corso Genova;Milano;1;
-133999257;928000;96;3;2;1;1;O;Trilocale;45.4589;9.1731;;Corso Genova;Milano;0;b
-134006267;430000;120;3;2;8;1;B;Trilocale;45.4356;9.2363;;Rogoredo;Milano;0;btca
-134021153;270000;90;3;2;2;0;B;Trilocale;45.4371;9.2350;;Rogoredo;Milano;0;ca
-134022175;795000;100;3;2;4;1;O;Trilocale;45.4566;9.1748;;Corso Genova;Milano;0;bc
-134047831;769000;91;3;2;1;1;O;Trilocale;45.4578;9.1726;;Corso Genova;Milano;0;bc
-134062621;298000;130;4;2;7;1;R;Quadrilocale;45.4164;9.1733;;Gratosoglio;Milano;0;bc
-134075573;889000;360;5;3;;0;O;Appartamento;45.4031;9.1746;;Gratosoglio;Milano;0;c
-134089405;269000;96;3;1;4;1;B;Trilocale;45.4174;9.1739;;Gratosoglio;Milano;0;bc
-134093785;297000;65;2;1;1;1;O;Bilocale;45.4149;9.1773;;Gratosoglio;Milano;0;bta
-134104985;345000;106;4;2;1;0;B;Quadrilocale;45.4354;9.2347;;Rogoredo;Milano;0;ca
-134125149;209000;49;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134127861;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134127969;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134128229;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134128645;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134128977;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134129145;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134129331;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134133629;165000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134134607;209000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134134799;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134134973;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134135137;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134135309;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134135505;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134135619;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134135771;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134192041;181000;43;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134252463;349000;115;4;2;T;1;B;Quadrilocale;45.4159;9.2413;;Quintosole - Chiaravalle;Milano;0;c
-134305367;166000;40;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134336421;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;;Corso Genova;Milano;0;ca
-134336587;350000;40;1;1;1;1;O;Appartamento;45.4573;9.1734;Via Cesare da Sesto;Corso Genova;Milano;1;ca
-134336615;360000;46;2;1;1;1;O;Bilocale;45.4572;9.1726;;Corso Genova;Milano;0;a
-134337875;1600000;170;5;3;3;1;O;Appartamento;45.4591;9.1734;;Corso Genova;Milano;0;bca
-134343145;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
-134349733;169000;51;2;1;1;1;B;Bilocale;45.4262;9.2513;;Santa Giulia;Milano;0;b
-134349841;289000;35;1;1;R;0;O;Monolocale;45.4604;9.1755;;Sant'Ambrogio;Milano;0;a
-134376267;730000;210;4;2;4;1;B;Attico;45.4181;9.1808;;Gratosoglio;Milano;0;tc
-134382843;750000;77;2;1;1;1;O;Bilocale;45.4588;9.1709;;Corso Genova;Milano;0;ta
-134393865;360000;70;2;1;T;0;O;Bilocale;45.4578;9.1705;;Corso Genova;Milano;0;bta
-134419349;489000;74;2;2;S, T;1;N;Bilocale;45.4565;9.1764;;Corso Genova;Milano;0;c
-134420851;370000;113;4;1;T;1;;Quadrilocale;45.4153;9.1739;;Gratosoglio;Milano;0;
-134443105;755000;200;5;3;5;1;B;Attico;45.4181;9.1807;;Gratosoglio;Milano;0;bt
-134451455;330000;33;1;1;T;1;O;Monolocale;45.4609;9.1726;;Corso Genova;Milano;0;a
-134474477;198000;55;2;1;3;1;B;Bilocale;45.4018;9.1799;;Gratosoglio;Milano;0;
-134494533;215000;35;2;1;1;1;O;Bilocale;45.4578;9.1715;;Corso Genova;Milano;0;a
-134506687;188000;67;2;1;8;1;O;Bilocale;45.4100;9.1739;;Gratosoglio;Milano;0;b
-134510825;248000;82;3;1;3;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;ba
-134526967;895000;120;3;1;6;1;O;Trilocale;45.4590;9.1703;;San Vittore;Milano;0;bc
-134574909;375000;80;2;1;T;0;O;Loft;45.4604;9.1736;;Corso Genova;Milano;0;
-134605093;255000;35;2;1;4;1;R;Bilocale;45.4560;9.1768;;Corso Genova;Milano;0;ca
-134607871;265000;76;2;1;R;0;O;Bilocale;45.4364;9.2337;;Rogoredo;Milano;0;a
-134608807;199000;78;2;1;S;0;O;Bilocale;45.4364;9.2337;;Rogoredo;Milano;0;
-134608903;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;;Corso Genova;Milano;0;ca
-134610849;225000;73;3;1;8;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bt
-134611095;350000;113;3;2;1;1;O;Trilocale;45.4136;9.1689;;Gratosoglio;Milano;0;btc
-134626541;329000;92;3;2;R;0;O;Trilocale;45.4369;9.2348;;Rogoredo;Milano;0;ca
-134627657;420000;120;3;2;1;1;O;Trilocale;45.4184;9.1801;;Gratosoglio;Milano;0;ta
-134630377;235000;80;3;2;2;1;B;Trilocale;45.4149;9.1687;;Gratosoglio;Milano;0;bc
-134631621;310000;42;2;1;T;1;O;Bilocale;45.4589;9.1731;;Corso Genova;Milano;0;a
-134631825;310000;42;2;1;T;1;O;Loft;45.4589;9.1731;;Corso Genova;Milano;0;a
-134632841;780000;85;3;1;1;1;O;Trilocale;45.4593;9.1769;;Corso Genova;Milano;0;bc
-134661611;490000;52;2;1;3;1;O;Bilocale;45.4551;9.1763;;Corso Genova;Milano;0;a
-134661651;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
-134663181;215000;73;2;1;3;1;B;Bilocale;45.4185;9.1786;;Gratosoglio;Milano;0;ta
-134715871;300000;35;1;1;3;1;R;Monolocale;45.4553;9.1755;;Corso Genova;Milano;0;
-134729031;405000;49;2;1;S;1;N;Loft;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
-134730905;378000;45;1;1;S;1;N;Loft;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
-134746133;223000;90;3;1;5;1;O;Trilocale;45.4053;9.1702;;Gratosoglio;Milano;0;bc
-134766795;400000;48;2;1;R;1;O;Bilocale;45.4593;9.1769;;Corso Genova;Milano;0;a
-134766797;365000;45;2;1;R;1;O;Bilocale;45.4593;9.1769;;Corso Genova;Milano;0;a
-134775667;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
-134782201;730000;100;3;2;6;1;R;Trilocale;45.4590;9.1701;;San Vittore;Milano;0;b
-134789655;260000;64;2;1;1;1;O;Bilocale;45.4202;9.1675;;Gratosoglio;Milano;0;c
-134819561;230000;25;1;1;2;1;B;Monolocale;45.4588;9.1709;;Corso Genova;Milano;0;a
-134853565;505000;80;3;1;1;1;O;Trilocale;45.4570;9.1758;;Corso Genova;Milano;0;t
-134856671;179000;73;3;1;7;1;R;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bc
-134863925;441000;53;2;1;S;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
-134864711;390000;47;2;1;T;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
-134865125;423000;51;2;1;S;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
-134870739;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
-134901069;165000;39;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
-134912491;352000;42;1;1;1;1;O;Monolocale;45.4574;9.1752;;Corso Genova;Milano;0;ca
-134918213;290000;115;4;2;3;1;O;Quadrilocale;45.4083;9.1736;;Gratosoglio;Milano;0;ba
-134932105;335000;126;4;2;3;0;;Quadrilocale;45.4165;9.1741;;Gratosoglio;Milano;0;bc
-134935743;550000;70;2;1;1;1;O;Bilocale;45.4582;9.1765;;Corso Genova;Milano;0;
-134936665;399000;330;5;1;T;0;R;Appartamento;45.4038;9.2039;;Quintosole - Chiaravalle;Milano;0;a
-134940865;770000;180;3;3;2;1;O;Trilocale;45.4149;9.1773;;Gratosoglio;Milano;0;a
-134948311;265000;55;1;1;1;1;O;Monolocale;45.4143;9.1769;;Gratosoglio;Milano;0;a
+71616510;2950000;310;5;3+;4;1;N;Attico;45.4582;9.1749;Via San Calocero;Corso Genova;Milano;0;btc
+79856783;3700000;3;5+;3+;T;0;B;Palazzo - Edificio;45.41839981;9.19069958;Via Selvanesco;Gratosoglio;Milano;0;
+87241672;364000;45;2;1;4;1;O;Bilocale;45.4556;9.1747;Via Cicco Simonetta;Corso Genova;Milano;0;a
+99538338;2950000;225;5;3+;4;1;O;Attico;45.4583;9.1749;Via San Calocero;Corso Genova;Milano;0;bt
+107128973;275000;110;4;1;1;0;R;Quadrilocale;45.4303;9.2425;Via George Orwell;Rogoredo;Milano;0;bca
+110183951;4000000;2;5+;3+;T;0;O;Palazzo - Edificio;45.42480087;9.25199986;Via Emilia;Rogoredo;Milano;0;b
+111020363;227000;23;1;1;4;1;O;Monolocale;45.4583;9.1712;Via Cesare da Sesto 19;Corso Genova;Milano;0;a
+113350873;1700000;225;5;3;3;1;N;Appartamento;45.4582;9.1749;Via San Calocero;Corso Genova;Milano;0;bc
+115743833;290000;100;4;2;9;1;O;Quadrilocale;45.4047;9.1703;Via Costantino Baroni;Gratosoglio;Milano;0;bca
+116243665;510000;143;4;2;2;1;O;Quadrilocale;45.4166;9.1802;Via Fratelli Fraschini;Gratosoglio;Milano;0;bta
+117267627;2950000;310;5+;3;4;1;N;Attico;45.4582;9.1749;Via San Calocero;Corso Genova;Milano;0;bt
+118634133;520000;86;3;1;2;0;;Trilocale;45.4579;9.1706;Viale Papiniano;Corso Genova;Milano;0;ba
+118751255;378000;129;3;2;3;1;B;Trilocale;45.415;9.1651;Via Maccacaro;Gratosoglio;Milano;0;btc
+121108016;550000;105;3;2;R;1;R;Appartamento;45.45571136;9.17560959;Via Gaudenzio Ferrari;Corso Genova;Milano;1;
+122335356;530000;180;5+;3;;0;B;Villa unifamiliare;45.4025;9.1788;Via Manduria, 108;Gratosoglio;Milano;0;b
+122907728;443700;130;4;2;5;1;N;Quadrilocale;45.4149;9.16476;Via Giulio Alfredo Maccacaro;Gratosoglio;Milano;0;tc
+122921314;470000;51;2;1;3;1;B;Bilocale;45.4569;9.1735;Via Daniele Crespi;Corso Genova;Milano;0;a
+123275817;1450000;20;;;;0;R;Casale;45.40563965;9.20862961;Via Giuseppe Ripamonti;Quintosole - Chiaravalle;Milano;1;
+123731403;269000;100;3;1;3;1;B;Trilocale;45.4173;9.1739;Via Guido De Ruggiero;Gratosoglio;Milano;0;bca
+123814355;170000;70;2;1;S - T;0;N;Bilocale;45.4085;9.1709;Via Costantino Baroni;Gratosoglio;Milano;0;c
+124107669;258000;83;2;1;4;1;O;Bilocale;45.4148;9.1653;Via Giulio Alfredo Maccacaro;Gratosoglio;Milano;0;tc
+124164953;990000;150;3;2;T;1;B;Trilocale;45.4566;9.176;Via Cicco Simonetta;Corso Genova;Milano;0;t
+126011215;200000;50;2;1;2;1;N;Bilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;a
+126226141;1570000;170;4;2;1;0;O;Quadrilocale;45.4559;9.1754;Via Gaudenzio Ferrari;Corso Genova;Milano;0;btca
+126421107;259000;100;3;1;4;1;B;Trilocale;45.4081;9.1731;Via Michele Saponaro;Gratosoglio;Milano;0;btca
+126452261;630000;130;3;2;4;1;O;Attico;45.4198;9.1773;Via Nicola Romeo;Gratosoglio;Milano;0;bt
+126673173;470000;108;3;2;S;1;O;Trilocale;45.4578;9.1706;Viale Papiniano 45;Corso Genova;Milano;0;a
+126854839;210000;83;3;1;8;1;O;Trilocale;45.4078;9.17084;Via Costantino Baroni;Gratosoglio;Milano;0;bc
+126989417;2100000;180;5;3;4;1;O;Appartamento;45.4604;9.17149;viale Papiniano;San Vittore;Milano;0;btca
+127195145;450000;125;3;2;3;1;O;Trilocale;45.4171;9.1791;Via Giuseppe Tomaselli;Gratosoglio;Milano;0;ta
+127254163;475000;59;3;1;5;1;O;Trilocale;45.4551;9.1754;Via Galeazzo Alessi;Corso Genova;Milano;0;a
+127366261;309000;75;2;1;4;1;O;Bilocale;45.4146;9.1631;Via della Chiesa Rossa;Gratosoglio;Milano;0;tca
+127534482;620000;90;2;1;2;1;B;Bilocale;45.4567;9.1765;Via Marco d'Oggiono;Corso Genova;Milano;0;bca
+127621836;371000;110;3;2;4;1;N;Trilocale;45.4148;9.1653;via Maccacaro 2;Gratosoglio;Milano;0;tc
+127677932;185000;75;3;1;5;1;B;Trilocale;45.4262;9.2513;Via Rogoredo 115;Santa Giulia;Milano;0;bca
+127731390;379000;78;3;2;1;1;O;Trilocale;45.4363;9.23375;Via Paolo Pallia 2;Rogoredo;Milano;0;bca
+127837084;521500;149;3;2;1;1;N;Trilocale;45.3981;9.21063;Via Ripamonti, 591;Quintosole - Chiaravalle;Milano;0;b
+127837188;360000;100;2;1;1;1;N;Bilocale;45.3981;9.21063;Via Ripamonti, 591;Quintosole - Chiaravalle;Milano;0;b
+127837200;307500;88;2;2;T;1;N;Bilocale;45.3981;9.21063;Via Ripamonti, 591;Quintosole - Chiaravalle;Milano;0;
+127837252;368000;105;3;2;T;1;N;Trilocale;45.3981;9.21063;Via Ripamonti, 591;Quintosole - Chiaravalle;Milano;0;
+128082122;165000;37;1;1;4;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+128243540;700000;80;5+;2;2;1;B;Appartamento;45.45640945;9.18593025;Via Molino delle Armi;Carrobbio;Milano;1;a
+128275520;198000;90;2;1;T;0;B;Bilocale;45.4014;9.1824;Via Pescara;Gratosoglio;Milano;0;
+128327088;330000;72;2;1;2;1;O;Bilocale;45.4368;9.23353;Via Livinallongo 12;Rogoredo;Milano;0;ta
+128458116;690000;100;3;1;3;1;;Trilocale;45.4567;9.1765;Via Marco d'Oggiono;Corso Genova;Milano;0;c
+128583128;720000;193;5;2;1;0;;Appartamento;45.41461945;9.23305035;Via Sant'Arialdo;Quintosole - Chiaravalle;Milano;1;c
+128632624;235000;105;4;2;4;1;O;Quadrilocale;45.403;9.16972;Via Costantino Baroni, 216;Gratosoglio;Milano;0;bc
+128639956;455000;120;4;2;T;1;;Quadrilocale;45.4026;9.1792;Via Manduria;Gratosoglio;Milano;0;c
+128674666;220000;130;4;2;5;0;B;Quadrilocale;45.4077;9.1707;Via Costantino Baroni;Gratosoglio;Milano;0;bc
+128682400;580000;158;4;3;2;1;B;Quadrilocale;45.4172;9.1797;Via Fratelli Fraschini;Gratosoglio;Milano;0;bt
+128789636;1400000;100;3;2;4;1;O;Trilocale;45.4587;9.1732;Via Ariberto;Corso Genova;Milano;0;
+128818022;269000;107;2;1;1;1;O;Loft;45.415;9.1769;Via Selvanesco;Gratosoglio;Milano;0;t
+128961802;445000;52;2;1;R;1;O;Appartamento;45.4546814;9.18488979;Via San Luca;Ticinese;Milano;1;a
+129008710;239000;58;2;1;R;1;O;Bilocale;45.4367;9.2342;Via Paolo Pallia, 9, 20139 Milano MI, Italia;Rogoredo;Milano;0;ca
+129040408;945000;96;3;2;1;1;O;Trilocale;45.4598;9.1759;Via Edmondo De Amicis;Corso Genova;Milano;0;ca
+129056452;175000;40;1;1;1;1;O;Monolocale;45.4351;9.235;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;ta
+129085238;360000;135;4;3;2;0;O;Quadrilocale;45.4034;9.1682;Via Costantino Baroni;Gratosoglio;Milano;0;
+129173762;520000;55;2;1;1;1;O;Bilocale;45.4588;9.1755;Via San Vincenzo;Corso Genova;Milano;0;ca
+129175810;205000;61;2;1;2;1;O;Bilocale;45.4027;9.2034;Via Quintosole;Quintosole - Chiaravalle;Milano;0;tca
+129177108;160000;60;2;1;2;0;B;Bilocale;45.416;9.17;Via Gratosoglio;Gratosoglio;Milano;0;
+129211344;169000;65;2;1;9;1;O;Bilocale;45.4118;9.1724;Via Costantino Baroni;Gratosoglio;Milano;0;bca
+129360518;458000;120;4;2;T;1;B;Quadrilocale;45.4025;9.1797;Via Manduria;Gratosoglio;Milano;0;tc
+129371282;335000;84;3;2;1;1;O;Trilocale;45.4023;9.179;Via Manduria;Gratosoglio;Milano;0;bc
+129568086;650000;65;2;1;1;1;O;Appartamento;45.45637894;9.17345047;Piazzale Antonio Cantore;Corso Genova;Milano;1;ba
+129645496;375000;100;3;2;T;1;N;Trilocale;45.4146;9.1631;Via della Chiesa Rossa;Gratosoglio;Milano;0;bta
+129646984;269000;100;3;1;8;1;B;Trilocale;45.4181;9.1746;Via Vittorio Emanuele Orlando;Gratosoglio;Milano;0;bca
+129658642;359000;127;4;2;R;1;B;Quadrilocale;45.417;9.17331;Via Guido De Ruggiero, 71;Gratosoglio;Milano;0;bc
+129752204;1552500;100;5;;;0;B;Terratetto unifamiliare;45.40563965;9.20862961;Via Giuseppe Ripamonti;Quintosole - Chiaravalle;Milano;0;ca
+129775378;195000;45;2;1;1;0;O;Bilocale;45.4006;9.2051;Via Camporgnago;Quintosole - Chiaravalle;Milano;0;bca
+129952344;229000;73;3;1;4;1;B;Trilocale;45.4266;9.2511;Via Rogoredo;Santa Giulia;Milano;0;ba
+130026802;319000;100;3;2;3;0;O;Trilocale;45.4353;9.2347;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;ba
+130116068;420000;124;3;2;S, 7;1;O;Attico;45.4167;9.1784;Via Giuseppe Tomaselli;Gratosoglio;Milano;0;ta
+130418906;210000;83;3;1;9;1;B;Trilocale;45.4052;9.17036;Via baroni;Gratosoglio;Milano;0;bc
+130448408;430000;60;2;1;5;1;O;Bilocale;45.4577;9.176;Corso Genova;Corso Genova;Milano;0;ca
+130495524;549000;88;3;1;1;0;B;Trilocale;45.4569;9.174;Via Cesare da Sesto;Corso Genova;Milano;0;bca
+130522420;420000;57;2;1;T;1;O;Loft;45.4559;9.1763;Via Galeazzo Alessi;Corso Genova;Milano;0;a
+130528512;550000;50;2;1;1;1;N;Bilocale;45.4592;9.1725;Via Ariberto;Corso Genova;Milano;0;c
+130529018;800000;70;3;1;1;1;N;Trilocale;45.4592;9.1725;Via Ariberto;Corso Genova;Milano;0;c
+130662518;215000;50;2;1;3;1;O;Bilocale;45.4351;9.2362;G. F. Lacaita 2;Rogoredo;Milano;0;tc
+130672654;359000;80;2;1;3;1;O;Bilocale;45.4368;9.2333;Via Livinallongo;Rogoredo;Milano;0;bta
+130717140;960000;100;4;2;3;1;O;Quadrilocale;45.4601;9.1732;Via Carroccio;Corso Genova;Milano;0;ba
+130921662;528000;65;2;1;T;1;O;Bilocale;45.4551;9.1754;Via Galeazzo Alessi;Corso Genova;Milano;0;ta
+131093000;4175000;390;5+;3+;4;1;N;Attico;45.4567;9.1732;Via Daniele Crespi, 16;Corso Genova;Milano;0;
+131121858;315000;125;4;2;6;1;B;Quadrilocale;45.4179;9.1745;Via Vittorio Emanuele Orlando;Gratosoglio;Milano;0;bc
+131160152;305000;115;3;1;1;1;N;Trilocale;45.4018;9.20198;via quintosole ;Quintosole - Chiaravalle;Milano;0;btc
+131160154;415000;130;4;1;1;1;N;Quadrilocale;45.4018;9.20198;via quintosole ;Quintosole - Chiaravalle;Milano;0;btc
+131176712;197000;68;2;1;T;0;O;Bilocale;45.4154;9.1637;Via della Chiesa Rossa;Gratosoglio;Milano;0;tca
+131243666;730000;200;4;2;5;1;B;Attico;45.4183;9.18157;Via Nicola Romeo;Gratosoglio;Milano;0;t
+131244614;235000;110;4;2;4;1;O;Quadrilocale;45.4032;9.16956;Via Costantino Baroni ;Gratosoglio;Milano;0;bca
+131253770;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;Via Daniele Crespi, 16;Corso Genova;Milano;0;a
+131254738;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;Via Daniele Crespi, 16;Corso Genova;Milano;0;t
+131256192;1395000;127;3;2;4;1;N;Attico;45.4569;9.1735;Via Daniele Crespi;Corso Genova;Milano;0;t
+131257842;2780000;241;4;3;4;1;N;Attico;45.4567;9.1732;Via Daniele Crespi, 16;Corso Genova;Milano;0;t
+131273722;590000;80;3;2;T;0;N;Trilocale;45.4575;9.1729;Via Cesare da Sesto 7;Corso Genova;Milano;0;a
+131405104;1070000;107;4;2;S, 6;1;O;Attico;45.4581;9.1771;Corso Genova;Corso Genova;Milano;0;bca
+131441436;595000;155;2;1;S;0;O;Loft;45.4596;9.17425;Via Ausonio, 3A;Corso Genova;Milano;0;a
+131900936;420000;146;5+;2;7;1;B;Appartamento;45.41783905;9.17823029;Via Fratelli Fraschini;Gratosoglio;Milano;1;tca
+132012586;630000;73;3;1;2;1;O;Trilocale;45.4568;9.1748;Corso Genova;Corso Genova;Milano;0;bc
+132018596;260000;110;5;2;4;1;O;Appartamento;45.4085;9.1709;Via Costantino Baroni;Gratosoglio;Milano;0;btca
+132031416;235000;75;3;1;4;1;;Trilocale;45.41;9.1739;Via Michele Saponaro;Gratosoglio;Milano;0;btc
+132068240;445000;150;4;2;4;1;B;Quadrilocale;45.4166;9.1774;Via Ettore Bugatti;Gratosoglio;Milano;0;ta
+132073612;395000;50;2;1;T;1;;Bilocale;45.459;9.1728;Via Ariberto 19;Corso Genova;Milano;0;ca
+132165746;298000;33;2;1;6;1;O;Bilocale;45.4587;9.1707;Piazza Sant'Agostino;Corso Genova;Milano;0;a
+132168456;1300000;160;5;2;1;1;B;Appartamento;45.4577;9.1727;Via Cesare da Sesto;Corso Genova;Milano;0;ca
+132168886;695000;101;3;1;3;1;R;Trilocale;45.4575;9.1744;Via Daniele Crespi;Corso Genova;Milano;0;bc
+132182570;499000;185;3;1;T;0;B;Loft;45.4149;9.1773;Via Selvanesco;Gratosoglio;Milano;0;
+132212042;387000;90;3;1;7;1;O;Trilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+132256354;2700000;257;5+;3+;5;1;B;Appartamento;45.4594;9.1771;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;btc
+132293796;349000;130;3;;;0;B;Trilocale;45.417;9.24022;VIA SAN BERNARDO, 25;Quintosole - Chiaravalle;Milano;0;
+132294760;378000;90;3;1;6;1;O;Trilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+132341130;200000;51;2;1;3;1;N;Bilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
+132343742;315000;89;3;2;4;1;N;Trilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
+132344164;210000;57;2;1;4;1;N;Bilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
+132344292;300000;85;3;2;4;1;N;Trilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
+132344440;460000;128;3;2;5;1;N;Trilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;b
+132358778;578000;165;4;2;8;1;B;Quadrilocale;45.4161;9.1781;Via Ettore Bugatti;Gratosoglio;Milano;0;bt
+132382426;235000;48;1;1;6;1;O;Monolocale;45.4553;9.1754;Via Galeazzo Alessi;Corso Genova;Milano;0;ca
+132397420;890000;105;4;1;4;1;O;Quadrilocale;45.4575;9.1758;Corso Genova;Corso Genova;Milano;0;bca
+132405200;749000;94;3;1;R;1;B;Trilocale;45.4571;9.1772;Via Conca del Naviglio;Corso Genova;Milano;0;
+132413020;340000;150;4;2;5;1;R;Attico;45.4138;9.173;Via Achille Feraboli;Gratosoglio;Milano;0;bta
+132417522;265000;52;2;1;6;1;O;Bilocale;45.4553;9.1754;Via Galeazzo Alessi;Corso Genova;Milano;0;a
+132418548;1600000;455;5+;3+;;0;B;Villa unifamiliare;45.4331;9.2384;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;b
+132443186;310000;89;3;2;2;1;N;Trilocale;45.404;9.1695;Via Costantino Baroni;Gratosoglio;Milano;0;ba
+132505382;263000;89;3;1;3;1;O;Trilocale;45.4146;9.1718;Via Achille Feraboli;Gratosoglio;Milano;0;b
+132647020;250000;67;2;1;4;1;B;Appartamento;45.4586792;9.17074013;Piazza Sant'Agostino;Corso Genova;Milano;1;a
+132653856;229000;60;1;1;T;0;B;Monolocale;45.4367;9.2342;Via Paolo Pallia ;Rogoredo;Milano;0;ca
+132662324;895000;230;5+;1;;0;O;Terratetto unifamiliare;45.401;9.18312;via Pescara;Gratosoglio;Milano;0;bta
+132751918;265000;48;2;1;T;1;O;Bilocale;45.4553;9.17634;Via Gaudenzio Ferrari;Corso Genova;Milano;0;a
+132809180;3500000;340;5+;3;5;1;R;Appartamento;45.4604;9.1755;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;bc
+132814416;860000;105;3;1;5;1;B;Trilocale;45.4577;9.1725;Via Cesare da Sesto, 11, 20123 Milano MI, Italia;Corso Genova;Milano;0;ba
+132889388;215000;54;2;1;2;1;B;Bilocale;45.4169;9.1799;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
+132896664;249000;35;2;1;T;1;O;Bilocale;45.4578;9.1706;Viale Papiniano 45;Corso Genova;Milano;0;a
+132927390;430000;105;3;2;5;1;B;Trilocale;45.4162;9.1799;Via Gustavo Sanvenero Rosselli, 1;Gratosoglio;Milano;0;bt
+133003100;1400000;215;5;3+;4;1;B;Appartamento;45.4589;9.1731;Via Ausonio;Corso Genova;Milano;0;c
+133011614;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133011688;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133014328;190000;16;1;1;3;1;B;Monolocale;45.4573;9.1757;Corso Genova;Corso Genova;Milano;0;a
+133095750;250000;65;2;1;3;1;B;Bilocale;45.4181;9.1808;Via Nicola Romeo;Gratosoglio;Milano;0;t
+133152274;365000;45;2;1;1;1;O;Bilocale;45.4579;9.1706;Viale Papiniano;Corso Genova;Milano;0;b
+133178710;249000;68;3;1;2;1;O;Trilocale;45.4351;9.235;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;bca
+133182254;247000;56;2;1;8;1;N;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133182256;169000;38;1;1;8;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133186446;229000;64;2;1;2;1;B;Appartamento;45.41432953;9.17284012;Via Achille Feraboli;Gratosoglio;Milano;1;b
+133194410;235000;47;2;1;S, 1;1;O;Loft;45.415;9.1768;Via Selvanesco;Gratosoglio;Milano;0;bta
+133249738;219000;75;3;1;2;0;;Trilocale;45.4021;9.2048;Via Quintosole;Quintosole - Chiaravalle;Milano;0;ca
+133276662;169000;41;2;1;T;0;B;Bilocale;45.4002;9.18252;Via pescara;Gratosoglio;Milano;0;
+133276830;755000;200;4;2;5;1;O;Attico;45.4184;9.1801;Via Nicola Romeo;Gratosoglio;Milano;0;ta
+133280262;929000;119;4;2;1;1;B;Quadrilocale;45.4565;9.1733;Piazzale Antonio Cantore;Corso Genova;Milano;0;bca
+133281226;695000;195;5;3;4;1;B;Attico;45.419;9.18003;Via Nicola Romeo;Gratosoglio;Milano;0;bt
+133281436;255000;58;2;1;8;1;N;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133281438;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133281862;870000;85;3;2;2;1;O;Trilocale;45.4603;9.1717;Via Olona;San Vittore;Milano;0;ba
+133335694;520000;133;4;2;2;1;B;Quadrilocale;45.4198;9.179;Via Nicola Romeo;Gratosoglio;Milano;0;t
+133340716;275000;92;3;1;T, 1;1;B;Trilocale;45.4152;9.1687;Via Achille Feraboli;Gratosoglio;Milano;0;tca
+133370136;1292000;152;4;2;2;1;B;Quadrilocale;45.4601;9.17593;Via Edmondo de Amicis, 42;Sant'Ambrogio;Milano;0;bc
+133370962;185000;18;1;1;2;1;B;Monolocale;45.4556;9.1747;Via Cicco Simonetta;Corso Genova;Milano;0;
+133378612;170000;66;3;1;T;0;B;Trilocale;45.4172;9.2387;Via San Bernardo;Quintosole - Chiaravalle;Milano;0;a
+133382702;420000;150;4;2;4;0;B;Quadrilocale;45.4166;9.1802;Via Fratelli Fraschini;Gratosoglio;Milano;0;bt
+133400282;550000;50;2;1;1;1;O;Bilocale;45.4589;9.17311;Via Ausonio;Corso Genova;Milano;0;
+133405228;298000;40;1;1;R;1;O;Monolocale;45.4562;9.17577;via CICCO SIMONETTA  11;Corso Genova;Milano;0;
+133415042;590000;122;3;2;S, 4;1;N;Attico;45.4351;9.235;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;tc
+133416990;445000;90;3;1;S, 4;1;N;Attico;45.4351;9.235;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;tc
+133417432;1375000;469;5+;3+;S, T, 1;0;B;Palazzo - Edificio;45.43619919;9.23550034;Via Carlo Boncompagni;Rogoredo;Milano;0;
+133460950;910000;100;3;2;1;1;O;Trilocale;45.4592;9.1769;Via Edmondo De Amicis;Corso Genova;Milano;0;c
+133475308;544000;135;4;2;4;1;B;Quadrilocale;45.4171;9.1784;Via Ettore Bugatti;Gratosoglio;Milano;0;btc
+133484996;313000;100;3;1;1;1;O;Trilocale;45.4165;9.23973;Via S. Bernardo;Quintosole - Chiaravalle;Milano;0;
+133497974;254000;95;4;2;1;0;O;Quadrilocale;45.4008;9.2059;Via Camporgnago;Quintosole - Chiaravalle;Milano;0;btca
+133519228;199000;65;2;1;4;1;O;Bilocale;45.4022;9.2051;Via Quintosole;Quintosole - Chiaravalle;Milano;0;bc
+133535250;680000;98;3;1;2;1;R;Trilocale;45.4576;9.1736;Piazzetta Adolfo Beria d'Argentine;Corso Genova;Milano;0;bc
+133541814;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;Via Daniele Crespi;Corso Genova;Milano;0;tc
+133542992;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;Via Daniele Crespi;Corso Genova;Milano;0;btc
+133543166;2780000;241;5;3;4;1;N;Attico;45.4567;9.1732;Via Daniele Crespi;Corso Genova;Milano;0;tc
+133543580;200000;46;1;1;8;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133545126;280000;100;3;1;3;1;B;Trilocale;45.4194;9.174;Via Guido De Ruggiero;Gratosoglio;Milano;0;bc
+133547596;355000;45;2;1;2;1;B;Bilocale;45.4556;9.17472;via CICCO SIMONETTA 19;Corso Genova;Milano;0;
+133603146;265000;86;3;1;R;0;B;Trilocale;45.4146;9.1718;Via Achille Feraboli;Gratosoglio;Milano;0;b
+133623904;565000;70;3;2;1;1;O;Trilocale;45.4579;9.1706;Viale Papiniano;Corso Genova;Milano;0;b
+133700736;219000;83;3;1;4;1;O;Trilocale;45.4262;9.2513;Via Rogoredo 115;Santa Giulia;Milano;0;b
+133735456;210000;63;2;1;2;1;B;Bilocale;45.4018;9.1797;Via Manduria;Gratosoglio;Milano;0;c
+133738324;285000;131;4;2;S, 3;1;R;Quadrilocale;45.4153;9.1717;Via Arturo Martini;Gratosoglio;Milano;0;btc
+133745876;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133776166;255000;70;3;1;R;0;O;Trilocale;45.4371;9.235;Via Vincenzo Toffetti;Rogoredo;Milano;0;ca
+133820166;212000;50;1;1;7;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+133829020;470000;124;4;3;3;1;O;Quadrilocale;45.4364;9.233;Via Livinallongo;Rogoredo;Milano;0;btca
+133830498;540000;130;3;2;4;1;O;Trilocale;45.4198;9.1773;Via Nicola Romeo;Gratosoglio;Milano;0;bta
+133887348;945000;100;3;1;6;1;O;Attico;45.4567;9.17504;corso GENOVA  21;Corso Genova;Milano;0;
+133890100;499000;165;5;2;;0;O;Villa unifamiliare;45.4026;9.1792;via manduria, 108;Gratosoglio;Milano;0;c
+133997983;1700000;154;4;2;T;0;R;Loft;45.45907974;9.17323971;Via Ausonio;Corso Genova;Milano;1;
+133999257;928000;96;3;2;1;1;O;Trilocale;45.4589;9.1731;Via Ausonio;Corso Genova;Milano;0;b
+134006267;430000;120;3;2;8;1;B;Trilocale;45.4356;9.2363;Via Giacomo Filippo Lacaita;Rogoredo;Milano;0;btca
+134021153;270000;90;3;2;2;0;B;Trilocale;45.4371;9.235;Via Vincenzo Toffetti;Rogoredo;Milano;0;ca
+134022175;795000;100;3;2;4;1;O;Trilocale;45.4566;9.1748;Corso Genova;Corso Genova;Milano;0;bc
+134047831;769000;91;3;2;1;1;O;Trilocale;45.4578;9.1726;via Cesare Da Sesto;Corso Genova;Milano;0;bc
+134062621;298000;130;4;2;7;1;R;Quadrilocale;45.4164;9.17331;Via Guido de Ruggiero, 75;Gratosoglio;Milano;0;bc
+134075573;889000;360;5;3;;0;O;Appartamento in villa;45.4031;9.1746;Via dei Missaglia;Gratosoglio;Milano;0;c
+134089405;269000;96;3;1;4;1;B;Trilocale;45.4174;9.1739;Via Guido De Ruggiero;Gratosoglio;Milano;0;bc
+134093785;297000;65;2;1;1;1;O;Bilocale;45.4149;9.1773;Via Selvanesco;Gratosoglio;Milano;0;bta
+134104985;345000;106;4;2;1;0;B;Quadrilocale;45.4354;9.23465;Via Giovanni Battista Cassinis, 55;Rogoredo;Milano;0;ca
+134125149;209000;49;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134127861;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134127969;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134128229;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134128645;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134128977;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134129145;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134129331;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134133629;165000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134134607;209000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134134799;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134134973;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134135137;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134135309;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134135505;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134135619;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134135771;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134192041;181000;43;1;1;7;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134252463;349000;115;4;2;T;1;B;Quadrilocale;45.4159;9.2413;Via San Bernardo;Quintosole - Chiaravalle;Milano;0;c
+134305367;166000;40;1;1;7;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134336421;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;Via Cesare da Sesto;Corso Genova;Milano;0;ca
+134336587;350000;40;1;1;1;1;O;Appartamento;45.45730972;9.17341042;Via Cesare da Sesto;Corso Genova;Milano;1;ca
+134336615;360000;46;2;1;1;1;O;Bilocale;45.4572;9.1726;Via Fabio Mangone;Corso Genova;Milano;0;a
+134337875;1600000;170;5;3;3;1;O;Appartamento;45.4591;9.1734;Via Ausonio;Corso Genova;Milano;0;bca
+134343145;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;Via George Orwell;Rogoredo;Milano;0;c
+134349733;169000;51;2;1;1;1;B;Bilocale;45.4262;9.2513;Via Rogoredo;Santa Giulia;Milano;0;b
+134349841;289000;35;1;1;R;0;O;Monolocale;45.4604;9.1755;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;a
+134376267;730000;210;4;2;4;1;B;Attico;45.4181;9.1808;Via Nicola Romeo;Gratosoglio;Milano;0;tc
+134382843;750000;77;2;1;1;1;O;Bilocale;45.4588;9.1709;Via Cesare da Sesto;Corso Genova;Milano;0;ta
+134393865;360000;70;2;1;T;0;O;Bilocale;45.4578;9.1705;viale papiniano;Corso Genova;Milano;0;bta
+134419349;489000;74;2;2;S, T;1;N;Bilocale;45.4565;9.1764;Via Marco d'Oggiono;Corso Genova;Milano;0;c
+134420851;370000;113;4;1;T;1;;Quadrilocale;45.4153;9.1739;Via Guido De Ruggiero;Gratosoglio;Milano;0;
+134443105;755000;200;5;3;5;1;B;Attico;45.4181;9.18074;Via Nicola Romeo;Gratosoglio;Milano;0;bt
+134451455;330000;33;1;1;T;1;O;Monolocale;45.4609;9.17262;Via Olona;Corso Genova;Milano;0;a
+134474477;198000;55;2;1;3;1;B;Bilocale;45.4018;9.17985;Via Manduria;Gratosoglio;Milano;0;
+134494533;215000;35;2;1;1;1;O;Bilocale;45.4578;9.1715;Via Ausonio;Corso Genova;Milano;0;a
+134506687;188000;67;2;1;8;1;O;Bilocale;45.41;9.1739;Via Michele Saponaro;Gratosoglio;Milano;0;b
+134510825;248000;82;3;1;3;1;O;Trilocale;45.4262;9.2513;Via Rogoredo;Santa Giulia;Milano;0;ba
+134526967;895000;120;3;1;6;1;O;Trilocale;45.459;9.1703;Piazza Sant'Agostino;San Vittore;Milano;0;bc
+134574909;375000;80;2;1;T;0;O;Loft;45.4604;9.1736;Via Carroccio;Corso Genova;Milano;0;
+134605093;255000;35;2;1;4;1;R;Bilocale;45.456;9.1768;Via Galeazzo Alessi;Corso Genova;Milano;0;ca
+134607871;265000;76;2;1;R;0;O;Bilocale;45.4364;9.2337;Via Paolo Pallia;Rogoredo;Milano;0;a
+134608807;199000;78;2;1;S;0;O;Bilocale;45.4364;9.2337;Via Paolo Pallia;Rogoredo;Milano;0;
+134608903;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;Via Cesare da Sesto;Corso Genova;Milano;0;ca
+134610849;225000;73;3;1;8;1;O;Trilocale;45.4262;9.2513;Via Rogoredo 115;Santa Giulia;Milano;0;bt
+134611095;350000;113;3;2;1;1;O;Trilocale;45.4136;9.1689;Via Gratosoglio;Gratosoglio;Milano;0;btc
+134626541;329000;92;3;2;R;0;O;Trilocale;45.4369;9.23485;Via Vincenzo Toffetti 18;Rogoredo;Milano;0;ca
+134627657;420000;120;3;2;1;1;O;Trilocale;45.4184;9.1801;Via Nicola Romeo;Gratosoglio;Milano;0;ta
+134630377;235000;80;3;2;2;1;B;Trilocale;45.4149;9.1687;Via Achille Feraboli;Gratosoglio;Milano;0;bc
+134631621;310000;42;2;1;T;1;O;Bilocale;45.4589;9.1731;Via Ausonio;Corso Genova;Milano;0;a
+134631825;310000;42;2;1;T;1;O;Loft;45.4589;9.1731;Via Ausonio;Corso Genova;Milano;0;a
+134632841;780000;85;3;1;1;1;O;Trilocale;45.4593;9.1769;Via Edmondo De Amicis;Corso Genova;Milano;0;bc
+134661611;490000;52;2;1;3;1;O;Bilocale;45.4551;9.1763;Via Gaudenzio Ferrari;Corso Genova;Milano;0;a
+134661651;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;Via George Orwell;Rogoredo;Milano;0;c
+134663181;215000;73;2;1;3;1;B;Bilocale;45.4185;9.1786;Via Fratelli Fraschini;Gratosoglio;Milano;0;ta
+134715871;300000;35;1;1;3;1;R;Monolocale;45.4553;9.1755;Via Galeazzo Alessi;Corso Genova;Milano;0;
+134729031;405000;49;2;1;S;1;N;Loft;45.46;9.1761;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;
+134730905;378000;45;1;1;S;1;N;Loft;45.46;9.1761;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;
+134746133;223000;90;3;1;5;1;O;Trilocale;45.4053;9.1702;Via Costantino Baroni;Gratosoglio;Milano;0;bc
+134766795;400000;48;2;1;R;1;O;Bilocale;45.4593;9.1769;Via Edmondo De Amicis;Corso Genova;Milano;0;a
+134766797;365000;45;2;1;R;1;O;Bilocale;45.4593;9.1769;Via Edmondo De Amicis;Corso Genova;Milano;0;a
+134775667;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;Via George Orwell;Rogoredo;Milano;0;c
+134782201;730000;100;3;2;6;1;R;Trilocale;45.459;9.1701;Piazza Sant'Agostino;San Vittore;Milano;0;b
+134789655;260000;64;2;1;1;1;O;Bilocale;45.4202;9.16753;Via Privata Pienza 4D;Gratosoglio;Milano;0;c
+134819561;230000;25;1;1;2;1;B;Monolocale;45.4588;9.1709;Via Cesare da Sesto;Corso Genova;Milano;0;a
+134853565;505000;80;3;1;1;1;O;Trilocale;45.457;9.17582;;Corso Genova;Milano;0;t
+134856671;179000;73;3;1;7;1;R;Trilocale;45.4262;9.2513;Via Rogoredo 115;Santa Giulia;Milano;0;bc
+134863925;441000;53;2;1;S;1;N;Bilocale;45.46;9.1761;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;
+134864711;390000;47;2;1;T;1;N;Bilocale;45.46;9.1761;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;
+134865125;423000;51;2;1;S;1;N;Bilocale;45.46;9.1761;Via Edmondo De Amicis;Sant'Ambrogio;Milano;0;
+134870739;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;Via George Orwell;Rogoredo;Milano;0;c
+134901069;165000;39;1;1;7;1;N;Monolocale;45.4159;9.1768;Via Ettore Bugatti;Gratosoglio;Milano;0;
+134912491;352000;42;1;1;1;1;O;Monolocale;45.4574;9.1752;Via Ariberto;Corso Genova;Milano;0;ca
+134918213;290000;115;4;2;3;1;O;Quadrilocale;45.4083;9.17363;Via Saponaro;Gratosoglio;Milano;0;ba
+134932105;335000;126;4;2;3;0;;Quadrilocale;45.4165;9.1741;Via Vittorio Emanuele Orlando;Gratosoglio;Milano;0;bc
+134935743;550000;70;2;1;1;1;O;Bilocale;45.4582;9.17648;;Corso Genova;Milano;0;
+134936665;399000;330;5;1;T;0;R;Appartamento;45.4038;9.2039;Via Quintosole;Quintosole - Chiaravalle;Milano;0;a
+134940865;770000;180;3;3;2;1;O;Trilocale;45.4149;9.1773;Via Selvanesco;Gratosoglio;Milano;0;a
+134948311;265000;55;1;1;1;1;O;Monolocale;45.4143;9.17691;Via Selvanesco;Gratosoglio;Milano;0;a
