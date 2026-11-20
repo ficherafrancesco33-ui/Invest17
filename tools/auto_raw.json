@@ -19,7 +19,44 @@
   "Verbania|VB": 0,
   "Pisogne|BS": 0,
   "Vercelli|VC": 1,
-  "Chiavenna|SO": 0
+  "Chiavenna|SO": 0,
+  "Perledo|LC": 0,
+  "Mandello del Lario|LC": 0,
+  "Stresa|VB": 2,
+  "Maccagno con Pino e Veddasca|VA": 1,
+  "Somma Lombardo|VA": 1,
+  "Verona|VR": 0,
+  "Valeggio sul Mincio|VR": 0,
+  "Arona|NO": 1,
+  "La Spezia|SP": 1,
+  "Genova|GE": 0,
+  "Castelnuovo del Garda|VR": 0,
+  "Broni|PV": 1,
+  "Casale Monferrato|AL": 2,
+  "Castel San Giovanni|PC": 1,
+  "Vigevano|PV": 0,
+  "Stradella|PV": 1,
+  "Alessandria|AL": 1,
+  "Garlasco|PV": 1,
+  "Ferno|VA": 0,
+  "Codogno|LO": 1,
+  "Novi Ligure|AL": 1,
+  "Lonate Pozzolo|VA": 0,
+  "Cardano al Campo|VA": 1,
+  "Tortona|AL": 1,
+  "Erba|CO": 0,
+  "Borgomanero|NO": 1,
+  "Sondrio|SO": 1,
+  "Fiorenzuola d'Arda|PC": 0,
+  "Legnano|MI": 0,
+  "Montichiari|BS": 0,
+  "Gallarate|VA": 0,
+  "Castione della Presolana|BG": 1,
+  "Abbiategrasso|MI": 0,
+  "Busto Arsizio|VA": 0,
+  "Varese|VA": 1,
+  "Crema|CR": 0,
+  "Cinisello Balsamo|MI": 0
  },
  "coord": {
   "Edolo": [
@@ -159,6 +196,721 @@
     "Inquilino dentro: verificare contratto e scadenza",
     "Spese condominiali 100 € al mese, classe energetica G"
    ]
+  },
+  {
+   "id": "119172281",
+   "comune": "Stresa",
+   "p": "VB",
+   "prezzo": 38000,
+   "mq": 40,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T,1",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via per Gignese (borgo a 15' da Stresa), Stresa",
+   "titolo": "Casetta su due livelli nel borgo sopra Stresa",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1668476989/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1668477017/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1668477087/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1668477309/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1668477355/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1668477405/m-c.jpg"
+   ],
+   "aggiornato": "28/09/2026",
+   "agenzia": "Arca Immobiliare",
+   "pro": [
+    "Casa indipendente con caminetto e giardino, nessuna spesa condominiale",
+    "Prezzo basso per la zona del Lago Maggiore"
+   ],
+   "contro": [
+    "A circa 15 minuti d'auto da Stresa e dal lago",
+    "Arredi e finiture datati, classe G"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "129512758",
+   "comune": "Stresa",
+   "p": "VB",
+   "prezzo": 49500,
+   "mq": 40,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "?",
+   "stato": "buono",
+   "classe": "E",
+   "arredato": false,
+   "indirizzo": "Via Palestro 2, Brisino (collina), Stresa",
+   "titolo": "Monolocale con giardino a Brisino, collina di Stresa",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1935546274/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935546286/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935546292/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935546298/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935546280/m-c.jpg"
+   ],
+   "aggiornato": "20/07/2026",
+   "agenzia": "Immobiliare Botto",
+   "pro": [
+    "Ambienti rinfrescati, bianchi e luminosi",
+    "Nessuna spesa condominiale, contesto verde sopra il lago"
+   ],
+   "contro": [
+    "Cucina da arredare (ci sono solo gli attacchi)",
+    "Stato non dichiarato nell'annuncio: verificare in visita"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "97639908",
+   "comune": "Arona",
+   "p": "NO",
+   "prezzo": 55000,
+   "mq": 30,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "4",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Generale Armando Diaz 11, Centro, Arona",
+   "titolo": "Bilocale all'ultimo piano in centro ad Arona",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1210635562/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1210635638/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1852137913/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1852137923/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1852137951/m-c.jpg"
+   ],
+   "aggiornato": "04/10/2026",
+   "agenzia": "privato",
+   "pro": [
+    "Centro di Arona, vista aperta, posto auto coperto incluso",
+    "Venduto da privato: niente provvigione d'agenzia"
+   ],
+   "contro": [
+    "Quarto piano senza ascensore",
+    "Solo 30 m², classe G"
+   ],
+   "spese_mese": 100,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "133374042",
+   "comune": "Maccagno con Pino e Veddasca",
+   "p": "VA",
+   "prezzo": 43000,
+   "mq": 44,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Valleggio 15, Musignano, Maccagno con Pino e Veddasca",
+   "titolo": "Bilocale con ingresso indipendente a Musignano, Maccagno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2025024648/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025025202/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025025230/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025025576/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025025176/m-c.jpg"
+   ],
+   "aggiornato": "08/10/2026",
+   "agenzia": "Medi@ Cas@",
+   "pro": [
+    "Ingresso indipendente e vista sul Lago Maggiore",
+    "Atmosfera da borgo, caminetto"
+   ],
+   "contro": [
+    "200 m a piedi dal parcheggio per viuzze pedonali",
+    "Classe G, impianti semplici (termoconvettori)"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "133621668",
+   "comune": "Somma Lombardo",
+   "p": "VA",
+   "prezzo": 55000,
+   "mq": 73,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "",
+   "arredato": false,
+   "indirizzo": "Piazza San Sebastiano 10, Coarezza, Somma Lombardo",
+   "titolo": "Terracielo di corte a Coarezza, 15 minuti da Malpensa",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2030561620/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2030563120/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2030563114/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2030563180/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2030563066/m-c.jpg"
+   ],
+   "aggiornato": "26/10/2026",
+   "agenzia": "Dhome Real Estate",
+   "pro": [
+    "Su due livelli con magazzino, nessuna spesa condominiale",
+    "15 minuti da Malpensa: buono per affitti brevi a chi vola"
+   ],
+   "contro": [
+    "Casa anni '50: verificare impianti",
+    "Frazione tranquilla, pochi servizi a piedi"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "134351293",
+   "comune": "Broni",
+   "p": "PV",
+   "prezzo": 51000,
+   "mq": 98,
+   "locali": 3,
+   "bagni": 2,
+   "piano": "2",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via dei Recoaro 75, Valle Recoaro, Broni",
+   "titolo": "Due unità collegate nella Valle Recoaro, Broni",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2046832327/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2046832339/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2046832347/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2046832307/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2046832333/m-c.jpg"
+   ],
+   "aggiornato": "03/11/2026",
+   "agenzia": "Tecnocasa Broni",
+   "pro": [
+    "98 m² in due unità collegate: si possono affittare separate",
+    "Posto auto, terrazza, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Arredi datati",
+    "Classe G, fuori dal centro"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "133255342",
+   "comune": "Casale Monferrato",
+   "p": "AL",
+   "prezzo": 35000,
+   "mq": 69,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "buono",
+   "classe": "",
+   "arredato": true,
+   "indirizzo": "Via Antonio Olearo 15, Oltreponte, Casale Monferrato",
+   "titolo": "Bilocale arredato con serramenti nuovi a Casale",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2022437362/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2022437484/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2022437916/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2022436880/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2022437202/m-c.jpg"
+   ],
+   "aggiornato": "05/10/2026",
+   "agenzia": "Immobiliare Doroteni",
+   "pro": [
+    "Prezzo molto basso: 35.000 € per 69 m², già arredato",
+    "Serramenti nuovi a triplo vetro, due balconi e cantina"
+   ],
+   "contro": [
+    "L'annuncio indica spese di 600 €: chiedere se al mese o all'anno",
+    "Arredi datati, riscaldamento centralizzato"
+   ],
+   "spese_mese": 50,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "127205811",
+   "comune": "Casale Monferrato",
+   "p": "AL",
+   "prezzo": 56000,
+   "mq": 64,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "buono",
+   "classe": "F",
+   "arredato": false,
+   "indirizzo": "Salita Sant'Anna 102, Valentino, Casale Monferrato",
+   "titolo": "Bilocale con terrazzo coperto vicino a Piazza Castello, Casale",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1878941897/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1878941869/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1878941903/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1878941859/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1878941821/m-c.jpg"
+   ],
+   "aggiornato": "27/08/2026",
+   "agenzia": "Centro Immobiliare",
+   "pro": [
+    "A pochi passi da Piazza Castello, palazzina di tre piani con ascensore",
+    "Terrazzo coperto, cucina abitabile, cantina"
+   ],
+   "contro": [
+    "Arredi e finiture datati",
+    "Spese condominiali non indicate"
+   ],
+   "spese_mese": 60,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "103419152",
+   "comune": "Castel San Giovanni",
+   "p": "PC",
+   "prezzo": 59000,
+   "mq": 64,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "3",
+   "stato": "ristrutturato",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Mulini, Centro, Castel San Giovanni",
+   "titolo": "Trilocale ristrutturato in centro a Castel San Giovanni",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1868904839/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1868904745/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1868904297/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1868904443/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1868904155/m-c.jpg"
+   ],
+   "aggiornato": "26/03/2026",
+   "agenzia": "Global Consulenti Immobiliari",
+   "pro": [
+    "Ristrutturato, due camere matrimoniali, bagno finestrato",
+    "Nessuna spesa condominiale, riscaldamento autonomo"
+   ],
+   "contro": [
+    "Terzo piano senza ascensore",
+    "Classe G"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "134947273",
+   "comune": "Stradella",
+   "p": "PV",
+   "prezzo": 43000,
+   "mq": 92,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "4",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Piazza Meriggi 1, Centro, Stradella",
+   "titolo": "Trilocale panoramico in Piazza Meriggi, Stradella",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2061792439/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061792467/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061792433/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061792443/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061792471/m-c.jpg"
+   ],
+   "aggiornato": "20/11/2026",
+   "agenzia": "Tecnocasa Stradella",
+   "pro": [
+    "92 m² a 43.000 €: circa 470 €/m², vicino all'ospedale",
+    "Luminoso e panoramico, cantina"
+   ],
+   "contro": [
+    "Quarto piano senza ascensore",
+    "Bagno e finiture datati, spese 125 €/mese"
+   ],
+   "spese_mese": 125,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "129515688",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 59000,
+   "mq": 53,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "8",
+   "stato": "buono",
+   "classe": "E",
+   "arredato": true,
+   "indirizzo": "Spalto Marengo 90, Piazza Genova, Alessandria",
+   "titolo": "Bilocale già affittato fino al 2027, Alessandria",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1935086194/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935086214/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935086196/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935086220/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1935086198/m-c.jpg"
+   ],
+   "aggiornato": "12/06/2026",
+   "agenzia": "Tecnocasa Forza",
+   "pro": [
+    "Già affittato fino a dicembre 2027: rende da subito",
+    "Arredato in modo moderno, aria condizionata, ascensore, spese basse"
+   ],
+   "contro": [
+    "Canone attuale non indicato: chiederlo all'agenzia",
+    "Ottavo piano di un palazzo anni '60"
+   ],
+   "spese_mese": 33,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "119810954",
+   "comune": "Garlasco",
+   "p": "PV",
+   "prezzo": 53000,
+   "mq": 70,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "3",
+   "stato": "buono",
+   "classe": "F",
+   "arredato": false,
+   "indirizzo": "Piazza Piccola 5, Centro, Garlasco",
+   "titolo": "Trilocale in corte con terrazzo in centro a Garlasco",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1707841760/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1707841968/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1707842436/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1707841652/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1683473906/m-c.jpg"
+   ],
+   "aggiornato": "16/05/2025",
+   "agenzia": "Studio Immobiliare Media Services",
+   "pro": [
+    "Corte ben tenuta con poche unità, termoautonomo",
+    "Terrazzo e cantina, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Ultimo piano senza ascensore",
+    "Annuncio non aggiornato da maggio 2025: verificare che sia disponibile"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "122412740",
+   "comune": "Novi Ligure",
+   "p": "AL",
+   "prezzo": 59000,
+   "mq": 73,
+   "locali": 4,
+   "bagni": 1,
+   "piano": "4",
+   "stato": "nuovo",
+   "classe": "E",
+   "arredato": false,
+   "indirizzo": "Corso Piave 5, Centro, Novi Ligure",
+   "titolo": "Quadrilocale rinnovato in centro a Novi Ligure",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1762298666/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762298646/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762298648/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762298652/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762298662/m-c.jpg"
+   ],
+   "aggiornato": "21/09/2026",
+   "agenzia": "Tecnocasa Novi Uno",
+   "pro": [
+    "Dichiarato come nuovo: pavimenti e infissi rifatti",
+    "Centro, terrazza e posto auto"
+   ],
+   "contro": [
+    "Quarto e ultimo piano senza ascensore",
+    "Spese 167 €/mese (riscaldamento centralizzato)"
+   ],
+   "spese_mese": 167,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "129927340",
+   "comune": "Tortona",
+   "p": "AL",
+   "prezzo": 60000,
+   "mq": 80,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Emilia 146, Centro storico, Tortona",
+   "titolo": "Grande bilocale in palazzo dell'800, centro storico di Tortona",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2047617983/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1945308568/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2047648943/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1945308540/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1945308578/m-c.jpg"
+   ],
+   "aggiornato": "16/11/2026",
+   "agenzia": "Re/Max Gold",
+   "pro": [
+    "Centro storico, soffitti alti, cucina moderna",
+    "Spese basse (35-45 €/mese), terrazza"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore",
+    "Classe G"
+   ],
+   "spese_mese": 45,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "121364238",
+   "comune": "Borgomanero",
+   "p": "NO",
+   "prezzo": 52000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "buono",
+   "classe": "",
+   "arredato": true,
+   "indirizzo": "Corso Roma, Centro, Borgomanero",
+   "titolo": "Bilocale già a reddito sul corso, Borgomanero",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2029077166/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2029076942/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2029077064/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2029076986/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2029077030/m-c.jpg"
+   ],
+   "aggiornato": "14/10/2026",
+   "agenzia": "Dierre Servizi Immobiliari",
+   "pro": [
+    "Già affittato: rende da subito",
+    "Centro, sul corso principale, spese 15 €/mese"
+   ],
+   "contro": [
+    "Canone attuale non indicato: chiederlo all'agenzia",
+    "Cucina datata"
+   ],
+   "spese_mese": 15,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "134359511",
+   "comune": "Sondrio",
+   "p": "SO",
+   "prezzo": 55000,
+   "mq": 34,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "R",
+   "stato": "buono",
+   "classe": "",
+   "arredato": true,
+   "indirizzo": "Via Stelvio 3, Centro, Sondrio",
+   "titolo": "Monolocale con terrazzo in centro a Sondrio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2047030739/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2047042273/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2047042275/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2047042279/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2047042285/m-c.jpg"
+   ],
+   "aggiornato": "17/11/2026",
+   "agenzia": "Democase",
+   "pro": [
+    "Terrazzo vivibile, ascensore, condominio ordinato",
+    "Centro di Sondrio: porta della Valtellina"
+   ],
+   "contro": [
+    "Solo 34 m²",
+    "Classe e spese non indicate"
+   ],
+   "spese_mese": 60,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "133829174",
+   "comune": "Codogno",
+   "p": "LO",
+   "prezzo": 59000,
+   "mq": 79,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "3",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Gerolamo Belloni 5, Centro, Codogno",
+   "titolo": "Mansarda luminosa all'ultimo piano, Codogno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2035558352/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2035558552/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2035558560/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2035558568/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2035558574/m-c.jpg"
+   ],
+   "aggiornato": "23/10/2026",
+   "agenzia": "Studio Immobiliare Bellani",
+   "pro": [
+    "Ultimo piano con ascensore, 70 m² calpestabili",
+    "Riscaldamento autonomo, balcone"
+   ],
+   "contro": [
+    "Mansardato: altezze ridotte in parte",
+    "Classe G, spese 80 €/mese"
+   ],
+   "spese_mese": 80,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "115236805",
+   "comune": "Varese",
+   "p": "VA",
+   "prezzo": 55000,
+   "mq": 45,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "ristrutturato",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Casbeno, Varese",
+   "titolo": "Bilocale in caseggiato ristrutturato a Casbeno, Varese",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1588742457/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1588742475/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1588742491/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1588742501/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1588742525/m-c.jpg"
+   ],
+   "aggiornato": "11/10/2024",
+   "agenzia": "Novacapital",
+   "pro": [
+    "Caseggiato di 4 famiglie ristrutturato, ingresso indipendente",
+    "Libero subito, posto auto, due locali rustici in più"
+   ],
+   "contro": [
+    "Annuncio fermo da ottobre 2024: verificare che sia disponibile",
+    "Arredi datati"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "123598597",
+   "comune": "Castione della Presolana",
+   "p": "BG",
+   "prezzo": 57000,
+   "mq": 37,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Cantoniera 49, Bratto, Castione della Presolana",
+   "titolo": "Bilocale rinnovato a Bratto, Castione della Presolana",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1793464521/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1793464509/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1793464505/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1793464507/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1793464511/m-c.jpg"
+   ],
+   "aggiornato": "19/05/2026",
+   "agenzia": "Teorema Immobiliare Presolana",
+   "pro": [
+    "Rinnovato, arredato moderno, grande giardino comune",
+    "Zona sci e montagna: buona per affitti brevi"
+   ],
+   "contro": [
+    "37 m²",
+    "Classe G, spese non indicate"
+   ],
+   "spese_mese": 50,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "132860062",
+   "comune": "La Spezia",
+   "p": "SP",
+   "prezzo": 59500,
+   "mq": 57,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Piazza di Biassa 21, Biassa, La Spezia",
+   "titolo": "Terratetto con balcone vista mare a Biassa, sopra le 5 Terre",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2013900930/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2013917178/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2013917224/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2013917268/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2013917338/m-c.jpg"
+   ],
+   "aggiornato": "25/09/2026",
+   "agenzia": "VR Immobiliare",
+   "pro": [
+    "Borgo di Biassa sui sentieri delle 5 Terre: forte richiesta turistica",
+    "Ingresso indipendente, balcone vista mare, cantina di 19 m²"
+   ],
+   "contro": [
+    "Su tre livelli, da personalizzare",
+    "Raggiungibile solo in auto o bus da La Spezia"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
+  },
+  {
+   "id": "132508518",
+   "comune": "Cardano al Campo",
+   "p": "VA",
+   "prezzo": 59000,
+   "mq": 51,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "F",
+   "arredato": true,
+   "indirizzo": "Via XX Settembre 22, Centro, Cardano al Campo",
+   "titolo": "Bilocale senza spese condominiali a Cardano al Campo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2006476434/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2006476446/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2006476454/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2006476462/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2006476478/m-c.jpg"
+   ],
+   "aggiornato": "03/10/2026",
+   "agenzia": "Tecnocasa Sant'Anastasio",
+   "pro": [
+    "Nessuna spesa comune, termoautonomo, cucina arredata",
+    "10 minuti da Malpensa"
+   ],
+   "contro": [
+    "Piano terra",
+    "Arredi datati, classe F"
+   ],
+   "spese_mese": 0,
+   "trovato": "2026-11-20"
   }
  ],
  "scartati": [
@@ -191,6 +943,56 @@
    "id": "125174323",
    "comune": "Chiavenna",
    "motivo": "da ristrutturare completamente"
+  },
+  {
+   "id": "124269761",
+   "comune": "Mandello del Lario",
+   "motivo": "casello di montagna isolato all'Alpe Cetra"
+  },
+  {
+   "id": "126073047",
+   "comune": "Borgomanero",
+   "motivo": "è un locale commerciale, non un'abitazione"
+  },
+  {
+   "id": "134554953",
+   "comune": "Gallarate",
+   "motivo": "asta giudiziaria"
+  },
+  {
+   "id": "134331491",
+   "comune": "Gallarate",
+   "motivo": "asta giudiziaria"
+  },
+  {
+   "id": "134836595",
+   "comune": "Varese",
+   "motivo": "spese condominiali 240 €/mese"
+  },
+  {
+   "id": "133835064",
+   "comune": "Genova",
+   "motivo": "nuda proprietà"
+  },
+  {
+   "id": "118712667",
+   "comune": "Genova",
+   "motivo": "cucina da rifare (muri e piastrelle rovinati)"
+  },
+  {
+   "id": "130051978",
+   "comune": "Vigevano",
+   "motivo": "bagno e pavimenti datati, spese 180 €/mese"
+  },
+  {
+   "id": "117568737",
+   "comune": "Erba",
+   "motivo": "foto con scritta VENDUTO"
+  },
+  {
+   "id": "133326480",
+   "comune": "Abbiategrasso",
+   "motivo": "foto disordinate, ambienti datati: non valutabile"
   }
  ]
 }

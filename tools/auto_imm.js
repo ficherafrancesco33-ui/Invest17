@@ -5,7 +5,7 @@ const R = p => path.join(__dirname, "..", p);
 eval(fs.readFileSync(R("data/territorio.js"), "utf8") + ";globalThis.TERR=TERR");
 const raw = JSON.parse(fs.readFileSync(R("tools/auto_raw.json"), "utf8"));
 const hav = (a, b, c, d) => { const r = Math.PI / 180, x = Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2; return 12742000 * Math.asin(Math.sqrt(x)); };
-const REG = { SO: "Lombardia", LC: "Lombardia", CO: "Lombardia", BS: "Lombardia", BG: "Lombardia", VA: "Lombardia", VB: "Piemonte", NO: "Piemonte", SP: "Liguria", GE: "Liguria", VR: "Veneto" };
+const REG = { SO: "Lombardia", LC: "Lombardia", CO: "Lombardia", BS: "Lombardia", BG: "Lombardia", VA: "Lombardia", VB: "Piemonte", NO: "Piemonte", SP: "Liguria", GE: "Liguria", VR: "Veneto", AL: "Piemonte", PV: "Lombardia", LO: "Lombardia", MI: "Lombardia", PC: "Emilia-Romagna" };
 const out = raw.annunci.map(a => {
   const c = TERR.comuni.find(x => x[0] === a.comune && x[1] === a.p) || [a.comune, a.p, null, 0, null];
   const [, , vMq, , aff] = c, co = TERR.coord[a.comune] || raw.coord[a.comune];
