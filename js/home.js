@@ -49,6 +49,7 @@ function vHomeK() {
       <span class="t10t"><small>${esc([im.comune, im.zona].filter(Boolean).join(" · "))}</small><em>${esc(im.titolo || "Immobile")}</em>
       <span>${eur(im.prezzo)} · ${num(im.mq)} m² · netto <strong>${pct(x.A.rend)}</strong>${x.A.best ? ` come ${CATS[x.A.best]}` : ""}</span></span>
       <i class="t10s" style="--pc:${st.col}">${x.A.score}</i></a>`; }).join("") || `<p class="note">Mandami un link per iniziare la classifica.</p>`}</div>
+  <a class="homecm" href="#completa"><span><b>Completa Milano</b>Tocca le zone sulla mappa e raccogli i link di Immobiliare</span><em>${TERR.milano.micro.filter(m => cmLinks()[m.n]).length}/${TERR.milano.micro.length}</em></a>
   <h2>Dove cercare <small><a href="#inv/dove">Tutti i comuni</a></small></h2>
   <div class="chips" id="dovek">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${k === store.get("dove_k", "breve") ? "on" : ""}" data-k="${k}">${t}</button>`).join("")}</div>
   <div id="dove">${homeDove()}</div>

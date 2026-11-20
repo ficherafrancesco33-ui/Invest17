@@ -48,6 +48,7 @@ function vMilanoHub() {
     ${Object.entries(MI_MODI).map(([k, m]) => `<a class="hubc ${k === "cliente" ? "big" : ""}" href="#milano/${k}">${ico(k, "hi")}<small>${esc(m.c)}</small><b>${esc(m.t)}</b><span>${esc(m.d)}</span>
       ${k === "privati" && nuovi ? `<em class="hubn">${nuovi} nuov${nuovi === 1 ? "o" : "i"}</em>` : ""}${k === "privati" ? `<i class="hubf">${np} annunci di privati</i>` : ""}</a>`).join("")}
   </div>
+  <a class="homecm" href="#completa"><span><b>Completa Milano</b>Raccogli i link di Immobiliare zona per zona per riempire la mappa di annunci</span><em>${TERR.milano.micro.filter(m => cmLinks()[m.n]).length}/${TERR.milano.micro.length}</em></a>
   ${vSalvate("milano")}`;
 }
 function afterMilanoHub() {}

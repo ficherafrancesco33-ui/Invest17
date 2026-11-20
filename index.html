@@ -485,6 +485,14 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .lblist button{border:0;background:none;color:var(--muted);font-size:15px;cursor:pointer}
 .lbadd{display:block;margin-top:4px;border:1px solid var(--line2);background:transparent;color:var(--cy2);border-radius:999px;padding:2px 8px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--body);font-style:normal}
 .lbadd.on{background:var(--cy);color:var(--on);border-color:var(--cy)}
+.cmprog{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.cmprog b{font-family:var(--display);font-style:italic;font-size:18px;color:var(--cy2)}.cmprog>span{font-size:12px;color:var(--muted)}
+.cmbar{flex:1 1 100%;height:10px;border-radius:5px;background:var(--card2);overflow:hidden;display:flex}.cmbar span{display:block;height:100%;background:#22c55e}.cmbar span.ap{background:#f2b84b}
+.cmz{border:1px solid var(--line);border-radius:14px;margin:6px 0;background:var(--card);padding:4px 10px}
+.cmz summary{display:flex;justify-content:space-between;padding:8px 0;cursor:pointer}.cmz summary span{color:var(--muted);font-size:13px}
+.cmr{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}.cmr i{width:12px;height:12px;border-radius:50%;flex:none}.cmr span{flex:1;font-size:14px}
+.cmr .btn{padding:6px 10px;font-size:13px}
+.homecm{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tx);border:1px solid var(--line2);border-radius:16px;padding:12px 14px;background:var(--card);margin-top:8px}
+.homecm b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:18px;text-transform:uppercase;color:var(--cy2)}.homecm span{font-size:12.5px;color:var(--tx2)}.homecm em{margin-left:auto;font-style:italic;font-family:var(--display);font-weight:800;font-size:20px;color:var(--cy2)}
 .dvt{display:flex;flex-wrap:wrap;gap:4px}.dvt span{font-size:10.5px;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--tx2)}
 .dvtags{flex-wrap:wrap!important}
 .btn4{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -544,6 +552,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 <script src="js/milmap.js"></script>
 <script src="js/hub.js"></script>
 <script src="js/home.js"></script>
+<script src="js/completa.js"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */
@@ -981,6 +990,7 @@ function render(keepScroll) {
   else if (v === "guida") html = vGuida(a);
   else if (v === "inv") { html = vInv(a, b, c); after = () => afterInv(a, b, c); }
   else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
+  else if (v === "completa") { html = vCompleta(); after = afterCompleta; }
   else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
   else { html = vHomeK(); after = afterHomeK; }
   const INVK = { miei: "archivio", auto: "auto", brevi: "dove" };
