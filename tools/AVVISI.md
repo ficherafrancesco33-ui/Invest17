@@ -60,3 +60,7 @@ Controlla che l'app si apra senza errori (server locale + Playwright, home e `#i
 ## 5. Avvisare Imma
 Solo se c'è qualcosa: notifica breve, in italiano, es. "Keystone: 2 nuovi immobili per investire (Tirano 59.000 €, 90 punti) e 14 annunci a Milano, 2 di privati. 5 scartati (ruderi/aste)." Se Immobiliare ha bloccato, dillo in una riga.
 Se nessun avviso nuovo: nessuna notifica.
+
+## Versione degli script (cache)
+Dopo aver cambiato file in data/ o js/, aggiorna il numero di versione in index.html, altrimenti telefono e computer tengono i file vecchi:
+`V=$(date +%y%m%d%H%M); sed -i -E "s#<script src=\"((js|data)/[a-z_0-9]+\.js)(\?v=[0-9]+)?\"#<script src=\"\1?v=$V\"#g" index.html`
