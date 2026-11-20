@@ -159,7 +159,7 @@ async function mmInit(el) {
   el.innerHTML = "";
   const map = new maplibregl.Map({ container: el, style: mmStile(), center: [9.19, 45.4642], zoom: 12.4, pitch: 52, bearing: -18, maxPitch: 75,
     attributionControl: { compact: true, customAttribution: "Dati: OpenStreetMap, OpenFreeMap, immobiliare.it, Comune di Milano, openpolis" }, antialias: true, fadeDuration: 0 });
-  MM.map = map; maps.push(map);
+  MM.map = map; maps.push(map); attrChiusa(map);
   map.scrollZoom.disable();
   map.getCanvasContainer().addEventListener("wheel", ev => {
     ev.preventDefault();
@@ -444,6 +444,11 @@ const mmAnnGeo = () => store.get("geo_ann", {});
 const MM_ST = { N: ["Nuovo", 1.10], O: ["Ottimo / ristrutturato", 1.06], B: ["Buono / abitabile", 1.00], R: ["Da ristrutturare", 0.78] };
 const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna", g: "box / posto auto", j: "giardino", p: "portineria" };
 let MM_ANN = null;
+/* crediti delle mappe: solo la piccola "i" (si aprono toccandola), non il riquadro aperto sopra la mappa */
+function attrChiusa(map) {
+  const chiudi = () => map.getContainer().querySelectorAll(".maplibregl-compact-show").forEach(x => x.classList.remove("maplibregl-compact-show"));
+  map.once("load", chiudi); map.once("idle", chiudi); setTimeout(chiudi, 1500);
+}
 function mmAnnunci() {
   if (MM_ANN) return MM_ANN;
   const G = mmAnnGeo(), M = TERR.milano.micro, I = TERR.annunci.imm;

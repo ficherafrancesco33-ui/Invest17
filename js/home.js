@@ -95,7 +95,7 @@ function homeMappa(el, P, opt = {}) {
     if (!document.body.contains(el)) return;
     el.innerHTML = "";
     const map = new maplibregl.Map({ container: el, style: itStile(), center: [9.8, 45.75], zoom: 6.3, pitch: 40, bearing: -8, maxPitch: 70, attributionControl: { compact: true }, cooperativeGestures: false });
-    HOME_MAP = map; map.scrollZoom.disable(); map.touchZoomRotate.enable();
+    HOME_MAP = map; attrChiusa(map); map.scrollZoom.disable(); map.touchZoomRotate.enable();
     el.addEventListener("wheel", e => { if (e.ctrlKey) return; }, { passive: true });
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true, showCompass: false }), "bottom-right");
     map.on("load", () => {
