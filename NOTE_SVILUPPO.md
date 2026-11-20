@@ -102,3 +102,10 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - Stagionalità dei laghi: profilo indicativo `LAKE` in `tools/zone.py` (nessun dato mensile pubblico).
 - Pavia esclusa: in città quasi nulla sotto 60.000 € (2.300-3.300 €/m² in centro).
 - Archivio: 62 immobili.
+
+### 20/11/2026 (6) — Aeroporti, ospedali, città vicine: 105 immobili
+- Logica: prima i motori di domanda tutto l'anno (Malpensa, ospedali, università), poi le case economiche vicino.
+- Somma Lombardo e Lonate Pozzolo (Malpensa, 10): affitti brevi con domanda quasi piatta (AirDNA Somma 52%, Cardano 57%); profilo `AIR`.
+- Vigevano (7, ospedale, 25 min da Badile), Novara (4, ospedale + università), Voghera (19, ospedale + stazione): affitto lungo + scenario MEDIO TERMINE (`medio_k`: canone arredato transitorio +25-30%, 10 mesi).
+- Castione +3. Escluse: Pavia (San Matteo) e Rozzano (Humanitas): quasi nulla sotto 60.000 €; Oggebbio/Ghiffa: niente sotto 65.000 €.
+- In `zone.py`: campi `medio_k`, `cond` (condominio reale), `comune` per immobile.

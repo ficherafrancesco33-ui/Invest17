@@ -7733,5 +7733,4581 @@ const MIEI = [
    ],
    "note": "Comparabili: annunci in vendita a Maccagno con Pino e Veddasca con metratura vicina (raccolti il 20/11/2026)."
   }
+ },
+ {
+  "id": "somma-a",
+  "titolo": "Monolocale centrale ristrutturato in corte di 3 famiglie",
+  "url": "https://case.trovit.it/detail/trovit-IT-8740005790676634465",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Centro",
+  "lat": 45.684,
+  "lng": 8.706,
+  "pos_indicativa": true,
+  "prezzo": 39000,
+  "mq": 35,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 75,
+    "occ": 0.5,
+    "mesi": [
+     0.432,
+     0.432,
+     0.483,
+     0.508,
+     0.534,
+     0.534,
+     0.559,
+     0.508,
+     0.534,
+     0.508,
+     0.483,
+     0.483
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "A 4 km da Malpensa, libero subito",
+    "Corte di sole 3 famiglie: spese minime"
+   ],
+   "contro": [
+    "Ristrutturato nel 2005: da rinfrescare per gli ospiti",
+    "Monolocale piccolo"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-b",
+  "titolo": "Monolocale con balcone in centro",
+  "url": "https://case.trovit.it/detail/trovit-IT-5720005794393276443",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Centro",
+  "lat": 45.685,
+  "lng": 8.704,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 45,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 80,
+    "occ": 0.5,
+    "mesi": [
+     0.432,
+     0.432,
+     0.483,
+     0.508,
+     0.534,
+     0.534,
+     0.559,
+     0.508,
+     0.534,
+     0.508,
+     0.483,
+     0.483
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "45 m² con balcone, in centro"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 52 m²",
+     "prezzo": 55000,
+     "mq": 52
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-c",
+  "titolo": "Monolocale ristrutturato con giardino nel centro storico",
+  "url": "https://case.trovit.it/detail/trovit-IT-5130005793182192651",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Centro storico",
+  "lat": 45.6835,
+  "lng": 8.7065,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 45,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.52,
+    "mesi": [
+     0.449,
+     0.449,
+     0.502,
+     0.529,
+     0.555,
+     0.555,
+     0.582,
+     0.529,
+     0.555,
+     0.529,
+     0.502,
+     0.502
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato, con giardino e spese minime",
+    "Pronto per gli ospiti dell'aeroporto"
+   ],
+   "contro": [
+    "Piano terra in cortile"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 52 m²",
+     "prezzo": 55000,
+     "mq": 52
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-d",
+  "titolo": "Porzione di casa su due piani nel centro storico",
+  "url": "https://case.trovit.it/detail/trovit-IT-2690000792837012207",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Centro storico",
+  "lat": 45.6838,
+  "lng": 8.7055,
+  "pos_indicativa": true,
+  "prezzo": 30000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 6000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 480,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 620,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 90,
+    "occ": 0.5,
+    "mesi": [
+     0.432,
+     0.432,
+     0.483,
+     0.508,
+     0.534,
+     0.534,
+     0.559,
+     0.508,
+     0.534,
+     0.508,
+     0.483,
+     0.483
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "30.000 € per 60 m² indipendenti",
+    "Nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Stato non descritto: ho previsto 6.000 € di lavori"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 60 m²",
+     "prezzo": 98000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 52 m²",
+     "prezzo": 55000,
+     "mq": 52
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-e",
+  "titolo": "Appartamento nuovo nella frazione di Coarezza",
+  "url": "https://case.trovit.it/detail/trovit-IT-1740000794997066338",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Coarezza",
+  "lat": 45.668,
+  "lng": 8.7,
+  "pos_indicativa": true,
+  "prezzo": 34870,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.48,
+    "mesi": [
+     0.415,
+     0.415,
+     0.464,
+     0.488,
+     0.513,
+     0.513,
+     0.537,
+     0.488,
+     0.513,
+     0.488,
+     0.464,
+     0.464
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Nuovo, molto richiesto sul portale",
+    "Prezzo bassissimo per un nuovo"
+   ],
+   "contro": [
+    "Coarezza è una frazione: serve l'auto"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 52 m²",
+     "prezzo": 55000,
+     "mq": 52
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-f",
+  "titolo": "Bilocale senza spese condominiali vicino al verde",
+  "url": "https://case.trovit.it/detail/trovit-IT-7450000791454729178",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Coarezza",
+  "lat": 45.669,
+  "lng": 8.701,
+  "pos_indicativa": true,
+  "prezzo": 26000,
+  "mq": 46,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.48,
+    "mesi": [
+     0.415,
+     0.415,
+     0.464,
+     0.488,
+     0.513,
+     0.513,
+     0.537,
+     0.488,
+     0.513,
+     0.488,
+     0.464,
+     0.464
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "26.000 €, indipendente e senza spese"
+   ],
+   "contro": [
+    "Stato non descritto: ho previsto 2.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "somma-g",
+  "titolo": "Bilocale in zona residenziale",
+  "url": "https://case.trovit.it/detail/trovit-IT-5540002741699481402",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Somma Lombardo",
+  "zona": "Coarezza",
+  "lat": 45.6695,
+  "lng": 8.699,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 52,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 550,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 90,
+    "occ": 0.48,
+    "mesi": [
+     0.415,
+     0.415,
+     0.464,
+     0.488,
+     0.513,
+     0.513,
+     0.537,
+     0.488,
+     0.513,
+     0.488,
+     0.464,
+     0.464
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Bilocale vero, con camera separata"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "lonate-a",
+  "titolo": "Quadrilocale all'ultimo piano in corte di tre famiglie",
+  "url": "https://case.trovit.it/appartamento-lonate-pozzolo",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Lonate Pozzolo",
+  "zona": "Sant'Antonino Ticino",
+  "lat": 45.602,
+  "lng": 8.734,
+  "pos_indicativa": true,
+  "prezzo": 47000,
+  "mq": 95,
+  "locali": 4,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 5000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 700,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 910,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 110,
+    "occ": 0.45,
+    "mesi": [
+     0.389,
+     0.389,
+     0.435,
+     0.458,
+     0.481,
+     0.481,
+     0.503,
+     0.458,
+     0.481,
+     0.458,
+     0.435,
+     0.435
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "95 m² a 495 €/m², a pochi minuti da Malpensa",
+    "Adatto a gruppi o a stanze per lavoratori"
+   ],
+   "contro": [
+    "Ho previsto 5.000 € di ritocchi",
+    "In corte: verificare il parcheggio"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 95 m²",
+     "prezzo": 80000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 92 m²",
+     "prezzo": 99000,
+     "mq": 92
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 90 m²",
+     "prezzo": 79000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 88 m²",
+     "prezzo": 99000,
+     "mq": 88
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 85 m²",
+     "prezzo": 97000,
+     "mq": 85
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 106 m²",
+     "prezzo": 95000,
+     "mq": 106
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-a",
+  "titolo": "Trilocale al piano terra in zona tranquilla",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8500000791454678818",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Via Ceresio",
+  "lat": 45.322,
+  "lng": 8.866,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 60,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://images.nestoria.com/v1/eyJrZXkiOiJhcHBhcnRhbWVudG9faW5fdmVuZGl0YV9hX3ZpZ2V2YW5vX3B2Xzg1MDAwMDA3OTE0NTQ2Mjk1ODdpMy5qcGciLCJicmFuZCI6Im5lc3RvcmlhIiwiY291bnRyeSI6IklUIiwid2lkdGgiOjY0MCwiaGVpZ2h0Ijo0ODB9",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 540,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 680,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Due camere: adatto anche a stanze per personale ospedaliero"
+   ],
+   "contro": [
+    "Piano terra"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-b",
+  "titolo": "Bilocale con terrazzo in via Pompei",
+  "url": "https://www.nestoria.it/appartamenti/vendita/via-valeggio_vigevano?page=6",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Via Pompei",
+  "lat": 45.313,
+  "lng": 8.853,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 50,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 560,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Terrazzo"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-c",
+  "titolo": "Trilocale di 67 m² a 877 €/m²",
+  "url": "https://www.nestoria.it/appartamenti/vendita/viale-della-liberta_vigevano",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Vigevano",
+  "lat": 45.318,
+  "lng": 8.85,
+  "pos_indicativa": true,
+  "prezzo": 58800,
+  "mq": 67,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 600,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 750,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Prezzo al m² tra i più bassi della città"
+   ],
+   "contro": [
+    "Indirizzo non indicato nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 73000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-d",
+  "titolo": "Bilocale abitabile con riscaldamento autonomo",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8020005793354953323",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Corso Pavia",
+  "lat": 45.311,
+  "lng": 8.866,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 540,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 680,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già abitabile, riscaldamento autonomo"
+   ],
+   "contro": [
+    "Primo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-e",
+  "titolo": "Bilocale con doppi vetri e bagno finestrato",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8910005792231891663",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Via Giusti",
+  "lat": 45.319,
+  "lng": 8.861,
+  "pos_indicativa": true,
+  "prezzo": 49000,
+  "mq": 42,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 520,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Piccolo e facile da affittare",
+    "Infissi con doppi vetri"
+   ],
+   "contro": [
+    "Secondo piano"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-f",
+  "titolo": "Bilocale con box auto vicino al centro",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-2250005783591827673",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Via Risorgimento",
+  "lat": 45.316,
+  "lng": 8.857,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 52,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 470,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 590,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Box auto compreso",
+    "Vicino al centro"
+   ],
+   "contro": [
+    "Primo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vigevano-g",
+  "titolo": "Bilocale con cantina e posto auto, buone condizioni",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-6640005785838262914",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Vigevano",
+  "zona": "Strada San Marco",
+  "lat": 45.306,
+  "lng": 8.87,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 57,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 510,
+    "stima": true,
+    "fonte": "Bilocali in affitto a Vigevano tra 600 e 700 € al mese, arredati (Wikicasa, Nestoria, Mioaffitto). Usato circa 9 €/m² non arredato"
+   },
+   "medio": {
+    "canone": 640,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Posto auto e cantina",
+    "Buone condizioni"
+   ],
+   "contro": [
+    "Zona periferica, piano terra"
+   ]
+  },
+  "eventi": [
+   "Ospedale Civile di Vigevano: richieste di affitto da personale sanitario e familiari (annunci 'adiacente ospedale')",
+   "Affitti transitori arredati richiesti da professionisti in trasferta (fino a 1.000 € al mese con utenze)",
+   "Piazza Ducale e centro storico attraggono anche turismo di giornata",
+   "25 minuti da Badile, 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "Affitti di bilocali a Vigevano (Nestoria)",
+    "url": "https://www.nestoria.it/appartamenti/affitto/via-verdi_vigevano"
+   },
+   {
+    "titolo": "Annunci di Vigevano su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/via-ceresio_vigevano"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vigevano, 57 m²",
+     "prezzo": 80000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 60 m²",
+     "prezzo": 69000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 64 m²",
+     "prezzo": 75000,
+     "mq": 64
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 68 m²",
+     "prezzo": 72000,
+     "mq": 68
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 72 m²",
+     "prezzo": 109000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Vigevano, 75 m²",
+     "prezzo": 109000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vigevano con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "novara-a",
+  "titolo": "Bilocale ristrutturato vicino alla facoltà di Farmacia",
+  "url": "https://www.wikicasa.it/annuncio/24911668",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "NO",
+  "comune": "Novara",
+  "zona": "Novara Est",
+  "lat": 45.449,
+  "lng": 8.64,
+  "pos_indicativa": true,
+  "prezzo": 62000,
+  "mq": 46,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 69,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 430,
+    "stima": true,
+    "fonte": "RealAdvisor Novara: affitto medio 111 €/m² l'anno (circa 9,25 €/m² al mese); bilocali tra 455 e 682 €"
+   },
+   "medio": {
+    "canone": 540,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato, ideale per studenti",
+    "Spese condominiali basse (69 €)"
+   ],
+   "contro": [
+    "Leggermente sopra i 60.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale Maggiore della Carità e Università del Piemonte Orientale: studenti, specializzandi e personale sanitario",
+   "Stazione con treni frequenti per Milano (circa 35 minuti)",
+   "Posti letto per studenti in centro a oltre 300 € al mese più spese",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "RealAdvisor: mercato e affitti a Novara",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/28100-novara/corso-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Novara, 48 m²",
+     "prezzo": 67000,
+     "mq": 48
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 50 m²",
+     "prezzo": 50000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 57 m²",
+     "prezzo": 89000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 60 m²",
+     "prezzo": 87000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 85000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 80000,
+     "mq": 61
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Novara con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "novara-b",
+  "titolo": "Bilocale al piano terra proposto come investimento",
+  "url": "https://www.wikicasa.it/annuncio/15193921",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "NO",
+  "comune": "Novara",
+  "zona": "Semicentro",
+  "lat": 45.441,
+  "lng": 8.617,
+  "pos_indicativa": true,
+  "prezzo": 50000,
+  "mq": 50,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 167,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 460,
+    "stima": true,
+    "fonte": "RealAdvisor Novara: affitto medio 111 €/m² l'anno (circa 9,25 €/m² al mese); bilocali tra 455 e 682 €"
+   },
+   "medio": {
+    "canone": 580,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Semicentro, vicino alle stazioni"
+   ],
+   "contro": [
+    "Stabile da ristrutturare: rischio spese straordinarie",
+    "Spese condominiali alte (167 €)"
+   ]
+  },
+  "eventi": [
+   "Ospedale Maggiore della Carità e Università del Piemonte Orientale: studenti, specializzandi e personale sanitario",
+   "Stazione con treni frequenti per Milano (circa 35 minuti)",
+   "Posti letto per studenti in centro a oltre 300 € al mese più spese",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "RealAdvisor: mercato e affitti a Novara",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/28100-novara/corso-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Novara, 48 m²",
+     "prezzo": 67000,
+     "mq": 48
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 46 m²",
+     "prezzo": 62000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 57 m²",
+     "prezzo": 89000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 60 m²",
+     "prezzo": 87000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 85000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 80000,
+     "mq": 61
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Novara con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "novara-c",
+  "titolo": "Bilocale già arredato e affittato vicino alla stazione",
+  "url": "https://www.wikicasa.it/annuncio/26882512",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "NO",
+  "comune": "Novara",
+  "zona": "Corso della Vittoria",
+  "lat": 45.444,
+  "lng": 8.615,
+  "pos_indicativa": true,
+  "prezzo": 67000,
+  "mq": 48,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 440,
+    "stima": true,
+    "fonte": "RealAdvisor Novara: affitto medio 111 €/m² l'anno (circa 9,25 €/m² al mese); bilocali tra 455 e 682 €"
+   },
+   "medio": {
+    "canone": 550,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già arredato e affittato: incassa da subito",
+    "Palazzo con ascensore vicino al centro"
+   ],
+   "contro": [
+    "Sopra il budget di 60.000 €",
+    "Canone attuale da verificare"
+   ]
+  },
+  "eventi": [
+   "Ospedale Maggiore della Carità e Università del Piemonte Orientale: studenti, specializzandi e personale sanitario",
+   "Stazione con treni frequenti per Milano (circa 35 minuti)",
+   "Posti letto per studenti in centro a oltre 300 € al mese più spese",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "RealAdvisor: mercato e affitti a Novara",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/28100-novara/corso-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Novara, 46 m²",
+     "prezzo": 62000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 50 m²",
+     "prezzo": 50000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 57 m²",
+     "prezzo": 89000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 60 m²",
+     "prezzo": 87000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 85000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 80000,
+     "mq": 61
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Novara con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "novara-d",
+  "titolo": "Bilocale di 70 m² su corso Vercelli",
+  "url": "https://www.wikicasa.it/annuncio/18060688",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "NO",
+  "comune": "Novara",
+  "zona": "Corso Vercelli",
+  "lat": 45.452,
+  "lng": 8.605,
+  "pos_indicativa": true,
+  "prezzo": 69000,
+  "mq": 70,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 108,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 560,
+    "stima": true,
+    "fonte": "RealAdvisor Novara: affitto medio 111 €/m² l'anno (circa 9,25 €/m² al mese); bilocali tra 455 e 682 €"
+   },
+   "medio": {
+    "canone": 700,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "70 m² a meno di 1.000 €/m²"
+   ],
+   "contro": [
+    "Terzo piano senza ascensore",
+    "Sopra il budget di 60.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale Maggiore della Carità e Università del Piemonte Orientale: studenti, specializzandi e personale sanitario",
+   "Stazione con treni frequenti per Milano (circa 35 minuti)",
+   "Posti letto per studenti in centro a oltre 300 € al mese più spese",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "RealAdvisor: mercato e affitti a Novara",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/28100-novara/corso-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Novara, 70 m²",
+     "prezzo": 80000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 70 m²",
+     "prezzo": 80000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 69 m²",
+     "prezzo": 77000,
+     "mq": 69
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 73 m²",
+     "prezzo": 79000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 65 m²",
+     "prezzo": 69000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Novara, 61 m²",
+     "prezzo": 85000,
+     "mq": 61
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Novara con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-a",
+  "titolo": "Bilocale all'ultimo piano con terrazzo vicino al Duomo",
+  "url": "https://www.immobiliare.it/annunci/106646055/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Cernaia",
+  "lat": 44.993,
+  "lng": 9.012,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 71,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 560,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Terrazzo e balcone, libero subito",
+    "Vicino al Duomo"
+   ],
+   "contro": [
+    "Quinto piano: verificare l'ascensore"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 70 m²",
+     "prezzo": 54000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 77 m²",
+     "prezzo": 69000,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 80 m²",
+     "prezzo": 60000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 81 m²",
+     "prezzo": 68000,
+     "mq": 81
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-b",
+  "titolo": "Bilocale arredato con ampia terrazza vicino alla stazione",
+  "url": "https://www.immobiliare.it/annunci/127748780/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Scarabelli",
+  "lat": 44.995,
+  "lng": 9.005,
+  "pos_indicativa": true,
+  "prezzo": 63000,
+  "mq": 51,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 410,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ottimo stato, arredato, ascensore",
+    "A pochi passi dalla stazione"
+   ],
+   "contro": [
+    "Leggermente sopra i 60.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 41 m²",
+     "prezzo": 48000,
+     "mq": 41
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 40 m²",
+     "prezzo": 38000,
+     "mq": 40
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-c",
+  "titolo": "Bilocale da personalizzare in via Lucania",
+  "url": "https://www.casa.it/immobili/55121163/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Rondò Carducci",
+  "lat": 44.988,
+  "lng": 9.016,
+  "pos_indicativa": true,
+  "prezzo": 35000,
+  "mq": 36,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 4000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 410,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "35.000 €: ingresso molto basso"
+   ],
+   "contro": [
+    "Da personalizzare: ho previsto 4.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 40 m²",
+     "prezzo": 38000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 41 m²",
+     "prezzo": 48000,
+     "mq": 41
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-d",
+  "titolo": "Trilocale di 110 m² con riscaldamento autonomo",
+  "url": "https://www.nestoria.it/appartamenti/vendita/voghera",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Voghera",
+  "lat": 44.99,
+  "lng": 9.0,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 110,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "110 m² a 536 €/m²",
+    "Adatto a stanze per lavoratori o studenti"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 120000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 114 m²",
+     "prezzo": 68000,
+     "mq": 114
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 98 m²",
+     "prezzo": 65000,
+     "mq": 98
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 96 m²",
+     "prezzo": 59000,
+     "mq": 96
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 93 m²",
+     "prezzo": 109000,
+     "mq": 93
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-j",
+  "titolo": "Monolocale luminoso vicino al centro",
+  "url": "https://case.trovit.it/castione-presolana/5",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Castione",
+  "lat": 45.907,
+  "lng": 10.036,
+  "pos_indicativa": true,
+  "prezzo": 39000,
+  "mq": 41,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.27,
+    "mesi": [
+     0.28,
+     0.335,
+     0.136,
+     0.167,
+     0.193,
+     0.244,
+     0.437,
+     0.575,
+     0.305,
+     0.154,
+     0.168,
+     0.247
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Luminoso, 41 m²"
+   ],
+   "contro": [
+    "Da arredare"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 40 m²",
+     "prezzo": 70000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-k",
+  "titolo": "Bilocale in via dei Mille",
+  "url": "https://case.trovit.it/appartamento-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Castione",
+  "lat": 45.9065,
+  "lng": 10.034,
+  "pos_indicativa": true,
+  "prezzo": 42000,
+  "mq": 46,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.27,
+    "mesi": [
+     0.28,
+     0.335,
+     0.136,
+     0.167,
+     0.193,
+     0.244,
+     0.437,
+     0.575,
+     0.305,
+     0.154,
+     0.168,
+     0.247
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Bilocale a 913 €/m² in centro"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 110000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-l",
+  "titolo": "Monolocale in via Privata dei Mille",
+  "url": "https://case.trovit.it/castione-presolana/2",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Castione",
+  "lat": 45.9068,
+  "lng": 10.0345,
+  "pos_indicativa": true,
+  "prezzo": 39000,
+  "mq": 38,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.27,
+    "mesi": [
+     0.28,
+     0.335,
+     0.136,
+     0.167,
+     0.193,
+     0.244,
+     0.437,
+     0.575,
+     0.305,
+     0.154,
+     0.168,
+     0.247
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Molto richiesto sul portale"
+   ],
+   "contro": [
+    "Piccolo"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 40 m²",
+     "prezzo": 70000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-e",
+  "titolo": "Trilocale con ascensore, due camere, balcone e cantina",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8180003781863653890",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Dentici",
+  "lat": 44.9882,
+  "lng": 9.0026,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 96,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "96 m² a 615 €/m²",
+    "Due camere: adatto a famiglie o a stanze"
+   ],
+   "contro": [
+    "Primo piano: chiedere lo stato degli impianti"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 98 m²",
+     "prezzo": 65000,
+     "mq": 98
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 93 m²",
+     "prezzo": 109000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 90 m²",
+     "prezzo": 58000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 85 m²",
+     "prezzo": 55000,
+     "mq": 85
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 120000,
+     "mq": 110
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-f",
+  "titolo": "Trilocale al terzo piano con ascensore",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-7790003782209310768",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Amendola",
+  "lat": 44.9966,
+  "lng": 9.0106,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 80,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Buono stato, ascensore"
+   ],
+   "contro": [
+    "Palazzo del 1968"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 81 m²",
+     "prezzo": 68000,
+     "mq": 81
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 77 m²",
+     "prezzo": 69000,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 85 m²",
+     "prezzo": 55000,
+     "mq": 85
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 71 m²",
+     "prezzo": 55000,
+     "mq": 71
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 90 m²",
+     "prezzo": 58000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 70 m²",
+     "prezzo": 54000,
+     "mq": 70
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-g",
+  "titolo": "Quadrilocale arredato, abitabile subito",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-7370002791627061219",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Viale Repubblica",
+  "lat": 44.9942,
+  "lng": 9.0042,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 90,
+  "locali": 4,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredato e ben tenuto: affittabile subito",
+    "Piano alto, luminoso, cantina e balcone"
+   ],
+   "contro": [
+    "Grande per un singolo inquilino: valutare affitto a stanze"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 93 m²",
+     "prezzo": 109000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 85 m²",
+     "prezzo": 55000,
+     "mq": 85
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 96 m²",
+     "prezzo": 59000,
+     "mq": 96
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 98 m²",
+     "prezzo": 65000,
+     "mq": 98
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 81 m²",
+     "prezzo": 68000,
+     "mq": 81
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-h",
+  "titolo": "Bilocale pronto da abitare con letto soppalcato",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-4030005790676550117",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Uberti, centro",
+  "lat": 44.9918,
+  "lng": 9.0122,
+  "pos_indicativa": true,
+  "prezzo": 50000,
+  "mq": 54,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 350,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 440,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Pronto da abitare, in centro"
+   ],
+   "contro": [
+    "Piano terra"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-i",
+  "titolo": "Bilocale trasformabile in trilocale con ascensore",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-3620003781863824856",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Covini",
+  "lat": 44.9894,
+  "lng": 9.0058,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 85,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 560,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "85 m² ben tenuti, zona tranquilla",
+    "Si può ricavare una seconda camera"
+   ],
+   "contro": [
+    "Pochi dettagli sulle spese"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 81 m²",
+     "prezzo": 68000,
+     "mq": 81
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 80 m²",
+     "prezzo": 60000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 90 m²",
+     "prezzo": 58000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 77 m²",
+     "prezzo": 69000,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 93 m²",
+     "prezzo": 109000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-j",
+  "titolo": "Monolocale in via Scarabelli",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-6850005786788587493",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Emilia",
+  "lat": 44.9978,
+  "lng": 9.0138,
+  "pos_indicativa": true,
+  "prezzo": 26000,
+  "mq": 30,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 410,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "26.000 €: il più economico della città"
+   ],
+   "contro": [
+    "Pochissime informazioni nell'annuncio: ho previsto 2.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 36 m²",
+     "prezzo": 35000,
+     "mq": 36
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 40 m²",
+     "prezzo": 38000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 41 m²",
+     "prezzo": 48000,
+     "mq": 41
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-k",
+  "titolo": "Bilocale ampio ristrutturato con ascensore e cantina",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-5720003782209489518",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Inizio via Repubblica",
+  "lat": 44.9954,
+  "lng": 9.0074,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 65,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 520,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato di recente",
+    "Quarto piano con ascensore"
+   ],
+   "contro": [
+    "Al limite del budget"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 70 m²",
+     "prezzo": 54000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 71 m²",
+     "prezzo": 55000,
+     "mq": 71
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-l",
+  "titolo": "Bilocale vicino alla stazione con balcone e cantina",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-5540005790244546491",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Garibaldi",
+  "lat": 44.993,
+  "lng": 9.0154,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 61,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 400,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 500,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Vicino a stazione e servizi"
+   ],
+   "contro": [
+    "Primo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 70 m²",
+     "prezzo": 54000,
+     "mq": 70
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-m",
+  "titolo": "Bilocale già gestito come B&B, ottime condizioni",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-5290003781863871204",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Dentici, centro",
+  "lat": 44.9906,
+  "lng": 9.009,
+  "pos_indicativa": true,
+  "prezzo": 65000,
+  "mq": 65,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 520,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già attivo come B&B: si può subentrare",
+    "Ascensore, balcone e cantina"
+   ],
+   "contro": [
+    "Sopra il budget di 60.000 €",
+    "Chiedere i numeri reali del B&B al venditore"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 70 m²",
+     "prezzo": 54000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 71 m²",
+     "prezzo": 55000,
+     "mq": 71
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-n",
+  "titolo": "Bilocale con box auto in palazzina nel verde",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-4950005794393221012",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Alberti",
+  "lat": 44.9882,
+  "lng": 9.0026,
+  "pos_indicativa": true,
+  "prezzo": 54000,
+  "mq": 70,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 560,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Box auto e cantina compresi"
+   ],
+   "contro": [
+    "Pochi dettagli sullo stato"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 71 m²",
+     "prezzo": 55000,
+     "mq": 71
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 77 m²",
+     "prezzo": 69000,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-o",
+  "titolo": "Attico su due piani con rooftop panoramico",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-4130005789640139188",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Centro storico",
+  "lat": 44.9966,
+  "lng": 9.0106,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 108,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 3000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Rooftop panoramico a 360 gradi, stabile signorile",
+    "Molto fotogenico per gli annunci"
+   ],
+   "contro": [
+    "Quinto e sesto piano: verificare ascensore e tetto",
+    "Ho previsto 3.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 120000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 59000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 114 m²",
+     "prezzo": 68000,
+     "mq": 114
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 98 m²",
+     "prezzo": 65000,
+     "mq": 98
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 96 m²",
+     "prezzo": 59000,
+     "mq": 96
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-p",
+  "titolo": "Casa di corte con ingresso indipendente e balcone",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-3410003783159958809",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Lomellina",
+  "lat": 44.9942,
+  "lng": 9.0042,
+  "pos_indicativa": true,
+  "prezzo": 38000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 410,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ingresso indipendente",
+    "Vicino a bus e supermercato"
+   ],
+   "contro": [
+    "Zona residenziale lontana dal centro"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 41 m²",
+     "prezzo": 48000,
+     "mq": 41
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 36 m²",
+     "prezzo": 35000,
+     "mq": 36
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-q",
+  "titolo": "Monolocale arredato con terrazzino in palazzina recente",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-3380003781863702365",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Vicino al centro",
+  "lat": 44.9918,
+  "lng": 9.0122,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 41,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 410,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredato, ascensore, terrazzino e cantina",
+    "Palazzina recente"
+   ],
+   "contro": [
+    "Monolocale: adatto a una persona"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 40 m²",
+     "prezzo": 38000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 36 m²",
+     "prezzo": 35000,
+     "mq": 36
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 56 m²",
+     "prezzo": 59000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-r",
+  "titolo": "Trilocale senza spese condominiali, termoautonomo",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-3300003781863867179",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Via Papa Giovanni XXIII",
+  "lat": 44.9894,
+  "lng": 9.0058,
+  "pos_indicativa": true,
+  "prezzo": 65000,
+  "mq": 98,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 650,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Nessuna spesa condominiale",
+    "Riscaldamento autonomo"
+   ],
+   "contro": [
+    "Sopra il budget di 60.000 €"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 96 m²",
+     "prezzo": 59000,
+     "mq": 96
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 93 m²",
+     "prezzo": 109000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 90 m²",
+     "prezzo": 58000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 120000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 110 m²",
+     "prezzo": 59000,
+     "mq": 110
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "voghera-s",
+  "titolo": "Bilocale ristrutturato con impianti nuovi vicino alla stazione",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-3540005793009473014",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "PV",
+  "comune": "Voghera",
+  "zona": "Largo Perosi",
+  "lat": 44.9978,
+  "lng": 9.0138,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 56,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 360,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (provincia di Pavia, città media); da verificare con agenzie locali"
+   },
+   "medio": {
+    "canone": 450,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 25% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato con impianti nuovi",
+    "Vicino alla stazione"
+   ],
+   "contro": [
+    "Piano rialzato"
+   ]
+  },
+  "eventi": [
+   "Ospedale di Voghera: domanda di affitto da personale sanitario",
+   "Stazione sulla linea Milano-Genova: Milano in circa un'ora",
+   "Porta dell'Oltrepò Pavese (vini, colline): turismo enogastronomico",
+   "Circa 50 minuti da Badile"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Voghera su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/voghera"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Voghera, 54 m²",
+     "prezzo": 50000,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 60 m²",
+     "prezzo": 89000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 51 m²",
+     "prezzo": 63000,
+     "mq": 51
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 61 m²",
+     "prezzo": 59000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 60000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Voghera, 65 m²",
+     "prezzo": 65000,
+     "mq": 65
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Voghera con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "lonate-b",
+  "titolo": "Bilocale semiarredato con spese contenute",
+  "url": "https://case.trovit.it/detail/trovit-IT-3190002737205206433",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Lonate Pozzolo",
+  "zona": "Sant'Antonino Ticino",
+  "lat": 45.606,
+  "lng": 8.741,
+  "pos_indicativa": true,
+  "prezzo": 44000,
+  "mq": 48,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.48,
+    "mesi": [
+     0.415,
+     0.415,
+     0.464,
+     0.488,
+     0.513,
+     0.513,
+     0.537,
+     0.488,
+     0.513,
+     0.488,
+     0.464,
+     0.464
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Parzialmente arredato",
+    "A pochi minuti da Malpensa"
+   ],
+   "contro": [
+    "Frazione: serve l'auto"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 83000,
+     "mq": 49
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "lonate-c",
+  "titolo": "Monolocale di 40 m² a Sant'Antonino Ticino",
+  "url": "https://case.trovit.it/detail/trovit-IT-7250005789294287868",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Lonate Pozzolo",
+  "zona": "Sant'Antonino Ticino",
+  "lat": 45.6064,
+  "lng": 8.741399999999999,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 40,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "Stima: circa 8 €/m² al mese (bilocali nella zona di Malpensa intorno ai 550-650 €); nessun dato OMI"
+   },
+   "medio": {
+    "canone": 490,
+    "mesi_occupati": 10,
+    "stima": true,
+    "fonte": "Stima: canone arredato per contratti transitori (1-18 mesi) circa il 30% sopra l'affitto lungo, 10 mesi occupati l'anno"
+   },
+   "breve": {
+    "adr": 80,
+    "occ": 0.48,
+    "mesi": [
+     0.415,
+     0.415,
+     0.464,
+     0.488,
+     0.513,
+     0.513,
+     0.537,
+     0.488,
+     0.513,
+     0.488,
+     0.464,
+     0.464
+    ],
+    "stima": true,
+    "fonte": "AirDNA Somma Lombardo (153 annunci, vicino a Malpensa): occupazione 52%, 114 $ a notte, 12,7 mila $ l'anno; Cardano al Campo: 57% con domanda stabile tutto l'anno. Stagionalita quasi piatta (viaggiatori dell'aeroporto)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Vicino all'aeroporto"
+   ],
+   "contro": [
+    "Caro rispetto agli altri monolocali della zona"
+   ]
+  },
+  "eventi": [
+   "Aeroporto di Malpensa a 5-10 minuti: viaggiatori, equipaggi e lavoratori dell'aeroporto tutto l'anno",
+   "AirDNA dà a Somma Lombardo 98 su 100 come mercato degli affitti brevi",
+   "Domanda costante anche per il medio termine (personale aeroportuale e aziende della zona)",
+   "Circa 45 minuti da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Somma Lombardo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/somma-lombardo/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a Cardano al Campo",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/cardano-al-campo/seasonality"
+   },
+   {
+    "titolo": "Annunci di Somma Lombardo su Trovit",
+    "url": "https://case.trovit.it/appartamento-somma-lombardo"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 35 m²",
+     "prezzo": 39000,
+     "mq": 35
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 48000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 59000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 45 m²",
+     "prezzo": 34870,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 47 m²",
+     "prezzo": 69000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Somma Lombardo, 49 m²",
+     "prezzo": 68000,
+     "mq": 49
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
+  }
  }
 ];
