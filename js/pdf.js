@@ -71,8 +71,10 @@ const PDF_TEMI = { notte: ["Notte morbida", "lo stile dell'app: blu notte, palaz
   sat: ["Satellite", "foto aerea reale con il palazzo evidenziato in oro", "#f2cf5b"] };
 
 /* fotografia della mappa Keystone (stile Notte morbida, palazzi in 3D) da mettere nel PDF */
+let PDF_NOLIB = false;
 async function pdfSnap(o) {
-  try { await mmLoad(); } catch (e) { return null; }
+  if (PDF_NOLIB) return null;
+  try { await Promise.race([mmLoad(), new Promise((_, j) => setTimeout(() => j(new Error("lib")), 12000))]); } catch (e) { PDF_NOLIB = true; return null; }
   if (!window.maplibregl) return null;
   const el = document.createElement("div");
   el.style.cssText = `position:fixed;left:-${o.w + 80}px;top:0;width:${o.w}px;height:${o.h}px;pointer-events:none`;
