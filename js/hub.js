@@ -147,6 +147,7 @@ function vPrivato(id) {
     <tr><td>Venditore</td><td>${a.priv ? "Privato" : "Agenzia"} · ${esc(a.fonte)}</td></tr>
     <tr><td>Online da</td><td>Nell'app dal ${(d => d.split("-").reverse().join("/"))(novDati().dal[String(a.id).replace(/^i/, "")] || "2026-11-20")}</td></tr>
   </tbody></table>
+  ${(o => o && o.cn ? `<p class="note">OMI Agenzia delle Entrate (${OMI_SEM}), zona ${esc(o.cod)}: abitazioni civili ${eur(o.cn[0])}–${eur(o.cn[1])}/m²${o.co ? `, ottimo ${eur(o.co[0])}–${eur(o.co[1])}/m²` : ""}. Questo è a <b>${eur(a.mq2)}/m²</b>.</p>` : "")(typeof omiMi === "function" ? omiMi(a.micro) : null)}
   ${F ? `<h2>Com'è messo rispetto alla zona</h2><p class="note">Prezzi richiesti nella microzona ${esc(mi.n)} (${num(F.n)} annunci): da ristrutturare ${F.r ? eur(F.r[1]) : "—"}/m², buono ${F.b ? eur(F.b[1]) : "—"}/m², ottimo o nuovo ${F.o ? eur(F.o[1]) : "—"}/m². Questo è a <b>${eur(a.mq2)}/m²</b>.</p>` : ""}
   ${near && near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} (${[...x.ln].join(", ")}) ${num(Math.round(x.d / 10) * 10)} m`).join(" · ")}</p>` : ""}
   <div class="btns" style="margin:14px 0"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio ↗</a><button class="btn sec" data-segp="${a.id}">${segIds().has("a:" + a.id) ? "★ Seguito" : "☆ Segui"}</button></div>

@@ -29,6 +29,12 @@ function pdfMappa(lat, lon, z, W, H, pins = [], cls = "", hd = true) {
   return `<div class="mapw ${cls}" style="width:${W}px;height:${H}px"><div class="tiles">${t}</div>${linee ? `<svg width="${W}" height="${H}" style="position:absolute;left:0;top:0">${linee}</svg>` : ""}${P}<span class="osm">© OpenStreetMap</span></div>`;
 }
 
+/* quotazione OMI (Agenzia delle Entrate) della zona OMI che contiene la microzona di Milano */
+function omiMi(micro) {
+  if (typeof OMI === "undefined" || !micro) return null;
+  const cod = OMI_MI[micro], z = cod && OMI["Milano|MI"]?.[cod];
+  return z ? { cod, ...z } : null;
+}
 /* fasce di prezzo della zona: microzona letta per intero, altrimenti zona, altrimenti stima dalla media */
 function pdfFasce(ctx) {
   const F = TERR.milano.fasce || { micro: {}, zone: {} };
@@ -479,7 +485,9 @@ ${gauge}</div>
 ${righeF.map(([k, t]) => `<tr class="${k === gk ? "hl" : ""}"><td>${t}${k === gk ? ' <span class="star">★</span>' : ""}</td><td class="r">${eur(F[k][0])}</td><td class="r">${eur(F[k][2])}</td><td class="r"><b>${eur(F[k][1])}</b></td><td class="r">${F[k][3] || "—"}</td></tr>`).join("")}
 ${ctx.micro ? `<tr><td>Media microzona ${esc(ctx.micro.n)} (Immobiliare.it)</td><td class="r">—</td><td class="r">—</td><td class="r"><b>${eur(ctx.micro.v)}</b></td><td class="r">—</td></tr>` : ""}
 ${ctx.zona ? `<tr><td>Media zona ${esc(ctx.zona.n)} (Immobiliare.it, ${ctx.zona.y >= 0 ? "+" : ""}${num(ctx.zona.y, 1)}% annuo)</td><td class="r">—</td><td class="r">—</td><td class="r"><b>${eur(ctx.zona.v)}</b></td><td class="r">—</td></tr>` : ""}
+${(o => o ? [["cn", "normale"], ["co", "ottimo"], ["sn", "signorili, normale"]].filter(([k]) => o[k]).map(([k, t]) => `<tr><td>OMI zona ${esc(o.cod)}, abitazioni ${k === "sn" ? "" : "civili, "}${t}</td><td class="r">${eur(o[k][0])}</td><td class="r">${eur(o[k][1])}</td><td class="r"><b>${eur((o[k][0] + o[k][1]) / 2)}</b></td><td class="r">—</td></tr>`).join("") : "")(omiMi(ctx.micro?.n))}
 </tbody></table>
+${(o => o ? `<p class="note">Quotazioni OMI dell'Agenzia delle Entrate, ${OMI_SEM.split("/")[1]}° semestre ${OMI_SEM.split("/")[0]}: zona ${esc(o.cod)} – ${esc(o.d.toLowerCase())}. Sono quotazioni ufficiali basate sulle compravendite della zona: di solito più prudenti dei prezzi richiesti negli annunci.${o.cn && o.cn[2] ? ` Affitto OMI: ${num(o.cn[2], 1)}–${num(o.cn[3], 1)} €/m² al mese.` : ""}</p>` : "")(omiMi(ctx.micro?.n))}
 <p class="note">${F.vero ? `Fonte: annunci Immobiliare.it letti il 20/11/2026 nella ${esc(F.dove)}; min e max sono il 25° e il 75° percentile di ogni fascia.` : "Fasce stimate dalla media della zona con gli scarti tipici tra stati di conservazione (per questa zona non è ancora stata fatta una lettura completa degli annunci)."} ★ Fascia dello stato attuale dell'immobile. I pallini sono i comparabili della sezione precedente.</p>`)}
 
 ${sec(comps.length ? 4 : 3, "Rettifiche applicate", `

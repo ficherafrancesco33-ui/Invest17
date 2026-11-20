@@ -154,3 +154,9 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - Modulo: aggiunti anno di costruzione, orientamento (coefficiente S +2%, N −3%), note particolari. Ultimo piano +1,5% se già piano alto.
 - data/nil_demo.js: dati socio-demografici degli 88 NIL (Comune di Milano, schede NIL PGT 2030, anagrafe 2017): residenti, famiglie, % stranieri, densità, % 0-18, % over 65, indice di vecchiaia. Nel PDF il quartiere si trova dai confini NIL (MM.nil) o dal nome; barre confrontate con la media di Milano.
 - Corretto: ZONE_PROFILI non veniva letto nel PDF (const non è su window).
+
+### OMI Agenzia delle Entrate (20/11/2026)
+- Forniture OMI 1° semestre 2026 (tutta Italia) scaricate da Imma: tools/omi/VALORI_20261.csv e ZONE_20261.csv. `python3 tools/omi/omi.py` → data/omi.js (OMI per comune|PR e zona: civili/economiche/signorili, normale/ottimo, vendita e affitto €/m²; OMI_MI microzona Milano → zona OMI, assegnata a mano).
+- Investimenti (tools/auto_imm.js): valutazione.omi = zona OMI dell'annuncio (via trovata nella descrizione zona, altrimenti centro, altrimenti semicentro; `omi_zona` in auto_raw per forzarla); affitto normale stimato col canone OMI medio della zona.
+- Milano: PDF (sezione Fasce) con righe OMI della zona e nota sull'affitto; scheda privato con la fascia OMI.
+- A ogni semestre: riscaricare le forniture, aggiornare SEM e nomi file in omi.py, rilanciare omi.py e auto_imm.js.

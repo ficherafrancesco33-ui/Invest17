@@ -230,7 +230,8 @@
     "Arredi e finiture datati, classe G"
    ],
    "spese_mese": 0,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "omi_zona": "D1"
   },
   {
    "id": "129512758",
@@ -264,7 +265,8 @@
     "Stato non dichiarato nell'annuncio: verificare in visita"
    ],
    "spese_mese": 0,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "omi_zona": "D1"
   },
   {
    "id": "97639908",
@@ -570,7 +572,8 @@
     "Ottavo piano di un palazzo anni '60"
    ],
    "spese_mese": 33,
-   "trovato": "2026-11-20"
+   "trovato": "2026-11-20",
+   "omi_zona": "B1"
   },
   {
    "id": "119810954",
