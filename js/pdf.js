@@ -210,7 +210,8 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   /* --- valori --- */
   const vMin = R5(r.min), vMax = R5(r.max), vMid = R5(r.valore);
   const mqCasa = r.valCasa / r.sup, mqMin = (r.min - r.box) / r.sup, mqMax = (r.max - r.box) / r.sup;
-  const pubbl = Math.round(r.valore / 5000) * 5000;   // il valore è già il prezzo di richiesta in linea con il mercato
+  // il valore è già il prezzo di richiesta di mercato; se il frazionamento vale di più, la pubblicazione sale a metà strada
+  const pubbl = Math.round((r.fraz && r.fraz.valore > r.valore ? (r.valore + r.fraz.valore) / 2 : r.valore) / 5000) * 5000;
 
   /* --- comparabili --- */
   const Cm = r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
@@ -254,6 +255,7 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const pro = [], con = [];
   const spazi = [q.terrazzo ? "terrazzo" : "", q.balcone ? "balconi" : "", q.giardino ? "giardino" : "", q.cantina ? "cantina" : "", boxT].filter(Boolean);
   pro.push(`${q.mq} m² con ${q.locali} locali e ${q.bagni} bagn${q.bagni == 1 ? "o" : "i"}${["nuovo", "ristrutturato", "ottimo"].includes(q.stato) ? ", in " + statoT.toLowerCase() + " stato" : ""}`);
+  if (r.fraz) pro.push(`Frazionabile in ${r.fraz.n} unità da circa ${num(r.fraz.mqU)} m²: interessa anche agli investitori`);
   if (spazi.length) pro.push(spazi.join(", ").replace(/^./, c => c.toUpperCase()) + (spazi.length > 1 ? " inclusi" : " incluso"));
   if (q.piano >= 3 && q.ascensore) pro.push(`${q.ultimo ? "Ultimo piano" : "Piano alto"} con ascensore${q.orient ? ", esposizione " + q.orient.replace("/", " / ").replace("S", "Sud").replace("O", "Ovest").replace("N", "Nord").replace("E", "Est") : ""}`);
   if (q.portineria) pro.push("Portineria nello stabile");
@@ -476,10 +478,10 @@ ${comps.map(a => `<tr class="${a.star ? "hl" : ""}"><td style="white-space:nowra
 <td class="r">${eur(a.p)}</td><td class="r">${a.mq}</td><td class="r"><b style="color:${C.bx}">${eur(a.mq2)}</b></td><td>${a.piano ? (a.piano === "T" ? "Terra" : a.piano === "R" ? "Rialzato" : a.piano === "S" ? "Semint." : a.piano + "°") : "—"}${a.asc ? ", asc." : a.piano && a.piano !== "T" ? ", no asc." : ""}</td>
 <td class="small">${esc((a.d || "").split(", ").filter(x => !/piano|rialzato|seminterrato|^ascensore$/.test(x)).join(", "))}${a.loc ? `, ${a.loc} locali` : ""}</td><td class="r">${a.dist != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "—"}</td></tr>`).join("")}
 </tbody></table>
-<p class="note">Prezzi richiesti negli annunci di ${[...new Set(comps.map(a => a.fonte))].join(" e ")} (novembre 2026). Il prezzo di chiusura è in genere più basso: la differenza è considerata nelle rettifiche.</p>`) : ""}
+<p class="note">Prezzi richiesti negli annunci di ${[...new Set(comps.map(a => a.fonte))].join(" e ")} (novembre 2026). La valutazione è espressa come prezzo di richiesta in linea con questi annunci.</p>`) : ""}
 
 ${sec(comps.length ? 3 : 2, "Fasce di prezzo della zona (cross-check)", `
-<div style="break-inside:avoid"><p class="lead">Le fasce mostrano dove si collocano i prezzi richiesti nella ${esc(F.dove)}${F.vero ? ` (${num(F.n)} annunci letti)` : ""}, divisi per stato dell'immobile. La stima dell'appartamento, <b>${eur(mqMin)}–${eur(mqMax)}/m²</b>, va letta come prezzo di chiusura: è normale che stia un po' sotto i prezzi richiesti della sua fascia.</p>
+<div style="break-inside:avoid"><p class="lead">Le fasce mostrano dove si collocano i prezzi richiesti nella ${esc(F.dove)}${F.vero ? ` (${num(F.n)} annunci letti)` : ""}, divisi per stato dell'immobile. La stima dell'appartamento, <b>${eur(mqMin)}–${eur(mqMax)}/m²</b>, è un prezzo di richiesta: va confrontata con la fascia del suo stato.</p>
 ${gauge}</div>
 <table style="margin-top:6mm"><thead><tr><th>Fascia</th><th class="r">Min €/m²</th><th class="r">Max €/m²</th><th class="r">Media €/m²</th><th class="r">Annunci</th></tr></thead><tbody>
 ${righeF.map(([k, t]) => `<tr class="${k === gk ? "hl" : ""}"><td>${t}${k === gk ? ' <span class="star">★</span>' : ""}</td><td class="r">${eur(F[k][0])}</td><td class="r">${eur(F[k][2])}</td><td class="r"><b>${eur(F[k][1])}</b></td><td class="r">${F[k][3] || "—"}</td></tr>`).join("")}
@@ -503,11 +505,11 @@ ${sec(comps.length ? 5 : 4, "Range di valore stimato", `
       <u style="left:${P(vMin)}%">min ${keur(vMin)}</u><u style="left:${P(vMax)}%">max ${keur(vMax)}</u>
       ${ctx.mode === "cliente" ? `<u style="left:${P(pubbl)}%;top:-17px;color:${C.oro}">pubblicazione ${keur(pubbl)}</u>` : ""}</div>`; })()}
   <div class="meth">
-    <div><small>Metodo 1 · comparabili</small><b>${eur(Math.round(r.valore / 1000) * 1000)}</b><br><span class="small">${eur(r.base)}/m² ${r.cmp ? `da ${r.cmp.nNorm} annunci simili entro ${num(r.cmp.raggio)} m` : "di base"}, rettifiche × ${num(r.kTot * r.st[1], 2)}, su ${num(r.sup, 1)} m²${r.box ? ", + " + boxT : ""}</span></div>
-    <div><small>Metodo 2 · fascia di microzona</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `prezzo mediano richiesto nella microzona per lo stato «${esc(statoT.toLowerCase())}»: ${eur(mDir)}/m²` : "Fascia di microzona non disponibile per un secondo metodo indipendente"}</span></div>
+    <div><small>Metodo 1 · comparabili (peso ${r.m2 ? "75" : "100"}%)</small><b>${eur(Math.round(((r.m1 ?? r.valCasa) + r.box) / 1000) * 1000)}</b><br><span class="small">${eur(r.base)}/m² ${r.cmp ? `da ${r.cmp.nNorm} annunci simili entro ${num(r.cmp.raggio)} m` : "di base"}, rettifiche × ${num(r.kTot * r.st[1], 2)}, su ${num(r.sup, 1)} m²${r.box ? ", + " + boxT : ""}</span></div>
+    <div><small>Metodo 2 · fascia di microzona${r.m2 ? " (peso 25%)" : ""}</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `prezzo mediano richiesto nella microzona per lo stato «${esc(statoT.toLowerCase())}»: ${eur(mDir)}/m²` : "Fascia di microzona non disponibile per un secondo metodo indipendente"}</span></div>
   </div>
 </div>
-<p style="margin-top:3mm"><b style="color:${C.bx};font-weight:600">Motivazione.</b> ${valDir ? (Math.abs(valDir - r.valore) / r.valore < 0.08 ? "I due metodi indipendenti convergono" : valDir > r.valore ? "La fascia della microzona dà un valore più alto: gli annunci più simili e vicini sono un po' più economici della media della microzona" : "La fascia della microzona dà un valore più prudente: gli annunci più simili e vicini all'immobile chiedono di più della media della microzona") + ` (${eur(r.valore)} e ${eur(valDir)}). ` : ""}Il range tiene conto dell'incertezza tipica della stima (±${pct((r.max - r.valore) / r.valore, 0)})${r.box ? `; il ${boxT} (${eur(r.box)}) è valutato a parte e già incluso` : ""}.${ctx.mode === "cliente" ? ` Per la pubblicazione consigliamo <b>${eur(pubbl)}</b>, lasciando un margine di trattativa del 5% circa verso il valore centrale.` : ""} Un sopralluogo è consigliato per confermare stato, dotazioni e spese.</p>`)}
+<p style="margin-top:3mm"><b style="color:${C.bx};font-weight:600">Motivazione.</b> ${valDir ? (Math.abs(valDir - r.valore) / r.valore < 0.08 ? "I due metodi indipendenti convergono" : valDir > r.valore ? "La fascia della microzona dà un valore più alto: gli annunci più simili e vicini sono un po' più economici della media della microzona" : "La fascia della microzona dà un valore più prudente: gli annunci più simili e vicini all'immobile chiedono di più della media della microzona") + ` (${eur((r.m1 ?? r.valCasa) + r.box)} e ${eur(valDir)}). ` : ""}Il range tiene conto dell'incertezza tipica della stima (±${pct((r.max - r.valore) / r.valore, 0)})${r.box ? `; il ${boxT} (${eur(r.box)}) è valutato a parte e già incluso` : ""}.${r.m2 ? ` Il valore centrale pesa per il 75% il metodo dei comparabili e per il 25% la fascia della microzona.` : ""}${r.fraz ? ` L'appartamento è frazionabile in ${r.fraz.n} unità da circa ${num(r.fraz.mqU)} m²: per un investitore vale fino a <b>${eur(r.fraz.valore)}</b> (tagli piccoli ristrutturati a ${eur(r.fraz.eurMq)}/m², meno ${eur(r.fraz.lavori)} di lavori e pratiche e il suo margine), e questo sostiene la parte alta del range.` : ""}${ctx.mode === "cliente" ? ` Per la pubblicazione consigliamo <b>${eur(pubbl)}</b>, in linea con le richieste di oggi.` : ""} Un sopralluogo è consigliato per confermare stato, dotazioni e spese.</p>`)}
 
 ${serv.length ? sec(comps.length ? 6 : 5, "Servizi e vita di quartiere", `
 <p class="lead">${near.staz[0] ? `La metropolitana più vicina è ${esc(near.staz[0].n)} (linea ${[...near.staz[0].ln].join(", ")}), a circa ${mmin(near.staz[0].d)} minuti a piedi.` : "La metropolitana non è raggiungibile a piedi: i collegamenti sono con tram e bus."} Tempi a piedi stimati in linea d'aria a 4,5 km/h dalle posizioni delle attività.</p>

@@ -109,7 +109,7 @@ const V_EPOCA = { nuova: ["Dopo il 2015", 1.04], recente: ["1990–2015", 1.02],
   epoca: ["D'epoca signorile", 1.05], epocapop: ["D'epoca popolare", 0.97] };
 const V_DEF = { tipo: "appartamento", mq: 60, locali: 2, bagni: 1, balcone: 0, terrazzo: 0, giardino: 0, cantina: 0, box: "no", piano: 2, ascensore: true,
   ultimo: false, stato: "buono", lavori: 0, statoDopo: "ristrutturato", classe: "?", epoca: "anni70", espo: "singola", vista: "normale",
-  risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0, anno: 0, orient: "", note: "" };
+  risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0, anno: 0, orient: "", note: "", fraz: 0 };
 
 function vCalcola(inp, ctx) {
   const q = Object.assign({}, V_DEF, inp), aff = ctx.a;
@@ -124,7 +124,8 @@ function vCalcola(inp, ctx) {
   const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
   const sup = mq + est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
   const k = [], add = (t, f) => { if (Math.abs(f - 1) > 0.001) k.push([t, f]); };
-  add("Taglio " + (mq < 40 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 110 ? "grande" : ""), mq < 40 ? 1.06 : mq < 60 ? 1.03 : mq > 150 ? 0.92 : mq > 110 ? 0.96 : 1);
+  const conCmp = !!(ctx.milano && window.mmComps && mmComps(ctx, q));   // con i comparabili: taglio, epoca e metà della classe sono già nei prezzi vicini
+  if (!conCmp) add("Taglio " + (mq < 40 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 110 ? "grande" : ""), mq < 40 ? 1.06 : mq < 60 ? 1.03 : mq > 150 ? 0.92 : mq > 110 ? 0.96 : 1);
   if (q.tipo === "attico") add("Attico", 1.10);
   if (q.tipo === "villetta") add("Villetta / casa indipendente", ctx.milano ? 1.05 : 1.0);
   if (q.tipo === "loft") add("Loft / open space", 0.95);
@@ -136,8 +137,8 @@ function vCalcola(inp, ctx) {
     else if (q.ascensore && p >= 4) add("Piano alto con ascensore", 1.03);
     if (q.ultimo && q.ascensore && q.tipo !== "attico") add("Ultimo piano", p >= 4 ? 1.015 : 1.03);
   }
-  add(q.classe === "?" ? "Classe energetica non indicata (prudenza)" : "Classe energetica " + q.classe, V_CLASSE[q.classe] ?? 1);
-  add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
+  { const fc = V_CLASSE[q.classe] ?? 1; add(q.classe === "?" ? "Classe energetica non indicata (prudenza)" : "Classe energetica " + q.classe, conCmp && fc < 1 ? 1 - (1 - fc) / 2 : fc); }
+  if (!conCmp) add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
   add(q.espo === "doppia" ? "Doppia esposizione" : q.espo === "buia" ? "Interno buio" : "", q.espo === "doppia" ? 1.02 : q.espo === "buia" ? 0.95 : 1);
   { const o = { S: 1.02, "S/E": 1.01, "S/O": 1.01, "E/O": 1.01, N: 0.97, "N/E": 0.98, "N/O": 0.98 }[q.orient]; if (o) add("Orientamento " + ({ S: "Sud", N: "Nord", "S/E": "Sud / Est", "S/O": "Sud / Ovest", "E/O": "Est / Ovest", "N/E": "Nord / Est", "N/O": "Nord / Ovest" }[q.orient]), o); }
   add(q.vista === "pregio" ? "Vista di pregio" : q.vista === "aperta" ? "Vista aperta" : "", q.vista === "pregio" ? 1.07 : q.vista === "aperta" ? 1.02 : 1);
@@ -157,7 +158,19 @@ function vCalcola(inp, ctx) {
   const SFz = cmp ? cmp.SF : { R: 0.82, B: 1, O: 1.18 }, gN = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
   const st = statoGiaDentro ? [st0[0], q.stato === "rinfrescare" ? 0.94 : 1, st0[2]] : st0;
   const sd = statoGiaDentro ? [sd0[0], SFz[gN[q.statoDopo] || "O"] / SFz[gN[q.stato] || "B"] * st[1], sd0[2]] : sd0;
-  const valCasa = sup * mqReale * kTot * st[1], valore = valCasa + box;
+  const m1 = sup * mqReale * kTot * st[1];
+  const m2 = cmp && Fm && Fm[gq] ? sup * Fm[gq][1] * kTot * (q.stato === "rinfrescare" ? 0.94 : 1) : null;
+  const valCasa = m2 ? m1 * 0.75 + m2 * 0.25 : m1, valore = valCasa + box;
+  // frazionamento: quanto vale per chi lo divide in N unità ristrutturate (prezzi dei tagli piccoli vicini), meno lavori, pratiche e margine dell'investitore
+  let fraz = null;
+  const nF = +q.fraz || 0;
+  if (nF >= 2 && ctx.milano && window.mmComps) {
+    const mqU = sup / nF, cu = mmComps(ctx, { ...q, mq: mqU, locali: mqU < 38 ? 1 : 2, stato: "ristrutturato" });
+    if (cu) {
+      const ricavo = sup * cu.norm, lav = sup * 900 + nF * 6000, marg = ricavo * 0.12;
+      fraz = { n: nF, mqU, eurMq: cu.norm, nCmp: cu.nNorm, ricavo, lavori: lav, margine: marg, valore: ricavo - lav - marg + box };
+    }
+  }
   const lavori = +q.lavori || 0;
   const valDopo = lavori > 0 ? sup * mqReale * kTot * sd[1] + box : null;
   const incer = (ctx.v ? 0.06 : 0.12) + (q.classe === "?" ? 0.01 : 0);
@@ -176,7 +189,7 @@ function vCalcola(inp, ctx) {
   const im = { prezzo: acquisto, mq, lavori, arredato: q.arredato, spese: { condominio_mese: +q.condo || Math.round(mq * (ctx.milano ? 2.2 : 1.4)), imu_anno: 0 },
     affitti: { lungo: canone ? { canone } : null, medio: medio ? { canone: medio, mesi_occupati: 10, stima: true } : null, breve } };
   const sc = scenari(im, { offMax: acquisto });
-  return { cmp, wC, sup, k, kTot, st, sd, mqReale, base, box, valCasa, valore, min: valore * (1 - incer), max: valore * (1 + incer), valDopo, lavori,
+  return { cmp, wC, sup, k, kTot, st, sd, mqReale, base, box, valCasa, valore, m1, m2, fraz, min: valore * (1 - incer), max: Math.max(valore * (1 + incer), fraz ? fraz.valore : 0), valDopo, lavori,
     canone, medio, breve, sc, acquisto, prezzo: +q.prezzo || 0, sconto: +q.prezzo > 0 ? (valore - q.prezzo) / valore : null,
     offerta: +q.prezzo > 0 ? Math.min(+q.prezzo, valore) * (1 - sconto / 2) : valore * 0.97,
     margine: valDopo ? valDopo - (acquisto * (1 + IMPOSTAZIONI.costi_acquisto_pct) + lavori) : null };
@@ -198,6 +211,7 @@ function vForm(id, ctxHtml, q) {
     <fieldset><legend>Spazi in più</legend><div class="vg">
       ${n("balcone", "Balconi", 1, "m²")}${n("terrazzo", "Terrazzo", 1, "m²")}${n("giardino", "Giardino", 1, "m²")}${n("cantina", "Cantina / soffitta", 1, "m²")}
       ${s("box", "Box / posto auto", { no: "Nessuno", posto: "Posto auto", singolo: "Box singolo", doppio: "Box doppio" })}
+      ${s("fraz", "Frazionabile", { 0: "No", 2: "Sì, in 2 unità", 3: "Sì, in 3 unità" })}
     </div></fieldset>
     <fieldset><legend>Stato e lavori</legend><div class="vg">
       ${s("stato", "Stato attuale", V_STATO)}${n("lavori", "Lavori da fare", 500, "€")}${s("statoDopo", "Stato dopo i lavori", V_STATO)}
@@ -252,7 +266,9 @@ function vRisultato(r, ctx) {
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
         <tr><td>Superficie commerciale</td><td class="r">${num(r.sup, 1)} m²</td></tr>
         ${r.box ? `<tr><td>Box / posto auto</td><td class="r">+ ${eur(r.box)}</td></tr>` : ""}
+        ${r.m2 ? `<tr><td>Metodo 1 (comparabili) ${eur(r.m1)} · metodo 2 (fascia di microzona) ${eur(r.m2)}: peso 75% / 25%</td><td class="r"></td></tr>` : ""}
         <tr class="tot"><td>Prezzo di richiesta in linea con il mercato</td><td class="r">${eur(r.valore)}</td></tr>
+        ${r.fraz ? `<tr><td>Se frazionato in ${r.fraz.n} unità da ${num(r.fraz.mqU)} m²: ${eur(r.fraz.eurMq)}/m² ristrutturate (${r.fraz.nCmp} annunci vicini) = ${eur(r.fraz.ricavo)}, meno lavori e pratiche ${eur(r.fraz.lavori)} e margine dell'investitore ${eur(r.fraz.margine)}</td><td class="r"><b>${eur(r.fraz.valore)}</b></td></tr>` : ""}
       </tbody></table>
       <p class="note">Coefficienti di merito usati comunemente nelle stime (piano, stato, classe energetica, epoca); superfici secondarie al 30% (balconi), 35% (terrazzi), 10% (giardino), 25% (cantina). È una stima indicativa, non una perizia.</p>
     </details>
