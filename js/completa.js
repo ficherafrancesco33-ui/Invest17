@@ -21,7 +21,7 @@ function cmPrompt() {
 function vCompleta() {
   const M = TERR.milano.micro, L = cmLinks(), fatte = M.filter(m => L[m.n]).length, ap = M.filter(m => !L[m.n] && cmAperti().has(m.n)).length;
   const zone = TERR.milano.zone;
-  return `<div class="hubhead"><small>Raccolta dati</small><h1>Completa Milano</h1><p class="sub">Tocca un pallino: si apre Immobiliare su quella zona. Copia il link della pagina, torna qui e tocca "Salva link". Pallino grigio da fare, giallo aperto, verde fatto.</p></div>
+  return `<div class="hubhead"><small>Raccolta dati</small><h1>Completa Milano</h1><p class="sub">Il modo più veloce: "Salva link" mette subito nella cartella la ricerca di Immobiliare di quella zona, senza aprire niente. Se vuoi, prima la apri e la sistemi tu: copiato il link, "Salva link" prende quello. Pallino grigio da fare, giallo aperto, verde fatto.</p></div>
   <div class="cmprog"><div class="cmbar"><span style="width:${fatte / M.length * 100}%"></span><span class="ap" style="width:${ap / M.length * 100}%"></span></div>
     <b>${fatte} su ${M.length} zone</b><span>${ap ? `${ap} aperte da salvare` : ""}</span></div>
   <div class="clmapw"><div class="map clmap" id="cmmap"></div></div>
@@ -37,7 +37,7 @@ function vCompleta() {
 }
 async function cmSave(n) {
   let t = ""; try { t = await navigator.clipboard.readText(); } catch (e) {}
-  if (!/^https?:\/\/(www\.)?immobiliare\.it\//.test(t || "")) t = window.prompt(`Incolla il link di Immobiliare per ${n}:`, "") || "";
+  if (!/^https?:\/\/(www\.)?immobiliare\.it\//.test(t || "")) t = cmUrl(n);   // niente copiato: salva direttamente la ricerca della zona
   t = t.trim(); if (!/^https?:\/\//.test(t)) { if (t) alert("Non sembra un link valido."); return false; }
   const L = cmLinks(); L[n] = t; store.set(CM_KEY, L); return true;
 }
