@@ -128,7 +128,7 @@ function vCalcola(inp, ctx) {
     else if (q.ascensore && p >= 4) add("Piano alto con ascensore", 1.03);
     if (q.ultimo && q.ascensore && q.tipo !== "attico") add("Ultimo piano", 1.03);
   }
-  add("Classe energetica " + q.classe, V_CLASSE[q.classe] ?? 1);
+  add(q.classe === "?" ? "Classe energetica non indicata (prudenza)" : "Classe energetica " + q.classe, V_CLASSE[q.classe] ?? 1);
   add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
   add(q.espo === "doppia" ? "Doppia esposizione" : q.espo === "buia" ? "Interno buio" : "", q.espo === "doppia" ? 1.02 : q.espo === "buia" ? 0.95 : 1);
   add(q.vista === "pregio" ? "Vista di pregio" : q.vista === "aperta" ? "Vista aperta" : "", q.vista === "pregio" ? 1.07 : q.vista === "aperta" ? 1.02 : 1);
@@ -237,7 +237,7 @@ function vRisultato(r, ctx) {
       </tbody></table>
       <p class="note">Coefficienti di merito usati comunemente nelle stime (piano, stato, classe energetica, epoca); superfici secondarie al 30% (balconi), 35% (terrazzi), 10% (giardino), 25% (cantina). È una stima indicativa, non una perizia.</p>
     </details>
-    <div class="btns"><button class="btn pri" data-save>Salva questa valutazione</button></div>
+    <div class="btns"><button class="btn pri" data-pdf>Scarica il PDF</button><button class="btn sec" data-save>Salva</button></div>
   </div>`;
 }
 function vSalvate(dove) {
@@ -438,6 +438,7 @@ function afterValuta(nome) {
   const getCtx = () => { const c = I.byN.get(tnorm(inCom.value)); if (!c || !c.v) return null; store.set("v_com", c.n); store.set("v_zona", inZona.value);
     return { v: c.v, a: c.a, nome: c.n, milano: c.n === "Milano", zonaCom: inZona.value, str: tStrVicino(c) }; };
   vBind(form, out, getCtx, "valuta");
+  out.addEventListener("click", e => { if (e.target.closest("[data-pdf]") && out._r && window.mmPdf) mmPdf(out._r); });
   if (nome) setTimeout(() => form.scrollIntoView({ block: "start" }), 50);
   const box = $("#cf");
   box.addEventListener("click", e => { const c = e.target.closest("[data-m]"); if (!c) return; f.m = c.dataset.m; store.set("f_valuta", f); render(true); });

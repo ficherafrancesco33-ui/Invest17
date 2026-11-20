@@ -1,0 +1,440 @@
+"use strict";
+/* ==========================================================================
+   INVEST17 — Mappa 3D di Milano e hinterland (MapLibre + OpenFreeMap)
+   Palazzi in 3D, vie e civici da OpenStreetMap; prezzi per microzona
+   (immobiliare.it); confini dei quartieri (NIL, Comune di Milano) e dei comuni
+   dell'hinterland (openpolis). Tocchi un palazzo → scheda → valutazione → PDF.
+   ========================================================================== */
+const MM = { map: null, sel: null, metric: "v", cells: null, nil: null, hint: null, ready: false, lay: { prezzi: true, nil: true, metro: true, poi: false, d3: true } };
+const MM_LIBS = [
+  ["css", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"],
+  ["js", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js", () => window.maplibregl],
+  ["js", "https://cdn.jsdelivr.net/npm/d3-delaunay@6.0.4/dist/d3-delaunay.min.js", () => window.d3 && window.d3.Delaunay],
+  ["js", "https://cdn.jsdelivr.net/npm/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js", () => window.polygonClipping],
+];
+const MM_NIL_URLS = [
+  "https://dati.comune.milano.it/dataset/e8e765fc-d882-40b8-95d8-16ff3d39eb7c/resource/9c4e0776-56fc-4f3d-8a90-f4992a3be426/download/ds964_nil_wm.geojson",
+  "https://dati.comune.milano.it/dataset/e74f6267-a6b5-4e61-8de6-c11f50f7990f/resource/d57873db-49e5-41d9-b044-65e12960bd02/download/ds2811_spotted-milan-urbanheatexposure-nil-01072024_31072024.geojson",
+];
+const MM_RAMP = [[0, "#0b2440"], [3000, "#0d3f66"], [4000, "#0a6a8f"], [5000, "#0097b8"], [6000, "#00c8e0"], [7500, "#5ee9f5"], [9500, "#b4f8ff"], [12000, "#ffffff"]];
+const MM_MET = { v: ["Vendita €/m²", f => f.v, v => eur(v)], a: ["Affitto €/m²", f => f.a, v => num(v, 1) + " €"], rl: ["Rendita lunga", f => f.a * 12 / f.v, v => pct(v, 1)] };
+
+function mmLoad() {
+  return Promise.all(MM_LIBS.map(([t, u, ok]) => new Promise((res, rej) => {
+    if (ok && ok()) return res();
+    if (document.querySelector(`[data-lib="${u}"]`)) { const iv = setInterval(() => { if (!ok || ok()) { clearInterval(iv); res(); } }, 60); setTimeout(() => { clearInterval(iv); rej(new Error(u)); }, 20000); return; }
+    const el = document.createElement(t === "css" ? "link" : "script");
+    el.dataset.lib = u;
+    if (t === "css") { el.rel = "stylesheet"; el.href = u; document.head.appendChild(el); return res(); }
+    el.src = u; el.onload = () => res(); el.onerror = () => rej(new Error(u)); document.head.appendChild(el);
+  })));
+}
+
+/* ---------- geometria ---------- */
+function mmInRing(pt, ring) { let c = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const [xi, yi] = ring[i], [xj, yj] = ring[j]; if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi) + xi) c = !c; } return c; }
+function mmInGeom(pt, g) {
+  if (!g) return false;
+  const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+  return polys.some(p => mmInRing(pt, p[0]) && !p.slice(1).some(h => mmInRing(pt, h)));
+}
+function mmSegDist(p, a, b) {   // metri, approssimazione piana
+  const k = Math.cos(p[1] * Math.PI / 180), ax = (a[0] - p[0]) * k, ay = a[1] - p[1], bx = (b[0] - p[0]) * k, by = b[1] - p[1];
+  const dx = bx - ax, dy = by - ay, t = clamp(-(ax * dx + ay * dy) / (dx * dx + dy * dy || 1), 0, 1);
+  return Math.hypot(ax + t * dx, ay + t * dy) * 111320;
+}
+function mmLines(g) { return g.type === "LineString" ? [g.coordinates] : g.type === "MultiLineString" ? g.coordinates : []; }
+function mmFeatCentro(f) { const c = tCentro(f.geometry); return c ? [c[1], c[0]] : null; }
+
+/* ---------- celle di prezzo (Voronoi delle microzone, ritagliate sul comune di Milano) ---------- */
+function mmCelle(milano) {
+  const M = TERR.milano.micro, pts = M.map(m => [m.lon, m.lat]);
+  const vor = d3.Delaunay.from(pts).voronoi([9.0, 45.35, 9.32, 45.56]);
+  const clipGeom = milano ? (milano.geometry.type === "Polygon" ? [milano.geometry.coordinates] : milano.geometry.coordinates) : null;
+  const feats = [];
+  M.forEach((m, i) => {
+    const ring = vor.cellPolygon(i); if (!ring) return;
+    let geom = { type: "Polygon", coordinates: [ring] };
+    if (clipGeom) { try { const r = polygonClipping.intersection([ring], clipGeom); if (!r.length) return; geom = { type: "MultiPolygon", coordinates: r }; } catch (e) { /* lascio la cella intera */ } }
+    feats.push({ type: "Feature", id: i, properties: { i, n: m.n, z: m.z, v: m.v, a: m.a, rl: m.a * 12 / m.v }, geometry: geom });
+  });
+  return { type: "FeatureCollection", features: feats };
+}
+function mmMicroAt(lon, lat) {
+  if (MM.cells) { const f = MM.cells.features.find(f => mmInGeom([lon, lat], f.geometry)); if (f) return TERR.milano.micro[f.properties.i]; }
+  return null;
+}
+
+/* ---------- stile cyber ---------- */
+function mmStile() {
+  const S = "omt";
+  return {
+    version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
+    sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
+    layers: [
+      { id: "bg", type: "background", paint: { "background-color": "#03060c" } },
+      { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": "#060c18", "fill-opacity": 0.8 } },
+      { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": "#04140f", "fill-opacity": 0.9 } },
+      { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": "#04182b" } },
+      { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": "#0a3a5c", "line-width": 1.2 } },
+      { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#3b2a5e", "line-width": 1, "line-dasharray": [3, 2] } },
+      { id: "road-minor", type: "line", source: S, "source-layer": "transportation", minzoom: 12,
+        filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street", "path"], true, false],
+        paint: { "line-color": "#10304a", "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.4, 16, 2.5, 18, 7] } },
+      { id: "road-major", type: "line", source: S, "source-layer": "transportation",
+        filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
+        paint: { "line-color": "#14607a", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.6, 14, 2.5, 18, 12], "line-blur": 0.5 } },
+    ],
+  };
+}
+function mmColorExpr(metric) {
+  const key = metric === "a" ? "a" : metric === "rl" ? "rl" : "v";
+  const ramp = metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : metric === "rl" ? [[0.025, "#0b2440"], [0.035, "#0a6a8f"], [0.042, "#00c8e0"], [0.05, "#5ee9f5"], [0.06, "#ffffff"]] : MM_RAMP;
+  return ["interpolate", ["linear"], ["to-number", ["get", key]], ...ramp.flat()];
+}
+function mmLegend() {
+  const met = MM_MET[MM.metric], ramp = MM.metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : MM.metric === "rl" ? [[0.025, "#0b2440"], [0.035, "#0a6a8f"], [0.042, "#00c8e0"], [0.05, "#5ee9f5"], [0.06, "#ffffff"]] : MM_RAMP;
+  return `<div class="mmleg"><b>${met[0]}</b><span class="bar" style="background:linear-gradient(90deg,${ramp.map(r => r[1]).join(",")})"></span><span class="ends"><i>${met[2](ramp[0][0] || ramp[1][0])}</i><i>${met[2](ramp[ramp.length - 1][0])}+</i></span></div>`;
+}
+
+/* ---------- costruzione della mappa ---------- */
+async function mmInit(el) {
+  el.innerHTML = `<div class="mmload"><div class="spin"></div><span>Carico Milano in 3D…</span></div>`;
+  try { await mmLoad(); } catch (e) { el.innerHTML = `<div class="mapfb">Non riesco a caricare la mappa 3D (serve la connessione). Riprova tra poco.</div>`; return; }
+  if (!document.body.contains(el)) return;
+  el.innerHTML = "";
+  const map = new maplibregl.Map({ container: el, style: mmStile(), center: [9.19, 45.4642], zoom: 12.4, pitch: 52, bearing: -18, maxPitch: 75,
+    attributionControl: { compact: true, customAttribution: "Dati: OpenStreetMap, OpenFreeMap, immobiliare.it, Comune di Milano, openpolis" }, antialias: true, fadeDuration: 0 });
+  MM.map = map; maps.push(map);
+  map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+  map.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true } }), "bottom-right");
+  map.on("load", async () => {
+    // confini: comuni di Milano e Monza-Brianza
+    let milano = null, comuni = [];
+    try {
+      const [g15, g108] = await Promise.all([tGeo(15), tGeo(108).catch(() => ({ features: [] }))]);
+      comuni = [...g15.features, ...g108.features];
+      milano = comuni.find(f => tnorm(tFname(f.properties)) === "milano");
+    } catch (e) { /* senza confini dei comuni */ }
+    MM.cells = mmCelle(milano);
+    const I = tIdx();
+    MM.hint = { type: "FeatureCollection", features: comuni.filter(f => f !== milano).map(f => { const c = I.byN.get(tnorm(tFname(f.properties)));
+      return { type: "Feature", properties: { n: tFname(f.properties), v: c?.v ?? null, a: c?.a ?? null, rl: c?.rl ?? null }, geometry: f.geometry }; }) };
+    const hintLab = { type: "FeatureCollection", features: MM.hint.features.map(f => { const c = mmFeatCentro(f); return c ? { type: "Feature", properties: { n: f.properties.n, v: f.properties.v }, geometry: { type: "Point", coordinates: c } } : null; }).filter(Boolean) };
+    const cellLab = { type: "FeatureCollection", features: TERR.milano.micro.map(m => ({ type: "Feature", properties: { n: m.n, v: m.v, a: m.a, rl: m.a * 12 / m.v }, geometry: { type: "Point", coordinates: [m.lon, m.lat] } })) };
+    map.addSource("cells", { type: "geojson", data: MM.cells });
+    map.addSource("hint", { type: "geojson", data: MM.hint });
+    map.addSource("hintlab", { type: "geojson", data: hintLab });
+    map.addSource("celllab", { type: "geojson", data: cellLab });
+    map.addLayer({ id: "hint-fill", type: "fill", source: "hint", filter: ["!=", ["get", "v"], null], paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 9, 0.45, 14, 0.18] } }, "road-minor");
+    map.addLayer({ id: "hint-line", type: "line", source: "hint", paint: { "line-color": "#7df3ff", "line-opacity": 0.45, "line-width": 1 } });
+    map.addLayer({ id: "cell-fill", type: "fill", source: "cells", paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.55, 14, 0.25, 17, 0.12] } }, "road-minor");
+    map.addLayer({ id: "cell-line", type: "line", source: "cells", paint: { "line-color": "#00c8e0", "line-opacity": 0.35, "line-width": 0.8 } });
+    // palazzi in 3D
+    map.addLayer({ id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 13,
+      paint: { "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], 10], 0, "#0b1d33", 20, "#0f3a5c", 40, "#126b8c", 80, "#16a7c4", 150, "#7df3ff"],
+        "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]],
+        "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.88, "fill-extrusion-vertical-gradient": true } });
+    map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#facc15", "fill-extrusion-height": ["+", ["coalesce", ["get", "h"], 12], 1.5], "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } });
+    map.addLayer({ id: "sel-pin", type: "circle", source: "sel", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": 7, "circle-color": "#facc15", "circle-stroke-color": "#03060c", "circle-stroke-width": 2 } });
+    // metro
+    const M = TERR.milano, metroL = [], metroS = [];
+    for (const [ln, arr] of Object.entries(M.metro)) {
+      if (ln === "M1") { const i = arr.findIndex(s => s[0] === "Wagner"), pag = arr.find(s => s[0] === "Pagano");
+        metroL.push({ ln, c: arr.slice(0, i).map(s => [s[2], s[1]]) }, { ln, c: [[pag[2], pag[1]], ...arr.slice(i).map(s => [s[2], s[1]])] }); }
+      else metroL.push({ ln, c: arr.map(s => [s[2], s[1]]) });
+      arr.forEach(s => metroS.push({ type: "Feature", properties: { n: s[0], ln, col: M.metro_col[ln] }, geometry: { type: "Point", coordinates: [s[2], s[1]] } }));
+    }
+    map.addSource("metro", { type: "geojson", data: { type: "FeatureCollection", features: metroL.map(l => ({ type: "Feature", properties: { col: M.metro_col[l.ln] }, geometry: { type: "LineString", coordinates: l.c } })) } });
+    map.addSource("metros", { type: "geojson", data: { type: "FeatureCollection", features: metroS } });
+    map.addLayer({ id: "metro-glow", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 7, "line-opacity": 0.25, "line-blur": 4 } });
+    map.addLayer({ id: "metro", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 2.4 } });
+    map.addLayer({ id: "metros", type: "circle", source: "metros", minzoom: 11.5, paint: { "circle-radius": 3.5, "circle-color": "#03060c", "circle-stroke-color": ["get", "col"], "circle-stroke-width": 2 } });
+    // punti di interesse
+    map.addSource("poi", { type: "geojson", data: { type: "FeatureCollection", features: M.poi.map(([c, n, la, lo]) => ({ type: "Feature", properties: { c, n, col: T_POI[c][1] }, geometry: { type: "Point", coordinates: [lo, la] } })) } });
+    map.addLayer({ id: "poi", type: "circle", source: "poi", layout: { visibility: MM.lay.poi ? "visible" : "none" }, paint: { "circle-radius": 6, "circle-color": ["get", "col"], "circle-stroke-color": "#03060c", "circle-stroke-width": 1.5 } });
+    // etichette: vie, civici, microzone, comuni
+    map.addLayer({ id: "street-lab", type: "symbol", source: "omt", "source-layer": "transportation_name", minzoom: 14,
+      layout: { "symbol-placement": "line", "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 14, 10, 18, 14], "text-max-angle": 30 },
+      paint: { "text-color": "#8fd8ea", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+    map.addLayer({ id: "housenum", type: "symbol", source: "omt", "source-layer": "housenumber", minzoom: 17,
+      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#facc15", "text-halo-color": "#03060c", "text-halo-width": 1.4 } });
+    mmRelabel();
+    map.addLayer({ id: "hint-lab", type: "symbol", source: "hintlab", minzoom: 9.5,
+      layout: { "text-field": ["concat", ["get", "n"], ["case", ["!=", ["get", "v"], null], ["concat", "\n", ["to-string", ["get", "v"]], " €"], ""]], "text-font": ["Noto Sans Regular"], "text-size": 11 },
+      paint: { "text-color": "#b3cde4", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+    // quartieri ufficiali (NIL): se il Comune risponde
+    mmNil(map);
+    map.on("click", e => mmTap(e));
+    map.on("mousemove", e => { map.getCanvas().style.cursor = map.queryRenderedFeatures(e.point, { layers: ["bld"] }).length ? "pointer" : ""; });
+    MM.ready = true; mmApplyLayers();
+    const s = MM.sel; if (s) mmShowSel(s, false);
+    if (MM.fly) { map.flyTo({ center: MM.fly, zoom: 14.6, duration: 1200 }); MM.fly = null; }
+  });
+}
+async function mmNil(map) {
+  for (const u of MM_NIL_URLS) {
+    try {
+      const r = await fetch(u); if (!r.ok) continue; const g = await r.json(); if (!g.features?.length) continue;
+      const nameOf = p => p.NIL || p.nil || p.Nil || p.NOME_NIL || p.nome || "";
+      g.features.forEach(f => { f.properties = { nil: nameOf(f.properties), id: f.properties.ID_NIL ?? f.properties.id_nil ?? "" }; });
+      MM.nil = g;
+      if (!map.getStyle()) return;
+      map.addSource("nil", { type: "geojson", data: g });
+      map.addLayer({ id: "nil-line", type: "line", source: "nil", layout: { visibility: MM.lay.nil ? "visible" : "none" }, paint: { "line-color": "#ff2bd6", "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 15, 2], "line-opacity": 0.75, "line-dasharray": [2, 1.2] } }, "bld");
+      const lab = { type: "FeatureCollection", features: g.features.map(f => { const c = mmFeatCentro(f); return c ? { type: "Feature", properties: { n: f.properties.nil }, geometry: { type: "Point", coordinates: c } } : null; }).filter(Boolean) };
+      map.addSource("nillab", { type: "geojson", data: lab });
+      map.addLayer({ id: "nil-lab", type: "symbol", source: "nillab", minzoom: 12.2, maxzoom: 16, layout: { visibility: MM.lay.nil ? "visible" : "none", "text-field": ["upcase", ["get", "n"]], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.12 },
+        paint: { "text-color": "#ff7ae6", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+      const b = $("#mmnilnote"); if (b) b.hidden = true;
+      return;
+    } catch (e) { /* provo la fonte successiva */ }
+  }
+  const b = $("#mmnilnote"); if (b) b.hidden = false;
+}
+function mmApplyLayers() {
+  const map = MM.map; if (!map || !MM.ready) return;
+  const vis = (ids, on) => ids.forEach(id => map.getLayer(id) && map.setLayoutProperty(id, "visibility", on ? "visible" : "none"));
+  vis(["cell-fill", "cell-line", "cell-lab", "hint-fill"], MM.lay.prezzi);
+  vis(["nil-line", "nil-lab"], MM.lay.nil);
+  vis(["metro", "metro-glow", "metros"], MM.lay.metro);
+  vis(["poi"], MM.lay.poi);
+  map.setPaintProperty("bld", "fill-extrusion-height", MM.lay.d3 ? ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]] : 0);
+  ["cell-fill", "hint-fill"].forEach(id => map.getLayer(id) && map.setPaintProperty(id, "fill-color", mmColorExpr(MM.metric)));
+  if (MM.lay.d3 && map.getPitch() < 20) map.easeTo({ pitch: 52, duration: 600 }); if (!MM.lay.d3 && map.getPitch() > 0) map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
+  const lg = $("#mmleg"); if (lg) lg.innerHTML = mmLegend();
+}
+
+/* ---------- tocco su un palazzo / punto ---------- */
+function mmTap(e) {
+  const map = MM.map, ll = [e.lngLat.lng, e.lngLat.lat];
+  const b = map.queryRenderedFeatures(e.point, { layers: ["bld"] })[0];
+  const centro = b ? (mmFeatCentro(b) || ll) : ll;
+  // civico più vicino e via più vicina (dalle tessere già caricate)
+  let civ = null, dc = 1e9, via = null, dv = 1e9;
+  for (const f of map.querySourceFeatures("omt", { sourceLayer: "housenumber" })) {
+    const c = f.geometry.coordinates, d = mmSegDist(centro, c, c);
+    if (d < dc) { dc = d; civ = f.properties.housenumber; }
+  }
+  for (const f of map.querySourceFeatures("omt", { sourceLayer: "transportation_name" })) {
+    if (!f.properties.name) continue;
+    for (const ln of mmLines(f.geometry)) for (let i = 1; i < ln.length; i++) { const d = mmSegDist(centro, ln[i - 1], ln[i]); if (d < dv) { dv = d; via = f.properties.name; } }
+  }
+  const micro = mmMicroAt(centro[0], centro[1]);
+  const nil = MM.nil ? MM.nil.features.find(f => mmInGeom(centro, f.geometry))?.properties.nil : null;
+  const com = !micro && MM.hint ? MM.hint.features.find(f => mmInGeom(centro, f.geometry))?.properties : null;
+  const h = b ? (b.properties.render_height || null) : null;
+  const sel = { lon: centro[0], lat: centro[1], via: dv < 120 ? via : null, civ: dc < 35 ? civ : null, micro: micro ? micro.n : null, zona: micro ? micro.z : null, nil, comune: micro ? "Milano" : com?.n || null,
+    h, piani: h ? Math.max(1, Math.round(h / 3.1)) : null, geom: b ? b.geometry : null };
+  MM.sel = sel; store.set("mm_sel", { ...sel, geom: null });
+  mmShowSel(sel, true);
+}
+function mmShowSel(sel, fly) {
+  const map = MM.map;
+  if (map && map.getSource("sel")) map.getSource("sel").setData({ type: "FeatureCollection", features: [sel.geom ? { type: "Feature", properties: { h: sel.h || 12 }, geometry: sel.geom } : { type: "Feature", properties: {}, geometry: { type: "Point", coordinates: [sel.lon, sel.lat] } }] });
+  const box = $("#mmsheet"); if (!box) return;
+  box.innerHTML = mmScheda(sel); box.hidden = false;
+  if (fly && map && map.getZoom() < 15) map.easeTo({ center: [sel.lon, sel.lat], zoom: 16, duration: 700 });
+}
+function mmCtx(sel) {
+  if (!sel) return null;
+  const mi = sel.micro ? TERR.milano.micro.find(m => m.n === sel.micro) : null;
+  if (mi) { const z = TERR.milano.zone.find(x => x.n === mi.z); return { v: mi.v, a: mi.a, nome: mmIndirizzo(sel), milano: true, str: MZ_STR({ ...z, v: mi.v }), micro: mi, zona: z, sel }; }
+  if (sel.comune) { const c = tIdx().byN.get(tnorm(sel.comune)); if (c && c.v) return { v: c.v, a: c.a, nome: mmIndirizzo(sel), milano: false, str: tStrVicino({ ...c, lat: sel.lat, lon: sel.lon }), sel, com: c }; }
+  return null;
+}
+const mmIndirizzo = s => [s.via ? s.via + (s.civ ? " " + s.civ : "") : "Punto sulla mappa", s.comune || ""].filter(Boolean).join(", ");
+function mmScheda(s) {
+  const c = mmCtx(s);
+  const near = mzVicini({ lat: s.lat, lon: s.lon });
+  return `<button class="mmx" data-close aria-label="Chiudi">✕</button>
+    <div class="loc">${esc([s.nil, s.micro || s.comune].filter(Boolean).join(" · ") || "Fuori dalle zone con prezzi")}</div>
+    <h3 class="mmt">${esc(mmIndirizzo(s))}</h3>
+    ${s.piani ? `<p class="note" style="margin:2px 0 0">Palazzo di circa ${s.piani} piani (${num(s.h)} m)</p>` : ""}
+    ${c ? `<div class="offer" style="margin-top:8px">
+      <div><small>Vendita</small><b>${eur(c.v)}</b><em>al m² · ${esc(c.micro ? "microzona" : "comune")}</em></div>
+      <div><small>Affitto</small><b>${num(c.a, 1)} €</b><em>al m² al mese</em></div>
+      <div><small>Rendita</small><b class="cy">${pct(c.a * 12 / c.v, 1)}</b><em>lorda, lungo</em></div></div>` : `<p class="note">Qui non ho prezzi: tocca un punto dentro Milano o in un comune colorato.</p>`}
+    ${near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} ${[...x.ln].map(l => `<span class="ml" style="--mc:${TERR.milano.metro_col[l]}">${l}</span>`).join("")} <em>${num(Math.round(x.d / 10) * 10)} m</em>`).join(" · ")}</p>` : ""}
+    ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>Valuta un immobile qui</button></div>` : ""}`;
+}
+
+/* ---------- vista Milano ---------- */
+function vMilano3D() {
+  const f = store.get("f_mm", null); if (f) { MM.metric = f.metric || "v"; Object.assign(MM.lay, f.lay || {}); }
+  MM.sel = store.get("mm_sel", null);
+  const M = TERR.milano;
+  return `<h1>Milano</h1><p class="sub">Milano e hinterland in 3D: tocca un palazzo per vedere via, quartiere, prezzi e valutarlo. ${M.micro.length} microzone di prezzo, tutti i comuni intorno.</p>
+  <div class="mmbar">
+    <div class="mmsearch"><input type="search" id="mmq" placeholder="Cerca un indirizzo: via Tortona 27" autocomplete="off"><div id="mmres" class="mmres" hidden></div></div>
+    <div class="chips" id="mmm">${Object.entries(MM_MET).map(([k, m]) => `<button class="chip ${k === MM.metric ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
+    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#00c8e0", nil: "#ff2bd6", metro: "#e3242b", poi: "#facc15", d3: "#7df3ff" }[k]}"><i></i>${t}</button>`).join("")}</div>
+  </div>
+  <div class="mmwrap"><div class="mm3d" id="mm3d"></div><div class="mmsheet" id="mmsheet" hidden></div></div>
+  <div id="mmleg">${mmLegend()}</div>
+  <p class="note" id="mmnilnote" hidden>I confini ufficiali dei quartieri del Comune non si sono caricati: vedi le microzone di prezzo (linee azzurre).</p>
+  <h2>Valuta un immobile a Milano e hinterland</h2>
+  <div class="card">${vForm("mvf", `<fieldset><legend>Dove</legend><div class="vg">
+      <label class="wide"><span>Indirizzo</span><input type="text" data-c="addr" value="${esc(MM.sel ? mmIndirizzo(MM.sel) : "")}" placeholder="Tocca un palazzo sulla mappa o scrivi"></label>
+      <label class="wide"><span>Microzona di prezzo</span><select data-c="micro"><option value="">Scegli…</option>
+        ${M.zone.map(z => `<optgroup label="${esc(z.n)}">${M.micro.filter(m => m.z === z.n).map(m => `<option ${MM.sel?.micro === m.n ? "selected" : ""}>${esc(m.n)}</option>`).join("")}</optgroup>`).join("")}
+        <optgroup label="Hinterland">${tIdx().com.filter(c => ["MI", "MB"].includes(c.p) && c.n !== "Milano").sort((a, b) => a.n.localeCompare(b.n)).map(c => `<option value="@${esc(c.n)}" ${!MM.sel?.micro && MM.sel?.comune === c.n ? "selected" : ""}>${esc(c.n)}</option>`).join("")}</optgroup>
+      </select></label></div></fieldset>`, store.get("vform_milano", V_DEF))}<div id="mvout"></div></div>
+  ${vSalvate("milano")}
+  <h2>Classifica delle zone <small>${esc(MZ_MET.rl[0])}</small></h2>
+  <div class="tbars">${[...M.zone].sort((a, b) => b.a / b.v - a.a / a.v).map((x, i) => `<a class="tbar" href="#milano/${encodeURIComponent(x.n)}"><span class="tn"><i>${i + 1}</i>${esc(x.n)}<em>${eur(x.v)}/m² · ${num(x.a, 1)} €/m²</em></span><span class="tv"><span class="tb"><span style="width:${Math.max(3, (x.a * 12 / x.v) / 0.06 * 100)}%"></span></span><b>${pct(x.a * 12 / x.v, 1)}</b></span></a>`).join("")}</div>
+  <p class="src">Prezzi: immobiliare.it, zone e microzone di Milano (ottobre 2026) e comuni dell'hinterland. Mappa: © OpenStreetMap, OpenFreeMap. Confini: Comune di Milano (NIL), openpolis. Le microzone sono disegnate attorno al loro centro: i confini tra una e l'altra sono indicativi.</p>`;
+}
+function afterMilano3D(zona) {
+  const M = TERR.milano;
+  const saveF = () => store.set("f_mm", { metric: MM.metric, lay: MM.lay });
+  $("#mmm").addEventListener("click", e => { const c = e.target.closest("[data-m]"); if (!c) return; MM.metric = c.dataset.m; saveF();
+    document.querySelectorAll("#mmm .chip").forEach(x => x.classList.toggle("on", x === c)); mmApplyLayers();
+    if (MM.map && MM.ready) { if (MM.map.getLayer("cell-lab")) MM.map.removeLayer("cell-lab"); mmRelabel(); } });
+  $("#mml").addEventListener("click", e => { const c = e.target.closest("[data-l]"); if (!c) return; const k = c.dataset.l; MM.lay[k] = !MM.lay[k]; c.classList.toggle("on", MM.lay[k]); saveF(); mmApplyLayers(); });
+  // ricerca indirizzi (OpenStreetMap Nominatim)
+  const q = $("#mmq"), res = $("#mmres"); let tq;
+  q.addEventListener("input", () => { clearTimeout(tq); const t = q.value.trim(); if (t.length < 4) { res.hidden = true; return; }
+    tq = setTimeout(async () => { try {
+      const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&countrycodes=it&viewbox=8.95,45.62,9.45,45.33&bounded=1&q=${encodeURIComponent(t)}`, { headers: { "Accept-Language": "it" } });
+      const L = await r.json();
+      res.innerHTML = L.length ? L.map(x => `<button data-ll="${x.lon},${x.lat}">${esc(x.display_name.split(",").slice(0, 4).join(","))}</button>`).join("") : `<span>Nessun risultato</span>`; res.hidden = false;
+    } catch (e) { res.innerHTML = `<span>Ricerca non disponibile ora</span>`; res.hidden = false; } }, 600); });
+  res.addEventListener("click", e => { const b = e.target.closest("[data-ll]"); if (!b || !MM.map) return; const [lo, la] = b.dataset.ll.split(",").map(Number); res.hidden = true;
+    MM.map.flyTo({ center: [lo, la], zoom: 17.3, pitch: 58, duration: 1600 });
+    MM.map.once("idle", () => mmTap({ lngLat: { lng: lo, lat: la }, point: MM.map.project([lo, la]) })); });
+  // scheda del palazzo
+  const sheet = $("#mmsheet");
+  sheet.addEventListener("click", e => {
+    if (e.target.closest("[data-close]")) { sheet.hidden = true; if (MM.map?.getSource("sel")) MM.map.getSource("sel").setData({ type: "FeatureCollection", features: [] }); return; }
+    if (e.target.closest("[data-valuta]")) { mmToForm(); $("#mvf").scrollIntoView({ behavior: "smooth", block: "start" }); }
+  });
+  // valutatore collegato
+  const form = $("#mvf"), out = $("#mvout"), selM = form.querySelector("[data-c=micro]"), addr = form.querySelector("[data-c=addr]");
+  vBind(form, out, () => {
+    const v = selM.value; if (!v) return null;
+    if (v[0] === "@") { const c = tIdx().byN.get(tnorm(v.slice(1))); if (!c?.v) return null;
+      const s = MM.sel && MM.sel.comune === c.n ? MM.sel : { lat: c.lat, lon: c.lon, comune: c.n };
+      return { v: c.v, a: c.a, nome: addr.value || c.n, milano: false, str: c.lat != null ? tStrVicino(c) : null, sel: s, com: c }; }
+    const mi = M.micro.find(m => m.n === v), z = M.zone.find(x => x.n === mi.z);
+    const s = MM.sel && MM.sel.micro === mi.n ? MM.sel : { lat: mi.lat, lon: mi.lon, micro: mi.n, zona: mi.z, comune: "Milano" };
+    return { v: mi.v, a: mi.a, nome: addr.value || ("Milano, " + mi.n), milano: true, str: MZ_STR({ ...z, v: mi.v }), micro: mi, zona: z, sel: s };
+  }, "milano");
+  out.addEventListener("click", e => { if (e.target.closest("[data-pdf]") && out._r) mmPdf(out._r); });
+  if (zona) { const z = M.zone.find(x => x.n === zona); if (z) MM.sel = { lat: z.lat, lon: z.lon, micro: M.micro.filter(m => m.z === z.n).sort((a, b) => hav(z.lat, z.lon, a.lat, a.lon) - hav(z.lat, z.lon, b.lat, b.lon))[0]?.n, zona: z.n, comune: "Milano" }; }
+  if (zona && MM.sel) MM.fly = [MM.sel.lon, MM.sel.lat];
+  MM.ready = false; mmInit($("#mm3d"));
+}
+function mmRelabel() {
+  const map = MM.map; if (!map || !map.getSource("celllab")) return;
+  const fld = MM.metric === "a" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "a"], 10]], 10]], " €"] : MM.metric === "rl" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "rl"], 1000]], 10]], "%"] : ["concat", ["to-string", ["get", "v"]], " €"];
+  map.addLayer({ id: "cell-lab", type: "symbol", source: "celllab", minzoom: 11.3, maxzoom: 15.5, layout: { visibility: MM.lay.prezzi ? "visible" : "none", "text-field": ["concat", ["get", "n"], "\n", fld], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 11.3, 9, 14, 12], "text-padding": 4 },
+    paint: { "text-color": "#e6f7ff", "text-halo-color": "#03060c", "text-halo-width": 1.8 } });
+}
+function mmToForm() {
+  const s = MM.sel, form = $("#mvf"); if (!s || !form) return;
+  form.querySelector("[data-c=addr]").value = mmIndirizzo(s);
+  const sel = form.querySelector("[data-c=micro]");
+  sel.value = s.micro ? s.micro : s.comune ? "@" + s.comune : "";
+  if (s.piani) { const p = form.querySelector("[data-k=piano]"); if (p && +p.value > s.piani) p.value = Math.max(0, s.piani - 1); if (s.piani >= 4) form.querySelector("[data-k=ascensore]").checked = true; }
+  sel.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+/* ---------- PDF della valutazione (pagina stampabile con il logo) ---------- */
+function mmPdf({ r, q, ctx }) {
+  const M = TERR.milano, s = ctx.sel || {}, oggi = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
+  const logo = new URL("img/maison-collection.png", location.href).href;
+  const near = s.lat != null ? mzVicini({ lat: s.lat, lon: s.lon }) : { staz: [], poi: [], score: null };
+  const vicine = ctx.micro ? M.micro.filter(m => m.n !== ctx.micro.n).map(m => ({ ...m, d: hav(ctx.micro.lat, ctx.micro.lon, m.lat, m.lon) })).sort((a, b) => a.d - b.d).slice(0, 6) : [];
+  const rank = ctx.micro ? [...M.micro].sort((a, b) => b.v - a.v).findIndex(m => m.n === ctx.micro.n) + 1 : null;
+  const L = r.sc.list, riga = (k, t, sub) => L[k] ? `<tr><td>${t}</td><td>${sub}</td><td class="r">${eur(L[k].lordo)}</td><td class="r">${eur(L[k].netto)}</td><td class="r"><b>${pct(L[k].rendNetto)}</b></td></tr>` : "";
+  const car = [["Tipologia", { appartamento: "Appartamento", attico: "Attico", loft: "Loft", villetta: "Villetta / casa" }[q.tipo]], ["Superficie interna", q.mq + " m²"], ["Superficie commerciale", num(r.sup, 1) + " m²"],
+    ["Locali / bagni", `${q.locali} / ${q.bagni}`], ["Piano", q.piano <= 0 ? "Terra" : q.piano + "°" + (q.ascensore ? " con ascensore" : " senza ascensore")],
+    ["Stato", V_STATO[q.stato][0]], ["Classe energetica", q.classe === "?" ? "Non indicata" : q.classe], ["Epoca del palazzo", V_EPOCA[q.epoca][0]],
+    ["Spazi esterni", [q.balcone ? `balconi ${q.balcone} m²` : "", q.terrazzo ? `terrazzo ${q.terrazzo} m²` : "", q.giardino ? `giardino ${q.giardino} m²` : ""].filter(Boolean).join(", ") || "—"],
+    ["Pertinenze", [q.cantina ? `cantina ${q.cantina} m²` : "", { no: "", posto: "posto auto", singolo: "box singolo", doppio: "box doppio" }[q.box]].filter(Boolean).join(", ") || "—"],
+    ["Dotazioni", [q.risc === "autonomo" ? "riscaldamento autonomo" : "riscaldamento centralizzato", q.portineria ? "portineria" : "", q.arredato ? "arredato" : ""].filter(Boolean).join(", ")]];
+  const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Valutazione - ${esc(ctx.nome)}</title>
+<style>
+@page{size:A4;margin:14mm 14mm 16mm}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Times New Roman",serif;color:#2b2326;font-size:11pt;line-height:1.45}
+.sans{font-family:"Helvetica Neue",Arial,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #a8865a;padding-bottom:10px;margin-bottom:16px}
+header img{height:58px}header .d{text-align:right;font-size:9.5pt;color:#7a6a5c}
+h1{font-weight:normal;font-size:22pt;letter-spacing:.06em;color:#6e1423;margin:0 0 2px;text-transform:uppercase}
+h2{font-size:11pt;letter-spacing:.16em;text-transform:uppercase;color:#a8865a;border-bottom:1px solid #e6dccd;padding-bottom:4px;margin:20px 0 8px;font-weight:normal}
+.addr{font-size:13pt;color:#4a3b40;margin:0 0 14px}
+.hero{display:flex;gap:14px;align-items:stretch;margin:6px 0 4px}
+.val{flex:1.2;border:1.5px solid #a8865a;border-radius:6px;padding:12px 16px;background:#fbf8f3}
+.val small,.box small{display:block;font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;color:#8b7763}
+.val b{display:block;font-size:26pt;color:#6e1423;font-weight:normal;margin:2px 0}
+.val span{font-size:10pt;color:#5b4c45}
+.box{flex:1;border:1px solid #e6dccd;border-radius:6px;padding:10px 12px}
+.box b{display:block;font-size:15pt;color:#2b2326;font-weight:normal;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:10pt}td,th{padding:5px 6px;border-bottom:1px solid #eee5d8;text-align:left;vertical-align:top}
+th{font-size:8.5pt;letter-spacing:.1em;text-transform:uppercase;color:#8b7763;font-weight:normal}td.r,th.r{text-align:right}
+tr.tot td{border-top:1.5px solid #a8865a;font-weight:bold;color:#6e1423}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.k{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.k div{border:1px solid #e6dccd;border-radius:6px;padding:8px}.k small{display:block;font-size:8pt;letter-spacing:.1em;text-transform:uppercase;color:#8b7763}.k b{font-size:13pt;font-weight:normal}
+.note{font-size:8.5pt;color:#7a6a5c}
+footer{margin-top:22px;border-top:1px solid #e6dccd;padding-top:8px;font-size:8.5pt;color:#7a6a5c;display:flex;justify-content:space-between}
+.pb{page-break-before:always}
+@media screen{body{max-width:820px;margin:20px auto;padding:0 18px}.printbtn{position:fixed;right:16px;bottom:16px;background:#6e1423;color:#fff;border:0;border-radius:24px;padding:12px 18px;font-size:14px;font-family:Arial;box-shadow:0 4px 16px rgba(0,0,0,.25)}}
+@media print{.printbtn{display:none}}
+</style></head><body>
+<button class="printbtn" onclick="window.print()">Salva PDF / Stampa</button>
+<header><img src="${logo}" alt="Maison Collection"><div class="d sans">Valutazione immobiliare<br>${oggi}</div></header>
+<h1>Stima del valore di mercato</h1>
+<p class="addr">${esc(ctx.nome)}${s.nil ? ` · quartiere ${esc(s.nil)}` : ""}${ctx.micro ? ` · microzona ${esc(ctx.micro.n)}` : ""}</p>
+<div class="hero">
+  <div class="val"><small>Valore di mercato stimato</small><b>${eur(r.valore)}</b><span>Forbice ${eur(r.min)} – ${eur(r.max)} · ${eur(r.valore / r.sup)} al m² commerciale</span></div>
+  <div class="box"><small>${r.prezzo ? "Prezzo richiesto" : "Prezzo di realizzo rapido"}</small><b>${eur(r.prezzo || r.offerta)}</b><span class="note">${r.prezzo ? (r.sconto >= 0 ? `${pct(r.sconto, 0)} sotto il valore stimato` : `${pct(-r.sconto, 0)} sopra il valore stimato`) : "circa il 3% sotto il valore"}</span></div>
+  ${r.valDopo ? `<div class="box"><small>Valore dopo i lavori</small><b>${eur(r.valDopo)}</b><span class="note">lavori previsti ${eur(r.lavori)}</span></div>` : ""}
+</div>
+<h2>L'immobile</h2>
+<table class="sans"><tbody>${car.map(([a, b]) => `<tr><td style="width:38%;color:#8b7763">${a}</td><td>${esc(b)}</td></tr>`).join("")}</tbody></table>
+<h2>Indici di valore della zona</h2>
+<div class="k sans">
+  <div><small>Vendita</small><b>${eur(ctx.v)}/m²</b><br><span class="note">${ctx.micro ? "microzona" : "comune"}, prezzi richiesti</span></div>
+  <div><small>Affitto</small><b>${num(ctx.a, 2)} €/m²</b><br><span class="note">al mese</span></div>
+  <div><small>Rendita lorda</small><b>${pct(ctx.a * 12 / ctx.v, 1)}</b><br><span class="note">affitto lungo</span></div>
+  <div><small>${ctx.zona ? "Andamento 12 mesi" : "Media Milano"}</small><b>${ctx.zona ? (ctx.zona.y >= 0 ? "+" : "") + num(ctx.zona.y, 1) + "%" : eur(M.media.vendita) + "/m²"}</b><br><span class="note">${ctx.zona ? esc(ctx.zona.n) : "per confronto"}</span></div>
+</div>
+${rank ? `<p class="note sans">La microzona ${esc(ctx.micro.n)} è al ${rank}° posto su ${M.micro.length} microzone di Milano per prezzo al m² (media cittadina ${eur(M.media.vendita)}/m²).</p>` : ""}
+${vicine.length ? `<h2>Valori di confronto nelle microzone vicine</h2>
+<table class="sans"><thead><tr><th>Microzona</th><th>Zona</th><th class="r">Distanza</th><th class="r">Vendita €/m²</th><th class="r">Affitto €/m²</th></tr></thead><tbody>
+<tr style="color:#6e1423"><td><b>${esc(ctx.micro.n)}</b></td><td>${esc(ctx.micro.z)}</td><td class="r">—</td><td class="r"><b>${eur(ctx.micro.v)}</b></td><td class="r">${num(ctx.micro.a, 2)}</td></tr>
+${vicine.map(m => `<tr><td>${esc(m.n)}</td><td>${esc(m.z)}</td><td class="r">${num(m.d / 1000, 1)} km</td><td class="r">${eur(m.v)}</td><td class="r">${num(m.a, 2)}</td></tr>`).join("")}</tbody></table>` : ""}
+<h2>Come è stato calcolato il valore</h2>
+<table class="sans"><tbody>
+<tr><td>Prezzo medio richiesto nella zona</td><td class="r">${eur(r.base)}/m²</td></tr>
+<tr><td>Riduzione per trattativa (${pct(IMPOSTAZIONI.sconto_trattativa, 0)})</td><td class="r">${eur(r.mqReale)}/m²</td></tr>
+<tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>
+${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
+<tr><td>Superficie commerciale (balconi 30%, terrazzi 35%, giardino 10%, cantina 25%)</td><td class="r">${num(r.sup, 1)} m²</td></tr>
+${r.box ? `<tr><td>Box / posto auto, valutato a parte</td><td class="r">+ ${eur(r.box)}</td></tr>` : ""}
+<tr class="tot"><td>Valore di mercato stimato</td><td class="r">${eur(r.valore)}</td></tr></tbody></table>
+<div class="pb"></div>
+<h2>Rendimento se messo a reddito</h2>
+<table class="sans"><thead><tr><th>Uso</th><th>Ipotesi</th><th class="r">Incasso lordo</th><th class="r">Netto annuo</th><th class="r">Rendimento</th></tr></thead><tbody>
+${riga("lungo", "Affitto lungo (4+4 / 3+2)", r.canone ? eur(r.canone) + " al mese" : "")}
+${riga("medio", "Medio termine / transitorio", r.medio ? eur(r.medio) + " al mese, 10 mesi" : "")}
+${riga("breve", "Affitto breve", r.breve ? eur(r.breve.adr) + " a notte, " + pct(r.breve.occ, 0) + " di occupazione" : "")}
+</tbody></table>
+<p class="note sans">Netto dopo spese di gestione, condominio, manutenzione e tasse (${TAX === "srl" ? "società" : "cedolare secca"}), su ${r.prezzo ? "prezzo richiesto" : "valore stimato"} più costi d'acquisto.</p>
+${near.staz.length || near.poi.length ? `<h2>Servizi e collegamenti vicini</h2><div class="two sans">
+  <div><b style="font-weight:normal;color:#8b7763;font-size:9pt;letter-spacing:.1em;text-transform:uppercase">Metropolitana</b><br>${near.staz.slice(0, 5).map(x => `${esc(x.n)} (${[...x.ln].join(", ")}) – ${num(Math.round(x.d / 10) * 10)} m`).join("<br>") || "Nessuna stazione entro 1 km"}</div>
+  <div>${["uni", "osp", "lav", "neg", "scu", "par"].map(k => { const p = near.poi.filter(x => x.c === k).slice(0, 2); return p.length ? `<b style="font-weight:normal;color:#8b7763;font-size:9pt;letter-spacing:.1em;text-transform:uppercase">${T_POI[k][0]}</b><br>${p.map(x => `${esc(x.n)} – ${x.d < 1000 ? num(Math.round(x.d / 10) * 10) + " m" : num(x.d / 1000, 1) + " km"}`).join("<br>")}<br>` : ""; }).join("")}</div>
+</div>` : ""}
+<h2>Note</h2>
+<p class="note sans">Stima indicativa elaborata con il metodo comparativo sui prezzi medi richiesti (immobiliare.it, ottobre 2026) e coefficienti di merito d'uso comune. Non sostituisce una perizia giurata né la verifica di conformità urbanistica e catastale. I prezzi medi della zona si riferiscono agli annunci: il prezzo di chiusura è in genere inferiore, come considerato nel calcolo.</p>
+<footer class="sans"><span>Maison Collection · Agenzia immobiliare · Milano</span><span>Documento generato con Invest17 il ${oggi}</span></footer>
+<script>window.onload=()=>setTimeout(()=>window.print(),700)<\/script>
+</body></html>`;
+  const w = window.open("", "_blank");
+  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return; }
+  w.document.open(); w.document.write(html); w.document.close();
+}
+
+/* sostituisce la vista Milano precedente */
+TERR_VIEWS.milano = [vMilano3D, afterMilano3D];

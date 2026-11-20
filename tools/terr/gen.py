@@ -3,7 +3,7 @@
 Uso: python3 tools/terr/gen.py   (dalla cartella del progetto)"""
 import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from milano import MEDIA, ZONE, METRO, METRO_COL, POI
+from milano import MEDIA, ZONE, METRO, METRO_COL, POI, MICRO
 
 H = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(H, "..", ".."))
@@ -112,7 +112,8 @@ def main():
         milano=dict(media=MEDIA,
                     zone=[dict(n=z[0], v=z[1], y=z[2], a=z[3], lat=z[4], lon=z[5], tag=z[6].split(","), nota=z[7]) for z in ZONE],
                     metro={k: [[s[0], s[1], s[2]] for s in v] for k, v in METRO.items()}, metro_col=METRO_COL,
-                    poi=[list(p) for p in POI]))
+                    poi=[list(p) for p in POI],
+                    micro=[dict(z=m[0], n=m[1], v=m[2], a=m[3], lat=m[4], lon=m[5]) for m in MICRO]))
     s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)

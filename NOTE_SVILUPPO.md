@@ -121,3 +121,11 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - **Milano** (`#milano`): 32 zone immobiliare.it con metro M1-M5, 60 punti di interesse (università, ospedali, lavoro/stazioni, eventi, negozi, scuole, parchi), punteggio di attrattività, stima B&B per zona dalla media AirROI.
 - **Valutatore** unico (`vCalcola`): superficie commerciale (balconi 30%, terrazzi 35%, giardino 10%, cantina 25%), coefficienti di merito (piano/ascensore, stato, classe energetica, epoca, esposizione, vista, riscaldamento, portineria, condominio, via), box a parte, lavori con valore dopo lavori e margine, rendimenti con la stessa funzione `scenari` delle schede. Valutazioni salvabili.
 - Fonti da aggiornare ogni 3-6 mesi: rilanciare le pagine provinciali e regionali, aggiornare `tools/terr/raw_*.txt`, poi `python3 tools/terr/gen.py`.
+
+## 9. Milano 3D per l'agenzia (20/11/2026)
+- `js/milmap.js`: mappa MapLibre GL 4 con tessere OpenFreeMap (stile cyber scritto a mano), palazzi in 3D (layer `building`), nomi delle vie e civici (`transportation_name`, `housenumber`), metro, servizi.
+- Prezzi: 145 microzone immobiliare.it (ott 2026) in `tools/terr/milano.py` → celle di Voronoi (d3-delaunay) ritagliate sul comune di Milano (polygon-clipping, confini openpolis); hinterland: comuni di Milano e Monza-Brianza colorati col prezzo del comune.
+- Quartieri ufficiali NIL dal portale open data del Comune (se il server consente l'accesso dal browser; altrimenti restano le microzone).
+- Tocco su un palazzo: civico e via più vicini dalle tessere caricate, quartiere, microzona, altezza → scheda → valutatore precompilato. Ricerca indirizzi con Nominatim (OpenStreetMap).
+- PDF: pagina stampabile con logo `img/maison-collection.png` (si salva come PDF dal menu Stampa), con caratteristiche, indici di zona, microzone vicine, metodo, rendimenti, servizi vicini.
+- Da fare: annunci comparabili (archivio da email di avviso), dati residenti per quartiere, andamento dei prezzi nel tempo.
