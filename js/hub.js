@@ -219,7 +219,7 @@ document.addEventListener("click", e => {
 /* ---------------- INVESTIMENTI (Nord Italia) ---------------- */
 const INV_MODI = {
   classifica: { t: "Classifica generale", c: "Tutti gli immobili", d: "Gli immobili entro 3 ore ordinati per punteggio, con mappa del Nord Italia e filtri.", href: "#inv/classifica" },
-  zona: { t: "Ricerca per zona", c: "Regione, provincia, comune", d: "Scegli dove cercare: classifica dei comuni e, dentro ogni comune, classifica dei suoi immobili.", href: "#inv/zona" },
+  zona: { t: "Ricerca per zona", c: "Comune, zona, via", d: "Scrivi dove vuoi cercare: la mappa ti porta lì e apri la scheda dell'immobile.", href: "#inv/zona" },
   brevi: { t: "Mappa B&B", c: "Affitti brevi", d: "Prezzo a notte, occupazione e rendita di " + TERR.brevi.length + " località turistiche.", href: "#brevi", i: "bnb" },
   comuni: { t: "Valuta un comune", c: "Prezzi al m²", d: TERR.comuni.length.toLocaleString("it-IT") + " comuni con prezzi di vendita e affitto, e il valutatore.", href: "#valuta" },
   archivio: { t: "I miei immobili", c: "Archivio", d: "Gli annunci che hai mandato tu, analizzati uno per uno.", href: "#miei" },
@@ -278,43 +278,50 @@ function afterInvClassifica() {
   const f = Object.assign({}, INV_F0, store.get("f_inv", {}));
   drawMap($("#map"), invPts(invRows(f))); bindInvFiltri("f_inv", f);
 }
-/* ricerca per zona: regione → comuni (classifica dei comuni) → comune (classifica dei suoi immobili) */
-function invZoneStats(rows, key) {
-  const g = {}; rows.forEach(x => (g[key(x.im) || "—"] ||= []).push(x));
-  return Object.entries(g).map(([n, L]) => { const ok = L.filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
-    return { n, L, best: ok[0], score: ok.length ? Math.round(ok.slice(0, 3).reduce((s, x) => s + x.A.score, 0) / Math.min(3, ok.length)) : null, rend: median(ok.map(x => x.A.rend).filter(v => v != null)), d: L[0].d }; })
-    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
+/* ricerca per zona: una barra di ricerca (comune, zona, via, titolo) e la mappa */
+function invCerca(q) {
+  const t = tnorm(q || "").trim(), all = invAll().map(x => ({ ...x, A: analizza(x.im) }));
+  if (!t) return all;
+  const parole = t.split(/\s+/);
+  return all.filter(({ im }) => { const h = tnorm([im.comune, im.zona, im.provincia, im.regione, im.titolo].filter(Boolean).join(" ")); return parole.every(w => h.includes(w)); });
 }
-function vInvZona(reg, com) {
-  const f = Object.assign({}, INV_F0, store.get("f_invz", {})); f.reg = "";
-  const all = invRows(f), regs = invZoneStats(all, im => im.regione);
-  let body;
-  if (!reg) {
-    body = `<h2>Scegli la regione</h2><div class="zgrid">${regs.map(z => `<a class="zc" href="#inv/zona/${encodeURIComponent(z.n)}"><b>${esc(z.n)}</b><span>${z.L.length} immobili · migliore ${z.best ? z.best.A.score : "—"}</span><em>${pct(z.rend)} netto medio</em></a>`).join("")}</div>`;
-  } else if (!com) {
-    const rr = all.filter(x => x.im.regione === reg), cs = invZoneStats(rr, im => im.comune);
-    body = `<h2>Classifica dei comuni <small>${esc(reg)}</small></h2>
-      <div class="map" id="map"></div>
-      <div class="tbars">${cs.map((z, i) => `<a class="tbar" href="#inv/zona/${encodeURIComponent(reg)}/${encodeURIComponent(z.n)}"><span class="tn"><i>${i + 1}</i>${esc(z.n)}<em>${z.L.length} immobil${z.L.length === 1 ? "e" : "i"} · ${z.d ? tOre(z.d.min) : ""} · netto ${pct(z.rend)}</em></span><span class="tv"><span class="tb"><span style="width:${Math.max(3, z.score || 0)}%"></span></span><b>${z.score ?? "—"}</b></span></a>`).join("")}</div>
-      <p class="note">Punteggio del comune = media dei suoi 3 immobili migliori.</p>`;
-  } else {
-    const rr = all.filter(x => x.im.regione === reg && x.im.comune === com), c = tIdx().byN.get(tnorm(com));
-    body = `<h2>${esc(com)} <small>${rr.length} immobil${rr.length === 1 ? "e" : "i"}</small></h2>
-      ${c && c.v ? `<div class="offer"><div><small>Vendita</small><b>${eur(c.v)}/m²</b><em>media del comune</em></div><div><small>Affitto</small><b>${num(c.a, 1)} €/m²</b><em>al mese</em></div><div><small>Rendita lorda</small><b class="cy">${c.a && c.v ? pct(c.a * 12 / c.v, 1) : "—"}</b><em>affitto lungo</em></div></div>
-      <div class="btns" style="margin:10px 0"><a class="btn sec" href="#valuta/${encodeURIComponent(com)}">Valuta un immobile a ${esc(com)}</a></div>` : ""}
-      <div class="map" id="map"></div>
-      <div class="list grid2">${rr.map((x, i) => cardIm(x.A, x.src, i + 1)).join("")}</div>`;
-  }
-  return `${invBread("zona")}<h1>Ricerca per zona</h1><p class="sub">${reg ? `<a href="#inv/zona">Tutte le regioni</a> › ${com ? `<a href="#inv/zona/${encodeURIComponent(reg)}">${esc(reg)}</a> › ${esc(com)}` : esc(reg)}` : "Parti dalla regione, poi scegli il comune: ogni livello ha la sua classifica."}</p>
-  ${invFiltri(f, [], true)}${body}`;
+function vInvZona() {
+  const q = store.get("invz_q", "");
+  return `${invBread("zona")}<h1>Ricerca per zona</h1><p class="sub">Scrivi un comune, una zona, una via o un tipo di casa: la mappa ti porta lì. Tocca un immobile per aprire la scheda.</p>
+  <div class="zsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+    <input type="search" id="zq" value="${esc(q)}" placeholder="Oneta, Scullera, trilocale…" autocomplete="off" enterkeyhint="search"></div>
+  <div class="map" id="zmap"></div>
+  <p class="note" id="zinfo"></p>
+  <div id="zres" class="zres"></div>`;
 }
-function afterInvZona(reg, com) {
-  const f = Object.assign({}, INV_F0, store.get("f_invz", {})); f.reg = "";
-  const el = $("#map"); if (el) drawMap(el, invPts(invRows(f).filter(x => x.im.regione === reg && (!com || x.im.comune === com))));
-  bindInvFiltri("f_invz", f);
+function afterInvZona() {
+  const inp = $("#zq"), res = $("#zres"), info = $("#zinfo"), m = tMap($("#zmap"), [[45.6, 9.6], 8]);
+  const lay = m ? L.layerGroup().addTo(m) : null;
+  const draw = () => {
+    const q = inp.value; store.set("invz_q", q);
+    const L1 = invCerca(q).sort((a, b) => (b.A.score ?? -1) - (a.A.score ?? -1));
+    res.innerHTML = q.trim() ? (L1.length ? L1.slice(0, 30).map(x => { const st = stato(x.A.score);
+      return `<a class="zr" href="#imm/${x.src}/${encodeURIComponent(x.im.id)}"><span class="pill" style="--pc:${st.col}">${x.A.score ?? "—"}</span><span><b>${esc(x.im.titolo || "Immobile")}</b><em>${esc([x.im.comune, x.im.zona].filter(Boolean).join(" · "))} · ${eur(x.im.prezzo)} · ${num(x.im.mq)} m²</em></span></a>`; }).join("")
+      + (L1.length > 30 ? `<p class="note">Altri ${L1.length - 30} sulla mappa.</p>` : "") : "") : "";
+    if (!lay) return;
+    lay.clearLayers(); const b = [];
+    L1.filter(x => x.im.lat != null).forEach(x => { const st = stato(x.A.score);
+      L.circleMarker([x.im.lat, x.im.lng], { radius: 9, color: "#000", weight: 1.5, fillColor: st.col, fillOpacity: .95 })
+        .bindPopup(`<b>${esc(x.im.titolo || "")}</b><br>${esc(x.im.comune || "")} · ${eur(x.im.prezzo)} · <b>${x.A.score ?? "—"}</b><br><a class="go" href="#imm/${x.src}/${encodeURIComponent(x.im.id)}">Apri la scheda →</a>`).addTo(lay);
+      b.push([x.im.lat, x.im.lng]); });
+    if (b.length) { m.fitBounds(b, { padding: [40, 40], maxZoom: 14 }); info.textContent = `${L1.length} immobil${L1.length === 1 ? "e" : "i"}${q.trim() ? ` per "${q.trim()}"` : " in archivio"}.`; }
+    else {
+      const c = q.trim().length > 2 && tIdx().com.find(c => tnorm(c.n).startsWith(tnorm(q.trim())));
+      if (c && c.lat != null) { m.setView([c.lat, c.lon], 12); info.textContent = `Nessun immobile in archivio a ${c.n}: mandami il link di una ricerca in questa zona e lo carico.`; }
+      else info.textContent = q.trim() ? `Nessun risultato per "${q.trim()}".` : "";
+    }
+  };
+  let t; inp.addEventListener("input", () => { clearTimeout(t); t = setTimeout(draw, 220); });
+  inp.addEventListener("keydown", e => { if (e.key === "Enter") { const f = res.querySelector("a.zr"); if (f) location.hash = f.getAttribute("href"); } });
+  draw();
 }
-function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona(b, c) : vInvHub(); }
-function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(b, c); }
+function vInv(a, b, c) { return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : vInvHub(); }
+function afterInv(a, b, c) { if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); }
 
 /* ---------------- collegamento al router ---------------- */
 const MI_ALIAS = { bnb: "inv", lungo: "inv" };
