@@ -566,11 +566,11 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .mmsheet{position:static!important;max-height:none!important;margin:0!important;border-radius:0 0 20px 20px!important;border-top:1px solid var(--line)}
 
 :root[data-th=bordeaux]{--bg:#24101a;--panel:#341823;--panel2:#40202c;--card:#341823;--card2:#40202c;--deep:#1a0a12;--head:#1a0a12;--headtx:#f6efe4;--line:#5a2c3a;--line2:#7a4452;--soft:#40202c;
-  --tx:#f6efe4;--tx2:#d9c9b8;--muted:#b8a291;--strong:#ffffff;--cy:#d4ae5c;--cy2:#e9cd8a;--mg:#e9cd8a;--yl:#e9cd8a;--on:#24101a;--hd1:#1a0a12;--hd2:#1a0a12;--accrgb:212,174,92;color-scheme:dark}
+  --tx:#f6efe4;--tx2:#e2cfc0;--muted:#c4a69c;--strong:#ffffff;--cy:#d4ae5c;--cy2:#e9cd8a;--mg:#e9cd8a;--yl:#e9cd8a;--on:#24101a;--hd1:#1a0a12;--hd2:#1a0a12;--accrgb:212,174,92;--good:#e9cd8a;--warn:#d39a5e;--bad:#d77a8a;color-scheme:dark}
 :root[data-th=bordeaux] body{background:linear-gradient(180deg,#2c1320,var(--bg) 40%)}
 :root[data-th=bordeaux] .top{border-bottom:1px solid #8a6a2a}
-:root[data-th=bianco]{--bg:#ffffff;--panel:#fbf8f4;--panel2:#f4ede4;--card:#fbf8f4;--card2:#f4ede4;--deep:#f1e8dc;--head:#6a1828;--headtx:#ffffff;--line:#ece2d6;--line2:#d9c3a0;--soft:#f3e6cf;--line2x:#d9c3a0;
-  --tx:#231a1a;--tx2:#463936;--muted:#7a6c66;--strong:#1a1212;--cy:#6a1828;--cy2:#8a5f12;--mg:#6a1828;--yl:#c9a24b;--on:#ffffff;--hd1:#6a1828;--hd2:#6a1828;--good:#2f8a4c;--accrgb:106,24,40;color-scheme:light}
+:root[data-th=bianco]{--bg:#ffffff;--panel:#fcf9f5;--panel2:#f7efe6;--card:#fcf9f5;--card2:#f7efe6;--deep:#efe2d3;--head:#6a1828;--headtx:#ffffff;--line:#ece2d6;--line2:#d9c3a0;--soft:#f3e6cf;--line2x:#d9c3a0;
+  --tx:#2a1418;--tx2:#4e2a31;--muted:#80525a;--strong:#1f0d11;--cy:#6a1828;--cy2:#8a6414;--mg:#6a1828;--yl:#8a6414;--on:#ffffff;--hd1:#6a1828;--hd2:#6a1828;--good:#6a1828;--warn:#9a6f1c;--bad:#b0586a;--accrgb:106,24,40;color-scheme:light}
 :root[data-th=bianco] body{background:var(--bg)}
 :root[data-th=bianco] .top{border-bottom:2px solid #c9a24b}
 :root[data-th=bianco] .logo i{color:#6a1828;background:#e9cd8a}
@@ -593,6 +593,21 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 
 /* sezione Seguiti tolta per ora: niente stelline */
 [data-seg],[data-segp],[data-segim],[data-segann],[data-unseg]{display:none!important}
+
+/* Bianco e bordeaux: tutto nei colori del marchio */
+:root[data-th=bianco] .novb{border-color:#d9b767;background:linear-gradient(135deg,#fbf1dc,#fffaf1)}
+:root[data-th=bianco] .hcard>i,:root[data-th=bianco] .win .pill{background:rgba(255,255,255,.92);color:var(--pc);box-shadow:0 1px 4px rgba(106,24,40,.18)}
+:root[data-th=bianco] .hcard,:root[data-th=bianco] .t10r,:root[data-th=bianco] .affare,:root[data-th=bianco] .im{border-color:#ecdcc8}
+:root[data-th=bianco] .win{box-shadow:0 0 0 1.5px #d9b767,0 3px 10px rgba(106,24,40,.14)!important}
+:root[data-th=bianco] .win::after{box-shadow:inset 0 -14px 20px rgba(42,20,24,.28)}
+:root[data-th=bianco] .win .artlab{background:rgba(106,24,40,.75);color:#fff}
+:root[data-th=bianco] h2,:root[data-th=bianco] h2 small{color:var(--cy)}
+:root[data-th=bianco] .verdict2.ok{background:rgba(106,24,40,.06)}
+:root[data-th=bianco] .cmbar span{background:#6a1828}:root[data-th=bianco] .cmbar span.ap{background:#c9a24b}
+:root[data-th=bianco] .pc .c h3{color:#b0586a}
+:root[data-th=bianco] .vs button[data-del]{background:rgba(176,88,106,.12);color:#9a3c4e}
+:root[data-th=bordeaux] .hcard>i{background:rgba(26,10,18,.8)}
+:root[data-th=bordeaux] .cmbar span{background:#e9cd8a}:root[data-th=bordeaux] .cmbar span.ap{background:#d39a5e}
 </style>
 </head>
 <body>
@@ -734,11 +749,13 @@ function analizza(im, cat) {
   const score = use ? Math.round(S.pesi.rendimento * sRend + S.pesi.prezzo * sPrez + S.pesi.affidabilita * sAff) : null;
   return { im, val, sc, best, use, rend: r, score, parts: { sRend, sPrez, sAff } };
 }
+const ST_COL = { bianco: ["#6a1828", "#b8862a", "#c98b97", "#b9a49a"], bordeaux: ["#e9cd8a", "#d39a5e", "#d77a8a", "#9c8178"] };
 function stato(score) {
-  if (score == null) return { c: "", t: "Dati mancanti", col: "#8a8270" };
-  if (score >= 70) return { c: "s-good", t: "Affare", col: "#22c55e" };
-  if (score >= 50) return { c: "s-warn", t: "Da valutare", col: "#f59e0b" };
-  return { c: "s-bad", t: "Debole", col: "#ef4444" };
+  const P = ST_COL[document.documentElement.dataset.th] || ["#22c55e", "#f59e0b", "#ef4444", "#8a8270"];
+  if (score == null) return { c: "", t: "Dati mancanti", col: P[3] };
+  if (score >= 70) return { c: "s-good", t: "Affare", col: P[0] };
+  if (score >= 50) return { c: "s-warn", t: "Da valutare", col: P[1] };
+  return { c: "s-bad", t: "Debole", col: P[2] };
 }
 
 /* ============ dati ============ */
@@ -862,7 +879,7 @@ function vLista(src) {
     <label class="tog"><input type="checkbox" data-f="zona" ${f.zona ? "checked" : ""}> Classifica per zona</label>
   </div>
   <div class="map" id="map" style="margin-top:12px"></div>
-  <div class="legend"><span><i style="background:#22c55e;color:#22c55e"></i>Affare (70+)</span><span><i style="background:#f59e0b;color:#f59e0b"></i>Da valutare</span><span><i style="background:#ef4444;color:#ef4444"></i>Debole</span></div>` : ""}
+  <div class="legend"><span><i style="background:${stato(80).col};color:${stato(80).col}"></i>Affare (70+)</span><span><i style="background:${stato(60).col};color:${stato(60).col}"></i>Da valutare</span><span><i style="background:${stato(10).col};color:${stato(10).col}"></i>Debole</span></div>` : ""}
   ${body}`;
 }
 function afterLista(src) {
