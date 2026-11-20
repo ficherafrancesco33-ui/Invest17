@@ -366,6 +366,21 @@ function dvRows(f) {
     .map(x => ({ ...dvCalc(x.c), d: x.d })).filter(o => o[f.uso] != null && f.tags.every(t => o.tags.includes(t)))
     .sort((a, b) => b[f.uso] - a[f.uso]);
 }
+/* zona allargata: paesi vicini dove con il budget di Immobiliare si trova davvero qualcosa */
+const DV_RAGGIO = 12000;
+function dvVicini(c) {
+  const bud = +(Object.assign({}, IMM_F0, store.get("imm_f", {})).prezzo) || 1e12;
+  return tIdx().com.filter(x => x !== c && x.v && x.lat != null && hav(c.lat, c.lon, x.lat, x.lon) <= DV_RAGGIO && x.v * 50 * (1 - IMPOSTAZIONI.sconto_trattativa) <= bud * 1.1)
+    .map(x => ({ x, d: hav(c.lat, c.lon, x.lat, x.lon) })).sort((a, b) => a.x.v - b.x.v).slice(0, 6);
+}
+const dvSopra = c => { const bud = +(Object.assign({}, IMM_F0, store.get("imm_f", {})).prezzo); return bud && c.v * 50 * (1 - IMPOSTAZIONI.sconto_trattativa) > bud * 1.1; };
+let DV_GEO_LOADING = false;
+async function dvCaricaVicini(rows) {   // carica una volta i paesi delle province dei primi comuni (poi restano salvati sul telefono)
+  if (DV_GEO_LOADING) return; const fatte = store.get("geo_prov", []), da = [...new Set(rows.slice(0, 25).map(o => o.c.p))].filter(p => !fatte.includes(p) && TERR.prov[p]);
+  if (!da.length) return; DV_GEO_LOADING = true; const note = $("#dvnote"); if (note) note.textContent = "Carico i paesi vicini per allargare le zone…";
+  for (const p of da) { try { await tGeo(TERR.prov[p].istat); store.set("geo_prov", [...store.get("geo_prov", []), p]); } catch (e) {} }
+  DV_GEO_LOADING = false; DV_CACHE.clear(); if (location.hash.startsWith("#inv/dove")) render(true);
+}
 function vDove() {
   const f = Object.assign({}, DV_F0, store.get("f_dove", {})), rows = dvRows(f), provs = Object.entries(TERR.prov).sort((a, b) => a[1].nome.localeCompare(b[1].nome));
   const geoN = Object.keys(store.get("geo", {})).length;
@@ -385,7 +400,8 @@ function vDove() {
   <div class="map" id="dvmap"></div>
   <div class="dove">${rows.slice(0, 80).map((o, i) => `<div class="dv"><b>${i + 1}</b><span><a href="${esc(immUrl(o.c.n))}" target="_blank" rel="noopener">${esc(o.c.n)} <i>(${esc(o.c.p)})</i> ↗</a>
       <small>${f.uso === "breve" ? `${eur(o.adr)} a notte · ${pct(o.occ, 0)}${o.stima ? " (stima vicina)" : ""}` : `affitto ${eur(o.canone)}/mese`} · bilocale ~${keur(o.prezzo)} · ${tOre(o.d.min)}</small>
-      ${o.tags.length ? `<small class="dvt">${o.tags.map(t => `<span title="${DV_TAG[t][0]}">${DV_TAG[t][1]} ${DV_TAG[t][0]}</span>`).join("")}</small>` : ""}</span>
+      ${o.tags.length ? `<small class="dvt">${o.tags.map(t => `<span title="${DV_TAG[t][0]}">${DV_TAG[t][1]} ${DV_TAG[t][0]}</span>`).join("")}</small>` : ""}
+      ${(() => { const V = dvVicini(o.c), sopra = dvSopra(o.c); return V.length || sopra ? `<small class="dvv">${sopra ? `<b>Di solito sopra budget:</b> ` : ""}${V.length ? `${sopra ? "cerca nei vicini" : "Zona allargata"}: ${V.map(({ x, d }) => `<a href="${esc(immUrl(x.n))}" target="_blank" rel="noopener">${esc(x.n)} <i>${num(d / 1000, 0)} km</i></a>`).join("")}` : "nessun paese vicino più economico in elenco"}</small>` : ""; })()}</span>
       <em>${pct(o[f.uso], 1)}<button class="lbadd ${lbAll().some(x => x.com === o.c.n) ? "on" : ""}" data-lb="${esc(o.c.n)}|${esc(o.c.p)}">${lbAll().some(x => x.com === o.c.n) ? "✓ link" : "+ link"}</button></em></div>`).join("") || `<div class="empty"><b>Nessun comune</b><p>Togli un filtro o allarga il tempo di viaggio.</p></div>`}</div>
   ${rows.length > 80 ? `<p class="note">Mostro i primi 80 su ${rows.length}.</p>` : ""}
   <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (meno la trattativa, più costi d'acquisto e arredo), dopo spese e tasse da privata. B&amp;B: dati della località o, se non ci sono, della località turistica più vicina ridotti del 15%. Affitto normale solo dove i canoni del portale sono affidabili. Lago, sci, ospedali, università e aziende: distanza dai punti principali, indicativa.</p>`;
@@ -400,7 +416,7 @@ function dvImmHtml() {
       <select data-i="ordine">${[["prezzo", "Prima i più economici"], ["recenti", "Prima i più recenti"], ["rilevanza", "Ordine di Immobiliare"]].map(([v, t]) => `<option value="${v}" ${q.ordine === v ? "selected" : ""}>${t}</option>`).join("")}</select>
       <label class="tog"><input type="checkbox" data-i="aste" ${q.aste ? "checked" : ""}> Senza aste</label>
     </div>
-    <p class="note">Tocca il nome di un comune: si apre Immobiliare con questi filtri. Lì scegli lo stato "buono / ristrutturato" se vuoi, poi copia il link della pagina e torna qui: con "+ link" lo metti nella cartella.</p></details>`;
+    <p class="note">Sotto ogni comune trovi la "zona allargata": i paesi entro 12 km dove con il tuo budget si trova davvero qualcosa, dal più economico. Su Immobiliare puoi anche allargare tu l'area con la matita in alto e copiare quel link. Tocca il nome di un comune: si apre Immobiliare con questi filtri. Lì scegli lo stato "buono / ristrutturato" se vuoi, poi copia il link della pagina e torna qui: con "+ link" lo metti nella cartella.</p></details>`;
 }
 function dvBoxHtml() {
   const L = lbAll();
@@ -412,6 +428,7 @@ function dvBoxHtml() {
 }
 function afterDove() {
   const f = Object.assign({}, DV_F0, store.get("f_dove", {})), save = () => { store.set("f_dove", f); render(true); };
+  dvCaricaVicini(dvRows(f));
   const m = tMap($("#dvmap"), [[45.6, 9.4], 7]);
   if (m) { const rows = dvRows(f), vals = rows.map(o => o[f.uso]), b = [];
     const bins = [0.03, 0.045, 0.06, 0.08];
