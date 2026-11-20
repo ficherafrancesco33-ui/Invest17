@@ -20,6 +20,8 @@ Scarta subito gli id già presenti: `tools/auto_raw.json` (annunci + scartati) e
 ## 2. Investimenti (avviso con l'area disegnata, 20.000–60.000 €)
 Apri la scheda `https://www.immobiliare.it/annunci/ID/` e leggi: prezzo, m², locali, bagni, piano, stato, classe energetica, spese condominiali, agenzia, data "aggiornato il", indirizzo, descrizione, elenco foto (`pwm.im-cdn.it/image/NNN/...`).
 
+Leggi la **descrizione intera**, non solo l'inizio (le condizioni particolari stanno spesso in fondo). Scarta subito se compare: quota, comproprietà, nuda proprietà, usufrutto, asta, tribunale, rent to buy / affitto con riscatto, cessione, rendita vitalizia, "venduto", "in trattativa", "solo contanti" per abusi, difformità o sanatorie non fatte, locale commerciale/ufficio/magazzino presentato come casa.
+
 Tieni **solo** se tutte vere (ci investe soldi veri, meglio scartare un dubbio che caricare un rudere):
 - stato buono/abitabile, ottimo/ristrutturato o nuovo, e la descrizione lo conferma (scarta: "da ristrutturare", "da rivedere", "rustico", "allo stato grezzo", "fienile", "rudere", "ex", "da sistemare", "impianti da rifare");
 - non asta, non nuda proprietà, non quota, non "affittato con riscatto", non venduto/in trattativa;
