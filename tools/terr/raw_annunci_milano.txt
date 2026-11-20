@@ -1,0 +1,271 @@
+# Annunci in vendita a Milano letti da Trovit (pagine "casa-bilocali-milano"), 20/11/2026.
+# prezzo;mq;locali;via;zona;descrizione;id trovit (link: https://case.trovit.it/detail/trovit-IT-<id>)
+369000;111;4;Via Mazzucotelli 15;Municipio 4;Primo piano, verde condominiale, balcone;2620005789640015373
+398000;83;3;;Municipio 6;Quinto piano, signorile, portierato, ascensore, balcone, cantina;2320001792663675968
+275000;70;3;Via dei Guarneri 24;Municipio 5;Contesto tranquillo, portineria;2270005780999901552
+398000;70;3;Viale Corsica 41;Municipio 4;Terzo piano, ascensore, portineria, balcone, cantina;2180001791454150404
+640000;150;3;Viale San Gimignano 6;Municipio 6;Da ristrutturare, stabile signorile, giardino, due bagni;2160003788948915296
+690000;100;3;;Municipio 6, Navigli;Residenza d'epoca, vista sul Naviglio;2160001792231898465
+450000;90;3;Via Foppa;Municipio 6;Trilocale;1980004775566147216
+580000;100;2;Viale Brenta 14;Municipio 4;Terrazzo 50 mq, cantina, ascensore, nuovo;1960005795169350541
+1099000;130;4;Via Abbondio Sangiorgio;Municipio 1;Casa d'epoca, ascensore, due bagni;1510005794478646666
+450000;105;3;Via Marchetti 1;Municipio 5;Terzo piano, signorile, ascensore, portineria, balcone;1320003783591858555
+669000;91;3;Via Giovanni Battista Niccolini 20;Municipio 1, Paolo Sarpi;Terzo piano;1170005789899209582
+529000;100;3;;Municipio 6;Doppia esposizione, terzo piano, ascensore, balcone;1010003793268790851
+235000;48;2;Via Privata Scipione Piattoli 7;Municipio 2;Ristrutturato, secondo piano;1000005793441497712
+640000;110;3;Piazza Luigi di Savoia 28;Municipio 2, Centrale;Signorile, due bagni;8970003782296059129
+248000;85;3;Via Medeghino;Municipio 5;Da personalizzare, due balconi;8820002794996814854
+525000;96;3;Via Fabio Filzi 10;Municipio 2, Centrale;Casa Bogani del 1906;8780001792577454887
+299000;80;3;Via Lorenteggio;Municipio 6, Lorenteggio;Quarto piano, ascensore, balcone;8660003791886050455
+269000;75;3;;Municipio 5;Doppio ascensore, portineria, cucina abitabile;8510005791713414528
+345000;90;3;Via Ugo Betti 121;Municipio 8;Ristrutturato, doppi servizi, balcone;8300005784455764889
+671000;112;3;;Municipio 9, Bovisa;Vicino Politecnico Bovisa, due bagni;8260003788603286198
+398000;83;3;Viale Caterina da Forlì 42;Municipio 7;Quinto piano, portierato, ascensore, balcone;8190005780999728563
+330000;120;4;Via Ugo Betti 43;Municipio 8;Balcone, cantina, ascensore;8130005793959869481
+390000;70;2;Piazzale Loreto;Municipio 2;Piano alto, balcone, ascensore;7840004788948697455
+279000;70;3;Via Monte Lungo 4;Municipio 2, Turro;Terzo piano, ascensore, balcone, cantina;7610001764414267678
+468000;118;4;;Municipio 8, QT8;Salone doppio, autonomo, box;7530005793182512943
+229000;48;2;Via Privata Decemviri 6;Municipio 4;Ristrutturato, giardino condominiale;7510005793441452393
+397000;73;3;Via delle Azalee 7;Municipio 6;Nuova realizzazione, balcone, cantina;7450005794823872088
+249000;55;2;Via Gassman 3;Municipio 2, Quartiere Adriano;Terrazzo;7420003781863900859
+272000;83;2;Via Ripamonti 190;Municipio 5, Vigentino;Balcone, cantina, ascensore;7420001793959769327
+1100000;100;2;;Municipio 1, Sempione;Ultimo piano, palazzina d'epoca, ascensore;7120004780136125466
+230000;95;3;Via Mario Borsa 30;Municipio 8, Gallaratese;Posto auto, vicino MM1 San Leonardo;6930005790762991740
+645000;81;3;;Municipio 7, Gambara;Nuova costruzione;6860001793354876572
+205100;63;2;;Municipio 7;Balcone;6750003790763154590
+340000;65;2;Via Mauro Macchi 32;Municipio 2, Centrale;Luminoso, subito disponibile;6730001792145276266
+320000;45;2;Viale San Michele del Carso 3;Municipio 1;Bilocale;6640005780999837122
+260000;35;1;Via Luigi Settembrini 42;Municipio 2, Buenos Aires;Terrazzo, ascensore;6580004783851191543
+490000;89;3;;Municipio 8;Stabile 2020, arredato, terrazzo, cantina, posto auto;6320004788948697144
+800000;84;3;Via Giulio Romano 27;Municipio 5;Sesto piano, ristrutturato;6250005780999683500
+600000;67;2;Via Magolfa;Municipio 6, Navigli;Recente costruzione, posto auto, cantina, ascensore;6200004782468700234
+230000;75;3;Viale Monza 83;Municipio 2, Rovereto;Posizione interna;6090001791886043733
+199000;48;2;Via Arquà 18;Municipio 2;Bilocale;6070005785406233937
+430000;110;4;Via Longhena;Municipio 4, Corvetto;Anni '60, cantina, balcone;5850003741094090201
+219000;75;2;Via Palmanova 215;Municipio 2, Crescenzago;Secondo piano, ascensore, balcone, cantina;5760003791454140096
+1990000;175;5;Via Carlo Poma 1;Municipio 4, Indipendenza;Immobile di pregio, balcone;5360001793354876299
+398000;110;4;Via Privata Passo Pordoi;Municipio 5;Salone con cucina a vista;5330005789466938690
+445000;84;3;Via Roberto Ardigò 17;Municipio 4;Due bagni;4910003783418844157
+470000;100;3;;Municipio 5;Stabile 2018, quinto piano, posto auto, terrazzo;4820004791886312170
+549000;80;2;Via Domenico Scarlatti;Municipio 3;Bilocale;4620005792318244224
+480000;104;3;;Municipio 3, Indipendenza;Nuova costruzione, classe A;3930001761996887215
+495000;96;3;Via Noto 10;Municipio 5;Classe A, recente costruzione, balcone;3920005792318233357
+365000;45;2;;Municipio 3;Ristrutturato, ascensore, cantina, balcone;3680004757073281033
+309000;95;4;;Municipio 9, Niguarda;Portineria, ascensore, balcone;3430001789985281300
+324000;90;3;Via Milly 11;Milano;Doppi servizi, terrazzo;3390005780999891847
+315000;45;2;Via Montevideo 6;Municipio 6, Solari;Giardino, cantina, stabile d'epoca, portineria;3240001794737265567
+115000;40;2;;Municipio 8, Villapizzone;Mansardato;3110002780827467323
+430000;71;2;Corso San Gottardo 35;Municipio 5, Corso San Gottardo;Due terrazzini, ascensore;3070005794910242539
+3200000;180;4;;Municipio 1, Scala - Manzoni;Stabile signorile, portineria;2940004785147139222
+198000;47;2;Via Accademia 53;Municipio 3;Su due livelli;7340005793268601403
+815000;112;3;Via Antonio Fogazzaro;Municipio 4;Casa di ringhiera, due bagni;7200003776938985008
+398400;115;3;;Municipio 7;Balcone, due bagni;7050003790763154639
+319000;85;3;Via Benefattori dell'Ospedale 3;Municipio 9, Niguarda;Nuovo, vicino MM3 e MM5;6940003795083062087
+400700;113;3;;Municipio 7;Balcone, due bagni;6770003790763154593
+201500;62;2;;Municipio 7;Balcone;6760003790763154592
+189000;45;2;;Municipio 5;Balcone;6550004787825516610
+1430000;188;3;;Municipio 3;Ultimo piano, terrazzo, ascensore, tre bagni;6550004779531324351
+370000;45;2;Via Lazzaretto 14;Municipio 2, Porta Venezia;Nuovo, stabile d'epoca;6490003779098930991
+399000;65;2;;Municipio 9;Grande terrazzo, ascensore, cantina;6460004779012689951
+399000;65;2;Via Caroncini 6;Municipio 4;Ristrutturato, balcone, ascensore;6010003794996653082
+299000;114;5;Via Giovanni Montemartini 4;Municipio 4;Quarto piano senza ascensore, giardino;5990005794910106668
+538000;97;3;;Municipio 2;Nuova costruzione, terrazzo;5980004793960115251
+435000;110;4;;Municipio 2;Primo piano, ascensore, da personalizzare;5720005789467176676
+399000;118;5;Via Neera 25;Municipio 5;Tripla esposizione, balcone, ascensore;5640001790935653150
+690000;90;3;;Municipio 8, City Life;Da ristrutturare;5570004790331297370
+405000;71;3;Via Paracelso 6;Municipio 3;Palazzo del 1900, terrazzo, ascensore;5540000793527844038
+699000;91;4;Piazzale Libia;Municipio 4;Ristrutturato, balcone, ascensore;5500004788344163595
+680000;105;3;Via Privata Lanciano;Municipio 9;Indipendente, ristrutturata, terrazzo, posto auto;5330005792750174402
+490000;99;2;Viale Cermenate 54;Municipio 5;Ristrutturato, doppia esposizione, giardino;5220004791540735220
+299000;50;2;Via Saverio Altamura 17;Municipio 7;Appena ristrutturato, mai abitato;5000005793959770522
+385000;131;4;;Municipio 9, Niguarda;Terrazzo;4930003788516456313
+520000;108;3;Viale Gran Sasso 31;Municipio 3, Città Studi;Un bagno;4900003783418928521
+415000;75;3;Viale Liguria 50;Municipio 6, Famagosta;Balcone, cantina, ascensore;4900001794046104004
+395000;85;3;Viale Sarca 322;Municipio 9, Bicocca;Terrazzino, ascensore;4440005789294261557
+410000;90;3;Via Sebino 8;Municipio 4;Balcone, ascensore;4310004771499693124
+350000;135;3;Via Novara 363;Municipio 7;Villa bifamiliare ristrutturata, giardino;4290005794046221925
+415000;86;4;Via Pietro Andrea Saccardo 35;Municipio 3;Palazzina anni '30, giardino;4200005789294232415
+550000;110;3;Corso Buenos Aires;Municipio 3, Buenos Aires;Trilocale, metro vicina;8600005782382139659
+379000;85;3;Via Paolo Maspero 51;Municipio 4;Ristrutturato a nuovo, due bagni, ascensore;8450005790849479897
+1750000;190;5;Via Santa Croce;Milano;Terzo piano, stabile anni '60;8420005790158099081
+418000;74;3;Via degli Imbriani 15;Municipio 9, Dergano;Ristrutturato, balcone, ascensore;8420001793268473190
+185000;75;2;Via Tina di Lorenzo 5;Municipio 8;Arredato, quarto piano, cantina;8230001793268479170
+447000;85;3;Via Giacinto Bruzzesi 9;Municipio 6;Due bagni, vicino M4 Tolstoj;8150005793268494419
+459000;95;3;Viale Giovanni da Cermenate;Municipio 5;Ascensore;7840003778925994169
+260000;43;2;Via Palmanova 24;Municipio 3;Ristrutturato, arredato, ascensore;7830001792836419944
+239000;50;2;;Municipio 9;Secondo piano, balcone, cantina, arredato, ascensore;7770002793614752249
+530000;89;3;Via Sofonisba Anguissola 25;Municipio 7;Spazi esterni;7740005793700628554
+259000;83;3;Via Agostino De Pretis;Municipio 6;Ristrutturato, terzo piano, ascensore, balcone;7540005776247667428
+449000;93;3;Via Pietro Redaelli 11;Municipio 6;Trilocale;7300005780999731486
+320000;85;3;Via Val Bavona 5;Municipio 6;Ristrutturato, primo piano, balcone;7210005785319655841
+1850000;203;4;Via Correggio 1;Municipio 7;Quinto piano, ristrutturato, arredato, tre bagni;7200004793701043575
+230000;80;3;Via Carlotta Marchionni 31;Municipio 9;Balcone, parco condominiale;7150005794478140684
+270000;76;2;;Municipio 7;Posto auto, cantina;7020003760526853624
+755000;112;3;;Municipio 7, Gambara;Nuova residenza;6850001793354876568
+1780000;225;6;Viale Beatrice d'Este;Municipio 1;Unico per piano, giardino;6600001791886043834
+220000;75;2;Via Mecenate 5;Municipio 4, Quartiere Forlanini;Balcone, cantina;6470001794564546522
+199000;37;2;Via Arquà;Municipio 2;Ristrutturato, vicino Loreto;6360005789035148521
+325000;90;3;Via Trasimeno 22;Municipio 2, Quartiere Adriano;Posto auto, balcone, cantina;6350004783073303315
+420000;100;3;;Municipio 5;Terrazzo, giardino, due bagni;5940004792491319100
+414000;88;3;Piazzale Vincenzo Cuoco 3;Municipio 4;Pronto da abitare, piano alto;5820005791454170994
+290000;81;4;Via Palmanova 89;Municipio 2, Cimiano;Vicino M2 Cimiano;5780005793441351577
+290000;95;3;Via Giovanni della Casa 9;Municipio 8;Primo piano, mini palazzina, balcone;5750003779099039408
+430000;85;3;;Municipio 6;Secondo piano, ristrutturato, ascensore, cantina;5730003746106040804
+395000;85;3;Via Domenico Millelire 18;Municipio 7;Ristrutturato, ultimo piano;5580003795083150307
+565000;92;3;Via Davide Carnaghi 2;Municipio 3, Città Studi;Primo piano, balcone, cantina, ascensore;4580003794133082350
+429000;74;2;;Municipio 8, City Life;Balcone, cantina, ascensore;4570004761478126288
+385000;85;3;Via Primaticcio;Municipio 6, Primaticcio;Quinto piano, tripla esposizione, cantina, ascensore;4560003780740666792
+830000;108;3;;Municipio 1;Secondo piano, palazzo d'epoca, ascensore, balcone;4530003792577933907
+1320000;190;4;;Municipio 1;Ultimo piano, palazzo d'epoca, posto auto;4370001756293975029
+439000;90;3;Via Ruggero Leoncavallo 8;Municipio 3, Parco Trotter;Ascensore, giardino;4180001790330851434
+281200;85;3;;Municipio 7, Baggio;Nuova costruzione, balcone;4060002793614704635
+216000;49;2;Via Ettore Bugatti 15;Municipio 5, Gratosoglio;Nuova costruzione, riconversione;4010001792836430843
+361500;102;4;;Municipio 7, Baggio;Nuova costruzione, due bagni;3920002793614704609
+240800;76;2;;Municipio 7, Baggio;Nuova costruzione, balcone;3900002793614704604
+260000;70;3;Piazzale Gabriele Rosa 6;Municipio 4;Quarto piano, doppia esposizione, balcone, ascensore;3340005780999894951
+240000;75;3;Via Trasimeno;Municipio 2, Quartiere Adriano;Ristrutturato a nuovo, posto auto, ascensore;3330005789812724566
+284000;74;2;;Municipio 2;Balcone, cantina, ascensore;3300005760959272689
+1298000;150;4;Viale Gran Sasso 3;Municipio 3, Città Studi;Sesto piano, ristrutturato, balcone;2860001790503598644
+329000;65;2;Via Scipione Pistrucci;Municipio 4;Sesto piano, ascensore, terrazzino;2750004750071505772
+379000;72;2;Via Luigi Settembrini 15;Municipio 2, Repubblica;Ascensore;2750002747835733747
+850000;72;2;;Municipio 9, Isola;Palazzina recente, balcone, ascensore;2740005779358257116
+579000;85;3;;Municipio 8, Isola;Ristrutturato, due bagni;2610003773138511196
+465000;100;3;Viale Monza 79;Municipio 2;Prezzo ridotto da 490.000 €;2330004784023828044
+365000;86;3;Via Melchiorre Delfico 24;Municipio 8;Primo piano, libero;1980005788862322309
+435000;104;3;Via privata Quarto Cagnino 12;Municipio 7, Quarto Cagnino;Due bagni;1880005793268552032
+278000;70;3;Via Privata Martino Lutero 6;Municipio 2, Precotto;Cantina, ascensore;1440003781258927500
+390000;94;3;Via Privata Gian Girolamo Savoldo 4;Municipio 9, Ca' Granda;Ristrutturato, doppi servizi, ascensore;1400005792232015819
+545000;100;3;;Municipio 6, Tre Castelli - Faenza;Arredato, posto auto, cantina;1200001792663679943
+625000;95;3;Via Antonio Bazzini 35;Municipio 3;Quarto piano, ascensore;1140005793700514784
+255000;52;2;Via Rembrant 9;Municipio 7;Piano alto, balcone, cantina, ascensore;1070005778234891022
+229000;90;3;Via Bartolomeo Cabella 5;Municipio 7;Balcone, cantina, doppia esposizione;9070005780999727812
+385000;107;3;Via Giovanni Battista Piranesi 41;Municipio 4;Anni '50, signorile;9000005780999683797
+368000;81;2;;Municipio 9, Farini;Su più livelli, terrazzo;8980005762773518104
+595000;190;4;Via Ronchi 1;Municipio 3;Giardino privato, due posti auto;8820005794393432259
+340000;80;2;;Municipio 7, Piazzale Siena;Trasformato in trilocale;8250004780136127184
+349000;65;2;Via dei Tulipani 2;Municipio 6;Ristrutturato, ascensore;8180005794651136638
+444000;95;3;Via Cristoforo Gluck 48;Municipio 2;Due balconi;8070001793959751733
+345000;65;2;Via Roberto Ardigò 17;Municipio 4;Curato;7910003783418837928
+299000;80;3;Via Luigi Ornato 72;Municipio 9;Ultimo piano, ascensore, anni '60;7680005789985453282
+430000;80;2;Via Giovanni Ricordi 13;Municipio 3;Terzo piano, ascensore, portineria, balcone;7520003788343955965
+299000;100;4;Via San Dionigi 20;Municipio 4, Corvetto;Primo piano, due bagni, balcone;7510005793268537247
+210000;43;2;Via Camillo Giussani 20;Municipio 6;Vicino tram 2 e bus 47;7410005780999652527
+430000;120;4;Viale Brianza 20;Municipio 2;Due bagni;7370005791454176983
+315000;74;2;Via Val Caffaro 7;Municipio 3;Da ristrutturare, primo piano, ascensore, anni '70;7370001795169294737
+375000;90;3;;Municipio 9;Doppi servizi, terrazzo;7320001794737268382
+260000;45;2;;Municipio 2;Cantina, terrazzo, ascensore;7300003790935954347
+235000;84;3;Via Orbetello 4;Municipio 3, Cimiano;Balcone, vicino M2 Cimiano;6670005782554947078
+660000;113;3;Via Moretto da Brescia 4;Municipio 3;Finiture originali, giardino;6500005792750254216
+339000;68;2;;Municipio 5;Terrazzo;6480003782554813587
+395000;75;2;Viale Lodovico Scarampo 47;Municipio 8;Giardino, zona Fiera-CityLife;6270005790244607566
+530000;100;3;Via Vespri Siciliani 7;Municipio 6;Casa indipendente, corte privata;6260005780999771944
+255000;87;3;Via Teano 36;Municipio 9;Ristrutturato, terzo piano, balcone, cantina;6260004792836729146
+320000;80;3;Via Bonfadini 98;Municipio 4;Ristrutturato, balcone;5970004781259082699
+750000;110;3;Via Bullona 16;Municipio 8;Balcone, ascensore;5920001791454133953
+390000;68;2;Via Marco Greppi 10;Municipio 4;Balcone;5730005793182259963
+385000;90;3;;Municipio 2;Balcone, ascensore;5650005771412725052
+595000;155;4;Via Pellegrino Rossi 59;Municipio 9, Affori;Box e cantina, vicino MM3;5640005791454281385
+365000;91;2;;Municipio 2, Loreto;Stabile d'epoca, cantina;5550000765882246811
+299000;90;3;Via Gallarate;Municipio 8, Musocco;Stabile riqualificato, balcone;5100004771928691865
+269000;50;2;Via Vittorio Scialoia 4;Municipio 9;Quinto piano, ascensore, arredato;4940005780999788988
+730000;149;4;;Municipio 7;Tripla esposizione, piscina, giardino, terrazzo;4940003782814240876
+528000;165;4;Viale Carlo Espinasse 60;Municipio 8, Certosa;Scale interne;4930001793959760325
+315000;80;3;;Municipio 5, Vigentino - Fatima;Balcone;4920001790849212064
+1890000;243;6;;Municipio 5, Centro storico;Due terrazzi loggiati, ascensore;4910003792577945922
+215000;75;2;Via Filippo de Pisis 11;Municipio 8;Quinto piano, due balconi;4900005789640116132
+229000;47;2;Via Monte Lungo 5;Municipio 2, Turro;Ascensore, portineria, balcone, cantina;4580004758107180122
+220000;80;3;Viale Omero 19;Municipio 4, Corvetto;Balcone, vicino M3;4550005794478169136
+198000;55;2;Via Benedetto Diotti 43;Municipio 7;Recente costruzione, balcone;4170003741094073826
+1680000;233;6;Via Cadore 52;Municipio 4, Cadore;Tre fronti, casa e ufficio;4120005783591857537
+259000;50;2;;Milano;Ristrutturato, arredato, primo piano, ascensore, anni '30;4100005788430310394
+329000;90;3;Via Taranto 2;Municipio 6;Quarto piano, ascensore, portineria;3930005791194882087
+287000;83;3;;Municipio 7, Baggio;Nuova costruzione, balcone;3870002793614704598
+346200;100;4;;Municipio 7, Baggio;Nuova costruzione, due bagni;3790002793614704582
+319700;92;3;;Municipio 7, Baggio;Nuova costruzione, due bagni;3780002793614704580
+315000;52;2;Via Plinio 39;Municipio 3, Città Studi;Nuovo, cortile, stabile signorile;3750005794996586082
+380000;70;2;Via Osoppo;Municipio 7, Piazzale Siena;Stabile signorile con custode, terrazzo;3260003776938947753
+220000;91;3;;Municipio 8, Quarto Oggiaro;Ascensore, balcone;3250003781172696492
+1490000;150;3;Via Archimede 20;Municipio 4, Indipendenza;Piano nobile, arredato, ascensore;3120001795083265653
+399000;87;3;Via Privata Mario Galli 11;Municipio 9;Secondo piano, ascensore, balcone;3090005794305498177
+310000;81;2;Viale Monza 285;Municipio 2, Precotto;Giardino, vicino metro;2990005793787175071
+995000;115;3;;Municipio 1;Due bagni;2990004775210869151
+418000;80;2;;Municipio 2, Pasteur;Indipendente, due bagni;2630004778926250631
+375000;75;2;Via Adolfo Wildt 5;Municipio 3, Casoretto;Ristrutturato, arredato, terrazzo, ascensore;2520001790417211416
+300000;90;3;Via Cascina Corba 84;Municipio 6;Balcone;2510005794651106348
+369000;86;3;;Municipio 2, Gorla;Vicino Martesana;2480003741094068839
+1660000;230;5;;Municipio 3;Attico nuovo, terrazzo, classe A;2450004755255628442
+438000;80;3;Via Fabio Filzi 10;Municipio 2, Centrale;Liberty, Casa Bogani;2360005790417364234
+270000;47;2;Via Civitali 69;Municipio 7;Arredato, balcone;2360005778234891295
+2000000;220;6;Via Fabio Filzi 19;Municipio 2, Centrale;Ristrutturato, terrazzo;2300001794218890157
+220000;55;2;;Municipio 5;Terrazzo, ascensore;2280004789035105926
+458000;100;4;Via Bernardino Verro;Municipio 5, Vigentino - Fatima;Ristrutturato, due bagni, balcone;2270001791540640463
+850000;83;3;Via Matteo Bandello 6;Municipio 1, San Vittore;Terrazzino, cantina;2150001790503604048
+542000;99;3;;Municipio 9, Bovisa;Vicino Politecnico Bovisa;1950003788603284636
+270000;80;3;Piazzale Luigi Negrelli;Municipio 6, Tre Castelli - Faenza;Casa d'epoca, balcone;1920001793959774889
+1723800;223;5;Viale Ortles 80;Municipio 5;Attico nuova costruzione;1860001743255717123
+395000;84;2;Via Ascanio Sforza 17;Municipio 5, Ascanio Sforza;Loft, corte storica;1810005788862369171
+2100000;235;4;Via Pier Lombardo;Municipio 4, Porta Romana - Medaglie d'Oro;Terrazzo, tre bagni;1580003791109140501
+430000;150;5;Via Carlo Marx 36;Municipio 7, Quarto Cagnino;Cantina, ascensore;1460001790762861756
+629000;103;3;Via Federico Ozanam;Municipio 3, Buenos Aires;Due bagni;1330005792145716063
+255000;54;2;;Municipio 4, Corvetto;Arredato, ascensore;1200003741094088929
+225000;81;3;Viale Omero 26;Municipio 4, Corvetto;Balcone;1050005790849542977
+398000;83;3;;Municipio 7;Quinto piano, portierato, balcone, posto auto;1040004780049515855
+800000;160;5;Piazzale Lagosta 4;Municipio 9, Isola;Da personalizzare, ascensore, due bagni;8920003784110244003
+439000;105;3;Via Luigi Federico Menabrea 26;Municipio 9;Un bagno;8700005789121547135
+580000;90;3;Viale Monte Nero 57;Municipio 1, Montenero;D'epoca;8670005791281335391
+1090000;125;4;Corso Sempione;Municipio 8, Sempione;Da ristrutturare;8560001793268474801
+649000;80;2;Via Giovanni Rasori 7;Municipio 7, Vercelli - Wagner;Due livelli, giardino, balcone;8430004789726516296
+368000;71;3;;Municipio 3, Udine;Vicino MM2 Udine, balcone;8420003794478453492
+310000;50;2;;Municipio 8;Palazzo primi '900, balcone;8170003789121601580
+360000;70;3;Viale Luigi Torelli 8;Municipio 9;Casa d'epoca, balcone, ascensore;8060004793527850861
+1050000;117;4;;Municipio 5, Porta Romana - Medaglie d'Oro;Due livelli, terrazzo, ascensore;7670001794650922246
+378000;76;3;Via Amero Cagnoni 10;Municipio 7, Piazzale Siena;Rinnovato 2022, due bagni, posto auto;7600005793268591217
+379000;90;3;;Municipio 2;Cantina, terrazzo, ascensore;4020002761735826726
+389000;70;2;;Municipio 5;Balcone, ascensore, finiture di pregio;3890003791454139596
+255000;67;2;Via Edoardo Chinotto 34;Municipio 7;Piano rialzato, cantina;3620005793268582926
+520000;100;3;Via Tito Livio 20;Municipio 4;Terrazzo, giardino;3500005793700599482
+340000;120;3;Via Gabriele Camozzi 7;Municipio 7, Baggio;Ultimo piano senza ascensore;3230001794823658741
+275000;55;2;Piazza Prealpi 3;Municipio 8, Certosa;Quinto piano, arredato, ascensore;2880001792058864698
+355000;115;4;Via Nikolajevka 14;Municipio 7, Bisceglie;Ultimo piano, due balconi, ascensore;1860001794478077688
+395000;125;2;Via Privata Alfredo Soffredini 29;Municipio 2;Loft, giardino privato, due bagni;1820005780999811934
+1250000;180;4;Via Vittor Pisani 12;Municipio 2, Repubblica;Secondo piano, due bagni;1510005788690320595
+310000;121;4;Via Terni 3;Municipio 7;Piano terra, anni '70;1470005780999743067
+299000;25;1;Viale Montenero 50;Municipio 4, Montenero;Monolocale, ascensore;1470002794651233928
+2000000;195;4;Corso Concordia;Municipio 3;Due livelli, terrazzo 83 mq;1420004790504025565
+305000;50;2;;Municipio 3, Città Studi;Loft da ristrutturare;1220005758625312605
+320000;106;4;Via Adolfo Omodeo 1;Municipio 8;Portineria, vicino metro Uruguay;1210003779099016587
+310000;75;2;Via Bolama 16;Municipio 2;Bilocale;9100005793873555790
+800000;130;4;Via Domenico Scarlatti;Municipio 2, Centrale;Ampio soggiorno;9090001792836420169
+630000;90;3;Via Lazzaretto;Municipio 1, Porta Venezia;Quarto piano, ascensore;8810001757417932878
+375000;66;2;Via Ennio 15;Municipio 4;Terzo piano, due balconi, ascensore;8780005790417255429
+850000;170;5;Viale Brianza 27;Municipio 2, Centrale;D'epoca anni '30, ascensore;8430001795169293216
+284000;69;2;;Municipio 5;Penultimo piano, balcone, cantina, ascensore;8120005795083089600
+279000;48;2;Viale Monza 102;Municipio 2, Turro;Ascensore, portineria;8010005778753619465
+285000;72;2;Via del Turchino 13;Municipio 4;Da ristrutturare;8010003747919059549
+365000;70;2;Via Tolstoj;Municipio 6;Balcone, cantina, ascensore, vicino M4;3620003788603234214
+795000;155;5;Via Ennio 9;Municipio 4;Casa indipendente, terrazzo, giardino;3570003790417491092
+339000;75;3;;Municipio 5;Signorile, portineria, balcone, cantina;3290004781259082089
+296000;50;2;;Municipio 6;Quarto piano, ascensore, balcone, cantina;3220002793787546182
+379000;75;3;Via Giacosa 71;Municipio 2;Ristrutturato a nuovo, cantina, ascensore;3200002760786569518
+298000;55;2;;Municipio 2;Mansarda, ascensore;2910001794564543029
+209000;80;1;Via Camporgnago 20;Municipio 5;Balcone, cantina;2880002793701010675
+335000;75;2;;Municipio 5;Condominio 2006, giardino;2320003749641598817
+1200000;180;3;;Municipio 6;Loft recente, due bagni;9100003792577983155
+1850000;250;6;Via Filippo Argelati;Municipio 6;Terrazzo, piscina, giardino;9000003790417470983
+265000;45;1;Via Luigi Devoto;Municipio 4;Ristrutturato a nuovo, giardino;8940001792491644594
+348000;70;3;Via Privata Piero Martinetti;Municipio 7;Giardino privato, ristrutturato;8910005789639998882
+1790000;193;3;Via Lanzone;Municipio 1, Sant'Ambrogio;Terrazzo, giardino;8770004788085130530
+585000;118;3;Via Lazzaretto 14;Municipio 2, Porta Venezia;Nuovo in stabile d'epoca, tre bagni;8660005793182338944
+285000;80;3;Via Gallura;Municipio 5;Da ristrutturare, balcone;8630005770462807824
+312000;72;2;Viale Monza 165;Municipio 2;Stato originale, balcone, cantina, ascensore;8310001794218893554
+285000;55;2;Via Bronzino 17;Municipio 3;A 450 m dalla MM2 Piola;8160005780999724007
+659000;100;3;Viale Gian Galeazzo 10;Municipio 5;Da trasformare, vicino Navigli e Bocconi;8050005780999875705
+732500;124;4;;Municipio 8;Terrazzo, due bagni;7980004793182739045
+530000;100;4;;Municipio 8;Terzo piano, balcone, sottotetto;7960003784369435442
+429000;125;3;Via Spezia 45;Municipio 5;Da trasformare, balcone, cantina, ascensore;7740001794132544635
+375000;80;2;Via Messina 47;Municipio 8, Paolo Sarpi;Vicino MM5 Cenisio;7710005788862467892
+740000;220;4;;Municipio 4;Loft frazionabile, casa-studio;7610004760440093400
+650000;105;3;Via Vitruvio;Municipio 3, Centrale;Posto auto, balcone, due bagni;7110003747318691171
+255000;85;3;Via Enrico Falck 41;Municipio 8;Piano alto, posto auto, balcone, cantina;7070005788603339169
+277000;50;2;Via Giovanni della Casa;Municipio 8;Nuova costruzione, terrazzo;6830001792145283943
+395000;90;3;Via Gabbro 12;Municipio 9;Ristrutturato, vista panoramica;6710002791627017825

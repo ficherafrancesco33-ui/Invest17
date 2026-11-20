@@ -5,7 +5,7 @@
    (immobiliare.it); confini dei quartieri (NIL, Comune di Milano) e dei comuni
    dell'hinterland (openpolis). Tocchi un palazzo → scheda → valutazione → PDF.
    ========================================================================== */
-const MM = { map: null, sel: null, metric: "v", cells: null, nil: null, hint: null, ready: false, lay: { prezzi: true, nil: true, metro: true, poi: false, d3: true } };
+const MM = { map: null, sel: null, metric: "v", cells: null, nil: null, hint: null, ready: false, lay: { prezzi: true, nil: true, metro: true, poi: false, ann: true, d3: true } };
 const MM_LIBS = [
   ["css", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"],
   ["js", "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js", () => window.maplibregl],
@@ -182,7 +182,8 @@ async function mmInit(el) {
       paint: { "text-color": "#b3cde4", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
     // quartieri ufficiali (NIL): se il Comune risponde
     mmNil(map);
-    map.on("click", e => mmTap(e));
+    mmAnnLayer(map); mmGeocodifica();
+    map.on("click", e => { if (!e.originalEvent.__ann) mmTap(e); });
     map.on("mousemove", e => { map.getCanvas().style.cursor = map.queryRenderedFeatures(e.point, { layers: ["bld"] }).length ? "pointer" : ""; });
     MM.ready = true; mmApplyLayers();
     const s = MM.sel; if (s) mmShowSel(s, false);
@@ -215,7 +216,7 @@ function mmApplyLayers() {
   vis(["cell-fill", "cell-line", "cell-lab", "hint-fill"], MM.lay.prezzi);
   vis(["nil-line", "nil-lab"], MM.lay.nil);
   vis(["metro", "metro-glow", "metros"], MM.lay.metro);
-  vis(["poi"], MM.lay.poi);
+  vis(["poi"], MM.lay.poi); vis(["ann"], MM.lay.ann);
   map.setPaintProperty("bld", "fill-extrusion-height", MM.lay.d3 ? ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]] : 0);
   ["cell-fill", "hint-fill"].forEach(id => map.getLayer(id) && map.setPaintProperty(id, "fill-color", mmColorExpr(MM.metric)));
   if (MM.lay.d3 && map.getPitch() < 20) map.easeTo({ pitch: 52, duration: 600 }); if (!MM.lay.d3 && map.getPitch() > 0) map.easeTo({ pitch: 0, bearing: 0, duration: 600 });
@@ -286,7 +287,7 @@ function vMilano3D() {
   <div class="mmbar">
     <div class="mmsearch"><input type="search" id="mmq" placeholder="Cerca un indirizzo: via Tortona 27" autocomplete="off"><div id="mmres" class="mmres" hidden></div></div>
     <div class="chips" id="mmm">${Object.entries(MM_MET).map(([k, m]) => `<button class="chip ${k === MM.metric ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
-    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#00c8e0", nil: "#ff2bd6", metro: "#e3242b", poi: "#facc15", d3: "#7df3ff" }[k]}"><i></i>${t}</button>`).join("")}</div>
+    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["ann", "Annunci"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#00c8e0", ann: "#ff2bd6", nil: "#ff7ae6", metro: "#e3242b", poi: "#facc15", d3: "#7df3ff" }[k]}"><i></i>${t}</button>`).join("")}</div>
   </div>
   <div class="mmwrap"><div class="mm3d" id="mm3d"></div><div class="mmsheet" id="mmsheet" hidden></div></div>
   <div id="mmleg">${mmLegend()}</div>
@@ -424,6 +425,10 @@ ${vicine.length ? `<h2>Valori di confronto nelle microzone vicine</h2>
 <table class="sans"><thead><tr><th>Microzona</th><th>Zona</th><th class="r">Distanza</th><th class="r">Vendita €/m²</th><th class="r">Affitto €/m²</th></tr></thead><tbody>
 <tr style="color:#6e1423"><td><b>${esc(ctx.micro.n)}</b></td><td>${esc(ctx.micro.z)}</td><td class="r">—</td><td class="r"><b>${eur(ctx.micro.v)}</b></td><td class="r">${num(ctx.micro.a, 2)}</td></tr>
 ${vicine.map(m => `<tr><td>${esc(m.n)}</td><td>${esc(m.z)}</td><td class="r">${num(m.d / 1000, 1)} km</td><td class="r">${eur(m.v)}</td><td class="r">${num(m.a, 2)}</td></tr>`).join("")}</tbody></table>` : ""}
+${(() => { const C = mmComps(ctx, q); return C ? `<h2>Annunci comparabili in vendita</h2>
+<table class="sans"><thead><tr><th>Indirizzo</th><th class="r">m²</th><th class="r">Locali</th><th class="r">Prezzo</th><th class="r">€/m²</th><th class="r">Distanza</th></tr></thead><tbody>
+${C.lista.map(a => `<tr><td>${esc(a.via || "Zona " + (a.micro || "Municipio " + a.mun))}<br><span class="note">${esc(a.d)}</span></td><td class="r">${a.mq}</td><td class="r">${a.loc || "—"}</td><td class="r">${eur(a.p)}</td><td class="r">${eur(a.mq2)}</td><td class="r">${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "stesso municipio"}</td></tr>`).join("")}
+</tbody></table><p class="note sans">Prezzi richiesti negli annunci (Trovit, novembre 2026). Mediana dei comparabili: ${eur(C.med)}/m²; il valore stimato considera il prezzo di chiusura, in genere più basso del prezzo richiesto.</p>` : ""; })()}
 <h2>Come è stato calcolato il valore</h2>
 <table class="sans"><tbody>
 <tr><td>Prezzo medio richiesto nella zona</td><td class="r">${eur(r.base)}/m²</td></tr>
@@ -457,3 +462,67 @@ ${near.staz.length || near.poi.length ? `<h2>Servizi e collegamenti vicini</h2><
 
 /* sostituisce la vista Milano precedente */
 TERR_VIEWS.milano = [vMilano3D, afterMilano3D];
+
+/* ==========================================================================
+   Annunci di Milano: posizione (cercata una volta e ricordata), mappa e comparabili
+   ========================================================================== */
+const MM_MUN = { "Centro": 1, "Arco della Pace, Arena, Pagano": 1, "Genova, Ticinese": 1, "Quadronno, Palestro, Guastalla": 1, "Garibaldi, Moscova, Porta Nuova": 9,
+  "Fiera, Sempione, City Life, Portello": 8, "Navigli": 6, "Porta Romana, Cadore, Montenero": 4, "Porta Venezia, Indipendenza": 3, "Centrale, Repubblica": 2,
+  "Cenisio, Sarpi, Isola": 8, "Uptown, Cascina Merlata, Viale Certosa": 8, "Bande Nere, Inganni": 7, "Famagosta, Barona": 6, "Abbiategrasso, Chiesa Rossa": 5,
+  "Porta Vittoria, Lodi": 4, "Cimiano, Crescenzago, Adriano": 2, "Bicocca, Niguarda": 9, "Solari, Washington": 6, "Affori, Bovisa": 9, "San Siro, Trenno": 7,
+  "Bisceglie, Baggio, Olmi": 7, "Ripamonti, Vigentino": 5, "Forlanini": 4, "Città Studi, Susa": 3, "Maggiolina, Istria": 9, "Precotto, Turro": 2,
+  "Udine, Lambrate": 3, "Pasteur, Rovereto": 2, "Ponte Lambro, Santa Giulia": 4, "Corvetto, Rogoredo": 4, "Napoli, Soderini": 6 };
+const mmAnnGeo = () => store.get("geo_ann", {});
+function mmAnnunci() {
+  const G = mmAnnGeo(), M = TERR.milano.micro;
+  return TERR.annunci.lista.map(a => {
+    const g = G[a.id] || (a.micro ? (m => [m.lon, m.lat, 1])(M.find(m => m.n === a.micro)) : null);
+    return { ...a, lon: g ? g[0] : null, lat: g ? g[1] : null, appross: g ? !!g[2] : true, mq2: a.p / a.mq, url: TERR.annunci.url + a.id };
+  });
+}
+let MM_GEO_RUN = false;
+async function mmGeocodifica() {   // 1 richiesta al secondo, come chiede OpenStreetMap; i risultati restano salvati nel telefono
+  if (MM_GEO_RUN) return; MM_GEO_RUN = true;
+  try {
+    const G = mmAnnGeo(), todo = TERR.annunci.lista.filter(a => a.via && !G[a.id] && G[a.id] !== 0).slice(0, 400);
+    for (const a of todo) {
+      if (!document.getElementById("mm3d")) break;
+      try {
+        const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=it&q=${encodeURIComponent(a.via + ", Milano")}`, { headers: { "Accept-Language": "it" } });
+        const L = await r.json(), g = mmAnnGeo();
+        g[a.id] = L[0] ? [+(+L[0].lon).toFixed(5), +(+L[0].lat).toFixed(5)] : 0;
+        store.set("geo_ann", g);
+        if (MM.map && MM.map.getSource("ann")) MM.map.getSource("ann").setData(mmAnnFC());
+      } catch (e) { break; }
+      await new Promise(r => setTimeout(r, 1100));
+    }
+  } finally { MM_GEO_RUN = false; }
+}
+function mmAnnFC() {
+  return { type: "FeatureCollection", features: mmAnnunci().filter(a => a.lon != null && !a.appross).map(a => ({ type: "Feature", properties: { id: a.id, p: a.p, mq: a.mq, m2: Math.round(a.mq2) },
+    geometry: { type: "Point", coordinates: [a.lon, a.lat] } })) };
+}
+function mmAnnLayer(map) {
+  map.addSource("ann", { type: "geojson", data: mmAnnFC() });
+  map.addLayer({ id: "ann", type: "circle", source: "ann", layout: { visibility: MM.lay.ann ? "visible" : "none" },
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#ff2bd6", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.2, "circle-opacity": 0.95 } });
+  map.on("click", "ann", e => { const f = e.features[0]; if (!f) return; const a = mmAnnunci().find(x => x.id === f.properties.id); if (!a) return;
+    e.originalEvent.__ann = true;
+    const box = $("#mmsheet"); box.innerHTML = `<button class="mmx" data-close aria-label="Chiudi">✕</button><div class="loc">Annuncio in vendita</div>
+      <h3 class="mmt">${esc(a.via || "Milano")}</h3><div class="offer" style="margin-top:8px"><div><small>Prezzo</small><b>${eur(a.p)}</b><em>${a.mq} m² · ${a.loc || "?"} locali</em></div>
+      <div><small>Al m²</small><b class="cy">${eur(a.mq2)}</b><em>prezzo richiesto</em></div><div><small>Microzona</small><b style="font-size:15px">${esc(mmMicroAt(a.lon, a.lat)?.n || "—")}</b><em>${eur(mmMicroAt(a.lon, a.lat)?.v)}/m²</em></div></div>
+      <p class="note">${esc(a.d)}</p><div class="btns"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio</a></div>`; box.hidden = false; });
+}
+/* comparabili per la valutazione: stessi m² circa, più vicini prima */
+function mmComps(ctx, q) {
+  if (!ctx || !ctx.milano || !ctx.micro) return null;
+  const mq = +q.mq || 60, mun = MM_MUN[ctx.micro.z], s = ctx.sel || ctx.micro;
+  const c = mmAnnunci().filter(a => a.mq >= mq * 0.6 && a.mq <= mq * 1.6).map(a => {
+    let d = null;
+    if (a.lat != null) d = hav(s.lat, s.lon, a.lat, a.lon) + (a.appross ? 400 : 0);
+    else if (a.mun && a.mun === mun) d = 2500;
+    return { ...a, dist: d };
+  }).filter(a => a.dist != null && a.dist < 3000).sort((a, b) => a.dist - b.dist || Math.abs(a.mq - mq) - Math.abs(b.mq - mq)).slice(0, 8);
+  if (!c.length) return null;
+  return { lista: c, med: median(c.map(a => a.mq2)) };
+}

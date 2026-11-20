@@ -129,3 +129,5 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - Tocco su un palazzo: civico e via più vicini dalle tessere caricate, quartiere, microzona, altezza → scheda → valutatore precompilato. Ricerca indirizzi con Nominatim (OpenStreetMap).
 - PDF: pagina stampabile con logo `img/maison-collection.png` (si salva come PDF dal menu Stampa), con caratteristiche, indici di zona, microzone vicine, metodo, rendimenti, servizi vicini.
 - Da fare: annunci comparabili (archivio da email di avviso), dati residenti per quartiere, andamento dei prezzi nel tempo.
+- Annunci di Milano (`tools/terr/raw_annunci_milano.txt`, 269 dopo pulizia): microzona dal testo, municipio; la posizione esatta viene cercata nel browser con Nominatim (1 al secondo) e salvata in localStorage (`geo_ann`). Layer "Annunci" sulla mappa; comparabili (±40% di m², più vicini) nel valutatore e nel PDF.
+- Correzioni: selezione del singolo palazzo (le tessere uniscono più edifici), trackpad = spostamento, pizzico/rotellina = zoom.

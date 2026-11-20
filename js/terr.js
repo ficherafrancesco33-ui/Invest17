@@ -225,6 +225,8 @@ function vRisultato(r, ctx) {
       ${card("breve", "B&B / Airbnb", r.breve ? `${eur(r.breve.adr)}/notte · ${pct(r.breve.occ, 0)}` : "")}
     </div>
     <p class="note">Rendimento netto sul ${r.prezzo ? "prezzo chiesto" : "valore stimato"} + ${pct(IMPOSTAZIONI.costi_acquisto_pct, 0)} di costi d'acquisto${r.lavori ? " + lavori" : ""}, tasse ${TAX === "srl" ? "SRL" : "da privata (cedolare)"}. ${r.breve ? `Affitto breve: ${esc(r.breve.fonte)}.` : ""}</p>
+    ${(() => { const C = window.mmComps ? mmComps(ctx, vRisultato._q || {}) : null; return C ? `<h3 class="vh3">Annunci comparabili <small style="color:var(--muted);letter-spacing:0;text-transform:none;font-style:normal">mediana ${eur(C.med)}/m² richiesti</small></h3>
+      <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)}</span></div><b class="cy">${eur(a.mq2)}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
         <tr><td>Prezzo medio degli annunci (${esc(ctx.nome)})</td><td class="r">${eur(r.base)}/m²</td></tr>
@@ -248,7 +250,7 @@ function vSalvate(dove) {
 function vBind(form, out, getCtx, dove) {
   const go = () => { const ctx = getCtx(), q = vRead(form); store.set("vform_" + dove, q);
     if (!ctx) { out.innerHTML = `<p class="sub">Scegli prima ${dove === "milano" ? "la zona" : "il comune"}.</p>`; return; }
-    const r = vCalcola(q, ctx); out.innerHTML = vRisultato(r, ctx); out._r = { r, q, ctx }; };
+    const r = vCalcola(q, ctx); vRisultato._q = q; out.innerHTML = vRisultato(r, ctx); out._r = { r, q, ctx }; };
   form.addEventListener("input", go); form.addEventListener("change", go); go();
   out.addEventListener("click", e => {
     if (!e.target.closest("[data-save]") || !out._r) return;

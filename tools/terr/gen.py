@@ -80,6 +80,36 @@ def brevi():
     return out
 
 
+def annunci(micro_names):
+    import unicodedata
+    norm = lambda x: unicodedata.normalize("NFD", x.lower()).encode("ascii", "ignore").decode().replace("'", " ").replace("-", " ").split()
+    mn = {" ".join(norm(m)): m for m in micro_names}
+    out, seen = [], set()
+    for line in open(os.path.join(H, "raw_annunci_milano.txt"), encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        p, mq, loc, via, zona, d, i = line.split(";")
+        if not p or not mq:
+            continue
+        p, mq = int(p), int(mq)
+        if mq < 20 or not (1500 <= p / mq <= 25000):
+            continue
+        key = (via.lower(), p, mq)
+        if i in seen or (via and key in seen):
+            continue
+        seen.add(i); seen.add(key)
+        mun = None
+        m = __import__("re").search(r"Municipio (\d)", zona)
+        if m: mun = int(m.group(1))
+        mic = None
+        for part in zona.split(","):
+            k = " ".join(norm(part))
+            if k in mn: mic = mn[k]
+        out.append(dict(id=i, p=p, mq=mq, loc=int(loc) if loc else None, via=via or None, mun=mun, micro=mic, d=d))
+    return out
+
+
 def coord_miei():
     f = os.path.join(ROOT, "data", "immobili.js").replace("\\", "/")
     r = subprocess.run(["node", "-e", "eval(require('fs').readFileSync('" + f + "','utf8')+';globalThis.M=MIEI');"
@@ -113,11 +143,13 @@ def main():
                     zone=[dict(n=z[0], v=z[1], y=z[2], a=z[3], lat=z[4], lon=z[5], tag=z[6].split(","), nota=z[7]) for z in ZONE],
                     metro={k: [[s[0], s[1], s[2]] for s in v] for k, v in METRO.items()}, metro_col=METRO_COL,
                     poi=[list(p) for p in POI],
-                    micro=[dict(z=m[0], n=m[1], v=m[2], a=m[3], lat=m[4], lon=m[5]) for m in MICRO]))
+                    micro=[dict(z=m[0], n=m[1], v=m[2], a=m[3], lat=m[4], lon=m[5]) for m in MICRO]),
+        annunci=dict(fonte="Trovit, annunci in vendita a Milano letti il 20/11/2026", url="https://case.trovit.it/detail/trovit-IT-",
+                     lista=annunci([m[1] for m in MICRO])))
     s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)
-    print(len(com), "comuni,", len(coord), "con coordinate,", len(st), "località affitti brevi,", len(ZONE), "zone di Milano")
+    print(len(data["annunci"]["lista"]), "annunci di Milano;", len(com), "comuni,", len(coord), "con coordinate,", len(st), "località affitti brevi,", len(ZONE), "zone di Milano")
 
 
 if __name__ == "__main__":
