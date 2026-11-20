@@ -235,7 +235,8 @@ function vForm(id, ctxHtml, q) {
     <fieldset><legend>Stato e lavori</legend><div class="vg">
       ${s("stato", "Stato attuale", V_STATO)}
       <label class="wide vlav" ${q.stato === "ristrutturare" ? "" : "hidden"}><span>Costo dei lavori: <b data-out="costoLavori">${num(q.costoLavori || 1000)} €/m²</b> <small>(leggeri 400 · medi 1.000 · completi 1.500 · di lusso 2.000+)</small></span>
-        <input type="range" data-k="costoLavori" min="200" max="2500" step="50" value="${q.costoLavori || 1000}"></label>
+        <input type="range" data-k="costoLavori" min="200" max="4000" step="10" value="${q.costoLavori || 1000}"></label>
+      <label class="vlav" ${q.stato === "ristrutturare" ? "" : "hidden"}><span>Totale lavori (preventivo)</span><input type="number" data-x="lavTot" step="1000" min="0" value="${Math.round((q.costoLavori || 1000) * (q.mq || 0))}"><em>€</em></label>
       ${s("classe", "Classe energetica", { "?": "Non so", A: "A", B: "B", C: "C", D: "D", E: "E", F: "F", G: "G" })}
       ${s("epoca", "Palazzo", V_EPOCA)}${n("anno", "Anno di costruzione")}${s("condominio", "Condominio", { buono: "Normale", rifatto: "Facciata rifatta", dafare: "Lavori in arrivo" })}
     </div></fieldset>
@@ -256,7 +257,9 @@ function vForm(id, ctxHtml, q) {
 function vRead(form) {
   const q = {};
   form.querySelectorAll("[data-k]").forEach(i => { q[i.dataset.k] = i.type === "checkbox" ? i.checked : i.type === "number" || i.type === "range" ? (i.value === "" ? 0 : +i.value) : i.value; });
-  { const lv = form.querySelector(".vlav"); if (lv) lv.hidden = q.stato !== "ristrutturare"; const o = form.querySelector('[data-out="costoLavori"]'); if (o) o.textContent = num(q.costoLavori) + " €/m²"; }
+  form.querySelectorAll(".vlav").forEach(lv => lv.hidden = q.stato !== "ristrutturare");
+  { const o = form.querySelector('[data-out="costoLavori"]'), mq = +q.mq || 0; if (o) o.textContent = num(q.costoLavori) + " €/m²" + (mq ? ` · ${eur(q.costoLavori * mq)} in tutto su ${num(mq)} m²` : "");
+    const t = form.querySelector("[data-x=lavTot]"); if (t && document.activeElement !== t) t.value = Math.round(q.costoLavori * mq); }
   return q;
 }
 function vRisultato(r, ctx) {
@@ -308,6 +311,9 @@ function vBind(form, out, getCtx, dove) {
   const go = () => { const ctx = getCtx(), q = vRead(form); store.set("vform_" + dove, q);
     if (!ctx) { out.innerHTML = `<p class="sub">Scegli prima ${dove === "milano" ? "la zona" : "il comune"}.</p>`; return; }
     const r = vCalcola(q, ctx); vRisultato._q = q; out.innerHTML = vRisultato(r, ctx); out._r = { r, q, ctx }; };
+  // totale del preventivo → costo al m² (il cursore si sposta da solo)
+  form.addEventListener("input", e => { const t = e.target; if (t.dataset?.x !== "lavTot") return; const mq = +form.querySelector("[data-k=mq]")?.value || 0, r = form.querySelector("[data-k=costoLavori]");
+    if (mq && r && +t.value > 0) r.value = Math.max(+r.min, Math.min(+r.max, Math.round(+t.value / mq))); }, true);
   form.addEventListener("input", go); form.addEventListener("change", go); go();
   out.addEventListener("click", e => {
     if (!e.target.closest("[data-save]") || !out._r) return;

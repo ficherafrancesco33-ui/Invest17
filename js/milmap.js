@@ -294,8 +294,19 @@ function mmTap(e) {
   const h = b ? (b.properties.render_height || null) : null;
   const sel = { lon: centro[0], lat: centro[1], via: dv < 120 ? via : null, civ: dc < 35 ? civ : null, micro: micro ? micro.n : null, zona: micro ? micro.z : null, nil, comune: micro ? "Milano" : com?.n || null,
     h, piani: h ? Math.max(1, Math.round(h / 3.1)) : null, geom: geomB };
+  if (e.geo) { if (e.geo.via) sel.via = e.geo.via; if (e.geo.civ || e.geo.civW) sel.civ = e.geo.civ || e.geo.civW; if (!micro && e.geo.comune) sel.comune = mmCanon(e.geo.comune); }
   MM.sel = sel; store.set("mm_sel", { ...sel, geom: null });
   mmShowSel(sel, true);
+  sel._mod = !!e.geo?.modulo; if (sel._mod) mmToForm();
+  if (!sel.comune || !sel.via) mmReverse(sel);
+}
+async function mmReverse(sel) {
+  try { const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&addressdetails=1&zoom=18&lat=${sel.lat}&lon=${sel.lon}`, { headers: { "Accept-Language": "it" } });
+    const a = (await r.json()).address || {}; if (MM.sel !== sel) return;
+    if (!sel.comune) sel.comune = mmCanon(a.city || a.town || a.village || a.municipality);
+    if (!sel.via && a.road) { sel.via = a.road; if (!sel.civ && a.house_number) sel.civ = a.house_number; }
+    store.set("mm_sel", { ...sel, geom: null }); mmShowSel(sel, false); if (sel._mod) mmToForm();
+  } catch (e) { }
 }
 function mmShowSel(sel, fly) {
   const map = MM.map;
@@ -328,6 +339,62 @@ function mmScheda(s) {
     ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>${{ inv: "Calcola l'investimento qui", sub: "Business plan qui", privati: "Vai all'elenco", cliente: "Valuta per il cliente" }[MM.mode] || "Valuta un immobile qui"}</button></div>` : ""}`;
 }
 
+/* ---------- ricerca indirizzi (Photon + Nominatim, su tutti i comuni che abbiamo) ---------- */
+// riconosce il comune scritto in fondo ("via Emilia 44 San Donato" → San Donato Milanese)
+function mmComuneIn(t) {
+  const w = tnorm(t).replace(/,/g, " ").split(" ").filter(Boolean), I = tIdx();
+  const nomi = [{ n: "Milano", k: "milano" }, ...I.com.map(c => ({ n: c.n, k: tnorm(c.n), c }))];
+  for (let k = Math.min(5, w.length - 1); k >= 1; k--) {
+    const coda = w.slice(-k).join(" ");
+    const L = nomi.filter(x => x.k === coda || x.k.startsWith(coda + " "));
+    if (L.length) { L.sort((a, b) => (a.k === coda ? -1 : 0) - (b.k === coda ? -1 : 0) || (["MI", "MB"].includes(b.c?.p) ? 1 : 0) - (["MI", "MB"].includes(a.c?.p) ? 1 : 0) || a.k.length - b.k.length);
+      return { comune: L[0].n, resto: t.replace(/,/g, " ").trim().split(/\s+/).slice(0, w.length - k).join(" ") }; }
+  }
+  return { comune: null, resto: t };
+}
+const mmCanon = n => { if (!n) return null; if (tnorm(n) === "milano") return "Milano"; const c = tIdx().byN.get(tnorm(n)); return c ? c.n : n; };
+async function mmGeocode(t) {
+  const { comune, resto } = mmComuneIn(t), q = comune ? `${resto}, ${comune}` : t;
+  const civW = (resto.match(/\b(\d+[a-z]?)\b/i) || [])[1] || null;
+  const out = [], seen = new Set(), add = x => { const k = x.lat.toFixed(4) + x.lon.toFixed(4); if (!seen.has(k)) { seen.add(k); out.push(x); } };
+  try {
+    const r = await fetch(`https://photon.komoot.io/api/?lang=default&limit=8&lat=45.46&lon=9.19&bbox=6.6,43.7,12.6,46.7&q=${encodeURIComponent(q)}`);
+    for (const f of (await r.json()).features || []) { const p = f.properties, [lon, lat] = f.geometry.coordinates;
+      if (p.countrycode && p.countrycode !== "IT") continue;
+      const city = mmCanon(p.city || p.town || p.village || p.locality || p.county);
+      if (comune && city && tnorm(city) !== tnorm(comune) && !tnorm(p.county || "").includes(tnorm(comune))) continue;
+      const via = p.street || (p.osm_key === "highway" ? p.name : null);
+      add({ lon, lat, via, civ: p.housenumber || null, comune: city || comune, esatto: !!p.housenumber,
+        label: [via ? via + (p.housenumber ? " " + p.housenumber : "") : p.name, p.district && p.district !== city ? p.district : null, city].filter(Boolean).join(", ") }); }
+  } catch (e) { }
+  // civico non trovato: ricerca strutturata Nominatim (via + civico + comune)
+  if (comune && !out.some(x => x.esatto)) try {
+    const via = resto.replace(/\b\d+[a-z]?\b/i, "").trim(), st = civW ? `${civW} ${via}` : via;
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=4&countrycodes=it&street=${encodeURIComponent(st)}&city=${encodeURIComponent(comune)}`, { headers: { "Accept-Language": "it" } });
+    for (const x of await r.json()) { const a = x.address || {};
+      out.unshift({ lon: +x.lon, lat: +x.lat, via: a.road || via, civ: a.house_number || null, comune, esatto: !!a.house_number,
+        label: [(a.road || via) + (a.house_number ? " " + a.house_number : ""), comune].join(", ") }); }
+  } catch (e) { }
+  // se ho la via ma non il civico, lo segno: sulla mappa scegli tu il palazzo giusto
+  out.forEach(x => { if (!x.civ && civW && x.via) { x.civW = civW; x.label += ` (civico ${civW} non mappato: tocca il palazzo)`; } });
+  return out.slice(0, 7);
+}
+function mmCercaBind(q, res, modulo) {
+  if (!q || !res) return; let tq, L = [];
+  q.addEventListener("input", () => { clearTimeout(tq); const t = q.value.trim(); if (t.length < 4) { res.hidden = true; return; }
+    tq = setTimeout(async () => { L = await mmGeocode(t);
+      res.innerHTML = L.length ? L.map((x, i) => `<button type="button" data-gi="${i}">${esc(x.label)}</button>`).join("") : `<span>Nessun risultato: prova "via, numero, comune"</span>`; res.hidden = false; }, 550); });
+  res.addEventListener("click", e => { const b = e.target.closest("[data-gi]"); if (!b) return; const x = L[+b.dataset.gi]; res.hidden = true; mmVaiA({ ...x, modulo }); });
+  document.addEventListener("click", e => { if (!res.contains(e.target) && e.target !== q) res.hidden = true; });
+}
+// vola sul punto e seleziona il palazzo, tenendo via, civico e comune trovati dalla ricerca
+function mmVaiA(x) {
+  const map = MM.map; if (!map) return;
+  $("#mm3d")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  map.flyTo({ center: [x.lon, x.lat], zoom: 17.6, pitch: 55, duration: 1500 });
+  map.once("idle", () => mmTap({ lngLat: { lng: x.lon, lat: x.lat }, point: map.project([x.lon, x.lat]), geo: x }));
+}
+
 /* ---------- vista Milano ---------- */
 function vMilano3D(zona, mode = "mappa") {
   MM.mode = mode; const MD = MI_MODI[mode] || MI_MODI.cliente;
@@ -349,7 +416,7 @@ function vMilano3D(zona, mode = "mappa") {
   ${mode === "privati" ? miPrivatiHtml() : mode === "sub" ? miSubHtml() : `<h2>${esc(MD.form)}</h2>
   <div class="card">${vForm("mvf", `<fieldset><legend>Dove</legend><div class="vg">
       ${mode === "cliente" ? `<label class="wide"><span>Cliente (proprietario)</span><input type="text" data-c="cliente" value="${esc(store.get("mi_cliente", ""))}" placeholder="Nome e cognome, compare sul PDF"></label>` : ""}
-      <label class="wide"><span>Indirizzo</span><input type="text" data-c="addr" value="${esc(MM.sel ? mmIndirizzo(MM.sel) : "")}" placeholder="Tocca un palazzo sulla mappa o scrivi"></label>
+      <label class="wide"><span>Indirizzo</span><div class="mmsearch"><input type="text" data-c="addr" autocomplete="off" value="${esc(MM.sel ? mmIndirizzo(MM.sel) : "")}" placeholder="via Emilia 44 San Donato · o tocca un palazzo"><div class="mmres" id="mvres" hidden></div></div></label>
       <label class="wide"><span>Microzona di prezzo</span><select data-c="micro"><option value="">Scegli…</option>
         ${M.zone.map(z => `<optgroup label="${esc(z.n)}">${M.micro.filter(m => m.z === z.n).map(m => `<option ${MM.sel?.micro === m.n ? "selected" : ""}>${esc(m.n)}</option>`).join("")}</optgroup>`).join("")}
         <optgroup label="Hinterland">${tIdx().com.filter(c => ["MI", "MB"].includes(c.p) && c.n !== "Milano").sort((a, b) => a.n.localeCompare(b.n)).map(c => `<option value="@${esc(c.n)}" ${!MM.sel?.micro && MM.sel?.comune === c.n ? "selected" : ""}>${esc(c.n)}</option>`).join("")}</optgroup>
@@ -367,17 +434,8 @@ function afterMilano3D(zona) {
     document.querySelectorAll("#mmm .chip").forEach(x => x.classList.toggle("on", x === c)); mmApplyLayers();
     if (MM.map && MM.ready) { if (MM.map.getLayer("cell-lab")) MM.map.removeLayer("cell-lab"); mmRelabel(); } });
   $("#mml").addEventListener("click", e => { const c = e.target.closest("[data-l]"); if (!c) return; const k = c.dataset.l; MM.lay[k] = !MM.lay[k]; c.classList.toggle("on", MM.lay[k]); saveF(); mmApplyLayers(); });
-  // ricerca indirizzi (OpenStreetMap Nominatim)
-  const q = $("#mmq"), res = $("#mmres"); let tq;
-  q.addEventListener("input", () => { clearTimeout(tq); const t = q.value.trim(); if (t.length < 4) { res.hidden = true; return; }
-    tq = setTimeout(async () => { try {
-      const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&countrycodes=it&viewbox=8.95,45.62,9.45,45.33&bounded=1&q=${encodeURIComponent(t)}`, { headers: { "Accept-Language": "it" } });
-      const L = await r.json();
-      res.innerHTML = L.length ? L.map(x => `<button data-ll="${x.lon},${x.lat}">${esc(x.display_name.split(",").slice(0, 4).join(","))}</button>`).join("") : `<span>Nessun risultato</span>`; res.hidden = false;
-    } catch (e) { res.innerHTML = `<span>Ricerca non disponibile ora</span>`; res.hidden = false; } }, 600); });
-  res.addEventListener("click", e => { const b = e.target.closest("[data-ll]"); if (!b || !MM.map) return; const [lo, la] = b.dataset.ll.split(",").map(Number); res.hidden = true;
-    MM.map.flyTo({ center: [lo, la], zoom: 17.3, pitch: 58, duration: 1600 });
-    MM.map.once("idle", () => mmTap({ lngLat: { lng: lo, lat: la }, point: MM.map.project([lo, la]) })); });
+  // ricerca indirizzi: Milano, hinterland e tutti i comuni che abbiamo (via + civico + comune)
+  mmCercaBind($("#mmq"), $("#mmres"));
   // scheda del palazzo
   const sheet = $("#mmsheet");
   sheet.addEventListener("click", e => {
@@ -390,6 +448,7 @@ function afterMilano3D(zona) {
   // valutatore collegato
   const form = $("#mvf"), out = $("#mvout"), selM = form.querySelector("[data-c=micro]"), addr = form.querySelector("[data-c=addr]"), cli = form.querySelector("[data-c=cliente]");
   if (cli) cli.addEventListener("input", () => store.set("mi_cliente", cli.value));
+  mmCercaBind(addr, $("#mvres"), true);
   vBind(form, out, () => { const c = miCtxForm(); return c ? { ...c, mode, cliente: cli ? cli.value.trim() : "" } : null; }, "milano");
   out.addEventListener("click", e => { if (e.target.closest("[data-pdf]") && out._r) mmPdf(out._r); });
   }
@@ -421,7 +480,9 @@ function mmToForm() {
   const s = MM.sel, form = $("#mvf"); if (!s || !form) return;
   form.querySelector("[data-c=addr]").value = mmIndirizzo(s);
   const sel = form.querySelector("[data-c=micro]");
-  sel.value = s.micro ? s.micro : s.comune ? "@" + s.comune : "";
+  const v = s.micro ? s.micro : s.comune ? "@" + s.comune : "";
+  if (v[0] === "@" && ![...sel.options].some(o => o.value === v) && tIdx().byN.get(tnorm(s.comune))?.v) { const g = sel.querySelector('optgroup[label="Hinterland"]') || sel; const o = document.createElement("option"); o.value = v; o.textContent = s.comune; g.appendChild(o); }
+  sel.value = v;
   if (s.piani) { const p = form.querySelector("[data-k=piano]"); if (p && +p.value > s.piani) p.value = Math.max(0, s.piani - 1); if (s.piani >= 4) form.querySelector("[data-k=ascensore]").checked = true; }
   sel.dispatchEvent(new Event("change", { bubbles: true }));
 }
