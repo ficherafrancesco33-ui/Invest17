@@ -11,7 +11,7 @@ import gzip, json, os, re, sys
 H = os.path.dirname(os.path.abspath(__file__))
 ARC = os.path.join(H, "archivio_milano.json.gz")
 
-nuovi = json.load(open(sys.argv[1], encoding="utf-8"))
+nuovi = json.load(open(sys.argv[1], encoding="utf-8")) if len(sys.argv) > 1 else []   # senza file: rigenera le righe dall'archivio
 arc = {}
 if os.path.exists(ARC):
     for a in json.load(gzip.open(ARC, "rt", encoding="utf-8")): arc[str(a["id"])] = a
@@ -45,15 +45,18 @@ def motivo(a):
     return None
 
 ST = {"Nuovo": "N", "Ottimo": "O", "Buono": "B", "Da ristrutturare": "R"}
-EX = [("balcon", "b"), ("terrazz", "t"), ("cantina", "c"), ("arredat", "a"), ("box", "g"), ("giardino", "j"), ("portier", "p")]
+# accessori: dalle caratteristiche e dal testo dell'annuncio (titolo, sottotitolo, descrizione)
+EX = [(r"balcon", "b"), (r"terrazz", "t"), (r"cantin", "c"), (r"\barredat", "a"), (r"\bbox\b(?! ?doccia)|autorimessa|\bgarage", "g"), (r"posto auto|posti auto", "s"),
+      (r"giardino", "j"), (r"portier|portineria|custode", "p"), (r"esposizione doppia|doppia esposizione|tripla esposizione|doppio affaccio", "d"), (r"esposizione interna", "i")]
 righe, esc, pok = {}, {}, []
 for k, a in arc.items():
     m = motivo(a)
     if m: esc[k] = m; continue
     if not (a.get("prezzo") and a.get("mq") and a.get("lat")): continue
     st = next((v for kk, v in ST.items() if (a.get("stato") or "").startswith(kk)), "")
-    g = " ".join(a.get("feat") or []).lower()
-    ex = "".join(c for w, c in EX if w in g)
+    g = " ".join((a.get("feat") or []) + [a.get("titolo") or "", a.get("caption") or "", a.get("desc") or ""]).lower()
+    ex = "".join(c for w, c in EX if re.search(w, g))
+    if "g" in ex: ex = ex.replace("s", "")
     piano = (a.get("pianoA") or "").replace(",", "/")
     righe[k] = ";".join(str(x) for x in [k, a["prezzo"], a["mq"], a.get("locali") or "", a.get("bagni") or "", piano, a.get("asc") or 0, st, a.get("tip") or "",
                                          f'{a["lat"]:.5f}', f'{a["lon"]:.5f}', (a.get("via") or "").replace(";", ","), a.get("micro") or "", "Milano", a.get("priv") or 0, ex])

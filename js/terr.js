@@ -142,10 +142,12 @@ function vCalcola(inp, ctx) {
   const omi = ctx.milano && typeof omiMi === "function" ? omiMi(ctx.micro?.n) : null;
   const vOfascia = Fm && Fm.b ? Fm.b[1] + V_BUONO : null;                                       // fascia "buono" della microzona + lavori leggeri
   const vOomi = omi && omi.co ? (omi.co[0] + omi.co[1]) / 2 * 1.08 : null;                       // OMI ottimo (compravendite) + scarto tipico verso il prezzo richiesto
+  // base OMI (o fascia della microzona) + comparabili pesati per somiglianza: 25% base, 75% comparabili
+  const vObase = vOomi || vOfascia, fonteBase = vOomi ? "omi" : vOfascia ? "fascia" : null;
   let vO, fonteO;
-  if (cmp) { vO = vOfascia ? cmp.vO * 0.75 + vOfascia * 0.25 : cmp.vO; fonteO = "comparabili"; }
-  else if (vOfascia) { vO = vOfascia; fonteO = "fascia"; }
+  if (cmp) { vO = vObase ? cmp.vO * 0.75 + vObase * 0.25 : cmp.vO; fonteO = "comparabili"; }
   else if (vOomi) { vO = vOomi; fonteO = "omi"; }
+  else if (vOfascia) { vO = vOfascia; fonteO = "fascia"; }
   else { vO = ctx.v + V_BUONO * (ctx.milano ? 1 : 0.6); fonteO = "media"; }
   const omiCheck = omi && omi.co ? { min: omi.co[0], max: omi.co[1], fuori: vO < omi.co[0] * 0.9 ? "sotto" : vO > omi.co[1] * 1.3 ? "sopra" : "" } : null;
   // 2. piano e ascensore
@@ -207,7 +209,7 @@ function vCalcola(inp, ctx) {
     affitti: { lungo: canone ? { canone } : null, medio: medio ? { canone: medio, mesi_occupati: 10, stima: true } : null, breve } };
   const sc = scenari(im, { offMax: acquisto });
   return { cmp, wC: cmp ? 1 : 0, sup, supEst, k, kTot, st, fP, vO, vOp, vS, fonteO, vOfascia, vOomi, omiCheck, mqReale, base, box, valCasa, valore, fraz,
-    m1: cmp ? sup * (cmp.vO * fP) * kTot : null, m2: cmp && vOfascia ? sup * vOfascia * fP * kTot : null,
+    m1: cmp ? sup * (cmp.vO * fP) * kTot : null, m2: cmp && vObase ? sup * vObase * fP * kTot : null, vObase, fonteBase,
     min: valore * (1 - incer), max: Math.max(valore * (1 + incer), fraz ? fraz.valore : 0), valDopo, lavori,
     canone, medio, breve, sc, acquisto, prezzo: +q.prezzo || 0, sconto: +q.prezzo > 0 ? (valore - q.prezzo) / valore : null,
     offerta: +q.prezzo > 0 ? Math.min(+q.prezzo, valore) : valore * 0.97,
@@ -286,7 +288,7 @@ function vRisultato(r, ctx) {
       <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)} · ${a.fonte}</span></div><b class="cy">${eur(a.mq2)}${a.peso != null ? `<small style="display:block;font-size:11px;font-style:normal;color:var(--muted)">peso ${Math.round(a.peso * 100)}%</small>` : ""}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
-        <tr><td>Prezzo al m² in stato ottimo, 1°–2° piano con ascensore, senza accessori (${r.fonteO === "comparabili" ? `media pesata di ${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m (i più vicini e simili pesano di più), ognuno riportato a questo standard, 75% · fascia di microzona 25%` : r.fonteO === "fascia" ? "fascia buono della microzona + 450 €/m²" : r.fonteO === "omi" ? "OMI ottimo della zona" : "media della zona"})</td><td class="r">${eur(r.vO)}/m²</td></tr>
+        <tr><td>Prezzo al m² in stato ottimo, 1°–2° piano con ascensore, senza accessori (${r.fonteO === "comparabili" ? `${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m riportati a questo standard, media pesata per somiglianza (nessuno oltre il 30%): 75% · ${r.fonteBase === "omi" ? "OMI ottimo della zona" : "fascia della microzona"}: 25%` : r.fonteO === "fascia" ? "fascia buono della microzona + 450 €/m²" : r.fonteO === "omi" ? "OMI ottimo della zona" : "media della zona"})</td><td class="r">${eur(r.vO)}/m²</td></tr>
         ${Math.abs(r.fP - 1) > 0.001 ? `<tr><td>Piano e ascensore</td><td class="r">× ${num(r.fP, 3)}</td></tr>` : ""}
         <tr><td>Stato: ${esc(r.st[0])}${q2.stato === "ristrutturare" ? ` (lavori ${eur(q2.costoLavori)}/m² +10% imprevisti, −3% per tempi)` : q2.stato === "buono" ? " (−450 €/m² per portarlo a ottimo)" : q2.stato === "nuovo" ? " (+6%)" : ""}</td><td class="r">${eur(r.vS)}/m²</td></tr>
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}

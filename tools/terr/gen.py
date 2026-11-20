@@ -124,7 +124,7 @@ def annunci_imm():
             continue
         if mq < 14 or not (1500 <= p / mq <= 25000):
             continue
-        out[int(i)] = ([int(i), int(p), mq, loc.split(" ")[0].replace("+", ""), piano.split(",")[0].strip(), int(asc), st, tip, float(lat), float(lon), via.strip().rstrip(","), mic, int(priv), ex])
+        out[int(i)] = ([int(i), int(p), mq, loc.split(" ")[0].replace("+", ""), piano.split(",")[0].strip(), int(asc), st, tip, float(lat), float(lon), via.strip().rstrip(","), mic, int(priv), ex, int(bag) if bag.strip().isdigit() else 0])
     return list(out.values())
 
 
@@ -198,7 +198,7 @@ def main():
         annunci=dict(fonte="Trovit, annunci in vendita a Milano letti il 20/11/2026", url="https://case.trovit.it/detail/trovit-IT-",
                      lista=annunci([m[1] for m in MICRO]),
                      imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (tutta Milano fino a 196.000 € + Milano Sud completa)", url="https://www.immobiliare.it/annunci/",
-                              campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
+                              campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra,bagni", lista=annunci_imm())))
     data["milano"]["fasce"] = fasce(data["annunci"]["imm"]["lista"])
     data["milano"]["priv_ok"] = [int(l.strip()) for l in open(os.path.join(H, "privati_ok.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")]
     s = "// KEYSTONE — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"

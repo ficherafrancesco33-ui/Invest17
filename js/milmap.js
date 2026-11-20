@@ -509,7 +509,7 @@ const MM_MUN = { "Centro": 1, "Arco della Pace, Arena, Pagano": 1, "Genova, Tici
   "Udine, Lambrate": 3, "Pasteur, Rovereto": 2, "Ponte Lambro, Santa Giulia": 4, "Corvetto, Rogoredo": 4, "Napoli, Soderini": 6 };
 const mmAnnGeo = () => store.get("geo_ann", {});
 const MM_ST = { N: ["Nuovo", 1.10], O: ["Ottimo / ristrutturato", 1.06], B: ["Buono / abitabile", 1.00], R: ["Da ristrutturare", 0.78] };
-const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna", g: "box / posto auto", j: "giardino", p: "portineria" };
+const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna", g: "box", s: "posto auto", j: "giardino", p: "portineria" };
 let MM_ANN = null;
 /* crediti delle mappe: solo la piccola "i" (si aprono toccandola), non il riquadro aperto sopra la mappa */
 function attrChiusa(map) {
@@ -519,7 +519,7 @@ function attrChiusa(map) {
 function mmAnnunci() {
   if (MM_ANN) return MM_ANN;
   const G = mmAnnGeo(), M = TERR.milano.micro, I = TERR.annunci.imm;
-  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex]) => ({ id: "i" + id, p, mq, loc: +loc || null, piano, asc, st, tip, lat, lon, via, micro: mic, ex: ex || "",
+  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex, bag]) => ({ id: "i" + id, p, mq, loc: +loc || null, bag: +bag || null, piano, asc, st, tip, lat, lon, via, micro: mic, ex: ex || "",
     priv, mq2: p / mq, url: I.url + id + "/", fonte: "Immobiliare.it",
     d: [tip, MM_ST[st]?.[0], piano ? (piano === "T" ? "piano terra" : piano === "R" ? "rialzato" : piano === "S" ? "seminterrato" : piano + "° piano") : "", asc ? "ascensore" : "", ...[...ex].map(x => MM_EX[x]), priv ? "privato" : ""].filter(Boolean).join(", ") }));
   const tro = TERR.annunci.lista.map(a => {
@@ -586,6 +586,9 @@ function mmComps(ctx, q) {
     let acc = 0; for (const c of a.ex || "") if (V_ACC[c]) acc += V_ACC[c][1];
     v = v * (1 - acc);
     if ((a.ex || "").includes("g")) v -= v * 15 * 0.45 * 0.5 / a.mq;   // box citato nell'annuncio: metà del valore di un box (spesso è a parte)
+    else if ((a.ex || "").includes("s")) v -= v * 15 * 0.45 * 0.25 / a.mq;
+    if ((a.ex || "").includes("p")) v /= 1.03;                          // portineria
+    if ((a.ex || "").includes("d")) v /= 1.02;                          // doppia esposizione
     return v;
   };
   pool.forEach(a => { a.vO = vOf(a); });
@@ -601,16 +604,20 @@ function mmComps(ctx, q) {
     return a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8
       + (a.st ? Math.abs((ST_N[a.st] ?? 1) - stQ) * 0.4 : 0.5)
       + (pa == null ? 0.4 : Math.min(1, Math.abs(pa - pQ) / 4) * 0.8)
-      + (pa != null && Math.max(pa, pQ) >= 2 && a.asc != null && !!a.asc !== !!q.ascensore ? 0.5 : 0); };
+      + (pa != null && Math.max(pa, pQ) >= 2 && a.asc != null && !!a.asc !== !!q.ascensore ? 0.5 : 0)
+      + (a.bag && +q.bagni ? Math.min(2, Math.abs(a.bag - +q.bagni)) * 0.3 : 0)
+      + [["b", +q.balcone > 0], ["t", +q.terrazzo > 0], ["c", +q.cantina > 0], ["j", +q.giardino > 0], ["g", q.box === "singolo" || q.box === "doppio"], ["p", !!q.portineria], ["d", q.espo === "doppia"]]
+          .reduce((x, [c, h]) => x + ((a.ex || "").includes(c) !== h ? 0.12 : 0), 0); };
   const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
     .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
     .slice(0, 8);
   if (c.length < 4) return null;
-  // media pesata, non mediana: il peso scende in fretta con lo scarto (≈ dimezza ogni 0,4 punti)
-  // es. stesso palazzo/via e metratura simile ≈ 40–60% del peso; uno a 1 km e diverso ≈ 2–5%
-  c.forEach(a => { a.w = Math.exp(-1.7 * a.score); a.adj = a.vO; });
-  const tot = c.reduce((x, a) => x + a.w, 0);
-  c.forEach(a => { a.peso = a.w / tot; });
+  // media pesata: chi assomiglia di più pesa di più, ma senza estremi (il peso si dimezza ogni ~0,8 punti di scarto)
+  // e nessun annuncio supera il 30% dei comparabili: se un annuncio è sbagliato, non trascina la stima
+  c.forEach(a => { a.w = Math.exp(-0.9 * a.score); a.adj = a.vO; });
+  { let P = c.map(a => a.w); for (let it = 0; it < 6; it++) { const t = P.reduce((x, y) => x + y, 0); P = P.map(w => w / t); if (!P.some(w => w > 0.30001)) break;
+      const fuori = P.filter(w => w >= 0.3).length, resto = P.reduce((x, w) => x + (w < 0.3 ? w : 0), 0); P = P.map(w => w >= 0.3 ? 0.3 : w * (1 - 0.3 * fuori) / resto); }
+    c.forEach((a, i) => { a.peso = P[i]; }); }
   c.sort((a, b) => b.peso - a.peso);
   const vO = c.reduce((x, a) => x + a.vO * a.peso, 0);
   return { lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
