@@ -49,13 +49,13 @@ const tOre = m => m == null ? "—" : m < 60 ? m + " min" : Math.floor(m / 60) +
 const hav = (a, b, c, d) => { const r = Math.PI / 180; return 2 * 6371000 * Math.asin(Math.sqrt(Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2)); };
 
 /* ---------- scala colori (una tinta, dal buio al ciano acceso) ---------- */
-const T_RAMP = ["#c7e9f1", "#5cc8a8", "#f2d22e", "#f5830b", "#d1203d"];
+const T_RAMP = ["#4a3a0e", "#8a6d16", "#c9a227", "#f2cf5b", "#fff1b8"];
 function tBins(vals) {
   const s = vals.filter(v => v != null && isFinite(v)).sort((a, b) => a - b);
   if (!s.length) return [];
   return [0.2, 0.4, 0.6, 0.8].map(q => s[Math.min(s.length - 1, Math.floor(q * s.length))]);
 }
-const tCol = (v, bins) => v == null ? "#9ca3af" : T_RAMP[bins.filter(b => v > b).length];
+const tCol = (v, bins) => v == null ? "#3a3530" : T_RAMP[bins.filter(b => v > b).length];
 function tLegend(bins, fmt, title) {
   if (!bins.length) return "";
   const lab = [`fino a ${fmt(bins[0])}`, ...bins.slice(0, -1).map((b, i) => `${fmt(b)}–${fmt(bins[i + 1])}`), `oltre ${fmt(bins[bins.length - 1])}`];
@@ -316,7 +316,7 @@ function vBrevi(nome) {
     <div class="kpi"><small>Prima per ${esc(M[0].toLowerCase())}</small><b class="cy">${top ? M[2](M[1](top.s)) : "—"}</b><span>${top ? esc(top.s.n) : "—"}</span></div>
     <div class="kpi"><small>Miglior rendita</small><b>${bestRb ? pct(bestRb.s.rb, 1) : "—"}</b><span>${bestRb ? esc(bestRb.s.n) : "serve il prezzo"}</span></div>
   </div>
-  <p class="howto"><b>Come si legge:</b> ogni cerchio è una località con affitti brevi. Il <b>colore</b> indica ${esc(M[0].toLowerCase())} (dal celeste al rosso = da poco a molto), la <b>grandezza</b> quanti annunci ci sono. Tocca un cerchio per i numeri e l'analisi.</p>
+  <p class="howto"><b>Come si legge:</b> ogni cerchio è una località con affitti brevi. Il <b>colore</b> indica ${esc(M[0].toLowerCase())} (dall'oro scuro all'oro chiaro = da poco a molto), la <b>grandezza</b> quanti annunci ci sono. Tocca un cerchio per i numeri e l'analisi.</p>
   <div class="map" id="bmap"></div>
   <div id="bleg"></div>
   <p class="note">${esc(M[3])}. Cerchi più grandi = più annunci (mercato più profondo e dati più affidabili). In viola casa tua e Porta Romana.</p>
@@ -337,7 +337,7 @@ function afterBrevi(nome) {
   const b = [];
   for (const { s, d } of rows) {
     const v = M[1](s), r = 5 + Math.min(13, Math.sqrt(s.ann || 40) / 3.2);
-    L.circleMarker([s.lat, s.lon], { radius: r, color: "#3a2f22", weight: 1.5, fillColor: tCol(v, bins), fillOpacity: .9 })
+    L.circleMarker([s.lat, s.lon], { radius: r, color: "#000000", weight: 1.2, fillColor: tCol(v, bins), fillOpacity: .9 })
       .bindPopup(`<b>${esc(s.n)}</b><br>${eur(s.adr)} a notte · ${pct(s.occ, 0)} occupazione<br>Ricavo annuo ${keur(s.ric)}${s.ann ? ` · ${num(s.ann)} annunci` : ""}<br>${s.rb ? `Rendita lorda bilocale ${pct(s.rb, 1)}<br>` : ""}${d ? `${tOre(d.min)} da ${T_HOME[f.da][2]}` : ""}<br><a class="go" href="#brevi/${encodeURIComponent(s.n)}">Apri l'analisi →</a>`)
       .bindTooltip(`${s.n}: ${v == null ? "n.d." : M[2](v)}`, { direction: "top" }).addTo(m);
     b.push([s.lat, s.lon]);
@@ -426,7 +426,7 @@ function vValuta(nome) {
     <div class="kpi"><small>Mediana</small><b class="cy">${med == null ? "—" : M[2](med)}</b><span>${esc(M[0])}</span></div>
     <div class="kpi"><small>Primo</small><b>${rows[0] && M[1](rows[0].c) != null ? M[2](M[1](rows[0].c)) : "—"}</b><span>${rows[0] ? esc(rows[0].c.n) : "—"}</span></div>
   </div>
-  <p class="howto"><b>Come si legge:</b> ogni comune è colorato per ${esc(M[0].toLowerCase())}, dal celeste (basso) al rosso (alto). Scegli una provincia per vedere i confini di tutti i suoi comuni; tocca un comune per i prezzi e per valutarci una casa.</p>
+  <p class="howto"><b>Come si legge:</b> ogni comune è colorato per ${esc(M[0].toLowerCase())}, dall'oro scuro (basso) all'oro chiaro (alto). Scegli una provincia per vedere i confini di tutti i suoi comuni; tocca un comune per i prezzi e per valutarci una casa.</p>
   <div class="map" id="cmap"></div>
   <div id="cleg"></div>
   <p class="note" id="cnote">${esc(M[3])}. ${f.prov ? "Carico i confini di tutti i comuni della provincia…" : "Scegli una provincia per vedere tutti i suoi comuni colorati sulla mappa; senza provincia vedi i comuni principali."}</p>
