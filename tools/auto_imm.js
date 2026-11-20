@@ -19,7 +19,7 @@ const out = raw.annunci.map(a => {
   const comps = raw.annunci.filter(x => x.comune === a.comune && x.id !== a.id).map(x => ({ titolo: x.titolo, prezzo: x.prezzo, mq: x.mq, url: `https://www.immobiliare.it/annunci/${x.id}/`, stato: x.stato }));
   return {
     id: "auto-" + a.id, titolo: a.titolo, url: `https://www.immobiliare.it/annunci/${a.id}/`, fonte: "Immobiliare.it (ricerca automatica di Claude)",
-    aggiunto: raw.data, trovato: raw.data, regione: REG[a.p] || "", provincia: a.p, comune: a.comune, zona: a.indirizzo,
+    aggiunto: a.trovato || raw.data, trovato: a.trovato || raw.data, regione: REG[a.p] || "", provincia: a.p, comune: a.comune, zona: a.indirizzo,
     lat: co ? co[0] : null, lng: co ? co[1] : null, pos_indicativa: true,
     prezzo: a.prezzo, mq: a.mq, locali: a.locali, bagni: a.bagni, piano: a.piano, arredato: !!a.arredato, stato: a.stato || "buono", lavori: 0,
     classe_energetica: a.classe || "", foto: a.foto[0], foto_extra: a.foto.slice(1), agenzia: a.agenzia, aggiornato_annuncio: a.aggiornato,

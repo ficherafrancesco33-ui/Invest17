@@ -448,6 +448,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .schtop{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:-46px;min-height:36px}
 .segbtn{display:inline-flex;gap:6px;padding:7px 12px;font-family:var(--display);font-style:italic;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}.segbtn svg{width:16px;height:16px}
 .vs.ann{cursor:pointer}
+.novb{display:flex;gap:12px;align-items:flex-start;margin:0 0 14px;padding:12px 14px;border-radius:16px;border:1px solid var(--yl);background:linear-gradient(135deg,rgba(250,204,21,.16),rgba(250,204,21,.04))}.novb>div{flex:1;display:grid;gap:3px}.novb small{font-family:var(--display);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--yl)}.novb b{font-size:15.5px;color:var(--tx)}.novb span{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--tx2)}.novb a{color:var(--yl);font-weight:700}.novb button{background:none;border:0;color:var(--tx2);font-size:18px;padding:0 2px;cursor:pointer}
 .ticker{overflow:hidden;margin:-18px -14px 16px;border-bottom:1px solid var(--soft);background:var(--deep);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .tkt{display:flex;gap:28px;width:max-content;padding:9px 14px;animation:tk 60s linear infinite}
 .ticker:hover .tkt{animation-play-state:paused}
@@ -573,7 +574,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 
 <script src="data/impostazioni.js"></script>
 <script src="data/immobili.js"></script>
-<script src="data/auto.js"></script>
+<script src="data/auto.js"></script><script src="data/novita.js"></script>
 <script src="data/notizie.js"></script>
 <script src="data/guida.js"></script>
 <script src="data/territorio.js"></script>
@@ -710,7 +711,7 @@ function cardIm(A, src, rank) {
       <h3>${esc(im.titolo || "Immobile")}</h3>
       <div class="meta"><b>${eur(im.prezzo)}</b> · ${num(im.mq)} m² · ${eur(A.val.prezzoMq)}/m²</div>
       <div class="meta">Netto <b>${pct(A.rend)}</b>${A.val.sconto != null ? ` · ${A.val.sconto >= 0 ? "sotto" : "sopra"} mercato <b>${pct(Math.abs(A.val.sconto), 0)}</b>` : ""}</div>
-      <div class="tags"><span class="tag st ${st.c}">${st.t}</span>${A.use ? `<span class="tag cat">${CATS[A.use]}</span>` : ""}${r && r.stima ? `<span class="tag est">stima</span>` : ""}${src === "auto" && im.trovato === oggi ? `<span class="tag new">nuovo oggi</span>` : ""}${src === "auto" && im.promosso ? "" : ""}</div>
+      <div class="tags"><span class="tag st ${st.c}">${st.t}</span>${A.use ? `<span class="tag cat">${CATS[A.use]}</span>` : ""}${r && r.stima ? `<span class="tag est">stima</span>` : ""}${src === "auto" && isNuovoInv(im) ? `<span class="tag new">${im.trovato === oggi ? "nuovo oggi" : "nuovo"}</span>` : ""}${src === "auto" && im.promosso ? "" : ""}</div>
     </div>
   </a>`;
 }

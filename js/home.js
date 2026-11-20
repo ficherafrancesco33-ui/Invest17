@@ -5,10 +5,24 @@
    osservatorio: mappa d'Italia 3D leggera con gli immobili seguiti,
    accesso rapido alle due sezioni, classifica, notizie.
    ========================================================================== */
+/* ---- novità dagli avvisi giornalieri di Immobiliare (data/novita.js) ---- */
+const novDati = () => (typeof NOVITA !== "undefined" ? NOVITA : { giorni: [], dal: {} });
+const novUltimo = () => [...novDati().giorni].reverse().find(g => g.inv.length || g.mil.length) || null;
+const novData = d => d ? d.split("-").reverse().slice(0, 2).join("/") : "";
+/* un immobile d'investimento è "nuovo" se è arrivato con l'ultimo avviso (o oggi) */
+function isNuovoInv(im) { const u = novUltimo(); return !!im.trovato && (im.trovato === oggi || (u && im.trovato >= u.data)); }
+function novBanner() {
+  const u = novUltimo(); if (!u || store.get("nov_visto", "") >= u.data) return "";
+  const ni = u.inv.length, nm = u.mil.length, np = u.priv.length;
+  return `<div class="novb" id="novb"><div><small>Novità del ${novData(u.data)}</small>
+    <b>${[ni ? `${ni} immobil${ni === 1 ? "e" : "i"} per investire` : "", nm ? `${nm} annunci${nm === 1 ? "o" : ""} a Milano${np ? ` (${np} di privati)` : ""}` : ""].filter(Boolean).join(" · ")}</b>
+    <span>${ni ? `<a href="#inv/classifica" data-nov="inv">Vedi gli investimenti</a>` : ""}${np ? `<a href="#milano/privati" data-nov="priv">Vedi i privati</a>` : ""}${nm && !np ? `<span>Aggiunti al database delle valutazioni</span>` : ""}</span></div>
+    <button aria-label="Chiudi" data-novx>✕</button></div>`;
+}
 function homeNovita() {
   const nov = [];
   [...AUTO].sort((a, b) => (b.trovato || "").localeCompare(a.trovato || "")).slice(0, 10).forEach(im => {
-    const A = analizza(im); nov.push({ h: `#imm/auto/${encodeURIComponent(im.id)}`, tag: im.trovato === oggi ? "Nuovo oggi" : "Nuovo", t: `${im.comune} · ${eur(im.prezzo)}`, s: A.score != null ? `${A.score} punti · netto ${pct(A.rend)}` : "" });
+    const A = analizza(im); nov.push({ h: `#imm/auto/${encodeURIComponent(im.id)}`, tag: im.trovato === oggi ? "Nuovo oggi" : isNuovoInv(im) ? "Nuovo" : "In archivio", t: `${im.comune} · ${eur(im.prezzo)}`, s: A.score != null ? `${A.score} punti · netto ${pct(A.rend)}` : "" });
   });
   [...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 4).forEach(n => nov.push({ h: "#notizie", tag: "Notizia", t: n.titolo, s: n.comune || n.regione || "" }));
   if (nov.length < 6) {
@@ -42,7 +56,7 @@ function vHomeK() {
   const nov = homeNovita(), top = homeTop(), seg = segAll();
   const A = mmAnnunci(), visti = new Set(store.get("ann_visti", [])), nuoviPriv = A.filter(a => a.priv && !visti.has(a.id)).length;
   const tick = nov.map(n => `<a class="tk" href="${n.h}"><i>${esc(n.tag)}</i><b>${esc(n.t)}</b>${n.s ? `<span>${esc(n.s)}</span>` : ""}</a>`).join("");
-  return `<div class="ticker" aria-label="Novità"><div class="tkt">${tick}${tick}</div></div>
+  return `${novBanner()}<div class="ticker" aria-label="Novità"><div class="tkt">${tick}${tick}</div></div>
   <h2>I migliori 10 <small><a href="#inv/classifica">Classifica completa</a></small></h2>
   <div class="t10">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score), im = x.im;
     return `<a class="t10r" href="#imm/${x.src}/${encodeURIComponent(im.id)}"><b class="t10n">${i + 1}</b>${win(im, st.col)}
@@ -100,6 +114,9 @@ function homeMappa(el, P, opt = {}) {
   }).catch(() => { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; });
 }
 function afterHomeK() {
+  const nb = $("#novb"); if (nb) nb.addEventListener("click", e => {
+    const u = novUltimo(); if (e.target.closest("[data-nov]")) { if (e.target.closest("[data-nov]").dataset.nov === "inv") store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "oggi" }); }
+    if (e.target.closest("[data-nov],[data-novx]") && u) { store.set("nov_visto", u.data); if (e.target.closest("[data-novx]")) nb.remove(); } });
   $("#dovek")?.addEventListener("click", e => { const c = e.target.closest("[data-k]"); if (!c) return; store.set("dove_k", c.dataset.k);
     document.querySelectorAll("#dovek .chip").forEach(x => x.classList.toggle("on", x === c)); $("#dove").innerHTML = homeDove(); });
   const el = $("#itmap"); if (!el) return;

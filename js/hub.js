@@ -145,7 +145,7 @@ function vPrivato(id) {
     <tr><td>Stato</td><td>${a.st ? esc(MM_ST[a.st][0]) : "Non indicato"}</td></tr>
     <tr><td>Caratteristiche</td><td>${esc(a.d || "—")}</td></tr>
     <tr><td>Venditore</td><td>${a.priv ? "Privato" : "Agenzia"} · ${esc(a.fonte)}</td></tr>
-    <tr><td>Online da</td><td>Nell'app dal 20/11/2026 <span class="note">(la data di pubblicazione la leggo dalla prossima raccolta)</span></td></tr>
+    <tr><td>Online da</td><td>Nell'app dal ${(d => d.split("-").reverse().join("/"))(novDati().dal[String(a.id).replace(/^i/, "")] || "2026-11-20")}</td></tr>
   </tbody></table>
   ${F ? `<h2>Com'è messo rispetto alla zona</h2><p class="note">Prezzi richiesti nella microzona ${esc(mi.n)} (${num(F.n)} annunci): da ristrutturare ${F.r ? eur(F.r[1]) : "—"}/m², buono ${F.b ? eur(F.b[1]) : "—"}/m², ottimo o nuovo ${F.o ? eur(F.o[1]) : "—"}/m². Questo è a <b>${eur(a.mq2)}/m²</b>.</p>` : ""}
   ${near && near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} (${[...x.ln].join(", ")}) ${num(Math.round(x.d / 10) * 10)} m`).join(" · ")}</p>` : ""}
@@ -268,7 +268,7 @@ function vInvHub() {
 }
 const INV_F0 = { cat: "tutte", reg: "", ore: 0, max: 0, min: 0, sort: "score", src: "" };
 function invRows(f, filtroZona) {
-  return invAll().filter(({ im, src }) => (!f.src || (f.src === "oggi" ? src === "auto" && im.trovato === oggi : src === f.src)) && (!f.reg || im.regione === f.reg) && (!+f.max || im.prezzo <= +f.max) && (!filtroZona || filtroZona(im)))
+  return invAll().filter(({ im, src }) => (!f.src || (f.src === "oggi" ? src === "auto" && isNuovoInv(im) : src === f.src)) && (!f.reg || im.regione === f.reg) && (!+f.max || im.prezzo <= +f.max) && (!filtroZona || filtroZona(im)))
     .map(x => ({ ...x, A: analizza(x.im, f.cat), d: tDist(x.im.lat, x.im.lng) }))
     .filter(x => (f.cat === "tutte" || x.A.use) && (!+f.ore || (x.d && x.d.min <= +f.ore)) && (!+f.min || (x.A.score ?? 0) >= +f.min))
     .sort({ score: (a, b) => (b.A.score ?? -1) - (a.A.score ?? -1), rend: (a, b) => (b.A.rend ?? -9) - (a.A.rend ?? -9), prezzo: (a, b) => a.im.prezzo - b.im.prezzo,
@@ -276,7 +276,7 @@ function invRows(f, filtroZona) {
 }
 function invFiltri(f, regs, noReg) {
   return `<div class="filters" id="invf">
-    <div class="chips">${[["", "Tutti"], ["miei", "Mandati da me"], ["auto", "Trovati in automatico"], ["oggi", "Nuovi oggi"]].map(([k, t]) => `<button class="chip ${(f.src || "") === k ? "on" : ""}" data-src="${k}">${t}</button>`).join("")}</div>
+    <div class="chips">${[["", "Tutti"], ["miei", "Mandati da me"], ["auto", "Trovati in automatico"], ["oggi", "Novità"]].map(([k, t]) => `<button class="chip ${(f.src || "") === k ? "on" : ""}" data-src="${k}">${t}</button>`).join("")}</div>
     <div class="chips">${[["tutte", "Tutti gli usi"], ...Object.entries(CAT)].map(([k, t]) => `<button class="chip ${f.cat === k ? "on" : ""}" data-cat="${k}">${t}</button>`).join("")}</div>
     <div class="selrow">
       ${noReg ? "" : `<select data-f="reg"><option value="">Tutte le regioni</option>${regs.map(r => `<option ${r === f.reg ? "selected" : ""}>${esc(r)}</option>`).join("")}</select>`}

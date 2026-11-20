@@ -111,7 +111,7 @@ def annunci(micro_names):
 
 
 def annunci_imm():
-    out = []
+    out = {}   # per id: se un annuncio torna in un avviso successivo vale l'ultima riga (prezzo aggiornato)
     for line in open(os.path.join(H, "raw_immobiliare_milano.txt"), encoding="utf-8"):
         if line.startswith("#") or not line.strip():
             continue
@@ -123,8 +123,8 @@ def annunci_imm():
             continue
         if mq < 14 or not (1500 <= p / mq <= 25000):
             continue
-        out.append([int(i), int(p), mq, loc.split(" ")[0].replace("+", ""), piano.split(",")[0].strip(), int(asc), st, tip, float(lat), float(lon), via.strip().rstrip(","), mic, int(priv), ex])
-    return out
+        out[int(i)] = ([int(i), int(p), mq, loc.split(" ")[0].replace("+", ""), piano.split(",")[0].strip(), int(asc), st, tip, float(lat), float(lon), via.strip().rstrip(","), mic, int(priv), ex])
+    return list(out.values())
 
 
 def fasce(lista):
