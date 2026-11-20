@@ -127,6 +127,39 @@ def annunci_imm():
     return out
 
 
+def fasce(lista):
+    """Fasce di prezzo per microzona e per zona dagli annunci Immobiliare (solo dove la lettura è completa)."""
+    import statistics as S
+    def q(v, x):
+        v = sorted(v); k = (len(v) - 1) * x; f = int(k); c = min(f + 1, len(v) - 1)
+        return round(v[f] + (v[c] - v[f]) * (k - f))
+    def blocco(rows):
+        out = dict(n=len(rows), p10=q([r[1] / r[2] for r in rows], .1), med=q([r[1] / r[2] for r in rows], .5), p90=q([r[1] / r[2] for r in rows], .9))
+        for k, st in (("r", "R"), ("b", "B"), ("o", "ON")):
+            v = [r[1] / r[2] for r in rows if r[6] and r[6] in st]
+            if len(v) >= 4:
+                out[k] = [q(v, .25), q(v, .5), q(v, .75), len(v)]
+        mq = [r[2] for r in rows]; out["mq"] = q(mq, .5)
+        return out
+    zona = {m[1]: m[0] for m in MICRO}
+    per_m, per_z = {}, {}
+    for r in lista:
+        if r[7] in ("Palazzo - Edificio", "Villa a schiera", "Villa unifamiliare"):
+            continue
+        per_m.setdefault(r[11], []).append(r)
+    mic, zz = {}, {}
+    for m, rows in per_m.items():
+        if m not in zona:
+            continue
+        alti = sum(1 for r in rows if r[1] > 196000)
+        if len(rows) >= 25 and alti >= 15:        # lettura completa (non solo la fascia economica)
+            mic[m] = blocco(rows)
+            zz.setdefault(zona[m], []).extend(rows)
+    for z, rows in zz.items():
+        zz[z] = blocco(rows)
+    return dict(fonte="Annunci Immobiliare.it letti il 20/11/2026 (solo dove la lettura copre tutte le fasce di prezzo)", micro=mic, zone=zz)
+
+
 def coord_miei():
     f = os.path.join(ROOT, "data", "immobili.js").replace("\\", "/")
     r = subprocess.run(["node", "-e", "eval(require('fs').readFileSync('" + f + "','utf8')+';globalThis.M=MIEI');"
@@ -165,6 +198,7 @@ def main():
                      lista=annunci([m[1] for m in MICRO]),
                      imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (tutta Milano fino a 196.000 € + Milano Sud completa)", url="https://www.immobiliare.it/annunci/",
                               campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
+    data["milano"]["fasce"] = fasce(data["annunci"]["imm"]["lista"])
     s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)

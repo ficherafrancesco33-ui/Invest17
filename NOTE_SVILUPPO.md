@@ -147,3 +147,8 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - Letti da Immobiliare.it (Chrome, 6–9 s a pagina) 3.859 annunci di 21 microzone sud: Porta Romana, Bocconi, Quadronno, Vigentino, Ripamonti, Lodi, Corvetto, Cadore, Montenero, Guastalla, Porta Vittoria, Martini, Molise, Bologna, Pezzotti, Chiesa Rossa, Cermenate, Navigli, San Gottardo, Ascanio Sforza (parziale), Ticinese (parziale). Bloccato (403) a Ticinese p.7: mancano Corso Genova, Rogoredo, Quintosole, Gratosoglio.
 - Uniti in tools/terr/raw_immobiliare_milano.txt (dedup per id) → 4.351 annunci Immobiliare validi in TERR.annunci.imm.
 - Comparabili: peso nella stima fino al 60% (nNorm/15) se la media normalizzata è entro ±30% della base. Extra nuovi: g box, j giardino, p portineria.
+
+### PDF valutazione Maison Collection (20/11/2026)
+- js/pdf.js sostituisce il vecchio mmPdf: copertina (logo, mappa OSM con segnaposto, banda bordeaux con il range), riepilogo, 10 sezioni come le relazioni di stima di riferimento (immobile, comparabili con mappa numerata e ★, fasce di zona con grafico, rettifiche +/−, range con due metodi, servizi a piedi, profilo zona, forza/attenzione, investimento, nota metodologica).
+- Nuovi dati: TERR.milano.fasce (gen.py: percentili per stato dagli annunci, solo microzone lette per intero) e data/zone_profili.js (32 zone: carattere, edilizia, domanda, pro/contro, municipio).
+- Modulo: aggiunti anno di costruzione, orientamento (coefficiente S +2%, N −3%), note particolari. Ultimo piano +1,5% se già piano alto.

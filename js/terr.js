@@ -109,7 +109,7 @@ const V_EPOCA = { nuova: ["Dopo il 2015", 1.04], recente: ["1990–2015", 1.02],
   epoca: ["D'epoca signorile", 1.05], epocapop: ["D'epoca popolare", 0.97] };
 const V_DEF = { tipo: "appartamento", mq: 60, locali: 2, bagni: 1, balcone: 0, terrazzo: 0, giardino: 0, cantina: 0, box: "no", piano: 2, ascensore: true,
   ultimo: false, stato: "buono", lavori: 0, statoDopo: "ristrutturato", classe: "?", epoca: "anni70", espo: "singola", vista: "normale",
-  risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0 };
+  risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0, anno: 0, orient: "", note: "" };
 
 function vCalcola(inp, ctx) {
   const q = Object.assign({}, V_DEF, inp), aff = ctx.a;
@@ -132,11 +132,12 @@ function vCalcola(inp, ctx) {
     else if (p === 1 && !q.ascensore) add("Primo piano senza ascensore", 0.98);
     else if (!q.ascensore && p >= 3) add(`${p}° piano senza ascensore`, Math.max(0.85, 1 - 0.04 * (p - 2)));
     else if (q.ascensore && p >= 4) add("Piano alto con ascensore", 1.03);
-    if (q.ultimo && q.ascensore && q.tipo !== "attico") add("Ultimo piano", 1.03);
+    if (q.ultimo && q.ascensore && q.tipo !== "attico") add("Ultimo piano", p >= 4 ? 1.015 : 1.03);
   }
   add(q.classe === "?" ? "Classe energetica non indicata (prudenza)" : "Classe energetica " + q.classe, V_CLASSE[q.classe] ?? 1);
   add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
   add(q.espo === "doppia" ? "Doppia esposizione" : q.espo === "buia" ? "Interno buio" : "", q.espo === "doppia" ? 1.02 : q.espo === "buia" ? 0.95 : 1);
+  { const o = { S: 1.02, "S/E": 1.01, "S/O": 1.01, "E/O": 1.01, N: 0.97, "N/E": 0.98, "N/O": 0.98 }[q.orient]; if (o) add("Orientamento " + ({ S: "Sud", N: "Nord", "S/E": "Sud / Est", "S/O": "Sud / Ovest", "E/O": "Est / Ovest", "N/E": "Nord / Est", "N/O": "Nord / Ovest" }[q.orient]), o); }
   add(q.vista === "pregio" ? "Vista di pregio" : q.vista === "aperta" ? "Vista aperta" : "", q.vista === "pregio" ? 1.07 : q.vista === "aperta" ? 1.02 : 1);
   if (q.risc === "autonomo") add("Riscaldamento autonomo", 1.02);
   if (q.portineria) add("Portineria", 1.03);
@@ -194,17 +195,19 @@ function vForm(id, ctxHtml, q) {
     <fieldset><legend>Stato e lavori</legend><div class="vg">
       ${s("stato", "Stato attuale", V_STATO)}${n("lavori", "Lavori da fare", 500, "€")}${s("statoDopo", "Stato dopo i lavori", V_STATO)}
       ${s("classe", "Classe energetica", { "?": "Non so", A: "A", B: "B", C: "C", D: "D", E: "E", F: "F", G: "G" })}
-      ${s("epoca", "Palazzo", V_EPOCA)}${s("condominio", "Condominio", { buono: "Normale", rifatto: "Facciata rifatta", dafare: "Lavori in arrivo" })}
+      ${s("epoca", "Palazzo", V_EPOCA)}${n("anno", "Anno di costruzione")}${s("condominio", "Condominio", { buono: "Normale", rifatto: "Facciata rifatta", dafare: "Lavori in arrivo" })}
     </div></fieldset>
     <fieldset><legend>Posizione e comfort</legend><div class="vg">
       ${s("posizione", "Via", { media: "Normale", pregio: "Di pregio", rumorosa: "Trafficata" })}
       ${s("espo", "Esposizione", { singola: "Singola", doppia: "Doppia / angolo", buia: "Interna, buia" })}
+      ${s("orient", "Orientamento", { "": "Non indicato", N: "Nord", S: "Sud", E: "Est", O: "Ovest", "S/O": "Sud / Ovest", "S/E": "Sud / Est", "N/O": "Nord / Ovest", "N/E": "Nord / Est", "E/O": "Est / Ovest", "N/S": "Nord / Sud" })}
       ${s("vista", "Vista", { normale: "Normale", aperta: "Aperta", pregio: "Di pregio" })}
       ${s("risc", "Riscaldamento", { centralizzato: "Centralizzato", autonomo: "Autonomo" })}
       ${c("portineria", "Portineria")}${c("arredato", "Arredato")}
     </div></fieldset>
     <fieldset><legend>Se è in vendita</legend><div class="vg">
       ${n("prezzo", "Prezzo chiesto", 1000, "€")}${n("condo", "Spese condominio", 10, "€/mese")}
+      <label class="wide"><span>Note particolari (compaiono sul PDF)</span><input type="text" data-k="note" value="${esc(q.note || "")}" placeholder="es. due balconi, portineria mezza giornata, vista libera"></label>
     </div></fieldset>
   </form>`;
 }
