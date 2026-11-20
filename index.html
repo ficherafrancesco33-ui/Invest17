@@ -292,7 +292,7 @@ function valuta(im) {
   const v = im.valutazione || {}, comps = (v.comparabili || []).filter(c => c.prezzo && c.mq);
   const compMq = median(comps.map(c => c.prezzo / c.mq));
   const compAdj = compMq == null ? null : compMq * (1 - par(im, "sconto_trattativa"));
-  const omiMid = v.omi && v.omi.min && v.omi.max ? (v.omi.min + v.omi.max) / 2 : null;
+  const omiMid = v.omi ? (v.omi.medio ?? (v.omi.min && v.omi.max ? (v.omi.min + v.omi.max) / 2 : null)) : null;
   let valMq = null;
   if (compAdj != null && omiMid != null) { const w = comps.length >= 3 ? par(im, "peso_comparabili") : 0.4; valMq = w * compAdj + (1 - w) * omiMid; }
   else valMq = compAdj ?? omiMid;
@@ -530,6 +530,7 @@ function vScheda(src, id) {
         <div class="fact"><small>Lavori</small><b>${im.lavori ? eur(im.lavori) : "Nessuno"}</b></div>
         <div class="fact"><small>Classe en.</small><b>${esc(im.classe_energetica || "—")}</b></div>
       </div>
+      ${[im.note_mq ? "Metratura: " + im.note_mq + "." : "", im.pos_indicativa ? "Posizione sulla mappa indicativa (frazione, non indirizzo)." : ""].filter(Boolean).map(t => `<p class="note">${esc(t)}</p>`).join("")}
       <div class="btns">${im.url ? `<a class="btn pri" href="${esc(im.url)}" target="_blank" rel="noopener">Apri l'annuncio ↗</a>` : ""}<span class="src" style="align-self:center">Aggiunto il ${esc(im.aggiunto || im.trovato || "—")}${im.fonte ? " · " + esc(im.fonte) : ""}</span></div>
     </div>
   </section>
@@ -542,7 +543,7 @@ function vScheda(src, id) {
       <div><small>Offerta consigliata</small><b>${keur(V.offMin)}–${keur(V.offMax).replace("€\u00a0", "")}</b><em>parti dal basso</em></div>
     </div>
     ${vbar(im, V)}
-    <p class="note">Valore stimato = ${V.comps.length ? `comparabili (mediana ${eur(V.compMq)}/m², scontata dell'${pct(par(im, "sconto_trattativa"), 0)} di trattativa)` : ""}${V.comps.length && V.omiMid ? " unito al " : ""}${V.omiMid ? `centro della forbice OMI` : ""}${!V.comps.length && !V.omiMid ? "nessun dato di mercato inserito" : ""}.${im.valutazione?.omi?.fonte ? " OMI: " + esc(im.valutazione.omi.fonte) + "." : ""}${im.valutazione?.note ? " " + esc(im.valutazione.note) : ""}</p>
+    <p class="note">Valore stimato = ${V.comps.length ? `comparabili (mediana ${eur(V.compMq)}/m², scontata dell'${pct(par(im, "sconto_trattativa"), 0)} di trattativa)` : ""}${V.comps.length && V.omiMid ? " unito al " : ""}${V.omiMid ? (im.valutazione?.omi?.medio ? `valore OMI (${num(V.omiMid)} €/m²)` : `centro della forbice OMI`) : ""}${!V.comps.length && !V.omiMid ? "nessun dato di mercato inserito" : ""}.${im.valutazione?.omi?.fonte ? " OMI: " + esc(im.valutazione.omi.fonte) + "." : ""}${im.valutazione?.note ? " " + esc(im.valutazione.note) : ""}</p>
   </div>
 
   ${V.comps.length ? `<h2>Comparabili <small>${V.comps.length} annunci simili</small></h2>
@@ -585,24 +586,26 @@ function bp(im, A, S) {
     <div><small>Rendimento lordo</small><b>${pct(S.rendLordo)}</b><em>incassi ÷ prezzo</em></div>
     <div><small>Rientro</small><b>${S.payback ? num(S.payback, 1) + " anni" : "—"}</b><em>per ripagare tutto</em></div>
   </div>
+  ${im.spese?.stima ? `<p class="note">Condominio e IMU stimati: da chiedere all'agenzia.</p>` : ""}
   ${S.fonte ? `<p class="note">Fonte dati affitto: ${esc(S.fonte)}${S.stima ? " (stima)" : ""}</p>` : ""}
   <p class="note">Netto con l'altra opzione: ${TAX === "srl" ? `privata (cedolare) ${eur(S.nettoPriv)}` : `SRL ${eur(S.nettoSrl)}`}.</p></div>`;
 }
 function vbar(im, V) {
   const o = im.valutazione?.omi;
-  const vals = [V.prezzoMq, V.valMq, V.compMq, o?.min, o?.max, ...V.comps.map(c => c.prezzo / c.mq)].filter(x => x != null && isFinite(x));
+  const vals = [V.prezzoMq, V.valMq, V.compMq, o?.min, o?.max, o?.medio, ...V.comps.map(c => c.prezzo / c.mq)].filter(x => x != null && isFinite(x));
   if (vals.length < 2) return "";
   let lo = Math.min(...vals), hi = Math.max(...vals); const pad = (hi - lo) * 0.12 || hi * 0.1; lo -= pad; hi += pad;
   const W = 360, X = v => 40 + (v - lo) / (hi - lo) * (W - 80), y = 44;
   let s = `<svg viewBox="0 0 ${W} 100" role="img" aria-label="Prezzo al metro quadro rispetto al mercato">`;
   s += `<line x1="30" x2="${W - 30}" y1="${y}" y2="${y}" stroke="rgba(255,255,255,.18)" stroke-width="2" stroke-linecap="round"/>`;
   if (o?.min && o?.max) s += `<rect x="${X(o.min)}" y="${y - 9}" width="${Math.max(2, X(o.max) - X(o.min))}" height="18" rx="4" fill="rgba(0,200,224,.18)" stroke="rgba(125,243,255,.35)"/>`;
+  if (o?.medio && !(o?.min && o?.max)) s += `<rect x="${X(o.medio) - 3}" y="${y - 9}" width="6" height="18" rx="3" fill="rgba(0,200,224,.55)"><title>OMI ${num(o.medio)} €/m²</title></rect>`;
   for (const c of V.comps) s += `<circle cx="${X(c.prezzo / c.mq)}" cy="${y}" r="5" fill="#ff2bd6" stroke="#0a1220" stroke-width="2"><title>${esc(c.titolo || "Comparabile")}: ${num(c.prezzo / c.mq)} €/m²</title></circle>`;
   const mark = (v, col, lab, up) => v == null ? "" : `<line x1="${X(v)}" x2="${X(v)}" y1="${y - 14}" y2="${y + 14}" stroke="${col}" stroke-width="3" stroke-linecap="round"/><text x="${X(v)}" y="${up ? y - 32 : y + 30}" fill="#e6f7ff" font-size="12" font-weight="700" text-anchor="middle" font-family="Barlow,sans-serif">${lab}</text><text x="${X(v)}" y="${up ? y - 18 : y + 44}" fill="#b3cde4" font-size="11" text-anchor="middle" font-family="Barlow,sans-serif">${num(v)} €/m²</text>`;
     s += mark(V.valMq, "#7df3ff", "Valore stimato", false);
   s += mark(V.prezzoMq, "#facc15", "Prezzo chiesto", true);
   s += `</svg>`;
-  return `<div class="vbar">${s}</div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Prezzo chiesto</span><span><i style="background:#7df3ff;color:#7df3ff"></i>Valore stimato</span>${im.valutazione?.omi?.min ? `<span><i style="background:rgba(0,200,224,.35);border-radius:3px;color:transparent"></i>Forbice OMI</span>` : ""}${V.comps.length ? `<span><i style="background:#ff2bd6;color:#ff2bd6"></i>Comparabili</span>` : ""}</div>`;
+  return `<div class="vbar">${s}</div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Prezzo chiesto</span><span><i style="background:#7df3ff;color:#7df3ff"></i>Valore stimato</span>${im.valutazione?.omi?.min ? `<span><i style="background:rgba(0,200,224,.35);border-radius:3px;color:transparent"></i>Forbice OMI</span>` : im.valutazione?.omi?.medio ? `<span><i style="background:rgba(0,200,224,.55);border-radius:3px;color:transparent"></i>Valore OMI</span>` : ""}${V.comps.length ? `<span><i style="background:#ff2bd6;color:#ff2bd6"></i>Comparabili</span>` : ""}</div>`;
 }
 function season(m) {
   const W = 360, H = 150, b = 22, top = 18, ch = H - b - top, bw = (W - 20) / 12;

@@ -80,3 +80,10 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - "Finestre" degli immobili (funzione `win`): foto con vetro, riflesso in alto, bordo e alone nel colore del punteggio, pillola del punteggio nell'angolo. Senza foto mostra l'iniziale del comune.
 - Foto: campo `foto` con il link diretto all'immagine dell'annuncio (caricata con referrerpolicy no-referrer; se non si carica resta l'iniziale).
 - Grafici: prezzo chiesto giallo, valore stimato ciano, comparabili magenta, stagionalità in scala di ciano.
+
+### 20/11/2026 (3) — Primo archivio: Oneta (BG)
+- Link di Imma: idealista.it/vendita-case/oneta-bergamo/. Idealista e Immobiliare bloccano la lettura diretta: annunci presi dagli aggregatori pubblici Caasa e Nestoria (stessi annunci di Immobiliare/Idealista, con foto e link). 24 immobili distinti (doppioni tolti).
+- OMI: valore medio zona R1 da Caasa (appartamenti 1.069 €/m², case indipendenti 848 €/m²); supporto nuovo in `valuta` per `omi.medio` (valore unico, senza forbice).
+- Comparabili: altri annunci di Oneta dello stesso segmento (appartamenti / case / alto livello), metratura più vicina; esclusa la casa di 220 m².
+- Affitto breve: stima da AirROI Oltre il Colle (comune confinante, stagionalità mese per mese) e AirDNA Oltre il Colle/Serina. Affitto lungo: stima prudente per fasce di locali (nessun OMI locazione). Medio termine non inserito (nessun dato).
+- Posizioni sulla mappa indicative per frazione (`pos_indicativa`), condominio e IMU stimati (`spese.stima`). Generatore dei dati: script nella sessione (non nel repo).
