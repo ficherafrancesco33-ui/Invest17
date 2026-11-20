@@ -1,4 +1,4 @@
-# Immobiliare.it, annunci in vendita Milano città: 20/11/2026 fasce fino a 196.000 € + 20/11/2026 Milano Sud completo (Porta Romana, Bocconi, Vigentino, Corvetto, Navigli… 200 pagine, fermato a Ticinese p.7)
+# Immobiliare.it, annunci in vendita Milano città: 20/11/2026 fasce fino a 196.000 € + 20/11/2026 Milano Sud completo (Porta Romana, Bocconi, Vigentino, Corvetto, Navigli… 200 pagine, fermato a Ticinese p.7) + 20/11/2026 sera: Ticinese, Corso Genova, Rogoredo, Quintosole, Gratosoglio complete (prezzi arrotondati al migliaio)
 # id;prezzo;mq;locali;bagni;piano;ascensore;stato(N/O/B/R);tipologia;lat;lon;indirizzo;microzona;comune;privato;extra(b balcone,t terrazzo,c cantina,a arredato,d doppia esp.,i esp. interna,g box,j giardino,p portineria)
 119598469;449000;71;2 - 5;;;0;;Progetto;45.44500;9.15540;Via Giovanni Enrico Pestalozzi, 21;Barona;Milano;0;
 134501971;437000;65;2;1;T;1;N;Bilocale;45.46740;9.15550;Via Michelangelo Buonarroti;Vercelli - Wagner;Milano;0;i
@@ -4729,3 +4729,280 @@
 114961721;590000;78;2;1;7;1;B;Attico;45.4554;9.1789;Via Arena;Ticinese;Milano;0;bcd
 127108445;760000;85;2;1;2;0;O;Bilocale;45.4564;9.18531;Via Molino Delle Armi;Ticinese;Milano;0;b
 123734201;735000;85;3;2;3;1;O;Appartamento;45.45335007;9.17745686;Viale Gabriele D'Annunzio;Ticinese;Milano;1;b
+71616510;2950000;310;5;3+;4;1;N;Attico;45.4582;9.1749;;Corso Genova;Milano;0;btc
+79856783;3700000;3;5+;3+;T;0;B;Palazzo - Edificio;45.4184;9.1907;;Gratosoglio;Milano;0;
+87241672;364000;45;2;1;4;1;O;Bilocale;45.4556;9.1747;;Corso Genova;Milano;0;a
+99538338;2950000;225;5;3+;4;1;O;Attico;45.4583;9.1749;;Corso Genova;Milano;0;bt
+107128973;275000;110;4;1;1;0;R;Quadrilocale;45.4303;9.2425;;Rogoredo;Milano;0;bca
+110183951;4000000;2;5+;3+;T;0;O;Palazzo - Edificio;45.4248;9.2520;;Rogoredo;Milano;0;b
+111020363;227000;23;1;1;4;1;O;Monolocale;45.4583;9.1712;;Corso Genova;Milano;0;a
+113350873;1700000;225;5;3;3;1;N;Appartamento;45.4582;9.1749;;Corso Genova;Milano;0;bc
+115743833;290000;100;4;2;9;1;O;Quadrilocale;45.4047;9.1703;;Gratosoglio;Milano;0;bca
+116243665;510000;143;4;2;2;1;O;Quadrilocale;45.4166;9.1802;;Gratosoglio;Milano;0;bta
+117267627;2950000;310;5+;3;4;1;N;Attico;45.4582;9.1749;;Corso Genova;Milano;0;bt
+118634133;520000;86;3;1;2;0;;Trilocale;45.4579;9.1706;;Corso Genova;Milano;0;ba
+118751255;378000;129;3;2;3;1;B;Trilocale;45.4150;9.1651;;Gratosoglio;Milano;0;btc
+121108016;550000;105;3;2;R;1;R;Appartamento;45.4557;9.1756;Via Gaudenzio Ferrari;Corso Genova;Milano;1;
+122335356;530000;180;5+;3;;0;B;Villa;45.4025;9.1788;;Gratosoglio;Milano;0;b
+122907728;444000;130;4;2;5;1;N;Quadrilocale;45.4149;9.1648;;Gratosoglio;Milano;0;tc
+122921314;470000;51;2;1;3;1;B;Bilocale;45.4569;9.1735;;Corso Genova;Milano;0;a
+123275817;1450000;20;;;;0;R;Casale;45.4056;9.2086;Via Giuseppe Ripamonti;Quintosole - Chiaravalle;Milano;1;
+123731403;269000;100;3;1;3;1;B;Trilocale;45.4173;9.1739;;Gratosoglio;Milano;0;bca
+123814355;170000;70;2;1;S-T;0;N;Bilocale;45.4085;9.1709;;Gratosoglio;Milano;0;c
+124107669;258000;83;2;1;4;1;O;Bilocale;45.4148;9.1653;;Gratosoglio;Milano;0;tc
+124164953;990000;150;3;2;T;1;B;Trilocale;45.4566;9.1760;;Corso Genova;Milano;0;t
+126011215;200000;50;2;1;2;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;a
+126226141;1570000;170;4;2;1;0;O;Quadrilocale;45.4559;9.1754;;Corso Genova;Milano;0;btca
+126421107;259000;100;3;1;4;1;B;Trilocale;45.4081;9.1731;;Gratosoglio;Milano;0;btca
+126452261;630000;130;3;2;4;1;O;Attico;45.4198;9.1773;;Gratosoglio;Milano;0;bt
+126673173;470000;108;3;2;S;1;O;Trilocale;45.4578;9.1706;;Corso Genova;Milano;0;a
+126854839;210000;83;3;1;8;1;O;Trilocale;45.4078;9.1708;;Gratosoglio;Milano;0;bc
+126989417;2100000;180;5;3;4;1;O;Appartamento;45.4604;9.1715;;San Vittore;Milano;0;btca
+127195145;450000;125;3;2;3;1;O;Trilocale;45.4171;9.1791;;Gratosoglio;Milano;0;ta
+127254163;475000;59;3;1;5;1;O;Trilocale;45.4551;9.1754;;Corso Genova;Milano;0;a
+127366261;309000;75;2;1;4;1;O;Bilocale;45.4146;9.1631;;Gratosoglio;Milano;0;tca
+127534482;620000;90;2;1;2;1;B;Bilocale;45.4567;9.1765;;Corso Genova;Milano;0;bca
+127621836;371000;110;3;2;4;1;N;Trilocale;45.4148;9.1653;;Gratosoglio;Milano;0;tc
+127677932;185000;75;3;1;5;1;B;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bca
+127731390;379000;78;3;2;1;1;O;Trilocale;45.4363;9.2338;;Rogoredo;Milano;0;bca
+127837084;522000;149;3;2;1;1;N;Trilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;b
+127837188;360000;100;2;1;1;1;N;Bilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;b
+127837200;308000;88;2;2;T;1;N;Bilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;
+127837252;368000;105;3;2;T;1;N;Trilocale;45.3981;9.2106;;Quintosole - Chiaravalle;Milano;0;
+128082122;165000;37;1;1;4;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+128243540;700000;80;5+;2;2;1;B;Appartamento;45.4564;9.1859;Via Molino delle Armi;Carrobbio;Milano;1;a
+128275520;198000;90;2;1;T;0;B;Bilocale;45.4014;9.1824;;Gratosoglio;Milano;0;
+128327088;330000;72;2;1;2;1;O;Bilocale;45.4368;9.2335;;Rogoredo;Milano;0;ta
+128458116;690000;100;3;1;3;1;;Trilocale;45.4567;9.1765;;Corso Genova;Milano;0;c
+128583128;720000;193;5;2;1;0;;Appartamento;45.4146;9.2331;Via Sant'Arialdo;Quintosole - Chiaravalle;Milano;1;c
+128632624;235000;105;4;2;4;1;O;Quadrilocale;45.4030;9.1697;;Gratosoglio;Milano;0;bc
+128639956;455000;120;4;2;T;1;;Quadrilocale;45.4026;9.1792;;Gratosoglio;Milano;0;c
+128674666;220000;130;4;2;5;0;B;Quadrilocale;45.4077;9.1707;;Gratosoglio;Milano;0;bc
+128682400;580000;158;4;3;2;1;B;Quadrilocale;45.4172;9.1797;;Gratosoglio;Milano;0;bt
+128789636;1400000;100;3;2;4;1;O;Trilocale;45.4587;9.1732;;Corso Genova;Milano;0;
+128818022;269000;107;2;1;1;1;O;Loft;45.4150;9.1769;;Gratosoglio;Milano;0;t
+128961802;445000;52;2;1;R;1;O;Appartamento;45.4547;9.1849;Via San Luca;Ticinese;Milano;1;a
+129008710;239000;58;2;1;R;1;O;Bilocale;45.4367;9.2342;;Rogoredo;Milano;0;ca
+129040408;945000;96;3;2;1;1;O;Trilocale;45.4598;9.1759;;Corso Genova;Milano;0;ca
+129056452;175000;40;1;1;1;1;O;Monolocale;45.4351;9.2350;;Rogoredo;Milano;0;ta
+129085238;360000;135;4;3;2;0;O;Quadrilocale;45.4034;9.1682;;Gratosoglio;Milano;0;
+129173762;520000;55;2;1;1;1;O;Bilocale;45.4588;9.1755;;Corso Genova;Milano;0;ca
+129175810;205000;61;2;1;2;1;O;Bilocale;45.4027;9.2034;;Quintosole - Chiaravalle;Milano;0;tca
+129177108;160000;60;2;1;2;0;B;Bilocale;45.4160;9.1700;;Gratosoglio;Milano;0;
+129211344;169000;65;2;1;9;1;O;Bilocale;45.4118;9.1724;;Gratosoglio;Milano;0;bca
+129360518;458000;120;4;2;T;1;B;Quadrilocale;45.4025;9.1797;;Gratosoglio;Milano;0;tc
+129371282;335000;84;3;2;1;1;O;Trilocale;45.4023;9.1790;;Gratosoglio;Milano;0;bc
+129568086;650000;65;2;1;1;1;O;Appartamento;45.4564;9.1735;Piazzale Antonio Cantore;Corso Genova;Milano;1;ba
+129645496;375000;100;3;2;T;1;N;Trilocale;45.4146;9.1631;;Gratosoglio;Milano;0;bta
+129646984;269000;100;3;1;8;1;B;Trilocale;45.4181;9.1746;;Gratosoglio;Milano;0;bca
+129658642;359000;127;4;2;R;1;B;Quadrilocale;45.4170;9.1733;;Gratosoglio;Milano;0;bc
+129752204;1553000;100;5;;;0;B;Terratetto;45.4056;9.2086;;Quintosole - Chiaravalle;Milano;0;ca
+129775378;195000;45;2;1;1;0;O;Bilocale;45.4006;9.2051;;Quintosole - Chiaravalle;Milano;0;bca
+129952344;229000;73;3;1;4;1;B;Trilocale;45.4266;9.2511;;Santa Giulia;Milano;0;ba
+130026802;319000;100;3;2;3;0;O;Trilocale;45.4353;9.2347;;Rogoredo;Milano;0;ba
+130116068;420000;124;3;2;S, 7;1;O;Attico;45.4167;9.1784;;Gratosoglio;Milano;0;ta
+130418906;210000;83;3;1;9;1;B;Trilocale;45.4052;9.1704;;Gratosoglio;Milano;0;bc
+130448408;430000;60;2;1;5;1;O;Bilocale;45.4577;9.1760;;Corso Genova;Milano;0;ca
+130495524;549000;88;3;1;1;0;B;Trilocale;45.4569;9.1740;;Corso Genova;Milano;0;bca
+130522420;420000;57;2;1;T;1;O;Loft;45.4559;9.1763;;Corso Genova;Milano;0;a
+130528512;550000;50;2;1;1;1;N;Bilocale;45.4592;9.1725;;Corso Genova;Milano;0;c
+130529018;800000;70;3;1;1;1;N;Trilocale;45.4592;9.1725;;Corso Genova;Milano;0;c
+130662518;215000;50;2;1;3;1;O;Bilocale;45.4351;9.2362;;Rogoredo;Milano;0;tc
+130672654;359000;80;2;1;3;1;O;Bilocale;45.4368;9.2333;;Rogoredo;Milano;0;bta
+130717140;960000;100;4;2;3;1;O;Quadrilocale;45.4601;9.1732;;Corso Genova;Milano;0;ba
+130921662;528000;65;2;1;T;1;O;Bilocale;45.4551;9.1754;;Corso Genova;Milano;0;ta
+131093000;4175000;390;5+;3+;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;
+131121858;315000;125;4;2;6;1;B;Quadrilocale;45.4179;9.1745;;Gratosoglio;Milano;0;bc
+131160152;305000;115;3;1;1;1;N;Trilocale;45.4018;9.2020;;Quintosole - Chiaravalle;Milano;0;btc
+131160154;415000;130;4;1;1;1;N;Quadrilocale;45.4018;9.2020;;Quintosole - Chiaravalle;Milano;0;btc
+131176712;197000;68;2;1;T;0;O;Bilocale;45.4154;9.1637;;Gratosoglio;Milano;0;tca
+131243666;730000;200;4;2;5;1;B;Attico;45.4183;9.1816;;Gratosoglio;Milano;0;t
+131244614;235000;110;4;2;4;1;O;Quadrilocale;45.4032;9.1696;;Gratosoglio;Milano;0;bca
+131253770;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;a
+131254738;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;t
+131256192;1395000;127;3;2;4;1;N;Attico;45.4569;9.1735;;Corso Genova;Milano;0;t
+131257842;2780000;241;4;3;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;t
+131273722;590000;80;3;2;T;0;N;Trilocale;45.4575;9.1729;;Corso Genova;Milano;0;a
+131405104;1070000;107;4;2;S, 6;1;O;Attico;45.4581;9.1771;;Corso Genova;Milano;0;bca
+131441436;595000;155;2;1;S;0;O;Loft;45.4596;9.1743;;Corso Genova;Milano;0;a
+131900936;420000;146;5+;2;7;1;B;Appartamento;45.4178;9.1782;Via Fratelli Fraschini;Gratosoglio;Milano;1;tca
+132012586;630000;73;3;1;2;1;O;Trilocale;45.4568;9.1748;;Corso Genova;Milano;0;bc
+132018596;260000;110;5;2;4;1;O;Appartamento;45.4085;9.1709;;Gratosoglio;Milano;0;btca
+132031416;235000;75;3;1;4;1;;Trilocale;45.4100;9.1739;;Gratosoglio;Milano;0;btc
+132068240;445000;150;4;2;4;1;B;Quadrilocale;45.4166;9.1774;;Gratosoglio;Milano;0;ta
+132073612;395000;50;2;1;T;1;;Bilocale;45.4590;9.1728;;Corso Genova;Milano;0;ca
+132165746;298000;33;2;1;6;1;O;Bilocale;45.4587;9.1707;;Corso Genova;Milano;0;a
+132168456;1300000;160;5;2;1;1;B;Appartamento;45.4577;9.1727;;Corso Genova;Milano;0;ca
+132168886;695000;101;3;1;3;1;R;Trilocale;45.4575;9.1744;;Corso Genova;Milano;0;bc
+132182570;499000;185;3;1;T;0;B;Loft;45.4149;9.1773;;Gratosoglio;Milano;0;
+132212042;387000;90;3;1;7;1;O;Trilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+132256354;2700000;257;5+;3+;5;1;B;Appartamento;45.4594;9.1771;;Sant'Ambrogio;Milano;0;btc
+132293796;349000;130;3;;;0;B;Trilocale;45.4170;9.2402;;Quintosole - Chiaravalle;Milano;0;
+132294760;378000;90;3;1;6;1;O;Trilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+132341130;200000;51;2;1;3;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
+132343742;315000;89;3;2;4;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
+132344164;210000;57;2;1;4;1;N;Bilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
+132344292;300000;85;3;2;4;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
+132344440;460000;128;3;2;5;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;b
+132358778;578000;165;4;2;8;1;B;Quadrilocale;45.4161;9.1781;;Gratosoglio;Milano;0;bt
+132382426;235000;48;1;1;6;1;O;Monolocale;45.4553;9.1754;;Corso Genova;Milano;0;ca
+132397420;890000;105;4;1;4;1;O;Quadrilocale;45.4575;9.1758;;Corso Genova;Milano;0;bca
+132405200;749000;94;3;1;R;1;B;Trilocale;45.4571;9.1772;;Corso Genova;Milano;0;
+132413020;340000;150;4;2;5;1;R;Attico;45.4138;9.1730;;Gratosoglio;Milano;0;bta
+132417522;265000;52;2;1;6;1;O;Bilocale;45.4553;9.1754;;Corso Genova;Milano;0;a
+132418548;1600000;455;5+;3+;;0;B;Villa;45.4331;9.2384;;Rogoredo;Milano;0;b
+132443186;310000;89;3;2;2;1;N;Trilocale;45.4040;9.1695;;Gratosoglio;Milano;0;ba
+132505382;263000;89;3;1;3;1;O;Trilocale;45.4146;9.1718;;Gratosoglio;Milano;0;b
+132647020;250000;67;2;1;4;1;B;Appartamento;45.4587;9.1707;Piazza Sant'Agostino;Corso Genova;Milano;1;a
+132653856;229000;60;1;1;T;0;B;Monolocale;45.4367;9.2342;;Rogoredo;Milano;0;ca
+132662324;895000;230;5+;1;;0;O;Terratetto;45.4010;9.1831;;Gratosoglio;Milano;0;bta
+132751918;265000;48;2;1;T;1;O;Bilocale;45.4553;9.1763;;Corso Genova;Milano;0;a
+132809180;3500000;340;5+;3;5;1;R;Appartamento;45.4604;9.1755;;Sant'Ambrogio;Milano;0;bc
+132814416;860000;105;3;1;5;1;B;Trilocale;45.4577;9.1725;;Corso Genova;Milano;0;ba
+132889388;215000;54;2;1;2;1;B;Bilocale;45.4169;9.1799;;Gratosoglio;Milano;0;t
+132896664;249000;35;2;1;T;1;O;Bilocale;45.4578;9.1706;;Corso Genova;Milano;0;a
+132927390;430000;105;3;2;5;1;B;Trilocale;45.4162;9.1799;;Gratosoglio;Milano;0;bt
+133003100;1400000;215;5;3+;4;1;B;Appartamento;45.4589;9.1731;;Corso Genova;Milano;0;c
+133011614;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133011688;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133014328;190000;16;1;1;3;1;B;Monolocale;45.4573;9.1757;;Corso Genova;Milano;0;a
+133095750;250000;65;2;1;3;1;B;Bilocale;45.4181;9.1808;;Gratosoglio;Milano;0;t
+133152274;365000;45;2;1;1;1;O;Bilocale;45.4579;9.1706;;Corso Genova;Milano;0;b
+133178710;249000;68;3;1;2;1;O;Trilocale;45.4351;9.2350;;Rogoredo;Milano;0;bca
+133182254;247000;56;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133182256;169000;38;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133186446;229000;64;2;1;2;1;B;Appartamento;45.4143;9.1728;Via Achille Feraboli;Gratosoglio;Milano;1;b
+133194410;235000;47;2;1;S, 1;1;O;Loft;45.4150;9.1768;;Gratosoglio;Milano;0;bta
+133249738;219000;75;3;1;2;0;;Trilocale;45.4021;9.2048;;Quintosole - Chiaravalle;Milano;0;ca
+133276662;169000;41;2;1;T;0;B;Bilocale;45.4002;9.1825;;Gratosoglio;Milano;0;
+133276830;755000;200;4;2;5;1;O;Attico;45.4184;9.1801;;Gratosoglio;Milano;0;ta
+133280262;929000;119;4;2;1;1;B;Quadrilocale;45.4565;9.1733;;Corso Genova;Milano;0;bca
+133281226;695000;195;5;3;4;1;B;Attico;45.4190;9.1800;;Gratosoglio;Milano;0;bt
+133281436;255000;58;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133281438;164000;37;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133281862;870000;85;3;2;2;1;O;Trilocale;45.4603;9.1717;;San Vittore;Milano;0;ba
+133335694;520000;133;4;2;2;1;B;Quadrilocale;45.4198;9.1790;;Gratosoglio;Milano;0;t
+133340716;275000;92;3;1;T, 1;1;B;Trilocale;45.4152;9.1687;;Gratosoglio;Milano;0;tca
+133370136;1292000;152;4;2;2;1;B;Quadrilocale;45.4601;9.1759;;Sant'Ambrogio;Milano;0;bc
+133370962;185000;18;1;1;2;1;B;Monolocale;45.4556;9.1747;;Corso Genova;Milano;0;
+133378612;170000;66;3;1;T;0;B;Trilocale;45.4172;9.2387;;Quintosole - Chiaravalle;Milano;0;a
+133382702;420000;150;4;2;4;0;B;Quadrilocale;45.4166;9.1802;;Gratosoglio;Milano;0;bt
+133400282;550000;50;2;1;1;1;O;Bilocale;45.4589;9.1731;;Corso Genova;Milano;0;
+133405228;298000;40;1;1;R;1;O;Monolocale;45.4562;9.1758;;Corso Genova;Milano;0;
+133415042;590000;122;3;2;S, 4;1;N;Attico;45.4351;9.2350;;Rogoredo;Milano;0;tc
+133416990;445000;90;3;1;S, 4;1;N;Attico;45.4351;9.2350;;Rogoredo;Milano;0;tc
+133417432;1375000;469;5+;3+;S, T, 1;0;B;Palazzo - Edificio;45.4362;9.2355;;Rogoredo;Milano;0;
+133460950;910000;100;3;2;1;1;O;Trilocale;45.4592;9.1769;;Corso Genova;Milano;0;c
+133475308;544000;135;4;2;4;1;B;Quadrilocale;45.4171;9.1784;;Gratosoglio;Milano;0;btc
+133484996;313000;100;3;1;1;1;O;Trilocale;45.4165;9.2397;;Quintosole - Chiaravalle;Milano;0;
+133497974;254000;95;4;2;1;0;O;Quadrilocale;45.4008;9.2059;;Quintosole - Chiaravalle;Milano;0;btca
+133519228;199000;65;2;1;4;1;O;Bilocale;45.4022;9.2051;;Quintosole - Chiaravalle;Milano;0;bc
+133535250;680000;98;3;1;2;1;R;Trilocale;45.4576;9.1736;;Corso Genova;Milano;0;bc
+133541814;1249000;141;3;2;2;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;tc
+133542992;1275000;129;3;2;3;1;N;Trilocale;45.4567;9.1732;;Corso Genova;Milano;0;btc
+133543166;2780000;241;5;3;4;1;N;Attico;45.4567;9.1732;;Corso Genova;Milano;0;tc
+133543580;200000;46;1;1;8;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133545126;280000;100;3;1;3;1;B;Trilocale;45.4194;9.1740;;Gratosoglio;Milano;0;bc
+133547596;355000;45;2;1;2;1;B;Bilocale;45.4556;9.1747;;Corso Genova;Milano;0;
+133603146;265000;86;3;1;R;0;B;Trilocale;45.4146;9.1718;;Gratosoglio;Milano;0;b
+133623904;565000;70;3;2;1;1;O;Trilocale;45.4579;9.1706;;Corso Genova;Milano;0;b
+133700736;219000;83;3;1;4;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;b
+133735456;210000;63;2;1;2;1;B;Bilocale;45.4018;9.1797;;Gratosoglio;Milano;0;c
+133738324;285000;131;4;2;S, 3;1;R;Quadrilocale;45.4153;9.1717;;Gratosoglio;Milano;0;btc
+133745876;216000;49;2;1;8;1;N;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133776166;255000;70;3;1;R;0;O;Trilocale;45.4371;9.2350;;Rogoredo;Milano;0;ca
+133820166;212000;50;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+133829020;470000;124;4;3;3;1;O;Quadrilocale;45.4364;9.2330;;Rogoredo;Milano;0;btca
+133830498;540000;130;3;2;4;1;O;Trilocale;45.4198;9.1773;;Gratosoglio;Milano;0;bta
+133887348;945000;100;3;1;6;1;O;Attico;45.4567;9.1750;;Corso Genova;Milano;0;
+133890100;499000;165;5;2;;0;O;Villa;45.4026;9.1792;;Gratosoglio;Milano;0;c
+133997983;1700000;154;4;2;T;0;R;Loft;45.4591;9.1732;Via Ausonio;Corso Genova;Milano;1;
+133999257;928000;96;3;2;1;1;O;Trilocale;45.4589;9.1731;;Corso Genova;Milano;0;b
+134006267;430000;120;3;2;8;1;B;Trilocale;45.4356;9.2363;;Rogoredo;Milano;0;btca
+134021153;270000;90;3;2;2;0;B;Trilocale;45.4371;9.2350;;Rogoredo;Milano;0;ca
+134022175;795000;100;3;2;4;1;O;Trilocale;45.4566;9.1748;;Corso Genova;Milano;0;bc
+134047831;769000;91;3;2;1;1;O;Trilocale;45.4578;9.1726;;Corso Genova;Milano;0;bc
+134062621;298000;130;4;2;7;1;R;Quadrilocale;45.4164;9.1733;;Gratosoglio;Milano;0;bc
+134075573;889000;360;5;3;;0;O;Appartamento;45.4031;9.1746;;Gratosoglio;Milano;0;c
+134089405;269000;96;3;1;4;1;B;Trilocale;45.4174;9.1739;;Gratosoglio;Milano;0;bc
+134093785;297000;65;2;1;1;1;O;Bilocale;45.4149;9.1773;;Gratosoglio;Milano;0;bta
+134104985;345000;106;4;2;1;0;B;Quadrilocale;45.4354;9.2347;;Rogoredo;Milano;0;ca
+134125149;209000;49;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134127861;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134127969;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134128229;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134128645;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134128977;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134129145;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134129331;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134133629;165000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134134607;209000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134134799;202000;48;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134134973;167000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134135137;254000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134135309;252000;60;2;1;7;1;O;Bilocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134135505;166000;40;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134135619;181000;43;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134135771;212000;50;1;1;7;1;O;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134192041;181000;43;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134252463;349000;115;4;2;T;1;B;Quadrilocale;45.4159;9.2413;;Quintosole - Chiaravalle;Milano;0;c
+134305367;166000;40;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134336421;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;;Corso Genova;Milano;0;ca
+134336587;350000;40;1;1;1;1;O;Appartamento;45.4573;9.1734;Via Cesare da Sesto;Corso Genova;Milano;1;ca
+134336615;360000;46;2;1;1;1;O;Bilocale;45.4572;9.1726;;Corso Genova;Milano;0;a
+134337875;1600000;170;5;3;3;1;O;Appartamento;45.4591;9.1734;;Corso Genova;Milano;0;bca
+134343145;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
+134349733;169000;51;2;1;1;1;B;Bilocale;45.4262;9.2513;;Santa Giulia;Milano;0;b
+134349841;289000;35;1;1;R;0;O;Monolocale;45.4604;9.1755;;Sant'Ambrogio;Milano;0;a
+134376267;730000;210;4;2;4;1;B;Attico;45.4181;9.1808;;Gratosoglio;Milano;0;tc
+134382843;750000;77;2;1;1;1;O;Bilocale;45.4588;9.1709;;Corso Genova;Milano;0;ta
+134393865;360000;70;2;1;T;0;O;Bilocale;45.4578;9.1705;;Corso Genova;Milano;0;bta
+134419349;489000;74;2;2;S, T;1;N;Bilocale;45.4565;9.1764;;Corso Genova;Milano;0;c
+134420851;370000;113;4;1;T;1;;Quadrilocale;45.4153;9.1739;;Gratosoglio;Milano;0;
+134443105;755000;200;5;3;5;1;B;Attico;45.4181;9.1807;;Gratosoglio;Milano;0;bt
+134451455;330000;33;1;1;T;1;O;Monolocale;45.4609;9.1726;;Corso Genova;Milano;0;a
+134474477;198000;55;2;1;3;1;B;Bilocale;45.4018;9.1799;;Gratosoglio;Milano;0;
+134494533;215000;35;2;1;1;1;O;Bilocale;45.4578;9.1715;;Corso Genova;Milano;0;a
+134506687;188000;67;2;1;8;1;O;Bilocale;45.4100;9.1739;;Gratosoglio;Milano;0;b
+134510825;248000;82;3;1;3;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;ba
+134526967;895000;120;3;1;6;1;O;Trilocale;45.4590;9.1703;;San Vittore;Milano;0;bc
+134574909;375000;80;2;1;T;0;O;Loft;45.4604;9.1736;;Corso Genova;Milano;0;
+134605093;255000;35;2;1;4;1;R;Bilocale;45.4560;9.1768;;Corso Genova;Milano;0;ca
+134607871;265000;76;2;1;R;0;O;Bilocale;45.4364;9.2337;;Rogoredo;Milano;0;a
+134608807;199000;78;2;1;S;0;O;Bilocale;45.4364;9.2337;;Rogoredo;Milano;0;
+134608903;690000;80;3;2;2;1;O;Trilocale;45.4575;9.1731;;Corso Genova;Milano;0;ca
+134610849;225000;73;3;1;8;1;O;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bt
+134611095;350000;113;3;2;1;1;O;Trilocale;45.4136;9.1689;;Gratosoglio;Milano;0;btc
+134626541;329000;92;3;2;R;0;O;Trilocale;45.4369;9.2348;;Rogoredo;Milano;0;ca
+134627657;420000;120;3;2;1;1;O;Trilocale;45.4184;9.1801;;Gratosoglio;Milano;0;ta
+134630377;235000;80;3;2;2;1;B;Trilocale;45.4149;9.1687;;Gratosoglio;Milano;0;bc
+134631621;310000;42;2;1;T;1;O;Bilocale;45.4589;9.1731;;Corso Genova;Milano;0;a
+134631825;310000;42;2;1;T;1;O;Loft;45.4589;9.1731;;Corso Genova;Milano;0;a
+134632841;780000;85;3;1;1;1;O;Trilocale;45.4593;9.1769;;Corso Genova;Milano;0;bc
+134661611;490000;52;2;1;3;1;O;Bilocale;45.4551;9.1763;;Corso Genova;Milano;0;a
+134661651;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
+134663181;215000;73;2;1;3;1;B;Bilocale;45.4185;9.1786;;Gratosoglio;Milano;0;ta
+134715871;300000;35;1;1;3;1;R;Monolocale;45.4553;9.1755;;Corso Genova;Milano;0;
+134729031;405000;49;2;1;S;1;N;Loft;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
+134730905;378000;45;1;1;S;1;N;Loft;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
+134746133;223000;90;3;1;5;1;O;Trilocale;45.4053;9.1702;;Gratosoglio;Milano;0;bc
+134766795;400000;48;2;1;R;1;O;Bilocale;45.4593;9.1769;;Corso Genova;Milano;0;a
+134766797;365000;45;2;1;R;1;O;Bilocale;45.4593;9.1769;;Corso Genova;Milano;0;a
+134775667;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
+134782201;730000;100;3;2;6;1;R;Trilocale;45.4590;9.1701;;San Vittore;Milano;0;b
+134789655;260000;64;2;1;1;1;O;Bilocale;45.4202;9.1675;;Gratosoglio;Milano;0;c
+134819561;230000;25;1;1;2;1;B;Monolocale;45.4588;9.1709;;Corso Genova;Milano;0;a
+134853565;505000;80;3;1;1;1;O;Trilocale;45.4570;9.1758;;Corso Genova;Milano;0;t
+134856671;179000;73;3;1;7;1;R;Trilocale;45.4262;9.2513;;Santa Giulia;Milano;0;bc
+134863925;441000;53;2;1;S;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
+134864711;390000;47;2;1;T;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
+134865125;423000;51;2;1;S;1;N;Bilocale;45.4600;9.1761;;Sant'Ambrogio;Milano;0;
+134870739;178000;103;3;1;R;0;B;Trilocale;45.4307;9.2413;;Rogoredo;Milano;0;c
+134901069;165000;39;1;1;7;1;N;Monolocale;45.4159;9.1768;;Gratosoglio;Milano;0;
+134912491;352000;42;1;1;1;1;O;Monolocale;45.4574;9.1752;;Corso Genova;Milano;0;ca
+134918213;290000;115;4;2;3;1;O;Quadrilocale;45.4083;9.1736;;Gratosoglio;Milano;0;ba
+134932105;335000;126;4;2;3;0;;Quadrilocale;45.4165;9.1741;;Gratosoglio;Milano;0;bc
+134935743;550000;70;2;1;1;1;O;Bilocale;45.4582;9.1765;;Corso Genova;Milano;0;
+134936665;399000;330;5;1;T;0;R;Appartamento;45.4038;9.2039;;Quintosole - Chiaravalle;Milano;0;a
+134940865;770000;180;3;3;2;1;O;Trilocale;45.4149;9.1773;;Gratosoglio;Milano;0;a
+134948311;265000;55;1;1;1;1;O;Monolocale;45.4143;9.1769;;Gratosoglio;Milano;0;a
