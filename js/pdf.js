@@ -210,7 +210,7 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   /* --- valori --- */
   const vMin = R5(r.min), vMax = R5(r.max), vMid = R5(r.valore);
   const mqCasa = r.valCasa / r.sup, mqMin = (r.min - r.box) / r.sup, mqMax = (r.max - r.box) / r.sup;
-  const pubbl = Math.ceil(r.valore * 1.05 / 5000) * 5000;
+  const pubbl = Math.round(r.valore / 5000) * 5000;   // il valore è già il prezzo di richiesta in linea con il mercato
 
   /* --- comparabili --- */
   const Cm = r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
@@ -218,9 +218,10 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const avg = v => v.length ? v.reduce((x, y) => x + y, 0) / v.length : null;
   const mediaC = avg(comps.map(a => a.mq2)), buoni = comps.filter(a => a.st === "O" || a.st === "N"), mediaO = avg(buoni.map(a => a.mq2));
   const stK = { nuovo: "N", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" }[q.stato];
-  // metodo diretto: comparabili riportati allo stato dell'immobile, meno trattativa
-  const dir = comps.filter(a => a.st && a.dist < 2000).map(a => a.mq2 / MM_ST[a.st][1] * V_STATO[q.stato][1]);
-  const mDir = dir.length >= 4 ? median(dir) * (1 - IMPOSTAZIONI.sconto_trattativa) : null;
+  // secondo metodo, indipendente dai comparabili: fascia degli annunci della microzona per lo stato dell'immobile (prezzo mediano)
+  const Fz = TERR.milano.fasce?.micro?.[ctx.micro?.n], gF = { nuovo: "o", ristrutturato: "o", ottimo: "o", buono: "b", rinfrescare: "b", ristrutturare: "r" }[q.stato] || "b";
+  const mDir = r.cmp && Fz && Fz[gF] ? Fz[gF][1] * (q.stato === "rinfrescare" ? 0.94 : 1) : null;
+  const dir = mDir ? [mDir] : [];
   const valDir = mDir ? mDir * r.sup * r.kTot + r.box : null;
 
   /* --- fasce --- */
@@ -237,13 +238,12 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   </div>`;
 
   /* --- rettifiche --- */
-  const baseT = r.wC ? `Media della ${ctx.micro ? "microzona " + esc(ctx.micro.n) : "zona"} (${eur(ctx.v)}/m²) combinata con ${r.cmp.nNorm} annunci simili entro 1,5 km riportati a stato buono (${eur(r.cmp.norm)}/m², peso ${pct(r.wC, 0)})`
-    : `Prezzo medio richiesto negli annunci della ${ctx.micro ? "microzona " + esc(ctx.micro.n) : esc(ctx.nome)}`;
+  const baseT = r.cmp ? `Mediana pesata di ${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, scelti per vicinanza, caratteristiche, metratura e stato, e riportati allo stato di questo immobile`
+    : `Prezzo richiesto negli annunci della ${ctx.micro ? "microzona " + esc(ctx.micro.n) : esc(ctx.nome)}`;
   const imp = f => f > 1.004 ? `<span class="imp p">+${num((f - 1) * 100, 0)}%</span>` : f < 0.996 ? `<span class="imp m">−${num((1 - f) * 100, 0)}%</span>` : `<span class="imp n">neutro</span>`;
   const rett = [
     [`Base di zona → ${eur(r.base)}/m²`, baseT, `<span class="imp b">base</span>`],
-    [`Trattativa (${pct(IMPOSTAZIONI.sconto_trattativa, 0)})`, "Gli annunci riportano prezzi richiesti: si passa al prezzo di chiusura realistico", imp(1 - IMPOSTAZIONI.sconto_trattativa)],
-    [`Stato: ${esc(statoT)}`, "Rispetto allo stato «buono» che fa da riferimento ai comparabili", imp(r.st[1])],
+    [`Stato: ${esc(statoT)}`, r.cmp ? "Già compreso: i comparabili sono stati riportati a questo stato" : "Rispetto allo stato «buono» che fa da riferimento", imp(r.st[1])],
     ...r.k.map(([t, f]) => [esc(t), pdfSpiega(t, f), imp(f)]),
     ...(r.box ? [[`${esc(boxT[0].toUpperCase() + boxT.slice(1))} incluso`, "Valutato a parte e sommato al valore dell'appartamento", `<span class="imp p">+${keur(r.box)}</span>`]] : []),
   ];
@@ -441,7 +441,7 @@ tr.hl td{background:#fbf5ea}tr.hl td:first-child{box-shadow:inset 2.5pt 0 0 ${C.
 
 <div class="sum">
   <div><small>Range consigliato</small><b>${keur(vMin)} – ${keur(vMax)}</b><span>${eur(mqMin)} – ${eur(mqMax)}/m²${r.box ? " + " + boxT : ""}</span></div>
-  <div><small>${ctx.mode === "cliente" ? "Pubblicazione" : "Realizzo rapido"}</small><b>${keur(ctx.mode === "cliente" ? pubbl : r.offerta)}</b><span>${ctx.mode === "cliente" ? "margine di trattativa ~5%" : "circa il 3% sotto il valore"}</span></div>
+  <div><small>${ctx.mode === "cliente" ? "Pubblicazione" : "Realizzo rapido"}</small><b>${keur(ctx.mode === "cliente" ? pubbl : r.offerta)}</b><span>${ctx.mode === "cliente" ? "in linea con le richieste di oggi" : "circa il 3% sotto il valore"}</span></div>
   <div><small>Media zona</small><b>${eur(ctx.v)}</b><span>al m², prezzi richiesti</span></div>
   <div><small>${r.canone ? "Canone stimato" : "Andamento"}</small><b>${r.canone ? eur(r.canone) : ctx.zona ? (ctx.zona.y >= 0 ? "+" : "") + num(ctx.zona.y, 1) + "%" : "—"}</b><span>${r.canone ? "al mese, affitto lungo" : "ultimi 12 mesi"}</span></div>
 </div>
@@ -503,11 +503,11 @@ ${sec(comps.length ? 5 : 4, "Range di valore stimato", `
       <u style="left:${P(vMin)}%">min ${keur(vMin)}</u><u style="left:${P(vMax)}%">max ${keur(vMax)}</u>
       ${ctx.mode === "cliente" ? `<u style="left:${P(pubbl)}%;top:-17px;color:${C.oro}">pubblicazione ${keur(pubbl)}</u>` : ""}</div>`; })()}
   <div class="meth">
-    <div><small>Metodo 1 · zona e coefficienti</small><b>${eur(Math.round(r.valore / 1000) * 1000)}</b><br><span class="small">${eur(r.base)}/m² di base, −${pct(IMPOSTAZIONI.sconto_trattativa, 0)} di trattativa, stato × ${num(r.st[1], 2)}, coefficienti × ${num(r.kTot, 2)}, su ${num(r.sup, 1)} m²${r.box ? ", + " + boxT : ""}</span></div>
-    <div><small>Metodo 2 · comparabili diretti</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `${dir.length} annunci entro 2 km riportati allo stato «${esc(statoT.toLowerCase())}» e al prezzo di chiusura: ${eur(mDir)}/m²` : "Comparabili insufficienti per un secondo metodo indipendente"}</span></div>
+    <div><small>Metodo 1 · comparabili</small><b>${eur(Math.round(r.valore / 1000) * 1000)}</b><br><span class="small">${eur(r.base)}/m² ${r.cmp ? `da ${r.cmp.nNorm} annunci simili entro ${num(r.cmp.raggio)} m` : "di base"}, rettifiche × ${num(r.kTot * r.st[1], 2)}, su ${num(r.sup, 1)} m²${r.box ? ", + " + boxT : ""}</span></div>
+    <div><small>Metodo 2 · fascia di microzona</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `prezzo mediano richiesto nella microzona per lo stato «${esc(statoT.toLowerCase())}»: ${eur(mDir)}/m²` : "Fascia di microzona non disponibile per un secondo metodo indipendente"}</span></div>
   </div>
 </div>
-<p style="margin-top:3mm"><b style="color:${C.bx};font-weight:600">Motivazione.</b> ${valDir ? (Math.abs(valDir - r.valore) / r.valore < 0.08 ? "I due metodi indipendenti convergono" : valDir > r.valore ? "Il metodo dei comparabili diretti dà un valore più alto: il mercato vicino all'immobile è più vivace della media di zona" : "Il metodo dei comparabili diretti dà un valore più prudente: gli annunci più vicini sono in media più economici della zona") + ` (${eur(r.valore)} e ${eur(valDir)}). ` : ""}Il range tiene conto dell'incertezza tipica della stima (±${pct((r.max - r.valore) / r.valore, 0)})${r.box ? `; il ${boxT} (${eur(r.box)}) è valutato a parte e già incluso` : ""}.${ctx.mode === "cliente" ? ` Per la pubblicazione consigliamo <b>${eur(pubbl)}</b>, lasciando un margine di trattativa del 5% circa verso il valore centrale.` : ""} Un sopralluogo è consigliato per confermare stato, dotazioni e spese.</p>`)}
+<p style="margin-top:3mm"><b style="color:${C.bx};font-weight:600">Motivazione.</b> ${valDir ? (Math.abs(valDir - r.valore) / r.valore < 0.08 ? "I due metodi indipendenti convergono" : valDir > r.valore ? "La fascia della microzona dà un valore più alto: gli annunci più simili e vicini sono un po' più economici della media della microzona" : "La fascia della microzona dà un valore più prudente: gli annunci più simili e vicini all'immobile chiedono di più della media della microzona") + ` (${eur(r.valore)} e ${eur(valDir)}). ` : ""}Il range tiene conto dell'incertezza tipica della stima (±${pct((r.max - r.valore) / r.valore, 0)})${r.box ? `; il ${boxT} (${eur(r.box)}) è valutato a parte e già incluso` : ""}.${ctx.mode === "cliente" ? ` Per la pubblicazione consigliamo <b>${eur(pubbl)}</b>, lasciando un margine di trattativa del 5% circa verso il valore centrale.` : ""} Un sopralluogo è consigliato per confermare stato, dotazioni e spese.</p>`)}
 
 ${serv.length ? sec(comps.length ? 6 : 5, "Servizi e vita di quartiere", `
 <p class="lead">${near.staz[0] ? `La metropolitana più vicina è ${esc(near.staz[0].n)} (linea ${[...near.staz[0].ln].join(", ")}), a circa ${mmin(near.staz[0].d)} minuti a piedi.` : "La metropolitana non è raggiungibile a piedi: i collegamenti sono con tram e bus."} Tempi a piedi stimati in linea d'aria a 4,5 km/h dalle posizioni delle attività.</p>
@@ -552,7 +552,7 @@ ${r.canone ? sec(comps.length ? (PZ || NI ? 9 : 8) : 8, "Potenziale come investi
 <p class="note">Stime indicative. Il netto è dopo spese di gestione, condominio, manutenzione e cedolare secca, sul valore stimato più i costi d'acquisto${r.lavori ? " e i lavori" : ""}. Periodi di sfitto e spese straordinarie possono ridurre il rendimento.</p>`) : ""}
 
 ${sec(comps.length ? (PZ || NI ? 10 : 9) : 9, "Nota metodologica", `
-<p class="small" style="font-size:7.4pt">Valutazione con metodo comparativo di mercato: prezzo medio richiesto nella ${ctx.micro ? "microzona" : "zona"} (Immobiliare.it)${r.wC ? `, combinato con ${r.cmp.nNorm} annunci simili entro 1,5 km riportati a stato buono` : ""}, ridotto della trattativa tipica (${pct(IMPOSTAZIONI.sconto_trattativa, 0)}) e corretto con coefficienti di merito per stato, piano, taglio, classe energetica, epoca, esposizione e dotazioni. ${valDir ? `Verifica indipendente sui comparabili diretti (${dir.length} annunci). ` : ""}Fasce di zona ${F.vero ? "ricavate dagli annunci letti per intero il 20/11/2026" : "stimate dalla media di zona"}. Superfici secondarie: balconi 30%, terrazzi 35%, giardino 10%, cantina 25%; box valutato a parte. Stima orientativa a supporto della strategia di prezzo: non è una perizia giurata e non sostituisce le verifiche di conformità urbanistica e catastale.</p>`)}
+<p class="small" style="font-size:7.4pt">Valutazione con metodo comparativo di mercato, espressa come prezzo di richiesta in linea con il mercato di oggi: ${r.cmp ? `mediana pesata di ${r.cmp.nNorm} annunci Immobiliare.it entro ${num(r.cmp.raggio)} m, scelti nell'ordine per vicinanza, caratteristiche (tipologia e locali), metratura e stato, esclusi i prezzi anomali (quote, aste, errori) e riportati allo stato dell'immobile con il rapporto OMI ottimo/normale della zona` : `prezzo richiesto negli annunci della ${ctx.micro ? "microzona" : "zona"} (Immobiliare.it)`}, corretta con coefficienti di merito per piano, taglio, classe energetica, epoca, esposizione e dotazioni (al massimo ±12% quando ci sono i comparabili). ${valDir ? `Verifica indipendente con la fascia di prezzo della microzona. ` : ""}Fasce di zona ${F.vero ? "ricavate dagli annunci letti per intero il 20/11/2026" : "stimate dalla media di zona"}. Superfici secondarie: balconi 30%, terrazzi 35%, giardino 10%, cantina 25%; box valutato a parte. Stima orientativa a supporto della strategia di prezzo: non è una perizia giurata e non sostituisce le verifiche di conformità urbanistica e catastale.</p>`)}
 
 <div class="endf"><img src="${logo}" alt=""><span>Maison Collection · Agenzia immobiliare · Milano<br>Relazione generata con Keystone il ${oggiL}</span></div>
 </div>

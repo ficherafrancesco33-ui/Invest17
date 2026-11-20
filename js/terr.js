@@ -113,11 +113,13 @@ const V_DEF = { tipo: "appartamento", mq: 60, locali: 2, bagni: 1, balcone: 0, t
 
 function vCalcola(inp, ctx) {
   const q = Object.assign({}, V_DEF, inp), aff = ctx.a;
-  // se ci sono abbastanza annunci simili vicini, il prezzo di partenza tiene conto anche di loro (fino al 50%)
+  // Milano: il prezzo al m² viene dai comparabili più vicini e più simili, già riportati allo stato dell'immobile (prezzi di richiesta di oggi)
   const cmp = ctx.milano && window.mmComps ? mmComps(ctx, q) : null;
-  // per ora gli annunci letti sono soprattutto sotto i 200.000 €: li uso solo se non si discostano troppo dalla zona, e al massimo per un terzo
-  const wC = cmp && cmp.norm && cmp.norm > ctx.v * 0.7 && cmp.norm < ctx.v * 1.3 ? Math.min(0.6, cmp.nNorm / 15) : 0;
-  const base = ctx.v * (1 - wC) + (wC ? cmp.norm * wC : 0);
+  const wC = cmp ? 1 : 0;
+  // senza comparabili sufficienti: fascia della microzona per lo stato dell'immobile, altrimenti media di zona
+  const Fm = ctx.milano && ctx.micro && TERR.milano.fasce?.micro?.[ctx.micro.n], gq = { nuovo: "o", ristrutturato: "o", ottimo: "o", buono: "b", rinfrescare: "b", ristrutturare: "r" }[q.stato] || "b";
+  const base = cmp ? cmp.norm : Fm && Fm[gq] ? Fm[gq][1] : ctx.v;
+  const statoGiaDentro = !!cmp || !!(Fm && Fm[gq]);   // lo stato è già nel prezzo di partenza: non lo riapplico
   const mq = Math.max(10, +q.mq || 0);
   const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
   const sup = mq + est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
@@ -145,11 +147,16 @@ function vCalcola(inp, ctx) {
   if (q.condominio === "rifatto") add("Facciata e parti comuni rifatte", 1.03);
   add(q.posizione === "pregio" ? "Via di pregio" : q.posizione === "rumorosa" ? "Via trafficata" : "", q.posizione === "pregio" ? 1.05 : q.posizione === "rumorosa" ? 0.95 : 1);
   if (!ctx.milano && ctx.zonaCom) add({ centro: "Centro del paese", periferia: "Periferia / frazione" }[ctx.zonaCom] || "", { centro: 1.08, periferia: 0.92 }[ctx.zonaCom] || 1);
-  const kTot = k.reduce((s, x) => s * x[1], 1);
-  const sconto = IMPOSTAZIONI.sconto_trattativa;
-  const mqReale = base * (1 - sconto);                       // dal prezzo chiesto negli annunci al prezzo realistico di vendita
+  // con i comparabili le caratteristiche medie sono già nel prezzo: le rettifiche possono spostare al massimo del ±12%
+  const kTot = (x => cmp ? Math.min(1.12, Math.max(0.88, x)) : x)(k.reduce((s, x) => s * x[1], 1));
+  const sconto = 0;                                           // si stima il prezzo di richiesta in linea con il mercato di oggi (niente trattativa)
+  const mqReale = base * (1 - sconto);
   const box = q.box === "no" ? 0 : base * (1 - sconto) * 15 * (ctx.milano ? 0.45 : 0.5) * ({ posto: 0.5, singolo: 1, doppio: 1.7 }[q.box] || 0);
-  const st = V_STATO[q.stato] || V_STATO.buono, sd = V_STATO[q.statoDopo] || V_STATO.ristrutturato;
+  const st0 = V_STATO[q.stato] || V_STATO.buono, sd0 = V_STATO[q.statoDopo] || V_STATO.ristrutturato;
+  // stato già compreso nel prezzo di partenza: fattore 1 (salvo "da rinfrescare", un gradino sotto il buono); dopo i lavori: rapporto tra i gruppi di stato
+  const SFz = cmp ? cmp.SF : { R: 0.82, B: 1, O: 1.18 }, gN = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
+  const st = statoGiaDentro ? [st0[0], q.stato === "rinfrescare" ? 0.94 : 1, st0[2]] : st0;
+  const sd = statoGiaDentro ? [sd0[0], SFz[gN[q.statoDopo] || "O"] / SFz[gN[q.stato] || "B"] * st[1], sd0[2]] : sd0;
   const valCasa = sup * mqReale * kTot * st[1], valore = valCasa + box;
   const lavori = +q.lavori || 0;
   const valDopo = lavori > 0 ? sup * mqReale * kTot * sd[1] + box : null;
@@ -239,15 +246,13 @@ function vRisultato(r, ctx) {
       <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)} · ${a.fonte}</span></div><b class="cy">${eur(a.mq2)}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
-        ${r.wC ? `<tr><td>Prezzo medio della zona</td><td class="r">${eur(ctx.v)}/m²</td></tr>
-        <tr><td>${r.cmp.nNorm} annunci simili vicini, riportati a stato buono (pesano ${pct(r.wC, 0)})</td><td class="r">${eur(r.cmp.norm)}/m²</td></tr>
-        <tr><td>Prezzo di partenza</td><td class="r">${eur(r.base)}/m²</td></tr>` : `<tr><td>Prezzo medio degli annunci (${esc(ctx.nome)})</td><td class="r">${eur(r.base)}/m²</td></tr>`}
-        <tr><td>Meno trattativa tipica (${pct(IMPOSTAZIONI.sconto_trattativa, 0)})</td><td class="r">${eur(r.mqReale)}/m²</td></tr>
-        <tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>
+        ${r.cmp ? `<tr><td>${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, i più simili per caratteristiche, metratura e stato, riportati allo stato di questo immobile (mediana pesata)</td><td class="r">${eur(r.base)}/m²</td></tr>`
+          : `<tr><td>${ctx.milano && TERR.milano.fasce?.micro?.[ctx.micro?.n] ? "Fascia degli annunci della microzona per questo stato" : "Prezzo medio degli annunci (" + esc(ctx.nome) + ")"}</td><td class="r">${eur(r.base)}/m²</td></tr>`}
+        ${Math.abs(r.st[1] - 1) > 0.001 ? `<tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>` : ""}
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
         <tr><td>Superficie commerciale</td><td class="r">${num(r.sup, 1)} m²</td></tr>
         ${r.box ? `<tr><td>Box / posto auto</td><td class="r">+ ${eur(r.box)}</td></tr>` : ""}
-        <tr class="tot"><td>Valore stimato</td><td class="r">${eur(r.valore)}</td></tr>
+        <tr class="tot"><td>Prezzo di richiesta in linea con il mercato</td><td class="r">${eur(r.valore)}</td></tr>
       </tbody></table>
       <p class="note">Coefficienti di merito usati comunemente nelle stime (piano, stato, classe energetica, epoca); superfici secondarie al 30% (balconi), 35% (terrazzi), 10% (giardino), 25% (cantina). È una stima indicativa, non una perizia.</p>
     </details>

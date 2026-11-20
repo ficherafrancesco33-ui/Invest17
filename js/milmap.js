@@ -498,21 +498,40 @@ function mmAnnLayer(map) {
       <p class="note">${esc(a.d)}</p><div class="btns"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener" data-visto="${a.id}">Apri l'annuncio</a><button class="btn sec" data-segann="${a.id}">${segIds().has("a:" + a.id) ? "★ Seguito" : "☆ Segui"}</button></div>`; box.hidden = false; });
 }
 /* comparabili per la valutazione: stessi m² circa, più vicini prima */
+/* gruppi di stato per confrontare annunci: R da ristrutturare, B buono, O ottimo / ristrutturato / nuovo */
+const MM_GR = { R: "R", B: "B", O: "O", N: "O" };
+const V_GR = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
+/* quanto vale ogni gruppo di stato rispetto al buono nella zona: dal rapporto OMI ottimo/normale della zona (se c'è) */
+function mmStatoF(micro) {
+  const o = typeof omiMi === "function" ? omiMi(micro) : null;
+  const rO = o && o.cn && o.co ? Math.min(1.40, Math.max(1.12, (o.co[0] + o.co[1]) / (o.cn[0] + o.cn[1]))) : 1.18;
+  return { R: 0.82, B: 1, O: rO };
+}
+/* comparabili per la valutazione: prima la vicinanza, poi le caratteristiche (tipologia, locali), poi metratura e stato.
+   Solo annunci Immobiliare letti di recente con posizione esatta; fuori i tipi diversi e i prezzi anomali (quote, aste, errori). */
 function mmComps(ctx, q) {
   if (!ctx || !ctx.milano || !ctx.micro) return null;
-  const mq = +q.mq || 60, mun = MM_MUN[ctx.micro.z], s = ctx.sel || ctx.micro;
-  const c = mmAnnunci().filter(a => a.mq >= mq * 0.6 && a.mq <= mq * 1.6).map(a => {
-    let d = null;
-    if (a.lat != null) d = hav(s.lat, s.lon, a.lat, a.lon) + (a.appross ? 400 : 0);
-    else if (a.mun && a.mun === mun) d = 2500;
-    return { ...a, dist: d };
-  }).filter(a => a.dist != null && a.dist < 3000)
-    .sort((a, b) => (a.dist + Math.abs(a.mq - mq) * 15) - (b.dist + Math.abs(b.mq - mq) * 15))
-    .filter(function (a) {   // al massimo 2 annunci dallo stesso palazzo / cantiere: comparabili più vari
-      const k = (a.lat != null ? a.lat.toFixed(4) + "," + a.lon.toFixed(4) : "") + "|" + (a.via || "").toLowerCase(); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
+  const mq = +q.mq || 60, loc = +q.locali || Math.max(1, Math.round(mq / 28)), s = ctx.sel || ctx.micro, gS = V_GR[q.stato] || "B", SF = mmStatoF(ctx.micro.n);
+  const casa = /villa|terratetto|casale|rustico|palazzo|edificio|capannone|negozio|ufficio|box/i;
+  const villa = q.tipo === "villa" || q.tipo === "terratetto";
+  let pool = mmAnnunci().filter(a => a.fonte === "Immobiliare.it" && a.lat != null && !a.appross && a.mq >= mq * 0.55 && a.mq <= mq * 1.7 && villa === casa.test(a.tip || ""))
+    .map(a => ({ ...a, dist: hav(s.lat, s.lon, a.lat, a.lon), g: MM_GR[a.st] || "" }))
+    .filter(a => a.dist < 1600);
+  if (pool.length < 4) return null;
+  // prezzi anomali: riporto tutto a stato buono e tolgo quello che sta fuori da 0,7–1,45 volte la mediana vicina
+  const nb = a => a.mq2 / (SF[a.g || "B"] || 1), medV = median(pool.filter(a => a.dist < 1000).map(nb)) || median(pool.map(nb));
+  pool = pool.filter(a => nb(a) > medV * 0.7 && nb(a) < medV * 1.45);
+  // raggio: il più piccolo che dà almeno 8 annunci
+  const R = [500, 800, 1100, 1600].find(r => pool.filter(a => a.dist <= r).length >= 8) || 1600;
+  const tipo = q.locali ? null : null;
+  const sc = a => a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8 + (a.g ? (a.g === gS ? 0 : 1.5) : 0.8);
+  const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
+    .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
     .slice(0, 10);
-  if (!c.length) return null;
-  // prezzo "come se fosse in stato buono": tolgo l'effetto dello stato dichiarato nell'annuncio
-  const norm = c.filter(a => a.st && a.dist < 1500).map(a => a.mq2 / MM_ST[a.st][1]);
-  return { lista: c, med: median(c.map(a => a.mq2)), norm: norm.length >= 5 ? median(norm) : null, nNorm: norm.length };
+  if (c.length < 4) return null;
+  // ogni comparabile riportato allo stato dell'immobile da valutare; valore = mediana pesata (i più simili contano di più)
+  c.forEach(a => { a.adj = a.mq2 * (SF[gS] / (SF[a.g || "B"] || 1)); a.w = 1 / (1 + a.score); });
+  const ord = [...c].sort((a, b) => a.adj - b.adj), tot = ord.reduce((x, a) => x + a.w, 0);
+  let acc = 0, val = ord[ord.length - 1].adj; for (const a of ord) { acc += a.w; if (acc >= tot / 2) { val = a.adj; break; } }
+  return { lista: c, med: median(c.map(a => a.mq2)), norm: val, nNorm: c.length, raggio: R, gS, SF };
 }
