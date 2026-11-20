@@ -502,7 +502,10 @@ function mmComps(ctx, q) {
     else if (a.mun && a.mun === mun) d = 2500;
     return { ...a, dist: d };
   }).filter(a => a.dist != null && a.dist < 3000)
-    .sort((a, b) => (a.dist + Math.abs(a.mq - mq) * 15) - (b.dist + Math.abs(b.mq - mq) * 15)).slice(0, 10);
+    .sort((a, b) => (a.dist + Math.abs(a.mq - mq) * 15) - (b.dist + Math.abs(b.mq - mq) * 15))
+    .filter(function (a) {   // al massimo 2 annunci dallo stesso palazzo / cantiere: comparabili più vari
+      const k = (a.lat != null ? a.lat.toFixed(4) + "," + a.lon.toFixed(4) : "") + "|" + (a.via || "").toLowerCase(); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
+    .slice(0, 10);
   if (!c.length) return null;
   // prezzo "come se fosse in stato buono": tolgo l'effetto dello stato dichiarato nell'annuncio
   const norm = c.filter(a => a.st && a.dist < 1500).map(a => a.mq2 / MM_ST[a.st][1]);

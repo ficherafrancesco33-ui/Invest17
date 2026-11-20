@@ -16,9 +16,17 @@ function pdfMappa(lat, lon, z, W, H, pins = [], cls = "", hd = true) {
   for (let x = tx0; x <= tx1; x++) for (let y = ty0; y <= ty1; y++)
     t += `<img src="https://tile.openstreetmap.org/${zt}/${((x % n) + n) % n}/${y}.png" style="left:${Math.round(x * ts - x0)}px;top:${Math.round(y * ts - y0)}px;width:${ts}px;height:${ts}px" alt="">`;
   const px = (la, lo) => { const ss = Math.sin(la * Math.PI / 180); return [(lo + 180) / 360 * S - x0, (0.5 - Math.log((1 + ss) / (1 - ss)) / (4 * Math.PI)) * S - y0]; };
-  const P = pins.map(p => { const [x, y] = px(p.lat, p.lon); return x < 6 || y < 6 || x > W - 6 || y > H - 6 ? "" :
-    `<span class="pin ${p.k || ""}" style="left:${x.toFixed(1)}px;top:${y.toFixed(1)}px">${p.t ?? ""}</span>`; }).join("");
-  return `<div class="mapw ${cls}" style="width:${W}px;height:${H}px"><div class="tiles">${t}</div>${P}<span class="osm">© OpenStreetMap</span></div>`;
+  const pp = pins.map(p => { const [x, y] = px(p.lat, p.lon); return { ...p, x, y }; });
+  // segnaposti sovrapposti (stesso palazzo): li apro a raggiera attorno al punto, con una lineetta
+  const gruppi = [];
+  pp.filter(p => p.k !== "me").forEach(p => { const g = gruppi.find(g => Math.hypot(g[0].x - p.x, g[0].y - p.y) < 16); g ? g.push(p) : gruppi.push([p]); });
+  let linee = "";
+  gruppi.forEach(g => { if (g.length < 2) return; const cx = g[0].x, cy = g[0].y, R = 14 + g.length * 2.2;
+    g.forEach((p, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / g.length; p.x = cx + R * Math.cos(a); p.y = cy + R * Math.sin(a);
+      linee += `<line x1="${cx.toFixed(1)}" y1="${cy.toFixed(1)}" x2="${p.x.toFixed(1)}" y2="${p.y.toFixed(1)}" stroke="#6b5f58" stroke-width="1"/>`; }); });
+  const P = pp.map(p => p.x < 6 || p.y < 6 || p.x > W - 6 || p.y > H - 6 ? "" :
+    `<span class="pin ${p.k || ""}" style="left:${p.x.toFixed(1)}px;top:${p.y.toFixed(1)}px${p.c ? `;background:${p.c};border-color:#fff;color:#fff` : ""}">${p.t ?? ""}</span>`).join("");
+  return `<div class="mapw ${cls}" style="width:${W}px;height:${H}px"><div class="tiles">${t}</div>${linee ? `<svg width="${W}" height="${H}" style="position:absolute;left:0;top:0">${linee}</svg>` : ""}${P}<span class="osm">© OpenStreetMap</span></div>`;
 }
 
 /* fasce di prezzo della zona: microzona letta per intero, altrimenti zona, altrimenti stima dalla media */
@@ -248,11 +256,21 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
     .sort((a, b) => a.m - b.m).slice(0, 9);
 
   /* --- mappe --- */
-  const pins = comps.filter(a => a.lat != null && !a.appross).map(a => ({ lat: a.lat, lon: a.lon, t: a.i, k: a.star ? "st" : "" }));
+  const COLS = ["#7a1628", "#b08d57", "#2f5d8a", "#2f7d55", "#6b4c9a", "#1f7a7a", "#c46a1b", "#b5476b", "#4a5568", "#6b7a2a"];
+  comps.forEach((a, i) => a.col = COLS[i % COLS.length]);
+  const pins = comps.filter(a => a.lat != null && !a.appross).map(a => ({ lat: a.lat, lon: a.lon, t: a.i, c: a.col }));
   const mapCover = foto.cov ? pdfFoto(foto.cov, 600, 300, "cov") : lat != null ? pdfMappa(lat, lon, 16, 600, 300, [{ lat, lon, k: "me", t: "" }], "cov") : "";
-  const maxD = Math.max(400, ...comps.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
-  const zC = maxD > 1400 ? 14 : maxD > 700 ? 15 : 16;
-  const mapComp = foto.cmp ? pdfFoto(foto.cmp, 690, 270) : lat != null && pins.length ? pdfMappa(lat, lon, zC, 690, 270, [...pins, { lat, lon, k: "me", t: "" }]) : "";
+  // la mappa si adatta: centrata e con lo zoom che fa stare dentro immobile e comparabili
+  let mapComp = "";
+  if (foto.cmp) mapComp = pdfFoto(foto.cmp, 690, 290);
+  else if (lat != null && pins.length) {
+    const all = [...pins, { lat, lon }], mx = lo => (lo + 180) / 360, my = la => { const q = Math.sin(la * Math.PI / 180); return 0.5 - Math.log((1 + q) / (1 - q)) / (4 * Math.PI); };
+    const xs = all.map(p => mx(p.lon)), ys = all.map(p => my(p.lat)), dx = Math.max(...xs) - Math.min(...xs), dy = Math.max(...ys) - Math.min(...ys);
+    let z = 17; while (z > 11 && (dx * 2 ** z * 256 > 690 - 90 || dy * 2 ** z * 256 > 290 - 70)) z--;
+    const cLon = (Math.min(...all.map(p => p.lon)) + Math.max(...all.map(p => p.lon))) / 2, cLat = (Math.min(...all.map(p => p.lat)) + Math.max(...all.map(p => p.lat))) / 2;
+    mapComp = pdfMappa(cLat, cLon, z, 690, 290, [...pins, { lat, lon, k: "me", t: "" }]);
+  }
+  const legenda = comps.length ? `<div class="leg"><span><i class="me"></i>Immobile valutato</span>${comps.map(a => `<span><i style="background:${a.col}">${a.i}</i>${esc((a.via || a.micro || "").replace(/^(Via|Viale|Piazza|Corso|Piazzale) /, ""))} · ${eur(a.mq2)}/m²${a.lat == null || a.appross ? " (posizione n.d.)" : ""}</span>`).join("")}</div>` : "";
 
   const sec = (n, t, body, cls = "") => `<section class="${cls}"><h2><i>${n}</i>${t}</h2>${body}</section>`;
   const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=840"><script>(function(){var w=Math.min(screen.width,innerWidth||screen.width);if(w<840)document.querySelector("meta[name=viewport]").setAttribute("content","width=840,initial-scale="+(w/840).toFixed(3))})()<\/script><title>Valutazione ${esc(ctx.nome)}${ctx.cliente ? " – " + esc(ctx.cliente) : ""} – Maison Collection</title>
@@ -290,6 +308,7 @@ body{margin:0;font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;font-weig
 .mapw img.snap{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.mapw.foto{border-color:${C.oro};box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .mapw .osm{position:absolute;right:3px;bottom:2px;font-size:5.5pt;color:#6b5f58;background:rgba(255,255,255,.7);padding:0 3px}
 .pin{position:absolute;transform:translate(-50%,-50%);width:15px;height:15px;border-radius:50%;background:#fff;border:1.4px solid ${C.oro};color:${C.bx};font-size:6.5pt;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.leg{display:flex;flex-wrap:wrap;gap:1.2mm 4mm;margin:2mm 0 0;font-size:6.6pt;color:${C.mut}}.leg span{display:inline-flex;align-items:center;gap:1.4mm}.leg i,.cn{display:inline-flex;align-items:center;justify-content:center;width:4.2mm;height:4.2mm;border-radius:50%;color:#fff;font-style:normal;font-size:6pt;font-weight:600}.leg i.me{background:${C.bx};box-shadow:0 0 0 1.2pt ${C.oro}}
 .pin.st{background:${C.oro};color:#fff;border-color:#fff}
 .pin.me{width:22px;height:22px;background:${C.bx};border:3px solid #fff;box-shadow:0 0 0 2px ${C.oro},0 0 0 9px rgba(110,20,35,.18),0 2px 6px rgba(0,0,0,.4);z-index:2}
 /* pagine interne */
@@ -420,9 +439,9 @@ ${sec(1, "Immobile oggetto di valutazione", `
 
 ${comps.length ? sec(2, "Comparabili di mercato analizzati", `
 <p class="lead">Analizzati ${comps.length} annunci in vendita con metratura simile (${Math.round(q.mq * 0.6)}–${Math.round(q.mq * 1.6)} m²), ordinati per vicinanza e somiglianza. Le ★ indicano i tre più affini. Media dei comparabili: <b>${eur(mediaC)}/m²</b>${mediaO ? `; media dei ${buoni.length} in ottimo stato o ristrutturati: <b>${eur(mediaO)}/m²</b>` : ""}.</p>
-${mapComp}
+${mapComp}${legenda}
 <table style="margin-top:3mm"><thead><tr><th>#</th><th>Indirizzo</th><th class="r">Prezzo</th><th class="r">m²</th><th class="r">€/m²</th><th>Piano</th><th>Note</th><th class="r">Dist.</th></tr></thead><tbody>
-${comps.map(a => `<tr class="${a.star ? "hl" : ""}"><td>${a.i}${a.star ? ' <span class="star">★</span>' : ""}</td><td style="width:30%"><b style="font-weight:500">${esc(a.via || "Zona " + (a.micro || ""))}</b>${a.micro ? ` <span class="small">· ${esc(a.micro)}</span>` : ""}</td>
+${comps.map(a => `<tr class="${a.star ? "hl" : ""}"><td style="white-space:nowrap"><i class="cn" style="background:${a.col}">${a.i}</i>${a.star ? ' <span class="star">★</span>' : ""}</td><td style="width:30%"><b style="font-weight:500">${esc(a.via || "Zona " + (a.micro || ""))}</b>${a.micro ? ` <span class="small">· ${esc(a.micro)}</span>` : ""}</td>
 <td class="r">${eur(a.p)}</td><td class="r">${a.mq}</td><td class="r"><b style="color:${C.bx}">${eur(a.mq2)}</b></td><td>${a.piano ? (a.piano === "T" ? "Terra" : a.piano === "R" ? "Rialzato" : a.piano === "S" ? "Semint." : a.piano + "°") : "—"}${a.asc ? ", asc." : a.piano && a.piano !== "T" ? ", no asc." : ""}</td>
 <td class="small">${esc((a.d || "").split(", ").filter(x => !/piano|rialzato|seminterrato|^ascensore$/.test(x)).join(", "))}${a.loc ? `, ${a.loc} locali` : ""}</td><td class="r">${a.dist != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "—"}</td></tr>`).join("")}
 </tbody></table>
