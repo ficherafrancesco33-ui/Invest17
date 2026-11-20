@@ -365,7 +365,7 @@ async function mmGeocode(t) {
       if (comune && city && tnorm(city) !== tnorm(comune) && !tnorm(p.county || "").includes(tnorm(comune))) continue;
       const via = p.street || (p.osm_key === "highway" ? p.name : null);
       add({ lon, lat, via, civ: p.housenumber || null, comune: city || comune, esatto: !!p.housenumber,
-        label: [via ? via + (p.housenumber ? " " + p.housenumber : "") : p.name, p.district && p.district !== city ? p.district : null, city].filter(Boolean).join(", ") }); }
+        label: [via ? via + (p.housenumber ? " " + p.housenumber : "") : p.name, p.district && p.district !== city && !(/^municipio/i.test(p.district) && city !== "Milano") ? p.district : null, city].filter(Boolean).join(", ") }); }
   } catch (e) { }
   // civico non trovato: ricerca strutturata Nominatim (via + civico + comune)
   if (comune && !out.some(x => x.esatto)) try {
@@ -377,7 +377,7 @@ async function mmGeocode(t) {
   } catch (e) { }
   // se ho la via ma non il civico, lo segno: sulla mappa scegli tu il palazzo giusto
   out.forEach(x => { if (!x.civ && civW && x.via) { x.civW = civW; x.label += ` (civico ${civW} non mappato: tocca il palazzo)`; } });
-  return out.slice(0, 7);
+  const vis = new Set(); return out.filter(x => !vis.has(x.label) && vis.add(x.label)).slice(0, 7);
 }
 function mmCercaBind(q, res, modulo) {
   if (!q || !res) return; let tq, L = [];
