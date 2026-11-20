@@ -167,6 +167,25 @@ async function mmPdf(arg) {
   ov.querySelector("[data-pdfgo]").addEventListener("click", () => { if (pdfApri(html)) ov.remove(); });
 }
 
+
+/* quartiere (NIL) dell'immobile: dal palazzo toccato, dai confini del Comune o dal nome */
+const nilNorm = t => String(t || "").toLowerCase().replace(/p\.?ta\b/g, "porta").replace(/q\.?re\b/g, "quartiere").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+function pdfInPoly(pt, geom) {
+  const ring = (r) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const [xi, yi] = r[i], [xj, yj] = r[j];
+    if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi) + xi) c = !c; } return c; };
+  const poly = P => ring(P[0]) && !P.slice(1).some(ring);
+  return geom.type === "Polygon" ? poly(geom.coordinates) : geom.type === "MultiPolygon" ? geom.coordinates.some(poly) : false;
+}
+function pdfNil(lat, lon, nome) {
+  if (typeof NIL_DEMO === "undefined") return null;
+  const F = window.MM && MM.nil ? MM.nil.features : [];
+  let f = lat != null ? F.find(x => x.geometry && pdfInPoly([lon, lat], x.geometry)) : null;
+  if (!f && nome) f = F.find(x => nilNorm(x.properties.nil) === nilNorm(nome));
+  let id = f && +f.properties.id;
+  if (!id || !NIL_DEMO[id]) { const n = nilNorm(f ? f.properties.nil : nome); if (n) id = +Object.keys(NIL_DEMO).find(k => nilNorm(NIL_DEMO[k][0]) === n || nilNorm(NIL_DEMO[k][0]).startsWith(n) || n.startsWith(nilNorm(NIL_DEMO[k][0]))); }
+  return id && NIL_DEMO[id] ? { id, d: NIL_DEMO[id] } : null;
+}
+
 function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const M = TERR.milano, s = ctx.sel || {}, C = PDF_C;
   const oggi = new Date().toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric" });
@@ -224,7 +243,8 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   ];
 
   /* --- punti di forza e di attenzione --- */
-  const PZ = ctx.zona && window.ZONE_PROFILI ? ZONE_PROFILI[ctx.zona.n] : null;
+  const PZ = ctx.zona && typeof ZONE_PROFILI !== "undefined" ? ZONE_PROFILI[ctx.zona.n] : null;
+  const NI = ctx.milano ? pdfNil(lat, lon, s.nil) : null;
   const pro = [], con = [];
   const spazi = [q.terrazzo ? "terrazzo" : "", q.balcone ? "balconi" : "", q.giardino ? "giardino" : "", q.cantina ? "cantina" : "", boxT].filter(Boolean);
   pro.push(`${q.mq} m² con ${q.locali} locali e ${q.bagni} bagn${q.bagni == 1 ? "o" : "i"}${["nuovo", "ristrutturato", "ottimo"].includes(q.stato) ? ", in " + statoT.toLowerCase() + " stato" : ""}`);
@@ -309,6 +329,11 @@ body{margin:0;font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;font-weig
 .mapw .osm{position:absolute;right:3px;bottom:2px;font-size:5.5pt;color:#6b5f58;background:rgba(255,255,255,.7);padding:0 3px}
 .pin{position:absolute;transform:translate(-50%,-50%);width:15px;height:15px;border-radius:50%;background:#fff;border:1.4px solid ${C.oro};color:${C.bx};font-size:6.5pt;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .leg{display:flex;flex-wrap:wrap;gap:1.2mm 4mm;margin:2mm 0 0;font-size:6.6pt;color:${C.mut}}.leg span{display:inline-flex;align-items:center;gap:1.4mm}.leg i,.cn{display:inline-flex;align-items:center;justify-content:center;width:4.2mm;height:4.2mm;border-radius:50%;color:#fff;font-style:normal;font-size:6pt;font-weight:600}.leg i.me{background:${C.bx};box-shadow:0 0 0 1.2pt ${C.oro}}
+.demo{border:.8pt solid ${C.oro};padding:3mm 4mm;margin:0 0 2mm;break-inside:avoid;background:#fffdf9}
+.dh{display:flex;align-items:baseline;gap:3mm;border-bottom:.6pt solid ${C.line};padding-bottom:1.5mm;margin-bottom:2.5mm}.dh small{letter-spacing:.2em;font-size:6pt;text-transform:uppercase;color:${C.oro}}.dh b{font-family:"Cormorant Garamond",serif;font-size:15pt;font-weight:500;color:${C.bx}}.dh span{margin-left:auto;font-size:6.5pt;color:${C.mut}}
+.dk{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin-bottom:3mm}.dk div{border-top:2pt solid ${C.oro};background:${C.oro3};padding:1.8mm 2mm}.dk small{display:block;font-size:6pt;letter-spacing:.14em;text-transform:uppercase;color:${C.mut}}.dk b{font-family:"Cormorant Garamond",serif;font-size:15pt;font-weight:500;color:${C.bx};line-height:1.1}.dk span{display:block;font-size:6.3pt;color:${C.mut}}
+.db{display:grid;grid-template-columns:32mm 1fr 14mm 18mm;align-items:center;gap:3mm;margin:1.4mm 0;font-size:7.6pt}.db b{color:${C.bx};font-weight:600;text-align:right}.db em{font-style:normal;font-size:6.6pt;color:${C.mut}}
+.dbt{position:relative;height:3.2mm;background:#f1e9dc;border-radius:2mm}.dbt i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,${C.oro},${C.bx});border-radius:2mm}.dbt u{position:absolute;top:-1mm;bottom:-1mm;width:.9pt;background:${C.ink};text-decoration:none}
 .pin.st{background:${C.oro};color:#fff;border-color:#fff}
 .pin.me{width:22px;height:22px;background:${C.bx};border:3px solid #fff;box-shadow:0 0 0 2px ${C.oro},0 0 0 9px rgba(110,20,35,.18),0 2px 6px rgba(0,0,0,.4);z-index:2}
 /* pagine interne */
@@ -480,23 +505,32 @@ ${serv.length ? sec(comps.length ? 6 : 5, "Servizi e vita di quartiere", `
 <p class="lead">${near.staz[0] ? `La metropolitana più vicina è ${esc(near.staz[0].n)} (linea ${[...near.staz[0].ln].join(", ")}), a circa ${mmin(near.staz[0].d)} minuti a piedi.` : "La metropolitana non è raggiungibile a piedi: i collegamenti sono con tram e bus."} Tempi a piedi stimati in linea d'aria a 4,5 km/h dalle posizioni delle attività.</p>
 <div class="serv">${serv.map(x => `<div><i class="${x.ic}">${x.ic}</i><span style="flex:1"><b>${esc(x.t)}</b><span>${esc(x.d)}</span></span><em>${mmin(x.m)}′</em></div>`).join("")}</div>`) : ""}
 
-${PZ ? sec(comps.length ? 7 : 6, "Profilo della zona", `
-<p class="lead">${esc(PZ.car)}</p>
-<table class="kv"><tbody>
-  <tr><td>Municipio</td><td>Municipio ${PZ.mun} · ${ZP_MUN[PZ.mun]} abitanti</td></tr>
-  <tr><td>Comune di Milano</td><td>${ZP_CITTA.pop} · residenti stranieri ${ZP_CITTA.stranieri}</td></tr>
-  <tr><td>Edilizia prevalente</td><td>${esc(PZ.edi)}</td></tr>
-  <tr><td>Domanda abitativa</td><td>${esc(PZ.dom)}</td></tr>
-  <tr><td>Mercato</td><td>Vendita: ${eur(ctx.zona.v)}/m² medio (${ctx.zona.y >= 0 ? "+" : ""}${num(ctx.zona.y, 1)}% in 12 mesi) · affitto ${num(ctx.zona.a, 2)} €/m² al mese · rendita lorda ${pct(ctx.zona.a * 12 / ctx.zona.v, 1)}</td></tr>
+${PZ || NI ? sec(comps.length ? 7 : 6, "Profilo della zona", `
+${PZ ? `<p class="lead">${esc(PZ.car)}</p>` : ""}
+${NI ? (() => { const [n, res, fam, st, den, gio, anz, iv] = NI.d, Mi = NIL_MILANO, comp = res / fam;
+  const bar = (t, v, m, max, fmt) => `<div class="db"><span>${t}</span><div class="dbt"><i style="width:${Math.min(100, v / max * 100)}%"></i><u style="left:${Math.min(100, m / max * 100)}%"></u></div><b>${fmt(v)}</b><em>Milano ${fmt(m)}</em></div>`;
+  const p1 = v => num(v, 1).replace(".", ",") + "%";
+  const lett = [anz > Mi.anz + 2 ? "più anziano della media cittadina" : gio > Mi.gio + 1 ? "più giovane della media, con molti ragazzi" : "con un'età in linea con la media di Milano",
+    st > Mi.str + 5 ? "una presenza di stranieri sopra la media" : st < Mi.str - 5 ? "pochi residenti stranieri" : "una quota di stranieri nella media",
+    comp > Mi.comp + 0.1 ? "famiglie un po' più numerose" : comp < Mi.comp - 0.1 ? "molti nuclei piccoli (single e coppie)" : "famiglie di dimensione tipica"];
+  return `<div class="demo"><div class="dh"><small>Il quartiere</small><b>${esc(n)}</b><span>NIL ${NI.id} · Comune di Milano</span></div>
+  <div class="dk"><div><small>Residenti</small><b>${num(res)}</b></div><div><small>Famiglie</small><b>${num(fam)}</b><span>${num(comp, 2).replace(".", ",")} persone in media</span></div><div><small>Densità</small><b>${num(den)}</b><span>abitanti / km²</span></div><div><small>Indice di vecchiaia</small><b>${num(iv)}</b><span>over 65 ogni 100 under 15</span></div></div>
+  ${bar("Residenti stranieri", st, Mi.str, 50, p1)}${bar("Giovani 0–18 anni", gio, Mi.gio, 30, p1)}${bar("Over 65", anz, Mi.anz, 40, p1)}
+  <p style="margin:2mm 0 0">Un quartiere ${lett[0]}, con ${lett[1]} e ${lett[2]}.</p></div>`; })() : ""}
+<table class="kv" style="margin-top:3mm"><tbody>
+  ${PZ ? `<tr><td>Municipio</td><td>Municipio ${PZ.mun} · ${ZP_MUN[PZ.mun]} abitanti</td></tr>` : ""}
+  <tr><td>Comune di Milano</td><td>${ZP_CITTA.pop} · residenti stranieri ${ZP_CITTA.stranieri} · età media ~45 anni</td></tr>
+  ${PZ ? `<tr><td>Edilizia prevalente</td><td>${esc(PZ.edi)}</td></tr><tr><td>Domanda abitativa</td><td>${esc(PZ.dom)}</td></tr>` : ""}
+  ${ctx.zona ? `<tr><td>Mercato</td><td>Vendita: ${eur(ctx.zona.v)}/m² medio (${ctx.zona.y >= 0 ? "+" : ""}${num(ctx.zona.y, 1)}% in 12 mesi) · affitto ${num(ctx.zona.a, 2)} €/m² al mese · rendita lorda ${pct(ctx.zona.a * 12 / ctx.zona.v, 1)}</td></tr>` : ""}
 </tbody></table>
-<p class="note">Profilo a livello di zona: i dati di dettaglio per singola via non sono pubblicamente disponibili con sufficiente granularità.</p>`) : ""}
+<p class="note">${NI ? "Dati del quartiere: Comune di Milano, schede NIL del PGT Milano 2030 (anagrafe 2017); la barra sottile indica la media di Milano. " : ""}Carattere e domanda sono descritti a livello di zona.</p>`) : ""}
 
-${sec(comps.length ? (PZ ? 8 : 7) : 7, "Punti di forza e di attenzione", `<div class="pc">
+${sec(comps.length ? (PZ || NI ? 8 : 7) : 7, "Punti di forza e di attenzione", `<div class="pc">
   <div class="f"><h3>Punti di forza</h3><ul>${pro.slice(0, 5).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
   <div class="a"><h3>Punti di attenzione</h3><ul>${(con.length ? con : ["Nessuna criticità rilevante dai dati inseriti"]).slice(0, 5).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
 </div>`)}
 
-${r.canone ? sec(comps.length ? (PZ ? 9 : 8) : 8, "Potenziale come investimento", `
+${r.canone ? sec(comps.length ? (PZ || NI ? 9 : 8) : 8, "Potenziale come investimento", `
 <p class="lead">Se messo a reddito, il canone è posizionato in modo prudente rispetto alla media della zona (${num(ctx.a, 2)} €/m² al mese)${q.mq > 110 ? ", perché i tagli grandi spuntano un canone al m² più basso delle unità piccole" : ""}.${boxAff ? ` Il ${boxT} può essere locato anche a parte.` : ""}</p>
 <div class="two"><table class="kv"><tbody>
   <tr><td>Canone medio di zona</td><td>${num(ctx.a, 2)} €/m² al mese</td></tr>
@@ -509,7 +543,7 @@ ${r.canone ? sec(comps.length ? (PZ ? 9 : 8) : 8, "Potenziale come investimento"
 </tbody></table></div>
 <p class="note">Stime indicative. Il netto è dopo spese di gestione, condominio, manutenzione e cedolare secca, sul valore stimato più i costi d'acquisto${r.lavori ? " e i lavori" : ""}. Periodi di sfitto e spese straordinarie possono ridurre il rendimento.</p>`) : ""}
 
-${sec(comps.length ? (PZ ? 10 : 9) : 9, "Nota metodologica", `
+${sec(comps.length ? (PZ || NI ? 10 : 9) : 9, "Nota metodologica", `
 <p class="small" style="font-size:7.4pt">Valutazione con metodo comparativo di mercato: prezzo medio richiesto nella ${ctx.micro ? "microzona" : "zona"} (Immobiliare.it)${r.wC ? `, combinato con ${r.cmp.nNorm} annunci simili entro 1,5 km riportati a stato buono` : ""}, ridotto della trattativa tipica (${pct(IMPOSTAZIONI.sconto_trattativa, 0)}) e corretto con coefficienti di merito per stato, piano, taglio, classe energetica, epoca, esposizione e dotazioni. ${valDir ? `Verifica indipendente sui comparabili diretti (${dir.length} annunci). ` : ""}Fasce di zona ${F.vero ? "ricavate dagli annunci letti per intero il 20/11/2026" : "stimate dalla media di zona"}. Superfici secondarie: balconi 30%, terrazzi 35%, giardino 10%, cantina 25%; box valutato a parte. Stima orientativa a supporto della strategia di prezzo: non è una perizia giurata e non sostituisce le verifiche di conformità urbanistica e catastale.</p>`)}
 
 <div class="endf"><img src="${logo}" alt=""><span>Maison Collection · Agenzia immobiliare · Milano<br>Relazione generata con Keystone il ${oggiL}</span></div>

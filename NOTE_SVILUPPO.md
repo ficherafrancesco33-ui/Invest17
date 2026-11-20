@@ -152,3 +152,5 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - js/pdf.js sostituisce il vecchio mmPdf: copertina (logo, mappa OSM con segnaposto, banda bordeaux con il range), riepilogo, 10 sezioni come le relazioni di stima di riferimento (immobile, comparabili con mappa numerata e ★, fasce di zona con grafico, rettifiche +/−, range con due metodi, servizi a piedi, profilo zona, forza/attenzione, investimento, nota metodologica).
 - Nuovi dati: TERR.milano.fasce (gen.py: percentili per stato dagli annunci, solo microzone lette per intero) e data/zone_profili.js (32 zone: carattere, edilizia, domanda, pro/contro, municipio).
 - Modulo: aggiunti anno di costruzione, orientamento (coefficiente S +2%, N −3%), note particolari. Ultimo piano +1,5% se già piano alto.
+- data/nil_demo.js: dati socio-demografici degli 88 NIL (Comune di Milano, schede NIL PGT 2030, anagrafe 2017): residenti, famiglie, % stranieri, densità, % 0-18, % over 65, indice di vecchiaia. Nel PDF il quartiere si trova dai confini NIL (MM.nil) o dal nome; barre confrontate con la media di Milano.
+- Corretto: ZONE_PROFILI non veniva letto nel PDF (const non è su window).
