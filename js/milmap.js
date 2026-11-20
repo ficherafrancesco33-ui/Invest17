@@ -330,7 +330,7 @@ function mmScheda(s) {
 
 /* ---------- vista Milano ---------- */
 function vMilano3D(zona, mode = "mappa") {
-  MM.mode = mode; const MD = MI_MODI[mode] || MI_MODI.mappa;
+  MM.mode = mode; const MD = MI_MODI[mode] || MI_MODI.cliente;
   const f = store.get("f_mm", null); if (f) { MM.metric = f.metric || "v"; Object.assign(MM.lay, f.lay || {}); }
   MM.sel = store.get("mm_sel", null);
   const M = TERR.milano;

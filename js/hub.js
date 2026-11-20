@@ -28,14 +28,8 @@ const ico = (k, cls = "") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none
 const MI_MODI = {
   cliente: { t: "Valutazione per il cliente", c: "Per chi vende", d: "Stima professionale con comparabili e PDF Maison Collection da consegnare al proprietario.",
     sub: "Tocca il palazzo sulla mappa (o cerca l'indirizzo), inserisci le caratteristiche: ottieni valore, prezzo consigliato di pubblicazione e PDF con il logo.", form: "Dati dell'immobile del cliente" },
-  inv: { t: "Investimento", c: "Compro e affitto", d: "Per l'immobile che guardi: B&B, medio termine e affitto lungo a confronto, il migliore e il prezzo massimo da offrire.",
-    sub: "Scegli il palazzo sulla mappa e inserisci l'immobile: vedi affiancati B&B, medio termine e affitto lungo, quale rende di più e fino a quanto offrire.", form: "Immobile da comprare e mettere a reddito" },
-  sub: { t: "Subaffitto B&B", c: "Rent to rent", d: "Prendi in affitto un appartamento e lo riaffitti a notte: business plan, guadagno mensile e rientro dell'investimento.",
-    sub: "Senza comprare: prendi in affitto (4+4) e gestisci come B&B con il consenso scritto del proprietario. Calcola canone sostenibile, guadagno e rientro.", form: "Business plan del subaffitto" },
   privati: { t: "Annunci dei privati", c: "Vendite senza agenzia", d: "Sulla mappa gli immobili messi in vendita da privati, con il link all'annuncio. I nuovi vengono segnalati.",
     sub: "Gli annunci di vendita dei privati sulla mappa e in elenco, con il link per aprirli. Quelli che non hai ancora visto sono segnati come nuovi.", form: "" },
-  mappa: { t: "Mappa di Milano", c: "Esplora liberamente", d: "Prezzi per microzona, quartieri, metro, servizi e tutti gli annunci in 3D.",
-    sub: "Milano e hinterland in 3D: tocca un palazzo per vedere via, quartiere e prezzi. Microzone di prezzo, quartieri, metro, servizi e annunci.", form: "Valuta un immobile a Milano e hinterland" },
 };
 function miBread(mode) {
   return `<nav class="bread nob">${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Valutazione per il ", "Valuta ").replace("Annunci dei privati", "Privati").replace("Mappa di Milano", "Mappa"))}</span></a>`).join("")}</nav>`;
@@ -48,7 +42,6 @@ function vMilanoHub() {
     ${Object.entries(MI_MODI).map(([k, m]) => `<a class="hubc ${k === "cliente" ? "big" : ""}" href="#milano/${k}">${ico(k, "hi")}<small>${esc(m.c)}</small><b>${esc(m.t)}</b><span>${esc(m.d)}</span>
       ${k === "privati" && nuovi ? `<em class="hubn">${nuovi} nuov${nuovi === 1 ? "o" : "i"}</em>` : ""}${k === "privati" ? `<i class="hubf">${np} annunci di privati</i>` : ""}</a>`).join("")}
   </div>
-  <a class="homecm" href="#completa"><span><b>Completa Milano</b>Raccogli i link di Immobiliare zona per zona per riempire la mappa di annunci</span><em>${TERR.milano.micro.filter(m => cmLinks()[m.n]).length}/${TERR.milano.micro.length}</em></a>
   ${vSalvate("milano")}`;
 }
 function afterMilanoHub() {}
@@ -466,9 +459,9 @@ function vInv(a, b, c) { if (!a || a === "zona") a = "classifica"; return a === 
 function afterInv(a, b, c) { if (!a || a === "zona") a = "classifica"; if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
 
 /* ---------------- collegamento al router ---------------- */
-const MI_ALIAS = { bnb: "inv", lungo: "inv" };
+const MI_ALIAS = { bnb: "cliente", lungo: "cliente", inv: "cliente", sub: "cliente", mappa: "cliente" };
 document.addEventListener("change", e => { const t = e.target.closest("[data-target]"); if (!t) return; store.set("inv_target", +t.value); $("#mvf")?.dispatchEvent(new Event("change", { bubbles: true })); });
-TERR_VIEWS.milano = [a => { a = MI_ALIAS[a] || a; return !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "mappa"); },
+TERR_VIEWS.milano = [a => { a = MI_ALIAS[a] || a; return !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "cliente"); },
   (a, b) => { a = MI_ALIAS[a] || a; if (!a) return afterMilanoHub(); MM.onSel = null; afterMilano3D(MI_MODI[a] ? (a === "mappa" ? b : null) : a); }];
 
 /* ---------------- illustrazioni per gli annunci senza foto ----------------
