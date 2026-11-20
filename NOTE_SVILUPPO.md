@@ -113,3 +113,11 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 ## 7. Carico affitto lungo (20/11/2026)
 - Aggiunti 15 bilocali ≤60k ad Alessandria (università UPO, ospedale) e Vercelli (UPO, ospedale), fonte caasa.it.
 - Scartati quelli sopra 60k. Cremona, Piacenza, Lodi: nessun annuncio ≤60k con dati completi leggibile; da rifare con link filtrati dell'utente.
+
+## 8. Analisi del territorio (20/11/2026)
+Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generato da `tools/terr/gen.py`):
+- **Mappa B&B** (`#brevi`): 85 località entro ~3 ore (AirROI/AirDNA): prezzo a notte, occupazione, ricavo annuo, ricavo per notte, rendita lorda di un bilocale al prezzo medio del comune. Filtri per tipo, regione, distanza da Badile o Porta Romana, occupazione, profondità del mercato. Scheda per località con prova su bilocale 50 m² e occupazione di pareggio contro l'affitto lungo.
+- **Valutazione** (`#valuta`): 2.104 comuni di 20 province (immobiliare.it / mercato-immobiliare.info): vendita, affitto, rendita lunga, crescita 1 anno, m² con 60k. Mappa: comuni principali; scegliendo una provincia carica i confini openpolis (jsDelivr) e colora tutti i comuni; i centri vengono salvati in localStorage. Rendita calcolata solo se vendita ≥ 700 €/m², affitto non di ripiego (stesso valore in 3+ comuni della provincia) e ≤ 12%.
+- **Milano** (`#milano`): 32 zone immobiliare.it con metro M1-M5, 60 punti di interesse (università, ospedali, lavoro/stazioni, eventi, negozi, scuole, parchi), punteggio di attrattività, stima B&B per zona dalla media AirROI.
+- **Valutatore** unico (`vCalcola`): superficie commerciale (balconi 30%, terrazzi 35%, giardino 10%, cantina 25%), coefficienti di merito (piano/ascensore, stato, classe energetica, epoca, esposizione, vista, riscaldamento, portineria, condominio, via), box a parte, lavori con valore dopo lavori e margine, rendimenti con la stessa funzione `scenari` delle schede. Valutazioni salvabili.
+- Fonti da aggiornare ogni 3-6 mesi: rilanciare le pagine provinciali e regionali, aggiornare `tools/terr/raw_*.txt`, poi `python3 tools/terr/gen.py`.

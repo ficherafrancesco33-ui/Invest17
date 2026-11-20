@@ -1,0 +1,2127 @@
+# Prezzi medi richiesti per comune: vendita €/m², variazione % in un anno, affitto €/m² al mese.
+# Fonte: pagine "mercato immobiliare" provinciali di immobiliare.it (periodo indicato su ogni provincia),
+# per VCO e Vercelli mercato-immobiliare.info (senza variazione annua). Raccolti il 20/11/2026.
+@MI|Lombardia|immobiliare.it ott 2026
+Milano,5667,1.7,22.52
+Abbiategrasso,1962,3.8,11.76
+Albairate,1960,-1.7,7.97
+Arconate,1628,13.1,9.5
+Arese,2939,10.0,14.39
+Arluno,2014,6.2,11.8
+Assago,3962,4.1,15.95
+Baranzate,2141,0.8,12.71
+Bareggio,2068,-1.6,10.73
+Basiano,1901,5.2,12.73
+Basiglio,3343,4.2,15.49
+Bellinzago Lombardo,1990,-0.2,11.08
+Bernate Ticino,1482,-4.9,9.32
+Besate,1230,-1.1,9.36
+Binasco,2077,-0.5,10.66
+Boffalora Sopra Ticino,1258,-5.7,9.19
+Bollate,2517,10.9,11.63
+Bresso,2603,5.8,13.52
+Bubbiano,1614,5.4,9.16
+Buccinasco,3216,7.5,14.18
+Buscate,1157,-9.0,8.81
+Bussero,2573,4.6,14.1
+Busto Garolfo,1683,8.0,10.48
+Calvignasco,1130,-13.4,10.05
+Cambiago,2099,-0.2,13.2
+Canegrate,2058,14.6,14.17
+Carpiano,2096,-2.0,11.25
+Carugate,2643,1.3,14.35
+Casarile,1719,-4.8,11.55
+Casorezzo,1943,0.3,11.15
+Cassano d'Adda,2003,-0.6,11.63
+Cassina de' Pecchi,2702,1.4,13.14
+Cassinetta di Lugagnano,1952,-0.1,10.71
+Castano Primo,1448,2.5,9.93
+Cernusco sul Naviglio,3418,-2.3,14.82
+Cerro al Lambro,2194,10.9,10.13
+Cerro Maggiore,1723,3.3,10.9
+Cesano Boscone,2902,13.2,11.72
+Cesate,2218,4.4,11.92
+Cinisello Balsamo,2433,1.9,13.79
+Cisliano,2082,-2.3,10.63
+Cologno Monzese,2754,6.6,13.99
+Colturano,1715,11.9,9.79
+Corbetta,2040,13.1,11.37
+Cormano,2546,-0.2,13.91
+Cornaredo,2397,3.5,12.02
+Corsico,2694,3.4,14.74
+Cuggiono,1402,-0.4,9.88
+Cusago,3073,5.9,13.89
+Cusano Milanino,3056,6.1,13.18
+Dairago,1714,8.9,9.89
+Dresano,2304,7.8,10.44
+Gaggiano,2350,2.0,12.7
+Garbagnate Milanese,2256,8.4,11.73
+Gessate,2513,9.7,13.62
+Gorgonzola,2573,2.8,13.78
+Grezzago,1547,-6.0,9.64
+Gudo Visconti,1708,-18.1,10.71
+Inveruno,1612,1.1,10.68
+Inzago,2272,-2.7,11.46
+Lacchiarella,2361,9.8,11.86
+Lainate,2522,5.7,10.93
+Legnano,1937,-0.1,12.02
+Liscate,2125,2.5,11.57
+Locate di Triulzi,2338,5.2,13.46
+Magenta,2026,9.5,10.13
+Magnago,1644,3.5,8.82
+Marcallo con Casone,1916,19.0,9.85
+Masate,2159,9.5,11.53
+Mediglia,2113,6.1,11.31
+Melegnano,2562,8.7,12.08
+Melzo,2275,11.7,12.74
+Mesero,1725,0.8,9.42
+Morimondo,1428,-5.4,10.12
+Motta Visconti,1526,7.1,8.39
+Nerviano,2038,8.8,12.01
+Nosate,872,-46.1,9.78
+Novate Milanese,3121,8.3,13.96
+Noviglio,1780,-1.2,11.08
+Opera,2795,4.6,13.57
+Ossona,1661,-8.8,10.28
+Ozzero,1380,-4.2,9.57
+Paderno Dugnano,2440,2.0,11.94
+Pantigliate,2155,2.8,13.07
+Parabiago,2065,4.5,10.56
+Paullo,2218,-0.2,11.11
+Pero,2862,2.8,14.89
+Peschiera Borromeo,2982,8.4,13.33
+Pessano con Bornago,2230,1.7,11.67
+Pieve Emanuele,2250,2.4,13.89
+Pioltello,2281,0.4,14.74
+Pogliano Milanese,2030,3.5,11.8
+Pozzo d'Adda,2302,16.8,12.09
+Pozzuolo Martesana,2159,2.7,11.64
+Pregnana Milanese,2323,1.5,11.5
+Rescaldina,1843,6.3,10.8
+Rho,2532,4.1,13.55
+Robecchetto con Induno,1052,-12.2,8.8
+Robecco sul Naviglio,1648,9.1,11.42
+Rodano,2320,-,11.19
+Rosate,1868,14.4,10.84
+Rozzano,2721,5.8,15.02
+San Colombano al Lambro,976,-9.9,9.01
+San Donato Milanese,3191,6.0,14.38
+San Giorgio su Legnano,1669,2.9,11.91
+San Giuliano Milanese,2526,6.6,13.91
+San Vittore Olona,1918,11.3,9.82
+San Zenone al Lambro,1744,0.7,9.29
+Santo Stefano Ticino,2094,9.0,10.71
+Sedriano,2153,0.5,9.61
+Segrate,3624,6.6,15.56
+Senago,2122,0.5,12.29
+Sesto San Giovanni,3050,0.5,15.32
+Settala,2057,6.5,8.97
+Settimo Milanese,2862,6.8,13.17
+Solaro,2075,10.4,9.13
+Trezzano Rosa,1930,4.8,10.13
+Trezzano sul Naviglio,2547,3.8,14
+Trezzo sull'Adda,1702,0.2,10.93
+Tribiano,2225,3.4,11.67
+Truccazzano,1618,-,11.12
+Turbigo,1053,-3.7,8.87
+Vanzaghello,1321,-13.1,8.85
+Vanzago,2235,7.1,11.54
+Vaprio d'Adda,1609,-2.7,10.36
+Vermezzo con Zelo,1948,1.7,10.69
+Vernate,1748,5.1,10.42
+Vignate,2570,3.1,13.67
+Villa Cortese,1845,7.0,8.99
+Vimodrone,3037,7.6,15.59
+Vittuone,1879,-2.1,10.48
+Vizzolo Predabissi,2051,0.0,9.14
+Zibido San Giacomo,1967,-0.5,9.87
+@MB|Lombardia|immobiliare.it ott 2026
+Monza,3302,7.3,13.86
+Agrate Brianza,2310,5.3,13.17
+Aicurzio,1557,1.7,11.21
+Albiate,1915,2.0,10.94
+Arcore,2307,0.4,12.3
+Barlassina,2004,-1.3,10.38
+Bellusco,2159,14.1,12.07
+Bernareggio,2127,6.1,11.32
+Besana in Brianza,1809,4.1,12.02
+Biassono,2663,2.1,11.94
+Bovisio-Masciago,2442,8.4,11.78
+Briosco,2206,7.9,9.29
+Brugherio,2677,7.0,12.27
+Burago di Molgora,2211,11.4,13.47
+Busnago,2093,-1.1,10.69
+Camparada,2419,32.7,11.34
+Caponago,1875,-6.7,12.07
+Carate Brianza,2217,-0.6,11.71
+Carnate,1955,3.9,11.41
+Cavenago di Brianza,1820,1.9,10.82
+Ceriano Laghetto,1920,3.4,10.04
+Cesano Maderno,2375,3.1,12.5
+Cogliate,1964,2.6,10.52
+Concorezzo,2413,9.3,13.59
+Cornate d'Adda,1654,1.5,10.66
+Correzzana,2389,6.1,12.1
+Desio,2080,3.0,11.23
+Giussano,2003,5.7,10.85
+Lazzate,2275,1.5,9.67
+Lentate sul Seveso,1995,4.8,9.9
+Lesmo,2103,5.9,10.83
+Limbiate,1892,0.6,11.06
+Lissone,2573,7.8,12.74
+Macherio,2267,7.5,12.12
+Meda,1916,3.1,11.36
+Mezzago,1486,1.2,10.95
+Misinto,2039,0.3,9.45
+Muggiò,2163,4.3,11.48
+Nova Milanese,2524,3.8,11.03
+Ornago,1821,-0.1,11.53
+Renate,1822,11.8,9.47
+Roncello,1810,3.7,11.29
+Ronco Briantino,1759,3.8,10.09
+Seregno,2446,4.4,12.99
+Seveso,2118,11.4,12.31
+Sovico,2175,10.9,10.63
+Sulbiate,1647,-4.0,10.83
+Triuggio,2048,-0.7,9.23
+Usmate Velate,1981,8.5,10.96
+Varedo,2214,6.2,11.65
+Vedano al Lambro,3244,8.4,13.63
+Veduggio con Colzano,1382,15.8,8.18
+Verano Brianza,1905,3.3,11.63
+Villasanta,2663,10.9,11.94
+Vimercate,2665,6.4,12.24
+@CO|Lombardia|immobiliare.it ott 2026
+Como,3328,7.2,14.96
+Albavilla,1603,0.6,10.74
+Albese con Cassano,1754,-4.4,13.22
+Albiolo,1563,-0.6,10.06
+Alserio,2572,11.1,10.49
+Alta Valle Intelvi,1354,1.7,10.17
+Alzate Brianza,1878,3.2,10.25
+Anzano del Parco,1770,5.2,8.55
+Appiano Gentile,2398,7.7,11.88
+Argegno,4709,1.6,14.25
+Arosio,2207,5.1,13.38
+Asso,1262,5.9,8.36
+Barni,828,1.8,9.29
+Bellagio,3826,7.4,17.68
+Bene Lario,883,46.4,9.35
+Beregazzo con Figliaro,2619,0.5,12.82
+Binago,1803,2.3,11.08
+Bizzarone,2615,6.0,11.8
+Blessagno,1424,54.1,7.65
+Blevio,3661,3.0,15.12
+Bregnano,2368,18.9,12.02
+Brenna,1638,-7.5,10
+Brienno,4862,79.4,15
+Brunate,2229,9.2,9.67
+Bulgarograsso,2221,29.1,9.91
+Cabiate,2122,5.0,10.39
+Cadorago,2161,3.9,12.35
+Caglio,810,1.3,9.14
+Campione d'Italia,5852,2.1,22.06
+Cantù,1992,11.8,11.35
+Canzo,1278,6.5,8.33
+Capiago Intimiano,1809,4.4,11.76
+Carate Urio,5094,19.8,15.02
+Carbonate,1790,26.0,8.97
+Carimate,2224,9.7,11.57
+Carlazzo,2313,2.3,11.53
+Carugo,1886,12.6,11.17
+Caslino d'Erba,953,-3.5,9.13
+Casnate con Bernate,2270,-7.5,12.53
+Cassina Rizzardi,3169,10.9,13.43
+Castelmarte,1195,18.3,9.19
+Castelnuovo Bozzente,1359,17.4,11.39
+Cavargna,386,-38.9,9.53
+Centro Valle Intelvi,1135,-4.3,8.8
+Cerano d'Intelvi,706,-10.1,7.89
+Cermenate,1710,7.8,8.83
+Cernobbio,4542,-7.3,15.32
+Cirimido,1772,32.0,8.38
+Claino con Osteno,2125,25.4,10.78
+Colonno,3023,-1.7,12.4
+Colverde,2775,4.5,11.3
+Corrido,1365,115.6,9.46
+Cremia,3363,13.4,11.51
+Cucciago,2027,37.3,11.88
+Cusino,1577,153.1,10.32
+Dizzasco,3038,-1.2,7.89
+Domaso,3283,8.0,9.44
+Dongo,1364,5.9,8.07
+Dosso del Liro,680,1.8,9.71
+Erba,1737,11.6,11.59
+Eupilio,1677,6.6,9.74
+Faggeto Lario,3285,10.2,15.3
+Faloppio,2121,3.9,10.88
+Fenegrò,1707,12.7,8.57
+Figino Serenza,1867,15.5,10.81
+Fino Mornasco,1985,9.0,12.63
+Garzeno,560,10.7,10.74
+Gera Lario,2925,2.2,10.58
+Grandate,2023,13.8,11.55
+Grandola ed Uniti,1488,19.9,11
+Gravedona ed Uniti,2472,27.9,11.14
+Griante,5325,-9.0,15.04
+Guanzate,2070,5.1,10.4
+Inverigo,1713,1.0,8.18
+Laglio,4793,1.1,14.12
+Laino,1252,8.8,7.65
+Lambrugo,1397,0.7,9.85
+Lasnigo,524,8.3,9.22
+Lezzeno,3364,-13.5,15.04
+Limido Comasco,2032,1.1,11.88
+Lipomo,2096,12.9,13.98
+Livo,686,30.4,9.61
+Locate Varesino,1888,4.0,10.31
+Lomazzo,2265,7.5,11.44
+Longone al Segrino,1456,-27.0,9.97
+Luisago,1766,1.7,12.45
+Lurago d'Erba,2027,43.9,9.67
+Lurago Marinone,1600,4.6,9.88
+Lurate Caccivio,1703,11.7,11.93
+Magreglio,1317,14.5,9.24
+Mariano Comense,2195,11.0,10.73
+Maslianico,2071,-11.5,11.72
+Menaggio,5256,11.1,12.4
+Merone,1457,7.0,10.85
+Moltrasio,6480,9.2,12.44
+Monguzzo,1748,-4.0,10.56
+Montano Lucino,2639,3.2,11.79
+Montemezzo,1615,-36.4,9.34
+Montorfano,2085,4.1,11.32
+Mozzate,1688,6.8,10.08
+Musso,2798,2.4,10.38
+Nesso,4499,21.7,13.93
+Novedrate,1766,19.3,9.6
+Olgiate Comasco,2246,-2.4,11.83
+Oltrona di San Mamette,2078,-4.4,11.66
+Orsenigo,1928,0.8,11.39
+Peglio,732,62.7,9.68
+Pianello del Lario,2521,4.6,10.86
+Pigra,710,16.8,7.65
+Plesio,1558,1.5,10.24
+Pognana Lario,2230,-12.8,11.6
+Ponna,498,0.4,7.65
+Ponte Lambro,1221,-1.1,10.19
+Porlezza,2690,-3.0,12.31
+Proserpio,1372,-1.4,9.97
+Pusiano,1220,-10.2,8.35
+Rezzago,755,-2.1,9.18
+Rodero,1427,-7.6,11.96
+Rovellasca,2286,11.9,11.71
+Rovello Porro,1499,-5.1,11.05
+Sala Comacina,4656,30.5,12.4
+San Bartolomeo Val Cavargna,537,-16.6,10.05
+San Fermo della Battaglia,2563,1.0,14.24
+San Nazzaro Val Cavargna,692,45.7,9.67
+San Siro,2518,-2.6,11.51
+Schignano,970,22.2,7.89
+Senna Comasco,1657,-5.2,11.49
+Solbiate con Cagno,1805,-1.0,10.98
+Sorico,1224,-11.1,10.59
+Sormano,1009,8.7,9.15
+Stazzona,1955,70.4,9.98
+Tavernerio,1852,-0.3,13.05
+Torno,4618,35.5,14.42
+Tremezzina,4417,6.7,12.21
+Trezzone,758,-23.1,9.42
+Turate,1947,11.4,12.31
+Uggiate con Ronago,2164,2.5,10.93
+Val Rezzo,818,29.4,9.36
+Valbrona,1039,3.3,9.31
+Valmorea,1904,28.0,9.7
+Valsolda,3240,-9.7,10.78
+Veleso,555,9.0,8.94
+Veniano,2145,22.4,8.58
+Vercana,4586,-1.5,9.52
+Vertemate con Minoprio,1903,21.7,10.71
+Villa Guardia,2118,13.9,12.14
+Zelbio,814,4.2,9.06
+@LC|Lombardia|immobiliare.it ott 2026
+Lecco,2612,1.2,12.08
+Abbadia Lariana,1527,21.7,10.16
+Airuno,1402,-3.2,9.62
+Annone di Brianza,1210,-19.0,8.62
+Ballabio,1617,28.6,8.25
+Barzago,1219,-8.7,8.44
+Barzanò,1791,11.6,9.59
+Barzio,1483,-0.7,8.38
+Bellano,2576,0.1,12.53
+Bosisio Parini,1445,5.6,7.74
+Brivio,1552,9.0,10.62
+Bulciago,1477,4.5,7.94
+Calco,1558,1.2,9.89
+Calolziocorte,1455,-1.2,10.14
+Carenno,791,-3.1,9.27
+Casargo,677,-8.5,8.3
+Casatenovo,1823,-1.6,10.23
+Cassago Brianza,1357,11.0,9.38
+Cassina Valsassina,1340,2.3,8.18
+Castello di Brianza,1468,14.2,9.24
+Cernusco Lombardone,1636,3.8,9.54
+Cesana Brianza,2070,47.2,8.62
+Civate,1411,-3.5,9.79
+Colico,2643,4.4,17.44
+Colle Brianza,1421,47.9,8.25
+Cortenova,766,24.4,8.2
+Costa Masnaga,1727,7.9,10.21
+Crandola Valsassina,840,8.7,8.53
+Cremella,1149,-11.5,8.57
+Cremeno,1161,-6.1,8.68
+Dervio,2575,39.8,12.07
+Dolzago,1519,4.3,9.25
+Dorio,3358,33.0,10.37
+Ello,1507,18.1,9.2
+Erve,667,88.4,9.97
+Esino Lario,711,36.2,8.23
+Galbiate,1763,2.9,10.9
+Garbagnate Monastero,2128,31.9,9.09
+Garlate,1966,3.3,8.58
+Imbersago,1678,6.1,9.39
+Introbio,1042,-6.9,8.06
+La Valletta Brianza,1399,9.4,10.2
+Lierna,3123,4.2,10.06
+Lomagna,1948,-3.9,12.92
+Malgrate,2410,-9.5,9.2
+Mandello del Lario,2343,10.5,11.43
+Margno,808,6.7,9.01
+Merate,2025,13.9,9.97
+Missaglia,1675,7.9,8.76
+Moggio,1229,1.7,8.7
+Molteno,1375,5.3,8.33
+Monte Marenzo,1229,-15.1,10.73
+Montevecchia,2389,14.0,8.33
+Monticello Brianza,1669,30.1,9.38
+Morterone,942,1.4,8.33
+Nibionno,1206,5.1,9.26
+Oggiono,1750,-5.3,9.81
+Olgiate Molgora,1792,-1.6,9.52
+Olginate,1323,-20.2,10.94
+Oliveto Lario,3270,-5.0,7.6
+Osnago,1524,-4.3,10.25
+Paderno d'Adda,1523,16.6,11.71
+Pagnona,301,-65.2,9.67
+Parlasco,1718,3.6,9.05
+Pasturo,1003,1.3,8.06
+Perledo,2829,9.0,12.06
+Pescate,2285,-20.9,8.49
+Premana,404,-17.9,8.06
+Primaluna,1043,37.1,8.06
+Robbiate,1552,-3.5,9.22
+Rogeno,1760,23.8,11.31
+Santa Maria Hoè,1354,6.7,8.19
+Sirone,1461,-1.3,9.91
+Sirtori,1754,3.0,9.72
+Sueglio,759,-10.5,10.09
+Suello,1127,33.2,9.78
+Taceno,755,-5.0,9.05
+Valgreghentino,1169,7.2,10.69
+Valmadrera,1916,-11.3,10.21
+Valvarrone,731,-10.7,10.08
+Varenna,3955,12.5,13.87
+Vercurago,1457,-4.8,9.97
+Verderio,1571,2.9,11.05
+Viganò,1836,21.3,10.32
+@VA|Lombardia|immobiliare.it ott 2026
+Varese,1964,6.1,11.63
+Agra,1378,-5.6,10.45
+Albizzate,1200,2.1,10.87
+Angera,1844,17.1,12.07
+Arcisate,1469,0.4,10.97
+Arsago Seprio,1242,-3.2,9.79
+Azzate,1592,11.6,9.63
+Azzio,663,-15.3,8.09
+Barasso,2281,-5.0,7.26
+Bardello con Malgesso e Bregano,1410,5.6,9.53
+Bedero Valcuvia,1220,31.2,9.19
+Besano,1104,-1.3,7.98
+Besnate,1411,4.6,9.11
+Besozzo,1382,-6.7,10.15
+Biandronno,1212,-7.7,8.95
+Bisuschio,1472,8.4,8.84
+Bodio Lomnago,2098,14.1,8.91
+Brebbia,1489,12.9,8.03
+Brenta,1009,-1.8,8.26
+Brezzo di Bedero,2859,13.7,10.71
+Brinzio,575,-43.0,7.54
+Brissago-Valtravaglia,1049,-12.9,9.13
+Brunello,829,-37.2,9.59
+Brusimpiano,1928,7.4,13.87
+Buguggiate,2081,-1.4,11.44
+Busto Arsizio,1943,8.5,11.62
+Cadegliano-Viconago,2109,-11.5,9.92
+Cadrezzate con Osmate,1677,2.5,9.9
+Cairate,1324,-4.1,9.25
+Cantello,2308,1.9,12.23
+Caravate,962,3.4,9.37
+Cardano al Campo,1707,10.3,11.52
+Carnago,1501,11.2,9.76
+Caronno Pertusella,2159,4.3,11.58
+Caronno Varesino,1178,23.1,8.3
+Casale Litta,858,4.5,8.84
+Casalzuigno,664,-19.3,8.4
+Casciago,1940,24.3,10.85
+Casorate Sempione,1314,-2.2,10.11
+Cassano Magnago,1529,1.1,10.02
+Cassano Valcuvia,885,-33.0,8.86
+Castellanza,1745,7.1,12.44
+Castello Cabiaglio,1091,8.0,8.57
+Castelseprio,573,-47.6,9.25
+Castelveccana,1929,-7.2,10.23
+Castiglione Olona,1716,24.3,9.49
+Castronno,1336,-4.4,7.33
+Cavaria con Premezzo,1650,23.3,9.64
+Cazzago Brabbia,1293,7.2,8.93
+Cislago,1680,-3.7,12.24
+Cittiglio,1097,-9.9,8.36
+Clivio,1428,-2.6,11.04
+Cocquio-Trevisago,1254,9.8,7.31
+Comabbio,2139,6.8,10.7
+Comerio,1907,-10.0,12.13
+Cremenaga,1386,-12.2,10.14
+Crosio della Valle,1409,13.1,9.43
+Cuasso al Monte,1320,-2.7,9.67
+Cugliate-Fabiasco,1235,-9.3,10.14
+Cunardo,1507,-12.7,11.35
+Curiglia con Monteviasco,370,0.3,10.66
+Cuveglio,1102,6.6,8.59
+Cuvio,935,-2.1,7.96
+Daverio,1837,10.2,8.8
+Dumenza,1315,15.4,10.38
+Duno,732,14.9,8.85
+Fagnano Olona,1487,5.2,11.29
+Ferno,1525,4.6,10.55
+Ferrera di Varese,1051,-10.1,10.32
+Gallarate,1820,5.5,11.26
+Galliate Lombardo,1880,21.5,11.72
+Gavirate,1699,13.5,10.48
+Gazzada Schianno,1561,22.7,11.11
+Gemonio,1099,3.9,7.2
+Gerenzano,1803,6.4,12.72
+Germignaga,2210,9.1,10.98
+Golasecca,1012,5.9,9.46
+Gorla Maggiore,1405,-3.5,10.81
+Gorla Minore,1891,16.2,10.9
+Gornate-Olona,1482,0.9,8.97
+Grantola,1206,9.7,10.23
+Inarzo,1460,31.7,9.27
+Induno Olona,1736,8.0,10.09
+Ispra,1888,14.6,10.74
+Jerago con Orago,1379,3.8,9.29
+Lavena Ponte Tresa,2624,6.7,12.52
+Laveno-Mombello,2151,6.1,10.48
+Leggiuno,1819,4.5,10.67
+Lonate Ceppino,1441,3.1,8.52
+Lonate Pozzolo,1420,10.1,9.87
+Lozza,1499,-10.5,9.53
+Luino,2096,10.4,10.86
+Luvinate,2169,10.4,10.45
+Maccagno con Pino e Veddasca,2078,1.1,9.64
+Malnate,1565,-2.4,10.23
+Marchirolo,1505,10.3,9.23
+Marnate,1786,-1.9,10.59
+Marzio,1625,-4.6,10.95
+Masciago Primo,782,4.1,10.31
+Mercallo,1414,6.0,10.49
+Mesenzana,1696,-2.9,9.26
+Montegrino Valtravaglia,1231,12.9,10.14
+Monvalle,1752,9.6,10.29
+Morazzone,1747,33.9,9.59
+Mornago,1398,7.4,9.65
+Oggiona con Santo Stefano,1549,-5.1,11.43
+Olgiate Olona,2003,13.0,11.42
+Origgio,2330,9.4,12.04
+Orino,1096,4.7,10.69
+Porto Ceresio,2285,22.1,9.71
+Porto Valtravaglia,2449,15.2,10.43
+Rancio Valcuvia,944,-23.3,8.46
+Ranco,3469,19.2,9.85
+Saltrio,1771,-5.0,10.36
+Samarate,1436,12.9,10.56
+Sangiano,937,-25.5,10.47
+Saronno,2548,7.8,13.24
+Sesto Calende,2291,6.8,11.55
+Solbiate Arno,1387,2.7,9.58
+Solbiate Olona,1685,6.0,14.61
+Somma Lombardo,1480,2.1,11.23
+Sumirago,1271,1.0,9.31
+Taino,1374,-7.3,9.68
+Ternate,1503,-13.6,11.89
+Tradate,1658,7.7,10.13
+Travedona-Monate,1478,9.5,10.61
+Tronzano Lago Maggiore,3191,27.6,9.61
+Uboldo,2149,10.0,10.28
+Valganna,1118,0.2,9.59
+Varano Borghi,1483,11.9,10.04
+Vedano Olona,1514,8.0,8.96
+Venegono Inferiore,1328,-6.7,10.22
+Venegono Superiore,1664,17.8,11.2
+Vergiate,1531,14.4,9.75
+Viggiù,1537,2.0,10.59
+Vizzola Ticino,1438,-10.5,10.51
+@BG|Lombardia|immobiliare.it ott 2026
+Bergamo,2925,4.5,13.61
+Adrara San Martino,1105,19.7,10.56
+Adrara San Rocco,795,-2.8,9.29
+Albano Sant'Alessandro,1767,9.1,9.83
+Albino,1433,4.3,9.71
+Algua,812,21.7,12.93
+Almè,2021,14.4,9.26
+Almenno San Bartolomeo,1543,17.2,9.68
+Almenno San Salvatore,1279,7.6,8.1
+Alzano Lombardo,1898,18.6,10.7
+Ambivere,1367,1.6,7.71
+Antegnate,1586,16.2,10.13
+Arcene,1527,17.5,10.34
+Ardesio,908,4.7,6.03
+Arzago d'Adda,1379,3.4,9.13
+Averara,677,-16.8,7.89
+Aviatico,1236,1.7,12
+Azzano San Paolo,2349,7.1,10.81
+Azzone,1009,4.6,7.84
+Bagnatica,2092,27.1,10.22
+Barbata,1157,8.6,9.54
+Bariano,1576,11.2,7.82
+Barzana,2685,27.0,8.89
+Bedulita,405,-20.7,7.65
+Berbenno,627,3.5,9.2
+Berzo San Fermo,1197,37.9,10.21
+Bianzano,1334,-2.5,5.78
+Blello,383,14.3,8.18
+Bolgare,1986,-1.9,7.22
+Boltiere,1648,6.0,9.31
+Bonate Sopra,1954,9.0,10.33
+Bonate Sotto,1493,-6.8,8.2
+Borgo di Terzo,833,-2.6,9.14
+Bossico,716,-33.0,7.54
+Bottanuco,1449,9.3,10.97
+Bracca,767,3.1,9.92
+Branzi,1208,-0.2,8.35
+Brembate,1407,3.7,10.45
+Brembate di Sopra,1889,11.9,11.86
+Brignano Gera d'Adda,1499,10.5,7.37
+Brumano,469,-28.1,8.93
+Brusaporto,2017,18.7,7.75
+Calcinate,1726,0.9,8.86
+Calcio,1604,12.2,11.17
+Calusco d'Adda,1695,-2.6,10.96
+Calvenzano,1748,7.6,8.93
+Camerata Cornello,677,-58.5,5.72
+Canonica d'Adda,1437,12.5,9.86
+Capizzone,719,13.9,6.29
+Capriate San Gervasio,1732,2.7,10.47
+Caprino Bergamasco,1165,12.0,7.97
+Caravaggio,1735,4.8,11.76
+Carobbio degli Angeli,1661,22.4,8.29
+Carona,1701,-8.9,11.4
+Carvico,1532,9.9,8.46
+Casazza,1339,11.4,9.31
+Casirate d'Adda,2091,21.6,8.55
+Casnigo,909,-5.8,7.31
+Cassiglio,707,-13.9,6.57
+Castel Rozzone,1458,29.1,7.37
+Castelli Calepio,1905,26.4,9.05
+Castione della Presolana,1621,5.1,10.07
+Castro,1656,14.8,8.41
+Cavernago,1782,-8.2,6.04
+Cazzano Sant'Andrea,1254,16.4,6.75
+Cenate Sopra,1995,8.4,10.02
+Cenate Sotto,2352,26.2,8.47
+Cene,1604,52.8,7.2
+Cerete,1047,4.4,8.59
+Chignolo d'Isola,1914,12.2,10.07
+Chiuduno,1368,-4.3,9.08
+Cisano Bergamasco,1773,15.2,11.32
+Ciserano,1631,13.9,9.73
+Cividate al Piano,1246,14.7,11.62
+Clusone,1288,-4.3,8.12
+Colere,1464,-5.7,8.05
+Cologno al Serio,1930,10.3,8.64
+Colzate,793,-4.5,7.74
+Comun Nuovo,1898,11.5,9.39
+Corna Imagna,586,17.7,8.42
+Cornalba,885,5.4,8.61
+Cortenuova,1490,37.5,10.78
+Costa di Mezzate,1660,-3.1,10.46
+Costa Serina,888,6.3,8.63
+Costa Valle Imagna,894,2.8,7.47
+Costa Volpino,1236,5.3,9.89
+Covo,1390,10.1,10.19
+Credaro,1543,-13.6,9.37
+Curno,2702,-2.8,10.51
+Cusio,624,-23.0,7.62
+Dalmine,1938,4.6,10.9
+Dossena,798,14.3,5.72
+Endine Gaiano,948,3.0,9.63
+Entratico,979,-2.0,9.77
+Fara Gera d'Adda,1587,2.3,8.32
+Fara Olivana con Sola,1387,-4.7,8.38
+Filago,1579,11.0,10.6
+Fino del Monte,1183,8.5,8.46
+Fiorano al Serio,1052,24.5,8.61
+Fontanella,1233,-6.2,9.43
+Fonteno,1398,13.6,8.23
+Foppolo,1353,-,9.97
+Foresto Sparso,973,-9.6,10.36
+Fornovo San Giovanni,1400,-3.6,-
+Fuipiano Valle Imagna,628,-3.4,7.78
+Gandellino,1095,6.7,11.4
+Gandino,700,-7.3,8.01
+Gandosso,901,3.8,8.3
+Gaverina Terme,480,32.6,7.28
+Gazzaniga,974,-1.1,7.96
+Ghisalba,1678,19.4,7.72
+Gorlago,1523,21.1,10.57
+Gorle,2149,4.5,10.19
+Gorno,612,16.1,6.93
+Grassobbio,2078,6.1,11.25
+Gromo,1278,15.9,11.4
+Grone,916,4.3,8.89
+Grumello del Monte,1967,4.5,13.93
+Isola di Fondra,832,16.9,7.35
+Isso,969,19.8,8.92
+Lallio,2083,3.4,11.54
+Leffe,894,4.8,5.78
+Lenna,808,-18.4,5.72
+Levate,1625,13.1,10.76
+Locatello,578,-8.7,7.71
+Lovere,1726,9.5,9.7
+Lurano,1949,1.9,7.37
+Luzzana,1412,14.7,9.74
+Madone,1540,1.4,8.35
+Mapello,1603,5.0,9.7
+Martinengo,1524,8.4,10.87
+Medolago,1711,10.5,10.69
+Mezzoldo,546,1.5,8.29
+Misano di Gera d'Adda,1664,24.9,8.61
+Moio de' Calvi,736,17.6,6.56
+Monasterolo del Castello,1487,22.0,7.48
+Montello,1415,-1.8,9.5
+Morengo,1415,17.9,7.37
+Mornico al Serio,1567,-1.9,11.71
+Mozzanica,1269,1.9,7.73
+Mozzo,2710,4.2,9.81
+Nembro,1722,20.8,10.81
+Olmo al Brembo,608,50.5,7.29
+Oltre il Colle,648,-8.0,7.03
+Oltressenda Alta,763,3.0,8.27
+Oneta,865,-8.1,8.39
+Onore,1328,0.2,9.16
+Orio al Serio,1954,3.4,11.97
+Ornica,899,-2.5,7.96
+Osio Sopra,1984,13.0,11.62
+Osio Sotto,1668,13.4,11.47
+Pagazzano,1493,14.4,7.37
+Paladina,2173,-7.2,10.48
+Palazzago,1414,-1.2,9.09
+Palosco,1391,0.8,10.06
+Parre,890,7.0,6.48
+Parzanica,1814,-13.2,8.99
+Pedrengo,2131,0.5,8.24
+Peia,787,24.1,6.75
+Pianico,846,-8.3,7.53
+Piario,754,-4.2,6.03
+Piazza Brembana,1114,22.4,9.39
+Piazzatorre,966,6.2,7.77
+Piazzolo,638,-10.3,7.42
+Pognano,1459,16.3,8.25
+Ponte Nossa,907,18.9,7.28
+Ponte San Pietro,1659,8.6,10.01
+Ponteranica,2258,-5.2,9.52
+Pontida,1216,2.9,11.22
+Pontirolo Nuovo,1477,17.4,10.47
+Pradalunga,1583,12.4,10.01
+Predore,2781,7.8,10.94
+Premolo,953,-3.1,6.93
+Presezzo,1551,-5.4,9.86
+Pumenengo,998,12.3,9.84
+Ranica,2499,17.7,8.1
+Ranzanico,1508,6.9,9.66
+Riva di Solto,2602,-6.5,8.91
+Rogno,1036,-1.9,9.51
+Romano di Lombardia,1815,5.9,7.74
+Roncobello,723,20.1,7.09
+Roncola,1026,4.9,7.65
+Rota d'Imagna,745,9.6,8.28
+Rovetta,1381,0.7,16.63
+San Giovanni Bianco,664,6.4,5.71
+San Paolo d'Argon,1885,8.8,9.66
+San Pellegrino Terme,1333,15.0,9.96
+Sant'Omobono Terme,734,-0.1,8.33
+Santa Brigida,726,-6.7,7.61
+Sarnico,3171,5.5,12.15
+Scanzorosciate,2235,13.6,9.92
+Schilpario,743,-22.8,7.46
+Sedrina,853,8.4,6.98
+Selvino,1545,-0.9,17.48
+Seriate,1922,12.8,10.84
+Serina,846,-1.1,8.33
+Solto Collina,1173,-30.4,8.41
+Solza,1549,18.8,10.96
+Songavazzo,1355,-7.5,9.38
+Sorisole,1553,1.8,10.64
+Sotto il Monte Giovanni XXIII,1620,17.5,9.64
+Sovere,1006,4.1,7.53
+Spinone al Lago,1482,24.1,7.2
+Spirano,1312,-7.9,8.48
+Stezzano,1960,6.6,11.73
+Strozza,1098,50.2,6.88
+Suisio,1566,13.2,11.22
+Taleggio,761,12.4,5.72
+Tavernola Bergamasca,1832,21.8,11.93
+Telgate,1486,3.4,10.33
+Terno d'Isola,1661,16.2,9.41
+Torre Boldone,2278,-11.8,12.97
+Torre de' Busi,955,-12.5,7.72
+Torre de' Roveri,2640,6.5,8.95
+Torre Pallavicina,1008,61.5,9.39
+Trescore Balneario,1864,0.6,11.35
+Treviglio,2233,5.4,11.46
+Treviolo,2690,-1.7,11.07
+Ubiale Clanezzo,774,-2.1,6.64
+Urgnano,1840,14.4,8.55
+Val Brembilla,742,9.0,7.05
+Valbondione,1011,1.0,11.4
+Valbrembo,1976,-3.2,10.46
+Valgoglio,1047,-0.9,9.26
+Valleve,1218,-10.6,8.68
+Valnegra,549,3.4,6.54
+Valtorta,758,0.9,8.06
+Vedeseta,565,10.6,7.37
+Verdellino,1417,23.4,9.89
+Verdello,1595,15.8,9.23
+Vertova,952,5.8,8.61
+Viadanica,888,6.5,10.75
+Vigano San Martino,1751,23.9,8.89
+Vigolo,981,48.2,10.34
+Villa d'Adda,1461,17.3,9.12
+Villa d'Almè,1766,19.4,8.44
+Villa d'Ogna,916,12.1,6.03
+Villa di Serio,1637,5.5,11.09
+Villongo,1572,10.7,9.6
+Vilminore di Scalve,794,-10.0,9.64
+Zandobbio,1467,1.0,10.08
+Zanica,2092,10.9,11.99
+Zogno,1003,4.9,7.46
+@BS|Lombardia|immobiliare.it set 2026
+Brescia,2356,5.3,12.26
+Acquafredda,920,4.1,8.87
+Adro,1754,0.2,9.01
+Agnosine,812,-11.5,8.17
+Alfianello,1037,7.9,8.42
+Anfo,1268,-16.9,8.23
+Angolo Terme,741,6.2,8.05
+Artogne,1144,11.0,9.25
+Azzano Mella,1760,9.8,7.95
+Bagnolo Mella,1704,26.5,9.64
+Bagolino,1077,12.3,8.37
+Barbariga,1542,89.0,9.08
+Barghe,800,10.2,7.36
+Bassano Bresciano,1473,18.2,9.6
+Bedizzole,1509,3.3,10.52
+Berlingo,1403,17.9,10.19
+Berzo Demo,675,9.9,7.79
+Berzo Inferiore,1109,21.6,7.37
+Bienno,674,-9.5,8.73
+Bione,932,34.9,7.96
+Borgo San Giacomo,1031,17.2,8.57
+Borgosatollo,2245,27.3,9.09
+Borno,1186,-10.4,7.02
+Botticino,2154,14.3,9
+Bovegno,725,9.8,7.37
+Bovezzo,2026,9.6,10.02
+Brandico,1376,3.6,7.62
+Braone,841,14.9,8.73
+Breno,849,3.4,8.73
+Brione,1276,48.2,7.36
+Caino,1196,3.8,10.17
+Calcinato,1697,12.0,6.9
+Calvagese della Riviera,1986,-6.8,8.6
+Calvisano,1120,-3.3,10.03
+Capo di Ponte,870,-0.7,7.81
+Capovalle,564,-24.8,8.71
+Capriano del Colle,1432,0.5,9.27
+Capriolo,1715,17.4,10.38
+Carpenedolo,1691,16.4,8.07
+Castegnato,1955,3.1,8.69
+Castel Mella,2305,10.6,9.54
+Castelcovati,1824,24.8,9.62
+Castenedolo,1893,16.3,11.24
+Casto,554,18.1,7.97
+Castrezzato,1694,-2.6,9.58
+Cazzago San Martino,1193,-14.5,10.42
+Cedegolo,650,5.2,7.87
+Cellatica,2441,7.6,8.93
+Cerveno,968,-21.2,8.38
+Ceto,771,25.6,8.73
+Cevo,612,40.4,8
+Chiari,1660,9.6,11.38
+Cigole,714,-33.1,8.86
+Cimbergo,679,-11.9,8.08
+Cividate Camuno,901,20.8,8.05
+Coccaglio,1424,-3.7,9.77
+Collebeato,2408,-1.0,9.65
+Collio,615,-6.8,7.71
+Cologne,1639,1.7,10.49
+Comezzano-Cizzago,1802,6.7,9.62
+Concesio,1910,13.3,9.84
+Corte Franca,2120,12.5,9.48
+Corteno Golgi,1897,21.2,7.73
+Corzano,896,-11.1,9.24
+Darfo Boario Terme,1457,10.2,8.24
+Dello,1419,29.7,9.08
+Desenzano del Garda,3973,3.0,14.43
+Edolo,1070,-5.7,10.4
+Erbusco,2067,6.1,10.69
+Esine,1197,16.8,7.37
+Fiesse,716,25.2,9.42
+Flero,2088,12.4,9.88
+Gambara,982,-8.2,8.47
+Gardone Riviera,4287,-2.3,12.4
+Gardone Val Trompia,1051,1.9,7.68
+Gargnano,3403,3.0,10.57
+Gavardo,1811,5.5,9.88
+Ghedi,1492,1.2,9.93
+Gianico,1110,15.5,7.37
+Gottolengo,972,-14.6,10.03
+Gussago,2345,23.2,9.71
+Idro,1677,27.6,8.86
+Incudine,648,-23.4,7.7
+Irma,643,-3.7,7.61
+Iseo,2838,1.5,12.35
+Isorella,1008,0.7,10.21
+Lavenone,426,7.0,8.05
+Leno,1273,1.6,9.13
+Limone sul Garda,5337,17.6,12.54
+Lodrino,927,25.6,7.89
+Lograto,1245,-6.9,9.03
+Lonato del Garda,2809,5.8,13.65
+Longhena,476,-18.4,9.08
+Losine,465,2.2,8.73
+Lozio,707,13.5,8.12
+Lumezzane,904,-1.3,6.53
+Maclodio,1971,11.2,9.65
+Mairano,1625,-2.2,9.08
+Malegno,834,10.0,8.73
+Malonno,968,0.3,7.73
+Manerba del Garda,3988,-0.7,15
+Manerbio,1293,15.2,6.52
+Marcheno,1076,24.1,7.97
+Marmentino,483,3.6,7.63
+Marone,2209,3.2,8.13
+Mazzano,1829,4.2,9.45
+Milzano,668,-15.8,8.93
+Moniga del Garda,3905,-2.2,12.98
+Monno,1428,-13.8,8.27
+Monte Isola,2125,-6.3,9.16
+Monticelli Brusati,2366,28.7,8.54
+Montichiari,1750,8.9,10.75
+Montirone,2165,32.3,10.42
+Mura,504,-1.2,8
+Muscoline,2431,27.6,9.92
+Nave,1444,-1.1,8.83
+Niardo,773,10.0,8.73
+Nuvolento,1770,11.4,9.38
+Nuvolera,1745,-2.0,10.23
+Odolo,826,14.9,7.36
+Offlaga,1160,8.6,12.26
+Ome,1564,2.8,8.54
+Ono San Pietro,577,19.7,7.77
+Orzinuovi,1583,8.6,8.92
+Orzivecchi,863,-7.8,9.62
+Ospitaletto,1776,14.6,11.54
+Ossimo,709,-1.0,7.77
+Padenghe sul Garda,4805,-1.2,15.82
+Paderno Franciacorta,1507,10.6,8.15
+Paisco Loveno,352,-30.3,7.25
+Paitone,1619,-1.8,8.77
+Palazzolo sull'Oglio,1536,18.6,10.01
+Paratico,2821,-2.5,13.36
+Paspardo,437,-35.1,7.91
+Passirano,1683,16.5,9.61
+Pavone del Mella,823,17.4,9.04
+Pertica Alta,558,-45.8,7.96
+Pertica Bassa,385,-55.2,7.97
+Pezzaze,684,25.5,7.55
+Pian Camuno,1257,7.3,8
+Piancogno,1127,-4.4,7.37
+Pisogne,2075,38.9,8.62
+Polaveno,745,6.3,6.76
+Polpenazze del Garda,3518,4.8,12.95
+Pompiano,1090,5.8,9.62
+Poncarale,1829,-0.8,9.93
+Ponte di Legno,4675,1.6,18.91
+Pontevico,1028,17.1,7.99
+Pontoglio,1273,10.3,11.62
+Pozzolengo,2746,15.9,13.4
+Pralboino,904,3.8,9.42
+Preseglie,389,-26.2,7.36
+Prevalle,1473,15.4,8.1
+Provaglio d'Iseo,2132,22.5,9.34
+Provaglio Val Sabbia,488,-10.6,8.04
+Puegnago sul Garda,2710,-8.4,9.13
+Quinzano d'Oglio,972,1.1,7.41
+Remedello,895,3.1,7.56
+Rezzato,2140,13.3,11.93
+Roccafranca,1730,12.2,9.62
+Rodengo Saiano,2473,8.2,7.59
+Roè Volciano,1929,16.5,7.3
+Roncadelle,2134,1.6,10.7
+Rovato,1788,9.6,12.22
+Rudiano,1238,8.2,9.51
+Sabbio Chiese,1203,-14.1,7.36
+Sale Marasino,2572,5.9,8.13
+Salò,4097,8.5,12.7
+San Felice del Benaco,4028,16.1,16.96
+San Gervasio Bresciano,1128,-1.7,8.42
+San Paolo,1202,-0.3,8.87
+San Zeno Naviglio,2006,21.6,11.59
+Sarezzo,1512,13.2,6.94
+Saviore dell'Adamello,731,10.9,7.93
+Sellero,455,-9.5,7.77
+Seniga,885,56.6,8.85
+Serle,990,12.9,8.9
+Sirmione,4245,3.3,19.39
+Soiano del Lago,3698,6.8,23.02
+Sonico,565,-18.6,7.94
+Sulzano,3017,13.2,8.21
+Tavernole sul Mella,586,1.6,7.61
+Temù,3625,3.0,16.78
+Tignale,2469,-10.1,10.15
+Torbole Casaglia,1844,0.3,10.19
+Toscolano-Maderno,4315,11.6,12.53
+Travagliato,1756,7.2,8.35
+Tremosine sul Garda,3672,-1.0,10.15
+Trenzano,1437,2.0,7.62
+Treviso Bresciano,483,1.3,8.71
+Urago d'Oglio,1326,5.7,9.02
+Vallio Terme,1037,-6.7,8.13
+Valvestino,597,6.8,8.47
+Verolanuova,1123,3.4,8.42
+Verolavecchia,1102,-3.5,8.42
+Vestone,837,-1.9,8.66
+Vezza d'Oglio,1870,-7.5,11.18
+Villa Carcina,1420,11.2,6.29
+Villachiara,917,-7.5,8.5
+Villanuova sul Clisi,2128,15.6,9.44
+Vione,2458,-17.1,11.69
+Visano,992,-12.7,8.87
+Vobarno,1248,13.7,9.3
+Zone,1437,5.1,8.07
+@PV|Lombardia|immobiliare.it set 2026
+Pavia,2544,5.4,11.46
+Alagna,683,6.1,7.28
+Albonese,499,-41.2,7.83
+Albuzzano,1232,1.4,8.66
+Arena Po,526,-1.5,7.17
+Badia Pavese,768,13.8,6.19
+Bagnaria,484,-2.4,6.81
+Barbianello,659,4.3,7.91
+Bascapè,1089,-0.3,7.89
+Bastida Pancarana,633,2.9,7.33
+Battuda,1451,35.2,9.43
+Belgioioso,1066,-2.3,6.5
+Bereguardo,1743,7.9,7.13
+Borgarello,1776,1.5,8.44
+Borgo Priolo,672,-8.7,7.25
+Borgo San Siro,708,-41.1,7.26
+Borgoratto Mormorolo,363,-13.8,6.98
+Bornasco,1527,8.5,8.31
+Bosnasco,627,7.4,7.38
+Brallo di Pregola,528,43.5,6.71
+Breme,394,-18.3,6.85
+Bressana Bottarone,787,10.1,5.34
+Broni,869,-2.8,7.78
+Calvignano,1150,53.9,7.25
+Campospinoso Albaredo,527,-46.3,7.56
+Candia Lomellina,398,-25.5,7.16
+Canneto Pavese,568,-11.1,7.21
+Carbonara al Ticino,974,7.3,9.4
+Casanova Lonati,549,2.4,6.62
+Casatisma,733,40.4,7.25
+Casei Gerola,668,1.4,6.34
+Casorate Primo,1666,2.5,9.08
+Cassolnovo,907,-4.2,7.41
+Castana,1089,35.3,7.13
+Casteggio,934,-6.5,7.97
+Castelletto di Branduzzo,1078,1.0,6.9
+Castello d'Agogna,608,-22.5,7.83
+Castelnovetto,464,-25.5,7.59
+Cava Manara,1478,14.8,8.62
+Cecima,603,0.8,6.8
+Ceranova,1573,13.9,8.49
+Ceretto Lomellina,646,-10.0,7.83
+Cergnago,632,-2.9,7.98
+Certosa di Pavia,1717,13.2,10.51
+Cervesina,432,5.6,6.97
+Chignolo Po,703,5.2,6.19
+Cigognola,530,-15.7,7.21
+Cilavegna,851,-4.0,6.18
+Codevilla,436,-24.7,6.85
+Colli Verdi,611,-3.0,7.04
+Confienza,475,-17.7,7.41
+Copiano,1001,-1.6,7.4
+Corana,504,5.7,7.12
+Cornale e Bastida,316,-39.0,6.73
+Corteolona e Genzone,903,17.9,6.5
+Corvino San Quirico,508,-1.0,7.25
+Costa de' Nobili,740,-2.6,6.55
+Cozzo,277,-21.3,7.28
+Cura Carpignano,1422,0.7,8.94
+Dorno,845,4.1,6.44
+Ferrera Erbognone,568,-20.8,8.23
+Filighera,929,-6.2,7.58
+Fortunago,628,-12.8,6.94
+Frascarolo,429,-16.0,5.86
+Galliavola,442,17.9,8.23
+Gambarana,322,-6.4,5.86
+Gambolò,944,-5.0,6.52
+Garlasco,1218,17.7,9.02
+Gerenzago,1054,1.2,7.13
+Giussago,1462,0.7,9.49
+Godiasco Salice Terme,1206,5.8,7.92
+Golferenzo,997,3.4,7.05
+Gravellona Lomellina,1051,-3.8,6.18
+Gropello Cairoli,1091,6.2,9.45
+Inverno e Monteleone,940,27.5,7.13
+Landriano,1657,6.6,9.45
+Langosco,308,-25.1,7.3
+Lardirago,1152,-10.4,8.45
+Linarolo,1080,1.9,8.28
+Lomello,498,-25.4,7.04
+Lungavilla,953,-3.3,7
+Magherno,1064,10.7,7.13
+Marcignago,1324,4.7,9.79
+Marzano,1152,-1.5,8.16
+Mede,706,-4.9,6.1
+Menconico,747,15.8,6.72
+Mezzana Bigli,525,-8.5,7.23
+Mezzana Rabattone,683,33.1,7.5
+Mezzanino,596,-39.7,7.98
+Miradolo Terme,832,20.1,6.19
+Montalto Pavese,532,-11.0,7.1
+Montebello della Battaglia,958,4.7,7.25
+Montecalvo Versiggia,650,-1.7,7.05
+Montescano,805,-1.2,7.12
+Montesegale,663,0.9,6.89
+Monticelli Pavese,583,44.0,6.19
+Montù Beccaria,576,-8.4,7.15
+Mornico Losana,1143,1.2,7.11
+Mortara,814,4.4,8.45
+Nicorvo,622,-5.0,7.83
+Olevano di Lomellina,357,-19.4,7.83
+Oliva Gessi,867,-0.5,7.25
+Ottobiano,605,3.2,8.18
+Palestro,488,-6.9,7.36
+Pancarana,606,-24.3,6.98
+Parona,680,-27.5,7.15
+Pietra de' Giorgi,660,0.8,7.08
+Pieve Albignola,526,2.7,6.78
+Pieve del Cairo,630,9.2,7.04
+Pieve Porto Morone,764,3.2,6.65
+Pinarolo Po,689,1.8,5.33
+Pizzale,746,4.0,6.62
+Ponte Nizza,653,15.6,6.83
+Portalbera,725,-12.2,7.41
+Rea,424,8.2,7.67
+Redavalle,633,9.1,7.91
+Retorbido,698,-24.9,6.76
+Rivanazzano Terme,1141,-5.0,9.08
+Robbio,879,-6.0,7.54
+Robecco Pavese,362,-36.2,5.38
+Rocca de' Giorgi,620,-3.1,7.04
+Rocca Susella,954,42.0,6.91
+Rognano,1076,-31.3,9.85
+Romagnese,469,-6.6,7.04
+Roncaro,1391,29.6,8.94
+Rosasco,384,-19.7,7.36
+Rovescala,641,3.7,7.08
+San Cipriano Po,620,-28.9,6.5
+San Damiano al Colle,549,25.1,6.9
+San Genesio ed Uniti,1992,7.4,8.14
+San Giorgio di Lomellina,344,-23.2,8.12
+San Martino Siccomario,1754,3.4,9.44
+San Zenone al Po,636,28.5,6.97
+Sannazzaro de' Burgondi,684,2.1,6.89
+Sant'Alessio con Vialone,1915,3.9,8.14
+Sant'Angelo Lomellina,632,-11.0,7.53
+Santa Cristina e Bissone,925,3.1,6.19
+Santa Giuletta,690,8.2,6.62
+Santa Margherita di Staffora,486,-19.0,6.71
+Santa Maria della Versa,728,-18.0,7.06
+Sartirana Lomellina,548,18.6,5.86
+Scaldasole,486,-15.2,7.26
+Semiana,363,-32.4,5.86
+Silvano Pietra,600,19.5,6.73
+Siziano,2242,9.5,9.33
+Sommo,930,9.3,8.41
+Spessa,650,-27.8,6.5
+Stradella,1083,4.1,8.65
+Suardi,360,-17.1,6.33
+Torrazza Coste,923,-17.7,6.99
+Torre Beretti e Castellaro,422,-39.5,5.86
+Torre d'Arese,1322,19.0,8.69
+Torre d'Isola,1958,1.9,7.75
+Torre de' Negri,836,34.4,6.5
+Torrevecchia Pia,1486,8.3,8.28
+Torricella Verzate,792,-27.1,6.94
+Travacò Siccomario,1683,17.8,8.02
+Trivolzio,1968,13.5,8.5
+Tromello,870,-4.6,8.33
+Trovo,840,-19.3,7.89
+Val di Nizza,570,0.7,6.92
+Valeggio,665,-10.9,7.6
+Valle Lomellina,375,-36.1,6.64
+Valle Salimbene,1064,-26.0,10.14
+Varzi,617,1.0,6.82
+Velezzo Lomellina,428,-20.1,6.49
+Vellezzo Bellini,1662,5.8,10.2
+Verretto,896,35.8,7.25
+Verrua Po,701,-8.5,6.5
+Vidigulfo,1738,3.1,7.02
+Vigevano,1220,1.9,9.86
+Villa Biscossi,507,-0.4,5.86
+Villanova d'Ardenghi,827,14.9,9.45
+Villanterio,946,-12.4,5.75
+Vistarino,1080,-14.6,8.8
+Voghera,1040,-7.1,7.98
+Volpara,1011,18.7,7.04
+Zavattarello,734,12.6,7.04
+Zeccone,1399,3.2,9.49
+Zeme,482,-15.4,7.34
+Zenevredo,642,-1.5,6.95
+Zerbo,655,57.5,6.99
+Zerbolò,1059,15.0,8.69
+Zinasco,843,-0.8,7.95
+@LO|Lombardia|immobiliare.it set 2026
+Lodi,2168,12.4,10.81
+Abbadia Cerreto,963,-15.6,7.59
+Bertonico,820,8.9,7.65
+Boffalora d'Adda,1416,6.6,10.61
+Borghetto Lodigiano,1303,7.7,7.48
+Borgo San Giovanni,1436,13.9,8.5
+Brembio,975,-11.4,7.55
+Casaletto Lodigiano,1419,-7.4,9.13
+Casalmaiocco,2116,17.0,10.05
+Casalpusterlengo,1340,3.9,7.69
+Caselle Landi,482,-1.8,7.94
+Caselle Lurani,1352,8.8,9.64
+Castelgerundo,980,-1.2,6.74
+Castelnuovo Bocca d'Adda,653,11.6,8.12
+Castiglione d'Adda,961,-1.4,6.35
+Castiraga Vidardo,1505,-1.4,8.57
+Cavenago d'Adda,973,-6.4,7.58
+Cervignano d'Adda,1791,2.7,10.82
+Codogno,1316,-3.2,9.19
+Comazzo,1810,4.9,10.79
+Cornegliano Laudense,1563,8.2,10.4
+Corno Giovine,656,-8.5,8.35
+Cornovecchio,401,-6.5,8.07
+Corte Palasio,1322,24.7,9.7
+Crespiatica,1169,19.8,10.03
+Fombio,1136,-9.5,7.33
+Galgagnano,1666,8.7,10.82
+Graffignana,1287,24.7,7.67
+Guardamiglio,1000,5.2,5.14
+Livraga,910,-4.9,8.23
+Lodi Vecchio,1461,7.3,10.02
+Maccastorna,580,5.6,6.7
+Mairago,1371,36.4,8.47
+Maleo,893,-15.5,6.46
+Marudo,1220,-8.1,8.2
+Massalengo,1494,8.0,8.58
+Meleti,471,-12.5,8.01
+Merlino,1690,-2.7,10.76
+Montanaso Lombardo,1433,-11.7,10.44
+Mulazzano,1600,10.3,9.93
+Orio Litta,890,-12.0,7.53
+Ospedaletto Lodigiano,958,-,7.62
+Ossago Lodigiano,1114,3.1,8.05
+Pieve Fissiraga,1675,19.1,9.5
+Salerano sul Lambro,1419,2.8,9.3
+San Fiorano,1208,-2.6,8.99
+San Martino in Strada,1640,7.9,7.01
+San Rocco al Porto,1278,11.4,6.85
+Sant'Angelo Lodigiano,1224,13.1,6.82
+Santo Stefano Lodigiano,975,22.5,8.54
+Secugnago,1113,-6.1,8.47
+Senna Lodigiana,813,10.9,7.77
+Somaglia,947,-17.0,7.69
+Sordio,1981,-1.0,8.77
+Tavazzano con Villavesco,1819,10.4,9.35
+Terranova dei Passerini,928,-26.0,7.75
+Turano Lodigiano,958,-2.8,8.03
+Valera Fratta,1221,9.9,8.92
+Villanova del Sillaro,1293,8.7,7.98
+Zelo Buon Persico,1772,-5.6,11.89
+@CR|Lombardia|immobiliare.it lug 2026
+Cremona,1566,7.1,8.59
+Acquanegra Cremonese,603,-21.1,6.98
+Agnadello,1380,-0.1,10.44
+Annicco,726,9.3,7.42
+Azzanello,590,7.1,8.2
+Bagnolo Cremasco,1432,8.2,9.61
+Bonemerse,1379,4.0,6.84
+Bordolano,563,-12.3,8.09
+Calvatone,428,-4.9,6.8
+Camisano,871,23.2,8.42
+Campagnola Cremasca,1731,-5.4,9.53
+Capergnanica,1112,2.7,12.04
+Cappella Cantone,712,-2.2,7.21
+Cappella de' Picenardi,467,35.4,6.28
+Capralba,1206,-0.4,8.23
+Casalbuttano ed Uniti,769,4.6,6.75
+Casale Cremasco-Vidolasco,1151,5.0,9.53
+Casaletto Ceredano,1000,17.6,10.65
+Casaletto di Sopra,690,-43.1,8.63
+Casaletto Vaprio,1158,-3.3,8.91
+Casalmaggiore,980,-6.4,8.6
+Casalmorano,760,39.4,7.75
+Castel Gabbiano,1262,70.1,7.73
+Casteldidone,428,-12.3,9.29
+Castelleone,1197,7.1,8.79
+Castelverde,1304,14.3,6.75
+Castelvisconti,303,-53.4,8.09
+Cella Dati,497,-18.3,6.28
+Chieve,1201,-9.2,9.87
+Cicognolo,784,18.4,6.28
+Cingia de' Botti,527,-1.1,6.64
+Corte de' Cortesi con Cignone,524,-8.4,8.09
+Corte de' Frati,740,-5.2,7.62
+Credera Rubbiano,934,16.3,9.5
+Crema,1794,5.9,10.67
+Cremosano,1102,-1.9,8.92
+Crotta d'Adda,556,39.3,6.72
+Cumignano sul Naviglio,858,18.7,8.7
+Derovere,550,3.4,6.28
+Dovera,1441,15.7,9.35
+Fiesco,1314,-13.6,8.55
+Formigara,702,6.7,6.72
+Gabbioneta-Binanuova,327,-31.3,7.58
+Gadesco-Pieve Delmona,1018,9.2,8.82
+Genivolta,903,21.2,8.79
+Gerre de' Caprioli,1048,-2.6,6.93
+Gombito,978,13.9,7.71
+Grontardo,844,34.0,7.27
+Grumello Cremonese ed Uniti,703,12.8,6.72
+Gussola,530,-10.2,9.3
+Isola Dovarese,448,-1.1,6.9
+Izano,1253,9.5,8.52
+Madignano,1193,-2.5,7.28
+Malagnino,1340,-12.5,6.5
+Martignana di Po,837,-9.8,9.3
+Monte Cremasco,1559,17.1,9.35
+Montodine,909,3.6,8.09
+Moscazzano,856,0.7,8.36
+Motta Baluffi,809,21.8,6.72
+Offanengo,1218,-4.6,8.63
+Olmeneta,419,-4.8,6.75
+Ostiano,542,11.3,7.86
+Paderno Ponchielli,627,33.7,6.75
+Palazzo Pignano,1257,7.5,8.54
+Pandino,1449,3.4,8.06
+Persico Dosimo,960,-8.4,6.75
+Pescarolo ed Uniti,819,62.2,7.02
+Pessina Cremonese,280,36.6,7.1
+Piadena Drizzona,727,2.3,6.9
+Pianengo,940,-5.9,11.33
+Pieranica,1717,19.7,8.93
+Pieve d'Olmi,880,-6.5,6.62
+Pieve San Giacomo,726,13.8,5.45
+Pizzighettone,837,4.0,6.2
+Pozzaglio ed Uniti,943,12.8,6.75
+Quintano,1740,28.7,8.91
+Ricengo,1358,-0.6,9.48
+Ripalta Arpina,857,38.4,7.95
+Ripalta Cremasca,1520,38.8,9.42
+Ripalta Guerina,1152,26.7,8.26
+Rivarolo del Re ed Uniti,521,21.7,8.82
+Rivolta d'Adda,1643,13.1,10.12
+Robecco d'Oglio,719,1.0,10.02
+Romanengo,1107,15.9,8.64
+Salvirola,1129,-17.3,8.78
+San Bassano,780,7.4,7.21
+San Daniele Po,460,-3.8,6.66
+San Giovanni in Croce,1056,41.4,9.29
+San Martino del Lago,451,-7.6,9.29
+Scandolara Ravara,326,-22.4,9.3
+Scandolara Ripa d'Oglio,498,-31.6,8.05
+Sergnano,1164,6.2,7.73
+Sesto ed Uniti,934,-2.1,6.75
+Solarolo Rainerio,832,1.0,9.28
+Soncino,999,10.0,8.39
+Soresina,815,7.9,8.4
+Sospiro,940,15.1,6.28
+Spinadesco,752,-6.5,6.82
+Spineda,718,119.6,8.78
+Spino d'Adda,1622,1.9,9.81
+Stagno Lombardo,1183,-6.0,6.93
+Ticengo,1067,9.3,8.78
+Torlino Vimercati,1304,-17.7,9.11
+Tornata,548,2.0,9.28
+Torre de' Picenardi,599,16.8,6.9
+Torricella del Pizzo,540,13.2,9.06
+Trescore Cremasco,1282,3.4,8.91
+Trigolo,684,-3.8,7.71
+Vaiano Cremasco,1071,-15.5,9.29
+Vailate,1420,10.9,8.79
+Vescovato,894,7.3,6.28
+Volongo,557,-12.7,7.27
+Voltido,649,13.3,9.29
+@SO|Lombardia|immobiliare.it ott 2026
+Sondrio,1435,1.2,9.14
+Albaredo per San Marco,708,159.3,8.61
+Albosaggia,715,-17.2,7.89
+Andalo Valtellino,1384,9.5,8.52
+Aprica,3072,10.7,19.69
+Ardenno,685,-2.1,9.27
+Bema,661,-34.9,8.34
+Berbenno di Valtellina,653,1.6,10.78
+Bianzone,884,-7.3,6.77
+Bormio,5569,-0.7,27.78
+Buglio in Monte,693,21.4,10.22
+Caiolo,474,-21.8,7.89
+Campodolcino,2338,5.0,11.58
+Caspoggio,1835,2.8,10.82
+Castello dell'Acqua,674,-1.5,6.78
+Castione Andevenno,715,7.4,7.89
+Cedrasco,626,-12.2,10.22
+Cercino,682,-7.3,8.34
+Chiavenna,1744,-13.3,11.88
+Chiesa in Valmalenco,2037,2.8,11.42
+Chiuro,767,4.6,6.73
+Cino,1040,-38.9,8.49
+Civo,810,13.3,8.43
+Colorina,507,9.7,10.22
+Cosio Valtellino,914,13.3,8.34
+Dazio,996,-4.2,8.69
+Delebio,901,-26.0,8.72
+Dubino,1725,9.2,9.95
+Faedo Valtellino,446,9.3,7.28
+Forcola,376,-28.2,9.62
+Fusine,290,-11.6,10.22
+Gerola Alta,913,42.4,8.68
+Gordona,748,47.8,9.34
+Grosio,1726,125.0,8.11
+Grosotto,713,17.9,8
+Lanzada,1109,-0.5,9.52
+Livigno,7168,6.2,25.11
+Lovero,483,-21.6,8.04
+Madesimo,4389,6.0,24.54
+Mantello,1408,-8.3,8.34
+Mazzo di Valtellina,869,42.5,7.93
+Mello,417,-9.2,8.43
+Mese,1069,-16.2,9.24
+Montagna in Valtellina,717,10.3,6.67
+Morbegno,1815,8.9,9.07
+Novate Mezzola,776,-16.0,8.84
+Pedesina,624,-9.7,8.51
+Piantedo,911,-25.8,9.11
+Piateda,636,19.3,7.65
+Piuro,1053,-30.7,9
+Poggiridenti,895,-14.1,7.53
+Ponte in Valtellina,470,-27.8,7.28
+Postalesio,535,-16.8,10.22
+Prata Camportaccio,1351,1.4,9.06
+Rasura,563,2.2,8.34
+Rogolo,1515,19.4,8.34
+Samolaco,662,-9.8,9.18
+San Giacomo Filippo,800,3.9,9.1
+Sernio,518,-3.9,8.33
+Sondalo,1190,20.1,8.91
+Spriana,1453,37.7,6.67
+Talamona,879,-4.2,8.7
+Tartano,452,-10.1,8.78
+Teglio,960,1.6,6.77
+Tirano,1565,-5.0,10.61
+Torre di Santa Maria,1048,-11.5,8.45
+Tovo di Sant'Agata,704,56.4,7.95
+Traona,949,-29.9,8.34
+Tresivio,771,-8.5,7.88
+Val Masino,811,3.3,9.51
+Valdidentro,3829,-2.7,25.06
+Valdisotto,4180,5.4,26.73
+Valfurva,3238,4.5,23.19
+Verceia,619,-31.5,8.89
+Vervio,1192,9.6,7.83
+Villa di Chiavenna,829,-4.2,8.98
+Villa di Tirano,1785,9.4,7.55
+@NO|Piemonte|immobiliare.it ott 2026
+Novara,1755,10.3,10.05
+Agrate Conturbia,1384,1.2,8.38
+Ameno,1478,42.7,10.71
+Armeno,866,23.9,9.26
+Arona,2371,11.1,12.55
+Barengo,375,8.4,6.3
+Bellinzago Novarese,1071,4.7,8.22
+Biandrate,931,7.0,8.37
+Boca,678,22.2,6.25
+Bogogno,2297,-9.4,9.48
+Bolzano Novarese,1063,-14.1,10.71
+Borgo Ticino,1274,20.8,14.05
+Borgolavezzaro,971,23.5,8.32
+Borgomanero,1400,7.5,9.37
+Briga Novarese,1366,32.2,6.73
+Briona,795,33.4,6.36
+Caltignaga,1005,-0.4,16.2
+Cameri,1424,4.9,8.64
+Carpignano Sesia,813,5.9,8.46
+Casalbeltrame,812,-13.7,8.77
+Casaleggio Novara,1167,27.1,8.37
+Casalino,851,-3.5,7.83
+Casalvolone,685,18.9,8.65
+Castellazzo Novarese,851,34.7,9.49
+Castelletto sopra Ticino,1531,4.6,9.04
+Cavaglietto,359,-17.3,9.66
+Cavaglio d'Agogna,360,-31.6,6.3
+Cavallirio,664,0.6,7.23
+Cerano,819,6.2,9.24
+Colazza,1140,25.0,7.68
+Comignago,967,25.9,11.02
+Cressa,970,7.1,9.37
+Cureggio,909,0.7,7.24
+Divignano,765,-1.8,9.58
+Dormelletto,2127,14.8,15.1
+Fara Novarese,565,-17.5,11.81
+Fontaneto d'Agogna,837,2.7,7.75
+Galliate,1415,4.4,9.89
+Garbagna Novarese,1406,3.0,8.66
+Gargallo,834,9.6,8.06
+Gattico-Veruno,1405,6.2,8.46
+Ghemme,687,-8.9,6.65
+Gozzano,1366,52.6,9.31
+Granozzo con Monticello,864,-2.4,8.32
+Grignasco,863,11.1,6.17
+Invorio,1234,13.4,7.34
+Landiona,514,3.6,9.55
+Lesa,2146,-3.2,12.71
+Maggiora,614,-5.5,7.12
+Mandello Vitta,783,20.8,9.89
+Marano Ticino,1137,21.6,7.99
+Massino Visconti,2170,33.1,10.02
+Meina,2639,16.5,9.64
+Mezzomerico,620,-27.6,8.44
+Miasino,1372,-16.6,10.71
+Momo,849,0.6,10.77
+Nebbiuno,1964,30.4,10.56
+Nibbiola,852,1.1,8.32
+Oleggio,1328,1.4,8.64
+Oleggio Castello,1959,22.9,7.99
+Orta San Giulio,2762,5.4,10.72
+Paruzzaro,1476,0.3,7.67
+Pella,3026,27.1,10.71
+Pettenasco,3149,55.2,9.51
+Pisano,1272,-16.5,9.35
+Pogno,544,33.3,7.04
+Pombia,1259,21.4,7.54
+Prato Sesia,479,-16.0,6.08
+Recetto,688,-7.7,6.52
+Romagnano Sesia,681,6.7,6.16
+Romentino,1165,-2.8,10.77
+San Maurizio d'Opaglio,1212,26.9,10.71
+San Nazzaro Sesia,552,-6.9,9.03
+San Pietro Mosezzo,1412,7.5,8.37
+Sillavengo,409,18.9,10.24
+Sizzano,648,63.6,8.46
+Soriso,731,28.5,8.45
+Sozzago,1040,12.1,8.95
+Suno,1187,26.1,8.91
+Terdobbiate,809,-1.1,8.32
+Tornaco,791,26.2,6.13
+Trecate,1271,8.2,8.79
+Vaprio d'Agogna,549,0.7,8.45
+Varallo Pombia,1311,15.5,7.61
+Vespolate,844,13.6,8.31
+Vicolungo,884,17.7,8.37
+Vinzaglio,654,-8.0,7.45
+@VB|Piemonte|mercato-immobiliare.info nov 2026
+Verbania,2650,-,12.5
+Antrona Schieranco,600,-,-
+Arizzano,2850,-,-
+Aurano,1150,-,-
+Bannio Anzino,600,-,-
+Baveno,3050,-,13.3
+Bee,1800,-,-
+Belgirate,3050,-,11.7
+Bognanco,800,-,-
+Borgomezzavalle,450,-,-
+Brovello-Carpugnino,1250,-,-
+Calasca-Castiglione,650,-,-
+Cambiasca,1600,-,-
+Cannero Riviera,3150,-,-
+Cannobio,3100,-,11.7
+Casale Corte Cerro,1200,-,-
+Ceppo Morelli,1050,-,-
+Cesara,1350,-,-
+Cossogno,1050,-,-
+Craveggia,1350,-,-
+Crevoladossola,1350,-,-
+Crodo,1200,-,-
+Domodossola,2350,-,11.3
+Formazza,950,-,-
+Ghiffa,3050,-,-
+Gignese,1700,-,-
+Gravellona Toce,1400,-,9.7
+Gurro,550,-,-
+Macugnaga,2250,-,11.4
+Madonna del Sasso,1200,-,-
+Malesco,1450,-,-
+Masera,1450,-,-
+Mergozzo,1900,-,-
+Miazzina,1300,-,-
+Montecrestese,900,-,-
+Oggebbio,3100,-,-
+Omegna,1500,-,-
+Ornavasso,1350,-,-
+Piedimulera,650,-,-
+Pieve Vergonte,700,-,-
+Premeno,1350,-,-
+Premia,1650,-,-
+Premosello-Chiovenda,1000,-,-
+Quarna Sotto,600,-,-
+Re,850,-,-
+San Bernardino Verbano,1550,-,-
+Santa Maria Maggiore,2250,-,-
+Stresa,2950,-,10.4
+Trarego Viggiona,1250,-,-
+Valle Cannobina,750,-,-
+Vanzone con San Carlo,1200,-,-
+Varzo,1850,-,-
+Villadossola,1150,-,-
+Vogogna,850,-,-
+@VC|Piemonte|mercato-immobiliare.info lug 2026
+Vercelli,1050,-,8.6
+Alagna Valsesia,3900,-,-
+Alice Castello,500,-,-
+Asigliano Vercellese,500,-,-
+Bianzè,500,-,-
+Borgo Vercelli,650,-,-
+Borgo d'Ale,450,-,-
+Borgosesia,850,-,7.6
+Caresana,450,-,-
+Cellio con Breia,450,-,-
+Cigliano,750,-,6
+Crescentino,700,-,-
+Fontanetto Po,450,-,-
+Gattinara,700,-,-
+Livorno Ferraris,650,-,-
+Moncrivello,550,-,-
+Palazzolo Vercellese,450,-,-
+Quarona,950,-,8
+Roasio,550,-,-
+Saluggia,600,-,6
+San Germano Vercellese,450,-,-
+Santhià,750,-,-
+Scopello,1450,-,-
+Serravalle Sesia,700,-,-
+Trino,600,-,5.9
+Tronzano Vercellese,650,-,-
+Valduggia,700,-,-
+Varallo,1000,-,-
+@AL|Piemonte|immobiliare.it ott 2026
+Alessandria,955,0.8,7.68
+Acqui Terme,951,4.9,5.47
+Albera Ligure,584,23.7,5.25
+Alfiano Natta,579,-11.3,4.33
+Alice Bel Colle,561,-2.4,4.7
+Alluvioni Piovera,494,2.1,4.56
+Altavilla Monferrato,616,-1.4,3.84
+Alzano Scrivia,471,-22.7,4.51
+Arquata Scrivia,811,4.8,6.62
+Avolasca,541,19.2,5.54
+Balzola,569,45.2,3.75
+Basaluzzo,913,12.3,6.34
+Bassignana,389,-14.1,4.36
+Belforte Monferrato,592,-25.3,4.01
+Bergamasco,638,14.7,5.44
+Berzano di Tortona,617,17.3,5.29
+Bistagno,638,1.3,5.04
+Borghetto di Borbera,782,18.7,4.34
+Borgo San Martino,556,-7.0,4.05
+Borgoratto Alessandrino,423,-26.3,4.69
+Bosco Marengo,581,9.4,5.41
+Bosio,403,6.6,5.07
+Bozzole,259,-15.1,4.53
+Brignano-Frascata,626,-11.3,5.35
+Cabella Ligure,504,5.9,5.17
+Camagna Monferrato,379,13.8,3.58
+Camino,467,8.6,3.33
+Cantalupo Ligure,498,-10.9,5.4
+Capriata d'Orba,872,-13.2,4.73
+Carbonara Scrivia,1031,-12.7,5.48
+Carentino,774,-6.6,5.49
+Carezzano,389,-13.4,6.13
+Carpeneto,648,-16.0,4.77
+Carrega Ligure,284,-29.0,5.1
+Carrosio,454,-33.1,6.14
+Cartosio,500,8.2,4.63
+Casal Cermelli,560,-8.5,4.78
+Casale Monferrato,875,4.0,7.37
+Casaleggio Boiro,567,-0.2,4.94
+Casalnoceto,617,-2.5,5.92
+Casasco,368,-33.8,5.4
+Cassano Spinola,622,4.0,6.13
+Cassine,541,-1.8,4.36
+Cassinelle,475,-8.8,4.67
+Castellania Coppi,493,-0.8,5.78
+Castellar Guidobono,623,-2.5,5.2
+Castellazzo Bormida,765,0.4,5.84
+Castelletto d'Erro,590,27.7,4.63
+Castelletto d'Orba,636,11.0,4.73
+Castelletto Merli,730,18.1,3.92
+Castelletto Monferrato,751,-11.1,4.98
+Castelnuovo Bormida,395,18.6,4.7
+Castelnuovo Scrivia,649,8.3,6.37
+Castelspina,458,44.0,4.71
+Cavatore,822,30.1,4.63
+Cella Monte,774,1.0,3.16
+Cereseto,383,-16.6,3.16
+Cerreto Grue,474,53.4,5.5
+Cerrina Monferrato,551,10.2,3.82
+Coniolo,955,88.4,5.87
+Conzano,693,5.6,3.58
+Costa Vescovato,579,20.6,5.62
+Cremolino,651,-4.5,4.68
+Denice,649,-9.5,4.7
+Dernice,457,-1.9,5.4
+Fabbrica Curone,501,1.2,5.16
+Felizzano,498,4.0,5.16
+Fraconalto,386,-31.3,5.1
+Francavilla Bisio,607,-27.0,5.09
+Frascaro,434,-19.9,4.7
+Frassinello Monferrato,405,22.7,4.03
+Frassineto Po,418,-15.9,4.12
+Fresonara,547,-10.6,4.94
+Frugarolo,537,8.3,5.54
+Fubine Monferrato,775,-17.2,5.16
+Gabiano,457,-19.8,3.79
+Gamalero,460,-46.4,4.7
+Garbagna,532,-17.4,5.66
+Gavi,799,-3.2,5.67
+Giarole,566,-17.7,4.19
+Gremiasco,406,-21.9,5.24
+Grognardo,308,-37.8,4.61
+Grondona,713,29.2,5.51
+Guazzora,477,-14.1,4.49
+Isola Sant'Antonio,527,-7.9,4.45
+Lerma,530,7.9,4.37
+Lu e Cuccaro Monferrato,669,13.4,3.74
+Malvicino,852,55.8,4.98
+Masio,443,6.2,4.16
+Melazzo,810,-3.2,4.45
+Merana,506,-5.8,5.49
+Mirabello Monferrato,358,13.3,4.98
+Molare,702,-1.8,4.74
+Molino dei Torti,492,-11.0,4.51
+Mombello Monferrato,445,-8.6,3.13
+Momperone,487,4.1,5.29
+Moncestino,294,-39.4,3.94
+Mongiardino Ligure,408,7.4,5.19
+Monleale,638,-22.7,5.33
+Montacuto,634,0.8,5.25
+Montaldeo,341,-16.6,4.96
+Montaldo Bormida,651,42.8,4.58
+Montecastello,289,-17.2,4.43
+Montechiaro d'Acqui,437,-13.5,5.37
+Montegioco,802,-1.5,5.45
+Montemarzino,400,-19.7,5.37
+Morano sul Po,434,5.6,3.35
+Morbello,397,27.2,4.62
+Mornese,350,-14.8,4.98
+Morsasco,500,-5.1,4.37
+Murisengo Monferrato,529,10.2,3.59
+Novi Ligure,885,2.1,6.34
+Occimiano,425,4.7,3.88
+Odalengo Grande,629,54.9,4.03
+Odalengo Piccolo,699,24.8,4.05
+Olivola,513,-26.1,4.03
+Orsara Bormida,284,-36.9,4.85
+Ottiglio,466,15.6,4.03
+Ovada,814,-5.8,5.13
+Oviglio,567,-15.6,4.25
+Ozzano Monferrato,366,-32.5,2.3
+Paderna,698,182.6,5.78
+Pareto,450,0.7,5.15
+Parodi Ligure,303,-17.7,5.08
+Pasturana,1244,3.8,5.61
+Pecetto di Valenza,497,-22.1,5.45
+Pietra Marazzi,758,-7.9,5.54
+Pomaro Monferrato,389,-25.0,4.2
+Pontecurone,624,-3.3,6.44
+Pontestura,429,-4.9,2.3
+Ponti,555,25.9,4.64
+Ponzano Monferrato,544,13.8,3.77
+Ponzone,579,-5.5,4.77
+Pozzol Groppo,1005,-16.6,5.25
+Pozzolo Formigaro,913,4.7,5.54
+Prasco,492,13.4,4.53
+Predosa,560,1.1,4.89
+Quargnento,609,18.9,5.07
+Quattordio,563,-4.3,4.03
+Ricaldone,481,-17.8,4.91
+Rivalta Bormida,428,-7.2,4.54
+Rivarone,424,2.7,4.41
+Rocca Grimalda,768,-1.7,4.73
+Roccaforte Ligure,379,-10.8,5.32
+Rocchetta Ligure,509,13.9,5.27
+Rosignano Monferrato,720,5.0,2.3
+Sala Monferrato,568,1.1,3.16
+Sale,644,1.7,6.44
+San Cristoforo,419,-0.2,5.07
+San Giorgio Monferrato,703,-3.8,2.3
+San Salvatore Monferrato,603,-6.4,4.78
+San Sebastiano Curone,676,2.0,5.29
+Sant'Agata Fossili,524,12.2,6.13
+Sardigliano,410,-9.1,6.13
+Sarezzano,741,-6.1,5.44
+Serralunga di Crea,542,-34.9,2.89
+Serravalle Scrivia,733,-2.9,5.76
+Sezzadio,476,23.6,4.7
+Silvano d'Orba,676,-7.7,4.73
+Solero,645,10.6,4.05
+Solonghello,257,8.4,2.94
+Spigno Monferrato,528,15.3,5.1
+Spineto Scrivia,589,-5.6,5.66
+Stazzano,700,8.2,5.04
+Strevi,619,20.0,4.37
+Tagliolo Monferrato,666,-11.4,4.01
+Tassarolo,908,-28.5,5.67
+Terruggia,613,-23.8,3.44
+Terzo,598,-6.7,5.04
+Ticineto,449,-8.0,4.14
+Tortona,1052,2.1,7.48
+Treville,378,-23.9,2.3
+Trisobbio,777,29.1,4.56
+Valenza,791,3.0,7.67
+Valmacca,316,-13.9,4.37
+Vignale Monferrato,758,2.0,5.16
+Vignole Borbera,584,-15.5,4.8
+Viguzzolo,774,-11.2,6.38
+Villadeati,611,32.0,4.49
+Villalvernia,513,11.8,6.13
+Villamiroglio,351,11.8,3.97
+Villanova Monferrato,502,-10.0,4.18
+Villaromagnano,556,4.5,5.55
+Visone,521,-2.6,4.77
+Volpedo,580,-27.0,5.71
+Volpeglino,466,-34.0,5.23
+Voltaggio,644,18.8,6.14
+@GE|Liguria|immobiliare.it ott 2026
+Genova,1891,8.1,11.26
+Arenzano,3922,3.3,13.42
+Avegno,1882,6.8,5.8
+Bargagli,768,15.1,5.49
+Bogliasco,4089,3.0,14.13
+Borzonasca,689,1.8,6.56
+Busalla,601,-2.8,6.68
+Camogli,5469,-0.9,16.18
+Campo Ligure,678,13.2,5.37
+Campomorone,898,-2.7,6.04
+Carasco,1612,-2.2,7.07
+Casarza Ligure,1893,2.3,8.88
+Casella,915,9.7,5.76
+Castiglione Chiavarese,1344,0.3,6.29
+Ceranesi,827,-8.3,6.04
+Chiavari,3556,0.2,11.33
+Cicagna,1019,1.5,4.87
+Cogoleto,3433,-11.2,11.15
+Cogorno,2029,-1.0,8.44
+Coreglia Ligure,404,-10.0,10.23
+Crocefieschi,485,3.2,6.76
+Davagna,469,-19.1,5.18
+Fascia,431,12.5,5.83
+Favale di Malvaro,507,-9.6,6.21
+Fontanigorda,279,-15.7,5.93
+Gorreto,416,28.0,6.07
+Isola del Cantone,483,-,6.76
+Lavagna,3423,-0.9,10.18
+Leivi,2313,16.3,7.97
+Lorsica,407,-10.5,5.54
+Lumarzo,627,3.0,5.34
+Masone,664,0.6,5.3
+Mele,1245,-10.9,6.4
+Mezzanego,880,-3.2,7.25
+Mignanego,925,16.8,5.22
+Moconesi,802,-8.2,6
+Moneglia,3448,13.2,10.15
+Montebruno,485,26.0,5.98
+Montoggio,682,-0.7,5.73
+Ne,925,23.7,7.82
+Neirone,475,3.3,6.21
+Orero,299,-31.9,4.89
+Pieve Ligure,4931,13.5,14.24
+Portofino,10060,-3.2,33.41
+Propata,467,36.5,6.48
+Rapallo,3255,5.2,14.82
+Recco,3485,0.8,9.38
+Rezzoaglio,275,-16.9,6.54
+Ronco Scrivia,551,-5.8,6.76
+Rondanina,484,27.0,5.91
+Rossiglione,512,-12.0,5.3
+Rovegno,575,37.2,5.91
+San Colombano Certenoli,908,-2.2,7.25
+Sant'Olcese,1114,-2.0,6.39
+Santa Margherita Ligure,6350,2.3,19.62
+Santo Stefano d'Aveto,1014,1.0,6.54
+Savignone,837,0.1,5.92
+Serra Riccò,1049,-4.2,5.38
+Sestri Levante,3672,0.4,19.23
+Sori,3340,6.3,10.13
+Tiglieto,645,-18.9,7.98
+Torriglia,713,-5.9,5.45
+Tribogna,545,27.9,5.86
+Uscio,917,3.0,5.59
+Valbrevenna,464,31.8,5.73
+Vobbia,307,4.1,6.76
+Zoagli,4692,-4.6,16.05
+@SV|Liguria|immobiliare.it ott 2026
+Savona,2102,1.6,9.18
+Alassio,5951,2.2,20.83
+Albenga,2675,-3.2,11.59
+Albisola Superiore,3027,0.3,12.15
+Albissola Marina,3457,1.9,8.72
+Altare,783,-1.9,10.01
+Andora,3861,6.7,18.64
+Arnasco,1250,21.0,11.28
+Balestrino,1134,7.5,16.02
+Bardineto,773,-14.8,14.02
+Bergeggi,5420,11.9,10.5
+Boissano,2816,1.0,17.32
+Borghetto Santo Spirito,4019,13.2,20.3
+Borgio Verezzi,5036,0.1,16.75
+Bormida,451,10.8,12.99
+Cairo Montenotte,914,5.3,10.01
+Calice Ligure,2235,-2.7,11.31
+Calizzano,744,3.9,14.53
+Carcare,1092,-3.4,10.8
+Casanova Lerrone,842,-2.3,8.79
+Castelbianco,1538,66.3,11.88
+Castelvecchio di Rocca Barbena,587,-18.6,12.26
+Celle Ligure,4821,15.1,11.93
+Cengio,590,3.5,10.67
+Ceriale,3450,0.1,9.28
+Cisano sul Neva,2089,2.9,13.02
+Cosseria,717,-28.9,10.57
+Dego,638,20.4,10.46
+Erli,598,2.9,12.74
+Finale Ligure,5059,4.8,19.04
+Garlenda,2740,4.9,9.55
+Giustenice,2128,21.1,13.76
+Giusvalla,613,-2.4,10.79
+Laigueglia,5338,1.1,30.16
+Loano,4594,7.1,12.38
+Magliolo,2968,1.6,12.64
+Mallare,422,11.3,11.42
+Massimino,1180,118.5,13.07
+Millesimo,889,-17.1,12.17
+Mioglia,533,2.5,10.97
+Murialdo,351,-4.9,12.9
+Nasino,639,54.3,11.35
+Noli,4737,3.2,10.51
+Onzo,780,27.5,12.16
+Orco Feglino,1503,-17.9,9.77
+Ortovero,1315,-13.6,9.08
+Osiglia,527,10.3,13.06
+Pallare,643,43.2,11.58
+Piana Crixia,510,-7.6,10.76
+Pietra Ligure,4732,7.8,15.32
+Plodio,878,2.3,11.14
+Pontinvrea,942,13.6,11.35
+Quiliano,1620,-3.5,9.29
+Rialto,1569,20.0,14.85
+Roccavignale,510,-23.4,11.41
+Sassello,833,3.6,11.88
+Spotorno,4543,-2.2,14.54
+Stella,1328,-5.7,10.04
+Stellanello,1343,-3.0,8.79
+Testico,1085,-10.5,12.79
+Toirano,2392,5.0,17.32
+Tovo San Giacomo,2451,-3.4,12.9
+Urbe,508,8.8,10.59
+Vado Ligure,1971,1.2,8.57
+Varazze,4496,1.1,12.77
+Vendone,944,2.8,10.91
+Vezzi Portio,1968,25.9,10.6
+Villanova d'Albenga,2266,8.8,8.79
+Zuccarello,1756,1.8,13.37
+@SP|Liguria|immobiliare.it ott 2026
+La Spezia,2254,5.3,10.3
+Ameglia,2571,-2.0,11.87
+Arcola,1709,2.3,10.33
+Beverino,1175,9.2,7.66
+Bolano,1406,-5.3,8.64
+Bonassola,4495,-5.8,23.97
+Borghetto di Vara,899,12.0,8.61
+Brugnato,1169,-6.0,8.78
+Calice al Cornoviglio,907,-8.5,7.66
+Carro,888,-6.3,6.3
+Carrodano,932,0.3,6.98
+Castelnuovo Magra,2061,3.8,9.38
+Deiva Marina,2112,-3.3,8.29
+Follo,1190,-8.8,7.66
+Framura,2509,-19.0,23.97
+Lerici,4508,1.9,13.74
+Levanto,3740,3.4,28.49
+Luni,1907,-2.3,10.6
+Maissana,705,-9.6,7.59
+Monterosso al Mare,5599,1.4,23.97
+Pignone,1589,13.8,8.78
+Porto Venere,4417,-4.2,9.76
+Riccò del Golfo di Spezia,1313,7.6,7.66
+Riomaggiore,4556,0.4,10.24
+Rocchetta di Vara,775,-0.1,9.15
+Santo Stefano di Magra,1872,0.5,10.63
+Sarzana,2239,0.9,10.01
+Sesta Godano,665,-3.2,8.09
+Varese Ligure,590,-17.5,6.54
+Vernazza,3562,-0.9,18.09
+Vezzano Ligure,1516,9.0,11.88
+Zignago,1179,-13.6,12.66
+@PC|Emilia-Romagna|immobiliare.it set 2026
+Piacenza,1998,9.0,10.29
+Agazzano,879,-7.0,5.96
+Alseno,923,-10.6,5.09
+Alta Val Tidone,611,-0.5,5.69
+Besenzone,1252,57.9,7.22
+Bettola,612,-3.5,6.22
+Bobbio,709,-10.3,6.19
+Borgonovo Val Tidone,1170,4.5,7.01
+Cadeo,1159,8.3,7
+Calendasco,827,-11.7,7.21
+Caorso,957,5.6,5.8
+Carpaneto Piacentino,1187,2.9,7.64
+Castel San Giovanni,1240,20.0,10.01
+Castell'Arquato,966,-0.2,8.72
+Castelvetro Piacentino,993,3.0,7.4
+Cerignale,347,42.2,6.91
+Coli,614,24.0,6.19
+Corte Brugnatella,682,9.3,6.81
+Cortemaggiore,777,-8.7,8.56
+Farini,500,7.1,6.6
+Ferriere,581,-0.9,6.72
+Fiorenzuola d'Arda,1405,34.1,8.93
+Gazzola,1693,14.9,13.22
+Gossolengo,2046,4.8,7.92
+Gragnano Trebbiense,1267,7.0,6.99
+Gropparello,757,15.4,6.51
+Lugagnano Val d'Arda,791,7.2,5.6
+Monticelli d'Ongina,846,4.7,7.4
+Morfasso,519,-8.6,5.6
+Ottone,356,7.2,6.9
+Pianello Val Tidone,976,-0.4,5.29
+Piozzano,712,-14.4,7.18
+Podenzano,1521,-0.7,6.11
+Ponte dell'Olio,818,1.9,6.84
+Pontenure,1489,1.4,8.18
+Rivergaro,1432,6.1,7.69
+Rottofreno,1609,5.5,9.35
+San Giorgio Piacentino,1255,8.6,7.43
+San Pietro in Cerro,847,14.9,7.54
+Sarmato,1119,-10.0,6.81
+Travo,950,-4.4,5.82
+Vernasca,660,6.8,7.06
+Vigolzone,833,-6.8,5
+Villanova sull'Arda,544,-17.1,8.33
+Zerba,530,91.3,6.8
+Ziano Piacentino,672,12.9,5.54
+@VR|Veneto|immobiliare.it ott 2026
+Verona,2933,5.9,12.32
+Affi,3208,1.7,15.52
+Albaredo d'Adige,1364,27.6,9
+Angiari,1789,-0.6,8.88
+Arcole,1484,1.9,9.3
+Badia Calavena,583,-21.2,5.97
+Bardolino,5702,6.0,17.42
+Belfiore,2103,39.2,9.11
+Bevilacqua,990,12.5,7.88
+Bonavigo,633,-20.1,8.94
+Boschi Sant'Anna,574,-58.3,8.88
+Bosco Chiesanuova,1280,10.2,14.84
+Bovolone,1499,14.3,6.94
+Brentino Belluno,1191,35.8,7.14
+Brenzone sul Garda,4156,-8.8,24.13
+Bussolengo,2176,3.3,11.13
+Buttapietra,1935,15.2,8.53
+Caldiero,1851,4.6,11.04
+Caprino Veronese,2146,10.7,8.37
+Casaleone,786,6.5,7.86
+Castagnaro,713,8.2,9.66
+Castel d'Azzano,2107,11.5,9.01
+Castelnuovo del Garda,2679,6.9,11.25
+Cavaion Veronese,3022,10.3,15.13
+Cazzano di Tramigna,806,-8.0,10.83
+Cerea,1257,6.8,8.5
+Cerro Veronese,1428,1.3,7.73
+Cologna Veneta,1236,3.4,6.69
+Colognola ai Colli,1895,16.0,11.04
+Concamarise,690,-23.1,6.78
+Costermano sul Garda,4177,5.3,13.05
+Dolcè,1471,53.7,9.91
+Erbè,922,10.4,9.54
+Erbezzo,1434,-15.7,11.28
+Ferrara di Monte Baldo,1285,-6.6,7.14
+Fumane,1098,12.5,8.58
+Garda,5029,0.7,14.44
+Gazzo Veronese,727,10.2,7.27
+Grezzana,1582,-0.6,7.3
+Illasi,1285,-8.7,8.81
+Isola della Scala,1401,-6.8,9.28
+Isola Rizza,1313,-7.4,8.26
+Lavagno,1980,6.3,9.46
+Lazise,4666,6.3,15.44
+Legnago,1132,8.1,9.02
+Malcesine,5118,7.2,12.4
+Marano di Valpolicella,1041,18.4,10.52
+Mezzane di Sotto,1327,-20.7,11.35
+Minerbe,951,-15.7,8.59
+Montecchia di Crosara,1239,17.1,7
+Monteforte d'Alpone,1102,-5.6,8.88
+Mozzecane,1747,7.1,11.38
+Negrar di Valpolicella,1979,8.5,10.74
+Nogara,1153,7.8,9.91
+Nogarole Rocca,1675,14.6,7.52
+Oppeano,1794,22.8,9.81
+Palù,1471,127.7,9.81
+Pastrengo,2309,9.8,12.21
+Pescantina,2289,13.3,9.85
+Peschiera del Garda,3900,2.5,14.19
+Povegliano Veronese,2125,24.4,10.67
+Pressana,843,20.3,7.98
+Rivoli Veronese,2352,22.1,11.2
+Roncà,872,23.7,8.47
+Ronco all'Adige,1189,18.8,9.72
+Roverchiara,835,-5.0,8.5
+Roverè Veronese,543,-10.4,9.7
+Roveredo di Guà,1229,20.3,7.46
+Salizzole,1007,13.1,7.94
+San Bonifacio,1742,0.8,12.12
+San Giovanni Ilarione,879,-6.0,9.75
+San Giovanni Lupatoto,1988,9.2,10.04
+San Martino Buon Albergo,2268,6.8,9.35
+San Mauro di Saline,823,-7.5,10.43
+San Pietro di Morubio,1023,-15.4,8.26
+San Pietro in Cariano,2226,7.2,10.77
+San Zeno di Montagna,3097,4.2,14.57
+Sanguinetto,719,12.7,7.49
+Sant'Ambrogio di Valpolicella,2240,19.7,9.17
+Sant'Anna d'Alfaedo,698,0.3,9.49
+Selva di Progno,696,15.2,8.14
+Soave,1715,9.9,11.86
+Sommacampagna,1748,-2.0,11.28
+Sona,2062,10.9,12.06
+Sorgà,827,9.0,9.28
+Terrazzo,658,6.8,9.66
+Torri del Benaco,6714,4.2,24.15
+Tregnago,1189,5.8,14.88
+Trevenzuolo,1056,-2.1,9.1
+Valeggio sul Mincio,1998,10.3,11.53
+Velo Veronese,862,83.8,7.84
+Veronella,1457,17.3,8.85
+Vestenanova,502,-12.2,10.34
+Vigasio,1841,7.3,7.95
+Villa Bartolomea,837,-20.6,9.56
+Villafranca di Verona,2006,5.2,10.27
+Zevio,1826,5.0,10.03
+Zimella,1148,8.8,8.03
