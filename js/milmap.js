@@ -16,7 +16,7 @@ const MM_NIL_URLS = [
   "https://dati.comune.milano.it/dataset/e8e765fc-d882-40b8-95d8-16ff3d39eb7c/resource/9c4e0776-56fc-4f3d-8a90-f4992a3be426/download/ds964_nil_wm.geojson",
   "https://dati.comune.milano.it/dataset/e74f6267-a6b5-4e61-8de6-c11f50f7990f/resource/d57873db-49e5-41d9-b044-65e12960bd02/download/ds2811_spotted-milan-urbanheatexposure-nil-01072024_31072024.geojson",
 ];
-const MM_RAMP = [[0, "#0b2440"], [3000, "#0d3f66"], [4000, "#0a6a8f"], [5000, "#0097b8"], [6000, "#00c8e0"], [7500, "#5ee9f5"], [9500, "#b4f8ff"], [12000, "#ffffff"]];
+const MM_RAMP = [[0, "#1f1a0c"], [3000, "#3d3112"], [4000, "#6b5412"], [5000, "#9a7a1c"], [6000, "#c9a227"], [7500, "#e8c04a"], [9500, "#f8e7a8"], [12000, "#ffffff"]];
 const MM_MET = { v: ["Vendita €/m²", f => f.v, v => eur(v)], a: ["Affitto €/m²", f => f.a, v => num(v, 1) + " €"], rl: ["Rendita lunga", f => f.a * 12 / f.v, v => pct(v, 1)] };
 
 function mmLoad() {
@@ -78,28 +78,28 @@ function mmStile() {
     version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
     sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
     layers: [
-      { id: "bg", type: "background", paint: { "background-color": "#03060c" } },
-      { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": "#060c18", "fill-opacity": 0.8 } },
-      { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": "#04140f", "fill-opacity": 0.9 } },
-      { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": "#04182b" } },
-      { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": "#0a3a5c", "line-width": 1.2 } },
-      { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#3b2a5e", "line-width": 1, "line-dasharray": [3, 2] } },
+      { id: "bg", type: "background", paint: { "background-color": "#050505" } },
+      { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": "#0d0c0a", "fill-opacity": 0.8 } },
+      { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": "#0d120c", "fill-opacity": 0.9 } },
+      { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": "#0c1216" } },
+      { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": "#1e2a30", "line-width": 1.2 } },
+      { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#3a3326", "line-width": 1, "line-dasharray": [3, 2] } },
       { id: "road-minor", type: "line", source: S, "source-layer": "transportation", minzoom: 12,
         filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street", "path"], true, false],
-        paint: { "line-color": "#10304a", "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.4, 16, 2.5, 18, 7] } },
+        paint: { "line-color": "#262219", "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.4, 16, 2.5, 18, 7] } },
       { id: "road-major", type: "line", source: S, "source-layer": "transportation",
         filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
-        paint: { "line-color": "#14607a", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.6, 14, 2.5, 18, 12], "line-blur": 0.5 } },
+        paint: { "line-color": "#4a3d1e", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.6, 14, 2.5, 18, 12], "line-blur": 0.5 } },
     ],
   };
 }
 function mmColorExpr(metric) {
   const key = metric === "a" ? "a" : metric === "rl" ? "rl" : "v";
-  const ramp = metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : metric === "rl" ? [[0.025, "#0b2440"], [0.035, "#0a6a8f"], [0.042, "#00c8e0"], [0.05, "#5ee9f5"], [0.06, "#ffffff"]] : MM_RAMP;
+  const ramp = metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : metric === "rl" ? [[0.025, "#2a220a"], [0.035, "#6b5412"], [0.042, "#c9a227"], [0.05, "#e8c04a"], [0.06, "#ffffff"]] : MM_RAMP;
   return ["interpolate", ["linear"], ["to-number", ["get", key]], ...ramp.flat()];
 }
 function mmLegend() {
-  const met = MM_MET[MM.metric], ramp = MM.metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : MM.metric === "rl" ? [[0.025, "#0b2440"], [0.035, "#0a6a8f"], [0.042, "#00c8e0"], [0.05, "#5ee9f5"], [0.06, "#ffffff"]] : MM_RAMP;
+  const met = MM_MET[MM.metric], ramp = MM.metric === "a" ? MM_RAMP.map(([s, c]) => [s / 260, c]) : MM.metric === "rl" ? [[0.025, "#2a220a"], [0.035, "#6b5412"], [0.042, "#c9a227"], [0.05, "#e8c04a"], [0.06, "#ffffff"]] : MM_RAMP;
   return `<div class="mmleg"><b>${met[0]}</b><span class="bar" style="background:linear-gradient(90deg,${ramp.map(r => r[1]).join(",")})"></span><span class="ends"><i>${met[2](ramp[0][0] || ramp[1][0])}</i><i>${met[2](ramp[ramp.length - 1][0])}+</i></span></div>`;
 }
 
@@ -143,17 +143,17 @@ async function mmInit(el) {
     map.addSource("hintlab", { type: "geojson", data: hintLab });
     map.addSource("celllab", { type: "geojson", data: cellLab });
     map.addLayer({ id: "hint-fill", type: "fill", source: "hint", filter: ["!=", ["get", "v"], null], paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 9, 0.45, 14, 0.18] } }, "road-minor");
-    map.addLayer({ id: "hint-line", type: "line", source: "hint", paint: { "line-color": "#7df3ff", "line-opacity": 0.45, "line-width": 1 } });
+    map.addLayer({ id: "hint-line", type: "line", source: "hint", paint: { "line-color": "#f2cf5b", "line-opacity": 0.45, "line-width": 1 } });
     map.addLayer({ id: "cell-fill", type: "fill", source: "cells", paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.55, 14, 0.25, 17, 0.12] } }, "road-minor");
-    map.addLayer({ id: "cell-line", type: "line", source: "cells", paint: { "line-color": "#00c8e0", "line-opacity": 0.35, "line-width": 0.8 } });
+    map.addLayer({ id: "cell-line", type: "line", source: "cells", paint: { "line-color": "#c9a227", "line-opacity": 0.35, "line-width": 0.8 } });
     // palazzi in 3D
     map.addLayer({ id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 13,
-      paint: { "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], 10], 0, "#0b1d33", 20, "#0f3a5c", 40, "#126b8c", 80, "#16a7c4", 150, "#7df3ff"],
+      paint: { "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], 10], 0, "#1a1814", 20, "#2a2620", 40, "#3d372c", 80, "#6b5f45", 150, "#f2cf5b"],
         "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]],
         "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.88, "fill-extrusion-vertical-gradient": true } });
     map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
     map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#facc15", "fill-extrusion-height": ["+", ["coalesce", ["get", "h"], 12], 1.5], "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } });
-    map.addLayer({ id: "sel-pin", type: "circle", source: "sel", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": 7, "circle-color": "#facc15", "circle-stroke-color": "#03060c", "circle-stroke-width": 2 } });
+    map.addLayer({ id: "sel-pin", type: "circle", source: "sel", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": 7, "circle-color": "#facc15", "circle-stroke-color": "#050505", "circle-stroke-width": 2 } });
     // metro
     const M = TERR.milano, metroL = [], metroS = [];
     for (const [ln, arr] of Object.entries(M.metro)) {
@@ -166,20 +166,20 @@ async function mmInit(el) {
     map.addSource("metros", { type: "geojson", data: { type: "FeatureCollection", features: metroS } });
     map.addLayer({ id: "metro-glow", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 7, "line-opacity": 0.25, "line-blur": 4 } });
     map.addLayer({ id: "metro", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 2.4 } });
-    map.addLayer({ id: "metros", type: "circle", source: "metros", minzoom: 11.5, paint: { "circle-radius": 3.5, "circle-color": "#03060c", "circle-stroke-color": ["get", "col"], "circle-stroke-width": 2 } });
+    map.addLayer({ id: "metros", type: "circle", source: "metros", minzoom: 11.5, paint: { "circle-radius": 3.5, "circle-color": "#050505", "circle-stroke-color": ["get", "col"], "circle-stroke-width": 2 } });
     // punti di interesse
     map.addSource("poi", { type: "geojson", data: { type: "FeatureCollection", features: M.poi.map(([c, n, la, lo]) => ({ type: "Feature", properties: { c, n, col: T_POI[c][1] }, geometry: { type: "Point", coordinates: [lo, la] } })) } });
-    map.addLayer({ id: "poi", type: "circle", source: "poi", layout: { visibility: MM.lay.poi ? "visible" : "none" }, paint: { "circle-radius": 6, "circle-color": ["get", "col"], "circle-stroke-color": "#03060c", "circle-stroke-width": 1.5 } });
+    map.addLayer({ id: "poi", type: "circle", source: "poi", layout: { visibility: MM.lay.poi ? "visible" : "none" }, paint: { "circle-radius": 6, "circle-color": ["get", "col"], "circle-stroke-color": "#050505", "circle-stroke-width": 1.5 } });
     // etichette: vie, civici, microzone, comuni
     map.addLayer({ id: "street-lab", type: "symbol", source: "omt", "source-layer": "transportation_name", minzoom: 14,
       layout: { "symbol-placement": "line", "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 14, 10, 18, 14], "text-max-angle": 30 },
-      paint: { "text-color": "#8fd8ea", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+      paint: { "text-color": "#d9cfae", "text-halo-color": "#050505", "text-halo-width": 1.6 } });
     map.addLayer({ id: "housenum", type: "symbol", source: "omt", "source-layer": "housenumber", minzoom: 17,
-      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#facc15", "text-halo-color": "#03060c", "text-halo-width": 1.4 } });
+      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#facc15", "text-halo-color": "#050505", "text-halo-width": 1.4 } });
     mmRelabel();
     map.addLayer({ id: "hint-lab", type: "symbol", source: "hintlab", minzoom: 9.5,
       layout: { "text-field": ["concat", ["get", "n"], ["case", ["!=", ["get", "v"], null], ["concat", "\n", ["to-string", ["get", "v"]], " €"], ""]], "text-font": ["Noto Sans Regular"], "text-size": 11 },
-      paint: { "text-color": "#b3cde4", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+      paint: { "text-color": "#d4cdb8", "text-halo-color": "#050505", "text-halo-width": 1.6 } });
     // quartieri ufficiali (NIL): se il Comune risponde
     mmNil(map);
     mmAnnLayer(map); mmGeocodifica();
@@ -199,11 +199,11 @@ async function mmNil(map) {
       MM.nil = g;
       if (!map.getStyle()) return;
       map.addSource("nil", { type: "geojson", data: g });
-      map.addLayer({ id: "nil-line", type: "line", source: "nil", layout: { visibility: MM.lay.nil ? "visible" : "none" }, paint: { "line-color": "#ff2bd6", "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 15, 2], "line-opacity": 0.75, "line-dasharray": [2, 1.2] } }, "bld");
+      map.addLayer({ id: "nil-line", type: "line", source: "nil", layout: { visibility: MM.lay.nil ? "visible" : "none" }, paint: { "line-color": "#f5d76e", "line-width": ["interpolate", ["linear"], ["zoom"], 10, 0.8, 15, 2], "line-opacity": 0.75, "line-dasharray": [2, 1.2] } }, "bld");
       const lab = { type: "FeatureCollection", features: g.features.map(f => { const c = mmFeatCentro(f); return c ? { type: "Feature", properties: { n: f.properties.nil }, geometry: { type: "Point", coordinates: c } } : null; }).filter(Boolean) };
       map.addSource("nillab", { type: "geojson", data: lab });
       map.addLayer({ id: "nil-lab", type: "symbol", source: "nillab", minzoom: 12.2, maxzoom: 16, layout: { visibility: MM.lay.nil ? "visible" : "none", "text-field": ["upcase", ["get", "n"]], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": 0.12 },
-        paint: { "text-color": "#ff7ae6", "text-halo-color": "#03060c", "text-halo-width": 1.6 } });
+        paint: { "text-color": "#e9c46a", "text-halo-color": "#050505", "text-halo-width": 1.6 } });
       const b = $("#mmnilnote"); if (b) b.hidden = true;
       return;
     } catch (e) { /* provo la fonte successiva */ }
@@ -251,6 +251,7 @@ function mmTap(e) {
 function mmShowSel(sel, fly) {
   const map = MM.map;
   if (map && map.getSource("sel")) map.getSource("sel").setData({ type: "FeatureCollection", features: [sel.geom ? { type: "Feature", properties: { h: sel.h || 12 }, geometry: sel.geom } : { type: "Feature", properties: {}, geometry: { type: "Point", coordinates: [sel.lon, sel.lat] } }] });
+  if (MM.onSel) MM.onSel(sel);
   const box = $("#mmsheet"); if (!box) return;
   box.innerHTML = mmScheda(sel); box.hidden = false;
   if (fly && map && map.getZoom() < 15) map.easeTo({ center: [sel.lon, sel.lat], zoom: 16, duration: 700 });
@@ -275,38 +276,41 @@ function mmScheda(s) {
       <div><small>Affitto</small><b>${num(c.a, 1)} €</b><em>al m² al mese</em></div>
       <div><small>Rendita</small><b class="cy">${pct(c.a * 12 / c.v, 1)}</b><em>lorda, lungo</em></div></div>` : `<p class="note">Qui non ho prezzi: tocca un punto dentro Milano o in un comune colorato.</p>`}
     ${near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} ${[...x.ln].map(l => `<span class="ml" style="--mc:${TERR.milano.metro_col[l]}">${l}</span>`).join("")} <em>${num(Math.round(x.d / 10) * 10)} m</em>`).join(" · ")}</p>` : ""}
-    ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>Valuta un immobile qui</button></div>` : ""}`;
+    ${c ? `<div class="btns" style="margin-top:8px"><button class="btn pri" data-valuta>${{ bnb: "Calcola il B&B qui", lungo: "Calcola la rendita qui", sub: "Business plan qui", privati: "Vai all'elenco", cliente: "Valuta per il cliente" }[MM.mode] || "Valuta un immobile qui"}</button></div>` : ""}`;
 }
 
 /* ---------- vista Milano ---------- */
-function vMilano3D() {
+function vMilano3D(zona, mode = "mappa") {
+  MM.mode = mode; const MD = MI_MODI[mode] || MI_MODI.mappa;
   const f = store.get("f_mm", null); if (f) { MM.metric = f.metric || "v"; Object.assign(MM.lay, f.lay || {}); }
   MM.sel = store.get("mm_sel", null);
   const M = TERR.milano;
-  return `<h1>Milano</h1><p class="sub">Milano e hinterland in 3D: tocca un palazzo per vedere via, quartiere, prezzi e valutarlo. ${M.micro.length} microzone di prezzo, tutti i comuni intorno.</p>
+  if (mode === "privati") MM.lay.ann = true;
+  return `${miBread(mode)}<h1>${esc(MD.t)}</h1><p class="sub">${MD.sub}</p>
   <div class="mmbar">
     <div class="mmsearch"><input type="search" id="mmq" placeholder="Cerca un indirizzo: via Tortona 27" autocomplete="off"><div id="mmres" class="mmres" hidden></div></div>
     <div class="chips" id="mmm">${Object.entries(MM_MET).map(([k, m]) => `<button class="chip ${k === MM.metric ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
-    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["ann", "Annunci"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#00c8e0", ann: "#ff2bd6", nil: "#ff7ae6", metro: "#e3242b", poi: "#facc15", d3: "#7df3ff" }[k]}"><i></i>${t}</button>`).join("")}</div>
+    <div class="chips" id="mml">${[["prezzi", "Prezzi"], ["ann", "Annunci"], ["nil", "Quartieri"], ["metro", "Metro"], ["poi", "Servizi"], ["d3", "3D"]].map(([k, t]) => `<button class="chip lay ${MM.lay[k] ? "on" : ""}" data-l="${k}" style="--lc:${{ prezzi: "#c9a227", ann: "#f5d76e", nil: "#e9c46a", metro: "#e3242b", poi: "#facc15", d3: "#f2cf5b" }[k]}"><i></i>${t}</button>`).join("")}</div>
   </div>
   <div class="mmwrap"><div class="mm3d" id="mm3d"></div><div class="mmsheet" id="mmsheet" hidden></div></div>
   <div id="mmleg">${mmLegend()}</div>
   <p class="note">Da computer: due dita sul trackpad per spostarti, pizzico o rotellina per lo zoom, tasto destro (o Ctrl + trascina) per ruotare e inclinare. Da telefono: un dito sposta, due dita zoomano e ruotano.</p>
   <p class="note" id="mmnilnote" hidden>I confini ufficiali dei quartieri del Comune non si sono caricati: vedi le microzone di prezzo (linee azzurre).</p>
-  <h2>Valuta un immobile a Milano e hinterland</h2>
+  ${mode === "privati" ? miPrivatiHtml() : mode === "sub" ? miSubHtml() : `<h2>${esc(MD.form)}</h2>
   <div class="card">${vForm("mvf", `<fieldset><legend>Dove</legend><div class="vg">
+      ${mode === "cliente" ? `<label class="wide"><span>Cliente (proprietario)</span><input type="text" data-c="cliente" value="${esc(store.get("mi_cliente", ""))}" placeholder="Nome e cognome, compare sul PDF"></label>` : ""}
       <label class="wide"><span>Indirizzo</span><input type="text" data-c="addr" value="${esc(MM.sel ? mmIndirizzo(MM.sel) : "")}" placeholder="Tocca un palazzo sulla mappa o scrivi"></label>
       <label class="wide"><span>Microzona di prezzo</span><select data-c="micro"><option value="">Scegli…</option>
         ${M.zone.map(z => `<optgroup label="${esc(z.n)}">${M.micro.filter(m => m.z === z.n).map(m => `<option ${MM.sel?.micro === m.n ? "selected" : ""}>${esc(m.n)}</option>`).join("")}</optgroup>`).join("")}
         <optgroup label="Hinterland">${tIdx().com.filter(c => ["MI", "MB"].includes(c.p) && c.n !== "Milano").sort((a, b) => a.n.localeCompare(b.n)).map(c => `<option value="@${esc(c.n)}" ${!MM.sel?.micro && MM.sel?.comune === c.n ? "selected" : ""}>${esc(c.n)}</option>`).join("")}</optgroup>
       </select></label></div></fieldset>`, store.get("vform_milano", V_DEF))}<div id="mvout"></div></div>
-  ${vSalvate("milano")}
-  <h2>Classifica delle zone <small>${esc(MZ_MET.rl[0])}</small></h2>
-  <div class="tbars">${[...M.zone].sort((a, b) => b.a / b.v - a.a / a.v).map((x, i) => `<a class="tbar" href="#milano/${encodeURIComponent(x.n)}"><span class="tn"><i>${i + 1}</i>${esc(x.n)}<em>${eur(x.v)}/m² · ${num(x.a, 1)} €/m²</em></span><span class="tv"><span class="tb"><span style="width:${Math.max(3, (x.a * 12 / x.v) / 0.06 * 100)}%"></span></span><b>${pct(x.a * 12 / x.v, 1)}</b></span></a>`).join("")}</div>
+  ${vSalvate("milano")}`}
+  ${mode === "cliente" || mode === "privati" ? "" : `<h2>Classifica delle zone <small>${esc(MZ_MET.rl[0])}</small></h2>
+  <div class="tbars">${[...M.zone].sort((a, b) => b.a / b.v - a.a / a.v).map((x, i) => `<a class="tbar" href="#milano/mappa/${encodeURIComponent(x.n)}"><span class="tn"><i>${i + 1}</i>${esc(x.n)}<em>${eur(x.v)}/m² · ${num(x.a, 1)} €/m²</em></span><span class="tv"><span class="tb"><span style="width:${Math.max(3, (x.a * 12 / x.v) / 0.06 * 100)}%"></span></span><b>${pct(x.a * 12 / x.v, 1)}</b></span></a>`).join("")}</div>`}
   <p class="src">Prezzi: immobiliare.it, zone e microzone di Milano (ottobre 2026) e comuni dell'hinterland. Mappa: © OpenStreetMap, OpenFreeMap. Confini: Comune di Milano (NIL), openpolis. Le microzone sono disegnate attorno al loro centro: i confini tra una e l'altra sono indicativi.</p>`;
 }
 function afterMilano3D(zona) {
-  const M = TERR.milano;
+  const M = TERR.milano, mode = MM.mode;
   const saveF = () => store.set("f_mm", { metric: MM.metric, lay: MM.lay });
   $("#mmm").addEventListener("click", e => { const c = e.target.closest("[data-m]"); if (!c) return; MM.metric = c.dataset.m; saveF();
     document.querySelectorAll("#mmm .chip").forEach(x => x.classList.toggle("on", x === c)); mmApplyLayers();
@@ -326,30 +330,41 @@ function afterMilano3D(zona) {
   // scheda del palazzo
   const sheet = $("#mmsheet");
   sheet.addEventListener("click", e => {
+    const sg = e.target.closest("[data-segann]"); if (sg) { const a = mmAnnunci().find(x => x.id === sg.dataset.segann); if (a) sg.textContent = segToggle(segAnn(a)) ? "★ Seguito" : "☆ Segui"; return; }
+    const vi = e.target.closest("[data-visto]"); if (vi) { const v = store.get("ann_visti", []); if (!v.includes(vi.dataset.visto)) { v.push(vi.dataset.visto); store.set("ann_visti", v.slice(-3000)); } }
     if (e.target.closest("[data-close]")) { sheet.hidden = true; if (MM.map?.getSource("sel")) MM.map.getSource("sel").setData({ type: "FeatureCollection", features: [] }); return; }
-    if (e.target.closest("[data-valuta]")) { mmToForm(); $("#mvf").scrollIntoView({ behavior: "smooth", block: "start" }); }
+    if (e.target.closest("[data-valuta]")) { mmToForm(); ($("#mvf") || $("#msf") || $("#plist"))?.scrollIntoView({ behavior: "smooth", block: "start" }); }
   });
+  if (mode === "privati") { miPrivatiBind(); } else if (mode === "sub") { miSubBind(); } else {
   // valutatore collegato
-  const form = $("#mvf"), out = $("#mvout"), selM = form.querySelector("[data-c=micro]"), addr = form.querySelector("[data-c=addr]");
-  vBind(form, out, () => {
-    const v = selM.value; if (!v) return null;
-    if (v[0] === "@") { const c = tIdx().byN.get(tnorm(v.slice(1))); if (!c?.v) return null;
-      const s = MM.sel && MM.sel.comune === c.n ? MM.sel : { lat: c.lat, lon: c.lon, comune: c.n };
-      return { v: c.v, a: c.a, nome: addr.value || c.n, milano: false, str: c.lat != null ? tStrVicino(c) : null, sel: s, com: c }; }
-    const mi = M.micro.find(m => m.n === v), z = M.zone.find(x => x.n === mi.z);
-    const s = MM.sel && MM.sel.micro === mi.n ? MM.sel : { lat: mi.lat, lon: mi.lon, micro: mi.n, zona: mi.z, comune: "Milano" };
-    return { v: mi.v, a: mi.a, nome: addr.value || ("Milano, " + mi.n), milano: true, str: MZ_STR({ ...z, v: mi.v }), micro: mi, zona: z, sel: s };
-  }, "milano");
+  const form = $("#mvf"), out = $("#mvout"), selM = form.querySelector("[data-c=micro]"), addr = form.querySelector("[data-c=addr]"), cli = form.querySelector("[data-c=cliente]");
+  if (cli) cli.addEventListener("input", () => store.set("mi_cliente", cli.value));
+  vBind(form, out, () => { const c = miCtxForm(); return c ? { ...c, mode, cliente: cli ? cli.value.trim() : "" } : null; }, "milano");
   out.addEventListener("click", e => { if (e.target.closest("[data-pdf]") && out._r) mmPdf(out._r); });
+  }
   if (zona) { const z = M.zone.find(x => x.n === zona); if (z) MM.sel = { lat: z.lat, lon: z.lon, micro: M.micro.filter(m => m.z === z.n).sort((a, b) => hav(z.lat, z.lon, a.lat, a.lon) - hav(z.lat, z.lon, b.lat, b.lon))[0]?.n, zona: z.n, comune: "Milano" }; }
   if (zona && MM.sel) MM.fly = [MM.sel.lon, MM.sel.lat];
   MM.ready = false; mmInit($("#mm3d"));
+}
+/* contesto della valutazione dal modulo (microzona o comune dell'hinterland) */
+function miCtxForm() {
+  const M = TERR.milano, form = $("#mvf") || $("#msf"); if (!form) return null;
+  const selM = form.querySelector("[data-c=micro]"), addr = form.querySelector("[data-c=addr]");
+  {
+    const v = selM.value; if (!v) return null;
+    if (v[0] === "@") { const c = tIdx().byN.get(tnorm(v.slice(1))); if (!c?.v) return null;
+      const s = MM.sel && MM.sel.comune === c.n ? MM.sel : { lat: c.lat, lon: c.lon, comune: c.n };
+      return { v: c.v, a: c.a, nome: (addr && addr.value) || c.n, milano: false, str: c.lat != null ? tStrVicino(c) : null, sel: s, com: c }; }
+    const mi = M.micro.find(m => m.n === v), z = M.zone.find(x => x.n === mi.z);
+    const s = MM.sel && MM.sel.micro === mi.n ? MM.sel : { lat: mi.lat, lon: mi.lon, micro: mi.n, zona: mi.z, comune: "Milano" };
+    return { v: mi.v, a: mi.a, nome: (addr && addr.value) || ("Milano, " + mi.n), milano: true, str: MZ_STR({ ...z, v: mi.v }), micro: mi, zona: z, sel: s };
+  }
 }
 function mmRelabel() {
   const map = MM.map; if (!map || !map.getSource("celllab")) return;
   const fld = MM.metric === "a" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "a"], 10]], 10]], " €"] : MM.metric === "rl" ? ["concat", ["to-string", ["/", ["round", ["*", ["get", "rl"], 1000]], 10]], "%"] : ["concat", ["to-string", ["get", "v"]], " €"];
   map.addLayer({ id: "cell-lab", type: "symbol", source: "celllab", minzoom: 11.3, maxzoom: 15.5, layout: { visibility: MM.lay.prezzi ? "visible" : "none", "text-field": ["concat", ["get", "n"], "\n", fld], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 11.3, 9, 14, 12], "text-padding": 4 },
-    paint: { "text-color": "#e6f7ff", "text-halo-color": "#03060c", "text-halo-width": 1.8 } });
+    paint: { "text-color": "#f3efe2", "text-halo-color": "#050505", "text-halo-width": 1.8 } });
 }
 function mmToForm() {
   const s = MM.sel, form = $("#mvf"); if (!s || !form) return;
@@ -374,7 +389,7 @@ function mmPdf({ r, q, ctx }) {
     ["Spazi esterni", [q.balcone ? `balconi ${q.balcone} m²` : "", q.terrazzo ? `terrazzo ${q.terrazzo} m²` : "", q.giardino ? `giardino ${q.giardino} m²` : ""].filter(Boolean).join(", ") || "—"],
     ["Pertinenze", [q.cantina ? `cantina ${q.cantina} m²` : "", { no: "", posto: "posto auto", singolo: "box singolo", doppio: "box doppio" }[q.box]].filter(Boolean).join(", ") || "—"],
     ["Dotazioni", [q.risc === "autonomo" ? "riscaldamento autonomo" : "riscaldamento centralizzato", q.portineria ? "portineria" : "", q.arredato ? "arredato" : ""].filter(Boolean).join(", ")]];
-  const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Valutazione - ${esc(ctx.nome)}</title>
+  const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Valutazione - ${esc(ctx.nome)}${ctx.cliente ? " - " + esc(ctx.cliente) : ""}</title>
 <style>
 @page{size:A4;margin:14mm 14mm 16mm}
 *{box-sizing:border-box}body{margin:0;font-family:Georgia,"Times New Roman",serif;color:#2b2326;font-size:11pt;line-height:1.45}
@@ -404,11 +419,13 @@ footer{margin-top:22px;border-top:1px solid #e6dccd;padding-top:8px;font-size:8.
 </style></head><body>
 <button class="printbtn" onclick="window.print()">Salva PDF / Stampa</button>
 <header><img src="${logo}" alt="Maison Collection"><div class="d sans">Valutazione immobiliare<br>${oggi}</div></header>
-<h1>Stima del valore di mercato</h1>
+<h1>${ctx.mode === "bnb" ? "Analisi investimento B&amp;B" : ctx.mode === "lungo" ? "Analisi investimento a reddito" : "Stima del valore di mercato"}</h1>
+${ctx.cliente ? `<p class="addr" style="margin-bottom:2px">Preparata per <b>${esc(ctx.cliente)}</b></p>` : ""}
 <p class="addr">${esc(ctx.nome)}${s.nil ? ` · quartiere ${esc(s.nil)}` : ""}${ctx.micro ? ` · microzona ${esc(ctx.micro.n)}` : ""}</p>
 <div class="hero">
   <div class="val"><small>Valore di mercato stimato</small><b>${eur(r.valore)}</b><span>Forbice ${eur(r.min)} – ${eur(r.max)} · ${eur(r.valore / r.sup)} al m² commerciale</span></div>
   <div class="box"><small>${r.prezzo ? "Prezzo richiesto" : "Prezzo di realizzo rapido"}</small><b>${eur(r.prezzo || r.offerta)}</b><span class="note">${r.prezzo ? (r.sconto >= 0 ? `${pct(r.sconto, 0)} sotto il valore stimato` : `${pct(-r.sconto, 0)} sopra il valore stimato`) : "circa il 3% sotto il valore"}</span></div>
+  ${ctx.mode === "cliente" ? `<div class="box"><small>Prezzo consigliato di pubblicazione</small><b>${eur(Math.ceil(r.valore * 1.05 / 5000) * 5000)}</b><span class="note">con un margine di trattativa del 5% circa</span></div>` : ""}
   ${r.valDopo ? `<div class="box"><small>Valore dopo i lavori</small><b>${eur(r.valDopo)}</b><span class="note">lavori previsti ${eur(r.lavori)}</span></div>` : ""}
 </div>
 <h2>L'immobile</h2>
@@ -511,19 +528,20 @@ async function mmGeocodifica() {   // 1 richiesta al secondo, come chiede OpenSt
   } finally { MM_GEO_RUN = false; }
 }
 function mmAnnFC() {
-  return { type: "FeatureCollection", features: mmAnnunci().filter(a => a.lon != null && !a.appross).map(a => ({ type: "Feature", properties: { id: a.id, p: a.p, mq: a.mq, m2: Math.round(a.mq2) },
+  const fp = MM.mode === "privati" ? store.get("f_priv", { solo: true }) : null;
+  return { type: "FeatureCollection", features: mmAnnunci().filter(a => a.lon != null && !a.appross && (!fp || ((!fp.solo || a.priv) && (!+fp.max || a.p <= +fp.max) && (!+fp.mq || a.mq >= +fp.mq)))).map(a => ({ type: "Feature", properties: { id: a.id, p: a.p, mq: a.mq, m2: Math.round(a.mq2) },
     geometry: { type: "Point", coordinates: [a.lon, a.lat] } })) };
 }
 function mmAnnLayer(map) {
   map.addSource("ann", { type: "geojson", data: mmAnnFC() });
   map.addLayer({ id: "ann", type: "circle", source: "ann", layout: { visibility: MM.lay.ann ? "visible" : "none" },
-    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#ff2bd6", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.2, "circle-opacity": 0.95 } });
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#f5d76e", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.2, "circle-opacity": 0.95 } });
   map.on("click", "ann", e => { const f = e.features[0]; if (!f) return; const a = mmAnnunci().find(x => x.id === f.properties.id); if (!a) return;
     e.originalEvent.__ann = true;
     const box = $("#mmsheet"); box.innerHTML = `<button class="mmx" data-close aria-label="Chiudi">✕</button><div class="loc">Annuncio in vendita · ${a.fonte}</div>
       <h3 class="mmt">${esc(a.via || "Milano")}</h3><div class="offer" style="margin-top:8px"><div><small>Prezzo</small><b>${eur(a.p)}</b><em>${a.mq} m² · ${a.loc || "?"} locali</em></div>
       <div><small>Al m²</small><b class="cy">${eur(a.mq2)}</b><em>prezzo richiesto</em></div><div><small>Microzona</small><b style="font-size:15px">${esc(mmMicroAt(a.lon, a.lat)?.n || "—")}</b><em>${eur(mmMicroAt(a.lon, a.lat)?.v)}/m²</em></div></div>
-      <p class="note">${esc(a.d)}</p><div class="btns"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio</a></div>`; box.hidden = false; });
+      <p class="note">${esc(a.d)}</p><div class="btns"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener" data-visto="${a.id}">Apri l'annuncio</a><button class="btn sec" data-segann="${a.id}">${segIds().has("a:" + a.id) ? "★ Seguito" : "☆ Segui"}</button></div>`; box.hidden = false; });
 }
 /* comparabili per la valutazione: stessi m² circa, più vicini prima */
 function mmComps(ctx, q) {

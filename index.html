@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Invest17</title>
+<title>Keystone</title>
 <meta name="description" content="Analisi di immobili da mettere a reddito: valore, comparabili, rendimenti e notizie">
-<meta name="theme-color" content="#04070d">
+<meta name="theme-color" content="#070707">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Invest17">
+<meta name="apple-mobile-web-app-title" content="Keystone">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -20,10 +20,10 @@
 <style>
 /* ===== Stile CYBER (preso da Dreamers): nero con ciano e magenta, vetro con riflessi ===== */
 :root{
-  --bg:#04070d;--panel:#0a1220;--panel2:#101c33;--line:#1c3a63;--line2:rgba(125,243,255,.14);
-  --tx:#e6f7ff;--tx2:#b3cde4;--muted:#8fb0d0;
-  --cy:#00c8e0;--cy2:#7df3ff;--mg:#ff2bd6;--yl:#facc15;--on:#001018;
-  --hd1:#0a1a33;--hd2:#040a14;
+  --bg:#070707;--panel:#141414;--panel2:#1e1e1e;--line:#3a3320;--line2:rgba(242,207,91,.14);
+  --tx:#f3efe2;--tx2:#d4cdb8;--muted:#a8a08a;
+  --cy:#c9a227;--cy2:#f2cf5b;--mg:#f5d76e;--yl:#facc15;--on:#14100a;
+  --hd1:#1c1c1c;--hd2:#0b0b0b;
   --good:#22c55e;--warn:#f59e0b;--bad:#ef4444;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -31,84 +31,95 @@
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;background:var(--bg)}
 body{margin:0;min-height:100vh;color:var(--tx);font-family:var(--body);font-size:15px;line-height:1.45;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 30px);
-  background:radial-gradient(900px 500px at 85% -10%,rgba(0,200,224,.10),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(255,43,214,.06),transparent 60%),linear-gradient(180deg,#060b16,var(--bg) 40%)}
+  background:radial-gradient(900px 500px at 85% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(245,215,110,.06),transparent 60%),linear-gradient(180deg,#0a0a0a,var(--bg) 40%)}
 a{color:var(--cy2)}
 button{font-family:inherit}
 [hidden]{display:none!important}
 img{max-width:100%}
 
 /* ---- intestazione: vetro con riflesso ---- */
-.top{position:sticky;top:0;z-index:900;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),linear-gradient(180deg,var(--hd1),var(--hd2));
-  box-shadow:0 3px 0 var(--cy),0 6px 18px rgba(0,200,224,.35);padding-top:env(safe-area-inset-top,0px)}
-.toprow{display:flex;align-items:center;gap:12px;padding:12px 16px 8px}
+.top{position:sticky;top:0;z-index:900;background:#101010;box-shadow:0 2px 0 var(--cy),0 8px 20px rgba(0,0,0,.6);padding-top:env(safe-area-inset-top,0px)}
+.toprow{display:flex;align-items:center;gap:10px;padding:9px 12px 8px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.logo i{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;font-size:22px;color:var(--on);
-  background:linear-gradient(180deg,var(--cy2),var(--cy));box-shadow:0 0 18px rgba(0,200,224,.55),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.18);position:relative;overflow:hidden}
+.logo i{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;font-size:22px;color:var(--on);
+  background:linear-gradient(180deg,var(--cy2),var(--cy));box-shadow:0 0 18px rgba(201,162,39,.55),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.18);position:relative;overflow:hidden}
 .logo i::after{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0));border-radius:12px 12px 40% 40%}
-.logo b{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;letter-spacing:.03em;text-transform:uppercase;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.logo b{font-family:var(--display);font-style:italic;font-weight:800;font-size:26px;letter-spacing:.05em;text-transform:uppercase;line-height:.95;color:#f3efe2}
+.logo b small{display:block;font-family:var(--body);font-style:normal;font-weight:600;font-size:8.5px;letter-spacing:.2em;color:var(--cy);margin-top:3px;white-space:nowrap}
+.logo i svg{width:26px;height:26px;position:relative;z-index:1}
+.logo:active i{transform:rotate(-20deg);transition:transform .2s}
 .top .sp{flex:1}
+.hback{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:12px;border:1px solid #5a4818;background:#171717;color:var(--cy2);cursor:pointer;margin-right:-4px}
+.hback svg{width:22px;height:22px}
 .taxsw{display:flex;background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:999px;padding:3px;box-shadow:inset 0 1px 3px rgba(0,0,0,.5)}
 .taxsw button{border:0;background:none;color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 10px;border-radius:999px;cursor:pointer}
-.taxsw button.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 10px rgba(0,200,224,.5)}
+.taxsw button.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 10px rgba(201,162,39,.5)}
 
 /* ---- barra di navigazione a schede inclinate ---- */
-.nav{display:flex;gap:6px;overflow-x:auto;padding:4px 16px 0;scrollbar-width:none}
+.nav{display:flex;gap:5px;overflow-x:auto;padding:2px 12px 9px;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nav a{flex:none;display:flex;align-items:center;gap:7px;padding:9px 18px 10px;text-decoration:none;color:var(--muted);transform:skewX(-14deg);
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border-radius:6px 6px 0 0;
-  font-family:var(--display);font-style:italic;font-weight:800;font-size:18px;letter-spacing:.06em;text-transform:uppercase}
+.nav a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:5px;padding:8px 2px;text-decoration:none;color:var(--muted);transform:skewX(-14deg);
+  background:rgba(255,255,255,.06);border-radius:3px;
+  font-family:var(--display);font-style:italic;font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .nav a>*{transform:skewX(14deg)}
-.nav a svg{width:17px;height:17px;flex:none}
-.nav a.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 16px rgba(0,200,224,.45)}
+.nav a svg{width:15px;height:15px;flex:none}
+@media (max-width:620px){.nav a svg{display:none}.nav a{font-size:12px;letter-spacing:0}.nav{gap:4px;padding-left:8px;padding-right:8px}.nav a[data-v=inv]{flex-grow:1.6}}
+.nav a.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 16px rgba(201,162,39,.45)}
 
 main{max-width:980px;margin:0 auto;padding:18px 14px 0}
 h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:800;text-transform:uppercase;margin:0}
-h1{font-size:30px;line-height:1.02;letter-spacing:.03em;text-shadow:0 0 22px rgba(0,200,224,.25)}
-h2{font-size:17px;letter-spacing:.14em;color:var(--mg);margin:26px 0 10px;display:flex;align-items:center;gap:8px;text-shadow:0 0 14px rgba(255,43,214,.35)}
+h1{font-size:30px;line-height:1.02;letter-spacing:.03em;text-shadow:0 0 22px rgba(201,162,39,.25)}
+h2{font-size:17px;letter-spacing:.14em;color:var(--mg);margin:26px 0 10px;display:flex;align-items:center;gap:8px;text-shadow:0 0 14px rgba(245,215,110,.35)}
 h2 small{font-family:var(--display);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--muted);margin-left:auto;text-shadow:none}
 h2 small a{color:var(--cy2);text-decoration:none}
 .sub{color:var(--muted);font-size:13.5px;margin:6px 0 0}
 
 /* ---- pannelli ---- */
-.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 40%),linear-gradient(180deg,#0d1830,#070e1c);border:1px solid var(--line);border-radius:22px;padding:14px;
+.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 40%),linear-gradient(180deg,#161616,#0b0b0b);border:1px solid var(--line);border-radius:22px;padding:14px;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 10px 26px rgba(0,0,0,.35)}
-.card.neon{border-top:2px solid var(--mg);border-bottom:2px solid var(--mg);box-shadow:0 0 18px rgba(255,43,214,.18),inset 0 1px 0 rgba(255,255,255,.06)}
+.card.neon{border-top:2px solid var(--mg);border-bottom:2px solid var(--mg);box-shadow:0 0 18px rgba(245,215,110,.18),inset 0 1px 0 rgba(255,255,255,.06)}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
 .kpi{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0) 50%),var(--panel2);border:1px solid var(--line);border-radius:16px;padding:10px 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
 .kpi small{display:block;font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .kpi b{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;font-variant-numeric:tabular-nums;line-height:1.1;color:#fff}
-.kpi b.cy{color:var(--cy2);text-shadow:0 0 14px rgba(0,200,224,.5)}
+.kpi b.cy{color:var(--cy2);text-shadow:0 0 14px rgba(201,162,39,.5)}
 .kpi span{display:block;font-size:11.5px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.empty{border:1px dashed rgba(125,243,255,.25);border-radius:22px;padding:24px 16px;text-align:center;color:var(--tx2);background:rgba(10,18,32,.6)}
+.empty{border:1px dashed rgba(242,207,91,.25);border-radius:22px;padding:24px 16px;text-align:center;color:var(--tx2);background:rgba(10,18,32,.6)}
 .empty b{display:block;font-family:var(--display);font-style:italic;font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:var(--cy2);margin-bottom:6px}
 .empty p{margin:6px 0 0;font-size:13.5px}
 
 /* ---- chip e filtri ---- */
 .chips{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 4px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0)),var(--panel);color:var(--tx2);border-radius:999px;padding:8px 14px;font-family:var(--display);font-style:italic;font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
-.chip.on{background:linear-gradient(180deg,var(--cy2),var(--cy));border-color:var(--cy2);color:var(--on);box-shadow:0 0 12px rgba(0,200,224,.45)}
-.filters{display:grid;gap:9px;margin:14px 0}
-.selrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.chip{flex:none;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0)),var(--panel);color:var(--tx2);border-radius:999px;padding:6px 11px;font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.chip.on{background:linear-gradient(180deg,var(--cy2),var(--cy));border-color:var(--cy2);color:var(--on);box-shadow:0 0 12px rgba(201,162,39,.45)}
+.filters{display:grid;gap:8px;margin:12px -14px 14px;padding:10px 14px;position:sticky;top:var(--hh,112px);z-index:50;background:rgba(10,10,10,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #2a2418}
+.filters::before{content:"Filtri";font-family:var(--display);font-style:italic;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cy)}
+.filters .chips{flex-wrap:nowrap}
+.selrow{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}.selrow::-webkit-scrollbar{display:none}
+.selrow select,.selrow input{flex:none;width:auto;max-width:72vw}.selrow span:empty{display:none}
+.selrow select{appearance:none;-webkit-appearance:none;padding-right:28px;background-image:linear-gradient(45deg,transparent 50%,var(--cy) 50%),linear-gradient(135deg,var(--cy) 50%,transparent 50%);background-position:calc(100% - 15px) 52%,calc(100% - 10px) 52%;background-size:5px 5px;background-repeat:no-repeat}
 select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:13px;font-family:inherit;box-shadow:inset 0 1px 3px rgba(0,0,0,.4)}
 .tog{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--tx2);cursor:pointer;user-select:none}
 .tog input{accent-color:var(--cy);width:16px;height:16px}
 
 /* ---- finestra (foto con vetro e riflesso, come i loghi di Dreamers) ---- */
-.win{--wc:var(--cy);position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--wc) 55%,#0a1220),#060b16);background-size:cover;background-position:center;
+.win{--wc:var(--cy);position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--wc) 55%,#141414),#0a0a0a);background-size:cover;background-position:center;
   border:1.5px solid color-mix(in srgb,var(--wc) 70%,#fff 10%);border-bottom:4px solid color-mix(in srgb,var(--wc) 45%,#000);
   box-shadow:0 0 18px color-mix(in srgb,var(--wc) 45%,transparent),0 10px 20px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.35)}
 .win::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.06) 38%,rgba(255,255,255,0) 50%),linear-gradient(115deg,transparent 55%,rgba(255,255,255,.12) 62%,transparent 70%);pointer-events:none;z-index:1}
 .win::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -18px 26px rgba(0,0,0,.45);pointer-events:none;z-index:1}
+.win .art{position:absolute;inset:0;width:100%;height:100%}
+.win .artlab{position:absolute;left:6px;top:6px;z-index:2;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,226,.7);background:rgba(0,0,0,.45);padding:1px 6px;border-radius:5px}
 .win .ini{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-weight:800;font-size:38px;color:rgba(255,255,255,.85);text-shadow:0 2px 6px rgba(0,0,0,.5)}
 .win img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* ---- card immobile ---- */
 .list{display:grid;gap:12px}
 .im{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;align-items:start;text-decoration:none;color:var(--tx);position:relative;padding:12px;border-radius:22px;
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 40%),linear-gradient(180deg,#0d1830,#070e1c);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 8px 20px rgba(0,0,0,.3);transition:transform .12s,border-color .12s,box-shadow .12s}
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 40%),linear-gradient(180deg,#161616,#0b0b0b);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 8px 20px rgba(0,0,0,.3);transition:transform .12s,border-color .12s,box-shadow .12s}
 .im:active{transform:scale(.985)}
-.im:hover{border-color:rgba(125,243,255,.45);box-shadow:0 0 18px rgba(0,200,224,.2)}
+.im:hover{border-color:rgba(242,207,91,.45);box-shadow:0 0 18px rgba(201,162,39,.2)}
 .im .win{width:104px;height:104px}
 .rank{position:absolute;top:-7px;left:-7px;width:28px;height:28px;border-radius:9px;background:linear-gradient(180deg,#fde047,var(--yl));color:#1a1300;font-family:var(--display);font-style:italic;font-weight:800;font-size:17px;display:grid;place-items:center;z-index:3;box-shadow:0 0 12px rgba(250,204,21,.55),inset 0 1px 0 rgba(255,255,255,.6)}
 .imt{min-width:0;display:flex;flex-direction:column;gap:4px}
@@ -118,28 +129,28 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 .meta b{color:#fff}
 .tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:3px}
 .tag{font-family:var(--display);font-style:italic;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:7px;border:1px solid var(--line);background:rgba(0,0,0,.25);color:var(--tx2)}
-.tag.cat{border-color:rgba(125,243,255,.45);color:var(--cy2)}
+.tag.cat{border-color:rgba(242,207,91,.45);color:var(--cy2)}
 .tag.new{background:var(--yl);border-color:var(--yl);color:#1a1300}
 .tag.est{border-color:rgba(245,158,11,.5);color:#fbbf55}
 .win .pill{position:absolute;right:6px;bottom:6px;z-index:2;font-size:19px;padding:2px 8px 1px}
 .pill{display:inline-block;font-family:var(--display);font-style:italic;font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;padding:3px 10px 2px;border-radius:9px;color:#fff;
-  background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,0) 55%),var(--pc,#5b6b95);box-shadow:0 0 12px color-mix(in srgb,var(--pc,#5b6b95) 55%,transparent),inset 0 -2px 0 rgba(0,0,0,.2)}
+  background:linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,0) 55%),var(--pc,#8a8270);box-shadow:0 0 12px color-mix(in srgb,var(--pc,#8a8270) 55%,transparent),inset 0 -2px 0 rgba(0,0,0,.2)}
 .tag.st{border-color:currentColor}
 .s-good{color:var(--good)}.s-warn{color:var(--warn)}.s-bad{color:var(--bad)}
 .zhead{display:flex;align-items:baseline;gap:8px;margin:18px 0 10px;font-family:var(--display);font-style:italic;font-weight:800;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--cy2)}
 .zhead span{font-family:var(--body);font-style:normal;font-weight:500;font-size:12px;text-transform:none;letter-spacing:0;color:var(--muted)}
 
 /* ---- mappa ---- */
-.map{height:44vh;min-height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#060b16;position:relative;box-shadow:0 0 0 1px rgba(0,200,224,.12),0 0 24px rgba(0,200,224,.15)}
+.map{height:44vh;min-height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0a0a0a;position:relative;box-shadow:0 0 0 1px rgba(201,162,39,.12),0 0 24px rgba(201,162,39,.15)}
 .map.small{height:240px;min-height:0;border-radius:16px}
 .mapfb{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:20px}
-.leaflet-container{background:#060b16;font-family:var(--body)}
-.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#101c33;color:var(--tx);border:1px solid var(--line);box-shadow:0 0 18px rgba(0,200,224,.3)}
+.leaflet-container{background:#0a0a0a;font-family:var(--body)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#1e1e1e;color:var(--tx);border:1px solid var(--line);box-shadow:0 0 18px rgba(201,162,39,.3)}
 .leaflet-popup-content{margin:10px 12px;font-size:13px}
 .leaflet-popup-content a.go{display:inline-block;margin-top:6px;font-weight:700;color:var(--cy2)}
-.leaflet-control-attribution{background:rgba(4,7,13,.7)!important;color:var(--muted)!important}
+.leaflet-control-attribution{background:rgba(7,7,7,.7)!important;color:var(--muted)!important}
 .leaflet-control-attribution a{color:var(--tx2)!important}
-.leaflet-bar a{background:#101c33!important;color:var(--cy2)!important;border-color:var(--line)!important}
+.leaflet-bar a{background:#1e1e1e!important;color:var(--cy2)!important;border-color:var(--line)!important}
 .mk{filter:drop-shadow(0 0 6px currentColor)}
 .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--tx2);margin:9px 2px 0}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px;box-shadow:0 0 6px currentColor}
@@ -148,7 +159,9 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 .back{display:inline-flex;align-items:center;gap:6px;color:var(--cy2);text-decoration:none;font-family:var(--display);font-style:italic;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
 .hero{display:grid;gap:14px}
 .hero .win{height:230px;border-radius:24px}
-.hero .win .ini{font-size:70px}
+.hero .win .art{position:absolute;inset:0;width:100%;height:100%}
+.win .artlab{position:absolute;left:6px;top:6px;z-index:2;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,226,.7);background:rgba(0,0,0,.45);padding:1px 6px;border-radius:5px}
+.win .ini{font-size:70px}
 .hero h1{font-size:27px}
 .price{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-top:10px}
 .price b{font-family:var(--display);font-style:italic;font-weight:800;font-size:38px;color:var(--yl);font-variant-numeric:tabular-nums;line-height:1;text-shadow:0 0 18px rgba(250,204,21,.35)}
@@ -162,7 +175,7 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 .fact small{display:block;font-family:var(--display);font-style:italic;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fact b{font-size:14px;color:#fff}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:14px;padding:11px 16px;font-family:var(--display);font-style:italic;font-weight:800;font-size:17px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
-.btn.pri{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 16px rgba(0,200,224,.45),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn.pri{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);box-shadow:0 0 16px rgba(201,162,39,.45),inset 0 1px 0 rgba(255,255,255,.5)}
 .btns{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;align-items:center}
 
 .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -177,7 +190,7 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 
 table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
 th{text-align:left;font-family:var(--display);font-style:italic;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:6px 6px;border-bottom:1px solid var(--line)}
-td{padding:8px 6px;border-bottom:1px solid rgba(28,58,99,.6);vertical-align:top}
+td{padding:8px 6px;border-bottom:1px solid rgba(58,51,32,.6);vertical-align:top}
 td.r,th.r{text-align:right}
 tr.me td{color:var(--yl);font-weight:700}
 .tw{overflow-x:auto}
@@ -185,7 +198,7 @@ tr.me td{color:var(--yl);font-weight:700}
 .scen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .sc{position:relative;text-align:left;color:var(--tx);cursor:pointer;border-radius:16px;padding:10px 11px;border:1px solid var(--line);
   background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0) 50%),var(--panel2)}
-.sc.on{border-color:var(--cy2);box-shadow:0 0 0 1px var(--cy2) inset,0 0 16px rgba(0,200,224,.35)}
+.sc.on{border-color:var(--cy2);box-shadow:0 0 0 1px var(--cy2) inset,0 0 16px rgba(201,162,39,.35)}
 .sc.best::after{content:"Migliore";position:absolute;top:-9px;right:8px;background:linear-gradient(180deg,#fde047,var(--yl));color:#1a1300;font-family:var(--display);font-style:italic;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:1px 8px;border-radius:6px;box-shadow:0 0 10px rgba(250,204,21,.5)}
 .sc small{display:block;font-family:var(--display);font-style:italic;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800}
 .sc b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:28px;font-variant-numeric:tabular-nums;margin-top:2px}
@@ -194,12 +207,12 @@ tr.me td{color:var(--yl);font-weight:700}
 .bp{margin-top:10px}
 .bp table td:first-child{color:var(--tx2)}
 .bp tr.tot td{font-weight:700;color:#fff;border-bottom:0}
-.bp tr.sep td{border-top:1px solid rgba(125,243,255,.3)}
+.bp tr.sep td{border-top:1px solid rgba(242,207,91,.3)}
 
 .season svg{width:100%;height:auto;display:block}
 .season .bar{transition:opacity .12s}
 .season .bar:hover{opacity:.8}
-.tip{position:fixed;z-index:2000;pointer-events:none;background:#101c33;color:var(--tx);border:1px solid var(--cy);border-radius:8px;padding:5px 8px;font-size:12px;box-shadow:0 0 14px rgba(0,200,224,.4);white-space:nowrap}
+.tip{position:fixed;z-index:2000;pointer-events:none;background:#1e1e1e;color:var(--tx);border:1px solid var(--cy);border-radius:8px;padding:5px 8px;font-size:12px;box-shadow:0 0 14px rgba(201,162,39,.4);white-space:nowrap}
 
 .pc{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .pc ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
@@ -213,7 +226,7 @@ ul.ev{margin:0;padding-left:18px;font-size:13.5px}
 
 /* ---- notizie e guida ---- */
 .nw,.gd{display:block;text-decoration:none;color:var(--tx);border-radius:20px;padding:13px;border:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 40%),linear-gradient(180deg,#0d1830,#070e1c);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 40%),linear-gradient(180deg,#161616,#0b0b0b);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
 .nw .hd{display:flex;gap:7px;align-items:center;font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .nw h3,.gd h3{font-family:var(--body);font-style:normal;text-transform:none;letter-spacing:0;font-size:15.5px;font-weight:700;margin:5px 0 4px;line-height:1.3;color:#fff}
 .nw p,.gd p{margin:0;font-size:13.5px;color:var(--tx2)}
@@ -236,16 +249,16 @@ ul.ev{margin:0;padding-left:18px;font-size:13.5px}
 .tbars{display:grid;gap:6px}
 .tbar{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:10px;align-items:center;padding:8px 10px;border-radius:14px;border:1px solid var(--line);text-decoration:none;color:var(--tx);
   background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 50%),var(--panel)}
-.tbar:hover{border-color:rgba(125,243,255,.45)}
+.tbar:hover{border-color:rgba(242,207,91,.45)}
 .tn{min-width:0;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tn i{font-style:italic;font-family:var(--display);font-weight:800;color:var(--yl);margin-right:7px}
 .tn em{display:block;font-style:normal;font-weight:500;font-size:11.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis}
 .tv{display:flex;align-items:center;gap:8px;min-width:0}
 .tv b{font-family:var(--display);font-style:italic;font-weight:800;font-size:17px;font-variant-numeric:tabular-nums;white-space:nowrap;min-width:64px;text-align:right}
 .tb{flex:1;height:8px;border-radius:4px;background:rgba(0,0,0,.35);overflow:hidden}
-.tb span{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#0a8aa3,var(--cy2));box-shadow:0 0 8px rgba(0,200,224,.5)}
+.tb span{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#8a6d16,var(--cy2));box-shadow:0 0 8px rgba(201,162,39,.5)}
 tr[data-go]{cursor:pointer}
-tr[data-go]:hover td{background:rgba(0,200,224,.06)}
+tr[data-go]:hover td{background:rgba(201,162,39,.06)}
 .muted{color:var(--muted);font-size:11.5px}
 .chip.lay i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--lc);margin-right:6px;box-shadow:0 0 6px var(--lc)}
 .vform fieldset{border:1px solid var(--line);border-radius:16px;margin:0 0 10px;padding:8px 10px 10px;background:rgba(0,0,0,.18)}
@@ -260,7 +273,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .vg label.ck{flex-direction:row;align-items:center;gap:8px;font-size:13.5px;color:var(--tx2);padding-top:16px}
 .vg label.ck input{accent-color:var(--cy);width:18px;height:18px}
 .vres{margin-top:12px;border-top:1px solid var(--line2);padding-top:12px}
-.vhead{text-align:center;padding:12px;border-radius:18px;background:radial-gradient(400px 120px at 50% 0,rgba(0,200,224,.18),transparent),rgba(0,0,0,.3);border:1px solid rgba(125,243,255,.3)}
+.vhead{text-align:center;padding:12px;border-radius:18px;background:radial-gradient(400px 120px at 50% 0,rgba(201,162,39,.18),transparent),rgba(0,0,0,.3);border:1px solid rgba(242,207,91,.3)}
 .vhead small{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .vhead b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:44px;line-height:1.05;color:var(--yl);text-shadow:0 0 20px rgba(250,204,21,.35);font-variant-numeric:tabular-nums}
 .vhead span{font-size:12.5px;color:var(--tx2)}
@@ -275,7 +288,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mz .mzt{font-size:24px;margin-top:2px}
 .mzrow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;margin-top:12px}
 .ring{--p:50;width:86px;height:86px;border-radius:50%;display:grid;place-items:center;align-content:center;text-align:center;
-  background:radial-gradient(closest-side,#0a1220 78%,transparent 80% 100%),conic-gradient(var(--cy2) calc(var(--p)*1%),rgba(125,243,255,.12) 0);box-shadow:0 0 16px rgba(0,200,224,.3)}
+  background:radial-gradient(closest-side,#141414 78%,transparent 80% 100%),conic-gradient(var(--cy2) calc(var(--p)*1%),rgba(242,207,91,.12) 0);box-shadow:0 0 16px rgba(201,162,39,.3)}
 .ring b{font-family:var(--display);font-style:italic;font-weight:800;font-size:28px;line-height:1}
 .ring small{font-size:8.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
 .ml{display:inline-block;font-family:var(--display);font-style:italic;font-weight:800;font-size:11px;padding:0 5px;border-radius:5px;background:var(--mc);color:#fff;margin-left:2px}
@@ -286,7 +299,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mzp em{font-style:normal;color:var(--muted)}
 .tgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .tcard{display:block;text-decoration:none;color:var(--tx);padding:12px;border-radius:18px;border:1px solid var(--line);
-  background:radial-gradient(240px 90px at 0 0,rgba(0,200,224,.16),transparent),linear-gradient(180deg,#0d1830,#070e1c);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+  background:radial-gradient(240px 90px at 0 0,rgba(201,162,39,.16),transparent),linear-gradient(180deg,#161616,#0b0b0b);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
 .tcard b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:18px;letter-spacing:.05em;text-transform:uppercase;color:var(--cy2)}
 .tcard span{font-size:12px;color:var(--tx2)}
 @media (max-width:520px){.tgrid{grid-template-columns:1fr}.mzp{grid-template-columns:1fr}}
@@ -296,25 +309,25 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mmbar{display:grid;gap:8px;margin:12px 0 10px}
 .mmsearch{position:relative}
 .mmsearch input{width:100%}
-.mmres{position:absolute;z-index:30;left:0;right:0;top:44px;background:#0a1220;border:1px solid var(--cy);border-radius:14px;box-shadow:0 0 22px rgba(0,200,224,.35);overflow:hidden}
+.mmres{position:absolute;z-index:30;left:0;right:0;top:44px;background:#141414;border:1px solid var(--cy);border-radius:14px;box-shadow:0 0 22px rgba(201,162,39,.35);overflow:hidden}
 .mmres button,.mmres span{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:var(--tx);padding:10px 12px;font-size:13px;cursor:pointer}
-.mmres button:hover{background:rgba(0,200,224,.1)}
-.mmwrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 0 1px rgba(0,200,224,.15),0 0 30px rgba(0,200,224,.18)}
-.mm3d{height:72vh;min-height:420px;background:#03060c}
+.mmres button:hover{background:rgba(201,162,39,.1)}
+.mmwrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 0 1px rgba(201,162,39,.15),0 0 30px rgba(201,162,39,.18)}
+.mm3d{height:72vh;min-height:420px;background:#050505}
 .mmload{height:100%;display:grid;place-items:center;align-content:center;gap:12px;color:var(--cy2);font-family:var(--display);font-style:italic;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(125,243,255,.15);border-top-color:var(--cy2);animation:sp 0.9s linear infinite;box-shadow:0 0 18px rgba(0,200,224,.4)}
+.spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(242,207,91,.15);border-top-color:var(--cy2);animation:sp 0.9s linear infinite;box-shadow:0 0 18px rgba(201,162,39,.4)}
 @keyframes sp{to{transform:rotate(360deg)}}
 .mmsheet{position:absolute;left:10px;right:10px;bottom:10px;z-index:5;max-height:62%;overflow:auto;padding:14px 14px 12px;border-radius:20px;
-  background:linear-gradient(180deg,rgba(16,28,51,.92),rgba(7,14,28,.95));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(125,243,255,.35);border-top:2px solid var(--mg);box-shadow:0 -6px 30px rgba(0,0,0,.6),0 0 22px rgba(255,43,214,.2)}
+  background:linear-gradient(180deg,rgba(26,26,26,.92),rgba(11,11,11,.95));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(242,207,91,.35);border-top:2px solid var(--mg);box-shadow:0 -6px 30px rgba(0,0,0,.6),0 0 22px rgba(245,215,110,.2)}
 .mmsheet .mmt{font-size:21px;margin-top:2px;padding-right:30px}
 .mmx{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:rgba(0,0,0,.35);color:var(--tx2);cursor:pointer}
 .mmleg{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--tx2);margin:9px 2px 0}
 .mmleg b{font-family:var(--display);font-style:italic;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.mmleg .bar{flex:1;min-width:120px;height:9px;border-radius:5px;box-shadow:0 0 10px rgba(0,200,224,.3)}
+.mmleg .bar{flex:1;min-width:120px;height:9px;border-radius:5px;box-shadow:0 0 10px rgba(201,162,39,.3)}
 .mmleg .ends{display:flex;gap:8px}.mmleg .ends i{font-style:normal}
-.maplibregl-ctrl-group{background:#101c33!important;border:1px solid var(--line)}
+.maplibregl-ctrl-group{background:#1e1e1e!important;border:1px solid var(--line)}
 .maplibregl-ctrl-group button{filter:invert(.85) hue-rotate(160deg)}
-.maplibregl-ctrl-attrib{background:rgba(4,7,13,.7)!important;color:var(--muted)!important}.maplibregl-ctrl-attrib a{color:var(--tx2)!important}
+.maplibregl-ctrl-attrib{background:rgba(7,7,7,.7)!important;color:var(--muted)!important}.maplibregl-ctrl-attrib a{color:var(--tx2)!important}
 
 @media (min-width:760px){
   .hero{grid-template-columns:1.05fr 1fr;align-items:start}
@@ -323,28 +336,90 @@ input[type=search]{border-radius:999px;font-size:13px}
 }
 @media (max-width:400px){
   .scen{grid-template-columns:1fr}
-  .selrow{grid-template-columns:1fr 1fr}
   .kpi b{font-size:26px}
-  .logo b{font-size:26px}
+  .logo b{font-size:23px}
 }
+
+/* ===== Keystone: sezioni con scelta, percorsi, home ===== */
+.hubhead small,.hello small{font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--cy)}
+.hub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.hubc{position:relative;display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--tx);padding:16px 16px 14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(160deg,#1d1d1d,#101010);box-shadow:0 6px 16px rgba(0,0,0,.35);transition:transform .15s,border-color .15s}
+.hubc:hover{border-color:var(--cy);transform:translateY(-2px)}
+.hubc.big{grid-column:1/-1;background:linear-gradient(135deg,#2a220a,#141414 60%);border-color:#5a4818}
+.hubc .hi{width:34px;height:34px;color:var(--cy2);margin-bottom:6px}
+.hubc small{font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hubc b{font-family:var(--display);font-style:italic;font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--cy2);line-height:1.05}
+.hubc.big b{font-size:28px}
+.hubc span{font-size:13px;color:var(--tx2)}
+.hubn{position:absolute;top:12px;right:12px;font-style:normal;font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--cy);color:var(--on);border-radius:999px;padding:3px 9px}
+.hubf{font-style:normal;font-size:11.5px;color:var(--muted);margin-top:4px}
+.bread{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:-4px -14px 14px;padding:0 14px 2px}
+.bread::-webkit-scrollbar{display:none}
+.bread a{flex:none;display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:var(--display);font-style:italic;font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase;background:#121212}
+.bread a:first-child{color:var(--cy2);border-color:#5a4818}
+.bread a:first-child::before{content:"‹";font-style:normal;margin-right:2px}
+.bread a.on{background:linear-gradient(180deg,var(--cy2),var(--cy));color:var(--on);border-color:transparent}
+.bread svg{width:15px;height:15px}
+.mblock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.mblock>div{border:1px solid #5a4818;border-radius:14px;padding:10px 12px;background:linear-gradient(160deg,#211b09,#121212)}
+.mblock small{display:block;font-family:var(--display);font-style:italic;font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mblock b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:24px;color:var(--cy2);line-height:1.15}
+.mblock em{display:block;font-style:normal;font-size:11.5px;color:var(--tx2)}
+.verdict2{margin:12px 0;padding:10px 14px;border-radius:12px;font-weight:600;font-size:14px;border-left:4px solid}
+.verdict2.ok{border-color:var(--good);background:rgba(34,197,94,.08)}.verdict2.mid{border-color:var(--warn);background:rgba(245,158,11,.08)}.verdict2.ko{border-color:var(--bad);background:rgba(239,68,68,.08)}
+table.bp{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+table.bp td,table.bp th{padding:6px 4px;border-bottom:1px solid var(--line)}table.bp th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:600}
+table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}table.bp tr.tot td{font-weight:800;color:var(--cy2);border-top:1.5px solid var(--cy)}
+.zgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.zc{display:block;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:16px;padding:12px;background:#141414}
+.zc b{display:block;font-family:var(--display);font-style:italic;font-weight:800;font-size:19px;text-transform:uppercase;color:var(--cy2)}
+.zc span{display:block;font-size:12.5px;color:var(--tx2)}.zc em{font-style:normal;font-size:12px;color:var(--muted)}
+.star,.segbtn{display:inline-grid;place-items:center;border:1px solid var(--line);background:#141414;color:var(--muted);border-radius:9px;cursor:pointer}
+.star{width:30px;height:28px;vertical-align:middle;margin-left:4px}.star svg{width:16px;height:16px}
+.star.on,.segbtn.on{color:var(--on);background:var(--cy);border-color:var(--cy)}.star.on svg,.segbtn.on svg{fill:currentColor}
+.schtop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.segbtn{display:inline-flex;gap:6px;padding:7px 12px;font-family:var(--display);font-style:italic;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}.segbtn svg{width:16px;height:16px}
+.vs.ann{cursor:pointer}
+.ticker{overflow:hidden;margin:-18px -14px 16px;border-bottom:1px solid #2a2418;background:#0d0d0d;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tkt{display:flex;gap:28px;width:max-content;padding:9px 14px;animation:tk 60s linear infinite}
+.ticker:hover .tkt{animation-play-state:paused}
+@keyframes tk{to{transform:translateX(-50%)}}
+.tk{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tx);white-space:nowrap;font-size:13.5px}
+.tk i{font-style:normal;font-family:var(--display);font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--on);background:var(--cy);border-radius:5px;padding:1px 6px}
+.tk span{color:var(--muted);font-size:12.5px}
+.hello h1{font-size:38px}
+.secs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.sec{position:relative;display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--tx);padding:18px 16px;border-radius:22px;border:1px solid #5a4818;min-height:150px;overflow:hidden;
+  background:radial-gradient(260px 160px at 100% 0,rgba(201,162,39,.22),transparent 70%),linear-gradient(160deg,#1d1d1d,#0f0f0f)}
+.sec small{font-family:var(--display);font-style:italic;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sec b{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;text-transform:uppercase;letter-spacing:.03em;color:var(--cy2)}
+.sec span{font-size:13px;color:var(--tx2)}
+.sec em{margin-top:auto;font-style:normal;font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--cy)}
+.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.quick a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:10px;background:#131313;font-size:13px;font-weight:600}
+.quick svg{width:20px;height:20px;color:var(--cy2);flex:none}
+.itmap{position:relative;height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid #5a4818;background:#0c0c0c;box-shadow:0 0 30px rgba(201,162,39,.12)}
+.maplibregl-popup-content{background:#1a1a1a;color:var(--tx);border:1px solid var(--cy);border-radius:12px;font-size:13px}
+.maplibregl-popup-tip{border-top-color:var(--cy)!important;border-bottom-color:var(--cy)!important}
+.maplibregl-popup-content a.go{display:inline-block;margin-top:5px;font-weight:700;color:var(--cy2)}
+@media (max-width:560px){.hub{grid-template-columns:1fr}.mblock{grid-template-columns:1fr}.secs{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}.zgrid{grid-template-columns:1fr}.hello h1{font-size:32px}}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="toprow">
-    <a class="logo" href="#home"><i>17</i><b>Invest17</b></a>
+    <button class="hback" id="hback" aria-label="Indietro" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <a class="logo" href="#home" id="logo" title="Aggiorna la pagina"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V27a16 16 0 0 1 32 0v13" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M19.2 9.6h9.6l-1.6 11.2h-6.4z" fill="currentColor"/><circle cx="24" cy="31" r="3.1" fill="currentColor"/><path d="M24 33.5v5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></i><b>Keystone<small>Maison Collection</small></b></a>
     <span class="sp"></span>
     <div class="taxsw" title="Tasse usate nei calcoli"><button data-tax="privata">Privata</button><button data-tax="srl">SRL</button></div>
   </div>
   <nav class="nav" id="nav">
   <a href="#home" data-v="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Home</span></a>
-  <a href="#miei" data-v="miei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>I miei immobili</span></a>
-  <a href="#auto" data-v="auto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/><path d="M11 8v3l2 1.5"/></svg><span>Ricerca automatica</span></a>
-  <a href="#brevi" data-v="brevi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M5 18V9l7-5 7 5v9"/><path d="M9 18v-4h6v4"/><circle cx="18.5" cy="5.5" r="2"/></svg><span>Mappa B&amp;B</span></a>
-  <a href="#valuta" data-v="valuta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.5"/></svg><span>Valutazione</span></a>
+  <a href="#inv" data-v="inv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.5"/></svg><span>Investimenti</span></a>
   <a href="#milano" data-v="milano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l4-3v15"/><path d="M8 21V4l5 3v14"/><path d="M13 21v-9l7-2v11"/><path d="M3 21h18"/></svg><span>Milano</span></a>
+  <a href="#seguiti" data-v="seguiti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>Seguiti</span></a>
   <a href="#notizie" data-v="notizie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="15" height="16" rx="2"/><path d="M18 8h3v10a2 2 0 0 1-2 2"/><path d="M7 8h7M7 12h7M7 16h4"/></svg><span>Notizie</span></a>
-  <a href="#guida" data-v="guida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M9 8h6"/></svg><span>Guida</span></a>
 </nav>
 </header>
 <main id="app"></main>
@@ -359,6 +434,8 @@ input[type=search]{border-radius:999px;font-size:13px}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="js/terr.js"></script>
 <script src="js/milmap.js"></script>
+<script src="js/hub.js"></script>
+<script src="js/home.js"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */
@@ -462,7 +539,7 @@ function analizza(im, cat) {
   return { im, val, sc, best, use, rend: r, score, parts: { sRend, sPrez, sAff } };
 }
 function stato(score) {
-  if (score == null) return { c: "", t: "Dati mancanti", col: "#5b6b95" };
+  if (score == null) return { c: "", t: "Dati mancanti", col: "#8a8270" };
   if (score >= 70) return { c: "s-good", t: "Affare", col: "#22c55e" };
   if (score >= 50) return { c: "s-warn", t: "Da valutare", col: "#f59e0b" };
   return { c: "s-bad", t: "Debole", col: "#ef4444" };
@@ -490,7 +567,7 @@ function cardIm(A, src, rank) {
   </a>`;
 }
 function win(im, col, pill) {
-  return `<div class="win" style="--wc:${col}"><span class="ini">${esc((im.comune || "?")[0])}</span>${im.foto ? `<img src="${esc(im.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}${pill || ""}</div>`;
+  return `<div class="win" style="--wc:${col}">${window.artSvg ? artSvg(im) : `<span class="ini">${esc((im.comune || "?")[0])}</span>`}${im.foto ? `<img src="${esc(im.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : `<span class="artlab">illustrazione</span>`}${pill || ""}</div>`;
 }
 let maps = [];
 function drawMap(el, points, opts = {}) {
@@ -504,7 +581,7 @@ function drawMap(el, points, opts = {}) {
   const b = [];
   for (const p of points) {
     if (p.lat == null || p.lng == null) continue;
-    const mk = L.circleMarker([p.lat, p.lng], { radius: p.r || 9, color: "#04070d", weight: 2, fillColor: p.col, fillOpacity: p.op ?? 1, className: "mk" }).addTo(m);
+    const mk = L.circleMarker([p.lat, p.lng], { radius: p.r || 9, color: "#070707", weight: 2, fillColor: p.col, fillOpacity: p.op ?? 1, className: "mk" }).addTo(m);
     if (p.html) mk.bindPopup(p.html);
     if (p.tip) mk.bindTooltip(p.tip, { direction: "top" });
     b.push([p.lat, p.lng]);
@@ -580,9 +657,7 @@ function vLista(src) {
       <div class="list grid2">${L.map((A, i) => cardIm(A, src, i + 1)).join("")}</div>`).join("");
   } else body = rows.length ? `<div class="list grid2">${rows.map((A, i) => cardIm(A, src, f.sort === "score" || f.sort === "rend" ? i + 1 : 0)).join("")}</div>` : `<p class="sub">Nessun immobile con questi filtri.</p>`;
   return `<h1>${title}</h1><p class="sub">${sub}</p>
-  ${data.length ? `<div class="map" id="map" style="margin-top:12px"></div>
-  <div class="legend"><span><i style="background:#22c55e;color:#22c55e"></i>Affare (70+)</span><span><i style="background:#f59e0b;color:#f59e0b"></i>Da valutare</span><span><i style="background:#ef4444;color:#ef4444"></i>Debole</span></div>
-  <div class="filters" id="filters">
+  ${data.length ? `<div class="filters" id="filters">
     <div class="chips">${[["tutte", "Tutte"], ...Object.entries(CAT)].map(([k, t]) => `<button class="chip ${f.cat === k ? "on" : ""}" data-cat="${k}">${t}</button>`).join("")}</div>
     <div class="selrow">
       <select data-f="reg"><option value="">Tutte le regioni</option>${regs.map(r => `<option ${r === f.reg ? "selected" : ""}>${esc(r)}</option>`).join("")}</select>
@@ -590,7 +665,9 @@ function vLista(src) {
       <select data-f="sort">${[["score", "Punteggio"], ["rend", "Rendimento"], ["sconto", "Sotto mercato"], ["prezzo", "Prezzo più basso"], ["nuovi", "Più recenti"]].map(([k, t]) => `<option value="${k}" ${f.sort === k ? "selected" : ""}>${t}</option>`).join("")}</select>
     </div>
     <label class="tog"><input type="checkbox" data-f="zona" ${f.zona ? "checked" : ""}> Classifica per zona</label>
-  </div>` : ""}
+  </div>
+  <div class="map" id="map" style="margin-top:12px"></div>
+  <div class="legend"><span><i style="background:#22c55e;color:#22c55e"></i>Affare (70+)</span><span><i style="background:#f59e0b;color:#f59e0b"></i>Da valutare</span><span><i style="background:#ef4444;color:#ef4444"></i>Debole</span></div>` : ""}
   ${body}`;
 }
 function afterLista(src) {
@@ -614,7 +691,8 @@ function vScheda(src, id) {
   const A = analizza(im), V = A.val, st = stato(A.score), sel = store.get("scen_" + im.id, A.best);
   const S = A.sc.list[sel] || A.sc.list[A.best];
   const g = im.giudizio || {};
-  return `<a class="back" href="#${src}">← ${src === "miei" ? "I miei immobili" : "Ricerca automatica"}</a>
+  const seg = window.segIds && segIds().has("i:" + src + ":" + im.id);
+  return `<div class="schtop"><a class="back" href="#${src}">← ${src === "miei" ? "I miei immobili" : "Ricerca automatica"}</a><button class="segbtn ${seg ? "on" : ""}" data-segim="${src}|${esc(im.id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>${seg ? "Seguito" : "Segui"}</span></button></div>
   <section class="hero">
     ${win(im, st.col)}
     <div class="card neon">
@@ -649,7 +727,7 @@ function vScheda(src, id) {
 
   ${V.comps.length ? `<h2>Comparabili <small>${V.comps.length} annunci simili</small></h2>
   <div class="card">
-    ${V.comps.some(c => c.lat) ? `<div class="map small" id="cmap"></div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Questo immobile</span><span><i style="background:#ff2bd6;color:#ff2bd6"></i>Comparabili</span></div>` : ""}
+    ${V.comps.some(c => c.lat) ? `<div class="map small" id="cmap"></div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Questo immobile</span><span><i style="background:#f5d76e;color:#f5d76e"></i>Comparabili</span></div>` : ""}
     <div class="tw"><table><thead><tr><th>Annuncio</th><th class="r">m²</th><th class="r">Prezzo</th><th class="r">€/m²</th></tr></thead><tbody>
       <tr class="me"><td>Questo immobile</td><td class="r">${num(im.mq)}</td><td class="r">${keur(im.prezzo)}</td><td class="r">${num(V.prezzoMq)}</td></tr>
       ${[...V.comps].sort((a, b) => a.prezzo / a.mq - b.prezzo / b.mq).map(c => `<tr><td>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.titolo || "Annuncio")}</a>` : esc(c.titolo || "Annuncio")}${c.stato ? ` <span class="src">· ${esc(c.stato)}</span>` : ""}</td><td class="r">${num(c.mq)}</td><td class="r">${keur(c.prezzo)}</td><td class="r">${num(c.prezzo / c.mq)}</td></tr>`).join("")}
@@ -699,14 +777,14 @@ function vbar(im, V) {
   const W = 360, X = v => 40 + (v - lo) / (hi - lo) * (W - 80), y = 44;
   let s = `<svg viewBox="0 0 ${W} 100" role="img" aria-label="Prezzo al metro quadro rispetto al mercato">`;
   s += `<line x1="30" x2="${W - 30}" y1="${y}" y2="${y}" stroke="rgba(255,255,255,.18)" stroke-width="2" stroke-linecap="round"/>`;
-  if (o?.min && o?.max) s += `<rect x="${X(o.min)}" y="${y - 9}" width="${Math.max(2, X(o.max) - X(o.min))}" height="18" rx="4" fill="rgba(0,200,224,.18)" stroke="rgba(125,243,255,.35)"/>`;
-  if (o?.medio && !(o?.min && o?.max)) s += `<rect x="${X(o.medio) - 3}" y="${y - 9}" width="6" height="18" rx="3" fill="rgba(0,200,224,.55)"><title>OMI ${num(o.medio)} €/m²</title></rect>`;
-  for (const c of V.comps) s += `<circle cx="${X(c.prezzo / c.mq)}" cy="${y}" r="5" fill="#ff2bd6" stroke="#0a1220" stroke-width="2"><title>${esc(c.titolo || "Comparabile")}: ${num(c.prezzo / c.mq)} €/m²</title></circle>`;
-  const mark = (v, col, lab, up) => v == null ? "" : `<line x1="${X(v)}" x2="${X(v)}" y1="${y - 14}" y2="${y + 14}" stroke="${col}" stroke-width="3" stroke-linecap="round"/><text x="${X(v)}" y="${up ? y - 32 : y + 30}" fill="#e6f7ff" font-size="12" font-weight="700" text-anchor="middle" font-family="Barlow,sans-serif">${lab}</text><text x="${X(v)}" y="${up ? y - 18 : y + 44}" fill="#b3cde4" font-size="11" text-anchor="middle" font-family="Barlow,sans-serif">${num(v)} €/m²</text>`;
-    s += mark(V.valMq, "#7df3ff", "Valore stimato", false);
+  if (o?.min && o?.max) s += `<rect x="${X(o.min)}" y="${y - 9}" width="${Math.max(2, X(o.max) - X(o.min))}" height="18" rx="4" fill="rgba(201,162,39,.18)" stroke="rgba(242,207,91,.35)"/>`;
+  if (o?.medio && !(o?.min && o?.max)) s += `<rect x="${X(o.medio) - 3}" y="${y - 9}" width="6" height="18" rx="3" fill="rgba(201,162,39,.55)"><title>OMI ${num(o.medio)} €/m²</title></rect>`;
+  for (const c of V.comps) s += `<circle cx="${X(c.prezzo / c.mq)}" cy="${y}" r="5" fill="#f5d76e" stroke="#141414" stroke-width="2"><title>${esc(c.titolo || "Comparabile")}: ${num(c.prezzo / c.mq)} €/m²</title></circle>`;
+  const mark = (v, col, lab, up) => v == null ? "" : `<line x1="${X(v)}" x2="${X(v)}" y1="${y - 14}" y2="${y + 14}" stroke="${col}" stroke-width="3" stroke-linecap="round"/><text x="${X(v)}" y="${up ? y - 32 : y + 30}" fill="#f3efe2" font-size="12" font-weight="700" text-anchor="middle" font-family="Barlow,sans-serif">${lab}</text><text x="${X(v)}" y="${up ? y - 18 : y + 44}" fill="#d4cdb8" font-size="11" text-anchor="middle" font-family="Barlow,sans-serif">${num(v)} €/m²</text>`;
+    s += mark(V.valMq, "#f2cf5b", "Valore stimato", false);
   s += mark(V.prezzoMq, "#facc15", "Prezzo chiesto", true);
   s += `</svg>`;
-  return `<div class="vbar">${s}</div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Prezzo chiesto</span><span><i style="background:#7df3ff;color:#7df3ff"></i>Valore stimato</span>${im.valutazione?.omi?.min ? `<span><i style="background:rgba(0,200,224,.35);border-radius:3px;color:transparent"></i>Forbice OMI</span>` : im.valutazione?.omi?.medio ? `<span><i style="background:rgba(0,200,224,.55);border-radius:3px;color:transparent"></i>Valore OMI</span>` : ""}${V.comps.length ? `<span><i style="background:#ff2bd6;color:#ff2bd6"></i>Comparabili</span>` : ""}</div>`;
+  return `<div class="vbar">${s}</div><div class="legend"><span><i style="background:#facc15;color:#facc15"></i>Prezzo chiesto</span><span><i style="background:#f2cf5b;color:#f2cf5b"></i>Valore stimato</span>${im.valutazione?.omi?.min ? `<span><i style="background:rgba(201,162,39,.35);border-radius:3px;color:transparent"></i>Forbice OMI</span>` : im.valutazione?.omi?.medio ? `<span><i style="background:rgba(201,162,39,.55);border-radius:3px;color:transparent"></i>Valore OMI</span>` : ""}${V.comps.length ? `<span><i style="background:#f5d76e;color:#f5d76e"></i>Comparabili</span>` : ""}</div>`;
 }
 function season(m) {
   const W = 360, H = 150, b = 22, top = 18, ch = H - b - top, bw = (W - 20) / 12;
@@ -715,18 +793,18 @@ function season(m) {
   [0.25, 0.5, 0.75, 1].forEach(t => s += `<line x1="10" x2="${W - 10}" y1="${top + ch * (1 - t)}" y2="${top + ch * (1 - t)}" stroke="rgba(255,255,255,.06)"/>`);
   m.forEach((v, i) => {
     const h = Math.max(3, ch * v), x = 10 + i * bw + 3, y = top + ch - h, w = bw - 6;
-    s += `<path class="bar" data-tip="${MESI[i]}: ${pct(v, 0)}" d="M${x},${top + ch} V${y + 4} q0,-4 4,-4 h${w - 8} q4,0 4,4 V${top + ch} Z" fill="${v >= 0.7 ? "#7df3ff" : v >= 0.45 ? "#00a3b8" : "#0e4a5e"}"/>`;
+    s += `<path class="bar" data-tip="${MESI[i]}: ${pct(v, 0)}" d="M${x},${top + ch} V${y + 4} q0,-4 4,-4 h${w - 8} q4,0 4,4 V${top + ch} Z" fill="${v >= 0.7 ? "#f2cf5b" : v >= 0.45 ? "#a8861c" : "#4a3a0e"}"/>`;
     s += `<rect x="${10 + i * bw}" y="${top}" width="${bw}" height="${ch}" fill="transparent" data-tip="${MESI[i]}: ${pct(v, 0)}"/>`;
-    s += `<text x="${x + w / 2}" y="${H - 8}" fill="#8fb0d0" font-size="10" text-anchor="middle" font-family="Barlow,sans-serif">${MESI[i][0]}</text>`;
-    if (v === mx || v === mn) s += `<text x="${x + w / 2}" y="${y - 5}" fill="#e6f7ff" font-size="10.5" font-weight="700" text-anchor="middle" font-family="Barlow,sans-serif">${pct(v, 0)}</text>`;
+    s += `<text x="${x + w / 2}" y="${H - 8}" fill="#a8a08a" font-size="10" text-anchor="middle" font-family="Barlow,sans-serif">${MESI[i][0]}</text>`;
+    if (v === mx || v === mn) s += `<text x="${x + w / 2}" y="${y - 5}" fill="#f3efe2" font-size="10.5" font-weight="700" text-anchor="middle" font-family="Barlow,sans-serif">${pct(v, 0)}</text>`;
   });
-  return s + `</svg><div class="legend"><span><i style="background:#7df3ff;color:#7df3ff"></i>Alta (70%+)</span><span><i style="background:#00a3b8;color:#00a3b8"></i>Media</span><span><i style="background:#0e4a5e;color:transparent"></i>Bassa (sotto 45%)</span></div>`;
+  return s + `</svg><div class="legend"><span><i style="background:#f2cf5b;color:#f2cf5b"></i>Alta (70%+)</span><span><i style="background:#a8861c;color:#a8861c"></i>Media</span><span><i style="background:#4a3a0e;color:transparent"></i>Bassa (sotto 45%)</span></div>`;
 }
 function afterScheda(src, id) {
   const im = findIm(src, id); if (!im) return;
   $("#scen")?.addEventListener("click", e => { const b = e.target.closest("[data-k]"); if (!b) return; store.set("scen_" + im.id, b.dataset.k); render(true); });
   const el = $("#cmap");
-  if (el) drawMap(el, [...(im.valutazione?.comparabili || []).map(c => ({ lat: c.lat, lng: c.lng, col: "#ff2bd6", r: 7,
+  if (el) drawMap(el, [...(im.valutazione?.comparabili || []).map(c => ({ lat: c.lat, lng: c.lng, col: "#f5d76e", r: 7,
       tip: `${esc(c.titolo || "")} · ${num(c.prezzo / c.mq)} €/m²` })),
     { lat: im.lat, lng: im.lng, col: "#facc15", r: 11, tip: "Questo immobile" }], { maxZoom: 15 });
 }
@@ -745,7 +823,7 @@ function vNotizie() {
   const f = store.get("f_news", { tipo: "", reg: "" });
   const regs = [...new Set(NOTIZIE.map(n => n.regione).filter(Boolean))].sort();
   const list = NOTIZIE.filter(n => (!f.tipo || n.tipo === f.tipo) && (!f.reg || n.regione === f.reg)).sort((a, b) => (b.data || "").localeCompare(a.data || ""));
-  return `<h1>Notizie</h1><p class="sub">Novità che possono far crescere una zona: trasporti, turismo, eventi, regole. Aggiornate ogni mattina alle 10.</p>
+  return `<div class="schtop"><span></span><a class="segbtn" href="#guida" style="text-decoration:none">Guida all'investimento →</a></div><h1>Notizie</h1><p class="sub">Novità che possono far crescere una zona: trasporti, turismo, eventi, regole. Aggiornate ogni mattina alle 10.</p>
   ${NOTIZIE.length ? `<div class="filters" id="nf">
     <div class="chips"><button class="chip ${!f.tipo ? "on" : ""}" data-t="">Tutte</button>${Object.entries(TIPI).map(([k, t]) => `<button class="chip ${f.tipo === k ? "on" : ""}" data-t="${k}">${t}</button>`).join("")}</div>
     <select data-f="reg"><option value="">Tutte le regioni</option>${regs.map(r => `<option ${r === f.reg ? "selected" : ""}>${esc(r)}</option>`).join("")}</select></div>
@@ -784,19 +862,25 @@ function md(t) {
 /* ============ router ============ */
 function render(keepScroll) {
   maps.forEach(m => m.remove()); maps = [];
-  const [v, a, b] = (location.hash.slice(1) || "home").split("/").map(decodeURIComponent);
+  if (typeof HOME_MAP !== "undefined" && HOME_MAP) { try { HOME_MAP.remove(); } catch {} HOME_MAP = null; }
+  const [v, a, b, c] = (location.hash.slice(1) || "home").split("/").map(decodeURIComponent);
   const app = $("#app"), y = window.scrollY;
   let html, after = () => {};
   if (v === "miei" || v === "auto") { html = vLista(v); after = () => afterLista(v); }
   else if (v === "imm") { html = vScheda(a, b); after = () => afterScheda(a, b); }
   else if (v === "notizie") { html = vNotizie(); after = afterNotizie; }
   else if (v === "guida") html = vGuida(a);
-  else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a); after = () => TERR_VIEWS[v][1](a); }
-  else { html = vHome(); after = afterHome; }
+  else if (v === "inv") { html = vInv(a, b, c); after = () => afterInv(a, b, c); }
+  else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
+  else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
+  else { html = vHomeK(); after = afterHomeK; }
+  const INVK = { miei: "archivio", auto: "auto", brevi: "brevi", valuta: "comuni" };
+  if (INVK[v] && window.invBread) html = invBread(INVK[v]) + html;
   app.innerHTML = html; after();
-  const navv = v === "imm" ? a : v || "home";
+  const navv = v === "imm" || INVK[v] ? "inv" : v || "home";
   document.querySelectorAll("#nav a").forEach(x => { const on = x.dataset.v === navv; x.classList.toggle("on", on); if (on) x.scrollIntoView({ inline: "nearest", block: "nearest" }); });
   document.querySelectorAll(".taxsw button").forEach(x => x.classList.toggle("on", x.dataset.tax === TAX));
+  const hb = $("#hback"); if (hb) hb.hidden = !location.hash || location.hash === "#home"; hhSet();
   window.scrollTo(0, keepScroll ? y : 0);
 }
 window.addEventListener("hashchange", () => render());
@@ -805,7 +889,18 @@ document.querySelector(".taxsw").addEventListener("click", e => { const b = e.ta
 const tip = $("#tip");
 ["pointermove","pointerdown"].forEach(ev => document.addEventListener(ev, e => { const t = e.target.closest?.("[data-tip]"); if (!t) { tip.hidden = true; return; }
   tip.textContent = t.dataset.tip; tip.hidden = false; tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (e.clientY - 34) + "px"; }));
+/* tasto indietro come in Dreamers: torna alla pagina precedente dell'app, o al livello superiore */
+const PARENT = h => { const [v, a, b, c] = h.split("/"); if (v === "imm") return a === "auto" ? "auto" : "miei"; if (["miei", "auto", "brevi", "valuta"].includes(v)) return a ? v : "inv";
+  if (v === "inv" || v === "milano") return c ? [v, a, b].join("/") : b ? [v, a].join("/") : a ? v : "home"; return "home"; };
+let NAVN = +(sessionStorage.getItem("ks_n") || 0);
+window.addEventListener("hashchange", () => { NAVN++; try { sessionStorage.setItem("ks_n", NAVN); } catch {} });
+$("#hback").addEventListener("click", () => { const h = location.hash.slice(1) || "home"; if (NAVN > 0) { NAVN -= 2; history.back(); } else location.hash = PARENT(h); });
+const hhSet = () => document.documentElement.style.setProperty("--hh", $(".top").offsetHeight + "px");
+window.addEventListener("resize", hhSet);
+/* il logo ricarica i dati restando nella stessa pagina e allo stesso punto */
+$("#logo").addEventListener("click", e => { e.preventDefault(); try { sessionStorage.setItem("ks_y", String(window.scrollY)); } catch {} location.reload(); });
 render();
+try { const y = sessionStorage.getItem("ks_y"); if (y != null) { sessionStorage.removeItem("ks_y"); const go = () => window.scrollTo(0, +y); go(); setTimeout(go, 400); setTimeout(go, 1200); } } catch {}
 </script>
 </body>
 </html>

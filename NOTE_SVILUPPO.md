@@ -133,3 +133,11 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - Correzioni: selezione del singolo palazzo (le tessere uniscono più edifici), trackpad = spostamento, pizzico/rotellina = zoom.
 - Immobiliare.it (`tools/terr/raw_immobiliare_milano.txt`): 1.017 annunci di Milano letti dal Chrome dell'utente il 20/11/2026 (fasce fino a 196.000 €), poi il sito ha risposto 403 (blocco anti-robot): raccolta interrotta e non forzata. Dopo il filtro (progetti e aste esclusi) restano 728, con coordinate esatte, stato, piano, ascensore. Nei comparabili il prezzo €/m² viene riportato a "stato buono" (N 1,10, O 1,06, B 1, R 0,78); se ci sono ≥5 annunci entro 1,5 km e la mediana è entro ±25% della zona, entra nel prezzo di partenza con peso fino al 35%.
 - Prossimi passi per avere più dati: quotazioni OMI (file dall'Agenzia delle Entrate), avvisi email quotidiani su Gmail dedicata + GitHub Action, dati di mercato dell'abbonamento agenzia, vendite concluse dell'agenzia.
+
+## 10. Keystone (20/11/2026)
+- Nome: **Keystone** (la chiave di volta dell'arco: tiene insieme tutto; "key" = chiavi di casa, "stone" = mattone). Logo: arco con chiave di volta e serratura. Il logo ricarica la pagina restando nello stesso punto.
+- Stile Carbone e oro di Dreamers (bg #070707, pannelli #141414/#1e1e1e, oro #c9a227/#f2cf5b/#f5d76e, linee #3a3320). Barra in alto a tinta unita, schede a larghezza fissa come Dreamers, tasto indietro (storia dell'app, altrimenti livello superiore).
+- Navigazione: Home · Investimenti · Milano · Seguiti · Notizie (Guida dentro Notizie e Home).
+- `js/hub.js`: pagine di scelta. Milano: cliente / bnb / lungo / sub / privati / mappa (`#milano/<modo>`, `#milano/mappa/<zona>`). Investimenti: `#inv/classifica`, `#inv/zona/<regione>/<comune>`, più #brevi #valuta #miei #auto con la barra dei percorsi in cima. Seguiti in localStorage `seguiti` (stella su schede e annunci). Illustrazioni generate (`artSvg`) per gli immobili senza foto.
+- `js/home.js`: banner novità (AUTO del giorno, notizie, archivio), mappa d'Italia 3D leggera (MapLibre, stile minimo) con i seguiti, accessi rapidi.
+- Filtri sempre sopra a numeri, mappa e classifica, e fissi in alto mentre scorri.

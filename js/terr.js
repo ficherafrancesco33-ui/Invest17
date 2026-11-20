@@ -6,8 +6,8 @@
    ========================================================================== */
 const T_HOME = { badile: [45.3600, 9.1100, "Badile"], romana: [45.4520, 9.2030, "Porta Romana"] };
 const T_TIPI = { lago: "Lago", mare: "Mare", montagna: "Montagna", citta: "Città", collina: "Collina", aeroporto: "Aeroporto" };
-const T_POI = { metro: ["Metro", "#e3242b"], uni: ["Università", "#7df3ff"], osp: ["Ospedali", "#ff6b8b"], lav: ["Lavoro e stazioni", "#facc15"],
-  eve: ["Eventi", "#ff2bd6"], neg: ["Negozi", "#a78bfa"], scu: ["Scuole", "#34d399"], par: ["Parchi", "#22c55e"] };
+const T_POI = { metro: ["Metro", "#e3242b"], uni: ["Università", "#f2cf5b"], osp: ["Ospedali", "#ff6b8b"], lav: ["Lavoro e stazioni", "#facc15"],
+  eve: ["Eventi", "#f5d76e"], neg: ["Negozi", "#a78bfa"], scu: ["Scuole", "#34d399"], par: ["Parchi", "#22c55e"] };
 const T_GEO = {};
 const T_BILO = 0.85;       // un bilocale incassa a notte circa l'85% della media del mercato (che include case più grandi)          // confini caricati per provincia (codice ISTAT -> FeatureCollection)
 let T_IDX = null;
@@ -49,17 +49,17 @@ const tOre = m => m == null ? "—" : m < 60 ? m + " min" : Math.floor(m / 60) +
 const hav = (a, b, c, d) => { const r = Math.PI / 180; return 2 * 6371000 * Math.asin(Math.sqrt(Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2)); };
 
 /* ---------- scala colori (una tinta, dal buio al ciano acceso) ---------- */
-const T_RAMP = ["#123047", "#0f5a73", "#0a8aa3", "#00c8e0", "#7df3ff"];
+const T_RAMP = ["#2a2418", "#5a4818", "#8a6d16", "#c9a227", "#f8e7a8"];
 function tBins(vals) {
   const s = vals.filter(v => v != null && isFinite(v)).sort((a, b) => a - b);
   if (!s.length) return [];
   return [0.2, 0.4, 0.6, 0.8].map(q => s[Math.min(s.length - 1, Math.floor(q * s.length))]);
 }
-const tCol = (v, bins) => v == null ? "#2a3550" : T_RAMP[bins.filter(b => v > b).length];
+const tCol = (v, bins) => v == null ? "#2e2a22" : T_RAMP[bins.filter(b => v > b).length];
 function tLegend(bins, fmt, title) {
   if (!bins.length) return "";
   const lab = [`fino a ${fmt(bins[0])}`, ...bins.slice(0, -1).map((b, i) => `${fmt(b)}–${fmt(bins[i + 1])}`), `oltre ${fmt(bins[bins.length - 1])}`];
-  return `<div class="tleg"><b>${esc(title)}</b>${lab.map((l, i) => `<span><i style="background:${T_RAMP[i]}"></i>${esc(l)}</span>`).join("")}<span><i style="background:#2a3550"></i>n.d.</span></div>`;
+  return `<div class="tleg"><b>${esc(title)}</b>${lab.map((l, i) => `<span><i style="background:${T_RAMP[i]}"></i>${esc(l)}</span>`).join("")}<span><i style="background:#2e2a22"></i>n.d.</span></div>`;
 }
 
 /* ---------- mappa base ---------- */
@@ -75,7 +75,7 @@ function tMap(el, view) {
 }
 function tHomeMarkers(m) {
   for (const k in T_HOME) { const [la, lo, n] = T_HOME[k];
-    L.circleMarker([la, lo], { radius: 6, color: "#04070d", weight: 2, fillColor: "#facc15", fillOpacity: 1 }).bindTooltip(n, { direction: "top" }).addTo(m); }
+    L.circleMarker([la, lo], { radius: 6, color: "#070707", weight: 2, fillColor: "#facc15", fillOpacity: 1 }).bindTooltip(n, { direction: "top" }).addTo(m); }
 }
 
 /* ---------- confini dei comuni (openpolis, caricati quando serve) ---------- */
@@ -218,6 +218,7 @@ function vRisultato(r, ctx) {
     : `<div class="sc na"><small>${t}</small><b>—</b><span>dati non disponibili qui</span></div>`;
   return `<div class="vres">
     <div class="vhead"><small>Valore di mercato stimato</small><b>${eur(r.valore)}</b><span>tra ${keur(r.min)} e ${keur(r.max)} · ${eur(r.valore / r.sup)}/m² commerciale</span></div>
+    ${ctx.mode && window.miModeBlock ? miModeBlock(r, ctx) : ""}
     <div class="offer" style="margin-top:10px">
       <div><small>Superficie commerciale</small><b>${num(r.sup, 1)} m²</b><em>con balconi, giardino, cantina</em></div>
       <div><small>${r.prezzo ? "Offerta consigliata" : "Prezzo per vendere in fretta"}</small><b class="cy">${eur(r.offerta)}</b><em>${r.prezzo ? (r.sconto >= 0 ? `prezzo ${pct(r.sconto, 0)} sotto il valore` : `prezzo ${pct(-r.sconto, 0)} sopra il valore`) : "circa il 3% sotto il valore"}</em></div>
@@ -295,11 +296,6 @@ function vBrevi(nome) {
   const regs = [...new Set(I.br.map(s => TERR.prov[s.p]?.reg || tRegSigla(s.p)).filter(Boolean))].sort();
   const max = Math.max(...rows.map(x => M[1](x.s) || 0), 1e-9);
   return `<h1>Mappa B&B</h1><p class="sub">Dove gli affitti brevi rendono di più: prezzo a notte, occupazione e ricavi di ${I.br.length} località entro circa 3 ore, con il prezzo delle case del posto.</p>
-  <div class="kpis">
-    <div class="kpi"><small>Località</small><b>${rows.length}</b><span>con questi filtri</span></div>
-    <div class="kpi"><small>Prima per ${esc(M[0].toLowerCase())}</small><b class="cy">${top ? M[2](M[1](top.s)) : "—"}</b><span>${top ? esc(top.s.n) : "—"}</span></div>
-    <div class="kpi"><small>Miglior rendita</small><b>${bestRb ? pct(bestRb.s.rb, 1) : "—"}</b><span>${bestRb ? esc(bestRb.s.n) : "serve il prezzo"}</span></div>
-  </div>
   <div class="filters" id="bf">
     <div class="chips">${Object.entries(B_MET).map(([k, m]) => `<button class="chip ${k === f.m ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
     <div class="chips"><button class="chip ${!f.tipo ? "on" : ""}" data-tipo="">Tutte</button>${Object.entries(T_TIPI).map(([k, t]) => `<button class="chip ${f.tipo === k ? "on" : ""}" data-tipo="${k}">${t}</button>`).join("")}</div>
@@ -313,6 +309,11 @@ function vBrevi(nome) {
       <select data-f="ann">${[[0, "Ogni mercato"], [100, "100+ annunci"], [300, "300+ annunci"], [1000, "1.000+ annunci"]].map(([v, t]) => `<option value="${v}" ${+f.ann === v ? "selected" : ""}>${t}</option>`).join("")}</select>
       <span></span>
     </div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><small>Località</small><b>${rows.length}</b><span>con questi filtri</span></div>
+    <div class="kpi"><small>Prima per ${esc(M[0].toLowerCase())}</small><b class="cy">${top ? M[2](M[1](top.s)) : "—"}</b><span>${top ? esc(top.s.n) : "—"}</span></div>
+    <div class="kpi"><small>Miglior rendita</small><b>${bestRb ? pct(bestRb.s.rb, 1) : "—"}</b><span>${bestRb ? esc(bestRb.s.n) : "serve il prezzo"}</span></div>
   </div>
   <div class="map" id="bmap"></div>
   <div id="bleg"></div>
@@ -334,7 +335,7 @@ function afterBrevi(nome) {
   const b = [];
   for (const { s, d } of rows) {
     const v = M[1](s), r = 5 + Math.min(13, Math.sqrt(s.ann || 40) / 3.2);
-    L.circleMarker([s.lat, s.lon], { radius: r, color: "#04070d", weight: 1.5, fillColor: tCol(v, bins), fillOpacity: .95 })
+    L.circleMarker([s.lat, s.lon], { radius: r, color: "#070707", weight: 1.5, fillColor: tCol(v, bins), fillOpacity: .95 })
       .bindPopup(`<b>${esc(s.n)}</b><br>${eur(s.adr)} a notte · ${pct(s.occ, 0)} occupazione<br>Ricavo annuo ${keur(s.ric)}${s.ann ? ` · ${num(s.ann)} annunci` : ""}<br>${s.rb ? `Rendita lorda bilocale ${pct(s.rb, 1)}<br>` : ""}${d ? `${tOre(d.min)} da ${T_HOME[f.da][2]}` : ""}<br><a class="go" href="#brevi/${encodeURIComponent(s.n)}">Apri l'analisi →</a>`)
       .bindTooltip(`${s.n}: ${v == null ? "n.d." : M[2](v)}`, { direction: "top" }).addTo(m);
     b.push([s.lat, s.lon]);
@@ -404,18 +405,6 @@ function vValuta(nome) {
   const max = Math.max(...vals.map(Math.abs), 1e-9);
   const qv = store.get("vform_valuta", V_DEF), sel = nome || store.get("v_com", "");
   return `<h1>Valutazione</h1><p class="sub">Prezzi di vendita e d'affitto di ${num(I.com.length)} comuni in ${Object.keys(TERR.prov).length} province, la rendita che danno e un valutatore per qualsiasi immobile.</p>
-  <div class="kpis">
-    <div class="kpi"><small>Comuni</small><b>${num(rows.length)}</b><span>con questi filtri</span></div>
-    <div class="kpi"><small>Mediana</small><b class="cy">${med == null ? "—" : M[2](med)}</b><span>${esc(M[0])}</span></div>
-    <div class="kpi"><small>Primo</small><b>${rows[0] && M[1](rows[0].c) != null ? M[2](M[1](rows[0].c)) : "—"}</b><span>${rows[0] ? esc(rows[0].c.n) : "—"}</span></div>
-  </div>
-  <h2>Valuta un immobile</h2>
-  <div class="card">${vForm("vf", `<fieldset><legend>Dove</legend><div class="vg">
-      <label class="wide"><span>Comune</span><input list="vcl" data-c="com" value="${esc(sel)}" placeholder="Scrivi il comune…"><datalist id="vcl">${I.com.filter(c => c.v).map(c => `<option value="${esc(c.n)}">${esc(TERR.prov[c.p]?.nome || c.p)}</option>`).join("")}</datalist></label>
-      <label><span>Zona del paese</span><select data-c="zona"><option value="">Media</option><option value="centro" ${store.get("v_zona", "") === "centro" ? "selected" : ""}>Centro</option><option value="periferia" ${store.get("v_zona", "") === "periferia" ? "selected" : ""}>Periferia / frazione</option></select></label>
-    </div></fieldset>`, qv)}<div id="vout"></div></div>
-  ${vSalvate("valuta")}
-  <h2>Mappa dei prezzi <small>${esc(M[0])}</small></h2>
   <div class="filters" id="cf">
     <div class="chips">${Object.entries(C_MET).map(([k, m]) => `<button class="chip ${k === f.m ? "on" : ""}" data-m="${k}">${m[0]}</button>`).join("")}</div>
     <div class="selrow">
@@ -430,6 +419,11 @@ function vValuta(nome) {
     </div>
     <label class="tog"><input type="checkbox" data-f="princ" ${f.princ ? "checked" : ""}> Solo città e paesi principali (scegliendo una provincia vedi tutti i comuni)</label>
   </div>
+  <div class="kpis">
+    <div class="kpi"><small>Comuni</small><b>${num(rows.length)}</b><span>con questi filtri</span></div>
+    <div class="kpi"><small>Mediana</small><b class="cy">${med == null ? "—" : M[2](med)}</b><span>${esc(M[0])}</span></div>
+    <div class="kpi"><small>Primo</small><b>${rows[0] && M[1](rows[0].c) != null ? M[2](M[1](rows[0].c)) : "—"}</b><span>${rows[0] ? esc(rows[0].c.n) : "—"}</span></div>
+  </div>
   <div class="map" id="cmap"></div>
   <div id="cleg"></div>
   <p class="note" id="cnote">${esc(M[3])}. ${f.prov ? "Carico i confini di tutti i comuni della provincia…" : "Scegli una provincia per vedere tutti i suoi comuni colorati sulla mappa; senza provincia vedi i comuni principali."}</p>
@@ -437,6 +431,13 @@ function vValuta(nome) {
   <div class="tw"><table><thead><tr><th>#</th><th>Comune</th><th class="r">Vendita</th><th class="r">Affitto</th><th class="r">Rendita</th><th class="r">1 anno</th><th class="r">Distanza</th></tr></thead><tbody>
   ${rows.slice(0, 60).map((x, i) => `<tr data-go="${esc(x.c.n)}"><td>${i + 1}</td><td><b>${esc(x.c.n)}</b> <span class="muted">${x.c.p}</span></td><td class="r">${x.c.v ? eur(x.c.v) : "—"}</td><td class="r">${x.c.a ? num(x.c.a, 1) + (x.c.aOk ? "" : "*") : "—"}</td><td class="r">${x.c.rl ? pct(x.c.rl, 1) : "—"}</td><td class="r ${x.c.y > 0 ? "s-good" : x.c.y < 0 ? "s-bad" : ""}">${x.c.y == null ? "—" : (x.c.y >= 0 ? "+" : "") + num(x.c.y, 1) + "%"}</td><td class="r">${x.d ? tOre(x.d.min) : "—"}</td></tr>`).join("")}
   </tbody></table></div>
+  <h2 id="vform-h">Valuta un immobile</h2>
+  <div class="card">${vForm("vf", `<fieldset><legend>Dove</legend><div class="vg">
+      <label class="wide"><span>Comune</span><input list="vcl" data-c="com" value="${esc(sel)}" placeholder="Scrivi il comune…"><datalist id="vcl">${I.com.filter(c => c.v).map(c => `<option value="${esc(c.n)}">${esc(TERR.prov[c.p]?.nome || c.p)}</option>`).join("")}</datalist></label>
+      <label><span>Zona del paese</span><select data-c="zona"><option value="">Media</option><option value="centro" ${store.get("v_zona", "") === "centro" ? "selected" : ""}>Centro</option><option value="periferia" ${store.get("v_zona", "") === "periferia" ? "selected" : ""}>Periferia / frazione</option></select></label>
+    </div></fieldset>`, qv)}<div id="vout"></div></div>
+  ${vSalvate("valuta")}
+
   <p class="note">Tocca una riga per valutarci un immobile. Rendita lunga = affitto di un anno diviso il prezzo, prima di tasse e spese: sopra il 7% è alta, sotto il 4% bassa. Nei paesi con case sotto 700 €/m² o con affitti fuori scala gli annunci d'affitto sono troppo pochi: lì non calcolo la rendita (* = affitto di ripiego del portale, poco affidabile).</p>
   <p class="src">Fonti: ${esc(TERR.fonti.prezzi)}. Confini: ${esc(TERR.fonti.confini)}. Distanze: stima in auto dalla linea d'aria.</p>`;
 }
@@ -461,7 +462,7 @@ function afterValuta(nome) {
   const pts = [], lay = L.layerGroup().addTo(m);
   const drawPts = () => { lay.clearLayers(); pts.length = 0;
     for (const { c } of cRows(f)) { const cc = c.lat != null ? c : I.byN.get(tnorm(c.n)); if (!cc || cc.lat == null) continue;
-      L.circleMarker([cc.lat, cc.lon], { radius: 6, color: "#04070d", weight: 1, fillColor: tCol(M[1](c), bins), fillOpacity: .95 }).bindPopup(pop(c)).bindTooltip(c.n, { direction: "top" }).addTo(lay);
+      L.circleMarker([cc.lat, cc.lon], { radius: 6, color: "#070707", weight: 1, fillColor: tCol(M[1](c), bins), fillOpacity: .95 }).bindPopup(pop(c)).bindTooltip(c.n, { direction: "top" }).addTo(lay);
       pts.push([cc.lat, cc.lon]); }
     if (pts.length) m.fitBounds(pts, { padding: [24, 24], maxZoom: 11 }); };
   drawPts(); tHomeMarkers(m);
@@ -471,7 +472,7 @@ function afterValuta(nome) {
       if (!document.body.contains(m.getContainer())) return;
       const byName = new Map(rows.filter(x => x.c.p === f.prov).map(x => [tnorm(x.c.n), x.c]));
       lay.clearLayers();
-      const gl = L.geoJSON(g, { style: ft => { const c = byName.get(tnorm(tFname(ft.properties))); return { color: "#04070d", weight: .6, fillColor: tCol(c ? M[1](c) : null, bins), fillOpacity: c ? .85 : .25 }; },
+      const gl = L.geoJSON(g, { style: ft => { const c = byName.get(tnorm(tFname(ft.properties))); return { color: "#070707", weight: .6, fillColor: tCol(c ? M[1](c) : null, bins), fillOpacity: c ? .85 : .25 }; },
         onEachFeature: (ft, ly) => { const c = byName.get(tnorm(tFname(ft.properties))); ly.bindTooltip(tFname(ft.properties) + (c && M[1](c) != null ? ": " + M[2](M[1](c)) : ""), { sticky: true }); if (c) ly.bindPopup(pop(c)); } }).addTo(lay);
       m.fitBounds(gl.getBounds(), { padding: [10, 10] });
       note.textContent = `${M[3]}. Comuni della provincia di ${TERR.prov[f.prov].nome}: in grigio quelli senza dati.`;
@@ -571,7 +572,7 @@ function afterMilano(zona) {
   $("#mleg").innerHTML = tLegend(bins, MT[2], MT[0]) + `<div class="legend">${f.lay.map(k => `<span><i style="color:${T_POI[k][1]};background:${T_POI[k][1]}"></i>${T_POI[k][0]}</span>`).join("")}</div>`;
   for (const z of M.zone) {
     const v = MT[1](z), on = z.n === store.get("mz_sel", "");
-    L.circle([z.lat, z.lon], { radius: 620, color: on ? "#facc15" : "#04070d", weight: on ? 3 : 1, fillColor: tCol(v, bins), fillOpacity: .55 })
+    L.circle([z.lat, z.lon], { radius: 620, color: on ? "#facc15" : "#070707", weight: on ? 3 : 1, fillColor: tCol(v, bins), fillOpacity: .55 })
       .bindTooltip(`${z.n}: ${MT[2](v)}`, { direction: "top" })
       .on("click", () => { store.set("mz_sel", z.n); $("#mzona").innerHTML = mzScheda(z); sel.value = z.n; sel.dispatchEvent(new Event("change", { bubbles: true })); $("#mzona").scrollIntoView({ behavior: "smooth", block: "start" }); })
       .addTo(m);
@@ -581,10 +582,10 @@ function afterMilano(zona) {
     if (ln === "M1") { const i = arr.findIndex(s => s[0] === "Wagner"); L.polyline(arr.slice(0, i).map(s => [s[1], s[2]]), { color: col, weight: 3, opacity: .85 }).addTo(m);
       const pag = arr.find(s => s[0] === "Pagano"); L.polyline([[pag[1], pag[2]], ...arr.slice(i).map(s => [s[1], s[2]])], { color: col, weight: 3, opacity: .85 }).addTo(m); }
     else L.polyline(arr.map(s => [s[1], s[2]]), { color: col, weight: 3, opacity: .85 }).addTo(m);
-    arr.forEach(([n, la, lo]) => L.circleMarker([la, lo], { radius: 3, color: col, weight: 2, fillColor: "#04070d", fillOpacity: 1 }).bindTooltip(`${ln} ${n}`, { direction: "top" }).addTo(m));
+    arr.forEach(([n, la, lo]) => L.circleMarker([la, lo], { radius: 3, color: col, weight: 2, fillColor: "#070707", fillOpacity: 1 }).bindTooltip(`${ln} ${n}`, { direction: "top" }).addTo(m));
   }
   for (const [c, n, la, lo] of M.poi) if (f.lay.includes(c))
-    L.circleMarker([la, lo], { radius: 6, color: "#04070d", weight: 1.5, fillColor: T_POI[c][1], fillOpacity: 1 }).bindTooltip(`${T_POI[c][0]}: ${n}`, { direction: "top" }).addTo(m);
+    L.circleMarker([la, lo], { radius: 6, color: "#070707", weight: 1.5, fillColor: T_POI[c][1], fillOpacity: 1 }).bindTooltip(`${T_POI[c][0]}: ${n}`, { direction: "top" }).addTo(m);
 }
 
 /* ---------- registrazione delle viste nel router dell'app ---------- */
