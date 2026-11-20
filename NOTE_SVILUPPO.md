@@ -142,3 +142,8 @@ Tre nuove sezioni, codice in `js/terr.js`, dati in `data/territorio.js` (generat
 - `js/home.js`: banner novità (AUTO del giorno, notizie, archivio), mappa d'Italia 3D leggera (MapLibre, stile minimo) con i seguiti, accessi rapidi.
 - Filtri sempre sopra a numeri, mappa e classifica, e fissi in alto mentre scorri.
 - 20/11/2026: archivio Investimenti ridotto ai soli 24 annunci di Oneta (link di Imma). I 96 presi in autonomia da aggregatori (foto singole, annunci scaduti o case disastrate) sono esclusi: restano in `tools/zone.py` con `INCLUDI_AUTONOMI = False`. D'ora in poi si caricano solo zone/annunci dai link che manda Imma.
+
+### Milano Sud (20/11/2026)
+- Letti da Immobiliare.it (Chrome, 6–9 s a pagina) 3.859 annunci di 21 microzone sud: Porta Romana, Bocconi, Quadronno, Vigentino, Ripamonti, Lodi, Corvetto, Cadore, Montenero, Guastalla, Porta Vittoria, Martini, Molise, Bologna, Pezzotti, Chiesa Rossa, Cermenate, Navigli, San Gottardo, Ascanio Sforza (parziale), Ticinese (parziale). Bloccato (403) a Ticinese p.7: mancano Corso Genova, Rogoredo, Quintosole, Gratosoglio.
+- Uniti in tools/terr/raw_immobiliare_milano.txt (dedup per id) → 4.351 annunci Immobiliare validi in TERR.annunci.imm.
+- Comparabili: peso nella stima fino al 60% (nNorm/15) se la media normalizzata è entro ±30% della base. Extra nuovi: g box, j giardino, p portineria.

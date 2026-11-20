@@ -116,7 +116,7 @@ function vCalcola(inp, ctx) {
   // se ci sono abbastanza annunci simili vicini, il prezzo di partenza tiene conto anche di loro (fino al 50%)
   const cmp = ctx.milano && window.mmComps ? mmComps(ctx, q) : null;
   // per ora gli annunci letti sono soprattutto sotto i 200.000 €: li uso solo se non si discostano troppo dalla zona, e al massimo per un terzo
-  const wC = cmp && cmp.norm && cmp.norm > ctx.v * 0.75 && cmp.norm < ctx.v * 1.25 ? Math.min(0.35, cmp.nNorm / 20) : 0;
+  const wC = cmp && cmp.norm && cmp.norm > ctx.v * 0.7 && cmp.norm < ctx.v * 1.3 ? Math.min(0.6, cmp.nNorm / 15) : 0;
   const base = ctx.v * (1 - wC) + (wC ? cmp.norm * wC : 0);
   const mq = Math.max(10, +q.mq || 0);
   const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;

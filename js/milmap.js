@@ -542,7 +542,7 @@ const MM_MUN = { "Centro": 1, "Arco della Pace, Arena, Pagano": 1, "Genova, Tici
   "Udine, Lambrate": 3, "Pasteur, Rovereto": 2, "Ponte Lambro, Santa Giulia": 4, "Corvetto, Rogoredo": 4, "Napoli, Soderini": 6 };
 const mmAnnGeo = () => store.get("geo_ann", {});
 const MM_ST = { N: ["Nuovo", 1.10], O: ["Ottimo / ristrutturato", 1.06], B: ["Buono / abitabile", 1.00], R: ["Da ristrutturare", 0.78] };
-const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna" };
+const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna", g: "box / posto auto", j: "giardino", p: "portineria" };
 let MM_ANN = null;
 function mmAnnunci() {
   if (MM_ANN) return MM_ANN;

@@ -163,7 +163,7 @@ def main():
                     micro=[dict(z=m[0], n=m[1], v=m[2], a=m[3], lat=m[4], lon=m[5]) for m in MICRO]),
         annunci=dict(fonte="Trovit, annunci in vendita a Milano letti il 20/11/2026", url="https://case.trovit.it/detail/trovit-IT-",
                      lista=annunci([m[1] for m in MICRO]),
-                     imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (fino a 196.000 €)", url="https://www.immobiliare.it/annunci/",
+                     imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (tutta Milano fino a 196.000 € + Milano Sud completa)", url="https://www.immobiliare.it/annunci/",
                               campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
     s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
