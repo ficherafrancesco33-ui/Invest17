@@ -1,0 +1,196 @@
+import json, statistics
+MIT = "https://imganuncios.mitula.net/"
+CA = "https://cdn.caasa.it/s3/s/86e/"
+NE = "https://images.nestoria.com/v1/"
+IM = "https://www.immobiliare.it/annunci/"
+WK = "https://www.wikicasa.it/annuncio/"
+TV = "https://case.trovit.it/detail/trovit-IT-"
+MITPAGE = "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+
+def norm(v):
+    m = sum(v) / 12
+    return [x / m for x in v]
+
+ZONE = {
+ "castione": dict(regione="Lombardia", provincia="BG", comune="Castione della Presolana",
+   centro=(45.906, 10.035), omi=None,
+   seas=norm([.304, .364, .148, .181, .209, .265, .474, .624, .331, .167, .182, .268]),
+   breve_fonte="AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza.",
+   lungo_mq=6.0, lungo_min=320, lungo_cap={1: 380, 2: 450, 3: 520}, gestione=0.15,
+   lungo_fonte="Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato",
+   eventi=["Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+           "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+           "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+           "Circa 1 ora e 45 da Milano"],
+   fonti=[dict(titolo="AirROI: affitti brevi a Castione della Presolana", url="https://airroi.com/report/world/italy/lombardy/castione-della-presolana"),
+          dict(titolo="Annunci vicino alle piste (Mitula)", url=MITPAGE),
+          dict(titolo="Annunci di Castione su Trovit", url="https://case.trovit.it/castione-presolana/6")],
+   comps=[(98000,70),(110000,75),(135000,70),(99000,96),(110000,80),(99000,72),(80000,45),(100000,88),(90000,50),(129000,105),(148000,75),(170000,90),(125000,100),(102000,42),(185000,110),(110000,50),(184000,70),(195000,73),(190000,81),(99000,100),(88000,55),(75000,45),(98000,60),(114000,65),(75000,58),(139000,85),(139000,75),(89000,50),(89000,57),(155000,100),(155000,70),(135000,75),(170000,91),(70000,70),(73000,44),(70000,40),(77000,80),(69900,70),(125000,75),(165000,100),(160000,93)]),
+ "pisogne": dict(regione="Lombardia", provincia="BS", comune="Pisogne", centro=(45.807, 10.107), omi=None,
+   seas=norm([.304, .364, .148, .181, .209, .265, .474, .624, .331, .167, .182, .268]),
+   breve_fonte="AirDNA Pisogne (80 annunci): occupazione 46%, 159 $ a notte; AirROI: 34%, 171 $. Valori del paese sul lago: per le frazioni di montagna ho ridotto prezzo e occupazione. Stagionalità indicativa (profilo di montagna).",
+   lungo_mq=5.5, lungo_min=300, lungo_cap={1: 350, 2: 420, 3: 480, 4: 520}, gestione=0.15,
+   lungo_fonte="Stima: circa 5,5 €/m² al mese per le frazioni di montagna; nessun dato OMI di affitto trovato",
+   eventi=["Lago d'Iseo a valle: le frazioni di montagna (Grignaghe, Fraine, Pontasio) hanno vista lago",
+           "Piccola area sci della Val Palot (citata negli annunci)",
+           "Affitti brevi in paese: 80 annunci attivi, mercato vivo d'estate",
+           "Circa 1 ora e 30 da Milano"],
+   fonti=[dict(titolo="AirDNA: affitti brevi a Pisogne", url="https://www.airdna.co/vacation-rental-data/app/it/lombardia/pisogne/overview"),
+          dict(titolo="AirROI: affitti brevi a Pisogne", url="https://airroi.com/airbnb-data/italy/lombardy/pisogne"),
+          dict(titolo="Annunci di Pisogne su Nestoria", url="https://www.nestoria.it/appartamenti/vendita/pisogne")],
+   comps=[(75000,90),(95000,105),(95000,110),(62000,147),(73000,60),(125000,120),(93000,90),(149000,110),(99000,95),(169000,127),(185000,87)]),
+ "vercelli": dict(regione="Piemonte", provincia="VC", comune="Vercelli", centro=(45.3256, 8.4231), omi=1030,
+   seas=None, breve_fonte=None,
+   lungo_mq=7.5, lungo_min=330, lungo_cap={1: 420, 2: 480, 3: 560}, gestione=0,
+   lungo_fonte="Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²",
+   eventi=["Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+           "Treno diretto per Milano in circa un'ora",
+           "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+           "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"],
+   fonti=[dict(titolo="Annunci di Vercelli su Caasa (con zone OMI)", url="https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"),
+          dict(titolo="Prezzi e affitti a Vercelli (mercato-immobiliare.info)", url="https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"),
+          dict(titolo="RealAdvisor: mercato di Vercelli", url="https://realadvisor.it/it/mercato-immobiliare/13100-vercelli")],
+   comps=[(64000,73),(90000,110),(89000,90),(135000,113),(82500,96),(85000,98),(89000,93),(63000,60),(87000,95),(42000,47),(60000,75),(59900,80),(28000,40),(59900,77),(54900,54)]),
+ "alessandria": dict(regione="Piemonte", provincia="AL", comune="Alessandria", centro=(44.9128, 8.6150), omi=1000,
+   seas=None, breve_fonte=None,
+   lungo_mq=7.0, lungo_min=300, lungo_cap={1: 400, 2: 450, 3: 520}, gestione=0,
+   lungo_fonte="OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²",
+   eventi=["Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+           "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+           "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+           "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"],
+   fonti=[dict(titolo="Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)", url="https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"),
+          dict(titolo="RealAdvisor: mercato di Alessandria", url="https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"),
+          dict(titolo="Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)", url="https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html")],
+   comps=[(45000,45),(49000,45),(33000,55),(55000,60),(37000,70),(35000,65),(52000,66),(37000,58),(48000,40),(60000,50),(28500,55),(69000,56)]),
+}
+
+L = [
+ # ---- Castione della Presolana ----
+ dict(z="castione", id="castione-a", titolo="Monolocale sulle piste del Monte Pora con terrazzo", zona="Monte Pora", d=(45.879, 10.092), prezzo=43000, mq=38, locali=1, stato="buono", arredato=False, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_38_m_in_via_pian_del_termen_29_5910002779962841256.jpg", url=MITPAGE, adr=85, occ=.30,
+      pro=["Sulle piste da sci, vicino alla piazzetta del Monte Pora", "Terrazzo", "Prezzo d'ingresso basso per una località sciistica"],
+      contro=["Monolocale: adatto a coppie, non a famiglie", "Non risulta arredato"]),
+ dict(z="castione", id="castione-b", titolo="Monolocale direttamente sulle piste, Monte Pora", zona="Monte Pora", d=(45.878, 10.090), prezzo=58000, mq=38, locali=1, stato="buono", arredato=False, lavori=0,
+      foto=MIT+"appartamento_in_vendita_a_castione_della_presolana_bg_3230000776420346459i2.jpg", url=TV+"3230000776420380693", adr=85, occ=.30,
+      pro=["Sci ai piedi: la posizione che si affitta meglio d'inverno"], contro=["Stessa metratura di altri monolocali a 43.000 €: caro"]),
+ dict(z="castione", id="castione-c", titolo="Monolocale nella pineta del Passo della Presolana", zona="Campelli - Passo della Presolana", d=(45.948, 10.080), prezzo=58000, mq=50, locali=1, stato="buono", arredato=False, lavori=0,
+      foto=MIT+"appartamento_in_vendita_a_castione_della_presolana_bg_4690003754735954488i2.jpg", url=TV+"4690003754735988722", adr=90, occ=.28,
+      pro=["Tra gli abeti, a pochi passi dalle piste del Passo", "50 m²: spazio per 3-4 persone"], contro=["Lontano dai servizi del paese", "Non risulta arredato"]),
+ dict(z="castione", id="castione-d", titolo="Open space ristrutturato con terrazza panoramica", zona="Colle Vareno - Monte Pora", d=(45.884, 10.080), prezzo=55000, mq=50, locali=1, stato="ottimo", arredato=False, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_50_m_in_via_monte_pora_12_6260005793787039539.jpg", url=MITPAGE, adr=95, occ=.30, premium=True,
+      pro=["Già ristrutturato: niente lavori", "Terrazza panoramica, pensato come casa vacanze", "Zona Monte Pora, vicino alle piste"],
+      contro=["Open space: un solo ambiente", "Da arredare"]),
+ dict(z="castione", id="castione-e", titolo="Bilocale seminterrato in piazzetta al Monte Pora", zona="Monte Pora", d=(45.877, 10.093), prezzo=35000, mq=35, locali=2, stato="buono", arredato=False, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_35_m_in_via_malga_alta_2750005790244486994.jpg", url=MITPAGE, adr=80, occ=.27,
+      pro=["Il prezzo più basso della località", "Nel cuore del Monte Pora, zona piazzetta"],
+      contro=["Seminterrato: meno luce, rischio umidità da verificare", "Le foto contano molto negli affitti brevi"]),
+ dict(z="castione", id="castione-f", titolo="Trilocale con balcone panoramico, bagno da rifare", zona="Ronchi", d=(45.905, 10.028), prezzo=58000, mq=50, locali=3, stato="da rinfrescare", arredato=False, lavori=5000,
+      foto=MIT+"appartamento_in_vendita_di_50_m_in_via_san_bernardo_23_3460002779962903157.jpg", url="https://case.trovit.it/bilocale-castione-presolana/2", adr=100, occ=.26,
+      pro=["Soggiorno luminoso con balcone panoramico", "A due passi dal centro"], contro=["Bagno da rifare: ho previsto 5.000 €", "Non arredato"]),
+ dict(z="castione", id="castione-g", titolo="Trilocale arredato a Lantana", zona="Lantana", d=(45.890, 10.070), prezzo=60000, mq=80, locali=3, stato="buono", arredato=True, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_80_m_in_via_predusolo_2030003779358211830.jpg", url=MITPAGE, adr=115, occ=.30, premium=True,
+      pro=["Arredamento compreso nel prezzo", "80 m² a 750 €/m²: grande per la cifra", "Lantana è sulla strada del Monte Pora"],
+      contro=["Pochi dettagli nell'annuncio: stato da verificare"]),
+ dict(z="castione", id="castione-h", titolo="Trilocale arredato con balcone e autorimessa", zona="Agro", d=(45.903, 10.024), prezzo=60000, mq=78, locali=3, stato="buono", arredato=True, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_78_m_in_via_agro_7_1180003779358079277.jpg", url=MITPAGE, adr=110, occ=.28, premium=True,
+      pro=["Completamente arredato", "Autorimessa compresa: utile d'inverno", "Balcone"],
+      contro=["Nella stessa palazzina c'è un altro appartamento anni '70 da ristrutturare: verificare lo stato dello stabile"]),
+ dict(z="castione", id="castione-i", titolo="Bilocale arredato con giardino, prezzo ribassato", zona="Sorte", d=(45.902, 10.030), prezzo=53000, mq=45, locali=2, stato="buono", arredato=True, lavori=0,
+      foto=MIT+"appartamento_in_vendita_di_45_m_in_via_sorte_7_6540004780740562832.jpg", url=MITPAGE, adr=95, occ=.30, premium=True,
+      pro=["Arredato, con giardino, balcone, cantina e parcheggio", "Prezzo già ridotto del 10%"], contro=["Bilocale: 4 posti letto al massimo"]),
+ # ---- Pisogne ----
+ dict(z="pisogne", id="pisogne-a", titolo="Casetta alpina con giardino recintato", zona="Fraine", d=(45.796, 10.128), prezzo=59900, mq=120, locali=4, stato="buono", arredato=False, lavori=0, casa=True,
+      foto=NE+"eyJrZXkiOiJhcHBhcnRhbWVudG9faW5fdmVuZGl0YV9kaV8xMjBfbV9pbl92aWFfY2FudG9uZV82NzkwMDAzNzc2MDc1MDc3NzAwLmpwZyIsImJyYW5kIjoibmVzdG9yaWEiLCJjb3VudHJ5IjoiSVQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjQ4MH0=",
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-6790003776075126931", adr=110, occ=.30,
+      pro=["120 m² con giardino recintato a 500 €/m²", "Mantenuta bene, subito disponibile", "Borgo a 600 m sopra il lago"],
+      contro=["Da arredare", "In frazione: serve l'auto"]),
+ dict(z="pisogne", id="pisogne-b", titolo="Casetta terra-cielo con giardino, barbecue e gazebo", zona="Grignaghe", d=(45.826, 10.131), prezzo=48000, mq=40, locali=2, stato="buono", arredato=False, lavori=0, casa=True,
+      foto=NE+"eyJrZXkiOiJhcHBhcnRhbWVudG9faW5fdmVuZGl0YV9kaV80MF9tX2luX3ZpYV9mb3J0b25hXzhfMjEwMDAwMzc3NjA3NTA4NzIyOC5qcGciLCJicmFuZCI6Im5lc3RvcmlhIiwiY291bnRyeSI6IklUIiwid2lkdGgiOjY0MCwiaGVpZ2h0Ijo0ODB9",
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-2100003776075136459", adr=85, occ=.28,
+      pro=["Indipendente, con giardino attrezzato", "Grignaghe a circa 900 m con vista sul lago"], contro=["Parcheggio a 200 metri", "Circa 30 minuti dal lago"]),
+ dict(z="pisogne", id="pisogne-c", titolo="Casetta su due livelli vicino alle piste della Val Palot", zona="Pontasio", d=(45.832, 10.120), prezzo=35000, mq=40, locali=2, stato="buono", arredato=False, lavori=2000, casa=True,
+      url=TV+"1000005788516489874", foto=None, adr=80, occ=.26,
+      pro=["35.000 € per una casetta indipendente", "Vicino alla piccola area sci della Val Palot"], contro=["Pochi dettagli e nessuna foto nell'annuncio", "Ho previsto 2.000 € di ritocchi"]),
+ # ---- Vercelli ----
+ dict(z="vercelli", id="vercelli-a", titolo="Bilocale con cantina in via Marco Polo", zona="Via Marco Polo", d=(45.330, 8.418), prezzo=42000, mq=47, locali=2, stato="buono", arredato=False, lavori=0, omi=1055,
+      foto=CA+"66415228/0-1.jpg", url=IM+"134642003/",
+      pro=["Buono stato, soggiorno con cucina a vista", "Prezzo d'ingresso basso per un capoluogo"], contro=["Terzo piano senza ascensore"]),
+ dict(z="vercelli", id="vercelli-b", titolo="Trilocale ristrutturato nel 2020 con ascensore", zona="Via Bezzecca", d=(45.324, 8.426), prezzo=60000, mq=75, locali=3, stato="ottimo", arredato=False, lavori=0, omi=1055,
+      foto=CA+"663e9ff4/0-1.jpg", url=IM+"134509927/",
+      pro=["Ristrutturato di recente, con ascensore", "Zona comoda ai servizi, vicino al centro"], contro=["Al limite del budget di 60.000 €"]),
+ dict(z="vercelli", id="vercelli-c", titolo="Trilocale al 6° piano con ascensore, due camere", zona="Piazza Sardegna", d=(45.319, 8.410), prezzo=59900, mq=80, locali=3, stato="buono", arredato=False, lavori=0, omi=975,
+      foto=CA+"664172ed/0-1.jpg", url=IM+"134717313/",
+      pro=["Ristrutturato nel 2015, balcone e cantina", "Due camere: adatto a studenti o famiglie"], contro=["Veranda condonata: controllare i documenti"]),
+ dict(z="vercelli", id="vercelli-d", titolo="Bilocale al piano terra con giardino condominiale", zona="Cappuccini", d=(45.334, 8.436), prezzo=28000, mq=40, locali=2, stato="buono", arredato=False, lavori=2000, omi=975,
+      foto=CA+"6640e148/0-1.jpg", url="https://www.portaleagenzieimmobiliari.it/32587564-vendita-vercelli-appartamento-bilocale-28000-euro-40-mq-riscaldamento-autonomo",
+      pro=["28.000 €: il più economico", "Riscaldamento autonomo", "Proposto dall'agenzia come investimento"], contro=["Piano terra", "Stato non descritto: ho previsto 2.000 € di ritocchi"]),
+ dict(z="vercelli", id="vercelli-e", titolo="Trilocale ristrutturato con riscaldamento autonomo", zona="Via Monviso", d=(45.316, 8.420), prezzo=59900, mq=77, locali=3, stato="ottimo", arredato=False, lavori=0, omi=975,
+      foto=CA+"66432ac4/0-1.jpg", url=IM+"134861505/",
+      pro=["Ristrutturato, spese condominiali basse", "Balcone e cantina"], contro=["Zona periferica rispetto al centro"]),
+ dict(z="vercelli", id="vercelli-f", titolo="Bilocale con ascensore e box auto", zona="Porta Torino", d=(45.322, 8.408), prezzo=54900, mq=54, locali=2, stato="buono", arredato=False, lavori=0, omi=975,
+      foto=CA+"6643177d/0-1.jpg", url=IM+"134779905/",
+      pro=["Box auto compreso", "Palazzina piccola con ascensore"], contro=["Riscaldamento a consumo: chiedere le spese"]),
+ # ---- Alessandria ----
+ dict(z="alessandria", id="alessandria-a", titolo="Bilocale già affittato, rendita dichiarata del 10%", zona="Borgo Rovereto", d=(44.916, 8.611), prezzo=45000, mq=45, locali=2, stato="buono", arredato=False, lavori=0, omi=1076, canone=375,
+      url=WK+"27505333", foto=None,
+      pro=["Già affittato: incassa da subito", "Centrale, primo piano con ascensore, riscaldamento autonomo"], contro=["Canone stimato dalla rendita dichiarata (circa 10%): chiedere il contratto"]),
+ dict(z="alessandria", id="alessandria-b", titolo="Bilocale già affittato vicino a piazza Genova", zona="Piazza Genova", d=(44.906, 8.624), prezzo=49000, mq=45, locali=2, stato="buono", arredato=False, lavori=0, canone=408,
+      url=WK+"27779362", foto=None, classe="F",
+      pro=["Già affittato, rendita dichiarata intorno al 10%"], contro=["Classe energetica F", "Canone stimato dalla rendita dichiarata: chiedere il contratto"]),
+ dict(z="alessandria", id="alessandria-c", titolo="Bilocale di 55 m² in piazza Valfrè, ribassato", zona="Piazza Valfrè", d=(44.910, 8.605), prezzo=33000, mq=55, locali=2, stato="da rinfrescare", arredato=False, lavori=3000,
+      url=WK+"15468072", foto=None,
+      pro=["Prezzo già ribassato da 35.000 €", "Servito da autobus, vicino alla stazione"], contro=["Edificio anni '60: ho previsto 3.000 € di ritocchi"]),
+ dict(z="alessandria", id="alessandria-d", titolo="Bilocale con aria condizionata in via Parini", zona="Via Parini", d=(44.903, 8.612), prezzo=55000, mq=60, locali=2, stato="buono", arredato=False, lavori=0,
+      url=WK+"30171712", foto=None, pro=["Palazzina del 1983, aria condizionata"], contro=["Prezzo al m² nella media: margine ridotto"]),
+ dict(z="alessandria", id="alessandria-e", titolo="Bilocale di 70 m² con cantina, quartiere Cristo", zona="Cristo", d=(44.898, 8.618), prezzo=37000, mq=70, locali=2, stato="buono", arredato=False, lavori=1500, omi=972,
+      url=WK+"26582014", foto=None, pro=["70 m² a 530 €/m²", "Riscaldamento autonomo e cantina"], contro=["Quartiere periferico"]),
+ dict(z="alessandria", id="alessandria-f", titolo="Bilocale ristrutturato con riscaldamento autonomo, Cristo", zona="Cristo", d=(44.8985, 8.6185), prezzo=35000, mq=65, locali=2, stato="ottimo", arredato=False, lavori=0, omi=972,
+      url=WK+"26321041", foto=None, pro=["Già ristrutturato", "Riscaldamento autonomo"], contro=["Quartiere periferico", "Stesso stabile di un altro bilocale in vendita: concorrenza sull'affitto"]),
+ dict(z="alessandria", id="alessandria-g", titolo="Bilocale ristrutturato vicino alla stazione", zona="Via Fernandel", d=(44.904, 8.607), prezzo=52000, mq=66, locali=2, stato="ottimo", arredato=False, lavori=0,
+      url=WK+"27990381", foto=None, pro=["Ristrutturato, a 500 m dalla stazione"], contro=["Riscaldamento centralizzato: spese da chiedere"]),
+ dict(z="alessandria", id="alessandria-h", titolo="Bilocale ristrutturato in centro, zona Uffici Finanziari", zona="Piazza Carducci", d=(44.912, 8.613), prezzo=37000, mq=58, locali=2, stato="ottimo", arredato=False, lavori=0, omi=1076,
+      url=WK+"14803568", foto=None, pro=["Centralissimo, ristrutturato, con ascensore", "Ribassato da 42.000 €", "Condizionatore e cantina"], contro=["Online da molto tempo: capire perché"]),
+ dict(z="alessandria", id="alessandria-i", titolo="Bilocale di 40 m² in corso Lamarmora", zona="Corso Lamarmora", d=(44.909, 8.620), prezzo=48000, mq=40, locali=2, stato="buono", arredato=False, lavori=0,
+      url=WK+"27570121", foto=None, pro=["Piccolo e facile da affittare"], contro=["1.200 €/m²: tra i più cari del gruppo", "Pochi dettagli nell'annuncio"]),
+ dict(z="alessandria", id="alessandria-j", titolo="Bilocale al piano terra con box e giardino privato", zona="Via Casalbagliano", d=(44.900, 8.598), prezzo=60000, mq=50, locali=2, stato="buono", arredato=False, lavori=0,
+      url=WK+"15503144", foto=None, pro=["Giardino privato e box auto"], contro=["Al limite del budget", "Zona periferica"]),
+ dict(z="alessandria", id="alessandria-k", titolo="Bilocale già affittato in stabile senza lavori deliberati", zona="Via Carlo Marx", d=(44.893, 8.628), prezzo=28500, mq=55, locali=2, stato="buono", arredato=False, lavori=0,
+      url=WK+"28255158", foto=None, pro=["28.500 €, già affittato", "Stabile ordinato senza lavori straordinari deliberati"], contro=["Canone non indicato: l'ho stimato", "Zona periferica"]),
+]
+
+def mesi(seas, occ):
+    return [round(min(.95, s * occ), 3) for s in seas]
+
+out = []
+for i, d in enumerate(L):
+    Z = ZONE[d["z"]]
+    lat, lng = d["d"]
+    loc = d["locali"]
+    canone = d.get("canone") or max(Z["lungo_min"], min(Z["lungo_cap"].get(loc, max(Z["lungo_cap"].values())), round(d["mq"] * Z["lungo_mq"] / 10) * 10))
+    casa = d.get("casa")
+    aff = dict(lungo=dict(canone=canone, stima=not d.get("canone"), fonte=Z["lungo_fonte"] + (" (canone ricavato dalla rendita dichiarata nell'annuncio)" if d.get("canone") else "")))
+    if Z["seas"] and d.get("adr"):
+        aff["breve"] = dict(adr=d["adr"], occ=d["occ"], mesi=mesi(Z["seas"], d["occ"]), stima=True, fonte=Z["breve_fonte"])
+    im = dict(id=d["id"], titolo=d["titolo"], url=d["url"], fonte="Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+        aggiunto="2026-11-20", regione=Z["regione"], provincia=Z["provincia"], comune=Z["comune"], zona=d["zona"],
+        lat=lat, lng=lng, pos_indicativa=True, prezzo=d["prezzo"], mq=d["mq"], locali=loc, bagni=1, piano=d.get("piano"),
+        arredato=d["arredato"], stato=d["stato"], lavori=d["lavori"], classe_energetica=d.get("classe"), foto=d.get("foto"),
+        spese=dict(condominio_mese=0 if casa else (60 if not Z["seas"] else 40), imu_anno=400 if not Z["seas"] else 350, stima=True),
+        affitti=aff, giudizio=dict(pro=d["pro"], contro=d["contro"]), eventi=Z["eventi"], fonti=Z["fonti"])
+    if d.get("premium"): im["parametri"] = {}
+    omi = d.get("omi") or Z["omi"]
+    comps = sorted([c for c in Z["comps"] if not (c[0] == d["prezzo"] and c[1] == d["mq"])], key=lambda c: abs(c[1] - d["mq"]))[:6]
+    im["valutazione"] = dict(
+        comparabili=[dict(titolo=f"Annuncio simile a {Z['comune']}, {c[1]} m²", prezzo=c[0], mq=c[1]) for c in comps],
+        note=f"Comparabili: annunci in vendita a {Z['comune']} con metratura vicina (raccolti il 20/11/2026).")
+    if omi: im["valutazione"]["omi"] = dict(medio=omi, fonte=f"zona OMI di {Z['comune']} (valore medio riportato da Caasa / mercato-immobiliare.info)")
+    out.append(im)
+
+oneta = json.load(open("tools/oneta.json"))
+allx = oneta + out
+js = ("// INVEST17 — \"I miei immobili\": archivio fatto a mano (link mandati da Imma e caricamenti per zona).\n"
+      "// Solo DATI: i conti li fa l'app. Schema in NOTE_SVILUPPO.md. Aggiornato il 20/11/2026.\n"
+      "const MIEI = " + json.dumps(allx, ensure_ascii=False, indent=1) + ";\n")
+open("data/immobili.js", "w").write(js)
+print(len(oneta), len(out), len(allx))

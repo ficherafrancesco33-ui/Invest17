@@ -10,11 +10,11 @@ const IMPOSTAZIONI = {
 
   // Affitto breve (B&B / Airbnb / Booking)
   breve: {
-    commissioni_pct: 0.17,       // Airbnb/Booking
+    commissioni_pct: 0.12,       // media Airbnb (circa 3%) e Booking (15-18%)
     gestione_pct: 0.15,          // co-host locale (0 se gestito da noi)
     soggiorno_medio_notti: 2.5,
-    pulizia_per_soggiorno: 30,   // pulizie e biancheria non coperte dal guest
-    utenze_anno: 1800,
+    pulizia_per_soggiorno: 10,   // quota di pulizie e biancheria non coperta dalla tariffa pulizie pagata dall'ospite
+    utenze_anno: 1500,
     manutenzione_pct: 0.04,
     assicurazione_anno: 250
   },

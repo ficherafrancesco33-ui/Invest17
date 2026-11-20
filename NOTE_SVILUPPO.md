@@ -87,3 +87,11 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - Comparabili: altri annunci di Oneta dello stesso segmento (appartamenti / case / alto livello), metratura più vicina; esclusa la casa di 220 m².
 - Affitto breve: stima da AirROI Oltre il Colle (comune confinante, stagionalità mese per mese) e AirDNA Oltre il Colle/Serina. Affitto lungo: stima prudente per fasce di locali (nessun OMI locazione). Medio termine non inserito (nessun dato).
 - Posizioni sulla mappa indicative per frazione (`pos_indicativa`), condominio e IMU stimati (`spese.stima`). Generatore dei dati: script nella sessione (non nel repo).
+
+### 20/11/2026 (4) — Caricamento grande: zone entro 2 ore da Milano, fino a 60.000 €
+- Nuove zone: Castione della Presolana (9, sci + estate), Pisogne frazioni di montagna sul Lago d'Iseo (3), Vercelli (6, affitto lungo), Alessandria (11, affitto lungo). Totale archivio: 53 immobili.
+- Fonti annunci: Trovit, Mitula, Nestoria, Caasa, Wikicasa (gli unici leggibili da Claude; Immobiliare e Idealista solo se il link lo manda Imma).
+- Escluse per ora: Lago di Como (Gravedona), Lago Maggiore (Luino), Valsassina (Barzio): quasi nulla sotto 60.000 € (circa 1.600-2.300 €/m²).
+- Affitto breve: Castione da AirROI (stagionalità reale mese per mese), Pisogne da AirDNA/AirROI ridotti per le frazioni. Affitto lungo: Vercelli 7,5 €/m², Alessandria 7 €/m² (fonti in scheda), montagna stimato.
+- Parametri affitto breve rivisti in `impostazioni.js`: commissioni 12% (media Airbnb/Booking), pulizie 10 € a soggiorno (oltre la tariffa pulizie pagata dall'ospite), utenze 1.500 €/anno.
+- Generatori dei dati in `tools/oneta.py` e `tools/zone.py` (Python, rigenerano `data/immobili.js`).

@@ -1,6 +1,5 @@
-// INVEST17 — "I miei immobili": archivio fatto a mano (link mandati da Imma).
-// Un oggetto per immobile: solo DATI, i conti li fa l'app. Schema in NOTE_SVILUPPO.md.
-// 20/11/2026: Oneta (BG), da https://www.idealista.it/vendita-case/oneta-bergamo/
+// INVEST17 — "I miei immobili": archivio fatto a mano (link mandati da Imma e caricamenti per zona).
+// Solo DATI: i conti li fa l'app. Schema in NOTE_SVILUPPO.md. Aggiornato il 20/11/2026.
 const MIEI = [
  {
   "id": "oneta-a",
@@ -3391,5 +3390,3232 @@ const MIEI = [
     "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/serina/overview"
    }
   ]
+ },
+ {
+  "id": "castione-a",
+  "titolo": "Monolocale sulle piste del Monte Pora con terrazzo",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Monte Pora",
+  "lat": 45.879,
+  "lng": 10.092,
+  "pos_indicativa": true,
+  "prezzo": 43000,
+  "mq": 38,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_38_m_in_via_pian_del_termen_29_5910002779962841256.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Sulle piste da sci, vicino alla piazzetta del Monte Pora",
+    "Terrazzo",
+    "Prezzo d'ingresso basso per una località sciistica"
+   ],
+   "contro": [
+    "Monolocale: adatto a coppie, non a famiglie",
+    "Non risulta arredato"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 40 m²",
+     "prezzo": 70000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-b",
+  "titolo": "Monolocale direttamente sulle piste, Monte Pora",
+  "url": "https://case.trovit.it/detail/trovit-IT-3230000776420380693",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Monte Pora",
+  "lat": 45.878,
+  "lng": 10.09,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 38,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_a_castione_della_presolana_bg_3230000776420346459i2.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Sci ai piedi: la posizione che si affitta meglio d'inverno"
+   ],
+   "contro": [
+    "Stessa metratura di altri monolocali a 43.000 €: caro"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 40 m²",
+     "prezzo": 70000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-c",
+  "titolo": "Monolocale nella pineta del Passo della Presolana",
+  "url": "https://case.trovit.it/detail/trovit-IT-4690003754735988722",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Campelli - Passo della Presolana",
+  "lat": 45.948,
+  "lng": 10.08,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 50,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_a_castione_della_presolana_bg_4690003754735954488i2.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 90,
+    "occ": 0.28,
+    "mesi": [
+     0.29,
+     0.348,
+     0.141,
+     0.173,
+     0.2,
+     0.253,
+     0.453,
+     0.596,
+     0.316,
+     0.16,
+     0.174,
+     0.256
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Tra gli abeti, a pochi passi dalle piste del Passo",
+    "50 m²: spazio per 3-4 persone"
+   ],
+   "contro": [
+    "Lontano dai servizi del paese",
+    "Non risulta arredato"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 110000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 89000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 55 m²",
+     "prezzo": 88000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-d",
+  "titolo": "Open space ristrutturato con terrazza panoramica",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Colle Vareno - Monte Pora",
+  "lat": 45.884,
+  "lng": 10.08,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 50,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_50_m_in_via_monte_pora_12_6260005793787039539.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già ristrutturato: niente lavori",
+    "Terrazza panoramica, pensato come casa vacanze",
+    "Zona Monte Pora, vicino alle piste"
+   ],
+   "contro": [
+    "Open space: un solo ambiente",
+    "Da arredare"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "parametri": {},
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 110000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 89000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 55 m²",
+     "prezzo": 88000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-e",
+  "titolo": "Bilocale seminterrato in piazzetta al Monte Pora",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Monte Pora",
+  "lat": 45.877,
+  "lng": 10.093,
+  "pos_indicativa": true,
+  "prezzo": 35000,
+  "mq": 35,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_35_m_in_via_malga_alta_2750005790244486994.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 80,
+    "occ": 0.27,
+    "mesi": [
+     0.28,
+     0.335,
+     0.136,
+     0.167,
+     0.193,
+     0.244,
+     0.437,
+     0.575,
+     0.305,
+     0.154,
+     0.168,
+     0.247
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Il prezzo più basso della località",
+    "Nel cuore del Monte Pora, zona piazzetta"
+   ],
+   "contro": [
+    "Seminterrato: meno luce, rischio umidità da verificare",
+    "Le foto contano molto negli affitti brevi"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 40 m²",
+     "prezzo": 70000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-f",
+  "titolo": "Trilocale con balcone panoramico, bagno da rifare",
+  "url": "https://case.trovit.it/bilocale-castione-presolana/2",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Ronchi",
+  "lat": 45.905,
+  "lng": 10.028,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 50,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 5000,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_50_m_in_via_san_bernardo_23_3460002779962903157.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 100,
+    "occ": 0.26,
+    "mesi": [
+     0.27,
+     0.323,
+     0.131,
+     0.161,
+     0.185,
+     0.235,
+     0.42,
+     0.554,
+     0.294,
+     0.148,
+     0.161,
+     0.238
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Soggiorno luminoso con balcone panoramico",
+    "A due passi dal centro"
+   ],
+   "contro": [
+    "Bagno da rifare: ho previsto 5.000 €",
+    "Non arredato"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 110000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 89000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 55 m²",
+     "prezzo": 88000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-g",
+  "titolo": "Trilocale arredato a Lantana",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Lantana",
+  "lat": 45.89,
+  "lng": 10.07,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 80,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_80_m_in_via_predusolo_2030003779358211830.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 480,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 115,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredamento compreso nel prezzo",
+    "80 m² a 750 €/m²: grande per la cifra",
+    "Lantana è sulla strada del Monte Pora"
+   ],
+   "contro": [
+    "Pochi dettagli nell'annuncio: stato da verificare"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "parametri": {},
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 80 m²",
+     "prezzo": 110000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 80 m²",
+     "prezzo": 77000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 81 m²",
+     "prezzo": 190000,
+     "mq": 81
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 75 m²",
+     "prezzo": 110000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 75 m²",
+     "prezzo": 148000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 85 m²",
+     "prezzo": 139000,
+     "mq": 85
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-h",
+  "titolo": "Trilocale arredato con balcone e autorimessa",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Agro",
+  "lat": 45.903,
+  "lng": 10.024,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 78,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_78_m_in_via_agro_7_1180003779358079277.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 470,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 110,
+    "occ": 0.28,
+    "mesi": [
+     0.29,
+     0.348,
+     0.141,
+     0.173,
+     0.2,
+     0.253,
+     0.453,
+     0.596,
+     0.316,
+     0.16,
+     0.174,
+     0.256
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Completamente arredato",
+    "Autorimessa compresa: utile d'inverno",
+    "Balcone"
+   ],
+   "contro": [
+    "Nella stessa palazzina c'è un altro appartamento anni '70 da ristrutturare: verificare lo stato dello stabile"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "parametri": {},
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 80 m²",
+     "prezzo": 110000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 80 m²",
+     "prezzo": 77000,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 75 m²",
+     "prezzo": 110000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 75 m²",
+     "prezzo": 148000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 81 m²",
+     "prezzo": 190000,
+     "mq": 81
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 75 m²",
+     "prezzo": 139000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "castione-i",
+  "titolo": "Bilocale arredato con giardino, prezzo ribassato",
+  "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BG",
+  "comune": "Castione della Presolana",
+  "zona": "Sorte",
+  "lat": 45.902,
+  "lng": 10.03,
+  "pos_indicativa": true,
+  "prezzo": 53000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://imganuncios.mitula.net/appartamento_in_vendita_di_45_m_in_via_sorte_7_6540004780740562832.jpg",
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese per l'altopiano; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirROI Castione della Presolana (31 annunci, nov 2025-ott 2026): occupazione 29%, 145 € a notte, 7.811 € l'anno per annuncio. Prezzo a notte adattato a grandezza."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredato, con giardino, balcone, cantina e parcheggio",
+    "Prezzo già ridotto del 10%"
+   ],
+   "contro": [
+    "Bilocale: 4 posti letto al massimo"
+   ]
+  },
+  "eventi": [
+   "Stazione sciistica: Monte Pora e Passo della Presolana, con impianti a pochi minuti",
+   "Montagna d'estate: luglio e agosto sono i mesi migliori dell'anno",
+   "Stagione (AirROI): agosto 62% di occupazione, luglio 47%, febbraio 36%; marzo, ottobre e novembre i più deboli",
+   "Circa 1 ora e 45 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirROI: affitti brevi a Castione della Presolana",
+    "url": "https://airroi.com/report/world/italy/lombardy/castione-della-presolana"
+   },
+   {
+    "titolo": "Annunci vicino alle piste (Mitula)",
+    "url": "https://immobiliare.mitula.it/appartamento-piste-sci-castione-presolana"
+   },
+   {
+    "titolo": "Annunci di Castione su Trovit",
+    "url": "https://case.trovit.it/castione-presolana/6"
+   }
+  ],
+  "parametri": {},
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 44 m²",
+     "prezzo": 73000,
+     "mq": 44
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 42 m²",
+     "prezzo": 102000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 90000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Castione della Presolana, 50 m²",
+     "prezzo": 110000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Castione della Presolana con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "pisogne-a",
+  "titolo": "Casetta alpina con giardino recintato",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-6790003776075126931",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BS",
+  "comune": "Pisogne",
+  "zona": "Fraine",
+  "lat": 45.796,
+  "lng": 10.128,
+  "pos_indicativa": true,
+  "prezzo": 59900,
+  "mq": 120,
+  "locali": 4,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://images.nestoria.com/v1/eyJrZXkiOiJhcHBhcnRhbWVudG9faW5fdmVuZGl0YV9kaV8xMjBfbV9pbl92aWFfY2FudG9uZV82NzkwMDAzNzc2MDc1MDc3NzAwLmpwZyIsImJyYW5kIjoibmVzdG9yaWEiLCJjb3VudHJ5IjoiSVQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjQ4MH0=",
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 5,5 €/m² al mese per le frazioni di montagna; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 110,
+    "occ": 0.3,
+    "mesi": [
+     0.311,
+     0.373,
+     0.151,
+     0.185,
+     0.214,
+     0.271,
+     0.485,
+     0.639,
+     0.339,
+     0.171,
+     0.186,
+     0.274
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pisogne (80 annunci): occupazione 46%, 159 $ a notte; AirROI: 34%, 171 $. Valori del paese sul lago: per le frazioni di montagna ho ridotto prezzo e occupazione. Stagionalità indicativa (profilo di montagna)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "120 m² con giardino recintato a 500 €/m²",
+    "Mantenuta bene, subito disponibile",
+    "Borgo a 600 m sopra il lago"
+   ],
+   "contro": [
+    "Da arredare",
+    "In frazione: serve l'auto"
+   ]
+  },
+  "eventi": [
+   "Lago d'Iseo a valle: le frazioni di montagna (Grignaghe, Fraine, Pontasio) hanno vista lago",
+   "Piccola area sci della Val Palot (citata negli annunci)",
+   "Affitti brevi in paese: 80 annunci attivi, mercato vivo d'estate",
+   "Circa 1 ora e 30 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pisogne",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pisogne/overview"
+   },
+   {
+    "titolo": "AirROI: affitti brevi a Pisogne",
+    "url": "https://airroi.com/airbnb-data/italy/lombardy/pisogne"
+   },
+   {
+    "titolo": "Annunci di Pisogne su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pisogne"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Pisogne, 120 m²",
+     "prezzo": 125000,
+     "mq": 120
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 127 m²",
+     "prezzo": 169000,
+     "mq": 127
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 110 m²",
+     "prezzo": 95000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 110 m²",
+     "prezzo": 149000,
+     "mq": 110
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 105 m²",
+     "prezzo": 95000,
+     "mq": 105
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Pisogne con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "pisogne-b",
+  "titolo": "Casetta terra-cielo con giardino, barbecue e gazebo",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-2100003776075136459",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BS",
+  "comune": "Pisogne",
+  "zona": "Grignaghe",
+  "lat": 45.826,
+  "lng": 10.131,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://images.nestoria.com/v1/eyJrZXkiOiJhcHBhcnRhbWVudG9faW5fdmVuZGl0YV9kaV80MF9tX2luX3ZpYV9mb3J0b25hXzhfMjEwMDAwMzc3NjA3NTA4NzIyOC5qcGciLCJicmFuZCI6Im5lc3RvcmlhIiwiY291bnRyeSI6IklUIiwid2lkdGgiOjY0MCwiaGVpZ2h0Ijo0ODB9",
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 300,
+    "stima": true,
+    "fonte": "Stima: circa 5,5 €/m² al mese per le frazioni di montagna; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.28,
+    "mesi": [
+     0.29,
+     0.348,
+     0.141,
+     0.173,
+     0.2,
+     0.253,
+     0.453,
+     0.596,
+     0.316,
+     0.16,
+     0.174,
+     0.256
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pisogne (80 annunci): occupazione 46%, 159 $ a notte; AirROI: 34%, 171 $. Valori del paese sul lago: per le frazioni di montagna ho ridotto prezzo e occupazione. Stagionalità indicativa (profilo di montagna)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Indipendente, con giardino attrezzato",
+    "Grignaghe a circa 900 m con vista sul lago"
+   ],
+   "contro": [
+    "Parcheggio a 200 metri",
+    "Circa 30 minuti dal lago"
+   ]
+  },
+  "eventi": [
+   "Lago d'Iseo a valle: le frazioni di montagna (Grignaghe, Fraine, Pontasio) hanno vista lago",
+   "Piccola area sci della Val Palot (citata negli annunci)",
+   "Affitti brevi in paese: 80 annunci attivi, mercato vivo d'estate",
+   "Circa 1 ora e 30 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pisogne",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pisogne/overview"
+   },
+   {
+    "titolo": "AirROI: affitti brevi a Pisogne",
+    "url": "https://airroi.com/airbnb-data/italy/lombardy/pisogne"
+   },
+   {
+    "titolo": "Annunci di Pisogne su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pisogne"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Pisogne, 60 m²",
+     "prezzo": 73000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 87 m²",
+     "prezzo": 185000,
+     "mq": 87
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 90 m²",
+     "prezzo": 75000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 90 m²",
+     "prezzo": 93000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 105 m²",
+     "prezzo": 95000,
+     "mq": 105
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Pisogne con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "pisogne-c",
+  "titolo": "Casetta su due livelli vicino alle piste della Val Palot",
+  "url": "https://case.trovit.it/detail/trovit-IT-1000005788516489874",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "BS",
+  "comune": "Pisogne",
+  "zona": "Pontasio",
+  "lat": 45.832,
+  "lng": 10.12,
+  "pos_indicativa": true,
+  "prezzo": 35000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 300,
+    "stima": true,
+    "fonte": "Stima: circa 5,5 €/m² al mese per le frazioni di montagna; nessun dato OMI di affitto trovato"
+   },
+   "breve": {
+    "adr": 80,
+    "occ": 0.26,
+    "mesi": [
+     0.27,
+     0.323,
+     0.131,
+     0.161,
+     0.185,
+     0.235,
+     0.42,
+     0.554,
+     0.294,
+     0.148,
+     0.161,
+     0.238
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pisogne (80 annunci): occupazione 46%, 159 $ a notte; AirROI: 34%, 171 $. Valori del paese sul lago: per le frazioni di montagna ho ridotto prezzo e occupazione. Stagionalità indicativa (profilo di montagna)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "35.000 € per una casetta indipendente",
+    "Vicino alla piccola area sci della Val Palot"
+   ],
+   "contro": [
+    "Pochi dettagli e nessuna foto nell'annuncio",
+    "Ho previsto 2.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Lago d'Iseo a valle: le frazioni di montagna (Grignaghe, Fraine, Pontasio) hanno vista lago",
+   "Piccola area sci della Val Palot (citata negli annunci)",
+   "Affitti brevi in paese: 80 annunci attivi, mercato vivo d'estate",
+   "Circa 1 ora e 30 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pisogne",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pisogne/overview"
+   },
+   {
+    "titolo": "AirROI: affitti brevi a Pisogne",
+    "url": "https://airroi.com/airbnb-data/italy/lombardy/pisogne"
+   },
+   {
+    "titolo": "Annunci di Pisogne su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pisogne"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Pisogne, 60 m²",
+     "prezzo": 73000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 87 m²",
+     "prezzo": 185000,
+     "mq": 87
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 90 m²",
+     "prezzo": 75000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 90 m²",
+     "prezzo": 93000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 95 m²",
+     "prezzo": 99000,
+     "mq": 95
+    },
+    {
+     "titolo": "Annuncio simile a Pisogne, 105 m²",
+     "prezzo": 95000,
+     "mq": 105
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Pisogne con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "vercelli-a",
+  "titolo": "Bilocale con cantina in via Marco Polo",
+  "url": "https://www.immobiliare.it/annunci/134642003/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Via Marco Polo",
+  "lat": 45.33,
+  "lng": 8.418,
+  "pos_indicativa": true,
+  "prezzo": 42000,
+  "mq": 47,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/66415228/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 350,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Buono stato, soggiorno con cucina a vista",
+    "Prezzo d'ingresso basso per un capoluogo"
+   ],
+   "contro": [
+    "Terzo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 40 m²",
+     "prezzo": 28000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1055,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-b",
+  "titolo": "Trilocale ristrutturato nel 2020 con ascensore",
+  "url": "https://www.immobiliare.it/annunci/134509927/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Via Bezzecca",
+  "lat": 45.324,
+  "lng": 8.426,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 75,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/663e9ff4/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 560,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato di recente, con ascensore",
+    "Zona comoda ai servizi, vicino al centro"
+   ],
+   "contro": [
+    "Al limite del budget di 60.000 €"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 80 m²",
+     "prezzo": 59900,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 90 m²",
+     "prezzo": 89000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 93 m²",
+     "prezzo": 89000,
+     "mq": 93
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1055,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-c",
+  "titolo": "Trilocale al 6° piano con ascensore, due camere",
+  "url": "https://www.immobiliare.it/annunci/134717313/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Piazza Sardegna",
+  "lat": 45.319,
+  "lng": 8.41,
+  "pos_indicativa": true,
+  "prezzo": 59900,
+  "mq": 80,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/664172ed/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 560,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato nel 2015, balcone e cantina",
+    "Due camere: adatto a studenti o famiglie"
+   ],
+   "contro": [
+    "Veranda condonata: controllare i documenti"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 90 m²",
+     "prezzo": 89000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 93 m²",
+     "prezzo": 89000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 95 m²",
+     "prezzo": 87000,
+     "mq": 95
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 975,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-d",
+  "titolo": "Bilocale al piano terra con giardino condominiale",
+  "url": "https://www.portaleagenzieimmobiliari.it/32587564-vendita-vercelli-appartamento-bilocale-28000-euro-40-mq-riscaldamento-autonomo",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Cappuccini",
+  "lat": 45.334,
+  "lng": 8.436,
+  "pos_indicativa": true,
+  "prezzo": 28000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/6640e148/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "28.000 €: il più economico",
+    "Riscaldamento autonomo",
+    "Proposto dall'agenzia come investimento"
+   ],
+   "contro": [
+    "Piano terra",
+    "Stato non descritto: ho previsto 2.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 47 m²",
+     "prezzo": 42000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 975,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-e",
+  "titolo": "Trilocale ristrutturato con riscaldamento autonomo",
+  "url": "https://www.immobiliare.it/annunci/134861505/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Via Monviso",
+  "lat": 45.316,
+  "lng": 8.42,
+  "pos_indicativa": true,
+  "prezzo": 59900,
+  "mq": 77,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/66432ac4/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 560,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato, spese condominiali basse",
+    "Balcone e cantina"
+   ],
+   "contro": [
+    "Zona periferica rispetto al centro"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 80 m²",
+     "prezzo": 59900,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 90 m²",
+     "prezzo": 89000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 93 m²",
+     "prezzo": 89000,
+     "mq": 93
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 975,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-f",
+  "titolo": "Bilocale con ascensore e box auto",
+  "url": "https://www.immobiliare.it/annunci/134779905/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Porta Torino",
+  "lat": 45.322,
+  "lng": 8.408,
+  "pos_indicativa": true,
+  "prezzo": 54900,
+  "mq": 54,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/6643177d/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 400,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Box auto compreso",
+    "Palazzina piccola con ascensore"
+   ],
+   "contro": [
+    "Riscaldamento a consumo: chiedere le spese"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 47 m²",
+     "prezzo": 42000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 40 m²",
+     "prezzo": 28000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 975,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-a",
+  "titolo": "Bilocale già affittato, rendita dichiarata del 10%",
+  "url": "https://www.wikicasa.it/annuncio/27505333",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Borgo Rovereto",
+  "lat": 44.916,
+  "lng": 8.611,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 375,
+    "stima": false,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m² (canone ricavato dalla rendita dichiarata nell'annuncio)"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già affittato: incassa da subito",
+    "Centrale, primo piano con ascensore, riscaldamento autonomo"
+   ],
+   "contro": [
+    "Canone stimato dalla rendita dichiarata (circa 10%): chiedere il contratto"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1076,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-b",
+  "titolo": "Bilocale già affittato vicino a piazza Genova",
+  "url": "https://www.wikicasa.it/annuncio/27779362",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Piazza Genova",
+  "lat": 44.906,
+  "lng": 8.624,
+  "pos_indicativa": true,
+  "prezzo": 49000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": "F",
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 408,
+    "stima": false,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m² (canone ricavato dalla rendita dichiarata nell'annuncio)"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già affittato, rendita dichiarata intorno al 10%"
+   ],
+   "contro": [
+    "Classe energetica F",
+    "Canone stimato dalla rendita dichiarata: chiedere il contratto"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-c",
+  "titolo": "Bilocale di 55 m² in piazza Valfrè, ribassato",
+  "url": "https://www.wikicasa.it/annuncio/15468072",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Piazza Valfrè",
+  "lat": 44.91,
+  "lng": 8.605,
+  "pos_indicativa": true,
+  "prezzo": 33000,
+  "mq": 55,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 3000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Prezzo già ribassato da 35.000 €",
+    "Servito da autobus, vicino alla stazione"
+   ],
+   "contro": [
+    "Edificio anni '60: ho previsto 3.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-d",
+  "titolo": "Bilocale con aria condizionata in via Parini",
+  "url": "https://www.wikicasa.it/annuncio/30171712",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Via Parini",
+  "lat": 44.903,
+  "lng": 8.612,
+  "pos_indicativa": true,
+  "prezzo": 55000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Palazzina del 1983, aria condizionata"
+   ],
+   "contro": [
+    "Prezzo al m² nella media: margine ridotto"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 66 m²",
+     "prezzo": 52000,
+     "mq": 66
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-e",
+  "titolo": "Bilocale di 70 m² con cantina, quartiere Cristo",
+  "url": "https://www.wikicasa.it/annuncio/26582014",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Cristo",
+  "lat": 44.898,
+  "lng": 8.618,
+  "pos_indicativa": true,
+  "prezzo": 37000,
+  "mq": 70,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 1500,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "70 m² a 530 €/m²",
+    "Riscaldamento autonomo e cantina"
+   ],
+   "contro": [
+    "Quartiere periferico"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 66 m²",
+     "prezzo": 52000,
+     "mq": 66
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 972,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-f",
+  "titolo": "Bilocale ristrutturato con riscaldamento autonomo, Cristo",
+  "url": "https://www.wikicasa.it/annuncio/26321041",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Cristo",
+  "lat": 44.8985,
+  "lng": 8.6185,
+  "pos_indicativa": true,
+  "prezzo": 35000,
+  "mq": 65,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già ristrutturato",
+    "Riscaldamento autonomo"
+   ],
+   "contro": [
+    "Quartiere periferico",
+    "Stesso stabile di un altro bilocale in vendita: concorrenza sull'affitto"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 66 m²",
+     "prezzo": 52000,
+     "mq": 66
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 70 m²",
+     "prezzo": 37000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 972,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-g",
+  "titolo": "Bilocale ristrutturato vicino alla stazione",
+  "url": "https://www.wikicasa.it/annuncio/27990381",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Via Fernandel",
+  "lat": 44.904,
+  "lng": 8.607,
+  "pos_indicativa": true,
+  "prezzo": 52000,
+  "mq": 66,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato, a 500 m dalla stazione"
+   ],
+   "contro": [
+    "Riscaldamento centralizzato: spese da chiedere"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 70 m²",
+     "prezzo": 37000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-h",
+  "titolo": "Bilocale ristrutturato in centro, zona Uffici Finanziari",
+  "url": "https://www.wikicasa.it/annuncio/14803568",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Piazza Carducci",
+  "lat": 44.912,
+  "lng": 8.613,
+  "pos_indicativa": true,
+  "prezzo": 37000,
+  "mq": 58,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 410,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Centralissimo, ristrutturato, con ascensore",
+    "Ribassato da 42.000 €",
+    "Condizionatore e cantina"
+   ],
+   "contro": [
+    "Online da molto tempo: capire perché"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 66 m²",
+     "prezzo": 52000,
+     "mq": 66
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1076,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-i",
+  "titolo": "Bilocale di 40 m² in corso Lamarmora",
+  "url": "https://www.wikicasa.it/annuncio/27570121",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Corso Lamarmora",
+  "lat": 44.909,
+  "lng": 8.62,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 300,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Piccolo e facile da affittare"
+   ],
+   "contro": [
+    "1.200 €/m²: tra i più cari del gruppo",
+    "Pochi dettagli nell'annuncio"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-j",
+  "titolo": "Bilocale al piano terra con box e giardino privato",
+  "url": "https://www.wikicasa.it/annuncio/15503144",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Via Casalbagliano",
+  "lat": 44.9,
+  "lng": 8.598,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 50,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 350,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Giardino privato e box auto"
+   ],
+   "contro": [
+    "Al limite del budget",
+    "Zona periferica"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-k",
+  "titolo": "Bilocale già affittato in stabile senza lavori deliberati",
+  "url": "https://www.wikicasa.it/annuncio/28255158",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Via Carlo Marx",
+  "lat": 44.893,
+  "lng": 8.628,
+  "pos_indicativa": true,
+  "prezzo": 28500,
+  "mq": 55,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "28.500 €, già affittato",
+    "Stabile ordinato senza lavori straordinari deliberati"
+   ],
+   "contro": [
+    "Canone non indicato: l'ho stimato",
+    "Zona periferica"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1000,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
  }
 ];
