@@ -570,7 +570,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 :root[data-th=bordeaux] body{background:linear-gradient(180deg,#2c1320,var(--bg) 40%)}
 :root[data-th=bordeaux] .top{border-bottom:1px solid #8a6a2a}
 :root[data-th=bianco]{--bg:#ffffff;--panel:#fcf9f5;--panel2:#f7efe6;--card:#fcf9f5;--card2:#f7efe6;--deep:#efe2d3;--head:#6a1828;--headtx:#ffffff;--line:#ece2d6;--line2:#d9c3a0;--soft:#f3e6cf;--line2x:#d9c3a0;
-  --tx:#2a1418;--tx2:#4e2a31;--muted:#80525a;--strong:#1f0d11;--cy:#6a1828;--cy2:#8a6414;--mg:#6a1828;--yl:#8a6414;--on:#ffffff;--hd1:#6a1828;--hd2:#6a1828;--good:#6a1828;--warn:#9a6f1c;--bad:#b0586a;--accrgb:106,24,40;color-scheme:light}
+  --tx:#2a1418;--tx2:#4e2a31;--muted:#80525a;--strong:#1f0d11;--cy:#6a1828;--cy2:#8e2c40;--mg:#6a1828;--yl:#a87b26;--on:#ffffff;--hd1:#6a1828;--hd2:#6a1828;--good:#6a1828;--warn:#9a6f1c;--bad:#b0586a;--accrgb:106,24,40;color-scheme:light}
 :root[data-th=bianco] body{background:var(--bg)}
 :root[data-th=bianco] .top{border-bottom:2px solid #c9a24b}
 :root[data-th=bianco] .logo i{color:#6a1828;background:#e9cd8a}
@@ -620,6 +620,25 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 :root[data-th=bianco] .offer div{background:#fbf4ea;border-color:#ead9c2}
 :root[data-th=bianco] .offer b.cy,:root[data-th=bianco] .cy{color:#6a1828}
 :root[data-th=bianco] .mxbtn{background:#fff;color:#6a1828;border-color:#c9a24b}
+
+:root[data-th=bianco] .taxsw{background:#f3e7d6;box-shadow:none}
+:root[data-th=bianco] .verdict,:root[data-th=bianco] .vhead{background:radial-gradient(400px 120px at 50% 0,rgba(201,162,75,.16),transparent),#fbf4ea;border-color:#e3cfa8}
+:root[data-th=bianco] .tb,:root[data-th=bianco] .dv .tb{background:#efe2cf}
+:root[data-th=bianco] .tb span{background:linear-gradient(90deg,#c9a24b,#6a1828);box-shadow:none}
+:root[data-th=bianco] .mmx{background:#fbf4ea;color:#6a1828}
+:root[data-th=bianco] .btn4 a{background:linear-gradient(160deg,#fff,#f7ecdd)}
+:root[data-th=bianco] .rank,:root[data-th=bianco] .t10r:nth-child(-n+3) .t10n,:root[data-th=bianco] .pltop li:nth-child(-n+3) b,:root[data-th=bianco] .dv:nth-child(-n+3)>b,:root[data-th=bianco] .sc.best::after{background:linear-gradient(180deg,#e2c27a,#c9a24b);color:#3a1018}
+:root[data-th=bianco] .logo i{background:linear-gradient(180deg,#f1dca4,#c9a24b);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+:root[data-th=bianco] .nav a.on,:root[data-th=bianco] .chip.on,:root[data-th=bianco] .bread a.on,:root[data-th=bianco] .taxsw button.on{background:linear-gradient(180deg,#fff7e8,#f1dca4);color:#6a1828;border-color:#c9a24b;box-shadow:none}
+:root[data-th=bianco] .chip.on{background:linear-gradient(180deg,#8e2c40,#6a1828);color:#fff;border-color:#6a1828}
+:root[data-th=bianco] .kpi,:root[data-th=bianco] .fact,:root[data-th=bianco] .tag{background:#fbf4ea;border-color:#ead9c2}
+:root[data-th=bianco] .card{background:#fffdf9;border-color:#ecdcc8}
+:root[data-th=bianco] .mblock>div,:root[data-th=bianco] .uso.best,:root[data-th=bianco] .hubc.big{background:linear-gradient(160deg,#faefe0,#fffdf9)}
+:root[data-th=bianco] .hubc{background:linear-gradient(160deg,#fffdf9,#f8eee0);box-shadow:0 3px 10px rgba(106,24,40,.08)}
+:root[data-th=bianco] .vsdet{background:#faf3e8}
+:root[data-th=bianco] .vs{background:#fffdf9}
+:root[data-th=bianco] .maplibregl-popup-content{background:#fff;color:var(--tx)}
+:root[data-th=bianco] .pill{box-shadow:none}
 </style>
 </head>
 <body>
@@ -646,19 +665,19 @@ if(typeof plSet==="function")plSet();if(typeof render==="function")render(true);
 </script>
 <div class="tip" id="tip" hidden></div>
 
-<script src="data/impostazioni.js?v=2611202351"></script>
-<script src="data/immobili.js?v=2611202351"></script>
-<script src="data/auto.js?v=2611202351"></script><script src="data/novita.js?v=2611202351"></script>
-<script src="data/notizie.js?v=2611202351"></script>
-<script src="data/guida.js?v=2611202351"></script>
-<script src="data/territorio.js?v=2611202351"></script>
-<script src="data/servizi.js?v=2611202351"></script><script src="data/zone_profili.js?v=2611202351"></script><script src="data/coeff.js?v=2611202351"></script><script src="data/omi.js?v=2611202351"></script><script src="data/nil_demo.js?v=2611202351"></script>
+<script src="data/impostazioni.js?v=2611202354"></script>
+<script src="data/immobili.js?v=2611202354"></script>
+<script src="data/auto.js?v=2611202354"></script><script src="data/novita.js?v=2611202354"></script>
+<script src="data/notizie.js?v=2611202354"></script>
+<script src="data/guida.js?v=2611202354"></script>
+<script src="data/territorio.js?v=2611202354"></script>
+<script src="data/servizi.js?v=2611202354"></script><script src="data/zone_profili.js?v=2611202354"></script><script src="data/coeff.js?v=2611202354"></script><script src="data/omi.js?v=2611202354"></script><script src="data/nil_demo.js?v=2611202354"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="js/terr.js?v=2611202351"></script>
-<script src="js/milmap.js?v=2611202351"></script>
-<script src="js/hub.js?v=2611202351"></script>
-<script src="js/home.js?v=2611202351"></script>
-<script src="js/completa.js?v=2611202351"></script><script src="js/pdf.js?v=2611202351"></script>
+<script src="js/terr.js?v=2611202354"></script>
+<script src="js/milmap.js?v=2611202354"></script>
+<script src="js/hub.js?v=2611202354"></script>
+<script src="js/home.js?v=2611202354"></script>
+<script src="js/completa.js?v=2611202354"></script><script src="js/pdf.js?v=2611202354"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */
