@@ -101,99 +101,116 @@ function tCentro(geom) {
   return best;
 }
 
-/* ---------- motore di valutazione (unico per Milano e per gli altri comuni) ---------- */
-const V_STATO = { nuovo: ["Nuovo / mai abitato", 1.10, 1.08], ristrutturato: ["Ristrutturato da poco", 1.06, 1.05], ottimo: ["Ottimo", 1.03, 1.02],
-  buono: ["Buono / abitabile", 1.00, 1.00], rinfrescare: ["Da rinfrescare", 0.92, 0.94], ristrutturare: ["Da ristrutturare", 0.78, 0.82] };
-const V_CLASSE = { A: 1.08, B: 1.05, C: 1.02, D: 1.00, E: 0.98, F: 0.95, G: 0.92, "?": 0.98 };
+/* ---------- motore di valutazione (unico per Milano e per gli altri comuni) ----------
+   Principio: si stima il prezzo al m² dell'immobile in stato OTTIMO (riferimento), al piano di riferimento e senza accessori;
+   poi si applicano piano/ascensore, lo stato (in euro al m²: per "da ristrutturare" il costo dei lavori che sceglie l'utente),
+   gli accessori (balconi, terrazzo, giardino, cantina, box) e le poche rettifiche di merito che i comparabili non possono sapere. */
+const V_STATO = { nuovo: ["Nuovo / mai abitato", 1.06, 1.08], ottimo: ["Ottimo / ristrutturato", 1, 1.04], buono: ["Buono / abitabile", 1, 1.00], ristrutturare: ["Da ristrutturare", 1, 0.85] };
+const V_ALIAS = { ristrutturato: "ottimo", rinfrescare: "buono" };              // valutazioni salvate con i vecchi stati
+const V_BUONO = 450;                                                              // €/m²: da buono/abitabile a ottimo (bagno, cucina, pavimenti, pittura)
+const V_IMPREV = 0.10, V_DISAGIO = 0.03;                                         // da ristrutturare: +10% su lavori (progetto, pratiche, imprevisti) e 3% del valore per tempi e disagio
+/* prezzo al m² nello stato dell'immobile, partendo dal prezzo "ottimo" */
+function vStatoMq(vO, q) {
+  const st = V_ALIAS[q.stato] || q.stato;
+  if (st === "nuovo") return vO * V_STATO.nuovo[1];
+  if (st === "buono") return vO - V_BUONO;
+  if (st === "ristrutturare") return vO - (+q.costoLavori || 1000) * (1 + V_IMPREV) - vO * V_DISAGIO;
+  return vO;
+}
+/* piano e ascensore, rispetto al riferimento (1°–2° piano con ascensore) */
+function vPianoF(piano, asc, ultimo) {
+  const p = String(piano).toUpperCase(), n = /^\d+/.test(p) ? parseInt(p) : p.startsWith("T") ? 0 : p.startsWith("R") ? 0.5 : p.startsWith("S") ? -1 : 1;
+  let f = n < 0 ? 0.85 : n === 0 ? 0.93 : n === 0.5 ? 0.96 : n === 1 ? (asc ? 0.99 : 0.98) : n === 2 ? (asc ? 1 : 0.97) : asc ? (n >= 4 ? 1.03 : 1.01) : Math.max(0.82, 1 - 0.05 * (n - 1.6));
+  if (ultimo && asc && n >= 3) f *= 1.015;
+  return f;
+}
+/* accessori già compresi nel prezzo di un annuncio (dalle sue caratteristiche): quota da togliere per avere l'appartamento "nudo" */
+const V_ACC = { b: ["balcone", 0.015], t: ["terrazzo", 0.04], j: ["giardino", 0.03], c: ["cantina", 0.01] };
+const V_CLASSE = { A: 1.06, B: 1.04, C: 1.02, D: 1.00, E: 0.99, F: 0.97, G: 0.96, "?": 0.99 };
 const V_EPOCA = { nuova: ["Dopo il 2015", 1.04], recente: ["1990–2015", 1.02], anni70: ["1970–1990", 0.98], anni50: ["1950–1970 (popolare)", 0.95],
   epoca: ["D'epoca signorile", 1.05], epocapop: ["D'epoca popolare", 0.97] };
 const V_DEF = { tipo: "appartamento", mq: 60, locali: 2, bagni: 1, balcone: 0, terrazzo: 0, giardino: 0, cantina: 0, box: "no", piano: 2, ascensore: true,
-  ultimo: false, stato: "buono", lavori: 0, statoDopo: "ristrutturato", classe: "?", epoca: "anni70", espo: "singola", vista: "normale",
+  ultimo: false, stato: "buono", costoLavori: 1000, classe: "?", epoca: "anni70", espo: "singola", vista: "normale",
   risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0, anno: 0, orient: "", note: "", fraz: 0 };
 
 function vCalcola(inp, ctx) {
-  const q = Object.assign({}, V_DEF, inp), aff = ctx.a;
-  // Milano: il prezzo al m² viene dai comparabili più vicini e più simili, già riportati allo stato dell'immobile (prezzi di richiesta di oggi)
+  const q = Object.assign({}, V_DEF, inp); q.stato = V_ALIAS[q.stato] || q.stato; if (!V_STATO[q.stato]) q.stato = "buono";
+  const aff = ctx.a, mq = Math.max(10, +q.mq || 0);
+  // 1. prezzo al m² in stato ottimo, piano di riferimento, senza accessori
   const cmp = ctx.milano && window.mmComps ? mmComps(ctx, q) : null;
-  const wC = cmp ? 1 : 0;
-  // senza comparabili sufficienti: fascia della microzona per lo stato dell'immobile, altrimenti media di zona
-  const Fm = ctx.milano && ctx.micro && TERR.milano.fasce?.micro?.[ctx.micro.n], gq = { nuovo: "o", ristrutturato: "o", ottimo: "o", buono: "b", rinfrescare: "b", ristrutturare: "r" }[q.stato] || "b";
-  // fascia "buono" della microzona come ancora (le etichette ottimo/buono degli annunci sono poco affidabili), poi il costo dei lavori in €/m²
-  const fasciaMq = Fm && Fm.b ? Fm.b[1] + 450 - (V_COSTO[q.stato] ?? 450) : null;
-  const base = cmp ? cmp.norm : fasciaMq || ctx.v;
-  const statoGiaDentro = !!cmp || !!(Fm && Fm.b);   // lo stato è già nel prezzo di partenza: non lo riapplico
-  const mq = Math.max(10, +q.mq || 0);
-  const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
-  const sup = mq + est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
+  const Fm = ctx.milano && ctx.micro && TERR.milano.fasce?.micro?.[ctx.micro.n];
+  const omi = ctx.milano && typeof omiMi === "function" ? omiMi(ctx.micro?.n) : null;
+  const vOfascia = Fm && Fm.b ? Fm.b[1] + V_BUONO : null;                                       // fascia "buono" della microzona + lavori leggeri
+  const vOomi = omi && omi.co ? (omi.co[0] + omi.co[1]) / 2 * 1.08 : null;                       // OMI ottimo (compravendite) + scarto tipico verso il prezzo richiesto
+  let vO, fonteO;
+  if (cmp) { vO = vOfascia ? cmp.vO * 0.75 + vOfascia * 0.25 : cmp.vO; fonteO = "comparabili"; }
+  else if (vOfascia) { vO = vOfascia; fonteO = "fascia"; }
+  else if (vOomi) { vO = vOomi; fonteO = "omi"; }
+  else { vO = ctx.v + V_BUONO * (ctx.milano ? 1 : 0.6); fonteO = "media"; }
+  const omiCheck = omi && omi.co ? { min: omi.co[0], max: omi.co[1], fuori: vO < omi.co[0] * 0.9 ? "sotto" : vO > omi.co[1] * 1.3 ? "sopra" : "" } : null;
+  // 2. piano e ascensore
+  const fP = q.tipo === "villetta" ? 1 : vPianoF(q.piano, q.ascensore, q.ultimo);
+  // 3. stato: in euro al m² (da ristrutturare: costo dei lavori scelto, +10% imprevisti, −3% del valore per tempi)
+  const vOp = vO * fP, vS = vStatoMq(vOp, q);
+  // 4. rettifiche di merito che gli annunci non dicono (massimo ±10% con i comparabili)
   const k = [], add = (t, f) => { if (Math.abs(f - 1) > 0.001) k.push([t, f]); };
-  const conCmp = !!(ctx.milano && window.mmComps && mmComps(ctx, q));   // con i comparabili: taglio, epoca e metà della classe sono già nei prezzi vicini
-  if (!conCmp) add("Taglio " + (mq < 40 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 110 ? "grande" : ""), mq < 40 ? 1.06 : mq < 60 ? 1.03 : mq > 150 ? 0.92 : mq > 110 ? 0.96 : 1);
-  if (q.tipo === "attico") add("Attico", 1.10);
+  if (!cmp) add("Taglio " + (mq < 40 ? "piccolo (molto richiesto)" : mq < 60 ? "medio-piccolo" : mq > 150 ? "molto grande" : mq > 110 ? "grande" : ""), mq < 40 ? 1.06 : mq < 60 ? 1.03 : mq > 150 ? 0.92 : mq > 110 ? 0.96 : 1);
+  if (q.tipo === "attico") add("Attico", 1.08);
   if (q.tipo === "villetta") add("Villetta / casa indipendente", ctx.milano ? 1.05 : 1.0);
   if (q.tipo === "loft") add("Loft / open space", 0.95);
-  const p = +q.piano;
-  if (q.tipo !== "villetta") {
-    if (p <= 0) add(q.giardino > 0 ? "Piano terra con giardino" : "Piano terra", q.giardino > 0 ? 0.97 : 0.92);
-    else if (p === 1 && !q.ascensore) add("Primo piano senza ascensore", 0.98);
-    else if (!q.ascensore && p >= 3) add(`${p}° piano senza ascensore`, Math.max(0.85, 1 - 0.04 * (p - 2)));
-    else if (q.ascensore && p >= 4) add("Piano alto con ascensore", 1.03);
-    if (q.ultimo && q.ascensore && q.tipo !== "attico") add("Ultimo piano", p >= 4 ? 1.015 : 1.03);
-  }
-  { const fc = V_CLASSE[q.classe] ?? 1; add(q.classe === "?" ? "Classe energetica non indicata (prudenza)" : "Classe energetica " + q.classe, conCmp && fc < 1 ? 1 - (1 - fc) / 2 : fc); }
-  if (!conCmp) add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
+  add(q.classe === "?" ? "Classe energetica non indicata" : "Classe energetica " + q.classe, V_CLASSE[q.classe] ?? 1);
+  if (!cmp) add("Epoca: " + (V_EPOCA[q.epoca] || ["", 1])[0], (V_EPOCA[q.epoca] || ["", 1])[1]);
   add(q.espo === "doppia" ? "Doppia esposizione" : q.espo === "buia" ? "Interno buio" : "", q.espo === "doppia" ? 1.02 : q.espo === "buia" ? 0.95 : 1);
   { const o = { S: 1.02, "S/E": 1.01, "S/O": 1.01, "E/O": 1.01, N: 0.97, "N/E": 0.98, "N/O": 0.98 }[q.orient]; if (o) add("Orientamento " + ({ S: "Sud", N: "Nord", "S/E": "Sud / Est", "S/O": "Sud / Ovest", "E/O": "Est / Ovest", "N/E": "Nord / Est", "N/O": "Nord / Ovest" }[q.orient]), o); }
   add(q.vista === "pregio" ? "Vista di pregio" : q.vista === "aperta" ? "Vista aperta" : "", q.vista === "pregio" ? 1.07 : q.vista === "aperta" ? 1.02 : 1);
   if (q.risc === "autonomo") add("Riscaldamento autonomo", 1.02);
   if (q.portineria) add("Portineria", 1.03);
   if (q.condominio === "dafare") add("Condominio con lavori in arrivo", 0.96);
-  if (q.condominio === "rifatto") add("Facciata e parti comuni rifatte", 1.03);
-  add(q.posizione === "pregio" ? "Via di pregio" : q.posizione === "rumorosa" ? "Via trafficata" : "", q.posizione === "pregio" ? 1.05 : q.posizione === "rumorosa" ? 0.95 : 1);
+  if (q.condominio === "rifatto") add("Facciata e parti comuni rifatte", 1.02);
+  add(q.posizione === "pregio" ? "Via di pregio" : q.posizione === "rumorosa" ? "Via trafficata" : "", q.posizione === "pregio" ? 1.05 : q.posizione === "rumorosa" ? 0.96 : 1);
   if (!ctx.milano && ctx.zonaCom) add({ centro: "Centro del paese", periferia: "Periferia / frazione" }[ctx.zonaCom] || "", { centro: 1.08, periferia: 0.92 }[ctx.zonaCom] || 1);
-  // con i comparabili le caratteristiche medie sono già nel prezzo: le rettifiche possono spostare al massimo del ±12%
-  const kTot = (x => cmp ? Math.min(1.12, Math.max(0.88, x)) : x)(k.reduce((s, x) => s * x[1], 1));
-  const sconto = 0;                                           // si stima il prezzo di richiesta in linea con il mercato di oggi (niente trattativa)
-  const mqReale = base * (1 - sconto);
-  const box = q.box === "no" ? 0 : base * (1 - sconto) * 15 * (ctx.milano ? 0.45 : 0.5) * ({ posto: 0.5, singolo: 1, doppio: 1.7 }[q.box] || 0);
-  const st0 = V_STATO[q.stato] || V_STATO.buono, sd0 = V_STATO[q.statoDopo] || V_STATO.ristrutturato;
-  // stato già compreso nel prezzo di partenza: fattore 1 (salvo "da rinfrescare", un gradino sotto il buono); dopo i lavori: rapporto tra i gruppi di stato
-  // stato già nel prezzo di partenza; dopo i lavori: + il costo dei lavori evitati (in €/m², come sopra)
-  const st = statoGiaDentro ? [st0[0], 1, st0[2]] : st0;
-  const sd = statoGiaDentro ? [sd0[0], (base + (V_COSTO[q.stato] ?? 450) - (V_COSTO[q.statoDopo] ?? 0)) / base, sd0[2]] : sd0;
-  const m1 = sup * mqReale * kTot * st[1];
-  const m2 = cmp && fasciaMq ? sup * fasciaMq * kTot : null;
-  const valCasa = m2 ? m1 * 0.75 + m2 * 0.25 : m1, valore = valCasa + box;
-  // frazionamento: quanto vale per chi lo divide in N unità ristrutturate (prezzi dei tagli piccoli vicini), meno lavori, pratiche e margine dell'investitore
+  const kTot = (x => cmp ? Math.min(1.10, Math.max(0.90, x)) : x)(k.reduce((s, x) => s * x[1], 1));
+  // 5. accessori del cliente: superfici esterne pesate al valore del m², cantina, box a parte
+  const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
+  const supEst = est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
+  const sup = mq + supEst;
+  const box = q.box === "no" ? 0 : vO * 15 * (ctx.milano ? 0.45 : 0.5) * ({ posto: 0.5, singolo: 1, doppio: 1.7 }[q.box] || 0);
+  const mqVal = vS * kTot;
+  const valCasa = sup * mqVal, valore = valCasa + box;
+  const base = vO, mqReale = vS, st = [V_STATO[q.stato][0], 1, V_STATO[q.stato][2]];
+  // lavori e valore a lavori finiti (sempre al massimo: ottimo)
+  const lavori = q.stato === "ristrutturare" ? (+q.costoLavori || 1000) * mq : 0;
+  const valDopo = lavori ? sup * vOp * kTot + box : null;
+  // frazionamento: chi lo divide in N unità ristrutturate (prezzi dei tagli piccoli vicini), meno lavori, pratiche e margine dell'investitore
   let fraz = null;
   const nF = +q.fraz || 0;
   if (nF >= 2 && ctx.milano && window.mmComps) {
-    const mqU = sup / nF, cu = mmComps(ctx, { ...q, mq: mqU, locali: mqU < 38 ? 1 : 2, stato: "ristrutturato" });
+    const mqU = sup / nF, cu = mmComps(ctx, { ...q, mq: mqU, locali: mqU < 38 ? 1 : 2, stato: "ottimo" });
     if (cu) {
-      const ricavo = sup * cu.norm, lav = sup * 900 + nF * 6000, marg = ricavo * 0.12;
-      fraz = { n: nF, mqU, eurMq: cu.norm, nCmp: cu.nNorm, ricavo, lavori: lav, margine: marg, valore: ricavo - lav - marg + box };
+      const eurU = cu.vO * fP * kTot, ricavo = sup * eurU, lav = sup * Math.max(800, q.stato === "ristrutturare" ? +q.costoLavori || 1000 : 600) + nF * 6000, marg = ricavo * 0.12;
+      fraz = { n: nF, mqU, eurMq: eurU, nCmp: cu.nNorm, ricavo, lavori: lav, margine: marg, valore: ricavo - lav - marg + box };
     }
   }
-  const lavori = +q.lavori || 0;
-  const valDopo = lavori > 0 ? sup * mqReale * kTot * sd[1] + box : null;
-  const incer = (ctx.v ? 0.06 : 0.12) + (q.classe === "?" ? 0.01 : 0);
+  const incer = (cmp ? 0.05 : ctx.v ? 0.07 : 0.12) + (q.classe === "?" ? 0.01 : 0);
   // affitti
-  const kAff = (mq < 45 ? 1.08 : mq > 110 ? 0.94 : 1) * (q.arredato ? 1.07 : 1) * (lavori > 0 ? sd[2] : st[2]) * (q.box !== "no" ? 1.04 : 1)
+  const kAff = (mq < 45 ? 1.08 : mq > 110 ? 0.94 : 1) * (q.arredato ? 1.07 : 1) * (lavori ? V_STATO.ottimo[2] : st[2]) * (q.box !== "no" ? 1.04 : 1)
     * (q.posizione === "pregio" ? 1.04 : q.posizione === "rumorosa" ? 0.96 : 1) * (!ctx.milano && ctx.zonaCom === "centro" ? 1.05 : !ctx.milano && ctx.zonaCom === "periferia" ? 0.95 : 1);
   const canone = aff ? Math.round(aff * Math.min(sup, mq * 1.15) * kAff / 10) * 10 : null;
   const medio = canone ? Math.round(canone * 1.18 / 10) * 10 : null;
   let breve = null;
   if (ctx.str) {
     const extra = Math.max(0, (+q.locali || 2) - 2) * 0.15 + (mq < 40 ? -0.1 : 0);
-    breve = { adr: Math.round(ctx.str.adr * T_BILO * (1 + extra) * (lavori > 0 ? 1.03 : st[2] < 0.95 ? 0.92 : 1)), occ: ctx.str.occ, fonte: ctx.str.fonte, stima: true };
+    breve = { adr: Math.round(ctx.str.adr * T_BILO * (1 + extra) * (lavori ? 1.03 : q.stato === "nuovo" ? 1.03 : 1)), occ: ctx.str.occ, fonte: ctx.str.fonte, stima: true };
   }
-  // conti come nelle schede degli immobili (stessi parametri e stesse tasse)
   const acquisto = +q.prezzo > 0 ? +q.prezzo : valore;
   const im = { prezzo: acquisto, mq, lavori, arredato: q.arredato, spese: { condominio_mese: +q.condo || Math.round(mq * (ctx.milano ? 2.2 : 1.4)), imu_anno: 0 },
     affitti: { lungo: canone ? { canone } : null, medio: medio ? { canone: medio, mesi_occupati: 10, stima: true } : null, breve } };
   const sc = scenari(im, { offMax: acquisto });
-  return { cmp, wC, sup, k, kTot, st, sd, mqReale, base, box, valCasa, valore, m1, m2, fraz, min: valore * (1 - incer), max: Math.max(valore * (1 + incer), fraz ? fraz.valore : 0), valDopo, lavori,
+  return { cmp, wC: cmp ? 1 : 0, sup, supEst, k, kTot, st, fP, vO, vOp, vS, fonteO, vOfascia, vOomi, omiCheck, mqReale, base, box, valCasa, valore, fraz,
+    m1: cmp ? sup * (cmp.vO * fP) * kTot : null, m2: cmp && vOfascia ? sup * vOfascia * fP * kTot : null,
+    min: valore * (1 - incer), max: Math.max(valore * (1 + incer), fraz ? fraz.valore : 0), valDopo, lavori,
     canone, medio, breve, sc, acquisto, prezzo: +q.prezzo || 0, sconto: +q.prezzo > 0 ? (valore - q.prezzo) / valore : null,
-    offerta: +q.prezzo > 0 ? Math.min(+q.prezzo, valore) * (1 - sconto / 2) : valore * 0.97,
+    offerta: +q.prezzo > 0 ? Math.min(+q.prezzo, valore) : valore * 0.97,
     margine: valDopo ? valDopo - (acquisto * (1 + IMPOSTAZIONI.costi_acquisto_pct) + lavori) : null };
 }
 
@@ -216,7 +233,9 @@ function vForm(id, ctxHtml, q) {
       ${s("fraz", "Frazionabile", { 0: "No", 2: "Sì, in 2 unità", 3: "Sì, in 3 unità" })}
     </div></fieldset>
     <fieldset><legend>Stato e lavori</legend><div class="vg">
-      ${s("stato", "Stato attuale", V_STATO)}${n("lavori", "Lavori da fare", 500, "€")}${s("statoDopo", "Stato dopo i lavori", V_STATO)}
+      ${s("stato", "Stato attuale", V_STATO)}
+      <label class="wide vlav" ${q.stato === "ristrutturare" ? "" : "hidden"}><span>Costo dei lavori: <b data-out="costoLavori">${num(q.costoLavori || 1000)} €/m²</b> <small>(leggeri 400 · medi 1.000 · completi 1.500 · di lusso 2.000+)</small></span>
+        <input type="range" data-k="costoLavori" min="200" max="2500" step="50" value="${q.costoLavori || 1000}"></label>
       ${s("classe", "Classe energetica", { "?": "Non so", A: "A", B: "B", C: "C", D: "D", E: "E", F: "F", G: "G" })}
       ${s("epoca", "Palazzo", V_EPOCA)}${n("anno", "Anno di costruzione")}${s("condominio", "Condominio", { buono: "Normale", rifatto: "Facciata rifatta", dafare: "Lavori in arrivo" })}
     </div></fieldset>
@@ -236,10 +255,12 @@ function vForm(id, ctxHtml, q) {
 }
 function vRead(form) {
   const q = {};
-  form.querySelectorAll("[data-k]").forEach(i => { q[i.dataset.k] = i.type === "checkbox" ? i.checked : i.type === "number" ? (i.value === "" ? 0 : +i.value) : i.value; });
+  form.querySelectorAll("[data-k]").forEach(i => { q[i.dataset.k] = i.type === "checkbox" ? i.checked : i.type === "number" || i.type === "range" ? (i.value === "" ? 0 : +i.value) : i.value; });
+  { const lv = form.querySelector(".vlav"); if (lv) lv.hidden = q.stato !== "ristrutturare"; const o = form.querySelector('[data-out="costoLavori"]'); if (o) o.textContent = num(q.costoLavori) + " €/m²"; }
   return q;
 }
 function vRisultato(r, ctx) {
+  const q2 = Object.assign({}, V_DEF, vRisultato._q || {});
   const L = r.sc.list, best = Object.keys(L).sort((a, b) => L[b].rendNetto - L[a].rendNetto)[0];
   const card = (key, t, sub) => L[key] ? `<div class="sc ${key === best ? "best" : ""}"><small>${t}</small><b class="${L[key].rendNetto >= .05 ? "s-good" : L[key].rendNetto >= .03 ? "s-warn" : "s-bad"}">${pct(L[key].rendNetto)}</b><span>${sub}<br>netto ${eur(L[key].netto)}/anno</span></div>`
     : `<div class="sc na"><small>${t}</small><b>—</b><span>dati non disponibili qui</span></div>`;
@@ -262,13 +283,14 @@ function vRisultato(r, ctx) {
       <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)} · ${a.fonte}</span></div><b class="cy">${eur(a.mq2)}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
-        ${r.cmp ? `<tr><td>${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, i più simili per caratteristiche, metratura e stato, riportati allo stato di questo immobile (mediana pesata)</td><td class="r">${eur(r.base)}/m²</td></tr>`
-          : `<tr><td>${ctx.milano && TERR.milano.fasce?.micro?.[ctx.micro?.n] ? "Fascia degli annunci della microzona per questo stato" : "Prezzo medio degli annunci (" + esc(ctx.nome) + ")"}</td><td class="r">${eur(r.base)}/m²</td></tr>`}
-        ${Math.abs(r.st[1] - 1) > 0.001 ? `<tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>` : ""}
+        <tr><td>Prezzo al m² in stato ottimo, 1°–2° piano con ascensore, senza accessori (${r.fonteO === "comparabili" ? `${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, ognuno riportato a questo standard, 75% · fascia di microzona 25%` : r.fonteO === "fascia" ? "fascia buono della microzona + 450 €/m²" : r.fonteO === "omi" ? "OMI ottimo della zona" : "media della zona"})</td><td class="r">${eur(r.vO)}/m²</td></tr>
+        ${Math.abs(r.fP - 1) > 0.001 ? `<tr><td>Piano e ascensore</td><td class="r">× ${num(r.fP, 3)}</td></tr>` : ""}
+        <tr><td>Stato: ${esc(r.st[0])}${q2.stato === "ristrutturare" ? ` (lavori ${eur(q2.costoLavori)}/m² +10% imprevisti, −3% per tempi)` : q2.stato === "buono" ? " (−450 €/m² per portarlo a ottimo)" : q2.stato === "nuovo" ? " (+6%)" : ""}</td><td class="r">${eur(r.vS)}/m²</td></tr>
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
         <tr><td>Superficie commerciale</td><td class="r">${num(r.sup, 1)} m²</td></tr>
         ${r.box ? `<tr><td>Box / posto auto</td><td class="r">+ ${eur(r.box)}</td></tr>` : ""}
-        ${r.m2 ? `<tr><td>Metodo 1 (comparabili) ${eur(r.m1)} · metodo 2 (fascia di microzona) ${eur(r.m2)}: peso 75% / 25%</td><td class="r"></td></tr>` : ""}
+        ${r.lavori ? `<tr><td>A lavori finiti (stato ottimo)</td><td class="r">${eur(r.valDopo)}</td></tr>` : ""}
+        ${r.omiCheck ? `<tr><td>Controllo OMI ottimo della zona: ${eur(r.omiCheck.min)}–${eur(r.omiCheck.max)}/m²${r.omiCheck.fuori ? ` (stima ${r.omiCheck.fuori === "sotto" ? "sotto" : "molto sopra"}: da verificare)` : " (coerente)"}</td><td class="r"></td></tr>` : ""}
         <tr class="tot"><td>Prezzo di richiesta in linea con il mercato</td><td class="r">${eur(r.valore)}</td></tr>
         ${r.fraz ? `<tr><td>Se frazionato in ${r.fraz.n} unità da ${num(r.fraz.mqU)} m²: ${eur(r.fraz.eurMq)}/m² ristrutturate (${r.fraz.nCmp} annunci vicini) = ${eur(r.fraz.ricavo)}, meno lavori e pratiche ${eur(r.fraz.lavori)} e margine dell'investitore ${eur(r.fraz.margine)}</td><td class="r"><b>${eur(r.fraz.valore)}</b></td></tr>` : ""}
       </tbody></table>

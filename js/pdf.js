@@ -203,7 +203,7 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const tipo = { appartamento: "Appartamento", attico: "Attico", loft: "Loft", villetta: "Villetta / casa" }[q.tipo] || "Appartamento";
   const pianoT = q.tipo === "villetta" ? "Indipendente" : (q.piano <= 0 ? "Piano terra" : q.piano + "° piano") + (q.ultimo ? " (ultimo)" : "") + (q.piano > 0 ? (q.ascensore ? ", con ascensore" : ", senza ascensore") : "");
   const boxT = { no: "", posto: "posto auto", singolo: "box", doppio: "box doppio" }[q.box];
-  const statoT = V_STATO[q.stato][0];
+  const statoT = (V_STATO[V_ALIAS[q.stato] || q.stato] || V_STATO.buono)[0];
   const zonaN = ctx.micro ? `${ctx.micro.n}${ctx.zona ? " / " + ctx.zona.n : ""}` : (ctx.com ? "comune di " + ctx.com.n : "");
   const sottot = `${tipo} ${q.mq} m²${q.piano > 0 && q.tipo !== "villetta" ? ", " + (q.piano + "° piano") + (q.ultimo ? " (ultimo)" : "") : ""}${boxT ? " con " + boxT : ""}, ${statoT.toLowerCase()}`;
 
@@ -221,9 +221,9 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   const stK = { nuovo: "N", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" }[q.stato];
   // secondo metodo, indipendente dai comparabili: fascia degli annunci della microzona per lo stato dell'immobile (prezzo mediano)
   const Fz = TERR.milano.fasce?.micro?.[ctx.micro?.n], gF = { nuovo: "o", ristrutturato: "o", ottimo: "o", buono: "b", rinfrescare: "b", ristrutturare: "r" }[q.stato] || "b";
-  const mDir = r.cmp && Fz && Fz.b ? Fz.b[1] + 450 - (V_COSTO[q.stato] ?? 450) : null;
+  const mDir = r.cmp && r.vOfascia ? vStatoMq(r.vOfascia * r.fP, q) * r.kTot : null;
   const dir = mDir ? [mDir] : [];
-  const valDir = mDir ? mDir * r.sup * r.kTot + r.box : null;
+  const valDir = mDir ? mDir * r.sup + r.box : null;
 
   /* --- fasce --- */
   const F = pdfFasce(ctx), gk = { R: "r", B: "b", O: "o", N: "o" }[stK];
@@ -239,13 +239,16 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
   </div>`;
 
   /* --- rettifiche --- */
-  const baseT = r.cmp ? `Mediana pesata di ${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, scelti per vicinanza, caratteristiche, metratura e stato, e riportati allo stato di questo immobile`
-    : `Prezzo richiesto negli annunci della ${ctx.micro ? "microzona " + esc(ctx.micro.n) : esc(ctx.nome)}`;
+  const baseT = r.fonteO === "comparabili" ? `${r.cmp.nNorm} comparabili entro ${num(r.cmp.raggio)} m, ognuno riportato a stato ottimo, al piano di riferimento e senza accessori (mediana pesata 75%) e fascia "buono" della microzona + ${eur(V_BUONO)}/m² (25%)`
+    : r.fonteO === "fascia" ? `Fascia "buono" della microzona ${esc(ctx.micro?.n || "")} + ${eur(V_BUONO)}/m² di lavori leggeri` : r.fonteO === "omi" ? "OMI della zona, stato ottimo, più lo scarto tipico verso il prezzo richiesto" : `Prezzo medio richiesto degli annunci della zona`;
+  const statoImp = r.vS - r.vOp;
   const imp = f => f > 1.004 ? `<span class="imp p">+${num((f - 1) * 100, 0)}%</span>` : f < 0.996 ? `<span class="imp m">−${num((1 - f) * 100, 0)}%</span>` : `<span class="imp n">neutro</span>`;
   const rett = [
-    [`Base di zona → ${eur(r.base)}/m²`, baseT, `<span class="imp b">base</span>`],
-    [`Stato: ${esc(statoT)}`, r.cmp ? "Già compreso: i comparabili sono stati riportati a questo stato" : "Rispetto allo stato «buono» che fa da riferimento", imp(r.st[1])],
+    [`Prezzo in stato ottimo → ${eur(r.vO)}/m²`, baseT, `<span class="imp b">base</span>`],
+    ...(Math.abs(r.fP - 1) > 0.001 ? [[`Piano e ascensore`, `${q.piano}° piano${q.ascensore ? " con" : " senza"} ascensore${q.ultimo ? ", ultimo" : ""}, rispetto al 1°–2° piano con ascensore`, imp(r.fP)]] : []),
+    [`Stato: ${esc(statoT)}`, q.stato === "ristrutturare" ? `Lavori ${eur(q.costoLavori)}/m² + 10% progetto, pratiche e imprevisti + 3% per tempi e disagio` : q.stato === "buono" ? `Abitabile: ${eur(V_BUONO)}/m² per portarlo a ottimo` : q.stato === "nuovo" ? "Mai abitato: impianti e finiture nuove" : "Riferimento", statoImp ? `<span class="imp ${statoImp > 0 ? "p" : "m"}">${statoImp > 0 ? "+" : "−"}${eur(Math.abs(statoImp))}/m²</span>` : `<span class="imp n">riferimento</span>`],
     ...r.k.map(([t, f]) => [esc(t), pdfSpiega(t, f), imp(f)]),
+    ...(r.supEst > 0.5 ? [[`Spazi esterni e cantina`, `${num(r.supEst, 1)} m² equivalenti (balconi 30%, terrazzi 35%, giardino 10%, cantina 25%) sommati ai ${num(q.mq)} m² interni`, `<span class="imp p">+${num(r.supEst, 1)} m²</span>`]] : []),
     ...(r.box ? [[`${esc(boxT[0].toUpperCase() + boxT.slice(1))} incluso`, "Valutato a parte e sommato al valore dell'appartamento", `<span class="imp p">+${keur(r.box)}</span>`]] : []),
   ];
 
@@ -459,7 +462,7 @@ ${sec(1, "Immobile oggetto di valutazione", `
   <tr><td>Superficie</td><td>${q.mq} m² interni · <b>${num(r.sup, 1)} m² commerciali</b> (balconi 30%, terrazzi 35%, giardino 10%, cantina 25%)</td></tr>
   <tr><td>Piano</td><td>${pianoT}</td></tr>
   <tr><td>Locali / bagni</td><td>${q.locali} locali, ${q.bagni} bagn${q.bagni == 1 ? "o" : "i"}</td></tr>
-  <tr><td>Stato</td><td>${esc(statoT)}${r.lavori ? ` · lavori previsti ${eur(r.lavori)} (dopo: ${esc(V_STATO[q.statoDopo][0].toLowerCase())})` : ""}</td></tr>
+  <tr><td>Stato</td><td>${esc(statoT)}${r.lavori ? ` · lavori stimati ${eur(q.costoLavori)}/m² (circa ${eur(r.lavori)}); a lavori finiti vale circa ${eur(r.valDopo)}` : ""}</td></tr>
   <tr><td>Edificio</td><td>${q.anno ? "Costruito nel " + q.anno + " · " : ""}${esc(V_EPOCA[q.epoca][0])} · condominio ${({ buono: "in condizioni normali", rifatto: "con facciata e parti comuni rifatte", dafare: "con lavori in arrivo" })[q.condominio]}</td></tr>
   <tr><td>Classe energetica</td><td>${q.classe === "?" ? "Non indicata" : q.classe}</td></tr>
   <tr><td>Esposizione</td><td>${q.orient ? q.orient.split("/").map(x => ({ N: "Nord", S: "Sud", E: "Est", O: "Ovest" })[x]).join(" / ") + " · " : ""}${({ singola: "affaccio singolo", doppia: "doppia esposizione", buia: "affaccio interno" })[q.espo]}${q.vista !== "normale" ? " · vista " + q.vista : ""}</td></tr>
@@ -490,6 +493,7 @@ ${ctx.zona ? `<tr><td>Media zona ${esc(ctx.zona.n)} (Immobiliare.it, ${ctx.zona.
 ${(o => o ? [["cn", "normale"], ["co", "ottimo"], ["sn", "signorili, normale"]].filter(([k]) => o[k]).map(([k, t]) => `<tr><td>OMI zona ${esc(o.cod)}, abitazioni ${k === "sn" ? "" : "civili, "}${t}</td><td class="r">${eur(o[k][0])}</td><td class="r">${eur(o[k][1])}</td><td class="r"><b>${eur((o[k][0] + o[k][1]) / 2)}</b></td><td class="r">—</td></tr>`).join("") : "")(omiMi(ctx.micro?.n))}
 </tbody></table>
 ${(o => o ? `<p class="note">Quotazioni OMI dell'Agenzia delle Entrate, ${OMI_SEM.split("/")[1]}° semestre ${OMI_SEM.split("/")[0]}: zona ${esc(o.cod)} – ${esc(o.d.toLowerCase())}. Sono quotazioni ufficiali basate sulle compravendite della zona: di solito più prudenti dei prezzi richiesti negli annunci.${o.cn && o.cn[2] ? ` Affitto OMI: ${num(o.cn[2], 1)}–${num(o.cn[3], 1)} €/m² al mese.` : ""}</p>` : "")(omiMi(ctx.micro?.n))}
+${r.omiCheck ? `<p class="note">Controllo OMI: il prezzo in stato ottimo stimato (${eur(r.vO)}/m²) ${r.omiCheck.fuori === "sotto" ? "è <b>sotto</b> la quotazione OMI ottimo della zona: da verificare" : r.omiCheck.fuori === "sopra" ? "è <b>molto sopra</b> la quotazione OMI ottimo della zona: da verificare" : "è coerente con la quotazione OMI ottimo della zona"} (${eur(r.omiCheck.min)}–${eur(r.omiCheck.max)}/m²).</p>` : ""}
 <p class="note">${F.vero ? `Fonte: annunci Immobiliare.it letti il 20/11/2026 nella ${esc(F.dove)}; min e max sono il 25° e il 75° percentile di ogni fascia.` : "Fasce stimate dalla media della zona con gli scarti tipici tra stati di conservazione (per questa zona non è ancora stata fatta una lettura completa degli annunci)."} ★ Fascia dello stato attuale dell'immobile. I pallini sono i comparabili della sezione precedente.</p>`)}
 
 ${sec(comps.length ? 4 : 3, "Rettifiche applicate", `
@@ -505,8 +509,8 @@ ${sec(comps.length ? 5 : 4, "Range di valore stimato", `
       <u style="left:${P(vMin)}%">min ${keur(vMin)}</u><u style="left:${P(vMax)}%">max ${keur(vMax)}</u>
       ${ctx.mode === "cliente" ? `<u style="left:${P(pubbl)}%;top:-17px;color:${C.oro}">pubblicazione ${keur(pubbl)}</u>` : ""}</div>`; })()}
   <div class="meth">
-    <div><small>Metodo 1 · comparabili (peso ${r.m2 ? "75" : "100"}%)</small><b>${eur(Math.round(((r.m1 ?? r.valCasa) + r.box) / 1000) * 1000)}</b><br><span class="small">${eur(r.base)}/m² ${r.cmp ? `da ${r.cmp.nNorm} annunci simili entro ${num(r.cmp.raggio)} m` : "di base"}, rettifiche × ${num(r.kTot * r.st[1], 2)}, su ${num(r.sup, 1)} m²${r.box ? ", + " + boxT : ""}</span></div>
-    <div><small>Metodo 2 · fascia di microzona${r.m2 ? " (peso 25%)" : ""}</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `prezzo mediano degli annunci in stato buono della microzona, corretto per lo stato «${esc(statoT.toLowerCase())}» col costo dei lavori: ${eur(mDir)}/m²` : "Fascia di microzona non disponibile per un secondo metodo indipendente"}</span></div>
+    <div><small>Metodo 1 · comparabili (peso ${r.m2 ? "75" : "100"}%)</small><b>${r.cmp ? eur(Math.round(vStatoMq(r.cmp.vO * r.fP, q) * r.kTot * r.sup / 1000 + r.box / 1000) * 1000) : "—"}</b><br><span class="small">${r.cmp ? `${eur(r.cmp.vO)}/m² in stato ottimo da ${r.cmp.nNorm} annunci entro ${num(r.cmp.raggio)} m` : "comparabili insufficienti"}</span></div>
+    <div><small>Metodo 2 · fascia di microzona${r.m2 ? " (peso 25%)" : ""}</small><b>${valDir ? eur(Math.round(valDir / 1000) * 1000) : "—"}</b><br><span class="small">${valDir ? `fascia "buono" della microzona + ${eur(V_BUONO)}/m² = ${eur(r.vOfascia)}/m² in stato ottimo, poi stessi piano, stato e rettifiche: ${eur(mDir)}/m²` : "Fascia di microzona non disponibile per un secondo metodo indipendente"}</span></div>
   </div>
 </div>
 <p style="margin-top:3mm"><b style="color:${C.bx};font-weight:600">Motivazione.</b> ${valDir ? (Math.abs(valDir - r.valore) / r.valore < 0.08 ? "I due metodi indipendenti convergono" : valDir > r.valore ? "La fascia della microzona dà un valore più alto: gli annunci più simili e vicini sono un po' più economici della media della microzona" : "La fascia della microzona dà un valore più prudente: gli annunci più simili e vicini all'immobile chiedono di più della media della microzona") + ` (${eur((r.m1 ?? r.valCasa) + r.box)} e ${eur(valDir)}). ` : ""}Il range tiene conto dell'incertezza tipica della stima (±${pct((r.max - r.valore) / r.valore, 0)})${r.box ? `; il ${boxT} (${eur(r.box)}) è valutato a parte e già incluso` : ""}.${r.m2 ? ` Il valore centrale pesa per il 75% il metodo dei comparabili e per il 25% la fascia della microzona.` : ""}${r.fraz ? ` L'appartamento è frazionabile in ${r.fraz.n} unità da circa ${num(r.fraz.mqU)} m²: per un investitore vale fino a <b>${eur(r.fraz.valore)}</b> (tagli piccoli ristrutturati a ${eur(r.fraz.eurMq)}/m², meno ${eur(r.fraz.lavori)} di lavori e pratiche e il suo margine), e questo sostiene la parte alta del range.` : ""}${ctx.mode === "cliente" ? ` Per la pubblicazione consigliamo <b>${eur(pubbl)}</b>, in linea con le richieste di oggi.` : ""} Un sopralluogo è consigliato per confermare stato, dotazioni e spese.</p>`)}
@@ -554,7 +558,7 @@ ${r.canone ? sec(comps.length ? (PZ || NI ? 9 : 8) : 8, "Potenziale come investi
 <p class="note">Stime indicative. Il netto è dopo spese di gestione, condominio, manutenzione e cedolare secca, sul valore stimato più i costi d'acquisto${r.lavori ? " e i lavori" : ""}. Periodi di sfitto e spese straordinarie possono ridurre il rendimento.</p>`) : ""}
 
 ${sec(comps.length ? (PZ || NI ? 10 : 9) : 9, "Nota metodologica", `
-<p class="small" style="font-size:7.4pt">Valutazione con metodo comparativo di mercato, espressa come prezzo di richiesta in linea con il mercato di oggi: ${r.cmp ? `mediana pesata di ${r.cmp.nNorm} annunci Immobiliare.it entro ${num(r.cmp.raggio)} m, scelti nell'ordine per vicinanza, caratteristiche (tipologia e locali), metratura e stato, esclusi i prezzi anomali (quote, aste, errori) e riportati allo stato dell'immobile togliendo o aggiungendo il costo dei lavori in €/m² (da ristrutturare 1.250, da rinfrescare 700, buono 450 rispetto a un ristrutturato)` : `prezzo richiesto negli annunci della ${ctx.micro ? "microzona" : "zona"} (Immobiliare.it)`}, corretta con coefficienti di merito per piano, taglio, classe energetica, epoca, esposizione e dotazioni (al massimo ±12% quando ci sono i comparabili). ${valDir ? `Verifica indipendente con la fascia di prezzo della microzona. ` : ""}Fasce di zona ${F.vero ? "ricavate dagli annunci letti per intero il 20/11/2026" : "stimate dalla media di zona"}. Superfici secondarie: balconi 30%, terrazzi 35%, giardino 10%, cantina 25%; box valutato a parte. Stima orientativa a supporto della strategia di prezzo: non è una perizia giurata e non sostituisce le verifiche di conformità urbanistica e catastale.</p>`)}
+<p class="small" style="font-size:7.4pt">Valutazione con metodo comparativo di mercato, espressa come prezzo di richiesta in linea con il mercato di oggi: ${r.cmp ? `mediana pesata di ${r.cmp.nNorm} annunci Immobiliare.it entro ${num(r.cmp.raggio)} m, scelti nell'ordine per vicinanza, caratteristiche (tipologia e locali), metratura e stato, esclusi aste, quote, nude proprietà e prezzi anomali; ogni annuncio è riportato a stato ottimo (buono +450 €/m², da ristrutturare + lavori), al piano di riferimento (1°–2° con ascensore) e senza accessori (balcone, terrazzo, giardino, cantina, box). Al valore così ottenuto si applicano piano e ascensore, lo stato dell'immobile in euro al m² (per "da ristrutturare" il costo dei lavori indicato, +10% di imprevisti e −3% per tempi), gli accessori e le rettifiche di merito` : `prezzo richiesto negli annunci della ${ctx.micro ? "microzona" : "zona"} (Immobiliare.it)`}, corretta con coefficienti di merito per piano, taglio, classe energetica, epoca, esposizione e dotazioni (al massimo ±12% quando ci sono i comparabili). ${valDir ? `Verifica indipendente con la fascia di prezzo della microzona. ` : ""}Fasce di zona ${F.vero ? "ricavate dagli annunci letti per intero il 20/11/2026" : "stimate dalla media di zona"}. Superfici secondarie: balconi 30%, terrazzi 35%, giardino 10%, cantina 25%; box valutato a parte. Stima orientativa a supporto della strategia di prezzo: non è una perizia giurata e non sostituisce le verifiche di conformità urbanistica e catastale.</p>`)}
 
 <div class="endf"><img src="${logo}" alt=""><span>Maison Collection · Agenzia immobiliare · Milano<br>Relazione generata con Keystone il ${oggiL}</span></div>
 </div>

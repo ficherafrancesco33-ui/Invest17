@@ -452,7 +452,7 @@ function attrChiusa(map) {
 function mmAnnunci() {
   if (MM_ANN) return MM_ANN;
   const G = mmAnnGeo(), M = TERR.milano.micro, I = TERR.annunci.imm;
-  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex]) => ({ id: "i" + id, p, mq, loc: +loc || null, piano, asc, st, tip, lat, lon, via, micro: mic,
+  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex]) => ({ id: "i" + id, p, mq, loc: +loc || null, piano, asc, st, tip, lat, lon, via, micro: mic, ex: ex || "",
     priv, mq2: p / mq, url: I.url + id + "/", fonte: "Immobiliare.it",
     d: [tip, MM_ST[st]?.[0], piano ? (piano === "T" ? "piano terra" : piano === "R" ? "rialzato" : piano === "S" ? "seminterrato" : piano + "° piano") : "", asc ? "ascensore" : "", ...[...ex].map(x => MM_EX[x]), priv ? "privato" : ""].filter(Boolean).join(", ") }));
   const tro = TERR.annunci.lista.map(a => {
@@ -501,35 +501,39 @@ function mmAnnLayer(map) {
 /* gruppi di stato per confrontare annunci: R da ristrutturare, B buono, O ottimo / ristrutturato / nuovo */
 const MM_GR = { R: "R", B: "B", O: "O", N: "O" };
 const V_GR = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
-/* differenza di stato in €/m²: quanto costa portare l'immobile a "ristrutturato / ottimo" (lavori a Milano ~1.200 €/m² completi).
-   Si sottrae in euro, non in percentuale: nelle zone care la percentuale toglierebbe troppo. Nuovo: piccolo premio. */
-const V_COSTO = { nuovo: -250, ristrutturato: 0, ottimo: 0, buono: 450, rinfrescare: 700, ristrutturare: 1250 };
-const MM_COSTO = { N: -250, O: 0, B: 450, R: 1250, "": 450 };
-/* comparabili per la valutazione: prima la vicinanza, poi le caratteristiche (tipologia, locali), poi metratura e stato.
-   Solo annunci Immobiliare letti di recente con posizione esatta; fuori i tipi diversi e i prezzi anomali (quote, aste, errori). */
+/* stato di un annuncio → euro al m² per portarlo a "ottimo" (stesso principio della valutazione) */
+const MM_ST_OTT = { N: v => v / 1.06, O: v => v, B: v => v + 450, R: v => (v + 1000 * 1.10) / (1 - 0.03) };
 function mmComps(ctx, q) {
   if (!ctx || !ctx.milano || !ctx.micro) return null;
-  const mq = +q.mq || 60, loc = +q.locali || Math.max(1, Math.round(mq / 28)), s = ctx.sel || ctx.micro, gS = V_GR[q.stato] || "B", cS = V_COSTO[q.stato] ?? 450;
+  const mq = +q.mq || 60, loc = +q.locali || Math.max(1, Math.round(mq / 28)), s = ctx.sel || ctx.micro;
   const casa = /villa|terratetto|casale|rustico|palazzo|edificio|capannone|negozio|ufficio|box/i;
-  const villa = q.tipo === "villa" || q.tipo === "terratetto";
-  let pool = mmAnnunci().filter(a => a.fonte === "Immobiliare.it" && a.lat != null && !a.appross && a.mq >= mq * 0.55 && a.mq <= mq * 1.7 && villa === casa.test(a.tip || ""))
-    .map(a => ({ ...a, dist: hav(s.lat, s.lon, a.lat, a.lon), g: MM_GR[a.st] || "" }))
-    .filter(a => a.dist < 1600);
+  const villa = q.tipo === "villa" || q.tipo === "villetta";
+  const esc = new Set((TERR.annunci.esclusi || []).map(String));
+  let pool = mmAnnunci().filter(a => a.fonte === "Immobiliare.it" && a.lat != null && !a.appross && a.mq >= mq * 0.55 && a.mq <= mq * 1.7 && villa === casa.test(a.tip || "") && !esc.has(String(a.id).slice(1)))
+    .map(a => ({ ...a, dist: hav(s.lat, s.lon, a.lat, a.lon) })).filter(a => a.dist < 1600);
   if (pool.length < 4) return null;
-  // prezzi anomali: riporto tutto a stato buono e tolgo quello che sta fuori da 0,7–1,45 volte la mediana vicina
-  const nb = a => a.mq2 + MM_COSTO[a.st === "N" ? "N" : a.g] - 450, medV = median(pool.filter(a => a.dist < 1000).map(nb)) || median(pool.map(nb));
-  pool = pool.filter(a => nb(a) > medV * 0.7 && nb(a) < medV * 1.45);
-  // raggio: il più piccolo che dà almeno 8 annunci
+  // ogni annuncio riportato a: stato ottimo, piano di riferimento (1°–2° con ascensore), senza accessori (balcone, terrazzo, giardino, cantina, box)
+  const vOf = a => {
+    let v = (MM_ST_OTT[a.st] || MM_ST_OTT.B)(a.mq2);
+    v = v / vPianoF(a.piano, a.asc, false);
+    let acc = 0; for (const c of a.ex || "") if (V_ACC[c]) acc += V_ACC[c][1];
+    v = v * (1 - acc);
+    if ((a.ex || "").includes("g")) v -= v * 15 * 0.45 * 0.5 / a.mq;   // box citato nell'annuncio: metà del valore di un box (spesso è a parte)
+    return v;
+  };
+  pool.forEach(a => { a.vO = vOf(a); });
+  // prezzi anomali: fuori da 0,7–1,45 volte la mediana vicina
+  const medV = median(pool.filter(a => a.dist < 1000).map(a => a.vO)) || median(pool.map(a => a.vO));
+  pool = pool.filter(a => a.vO > medV * 0.7 && a.vO < medV * 1.45);
+  // raggio: il più piccolo che dà almeno 8 annunci; poi i più simili per distanza, locali e metratura
   const R = [500, 800, 1100, 1600].find(r => pool.filter(a => a.dist <= r).length >= 8) || 1600;
-  const tipo = q.locali ? null : null;
-  const sc = a => a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8 + (a.g ? 0 : 0.5);   // lo stato non sceglie i comparabili: si corregge dopo in €/m², così ristrutturato > buono > da ristrutturare sempre
+  const sc = a => a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8 + (a.st ? 0 : 0.5);
   const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
     .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
     .slice(0, 10);
   if (c.length < 4) return null;
-  // ogni comparabile riportato allo stato dell'immobile da valutare; valore = mediana pesata (i più simili contano di più)
-  c.forEach(a => { a.adj = a.mq2 + MM_COSTO[a.st === "N" ? "N" : a.g] - cS; a.w = 1 / (1 + a.score); });
-  const ord = [...c].sort((a, b) => a.adj - b.adj), tot = ord.reduce((x, a) => x + a.w, 0);
-  let acc = 0, val = ord[ord.length - 1].adj; for (const a of ord) { acc += a.w; if (acc >= tot / 2) { val = a.adj; break; } }
-  return { lista: c, med: median(c.map(a => a.mq2)), norm: val, nNorm: c.length, raggio: R, gS, cS };
+  c.forEach(a => { a.w = 1 / (1 + a.score); a.adj = a.vO; });
+  const ord = [...c].sort((a, b) => a.vO - b.vO), tot = ord.reduce((x, a) => x + a.w, 0);
+  let acc = 0, vO = ord[ord.length - 1].vO; for (const a of ord) { acc += a.w; if (acc >= tot / 2) { vO = a.vO; break; } }
+  return { lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
 }
