@@ -33,7 +33,7 @@ function homeDove() {
   const max = Math.max(...R.map(x => x.val), 1e-9);
   return `<div class="dove">${R.map((x, i) => `<div class="dv"><b>${i + 1}</b><span><a href="${esc(immUrl(x.n))}" target="_blank" rel="noopener">${esc(x.n)} <i>(${esc(x.p)})</i> ↗</a><small>${x.sub} · ${tOre(x.d.min)}</small>
     <span class="tb"><span style="width:${Math.max(4, x.val / max * 100)}%"></span></span></span><em>${pct(x.val, 1)}${x.an ? `<a href="${x.an}">analisi</a>` : ""}</em></div>`).join("")}</div>
-  <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (più costi d'acquisto e arredo) e ${k === "breve" ? "affittato a notte" : "affittato con contratto normale"}, dopo spese e tasse. Tempo di viaggio da casa tua. Tocca il nome per aprire la ricerca su Immobiliare: scegli gli annunci che ti piacciono e mandami il link.</p>`;
+  <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (più costi d'acquisto e arredo) e ${k === "breve" ? "affittato a notte" : "affittato con contratto normale"}, dopo spese e tasse. Tempo di viaggio da casa tua. Tocca il nome per guardare gli annunci su Immobiliare.</p>`;
 }
 function homeTop() {
   return invAll().map(x => ({ ...x, A: analizza(x.im) })).filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
@@ -100,13 +100,13 @@ function homeMappa(el, P, opt = {}) {
   }).catch(() => { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; });
 }
 function afterHomeK() {
+  $("#dovek")?.addEventListener("click", e => { const c = e.target.closest("[data-k]"); if (!c) return; store.set("dove_k", c.dataset.k);
+    document.querySelectorAll("#dovek .chip").forEach(x => x.classList.toggle("on", x === c)); $("#dove").innerHTML = homeDove(); });
   const el = $("#itmap"); if (!el) return;
   const top = homeTop();
   const P = top.filter(x => x.im.lat != null).map((x, i) => ({ lon: x.im.lng, lat: x.im.lat, rank: i < 10 ? i + 1 : 0, col: stato(x.A.score).col,
     t: x.im.titolo || x.im.comune, s: `${x.im.comune} · ${eur(x.im.prezzo)} · ${x.A.score} punti · netto ${pct(x.A.rend)}`, h: `#imm/${x.src}/${encodeURIComponent(x.im.id)}` }));
   homeMappa(el, P);
-  $("#dovek")?.addEventListener("click", e => { const c = e.target.closest("[data-k]"); if (!c) return; store.set("dove_k", c.dataset.k);
-    document.querySelectorAll("#dovek .chip").forEach(x => x.classList.toggle("on", x === c)); $("#dove").innerHTML = homeDove(); });
   $("#plexp")?.addEventListener("click", () => { const w = $(".plancia"); w.classList.toggle("big"); setTimeout(() => HOME_MAP && HOME_MAP.resize(), 320); });
 }
 function vSeguiti() {
