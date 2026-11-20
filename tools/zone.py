@@ -65,6 +65,33 @@ ZONE = {
    comps=[(45000,45),(49000,45),(33000,55),(55000,60),(37000,70),(35000,65),(52000,66),(37000,58),(48000,40),(60000,50),(28500,55),(69000,56)]),
 }
 
+LAKE = norm([.25, .28, .30, .40, .45, .55, .70, .80, .55, .38, .22, .32])
+ZONE["intelvi"] = dict(regione="Lombardia", provincia="CO", comune="Alta Valle Intelvi", centro=(45.98, 9.04), omi=None, seas=LAKE,
+   breve_fonte="AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo).",
+   lungo_mq=6.5, lungo_min=330, lungo_cap={1: 420, 2: 480, 3: 550}, gestione=0.15,
+   lungo_fonte="Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI",
+   eventi=["Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+           "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+           "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+           "Circa 1 ora e 15 da Milano"],
+   fonti=[dict(titolo="AirDNA: affitti brevi a Pellio Intelvi", url="https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"),
+          dict(titolo="AirDNA: affitti brevi a San Fedele Intelvi", url="https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"),
+          dict(titolo="Annunci in Valle Intelvi su Nestoria", url="https://www.nestoria.it/appartamenti/vendita/pellio-superiore"),
+          dict(titolo="Annunci in Valle Intelvi su Immobiliare.it", url="https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/")],
+   comps=[(75000,45),(45000,40),(39000,42),(85000,65),(45000,38),(38000,61),(75000,52),(75000,40),(160000,105),(134000,72),(179000,83),(35000,46),(70000,50),(79000,83),(56000,80),(57000,57),(128000,57),(109000,79),(113000,55),(58000,50),(85000,90),(185000,92)])
+ZONE["maccagno"] = dict(regione="Lombardia", provincia="VA", comune="Maccagno con Pino e Veddasca", centro=(46.04, 8.735), omi=None, seas=LAKE,
+   breve_fonte="AirDNA Maccagno con Pino e Veddasca (222 annunci): occupazione 58%, 222 $ a notte; AirROI: 36,8%, 210 $. Valori del paese sul lago: per la valle ho ridotto molto prezzo e occupazione.",
+   lungo_mq=6.0, lungo_min=280, lungo_cap={1: 350, 2: 400}, gestione=0.15,
+   lungo_fonte="Stima: circa 6 €/m² al mese in Val Veddasca; nessun dato OMI",
+   eventi=["Val Veddasca sopra il Lago Maggiore: lago e spiagge di Maccagno a 10-20 minuti",
+           "Forcora: piccola località di montagna con sentieri e vista lago",
+           "Mercato degli affitti brevi molto attivo in paese: 222 annunci (AirDNA)",
+           "Circa 1 ora e 30 da Milano"],
+   fonti=[dict(titolo="AirDNA: affitti brevi a Maccagno", url="https://www.airdna.co/vacation-rental-data/app/it/lombardia/maccagno-con-pino-e-veddasca/overview"),
+          dict(titolo="AirROI: affitti brevi a Maccagno", url="https://airroi.com/airbnb-data/italy/lombardy/maccagno-con-pino-e-veddasca"),
+          dict(titolo="Annunci di Maccagno su Trovit", url="https://case.trovit.it/maccagno")],
+   comps=[(80000,169),(95000,218),(85000,150),(130000,150),(80000,45),(26000,29),(37000,45)])
+
 L = [
  # ---- Castione della Presolana ----
  dict(z="castione", id="castione-a", titolo="Monolocale sulle piste del Monte Pora con terrazzo", zona="Monte Pora", d=(45.879, 10.092), prezzo=43000, mq=38, locali=1, stato="buono", arredato=False, lavori=0,
@@ -157,6 +184,39 @@ L = [
       url=WK+"15503144", foto=None, pro=["Giardino privato e box auto"], contro=["Al limite del budget", "Zona periferica"]),
  dict(z="alessandria", id="alessandria-k", titolo="Bilocale già affittato in stabile senza lavori deliberati", zona="Via Carlo Marx", d=(44.893, 8.628), prezzo=28500, mq=55, locali=2, stato="buono", arredato=False, lavori=0,
       url=WK+"28255158", foto=None, pro=["28.500 €, già affittato", "Stabile ordinato senza lavori straordinari deliberati"], contro=["Canone non indicato: l'ho stimato", "Zona periferica"]),
+]
+
+L += [
+ dict(z="intelvi", id="intelvi-a", titolo="Monolocale panoramico con balcone, ottime condizioni", zona="Pellio Superiore", d=(45.984, 9.052), prezzo=39000, mq=42, locali=1, stato="ottimo", arredato=False, lavori=0,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-8450000794306034573", foto=None, adr=85, occ=.40, premium=True,
+      pro=["Ottime condizioni, posizione panoramica con balcone e cantina", "Proposto come casa vacanza o investimento", "Complesso di poche unità"],
+      contro=["Riscaldamento assente: da valutare per l'inverno", "Da arredare"]),
+ dict(z="intelvi", id="intelvi-b", titolo="Monolocale con balcone vista e parco, complesso Il Tiglio", zona="Pellio Intelvi", d=(45.982, 9.049), prezzo=45000, mq=40, locali=1, stato="buono", arredato=False, lavori=0,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-9100000779272186303", foto=None, adr=85, occ=.40,
+      pro=["Luminoso, balcone con vista", "Ampio parco condominiale"], contro=["Da arredare"]),
+ dict(z="intelvi", id="intelvi-c", titolo="Trilocale al piano terra con ingresso indipendente, senza spese condominiali", zona="Pellio Superiore", d=(45.9845, 9.0525), prezzo=45000, mq=38, locali=3, stato="da rinfrescare", arredato=False, lavori=4000, casa=True,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-5750003763637005364", foto=None, adr=95, occ=.38,
+      pro=["Ingresso indipendente, nessuna spesa condominiale", "Due camere in 38 m²: più posti letto"], contro=["Impianti da rivedere secondo l'annuncio: ho previsto 4.000 €"]),
+ dict(z="intelvi", id="intelvi-d", titolo="Appartamento con ingresso indipendente in quadrifamiliare", zona="Pellio Superiore", d=(45.985, 9.054), prezzo=35000, mq=46, locali=3, stato="buono", arredato=False, lavori=2000, casa=True,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-8830005782814071106", foto=None, adr=95, occ=.38,
+      pro=["35.000 € con ingresso indipendente", "Zona tranquilla vicino al lago"], contro=["Stato non descritto: ho previsto 2.000 € di ritocchi"]),
+ dict(z="intelvi", id="intelvi-e", titolo="Trilocale all'ultimo piano termoautonomo con giardino comune", zona="Ramponio Verna", d=(45.997, 9.066), prezzo=56000, mq=80, locali=3, stato="buono", arredato=False, lavori=0,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-8320002766919552091", foto=None, adr=110, occ=.38, classe="E",
+      pro=["80 m² a 700 €/m²: adatto a famiglie", "Riscaldamento autonomo, box e cantina disponibili"], contro=["Da arredare", "Ramponio è un po' più lontano dal lago"]),
+ dict(z="intelvi", id="intelvi-f", titolo="Monolocale con ampio sottotetto e vista montagne", zona="Lanzo d'Intelvi", d=(45.972, 9.021), prezzo=57000, mq=57, locali=1, stato="buono", arredato=False, lavori=0,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-8270002766919799029", foto=None, adr=95, occ=.40,
+      pro=["Sottotetto ampio: spazio per più letti", "Due bagni, fermata del bus vicina", "Lanzo è il centro più vivo della valle"], contro=["Stesso palazzo ha altri monolocali in vendita: concorrenza"]),
+ dict(z="intelvi", id="intelvi-g", titolo="Monolocale con angolo cottura e sottotetto utilizzabile", zona="Scaria", d=(45.988, 9.032), prezzo=58000, mq=50, locali=1, stato="buono", arredato=False, lavori=0,
+      url="https://www.nestoria.it/adclickdetail/nestoria-IT-7290003775297530056", foto=None, adr=90, occ=.38,
+      pro=["Sottotetto utilizzabile", "Complesso residenziale tranquillo"], contro=["Prezzo al m² più alto degli altri monolocali della valle"]),
+ dict(z="maccagno", id="maccagno-a", titolo="Bilocale di montagna alla Forcora", zona="Forcora", d=(46.064, 8.794), prezzo=26000, mq=29, locali=2, stato="buono", arredato=False, lavori=0,
+      url="https://www.nestoria.it/appartamenti/vendita/forcora", foto=None, adr=75, occ=.30,
+      pro=["26.000 €: l'ingresso più basso di tutta l'app", "Camera finestrata separata, bagno con doccia", "Natura e vista lago"],
+      contro=["Località isolata: d'inverno pochi servizi", "Molto piccolo"]),
+ dict(z="maccagno", id="maccagno-b", titolo="Rustico in sasso immerso nella natura", zona="Lago d'Elio", d=(46.054, 8.775), prezzo=37000, mq=45, locali=2, stato="da rinfrescare", arredato=False, lavori=8000, casa=True,
+      url="https://case.trovit.it/detail/trovit-IT-3470005792231754175", foto=None, adr=95, occ=.32,
+      pro=["Rustico in pietra: molto richiesto da chi cerca natura", "Zona del Lago d'Elio, panoramica"],
+      contro=["Stato e abitabilità da verificare: ho previsto 8.000 € di lavori", "Probabilmente oltre i ritocchi leggeri"]),
 ]
 
 def mesi(seas, occ):

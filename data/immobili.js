@@ -6617,5 +6617,1121 @@ const MIEI = [
     "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
    }
   }
+ },
+ {
+  "id": "intelvi-a",
+  "titolo": "Monolocale panoramico con balcone, ottime condizioni",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8450000794306034573",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Pellio Superiore",
+  "lat": 45.984,
+  "lng": 9.052,
+  "pos_indicativa": true,
+  "prezzo": 39000,
+  "mq": 42,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.4,
+    "mesi": [
+     0.231,
+     0.258,
+     0.277,
+     0.369,
+     0.415,
+     0.508,
+     0.646,
+     0.738,
+     0.508,
+     0.351,
+     0.203,
+     0.295
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ottime condizioni, posizione panoramica con balcone e cantina",
+    "Proposto come casa vacanza o investimento",
+    "Complesso di poche unità"
+   ],
+   "contro": [
+    "Riscaldamento assente: da valutare per l'inverno",
+    "Da arredare"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "parametri": {},
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 45000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 75000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 38 m²",
+     "prezzo": 45000,
+     "mq": 38
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 46 m²",
+     "prezzo": 35000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-b",
+  "titolo": "Monolocale con balcone vista e parco, complesso Il Tiglio",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-9100000779272186303",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Pellio Intelvi",
+  "lat": 45.982,
+  "lng": 9.049,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 40,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 85,
+    "occ": 0.4,
+    "mesi": [
+     0.231,
+     0.258,
+     0.277,
+     0.369,
+     0.415,
+     0.508,
+     0.646,
+     0.738,
+     0.508,
+     0.351,
+     0.203,
+     0.295
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Luminoso, balcone con vista",
+    "Ampio parco condominiale"
+   ],
+   "contro": [
+    "Da arredare"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 75000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 42 m²",
+     "prezzo": 39000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 38 m²",
+     "prezzo": 45000,
+     "mq": 38
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 46 m²",
+     "prezzo": 35000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-c",
+  "titolo": "Trilocale al piano terra con ingresso indipendente, senza spese condominiali",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-5750003763637005364",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Pellio Superiore",
+  "lat": 45.9845,
+  "lng": 9.0525,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 38,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 4000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.38,
+    "mesi": [
+     0.219,
+     0.246,
+     0.263,
+     0.351,
+     0.395,
+     0.482,
+     0.614,
+     0.702,
+     0.482,
+     0.333,
+     0.193,
+     0.281
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ingresso indipendente, nessuna spesa condominiale",
+    "Due camere in 38 m²: più posti letto"
+   ],
+   "contro": [
+    "Impianti da rivedere secondo l'annuncio: ho previsto 4.000 €"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 45000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 75000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 42 m²",
+     "prezzo": 39000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 46 m²",
+     "prezzo": 35000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-d",
+  "titolo": "Appartamento con ingresso indipendente in quadrifamiliare",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8830005782814071106",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Pellio Superiore",
+  "lat": 45.985,
+  "lng": 9.054,
+  "pos_indicativa": true,
+  "prezzo": 35000,
+  "mq": 46,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.38,
+    "mesi": [
+     0.219,
+     0.246,
+     0.263,
+     0.351,
+     0.395,
+     0.482,
+     0.614,
+     0.702,
+     0.482,
+     0.333,
+     0.193,
+     0.281
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "35.000 € con ingresso indipendente",
+    "Zona tranquilla vicino al lago"
+   ],
+   "contro": [
+    "Stato non descritto: ho previsto 2.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 42 m²",
+     "prezzo": 39000,
+     "mq": 42
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 58000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 40 m²",
+     "prezzo": 45000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 52 m²",
+     "prezzo": 75000,
+     "mq": 52
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-e",
+  "titolo": "Trilocale all'ultimo piano termoautonomo con giardino comune",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8320002766919552091",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Ramponio Verna",
+  "lat": 45.997,
+  "lng": 9.066,
+  "pos_indicativa": true,
+  "prezzo": 56000,
+  "mq": 80,
+  "locali": 3,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": "E",
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 520,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 110,
+    "occ": 0.38,
+    "mesi": [
+     0.219,
+     0.246,
+     0.263,
+     0.351,
+     0.395,
+     0.482,
+     0.614,
+     0.702,
+     0.482,
+     0.333,
+     0.193,
+     0.281
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "80 m² a 700 €/m²: adatto a famiglie",
+    "Riscaldamento autonomo, box e cantina disponibili"
+   ],
+   "contro": [
+    "Da arredare",
+    "Ramponio è un po' più lontano dal lago"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 79 m²",
+     "prezzo": 109000,
+     "mq": 79
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 83 m²",
+     "prezzo": 179000,
+     "mq": 83
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 83 m²",
+     "prezzo": 79000,
+     "mq": 83
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 72 m²",
+     "prezzo": 134000,
+     "mq": 72
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 90 m²",
+     "prezzo": 85000,
+     "mq": 90
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 92 m²",
+     "prezzo": 185000,
+     "mq": 92
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-f",
+  "titolo": "Monolocale con ampio sottotetto e vista montagne",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-8270002766919799029",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Lanzo d'Intelvi",
+  "lat": 45.972,
+  "lng": 9.021,
+  "pos_indicativa": true,
+  "prezzo": 57000,
+  "mq": 57,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 370,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.4,
+    "mesi": [
+     0.231,
+     0.258,
+     0.277,
+     0.369,
+     0.415,
+     0.508,
+     0.646,
+     0.738,
+     0.508,
+     0.351,
+     0.203,
+     0.295
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Sottotetto ampio: spazio per più letti",
+    "Due bagni, fermata del bus vicina",
+    "Lanzo è il centro più vivo della valle"
+   ],
+   "contro": [
+    "Stesso palazzo ha altri monolocali in vendita: concorrenza"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 57 m²",
+     "prezzo": 128000,
+     "mq": 57
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 55 m²",
+     "prezzo": 113000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 61 m²",
+     "prezzo": 38000,
+     "mq": 61
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 52 m²",
+     "prezzo": 75000,
+     "mq": 52
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 58000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "intelvi-g",
+  "titolo": "Monolocale con angolo cottura e sottotetto utilizzabile",
+  "url": "https://www.nestoria.it/adclickdetail/nestoria-IT-7290003775297530056",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "CO",
+  "comune": "Alta Valle Intelvi",
+  "zona": "Scaria",
+  "lat": 45.988,
+  "lng": 9.032,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 50,
+  "locali": 1,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Stima: circa 6,5 €/m² al mese (annunci di affitto in valle intorno ai 700 € per un duplex a Lanzo); nessun dato OMI"
+   },
+   "breve": {
+    "adr": 90,
+    "occ": 0.38,
+    "mesi": [
+     0.219,
+     0.246,
+     0.263,
+     0.351,
+     0.395,
+     0.482,
+     0.614,
+     0.702,
+     0.482,
+     0.333,
+     0.193,
+     0.281
+    ],
+    "stima": true,
+    "fonte": "AirDNA Pellio Intelvi: occupazione 54%, 173 $ a notte, 14,2 mila $ l'anno per annuncio; San Fedele Intelvi: 48%, 127 $. Prezzo a notte adattato a grandezza; stagionalità indicativa dei laghi (picco estivo)."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Sottotetto utilizzabile",
+    "Complesso residenziale tranquillo"
+   ],
+   "contro": [
+    "Prezzo al m² più alto degli altri monolocali della valle"
+   ]
+  },
+  "eventi": [
+   "Valle sopra il Lago di Como e il Lago di Lugano: lago a 10-20 minuti d'auto",
+   "Golf Club di Lanzo e sentieri del Monte Generoso; confine svizzero vicinissimo",
+   "Affitti brevi in forte crescita: a Pellio Intelvi ricavi +89% in un anno (AirDNA)",
+   "Circa 1 ora e 15 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Pellio Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/pellio-intelvi/overview"
+   },
+   {
+    "titolo": "AirDNA: affitti brevi a San Fedele Intelvi",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/san-fedele-intelvi/revenue"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Nestoria",
+    "url": "https://www.nestoria.it/appartamenti/vendita/pellio-superiore"
+   },
+   {
+    "titolo": "Annunci in Valle Intelvi su Immobiliare.it",
+    "url": "https://www.immobiliare.it/vendita-appartamenti/alta-valle-intelvi/"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 50 m²",
+     "prezzo": 70000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 52 m²",
+     "prezzo": 75000,
+     "mq": 52
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 46 m²",
+     "prezzo": 35000,
+     "mq": 46
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 45 m²",
+     "prezzo": 75000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 55 m²",
+     "prezzo": 113000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alta Valle Intelvi, 57 m²",
+     "prezzo": 57000,
+     "mq": 57
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alta Valle Intelvi con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "maccagno-a",
+  "titolo": "Bilocale di montagna alla Forcora",
+  "url": "https://www.nestoria.it/appartamenti/vendita/forcora",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Maccagno con Pino e Veddasca",
+  "zona": "Forcora",
+  "lat": 46.064,
+  "lng": 8.794,
+  "pos_indicativa": true,
+  "prezzo": 26000,
+  "mq": 29,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 40,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 280,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese in Val Veddasca; nessun dato OMI"
+   },
+   "breve": {
+    "adr": 75,
+    "occ": 0.3,
+    "mesi": [
+     0.173,
+     0.194,
+     0.208,
+     0.277,
+     0.312,
+     0.381,
+     0.485,
+     0.554,
+     0.381,
+     0.263,
+     0.152,
+     0.222
+    ],
+    "stima": true,
+    "fonte": "AirDNA Maccagno con Pino e Veddasca (222 annunci): occupazione 58%, 222 $ a notte; AirROI: 36,8%, 210 $. Valori del paese sul lago: per la valle ho ridotto molto prezzo e occupazione."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "26.000 €: l'ingresso più basso di tutta l'app",
+    "Camera finestrata separata, bagno con doccia",
+    "Natura e vista lago"
+   ],
+   "contro": [
+    "Località isolata: d'inverno pochi servizi",
+    "Molto piccolo"
+   ]
+  },
+  "eventi": [
+   "Val Veddasca sopra il Lago Maggiore: lago e spiagge di Maccagno a 10-20 minuti",
+   "Forcora: piccola località di montagna con sentieri e vista lago",
+   "Mercato degli affitti brevi molto attivo in paese: 222 annunci (AirDNA)",
+   "Circa 1 ora e 30 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Maccagno",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/maccagno-con-pino-e-veddasca/overview"
+   },
+   {
+    "titolo": "AirROI: affitti brevi a Maccagno",
+    "url": "https://airroi.com/airbnb-data/italy/lombardy/maccagno-con-pino-e-veddasca"
+   },
+   {
+    "titolo": "Annunci di Maccagno su Trovit",
+    "url": "https://case.trovit.it/maccagno"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 45 m²",
+     "prezzo": 37000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 150 m²",
+     "prezzo": 85000,
+     "mq": 150
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 150 m²",
+     "prezzo": 130000,
+     "mq": 150
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 169 m²",
+     "prezzo": 80000,
+     "mq": 169
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 218 m²",
+     "prezzo": 95000,
+     "mq": 218
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Maccagno con Pino e Veddasca con metratura vicina (raccolti il 20/11/2026)."
+  }
+ },
+ {
+  "id": "maccagno-b",
+  "titolo": "Rustico in sasso immerso nella natura",
+  "url": "https://case.trovit.it/detail/trovit-IT-3470005792231754175",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Lombardia",
+  "provincia": "VA",
+  "comune": "Maccagno con Pino e Veddasca",
+  "zona": "Lago d'Elio",
+  "lat": 46.054,
+  "lng": 8.775,
+  "pos_indicativa": true,
+  "prezzo": 37000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "da rinfrescare",
+  "lavori": 8000,
+  "classe_energetica": null,
+  "foto": null,
+  "spese": {
+   "condominio_mese": 0,
+   "imu_anno": 350,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 280,
+    "stima": true,
+    "fonte": "Stima: circa 6 €/m² al mese in Val Veddasca; nessun dato OMI"
+   },
+   "breve": {
+    "adr": 95,
+    "occ": 0.32,
+    "mesi": [
+     0.185,
+     0.207,
+     0.222,
+     0.295,
+     0.332,
+     0.406,
+     0.517,
+     0.591,
+     0.406,
+     0.281,
+     0.162,
+     0.236
+    ],
+    "stima": true,
+    "fonte": "AirDNA Maccagno con Pino e Veddasca (222 annunci): occupazione 58%, 222 $ a notte; AirROI: 36,8%, 210 $. Valori del paese sul lago: per la valle ho ridotto molto prezzo e occupazione."
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Rustico in pietra: molto richiesto da chi cerca natura",
+    "Zona del Lago d'Elio, panoramica"
+   ],
+   "contro": [
+    "Stato e abitabilità da verificare: ho previsto 8.000 € di lavori",
+    "Probabilmente oltre i ritocchi leggeri"
+   ]
+  },
+  "eventi": [
+   "Val Veddasca sopra il Lago Maggiore: lago e spiagge di Maccagno a 10-20 minuti",
+   "Forcora: piccola località di montagna con sentieri e vista lago",
+   "Mercato degli affitti brevi molto attivo in paese: 222 annunci (AirDNA)",
+   "Circa 1 ora e 30 da Milano"
+  ],
+  "fonti": [
+   {
+    "titolo": "AirDNA: affitti brevi a Maccagno",
+    "url": "https://www.airdna.co/vacation-rental-data/app/it/lombardia/maccagno-con-pino-e-veddasca/overview"
+   },
+   {
+    "titolo": "AirROI: affitti brevi a Maccagno",
+    "url": "https://airroi.com/airbnb-data/italy/lombardy/maccagno-con-pino-e-veddasca"
+   },
+   {
+    "titolo": "Annunci di Maccagno su Trovit",
+    "url": "https://case.trovit.it/maccagno"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 45 m²",
+     "prezzo": 80000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 29 m²",
+     "prezzo": 26000,
+     "mq": 29
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 150 m²",
+     "prezzo": 85000,
+     "mq": 150
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 150 m²",
+     "prezzo": 130000,
+     "mq": 150
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 169 m²",
+     "prezzo": 80000,
+     "mq": 169
+    },
+    {
+     "titolo": "Annuncio simile a Maccagno con Pino e Veddasca, 218 m²",
+     "prezzo": 95000,
+     "mq": 218
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Maccagno con Pino e Veddasca con metratura vicina (raccolti il 20/11/2026)."
+  }
  }
 ];

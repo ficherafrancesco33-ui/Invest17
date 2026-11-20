@@ -95,3 +95,10 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - Affitto breve: Castione da AirROI (stagionalità reale mese per mese), Pisogne da AirDNA/AirROI ridotti per le frazioni. Affitto lungo: Vercelli 7,5 €/m², Alessandria 7 €/m² (fonti in scheda), montagna stimato.
 - Parametri affitto breve rivisti in `impostazioni.js`: commissioni 12% (media Airbnb/Booking), pulizie 10 € a soggiorno (oltre la tariffa pulizie pagata dall'ospite), utenze 1.500 €/anno.
 - Generatori dei dati in `tools/oneta.py` e `tools/zone.py` (Python, rigenerano `data/immobili.js`).
+
+### 20/11/2026 (5) — Entroterra dei laghi
+- Valle Intelvi (7, 10-20 minuti dal Lago di Como e di Lugano): migliore zona per affitti brevi trovata finora (AirDNA Pellio Intelvi 54% e 173 $ a notte).
+- Val Veddasca sopra Maccagno, Lago Maggiore (2): Forcora e Lago d'Elio.
+- Stagionalità dei laghi: profilo indicativo `LAKE` in `tools/zone.py` (nessun dato mensile pubblico).
+- Pavia esclusa: in città quasi nulla sotto 60.000 € (2.300-3.300 €/m² in centro).
+- Archivio: 62 immobili.
