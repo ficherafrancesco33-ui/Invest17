@@ -356,8 +356,18 @@ document.addEventListener("click", e => {
   if (ri) { const x = trova(ri.dataset.vriapri); if (!x) return; const ctx = vCtxSalvata(x);
     store.set("vform_" + x.dove, Object.assign({}, V_DEF, x.q));
     if (x.dove === "valuta") { if (ctx?.com) store.set("v_com", ctx.com.n); store.set("v_zona", ctx?.zonaCom || ""); }
-    else if (ctx?.sel) { if (typeof MM !== "undefined") MM.sel = ctx.sel; store.set("mm_sel", { ...ctx.sel, geom: null }); if (ctx.cliente) store.set("mi_cliente", ctx.cliente); }
-    render(true); setTimeout(() => ($("#mvf") || $("#vf") || $("#mzf"))?.scrollIntoView({ behavior: "smooth", block: "start" }), 300); }
+    else { if (ctx?.sel) { if (typeof MM !== "undefined") MM.sel = ctx.sel; store.set("mm_sel", { ...ctx.sel, geom: null }); }
+      if (ctx?.cliente) store.set("mi_cliente", ctx.cliente); }
+    // vado sempre alla pagina del valutatore (dall'elenco di Milano non c'era il modulo)
+    const dest = x.dove === "valuta" ? "#valuta" : "#milano/" + ((x.ck?.mode && x.ck.mode !== "sub") ? x.ck.mode : "cliente");
+    window.__vRiapri = { id: x.id, cercare: !ctx?.sel && x.dove !== "valuta" ? x.nome : null };
+    if (location.hash === dest) render(true); else location.hash = dest;
+    const vai = (n = 0) => { const f = $("#mvf") || $("#vf"); if (!f) { if (n < 40) setTimeout(() => vai(n + 1), 150); return; }
+      f.scrollIntoView({ behavior: "smooth", block: "start" });
+      // valutazione salvata senza zona: cerco l'indirizzo e seleziono il palazzo
+      const R = window.__vRiapri; window.__vRiapri = null;
+      if (R?.cercare && typeof mmGeocode === "function") setTimeout(async () => { const L = await mmGeocode(R.cercare); if (L[0]) mmVaiA({ ...L[0], modulo: true }); }, 900); };
+    setTimeout(vai, 200); }
 });
 function vBind(form, out, getCtx, dove) {
   const go = () => { const ctx = getCtx(), q = vRead(form); store.set("vform_" + dove, q);
