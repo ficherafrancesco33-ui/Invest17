@@ -6,7 +6,7 @@
 <title>Keystone</title>
 <meta name="description" content="Analisi di immobili da mettere a reddito: valore, comparabili, rendimenti e notizie">
 <meta name="theme-color" content="#111823">
-<script>document.documentElement.dataset.th="notte"</script>
+<script>(function(){var t="bordeaux";try{t=localStorage.getItem("k_tema")||t}catch(e){}if(t!=="bordeaux"&&t!=="bianco")t="bordeaux";document.documentElement.dataset.th=t;document.querySelector('meta[name=theme-color]').content=t==="bianco"?"#6a1828":"#1a0a12"})()</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -560,6 +560,32 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .mxbtn{display:flex;margin:8px 18px 4px auto;align-items:center;gap:6px;border:1px solid var(--line2);background:var(--card);color:var(--cy2);border-radius:999px;padding:6px 14px;font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
 .plancia .mxbtn{margin-right:0}
 .mmsheet{position:static!important;max-height:none!important;margin:0!important;border-radius:0 0 20px 20px!important;border-top:1px solid var(--line)}
+
+:root[data-th=bordeaux]{--bg:#24101a;--panel:#341823;--panel2:#40202c;--card:#341823;--card2:#40202c;--deep:#1a0a12;--head:#1a0a12;--headtx:#f6efe4;--line:#5a2c3a;--line2:#7a4452;--soft:#40202c;
+  --tx:#f6efe4;--tx2:#d9c9b8;--muted:#b8a291;--strong:#ffffff;--cy:#d4ae5c;--cy2:#e9cd8a;--mg:#e9cd8a;--yl:#e9cd8a;--on:#24101a;--hd1:#1a0a12;--hd2:#1a0a12;--accrgb:212,174,92;color-scheme:dark}
+:root[data-th=bordeaux] body{background:linear-gradient(180deg,#2c1320,var(--bg) 40%)}
+:root[data-th=bordeaux] .top{border-bottom:1px solid #8a6a2a}
+:root[data-th=bianco]{--bg:#ffffff;--panel:#fbf8f4;--panel2:#f4ede4;--card:#fbf8f4;--card2:#f4ede4;--deep:#f1e8dc;--head:#6a1828;--headtx:#ffffff;--line:#ece2d6;--line2:#d9c3a0;--soft:#f3e6cf;--line2x:#d9c3a0;
+  --tx:#231a1a;--tx2:#463936;--muted:#7a6c66;--strong:#1a1212;--cy:#6a1828;--cy2:#8a5f12;--mg:#6a1828;--yl:#c9a24b;--on:#ffffff;--hd1:#6a1828;--hd2:#6a1828;--good:#2f8a4c;--accrgb:106,24,40;color-scheme:light}
+:root[data-th=bianco] body{background:var(--bg)}
+:root[data-th=bianco] .top{border-bottom:2px solid #c9a24b}
+:root[data-th=bianco] .logo i{color:#6a1828;background:#e9cd8a}
+:root[data-th=bianco] .logo b,:root[data-th=bianco] .logo small{color:#fff}
+:root[data-th=bianco] .nav a{color:#f3e2e5;background:rgba(255,255,255,.1)}
+:root[data-th=bianco] .chip:not(.on),:root[data-th=bianco] select,:root[data-th=bianco] input,:root[data-th=bianco] .hback{background:#fff;color:var(--tx)}
+:root[data-th=bianco] .chip.on{color:var(--on)}
+:root[data-th=bianco] h1{text-shadow:none}
+:root[data-th=bianco] .price b{color:var(--cy);text-shadow:none}
+:root[data-th=bianco] .verdict,:root[data-th=bianco] .vhead,:root[data-th=bianco] .mblock>div,:root[data-th=bianco] .uso.best{background:var(--panel2)}
+:root[data-th=bianco] .hubc,:root[data-th=bianco] .btn4 a{background:#fff}
+:root[data-th=bianco] .hubc.big{background:linear-gradient(135deg,#f3e6cf,#fff 60%)}:root[data-th=bianco] .kpi,:root[data-th=bianco] .card{box-shadow:0 2px 8px rgba(60,20,30,.08)}
+:root[data-th=bianco] .mmsheet{background:#fff;color:var(--tx)}
+:root[data-th=bianco] .leaflet-popup-content-wrapper,:root[data-th=bianco] .leaflet-popup-tip,:root[data-th=bianco] .maplibregl-popup-content{background:#fff;color:var(--tx)}
+.thbtn{display:flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:999px;border:1px solid rgba(233,205,138,.6);background:transparent;color:#e9cd8a;font:700 12px var(--body);letter-spacing:.04em;cursor:pointer}
+.thbtn svg{width:16px;height:16px}
+.thbtn i{width:12px;height:12px;border-radius:50%;display:inline-block;border:1px solid #e9cd8a}
+:root[data-th=bordeaux] .thbtn i{background:#fff}
+:root[data-th=bianco] .thbtn i{background:#5a2133}
 </style>
 </head>
 <body>
@@ -567,6 +593,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
   <div class="toprow">
     <a class="logo" href="#home" id="logo" title="Aggiorna la pagina"><i><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V27a16 16 0 0 1 32 0v13" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><path d="M19.2 9.6h9.6l-1.6 11.2h-6.4z" fill="currentColor"/><circle cx="24" cy="31" r="3.1" fill="currentColor"/><path d="M24 33.5v5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></i><b>Keystone<small>Maison Collection</small></b></a>
     <span class="sp"></span>
+    <button class="thbtn" id="thbtn" type="button" aria-label="Cambia colori: bordeaux scuro o bianco"><i></i><span id="thlab"></span></button>
   </div>
   <nav class="nav" id="nav">
   <a href="#home" data-v="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><span>Home</span></a>
@@ -577,6 +604,13 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 </nav>
 </header>
 <main id="app"></main>
+<script>
+(function(){var b=document.getElementById("thbtn"),l=document.getElementById("thlab");
+function lab(){l.textContent=document.documentElement.dataset.th==="bianco"?"Scuro":"Chiaro"}lab();
+b.addEventListener("click",function(){var t=document.documentElement.dataset.th==="bianco"?"bordeaux":"bianco";try{localStorage.setItem("k_tema",t)}catch(e){}
+document.documentElement.dataset.th=t;document.querySelector('meta[name=theme-color]').content=t==="bianco"?"#6a1828":"#1a0a12";lab();
+if(typeof plSet==="function")plSet();if(typeof render==="function")render(true);});})();
+</script>
 <div class="tip" id="tip" hidden></div>
 
 <script src="data/impostazioni.js"></script>
