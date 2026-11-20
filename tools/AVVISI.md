@@ -64,3 +64,14 @@ Se nessun avviso nuovo: nessuna notifica.
 ## Versione degli script (cache)
 Dopo aver cambiato file in data/ o js/, aggiorna il numero di versione in index.html, altrimenti telefono e computer tengono i file vecchi:
 `V=$(date +%y%m%d%H%M); sed -i -E "s#<script src=\"((js|data)/[a-z_0-9]+\.js)(\?v=[0-9]+)?\"#<script src=\"\1?v=$V\"#g" index.html`
+
+## Scheda completa di ogni annuncio (per comparabili precisi)
+Quando si legge un annuncio (pagina di dettaglio, `__NEXT_DATA__` + descrizione intera), salvare nell'archivio questi campi, presi prima dai dati strutturati e, se mancano, dalla descrizione:
+- piano, piani dell'edificio, ultimo piano, ascensore
+- locali, camere, bagni, cucina (abitabile / a vista / cucinotto)
+- balconi (numero e m² se scritti), terrazzo (m²), giardino (m²), cantina, soffitta, box (singolo/doppio), posto auto
+- esposizione (doppia / interna / esterna) e orientamento (N, S, E, O…), vista
+- stato, anno di costruzione / epoca, classe energetica, riscaldamento (centralizzato / autonomo), aria condizionata
+- portineria (intera / mezza giornata), spese condominiali €/mese
+- arredato, libero / affittato
+Poi `python3 tools/terr/archivio.py <file>` e `cd tools/terr && python3 gen.py`: i campi entrano nei comparabili (somiglianza e normalizzazione).
