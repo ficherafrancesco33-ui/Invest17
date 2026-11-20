@@ -359,7 +359,7 @@ tr.hl td{background:#fbf5ea}tr.hl td:first-child{box-shadow:inset 2.5pt 0 0 ${C.
 }
 @media print{.appbar{display:none}.wrap{padding:0}}
 </style></head><body>
-<div class="appbar"><button class="back" onclick="try{window.opener&&window.opener.focus()}catch(e){};window.close();setTimeout(()=>{history.length>1?history.back():alert('Chiudi questa scheda per tornare all\'app')},300)">‹ Torna all'app</button><button class="go" onclick="window.print()">Salva PDF / Stampa</button></div>
+<div class="appbar"><button class="back" onclick="try{window.opener&&window.opener.focus()}catch(e){};window.close();setTimeout(function(){location.href='${esc(location.href.split("#")[0] + "#milano/cliente")}'},250)">‹ Torna all'app</button><button class="go" onclick="window.print()">Salva PDF / Stampa</button></div>
 <div class="wrap">
 
 <div class="cover">

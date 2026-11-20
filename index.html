@@ -543,6 +543,15 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .zr{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:var(--card)}
 .zr .pill{font-size:17px;padding:2px 8px 1px;flex:none}.zr b{display:block;font-size:14px}.zr em{font-style:normal;font-size:12px;color:var(--tx2)}
 .zgrid{grid-template-columns:1fr}.hello h1{font-size:32px}}
+
+/* Mappe "opzione A": basse e rettangolari, con margini ai lati per scorrere col pollice; "Espandi" le fa più alte */
+.map:not(.small),.mm3d,.itmap,.clmap{height:230px!important;min-height:0!important;transition:height .25s}
+.map:not(.clmap):not(.small),.mmwrap,.itmap,.clmapw{margin-left:18px!important;margin-right:18px!important}
+.clmapw{margin-top:4px}.clmap{border-radius:18px!important;border:1px solid var(--line)!important}
+.mexp{height:62vh!important}
+.mxbtn{display:flex;margin:8px 18px 4px auto;align-items:center;gap:6px;border:1px solid var(--line2);background:var(--card);color:var(--cy2);border-radius:999px;padding:6px 14px;font-family:var(--display);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+.plancia .mxbtn{margin-right:0}
+.mmsheet{position:static!important;max-height:none!important;margin:0!important;border-radius:0 0 20px 20px!important;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -997,6 +1006,21 @@ function md(t) {
   }).join("");
 }
 
+
+/* pulsante Espandi sotto ogni mappa (opzione A) */
+function mapExpanders() {
+  document.querySelectorAll("#app .map:not(.small), #app .mm3d, #app .itmap, #app .itmap2").forEach(m => {
+    const after = m.closest(".mmwrap, .clmapw") || m;
+    if (after.nextElementSibling?.classList.contains("mxbtn")) return;
+    const b = document.createElement("button"); b.type = "button"; b.className = "mxbtn"; b.textContent = "⤢ Espandi mappa";
+    b.addEventListener("click", () => { const on = m.classList.toggle("mexp"); b.textContent = on ? "⤡ Riduci mappa" : "⤢ Espandi mappa";
+      const rs = () => { maps.forEach(x => { try { x.invalidateSize ? x.invalidateSize() : x.resize && x.resize(); } catch (e) {} });
+        try { window.MM && MM.map && MM.map.resize(); } catch (e) {} try { if (typeof HOME_MAP !== "undefined" && HOME_MAP) (HOME_MAP.resize || HOME_MAP.invalidateSize).call(HOME_MAP); } catch (e) {} };
+      setTimeout(rs, 60); setTimeout(rs, 320);
+      if (!on) after.scrollIntoView({ block: "nearest", behavior: "smooth" }); });
+    after.insertAdjacentElement("afterend", b);
+  });
+}
 /* ============ router ============ */
 function render(keepScroll) {
   maps.forEach(m => m.remove()); maps = [];
@@ -1018,7 +1042,7 @@ function render(keepScroll) {
   const INVK = { miei: "archivio", auto: "auto", brevi: "dove" };
   if (INVK[v] && window.invBread) html = invBread(INVK[v]) + html;
   if (v && v !== "home") html = `<button class="pgback" id="pgback" aria-label="Indietro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Indietro</button>` + html;
-  app.innerHTML = html; after();
+  app.innerHTML = html; after(); try { mapExpanders(); } catch (e) {}
   const navv = v === "imm" || INVK[v] ? "inv" : v || "home";
   document.querySelectorAll("#nav a").forEach(x => { const on = x.dataset.v === navv; x.classList.toggle("on", on); if (on) x.scrollIntoView({ inline: "nearest", block: "nearest" }); });
   hhSet();
