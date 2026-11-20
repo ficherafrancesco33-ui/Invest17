@@ -401,7 +401,7 @@ function vDove() {
   <div class="dove">${rows.slice(0, 80).map((o, i) => `<div class="dv"><b>${i + 1}</b><span><a href="${esc(immUrl(o.c.n))}" target="_blank" rel="noopener">${esc(o.c.n)} <i>(${esc(o.c.p)})</i> ↗</a>
       <small>${f.uso === "breve" ? `${eur(o.adr)} a notte · ${pct(o.occ, 0)}${o.stima ? " (stima vicina)" : ""}` : `affitto ${eur(o.canone)}/mese`} · bilocale ~${keur(o.prezzo)} · ${tOre(o.d.min)}</small>
       ${o.tags.length ? `<small class="dvt">${o.tags.map(t => `<span title="${DV_TAG[t][0]}">${DV_TAG[t][1]} ${DV_TAG[t][0]}</span>`).join("")}</small>` : ""}
-      ${(() => { const V = dvVicini(o.c), sopra = dvSopra(o.c); return V.length || sopra ? `<small class="dvv">${sopra ? `<b>Di solito sopra budget:</b> ` : ""}${V.length ? `${sopra ? "cerca nei vicini" : "Zona allargata"}: ${V.map(({ x, d }) => `<a href="${esc(immUrl(x.n))}" target="_blank" rel="noopener">${esc(x.n)} <i>${num(d / 1000, 0)} km</i></a>`).join("")}` : "nessun paese vicino più economico in elenco"}</small>` : ""; })()}</span>
+      ${(() => { const V = dvVicini(o.c), sopra = dvSopra(o.c); return V.length || sopra ? `<small class="dvv">${sopra ? `<b>Di solito sopra budget:</b> ` : ""}${V.length ? `${sopra ? "cerca nei vicini" : "Zona allargata"}: ${V.map(({ x, d }) => `<a href="${esc(immUrl(x.n))}" target="_blank" rel="noopener">${esc(x.n)} <i>${num(d / 1000, 0)} km</i></a><button class="lbadd mini ${lbAll().some(l => l.com === x.n) ? "on" : ""}" data-lb="${esc(x.n)}|${esc(x.p)}">${lbAll().some(l => l.com === x.n) ? "✓" : "+"}</button>`).join("")}` : "nessun paese vicino più economico in elenco"}</small>` : ""; })()}</span>
       <em>${pct(o[f.uso], 1)}<button class="lbadd ${lbAll().some(x => x.com === o.c.n) ? "on" : ""}" data-lb="${esc(o.c.n)}|${esc(o.c.p)}">${lbAll().some(x => x.com === o.c.n) ? "✓ link" : "+ link"}</button></em></div>`).join("") || `<div class="empty"><b>Nessun comune</b><p>Togli un filtro o allarga il tempo di viaggio.</p></div>`}</div>
   ${rows.length > 80 ? `<p class="note">Mostro i primi 80 su ${rows.length}.</p>` : ""}
   <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (meno la trattativa, più costi d'acquisto e arredo), dopo spese e tasse da privata. B&amp;B: dati della località o, se non ci sono, della località turistica più vicina ridotti del 15%. Affitto normale solo dove i canoni del portale sono affidabili. Lago, sci, ospedali, università e aziende: distanza dai punti principali, indicativa.</p>`;
@@ -416,7 +416,7 @@ function dvImmHtml() {
       <select data-i="ordine">${[["prezzo", "Prima i più economici"], ["recenti", "Prima i più recenti"], ["rilevanza", "Ordine di Immobiliare"]].map(([v, t]) => `<option value="${v}" ${q.ordine === v ? "selected" : ""}>${t}</option>`).join("")}</select>
       <label class="tog"><input type="checkbox" data-i="aste" ${q.aste ? "checked" : ""}> Senza aste</label>
     </div>
-    <p class="note">Sotto ogni comune trovi la "zona allargata": i paesi entro 12 km dove con il tuo budget si trova davvero qualcosa, dal più economico. Su Immobiliare puoi anche allargare tu l'area con la matita in alto e copiare quel link. Tocca il nome di un comune: si apre Immobiliare con questi filtri. Lì scegli lo stato "buono / ristrutturato" se vuoi, poi copia il link della pagina e torna qui: con "+ link" lo metti nella cartella.</p></details>`;
+    <p class="note"><b>Più veloce:</b> "+ link" salva subito nella cartella la ricerca di quel comune con questi filtri, senza aprire Immobiliare. Apri il comune solo se vuoi guardare gli annunci o allargare l'area a mano. Sotto ogni comune trovi la "zona allargata": i paesi entro 12 km dove con il tuo budget si trova davvero qualcosa, dal più economico. Su Immobiliare puoi anche allargare tu l'area con la matita in alto e copiare quel link. Tocca il nome di un comune: si apre Immobiliare con questi filtri. Lì scegli lo stato "buono / ristrutturato" se vuoi, poi copia il link della pagina e torna qui: con "+ link" lo metti nella cartella.</p></details>`;
 }
 function dvBoxHtml() {
   const L = lbAll();
@@ -451,7 +451,8 @@ function afterDove() {
   $("#lbclear")?.addEventListener("click", () => { if (confirm("Svuotare la cartella dei link?")) { store.set("linkbox", []); render(true); } });
   $(".lbox")?.addEventListener("click", e => { const d = e.target.closest("[data-lbdel]"); if (!d) return; const L = lbAll(); L.splice(+d.dataset.lbdel, 1); store.set("linkbox", L); render(true); });
   document.querySelector(".dove")?.addEventListener("click", e => { const b = e.target.closest("[data-lb]"); if (!b) return; const [com, prov] = b.dataset.lb.split("|");
-    if (lbAll().some(x => x.com === com)) { if (confirm(`Togliere il link di ${com} dalla cartella?`)) { store.set("linkbox", lbAll().filter(x => x.com !== com)); render(true); } } else addFrom(com, prov); });
+    if (lbAll().some(x => x.com === com)) { if (confirm(`Togliere il link di ${com} dalla cartella?`)) { store.set("linkbox", lbAll().filter(x => x.com !== com)); render(true); } }
+    else { lbAdd(immUrl(com), com, prov); render(true); } });   // un tocco: salva direttamente la ricerca con i filtri, senza aprire Immobiliare
   const box = $("#dvf");
   box.addEventListener("click", e => { const u = e.target.closest("[data-uso]"), t = e.target.closest("[data-tag]");
     if (u) { f.uso = u.dataset.uso; save(); }
