@@ -67,8 +67,9 @@ function tMap(el, view) {
   if (!window.L) { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; return null; }
   const m = L.map(el, { zoomControl: false, scrollWheelZoom: false, preferCanvas: true });
   L.control.zoom({ position: "bottomright" }).addTo(m);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+  const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(m);
+  if (window.plLeaflet) plLeaflet(m, osm);
   if (view) m.setView(view[0], view[1]);
   maps.push(m); setTimeout(() => m.invalidateSize(), 60);
   return m;

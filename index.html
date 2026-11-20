@@ -144,7 +144,7 @@ select{width:100%;background:var(--panel);color:var(--tx);border:1px solid var(-
 .map{height:44vh;min-height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0a0a0a;position:relative;box-shadow:0 0 0 1px rgba(201,162,39,.12),0 0 24px rgba(201,162,39,.15)}
 .map.small{height:240px;min-height:0;border-radius:16px}
 .mapfb{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:20px}
-.leaflet-container{background:#f2efe9;font-family:var(--body)}
+.leaflet-container{background:#9bd77f;font-family:var(--body)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#1e1e1e;color:var(--tx);border:1px solid var(--line);box-shadow:0 0 18px rgba(201,162,39,.3)}
 .leaflet-popup-content{margin:10px 12px;font-size:13px}
 .leaflet-popup-content a.go{display:inline-block;margin-top:6px;font-weight:700;color:var(--cy2)}
@@ -314,7 +314,7 @@ input[type=search]{border-radius:999px;font-size:13px}
 .mmres button,.mmres span{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:var(--tx);padding:10px 12px;font-size:13px;cursor:pointer}
 .mmres button:hover{background:rgba(201,162,39,.1)}
 .mmwrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 0 1px rgba(201,162,39,.15),0 0 30px rgba(201,162,39,.18)}
-.mm3d{height:72vh;min-height:420px;background:#f4efe3}
+.mm3d{height:72vh;min-height:420px;background:#9bd77f}
 .mmload{height:100%;display:grid;place-items:center;align-content:center;gap:12px;color:var(--cy2);font-family:var(--display);font-style:italic;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .spin{width:44px;height:44px;border-radius:50%;border:3px solid rgba(242,207,91,.15);border-top-color:var(--cy2);animation:sp 0.9s linear infinite;box-shadow:0 0 18px rgba(201,162,39,.4)}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -400,7 +400,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
 .quick a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:10px;background:#131313;font-size:13px;font-weight:600}
 .quick svg{width:20px;height:20px;color:var(--cy2);flex:none}
-.itmap{position:relative;height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid #5a4818;background:#f4efe3;box-shadow:0 0 30px rgba(201,162,39,.12)}
+.itmap{position:relative;height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid #5a4818;background:#9bd77f;box-shadow:0 0 30px rgba(201,162,39,.12)}
 .maplibregl-popup-content{background:#1a1a1a;color:var(--tx);border:1px solid var(--cy);border-radius:12px;font-size:13px}
 .maplibregl-popup-tip{border-top-color:var(--cy)!important;border-bottom-color:var(--cy)!important}
 .maplibregl-popup-content a.go{display:inline-block;margin-top:5px;font-weight:700;color:var(--cy2)}
@@ -575,8 +575,9 @@ function drawMap(el, points, opts = {}) {
   if (!window.L) { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; return; }
   const m = L.map(el, { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
   L.control.zoom({ position: "bottomright" }).addTo(m);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+  const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(m);
+  if (window.plLeaflet) plLeaflet(m, osm);
   const b = [];
   for (const p of points) {
     if (p.lat == null || p.lng == null) continue;

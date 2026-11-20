@@ -30,6 +30,50 @@ function mmLoad() {
   })));
 }
 
+
+/* ---------- stile "Plastico" (mini città): erba, asfalto, tetti colorati ---------- */
+const PL = { grass: "#9bd77f", res: "#b4e39c", ind: "#c9ced6", wood: "#3e9c45", park: "#5cbf5a", water: "#3fb4f0", road: "#8a909b", roadCase: "#5d636e", major: "#5f6672", majorCase: "#3f444d",
+  roofs: ["#ff8a80", "#82b1ff", "#ffd54f", "#b39ddb", "#80cbc4", "#ffab91"], lab: "#ffffff", halo: "#3a3f48" };
+const plRoof = () => ["match", ["%", ["round", ["*", ["coalesce", ["get", "render_height"], 9], 7.3]], 6], 0, PL.roofs[0], 1, PL.roofs[1], 2, PL.roofs[2], 3, PL.roofs[3], 4, PL.roofs[4], PL.roofs[5]];
+function plBase(S, opts = {}) {
+  const L = [
+    { id: "bg", type: "background", paint: { "background-color": PL.grass } },
+    { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": ["match", ["get", "class"], ["residential", "suburb", "neighbourhood"], PL.res, ["commercial", "retail", "industrial", "railway"], PL.ind, ["school", "university", "college", "hospital"], "#f3e6a8", ["cemetery"], "#7cc46a", PL.res], "fill-opacity": 0.9 } },
+    { id: "landcover", type: "fill", source: S, "source-layer": "landcover", paint: { "fill-color": ["match", ["get", "class"], ["wood", "forest"], PL.wood, ["farmland"], "#c8e68c", ["sand"], "#f4dd8f", ["ice", "rock"], "#eef2f5", "#7fcf6b"], "fill-opacity": 0.9 } },
+    { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": PL.park, "fill-outline-color": "#3e9c45" } },
+    { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": PL.water } },
+    { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": PL.water, "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.8, 16, 5] } },
+    { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#6d5a4a", "line-width": 1.6, "line-dasharray": [2, 1.5] } },
+    { id: "road-minor-case", type: "line", source: S, "source-layer": "transportation", minzoom: 13, filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street"], true, false],
+      paint: { "line-color": PL.roadCase, "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.4, 16, 6, 18, 14] } },
+    { id: "road-minor", type: "line", source: S, "source-layer": "transportation", minzoom: 12, filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street", "path"], true, false],
+      paint: { "line-color": ["match", ["get", "class"], "path", "#e9d9a8", PL.road], "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.6, 16, 4, 18, 11] } },
+    { id: "road-major-case", type: "line", source: S, "source-layer": "transportation", filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
+      paint: { "line-color": PL.majorCase, "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.8, 14, 5.5, 18, 18] } },
+    { id: "road-major", type: "line", source: S, "source-layer": "transportation", filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
+      paint: { "line-color": PL.major, "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.5, 14, 4, 18, 14] } },
+    { id: "road-dash", type: "line", source: S, "source-layer": "transportation", minzoom: 13, filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
+      paint: { "line-color": "#ffffff", "line-width": ["interpolate", ["linear"], ["zoom"], 13, 0.6, 18, 1.6], "line-dasharray": [4, 4] } },
+  ];
+  if (opts.flat) L.push(
+    { id: "bld-flat", type: "fill", source: S, "source-layer": "building", minzoom: 13, paint: { "fill-color": plRoof(), "fill-outline-color": "#6d6259" } },
+    { id: "bnd", type: "line", source: S, "source-layer": "boundary", filter: ["<=", ["get", "admin_level"], 6], paint: { "line-color": "#ffffff", "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.8, 10, 1.8], "line-dasharray": [2, 1.5], "line-opacity": 0.8 } },
+    { id: "place", type: "symbol", source: S, "source-layer": "place", filter: ["match", ["get", "class"], ["city", "town", "village"], true, false],
+      layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["match", ["get", "class"], "city", 13, "town", 11.5, 10.5] },
+      paint: { "text-color": PL.lab, "text-halo-color": PL.halo, "text-halo-width": 1.8 } });
+  return L;
+}
+/* mappe 2D (Leaflet): sfondo Plastico vettoriale sopra la mappa OpenStreetMap di riserva */
+const PL_PLUGIN = "https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js";
+function plLeaflet(m, osm) {
+  mmLoad().then(() => new Promise((res, rej) => { if (L.maplibreGL) return res(); const e = document.createElement("script"); e.src = PL_PLUGIN; e.onload = res; e.onerror = rej; document.head.appendChild(e); }))
+    .then(() => { if (!m._container || !document.body.contains(m._container)) return;
+      L.maplibreGL({ style: { version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf", sources: { omt: { type: "vector", url: "https://tiles.openfreemap.org/planet" } }, layers: plBase("omt", { flat: true }) },
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · OpenFreeMap' }).addTo(m);
+      setTimeout(() => osm && m.removeLayer(osm), 1500); })
+    .catch(() => {});
+}
+
 /* ---------- geometria ---------- */
 function mmInRing(pt, ring) { let c = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const [xi, yi] = ring[i], [xj, yj] = ring[j]; if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi) + xi) c = !c; } return c; }
 function mmInGeom(pt, g) {
@@ -78,25 +122,7 @@ function mmStile() {
     version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
     sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
     layers: [
-      { id: "bg", type: "background", paint: { "background-color": "#f4efe3" } },
-      { id: "landuse", type: "fill", source: S, "source-layer": "landuse", paint: { "fill-color": ["match", ["get", "class"], ["residential", "suburb", "neighbourhood"], "#f1e8d8", ["commercial", "retail"], "#f6e0d2", ["industrial", "railway"], "#e9e3ee", ["school", "university", "college", "hospital"], "#f7e6c4", ["cemetery"], "#d6e8c6", ["stadium", "pitch", "playground"], "#c9ebb0", "#efe7d6"], "fill-opacity": 0.9 } },
-      { id: "landcover", type: "fill", source: S, "source-layer": "landcover", paint: { "fill-color": ["match", ["get", "class"], ["wood", "forest"], "#a8d98a", ["farmland"], "#e8efc4", ["grass", "meadow", "park"], "#c8e8a8", ["sand"], "#f6e7b8", "#d5ecb8"], "fill-opacity": 0.85 } },
-      { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": "#b7e29a", "fill-opacity": 0.95, "fill-outline-color": "#93c977" } },
-      { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": "#8fd3f5" } },
-      { id: "waterway", type: "line", source: S, "source-layer": "waterway", paint: { "line-color": "#79c6ee", "line-width": ["interpolate", ["linear"], ["zoom"], 10, 1, 16, 4] } },
-      { id: "rail", type: "line", source: S, "source-layer": "transportation", filter: ["==", ["get", "class"], "rail"], paint: { "line-color": "#a99f92", "line-width": 1.4, "line-dasharray": [3, 2] } },
-      { id: "road-minor-case", type: "line", source: S, "source-layer": "transportation", minzoom: 13,
-        filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street"], true, false],
-        paint: { "line-color": "#ddd3c3", "line-width": ["interpolate", ["linear"], ["zoom"], 13, 1.2, 16, 5, 18, 12] } },
-      { id: "road-minor", type: "line", source: S, "source-layer": "transportation", minzoom: 12,
-        filter: ["match", ["get", "class"], ["minor", "service", "tertiary", "street", "path"], true, false],
-        paint: { "line-color": ["match", ["get", "class"], "path", "#e8dcc6", "#ffffff"], "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 16, 3.5, 18, 10] } },
-      { id: "road-major-case", type: "line", source: S, "source-layer": "transportation",
-        filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
-        paint: { "line-color": "#e2a63b", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 1.2, 14, 4.5, 18, 16] } },
-      { id: "road-major", type: "line", source: S, "source-layer": "transportation",
-        filter: ["match", ["get", "class"], ["motorway", "trunk", "primary", "secondary"], true, false],
-        paint: { "line-color": ["match", ["get", "class"], ["motorway", "trunk"], "#ffc768", "#ffe08a"], "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.8, 14, 3, 18, 12] } },
+      ...plBase(S),
     ],
   };
 }
@@ -150,17 +176,17 @@ async function mmInit(el) {
     map.addSource("hintlab", { type: "geojson", data: hintLab });
     map.addSource("celllab", { type: "geojson", data: cellLab });
     map.addLayer({ id: "hint-fill", type: "fill", source: "hint", filter: ["!=", ["get", "v"], null], paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 9, 0.4, 14, 0.16] } }, "road-minor-case");
-    map.addLayer({ id: "hint-line", type: "line", source: "hint", paint: { "line-color": "#6b5f50", "line-opacity": 0.55, "line-width": 1.2, "line-dasharray": [3, 2] } });
-    map.addLayer({ id: "cell-fill", type: "fill", source: "cells", paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.45, 14, 0.2, 16, 0.08] } }, "road-minor-case");
-    map.addLayer({ id: "cell-line", type: "line", source: "cells", paint: { "line-color": "#ffffff", "line-opacity": 0.8, "line-width": 1 } });
+    map.addLayer({ id: "hint-line", type: "line", source: "hint", paint: { "line-color": "#ffffff", "line-opacity": 0.85, "line-width": 1.4, "line-dasharray": [3, 2] } });
+    map.addLayer({ id: "cell-fill", type: "fill", source: "cells", paint: { "fill-color": mmColorExpr(MM.metric), "fill-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0.5, 14, 0.22, 16, 0.06] } }, "road-minor-case");
+    map.addLayer({ id: "cell-line", type: "line", source: "cells", paint: { "line-color": "#ffffff", "line-opacity": 0.9, "line-width": 1.2 } });
     // palazzi in 3D
     map.addLayer({ id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 13,
-      paint: { "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], 10], 0, "#f7dcc0", 15, "#f2cba3", 30, "#e8b48a", 60, "#d9a07c", 100, "#b9c8e2", 150, "#8fb0dd"],
+      paint: { "fill-extrusion-color": plRoof(),
         "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 13, 0, 14.5, ["coalesce", ["get", "render_height"], 10]],
         "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.95, "fill-extrusion-vertical-gradient": true } });
     map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
-    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#ff3d7f", "fill-extrusion-height": ["+", ["coalesce", ["get", "h"], 12], 1.5], "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } });
-    map.addLayer({ id: "sel-pin", type: "circle", source: "sel", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": 7, "circle-color": "#ff3d7f", "circle-stroke-color": "#ffffff", "circle-stroke-width": 2 } });
+    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#ff6b00", "fill-extrusion-height": ["+", ["coalesce", ["get", "h"], 12], 1.5], "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } });
+    map.addLayer({ id: "sel-pin", type: "circle", source: "sel", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": 7, "circle-color": "#ff6b00", "circle-stroke-color": "#ffffff", "circle-stroke-width": 2 } });
     // metro
     const M = TERR.milano, metroL = [], metroS = [];
     for (const [ln, arr] of Object.entries(M.metro)) {
@@ -171,7 +197,7 @@ async function mmInit(el) {
     }
     map.addSource("metro", { type: "geojson", data: { type: "FeatureCollection", features: metroL.map(l => ({ type: "Feature", properties: { col: M.metro_col[l.ln] }, geometry: { type: "LineString", coordinates: l.c } })) } });
     map.addSource("metros", { type: "geojson", data: { type: "FeatureCollection", features: metroS } });
-    try { map.setLight({ anchor: "viewport", color: "#fff6e0", intensity: 0.32, position: [1.4, 200, 35] }); } catch (e) {}
+    try { map.setLight({ anchor: "viewport", color: "#ffffff", intensity: 0.45, position: [1.5, 210, 40] }); } catch (e) {}
     map.addLayer({ id: "metro-glow", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 7, "line-opacity": 0.25, "line-blur": 4 } });
     map.addLayer({ id: "metro", type: "line", source: "metro", paint: { "line-color": ["get", "col"], "line-width": 2.4 } });
     map.addLayer({ id: "metros", type: "circle", source: "metros", minzoom: 11.5, paint: { "circle-radius": 3.5, "circle-color": "#ffffff", "circle-stroke-color": ["get", "col"], "circle-stroke-width": 2 } });
@@ -181,9 +207,9 @@ async function mmInit(el) {
     // etichette: vie, civici, microzone, comuni
     map.addLayer({ id: "street-lab", type: "symbol", source: "omt", "source-layer": "transportation_name", minzoom: 14,
       layout: { "symbol-placement": "line", "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 14, 10, 18, 14], "text-max-angle": 30 },
-      paint: { "text-color": "#5a4e40", "text-halo-color": "#ffffff", "text-halo-width": 1.8 } });
+      paint: { "text-color": "#ffffff", "text-halo-color": "#3a3f48", "text-halo-width": 1.8 } });
     map.addLayer({ id: "housenum", type: "symbol", source: "omt", "source-layer": "housenumber", minzoom: 17,
-      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#8a5a2b", "text-halo-color": "#ffffff", "text-halo-width": 1.6 } });
+      layout: { "text-field": ["get", "housenumber"], "text-font": ["Noto Sans Regular"], "text-size": 11 }, paint: { "text-color": "#3a3f48", "text-halo-color": "#ffffff", "text-halo-width": 1.6 } });
     mmRelabel();
     map.addLayer({ id: "hint-lab", type: "symbol", source: "hintlab", minzoom: 9.5,
       layout: { "text-field": ["concat", ["get", "n"], ["case", ["!=", ["get", "v"], null], ["concat", "\n", ["to-string", ["get", "v"]], " €"], ""]], "text-font": ["Noto Sans Regular"], "text-size": 11 },
@@ -543,7 +569,7 @@ function mmAnnFC() {
 function mmAnnLayer(map) {
   map.addSource("ann", { type: "geojson", data: mmAnnFC() });
   map.addLayer({ id: "ann", type: "circle", source: "ann", layout: { visibility: MM.lay.ann ? "visible" : "none" },
-    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#e0218a", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.6, "circle-opacity": 0.95 } });
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#ff2d55", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.8, "circle-opacity": 0.95 } });
   map.on("click", "ann", e => { const f = e.features[0]; if (!f) return; const a = mmAnnunci().find(x => x.id === f.properties.id); if (!a) return;
     e.originalEvent.__ann = true;
     const box = $("#mmsheet"); box.innerHTML = `<button class="mmx" data-close aria-label="Chiudi">✕</button><div class="loc">Annuncio in vendita · ${a.fonte}</div>

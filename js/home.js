@@ -35,7 +35,7 @@ function vHomeK() {
     .map(([h, i, t]) => `<a href="${h}">${ico(i)}<span>${t}</span></a>`).join("")}</div>
   <h2>Osservatorio <small><a href="#seguiti">${seg.length ? "Tutti i seguiti" : "Come funziona"}</a></small></h2>
   <div class="itmap" id="itmap"><div class="mmload"><div class="spin"></div>Carico la mappa</div></div>
-  <p class="note">${seg.length ? "I puntini fucsia sono gli immobili e gli annunci che segui. Tocca un puntino per aprirlo." : "Non segui ancora niente: tocca ☆ Segui nella scheda di un immobile o sotto un annuncio di Milano. Intanto vedi i 12 migliori della classifica."}</p>
+  <p class="note">${seg.length ? "I puntini rossi sono gli immobili e gli annunci che segui. Tocca un puntino per aprirlo." : "Non segui ancora niente: tocca ☆ Segui nella scheda di un immobile o sotto un annuncio di Milano. Intanto vedi i 12 migliori della classifica."}</p>
   <h2>Podio <small><a href="#inv/classifica">Classifica completa</a></small></h2>
   ${ok.length ? `<div class="list">${ok.slice(0, 3).map((x, i) => cardIm(x.A, x.src, i + 1)).join("")}</div>` : `<p class="sub">Nessun immobile analizzato.</p>`}
   ${NOTIZIE.length ? `<h2>Ultime notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}
@@ -53,17 +53,7 @@ function itStile() {
   const S = "ofm";
   return { version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
     sources: { [S]: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
-    layers: [
-      { id: "bg", type: "background", paint: { "background-color": "#f4efe3" } },
-      { id: "lc", type: "fill", source: S, "source-layer": "landcover", paint: { "fill-color": ["match", ["get", "class"], ["wood", "forest"], "#a8d98a", ["ice", "rock"], "#eef1f4", "#d5ecb8"], "fill-opacity": 0.8 } },
-      { id: "water", type: "fill", source: S, "source-layer": "water", paint: { "fill-color": "#8fd3f5" } },
-      { id: "park", type: "fill", source: S, "source-layer": "park", paint: { "fill-color": "#b7e29a", "fill-opacity": 0.8 } },
-      { id: "bnd", type: "line", source: S, "source-layer": "boundary", filter: ["<=", ["get", "admin_level"], 4], paint: { "line-color": "#9b8f7d", "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.8, 9, 1.6], "line-dasharray": [2, 1.5] } },
-      { id: "roads", type: "line", source: S, "source-layer": "transportation", filter: ["match", ["get", "class"], ["motorway", "trunk"], true, false], paint: { "line-color": "#ffb84d", "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.6, 10, 2] } },
-      { id: "city", type: "symbol", source: S, "source-layer": "place", filter: ["match", ["get", "class"], ["city"], true, false],
-        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-transform": "uppercase", "text-letter-spacing": 0.12 },
-        paint: { "text-color": "#3a3128", "text-halo-color": "#ffffff", "text-halo-width": 1.8 } },
-    ] };
+    layers: plBase(S, { flat: true }) };
 }
 let HOME_MAP = null;
 function afterHomeK() {
@@ -77,8 +67,8 @@ function afterHomeK() {
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
     map.on("load", () => {
       map.addSource("p", { type: "geojson", data: { type: "FeatureCollection", features: P.map((p, i) => ({ type: "Feature", properties: { i }, geometry: { type: "Point", coordinates: [p.lon, p.lat] } })) } });
-      map.addLayer({ id: "glow", type: "circle", source: "p", paint: { "circle-radius": 16, "circle-color": "#e0218a", "circle-opacity": 0.22, "circle-blur": 0.8 } });
-      map.addLayer({ id: "dot", type: "circle", source: "p", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 5, 5, 12, 9], "circle-color": "#e0218a", "circle-stroke-color": "#ffffff", "circle-stroke-width": 2.5 } });
+      map.addLayer({ id: "glow", type: "circle", source: "p", paint: { "circle-radius": 16, "circle-color": "#ff2d55", "circle-opacity": 0.25, "circle-blur": 0.8 } });
+      map.addLayer({ id: "dot", type: "circle", source: "p", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 5, 5, 12, 9], "circle-color": "#ff2d55", "circle-stroke-color": "#ffffff", "circle-stroke-width": 2.5 } });
       if (P.length) { const b = new maplibregl.LngLatBounds(); P.forEach(p => b.extend([p.lon, p.lat])); map.fitBounds(b, { padding: 60, maxZoom: 11, pitch: 48, bearing: -12, duration: 1800 }); }
       map.on("click", "dot", e => { const p = P[e.features[0].properties.i];
         new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(e.lngLat).setHTML(`<b>${esc(p.t)}</b><br>${esc(p.s || "")}<br><a class="go" href="${esc(p.h)}" ${p.ext ? 'target="_blank" rel="noopener"' : ""}>Apri →</a>`).addTo(map); });
