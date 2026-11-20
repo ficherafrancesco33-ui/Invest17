@@ -12309,5 +12309,1559 @@ const MIEI = [
    ],
    "note": "Comparabili: annunci in vendita a Somma Lombardo con metratura vicina (raccolti il 20/11/2026)."
   }
+ },
+ {
+  "id": "alessandria-l",
+  "titolo": "Bilocale arredato al piano terra, pronto all'uso",
+  "url": "https://www.immobiliare.it/annunci/134731673/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Borgo Rovereto",
+  "lat": 44.9068,
+  "lng": 8.607,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/66412e8e/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredato e pronto da affittare",
+    "Borgo Rovereto, la zona più richiesta in affitto"
+   ],
+   "contro": [
+    "Piano terra"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-m",
+  "titolo": "Bilocale ristrutturato e arredato con ascensore",
+  "url": "https://www.immobiliare.it/annunci/134676607/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Via dei Guasco",
+  "lat": 44.9173,
+  "lng": 8.617,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 54,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/66418238/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 380,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ristrutturato, arredato, balcone e cantina",
+    "Ascensore"
+   ],
+   "contro": [
+    "Classe energetica E"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-n",
+  "titolo": "Bivano al piano terra con cortile privato",
+  "url": "https://www.idealista.it/immobile/37497913/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Borgo Rovereto",
+  "lat": 44.9143,
+  "lng": 8.609,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 45,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/6642ec9e/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 320,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Cortile privato, riscaldamento autonomo"
+   ],
+   "contro": [
+    "Stato non descritto"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-o",
+  "titolo": "Bilocale al 5° piano con giardino condominiale",
+  "url": "https://www.immobiliare.it/annunci/134460669/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Piazza Matteotti",
+  "lat": 44.9113,
+  "lng": 8.619,
+  "pos_indicativa": true,
+  "prezzo": 42000,
+  "mq": 57,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/663dc938/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 400,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Camera separata, ascensore"
+   ],
+   "contro": [
+    "Condominio anni '60: ho previsto 2.000 € di ritocchi"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-q",
+  "titolo": "Bilocale libero con tre balconi e ascensore",
+  "url": "https://www.immobiliare.it/annunci/133410882/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Corso Crimea",
+  "lat": 44.9188,
+  "lng": 8.621,
+  "pos_indicativa": true,
+  "prezzo": 48000,
+  "mq": 65,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/6636df10/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Tre balconi, cantina, ascensore",
+    "Libero subito"
+   ],
+   "contro": [
+    "Riscaldamento centralizzato: chiedere le spese"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 66 m²",
+     "prezzo": 52000,
+     "mq": 66
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 70 m²",
+     "prezzo": 37000,
+     "mq": 70
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-r",
+  "titolo": "Bilocale ristrutturato vicino al centro",
+  "url": "https://www.immobiliare.it/annunci/129244486/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Borgo Rovereto - Piscina",
+  "lat": 44.9158,
+  "lng": 8.613,
+  "pos_indicativa": true,
+  "prezzo": 45000,
+  "mq": 40,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/65c20402/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 300,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Centro a piedi in 10 minuti",
+    "Balcone e cantina"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore, classe F"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-s",
+  "titolo": "Bilocale all'ottavo piano vicino al centro",
+  "url": "https://www.immobiliare.it/annunci/134048815/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Corso Virginia Marini",
+  "lat": 44.9128,
+  "lng": 8.623,
+  "pos_indicativa": true,
+  "prezzo": 40000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 2000,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/6636d535/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 420,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "60 m² a 667 €/m²",
+    "Ascensore, balcone e cantina"
+   ],
+   "contro": [
+    "Stato non descritto: ho previsto 2.000 €"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 65 m²",
+     "prezzo": 35000,
+     "mq": 65
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-t",
+  "titolo": "Bilocale completamente ristrutturato in centro",
+  "url": "https://www.immobiliare.it/annunci/134505959/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Centro",
+  "lat": 44.9098,
+  "lng": 8.615,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 36,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/663ce706/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 300,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Completamente ristrutturato, riscaldamento autonomo"
+   ],
+   "contro": [
+    "Piccolo per il prezzo"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 40 m²",
+     "prezzo": 48000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-u",
+  "titolo": "Bilocale affittato fino a dicembre 2027",
+  "url": "https://www.immobiliare.it/annunci/129515688/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Spalto Marengo",
+  "lat": 44.9068,
+  "lng": 8.607,
+  "pos_indicativa": true,
+  "prezzo": 59000,
+  "mq": 53,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/663d1769/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 370,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Già affittato fino al 2027",
+    "Ottavo piano con ascensore"
+   ],
+   "contro": [
+    "Canone non indicato: l'ho stimato"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 58 m²",
+     "prezzo": 37000,
+     "mq": 58
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 60 m²",
+     "prezzo": 55000,
+     "mq": 60
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1144,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "alessandria-v",
+  "titolo": "Bivano ristrutturato in stabile riqualificato",
+  "url": "https://www.idealista.it/immobile/37322180/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "AL",
+  "comune": "Alessandria",
+  "zona": "Orti",
+  "lat": 44.9173,
+  "lng": 8.617,
+  "pos_indicativa": true,
+  "prezzo": 50000,
+  "mq": 50,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "ottimo",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/1773/663b8c8d/0-2.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 350,
+    "stima": true,
+    "fonte": "OMI Alessandria: 2,1-7,3 €/m² al mese; richieste per zona 7,2-7,9 €/m² (mercato-immobiliare.info). Usato 7 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Stabile appena riqualificato",
+    "Ascensore"
+   ],
+   "contro": [
+    "Zona Orti, un po' più periferica"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: affitti richiesti da studenti e lavoratori",
+   "Molti bilocali venduti già affittati, con rendimento lordo dichiarato intorno al 10%",
+   "Prezzi tra i più bassi della zona: circa 880-950 €/m²",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Prezzi e affitti ad Alessandria (OMI, mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/alessandria/alessandria.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Alessandria",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/comune-alessandria-it"
+   },
+   {
+    "titolo": "Bilocali in vendita ad Alessandria (Caasa, zona Borgo Rovereto)",
+    "url": "https://www.caasa.it/alessandria/alessandria-zona-bg-rovereto/bivano/in-vendita.html"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Alessandria, 50 m²",
+     "prezzo": 60000,
+     "mq": 50
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 45000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 45 m²",
+     "prezzo": 49000,
+     "mq": 45
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 33000,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 55 m²",
+     "prezzo": 28500,
+     "mq": 55
+    },
+    {
+     "titolo": "Annuncio simile a Alessandria, 56 m²",
+     "prezzo": 69000,
+     "mq": 56
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Alessandria con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1040,
+    "fonte": "zona OMI di Alessandria (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-h",
+  "titolo": "Bilocale con cucina abitabile e box in corte",
+  "url": "https://www.portaleagenzieimmobiliari.it/32186871-vendita-vercelli-appartamento-bilocale-60000-euro-65-mq-cucina-abitabile-box",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Corso Italia",
+  "lat": 45.3301,
+  "lng": 8.4251,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 65,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/663e3e5b/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 480,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Box compreso, cucina abitabile"
+   ],
+   "contro": [
+    "Al limite del budget"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 80 m²",
+     "prezzo": 59900,
+     "mq": 80
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1074,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-i",
+  "titolo": "Bilocale di 71 m² con balcone e cantina",
+  "url": "https://www.immobiliare.it/annunci/130992298/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Vicolo Cervetto",
+  "lat": 45.3271,
+  "lng": 8.4171,
+  "pos_indicativa": true,
+  "prezzo": 60000,
+  "mq": 71,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/65ed59e3/0-2.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 480,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Ampio, cucina abitabile"
+   ],
+   "contro": [
+    "Classe energetica E"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 80 m²",
+     "prezzo": 59900,
+     "mq": 80
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1074,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-j",
+  "titolo": "Bilocale arredato per investimento",
+  "url": "http://www.pcase.it/immobili/bilocale-vendita-corso-liberta-281-vercelli-sc9064802/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Corso Libertà",
+  "lat": 45.3241,
+  "lng": 8.4271,
+  "pos_indicativa": true,
+  "prezzo": 39000,
+  "mq": 38,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": true,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/65dd480b/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 330,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Arredato, riscaldamento autonomo",
+    "Centro città"
+   ],
+   "contro": [
+    "Terzo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 40 m²",
+     "prezzo": 28000,
+     "mq": 40
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 47 m²",
+     "prezzo": 42000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1089,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-m",
+  "titolo": "Bilocale all'ultimo piano vicino all'ospedale",
+  "url": "https://www.clickcase.it/bilocale-in-vercelli-vercelli-292893.html",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Zona Ospedale",
+  "lat": 45.3286,
+  "lng": 8.4211,
+  "pos_indicativa": true,
+  "prezzo": 50000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/663980f0/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Vicino all'ospedale: domanda di affitto costante",
+    "Ascensore e due balconi"
+   ],
+   "contro": [
+    "Cucinino piccolo"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 47 m²",
+     "prezzo": 42000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 1074,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
+ },
+ {
+  "id": "vercelli-o",
+  "titolo": "Bilocale in palazzina di quattro unità",
+  "url": "https://www.immobiliare.it/annunci/132180416/",
+  "fonte": "Immobiliare.it / Idealista / agenzie (via Caasa, Nestoria, Trovit, Mitula, Wikicasa)",
+  "aggiunto": "2026-11-20",
+  "regione": "Piemonte",
+  "provincia": "VC",
+  "comune": "Vercelli",
+  "zona": "Via Monviso",
+  "lat": 45.3226,
+  "lng": 8.4231,
+  "pos_indicativa": true,
+  "prezzo": 58000,
+  "mq": 60,
+  "locali": 2,
+  "bagni": 1,
+  "piano": null,
+  "arredato": false,
+  "stato": "buono",
+  "lavori": 0,
+  "classe_energetica": null,
+  "foto": "https://cdn.caasa.it/s3/s/86e/6615d68e/0-1.jpg",
+  "spese": {
+   "condominio_mese": 60,
+   "imu_anno": 400,
+   "stima": true
+  },
+  "affitti": {
+   "lungo": {
+    "canone": 450,
+    "stima": true,
+    "fonte": "Circa 7,4-8,2 €/m² al mese a Vercelli (immobiliare.it, mercato-immobiliare.info); bilocali tra 393 e 590 € (RealAdvisor). Usato 7,5 €/m²"
+   }
+  },
+  "giudizio": {
+   "pro": [
+    "Palazzina piccola, balcone"
+   ],
+   "contro": [
+    "Classe F, primo piano senza ascensore"
+   ]
+  },
+  "eventi": [
+   "Capoluogo con università e ospedale: domanda costante di affitti da studenti e lavoratori",
+   "Treno diretto per Milano in circa un'ora",
+   "Prezzi di vendita tra i più bassi delle città vicine a Milano (circa 1.000 €/m²)",
+   "Nei capoluoghi si può usare il canone concordato con cedolare al 10%: da verificare con il commercialista"
+  ],
+  "fonti": [
+   {
+    "titolo": "Annunci di Vercelli su Caasa (con zone OMI)",
+    "url": "https://www.caasa.it/vercelli/vercelli/appartamento/in-vendita.html"
+   },
+   {
+    "titolo": "Prezzi e affitti a Vercelli (mercato-immobiliare.info)",
+    "url": "https://www.mercato-immobiliare.info/piemonte/vercelli/collobiano.html"
+   },
+   {
+    "titolo": "RealAdvisor: mercato di Vercelli",
+    "url": "https://realadvisor.it/it/mercato-immobiliare/13100-vercelli"
+   }
+  ],
+  "valutazione": {
+   "comparabili": [
+    {
+     "titolo": "Annuncio simile a Vercelli, 60 m²",
+     "prezzo": 63000,
+     "mq": 60
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 54 m²",
+     "prezzo": 54900,
+     "mq": 54
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 73 m²",
+     "prezzo": 64000,
+     "mq": 73
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 47 m²",
+     "prezzo": 42000,
+     "mq": 47
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 75 m²",
+     "prezzo": 60000,
+     "mq": 75
+    },
+    {
+     "titolo": "Annuncio simile a Vercelli, 77 m²",
+     "prezzo": 59900,
+     "mq": 77
+    }
+   ],
+   "note": "Comparabili: annunci in vendita a Vercelli con metratura vicina (raccolti il 20/11/2026).",
+   "omi": {
+    "medio": 825,
+    "fonte": "zona OMI di Vercelli (valore medio riportato da Caasa / mercato-immobiliare.info)"
+   }
+  }
  }
 ];

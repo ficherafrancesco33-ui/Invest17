@@ -109,3 +109,7 @@ Prima di lavorare leggere questo file; alla fine di ogni sessione aggiungere cos
 - Vigevano (7, ospedale, 25 min da Badile), Novara (4, ospedale + università), Voghera (19, ospedale + stazione): affitto lungo + scenario MEDIO TERMINE (`medio_k`: canone arredato transitorio +25-30%, 10 mesi).
 - Castione +3. Escluse: Pavia (San Matteo) e Rozzano (Humanitas): quasi nulla sotto 60.000 €; Oggebbio/Ghiffa: niente sotto 65.000 €.
 - In `zone.py`: campi `medio_k`, `cond` (condominio reale), `comune` per immobile.
+
+## 7. Carico affitto lungo (20/11/2026)
+- Aggiunti 15 bilocali ≤60k ad Alessandria (università UPO, ospedale) e Vercelli (UPO, ospedale), fonte caasa.it.
+- Scartati quelli sopra 60k. Cremona, Piacenza, Lodi: nessun annuncio ≤60k con dati completi leggibile; da rifare con link filtrati dell'utente.
