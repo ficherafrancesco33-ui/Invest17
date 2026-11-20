@@ -15,7 +15,11 @@
   "Delebio|SO": 1,
   "Omegna|VB": 0,
   "Colico|LC": 0,
-  "Talamona|SO": 0
+  "Talamona|SO": 0,
+  "Verbania|VB": 0,
+  "Pisogne|BS": 0,
+  "Vercelli|VC": 1,
+  "Chiavenna|SO": 0
  },
  "coord": {
   "Edolo": [
@@ -121,6 +125,40 @@
     "Su più livelli",
     "Interni non fotografati nell'annuncio: chiedere foto o visita"
    ]
+  },
+  {
+   "id": "133508604",
+   "comune": "Vercelli",
+   "p": "VC",
+   "prezzo": 54780,
+   "mq": 48,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Viale Torricelli 11, Vercelli",
+   "titolo": "Bilocale ristrutturato, già affittato",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2028077196/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2028077202/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2028077218/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2028077204/m-c.jpg"
+   ],
+   "aggiornato": "15/11/2026",
+   "agenzia": "Cinelli RE",
+   "spese_mese": 100,
+   "canone": 320,
+   "canone_fonte": "Già affittato: l'annuncio dichiara un rendimento lordo di circa il 7% (circa 320 € al mese)",
+   "pro": [
+    "Già affittato: rende da subito, circa 7% lordo",
+    "Ristrutturato, arredato, con ascensore, due balconi e cantina"
+   ],
+   "contro": [
+    "Inquilino dentro: verificare contratto e scadenza",
+    "Spese condominiali 100 € al mese, classe energetica G"
+   ]
   }
  ],
  "scartati": [
@@ -143,6 +181,16 @@
    "id": "125489557",
    "comune": "Delebio",
    "motivo": "foto: stabile datato, nessuna foto degli interni"
+  },
+  {
+   "id": "134267849",
+   "comune": "Vercelli",
+   "motivo": "da ristrutturare"
+  },
+  {
+   "id": "125174323",
+   "comune": "Chiavenna",
+   "motivo": "da ristrutturare completamente"
   }
  ]
 }

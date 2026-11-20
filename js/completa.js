@@ -8,7 +8,7 @@
      giallo = ricerca nella cartella dei link, grigio = da fare.
    Si aggiorna da solo quando carico nuovi annunci (anche quelli letti con Chrome).
    ========================================================================== */
-const CM_COL = { ok: "#22c55e", parz: "#f2b84b", da: "#6b7a93", fatto: "#3b82f6" };
+const CM_COL = { ok: "#22c55e", parz: "#f2b84b", da: "#6b7a93", fatto: "#3b82f6", sopra: "#3a4458" };
 function cmUrl(n) { return `https://www.immobiliare.it/vendita-case/milano/${immSlug(n)}/?noAste=1&criterio=data&ordine=desc`; }
 let CM_N = null;
 function cmConta() {
@@ -32,8 +32,8 @@ function ciInv() {
   const caricati = {}; [...MIEI, ...(typeof AUTO !== "undefined" ? AUTO : [])].forEach(m => { caricati[tnorm(m.comune)] = (caricati[tnorm(m.comune)] || 0) + 1; });
   const link = new Set(lbAll().map(x => tnorm(x.com))), C = ciCtrl();
   const st = [...seen.values()].map(o => { const k = o.c.n + "|" + o.c.p, n = caricati[tnorm(o.c.n)] || 0, ctrl = k in C;
-    return { o, n, ctrl, s: n ? "ok" : ctrl ? "fatto" : link.has(tnorm(o.c.n)) ? "parz" : "da" }; });
-  const ord = { da: 0, parz: 1, ok: 2, fatto: 3 }; st.sort((a, b) => ord[a.s] - ord[b.s]);
+    return { o, n, ctrl, s: n ? "ok" : ctrl ? "fatto" : o.c.v > 3000 ? "sopra" : link.has(tnorm(o.c.n)) ? "parz" : "da" }; });
+  const ord = { da: 0, parz: 1, ok: 2, fatto: 3, sopra: 4 }; st.sort((a, b) => ord[a.s] - ord[b.s]);
   return { st, f, ok: st.filter(x => x.s === "ok" || x.s === "fatto").length, parz: st.filter(x => x.s === "parz").length, tot: st.length };
 }
 function ciPrompt(tab) {
@@ -52,7 +52,7 @@ function vCompleta(tab) {
   <nav class="bread nob" style="margin-top:16px;margin-bottom:16px"><a href="#completa/milano" class="${tab === "milano" ? "on" : ""}">${ico("mappa")}<span>Milano</span></a><a href="#completa/inv" class="${tab === "inv" ? "on" : ""}">${ico("comuni")}<span>Investimenti</span></a></nav>
   <div class="cmprog"><div class="cmbar"><span style="width:${T.ok / T.tot * 100}%"></span><span class="ap" style="width:${T.parz / T.tot * 100}%"></span></div>
     <b>${T.ok} su ${T.tot} ${tab === "milano" ? "microzone complete" : "comuni fatti"}</b><span>${T.parz ? `${T.parz} ${tab === "milano" ? "parziali" : "con il link in cartella"}` : ""}</span></div>
-  <div class="cmleg"><span><i style="background:${CM_COL.ok}"></i>${tab === "milano" ? "Completa" : "Annunci caricati"}</span><span><i style="background:${CM_COL.parz}"></i>${tab === "milano" ? "Parziale" : "Link in cartella"}</span>${tab === "inv" ? `<span><i style="background:${CM_COL.fatto}"></i>Controllato, niente di buono</span>` : ""}<span><i style="background:${CM_COL.da}"></i>Da fare</span></div>
+  <div class="cmleg"><span><i style="background:${CM_COL.ok}"></i>${tab === "milano" ? "Completa" : "Annunci caricati"}</span><span><i style="background:${CM_COL.parz}"></i>${tab === "milano" ? "Parziale" : "Link in cartella"}</span>${tab === "inv" ? `<span><i style="background:${CM_COL.fatto}"></i>Controllato, niente di buono</span><span><i style="background:${CM_COL.sopra}"></i>Sopra budget</span>` : ""}<span><i style="background:${CM_COL.da}"></i>Da fare</span></div>
   <div class="clmapw"><div class="map clmap" id="cmmap"></div></div>
   <div class="lbox"><div class="lbh"><b>Chiedi a Claude di completare</b><span>${T.tot - T.ok} da fare</span></div>
     <div class="btns"><button class="btn pri" id="cmcopy">Copia la richiesta per Claude</button></div>
@@ -65,7 +65,7 @@ function vCompleta(tab) {
           <a class="btn sec" href="${esc(cmUrl(x.m.n))}" target="_blank" rel="noopener">Apri ↗</a></div>`).join("")}</details>`; }).join("")}`;
   }
   return head + `<p class="note">I comuni di <a href="#inv/dove">Dove cercare</a> con dati veri di affitto (B&B misurati e affitto normale), entro ${tOre(+T.f.ore)}. La richiesta per Claude prende i primi 15 ancora da fare, così resta un messaggio corto.${typeof AUTO_CONTROLLO_DATA !== "undefined" ? ` Ultimo controllo: ${AUTO_CONTROLLO_DATA.split("-").reverse().join("/")}.` : ""}</p>
-  <div class="cmz" style="padding:4px 0">${T.st.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.o.c.n)} <em class="mut">(${esc(x.o.c.p)}) · ${x.n ? x.n + " annunci caricati" : x.s === "fatto" ? "controllato: niente di buono sotto 60.000 €" : x.s === "parz" ? "link in cartella" : "da fare"} · ${pct(x.o[T.f.uso], 1)} netto</em></span>
+  <div class="cmz" style="padding:4px 0">${T.st.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.o.c.n)} <em class="mut">(${esc(x.o.c.p)}) · ${x.n ? x.n + " annunci caricati" : x.s === "fatto" ? "controllato: niente di buono sotto 60.000 €" : x.s === "sopra" ? `sopra budget (media ${eur(x.o.c.v)}/m²)` : x.s === "parz" ? "link in cartella" : "da fare"} · ${pct(x.o[T.f.uso], 1)} netto</em></span>
     <a class="btn sec" href="${esc(immUrl(x.o.c.n))}" target="_blank" rel="noopener">Apri ↗</a></div>`).join("")}</div>`;
 }
 function afterCompleta(tab) {
