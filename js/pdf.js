@@ -62,6 +62,14 @@ function pdfSpiega(t, f) {
 }
 
 
+PL_T.mc = { grass: "#f4eee3", res: "#f2ebdf", ind: "#ece3d4", wood: "#dfe2cc", park: "#e1e5cf", water: "#c6d6dc", road: "#ffffff", roadCase: "#e0d1b5", major: "#e2c88f", majorCase: "#b08d57", dash: "#ffffff",
+  school: "#eee3cf", farm: "#ede6d4", sand: "#eee2c8", rock: "#e9e3d9", grassy: "#e2e6d2", path: "#e8dcc5", rail: "#bfae95", bnd: "#6e1423", out: "#d8c8ae",
+  roofs: ["#fbf8f2", "#f5eee3", "#f8f2e8", "#f1e9dc", "#fdfaf5", "#eee5d6"], lab: "#4a0d17", halo: "#ffffff", num: "#6e1423", accent: "#6e1423", city: "#6e1423", town: "#5b4c40", lake: "#2f6f80" };
+const PDF_TEMI = { notte: ["Notte morbida", "lo stile dell'app: blu notte, palazzi in 3D, il tuo in oro", "#f2cf5b"],
+  mc: ["Avorio e bordeaux", "chiara ed elegante, nei colori Maison Collection: il palazzo in bordeaux", "#7a1628"],
+  oro: ["Carbone e oro", "nera e oro, molto scenografica", "#f2cf5b"],
+  sat: ["Satellite", "foto aerea reale con il palazzo evidenziato in oro", "#f2cf5b"] };
+
 /* fotografia della mappa Keystone (stile Notte morbida, palazzi in 3D) da mettere nel PDF */
 async function pdfSnap(o) {
   try { await mmLoad(); } catch (e) { return null; }
@@ -73,14 +81,23 @@ async function pdfSnap(o) {
   const fine = () => { try { map && map.remove(); } catch (e) {} el.remove(); };
   const idle = () => new Promise(r => { if (map.loaded() && !map.isMoving()) map.once("idle", r); else map.once("idle", r); setTimeout(r, 6000); });
   try {
-    map = new maplibregl.Map({ container: el, style: mmStile(), center: [o.lon, o.lat], zoom: o.zoom, pitch: o.pitch || 0, bearing: o.bearing || 0,
+    const th0 = document.documentElement.dataset.th, tema = o.tema || "notte";
+    let stile;
+    if (tema === "sat") stile = { version: 8, glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
+      sources: { sat: { type: "raster", tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 19 },
+        omt: { type: "vector", url: "https://tiles.openfreemap.org/planet" } },
+      layers: [{ id: "sat", type: "raster", source: "sat", paint: { "raster-saturation": -0.15, "raster-contrast": 0.05 } }] };
+    else { document.documentElement.dataset.th = tema; stile = mmStile(); document.documentElement.dataset.th = th0; plSet(); }
+    map = new maplibregl.Map({ container: el, style: stile, center: [o.lon, o.lat], zoom: o.zoom, pitch: o.pitch || 0, bearing: o.bearing || 0,
       interactive: false, preserveDrawingBuffer: true, pixelRatio: 2, attributionControl: false, fadeDuration: 0, antialias: true });
     await new Promise((r, j) => { map.once("load", r); setTimeout(() => j(new Error("timeout")), 9000); });
+    if (tema !== "sat") { document.documentElement.dataset.th = tema; plSet(); }
+    const roof = plRoof(); document.documentElement.dataset.th = th0; plSet();
     map.addLayer({ id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 13,
-      paint: { "fill-extrusion-color": plRoof(), "fill-extrusion-height": o.pitch ? ["coalesce", ["get", "render_height"], 10] : 0,
-        "fill-extrusion-base": o.pitch ? ["coalesce", ["get", "render_min_height"], 0] : 0, "fill-extrusion-opacity": 0.95, "fill-extrusion-vertical-gradient": true } });
+      paint: { "fill-extrusion-color": tema === "sat" ? "#ffffff" : roof, "fill-extrusion-height": o.pitch ? ["coalesce", ["get", "render_height"], 10] : 0,
+        "fill-extrusion-base": o.pitch ? ["coalesce", ["get", "render_min_height"], 0] : 0, "fill-extrusion-opacity": tema === "sat" ? 0.01 : 0.95, "fill-extrusion-vertical-gradient": true } });
     map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
-    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#f2cf5b", "fill-extrusion-height": o.pitch ? ["+", ["coalesce", ["get", "h"], 12], 1.5] : 0.5, "fill-extrusion-base": 0, "fill-extrusion-opacity": 1 } });
+    map.addLayer({ id: "sel-3d", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": o.selCol || "#f2cf5b", "fill-extrusion-height": o.pitch ? ["+", ["coalesce", ["get", "h"], 12], 1.5] : 0.5, "fill-extrusion-base": 0, "fill-extrusion-opacity": tema === "sat" ? 0.85 : 1 } });
     try { map.setLight({ anchor: "viewport", color: "#fff3d0", intensity: 0.4, position: [1.5, 210, 40] }); } catch (e) {}
     await idle();
     if (o.evidenzia) {
@@ -108,15 +125,15 @@ async function mmPdf(arg) {
   w.document.write(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Preparo il PDF…</title><body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;font:15px Georgia,serif;color:#6e1423;background:#fbf7f0"><div style="width:38px;height:38px;border:3px solid #ead9b8;border-top-color:#6e1423;border-radius:50%;animation:g 1s linear infinite"></div>Preparo la valutazione con la mappa 3D…<style>@keyframes g{to{transform:rotate(360deg)}}</style></body>`);
   const { ctx, q } = arg, s = ctx.sel || {};
   const lat = s.lat ?? ctx.micro?.lat ?? ctx.com?.lat, lon = s.lon ?? ctx.micro?.lon ?? ctx.com?.lon;
-  const foto = {};
+  const foto = {}, tema = store.get("pdf_tema", "notte"), selCol = (PDF_TEMI[tema] || PDF_TEMI.notte)[2];
   if (lat != null) {
     const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
-    foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h }), 20000);
+    foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 20000);
     const C = arg.r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
     const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
     if (pts.length) {
       const maxD = Math.max(400, ...C.lista.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
-      foto.cmp = await tm(pdfSnap({ lat, lon, zoom: maxD > 1400 ? 14 : maxD > 700 ? 15 : 15.8, w: 690, h: 270, pins: [...pts, { lat, lon, k: "me", t: "" }], evidenzia: true, geom: s.geom }), 20000);
+      foto.cmp = await tm(pdfSnap({ lat, lon, zoom: maxD > 1400 ? 14 : maxD > 700 ? 15 : 15.8, w: 690, h: 270, pins: [...pts, { lat, lon, k: "me", t: "" }], evidenzia: true, geom: s.geom, tema: tema === "sat" ? "mc" : tema, selCol: tema === "sat" ? "#7a1628" : selCol }), 20000);
     }
   }
   const html = mmPdfHtml(arg, foto);
@@ -465,3 +482,40 @@ ${sec(comps.length ? (PZ ? 10 : 9) : 9, "Nota metodologica", `
   if (window.__pdfHtml) window.__pdfHtml(html);   // per i test
   return html;
 }
+
+/* ---------- anteprima delle copertine con le diverse mappe (pagina nascosta: #anteprima) ---------- */
+function pdfEsempio() {
+  const mi = TERR.milano.micro.find(m => m.n === "Vigentino - Fatima"), z = TERR.milano.zone.find(x => x.n === mi.z);
+  const sel = { lat: 45.4366, lon: 9.2041, micro: mi.n, zona: z.n, comune: "Milano", via: "Via Giuseppe Ripamonti", civ: "166" };
+  const ctx = { v: mi.v, a: mi.a, nome: "Via Giuseppe Ripamonti 166, Milano", milano: true, str: MZ_STR({ ...z, v: mi.v }), micro: mi, zona: z, sel, mode: "cliente", cliente: "Famiglia Rossi" };
+  const q = { ...V_DEF, mq: 107, locali: 4, bagni: 2, piano: 6, ascensore: true, ultimo: true, stato: "ottimo", classe: "D", epoca: "anni50", anno: 1960, orient: "S/O", balcone: 12, cantina: 6, box: "singolo", portineria: true, condo: 350, note: "Due balconi, portineria a mezza giornata" };
+  return { r: vCalcola(q, ctx), q, ctx };
+}
+function vAnteprima() {
+  const scelto = store.get("pdf_tema", "notte");
+  return `<div class="hubhead"><small>Rendering</small><h1>Copertina del PDF</h1><p class="sub">Quattro versioni della mappa sulla stessa valutazione di esempio (Via Ripamonti 166). Le mappe si generano adesso, ci vogliono una decina di secondi. Tocca "Apri il PDF completo" per vederlo tutto.</p></div>
+  ${Object.entries(PDF_TEMI).map(([k, [t, d]]) => `<div class="card" style="margin:0 0 18px;padding:14px">
+    <h2 style="margin:0 0 2px">${esc(t)} ${k === scelto ? '<small style="color:var(--cy)">· in uso ora</small>' : ""}</h2><p class="note" style="margin:0 0 10px">${esc(d)}</p>
+    <div class="antw" data-ant="${k}"><div class="mmload"><div class="spin"></div><span>Disegno la mappa…</span></div></div>
+    <div class="btns"><button class="btn sec" data-antpdf="${k}">Apri il PDF completo</button><button class="btn ${k === scelto ? "sec" : "pri"}" data-antuse="${k}">${k === scelto ? "✓ In uso" : "Usa questa"}</button></div></div>`).join("")}`;
+}
+async function afterAnteprima() {
+  const E = pdfEsempio(), s = E.ctx.sel, C = E.r.cmp, H = {};
+  const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
+  $("#app").addEventListener("click", e => { const u = e.target.closest("[data-antuse]"); if (u) { store.set("pdf_tema", u.dataset.antuse); document.querySelectorAll("[data-antuse]").forEach(x => { const on = x === u; x.textContent = on ? "✓ In uso" : "Usa questa"; x.className = "btn " + (on ? "sec" : "pri"); }); return; }
+    const b = e.target.closest("[data-antpdf]"); if (!b || !H[b.dataset.antpdf]) return;
+    const w = window.open("", "_blank"); if (!w) return alert("Consenti le finestre pop-up per aprire il PDF.");
+    w.document.open(); w.document.write(H[b.dataset.antpdf]); w.document.close(); });
+  for (const k of Object.keys(PDF_TEMI)) {
+    const box = document.querySelector(`[data-ant="${k}"]`); if (!box) return;
+    const selCol = PDF_TEMI[k][2];
+    const foto = { cov: await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, tema: k, selCol }) };
+    if (pts.length) foto.cmp = await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 15, w: 690, h: 270, pins: [...pts, { lat: s.lat, lon: s.lon, k: "me", t: "" }], evidenzia: true, tema: k === "sat" ? "mc" : k, selCol: k === "sat" ? "#7a1628" : selCol });
+    const html = mmPdfHtml(E, foto); H[k] = html;
+    const fr = document.createElement("iframe"); fr.className = "antf"; fr.srcdoc = html.replace(/<script>\(async\(\)=>[\s\S]*?<\/script>/, "");
+    box.innerHTML = ""; box.appendChild(fr);
+    const fit = () => { const sc = box.clientWidth / 794; fr.style.transform = `scale(${sc})`; box.style.height = (1123 * sc) + "px"; };
+    fit(); addEventListener("resize", fit);
+  }
+}
+TERR_VIEWS.anteprima = [vAnteprima, afterAnteprima];
