@@ -594,14 +594,21 @@ function mmComps(ctx, q) {
   pool = pool.filter(a => a.vO > medV * 0.7 && a.vO < medV * 1.45);
   // raggio: il più piccolo che dà almeno 8 annunci; poi i più simili per distanza, locali e metratura
   const R = [500, 800, 1100, 1600].find(r => pool.filter(a => a.dist <= r).length >= 8) || 1600;
-  const sc = a => a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8 + (a.st ? 0 : 0.5);
+  // somiglianza: distanza, metratura, locali, e anche piano, ascensore e stato (meno correzioni = annuncio più affidabile)
+  const pN = p => p === "T" ? 0 : p === "R" ? 0.5 : p === "S" ? -0.5 : isFinite(+p) ? +p : null;
+  const ST_N = { N: 3, O: 2, B: 1, R: 0 }, stQ = { nuovo: 3, ottimo: 2, buono: 1, ristrutturare: 0 }[q.stato] ?? 1, pQ = +q.piano || 0;
+  const sc = a => { const pa = pN(a.piano);
+    return a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8
+      + (a.st ? Math.abs((ST_N[a.st] ?? 1) - stQ) * 0.4 : 0.5)
+      + (pa == null ? 0.4 : Math.min(1, Math.abs(pa - pQ) / 4) * 0.8)
+      + (pa != null && Math.max(pa, pQ) >= 2 && a.asc != null && !!a.asc !== !!q.ascensore ? 0.5 : 0); };
   const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
     .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
     .slice(0, 8);
   if (c.length < 4) return null;
-  // media pesata, non mediana: il peso scende in fretta con la distanza e la differenza (≈ dimezza ogni 0,45 punti di scarto)
+  // media pesata, non mediana: il peso scende in fretta con lo scarto (≈ dimezza ogni 0,4 punti)
   // es. stesso palazzo/via e metratura simile ≈ 40–60% del peso; uno a 1 km e diverso ≈ 2–5%
-  c.forEach(a => { a.w = Math.exp(-1.55 * a.score); a.adj = a.vO; });
+  c.forEach(a => { a.w = Math.exp(-1.7 * a.score); a.adj = a.vO; });
   const tot = c.reduce((x, a) => x + a.w, 0);
   c.forEach(a => { a.peso = a.w / tot; });
   c.sort((a, b) => b.peso - a.peso);
