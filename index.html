@@ -328,6 +328,10 @@ input[type=search]{border-radius:999px;font-size:13px}
 .vs b{font-size:14px}.vs span{display:block;font-size:11.5px;color:var(--muted)}
 .vs .cy{color:var(--cy2);font-family:var(--display);font-style:italic;font-size:18px}
 .vs button{border:0;background:rgba(239,68,68,.15);color:#f87171;border-radius:9px;width:30px;height:30px;cursor:pointer}
+.vs .vsopen{width:auto;height:auto;background:none;color:var(--tx);text-align:left;padding:0;border-radius:0;font:inherit;min-width:0}
+.vs .vsopen b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vsdet{padding:10px 12px 12px;margin-top:-4px;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;background:var(--panel2)}
+.vsdet .vt td{font-size:13px;padding:5px 0}.vsdet .btns{margin-top:10px}
 .mz .mzt{font-size:24px;margin-top:2px}
 .mzrow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;margin-top:12px}
 .ring{--p:50;width:86px;height:86px;border-radius:50%;display:grid;place-items:center;align-content:center;text-align:center;
@@ -586,6 +590,9 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .thbtn i{width:12px;height:12px;border-radius:50%;display:inline-block;border:1px solid #e9cd8a}
 :root[data-th=bordeaux] .thbtn i{background:#fff}
 :root[data-th=bianco] .thbtn i{background:#5a2133}
+
+/* sezione Seguiti tolta per ora: niente stelline */
+[data-seg],[data-segp],[data-segim],[data-segann],[data-unseg]{display:none!important}
 </style>
 </head>
 <body>
@@ -600,7 +607,6 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
   <a href="#inv" data-v="inv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.5"/></svg><span>Investimenti</span></a>
   <a href="#milano" data-v="milano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l4-3v15"/><path d="M8 21V4l5 3v14"/><path d="M13 21v-9l7-2v11"/><path d="M3 21h18"/></svg><span>Milano</span></a>
   <a href="#completa" data-v="completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Completa</span></a>
-  <a href="#seguiti" data-v="seguiti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></svg><span>Seguiti</span></a>
 </nav>
 </header>
 <main id="app"></main>
@@ -1077,7 +1083,7 @@ function render(keepScroll) {
   else if (v === "notizie") { html = vNotizie(); after = afterNotizie; }
   else if (v === "guida") html = vGuida(a);
   else if (v === "inv") { html = vInv(a, b, c); after = () => afterInv(a, b, c); }
-  else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
+  else if (v === "seguiti") { location.hash = "#home"; return; }
   else if (v === "completa") { html = vCompleta(a); after = () => afterCompleta(a); }
   else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
   else { html = vHomeK(); after = afterHomeK; }

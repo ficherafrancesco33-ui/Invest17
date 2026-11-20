@@ -305,8 +305,58 @@ function vRisultato(r, ctx) {
 function vSalvate(dove) {
   const L = store.get("valutazioni", []).filter(x => !dove || x.dove === dove);
   if (!L.length) return "";
-  return `<h2>Valutazioni salvate</h2><div class="vsav">${L.map(x => `<div class="vs"><div><b>${esc(x.nome)}</b><span>${esc(x.sub)}</span></div><b class="cy">${eur(x.valore)}</b><button data-del="${x.id}" aria-label="Elimina">✕</button></div>`).join("")}</div>`;
+  return `<h2>Valutazioni salvate</h2><div class="vsav">${L.map(x => `<div class="vsw"><div class="vs"><button type="button" class="vsopen" data-vapri="${x.id}"><b>${esc(x.nome)}</b><span>${esc(x.sub)}</span></button><b class="cy">${eur(x.valore)}</b><button data-del="${x.id}" aria-label="Elimina">✕</button></div><div class="vsdet" data-vdet="${x.id}" hidden></div></div>`).join("")}</div>`;
 }
+/* contesto di una valutazione salvata (anche di quelle salvate prima che lo ricordassi) */
+function vCtxSalvata(x) {
+  const M = TERR.milano, I = tIdx(), k = x.ck || {};
+  let micro = k.micro ? M.micro.find(m => m.n === k.micro) : null, com = k.comune ? I.byN.get(tnorm(k.comune)) : null, zona = null;
+  if (!micro && !com) {
+    const parti = String(x.nome || "").split(",").map(t => t.trim()).filter(Boolean);
+    for (const t of parti.slice().reverse()) { micro = M.micro.find(m => m.n === t); if (micro) break; zona = M.zone.find(z => z.n === t); if (zona) break;
+      const c = I.byN.get(tnorm(t)); if (c && c.v && tnorm(t) !== "milano") { com = c; break; } }
+    if (!micro && !com && !zona && x.dove !== "valuta") { const nm = tnorm(x.nome); micro = M.micro.find(m => nm.includes(tnorm(m.n))) || null; }
+  }
+  const base = { nome: x.nome, cliente: k.cliente || "", mode: k.mode || "cliente", zonaCom: k.zonaCom || "" };
+  if (micro) { const z = M.zone.find(q => q.n === micro.z); return { ...base, v: micro.v, a: micro.a, milano: true, str: MZ_STR({ ...z, v: micro.v }), micro, zona: z, sel: k.sel || { lat: micro.lat, lon: micro.lon, micro: micro.n, zona: micro.z, comune: "Milano" } }; }
+  if (zona) return { ...base, v: zona.v, a: zona.a, milano: true, str: MZ_STR(zona), sel: k.sel || { lat: zona.lat, lon: zona.lon, zona: zona.n, comune: "Milano" } };
+  if (com) return { ...base, v: com.v, a: com.a, milano: com.n === "Milano", str: com.lat != null ? tStrVicino(com) : null, com, sel: k.sel || (com.lat != null ? { lat: com.lat, lon: com.lon, comune: com.n } : null) };
+  return null;
+}
+function vDettaglio(x, ctx) {
+  const q = Object.assign({}, V_DEF, x.q), r = ctx ? vCalcola(q, ctx) : null, si = b => b ? "sì" : "no";
+  const box = { no: "nessuno", posto: "posto auto", singolo: "box singolo", doppio: "box doppio" }[q.box] || q.box;
+  const righe = [
+    ["Tipologia", q.tipo], ["Superficie", `${num(q.mq)} m²`], ["Locali / bagni", `${q.locali} / ${q.bagni}`],
+    ["Piano", `${q.piano == 0 ? "terra" : q.piano + "°"}${q.ultimo ? " (ultimo)" : ""} · ascensore ${si(q.ascensore)}`],
+    ["Stato", (V_STATO[q.stato] || [q.stato])[0] + (q.stato === "ristrutturare" ? ` · lavori ${eur(q.costoLavori)}/m² (${eur(q.costoLavori * q.mq)})` : "")],
+    ["Spazi in più", [q.balcone && `balconi ${q.balcone} m²`, q.terrazzo && `terrazzo ${q.terrazzo} m²`, q.giardino && `giardino ${q.giardino} m²`, q.cantina && `cantina ${q.cantina} m²`, `box: ${box}`].filter(Boolean).join(" · ")],
+    ["Classe / epoca", `${q.classe === "?" ? "non indicata" : q.classe} · ${(V_EPOCA[q.epoca] || [q.epoca])[0]}`],
+    ["Esposizione / vista", `${q.espo}${q.orient ? " " + q.orient : ""} · ${q.vista}`],
+    ["Riscaldamento", q.risc + (q.portineria ? " · portineria" : "") + (q.arredato ? " · arredato" : "")],
+    +q.fraz ? ["Frazionabile", `in ${q.fraz} unità`] : null,
+    +q.prezzo ? ["Prezzo chiesto", eur(q.prezzo)] : null,
+    q.note ? ["Note", q.note] : null].filter(Boolean);
+  return `<table class="vt"><tbody>${righe.map(([a, b]) => `<tr><td>${esc(a)}</td><td class="r">${esc(String(b))}</td></tr>`).join("")}
+    <tr class="tot"><td>Valore salvato</td><td class="r">${eur(x.valore)}</td></tr>
+    ${r && Math.abs(r.valore - x.valore) > 500 ? `<tr><td>Valore con i dati di oggi</td><td class="r">${eur(Math.round(r.valore))}</td></tr>` : ""}</tbody></table>
+    <div class="btns">${r ? `<button class="btn pri" data-vpdf="${x.id}">Scarica il PDF</button>` : ""}<button class="btn sec" data-vriapri="${x.id}">Riapri nel valutatore</button></div>
+    ${r ? "" : `<p class="note">Non ritrovo la zona di questa valutazione: riaprila nel valutatore e scegli la zona.</p>`}`;
+}
+document.addEventListener("click", e => {
+  const L = store.get("valutazioni", []), trova = id => L.find(x => x.id === id);
+  const ap = e.target.closest("[data-vapri]");
+  if (ap) { const x = trova(ap.dataset.vapri), d = document.querySelector(`[data-vdet="${ap.dataset.vapri}"]`); if (!x || !d) return;
+    if (!d.hidden) { d.hidden = true; return; } d.innerHTML = vDettaglio(x, vCtxSalvata(x)); d.hidden = false; return; }
+  const pd = e.target.closest("[data-vpdf]");
+  if (pd) { const x = trova(pd.dataset.vpdf), ctx = x && vCtxSalvata(x); if (!ctx || !window.mmPdf) return; const q = Object.assign({}, V_DEF, x.q); mmPdf({ r: vCalcola(q, ctx), q, ctx }); return; }
+  const ri = e.target.closest("[data-vriapri]");
+  if (ri) { const x = trova(ri.dataset.vriapri); if (!x) return; const ctx = vCtxSalvata(x);
+    store.set("vform_" + x.dove, Object.assign({}, V_DEF, x.q));
+    if (x.dove === "valuta") { if (ctx?.com) store.set("v_com", ctx.com.n); store.set("v_zona", ctx?.zonaCom || ""); }
+    else if (ctx?.sel) { if (typeof MM !== "undefined") MM.sel = ctx.sel; store.set("mm_sel", { ...ctx.sel, geom: null }); if (ctx.cliente) store.set("mi_cliente", ctx.cliente); }
+    render(true); setTimeout(() => ($("#mvf") || $("#vf") || $("#mzf"))?.scrollIntoView({ behavior: "smooth", block: "start" }), 300); }
+});
 function vBind(form, out, getCtx, dove) {
   const go = () => { const ctx = getCtx(), q = vRead(form); store.set("vform_" + dove, q);
     if (!ctx) { out.innerHTML = `<p class="sub">Scegli prima ${dove === "milano" ? "la zona" : "il comune"}.</p>`; return; }
@@ -318,7 +368,8 @@ function vBind(form, out, getCtx, dove) {
   out.addEventListener("click", e => {
     if (!e.target.closest("[data-save]") || !out._r) return;
     const { r, q, ctx } = out._r, L = store.get("valutazioni", []);
-    L.unshift({ id: Date.now().toString(36), dove, nome: ctx.nome, sub: `${q.mq} m² · ${V_STATO[q.stato][0]}${q.box !== "no" ? " · box" : ""} · ${new Date().toLocaleDateString("it-IT")}`, valore: Math.round(r.valore), q });
+    const ck = { micro: ctx.micro?.n || null, comune: ctx.com?.n || (dove === "valuta" ? ctx.nome : null), sel: ctx.sel ? { ...ctx.sel, geom: null } : null, cliente: ctx.cliente || "", mode: ctx.mode || "", zonaCom: ctx.zonaCom || "" };
+    L.unshift({ id: Date.now().toString(36), dove, ck, nome: ctx.nome, sub: `${q.mq} m² · ${V_STATO[q.stato][0]}${q.box !== "no" ? " · box" : ""} · ${new Date().toLocaleDateString("it-IT")}`, valore: Math.round(r.valore), q });
     store.set("valutazioni", L.slice(0, 40)); render(true);
   });
 }

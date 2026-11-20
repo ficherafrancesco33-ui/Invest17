@@ -79,7 +79,7 @@ function vHomeK() {
   ${priv.length ? `<h2>Milano · privati sotto la media <small><a href="#milano/privati">Tutti</a></small></h2>
   <div class="plist">${priv.map(a => `<a class="pcard" href="#milano/privati/${encodeURIComponent(a.id)}"><div class="pc1"><b>${esc(a.via || a.micro)}</b><span>${esc(a.micro)} · ${a.mq} m²${a.dal ? ` · dal ${novData(a.dal)}` : ""}</span></div>
     <div class="pc3"><b>${eur(a.p)}</b><em><i class="s-good">−${pct(-a.dlt, 0)} zona</i></em></div></a>`).join("")}</div>` : ""}
-  ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
+  ${false && seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
   ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}`;
 }
 /* mappa d'Italia: stile Carbone e oro con rilievi (ombreggiatura delle montagne) e nomi di città, laghi e regioni */
