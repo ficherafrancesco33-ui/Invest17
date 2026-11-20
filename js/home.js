@@ -19,6 +19,22 @@ function homeNovita() {
   }
   return nov;
 }
+/* classifica dei comuni dove conviene cercare: spunto per le ricerche da mandare con i link */
+const immSlug = n => tnorm(n).replace(/[^a-z0-9 ]/g, "").trim().replace(/\s+/g, "-");
+function homeDove() {
+  const k = store.get("dove_k", "breve"), I = tIdx();
+  let R;
+  const net = (ctx, uso) => { try { const r = vCalcola({ mq: 50, locali: 2, stato: "buono", arredato: false }, ctx).sc.list[uso]; return r ? r.rendNetto : null; } catch (e) { return null; } };
+  if (k === "breve") R = I.br.map(s => ({ s, d: tDist(s.lat, s.lon) })).filter(x => x.s.com?.v && x.d && x.d.min <= 180)
+    .map(({ s, d }) => ({ n: s.n, p: s.p, val: net({ v: s.com.v, a: s.com.a, str: s, nome: s.n, milano: false }, "breve"), sub: `${eur(s.adr * T_BILO)} a notte · ${pct(s.occ, 0)} · ${eur(s.com.v)}/m²`, d, an: `#brevi/${encodeURIComponent(s.n)}` }));
+  else R = I.com.filter(c => c.rl && c.princ && c.lat != null).map(c => ({ c, d: tDist(c.lat, c.lon) })).filter(x => x.d && x.d.min <= 180)
+    .map(({ c, d }) => ({ n: c.n, p: c.p, val: net({ v: c.v, a: c.a, nome: c.n, milano: false }, "lungo"), sub: `${eur(c.v)}/m² · affitto ${num(c.a, 1)} €/m² al mese`, d }));
+  R = R.filter(x => x.val != null).sort((a, b) => b.val - a.val).slice(0, 10);
+  const max = Math.max(...R.map(x => x.val), 1e-9);
+  return `<div class="dove">${R.map((x, i) => `<div class="dv"><b>${i + 1}</b><span><a href="https://www.immobiliare.it/vendita-case/${immSlug(x.n)}/" target="_blank" rel="noopener">${esc(x.n)} <i>(${esc(x.p)})</i> ↗</a><small>${x.sub} · ${tOre(x.d.min)}</small>
+    <span class="tb"><span style="width:${Math.max(4, x.val / max * 100)}%"></span></span></span><em>${pct(x.val, 1)}${x.an ? `<a href="${x.an}">analisi</a>` : ""}</em></div>`).join("")}</div>
+  <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (più costi d'acquisto e arredo) e ${k === "breve" ? "affittato a notte" : "affittato con contratto normale"}, dopo spese e tasse. Tempo di viaggio da casa tua. Tocca il nome per aprire la ricerca su Immobiliare: scegli gli annunci che ti piacciono e mandami il link.</p>`;
+}
 function homeTop() {
   return invAll().map(x => ({ ...x, A: analizza(x.im) })).filter(x => x.A.score != null).sort((a, b) => b.A.score - a.A.score);
 }
@@ -34,13 +50,9 @@ function vHomeK() {
     <ol class="pltop">${top.slice(0, 10).map((x, i) => { const st = stato(x.A.score);
       return `<li><a href="#imm/${x.src}/${encodeURIComponent(x.im.id)}" data-fly="${i}"><b>${i + 1}</b><span><em>${esc((x.im.titolo || "Casa").split(" ")[0])} · ${keur(x.im.prezzo)}</em><small>${esc(x.im.zona && x.im.zona !== x.im.comune ? x.im.zona : x.im.comune || "")}</small></span><i style="--pc:${st.col}">${x.A.score}</i></a></li>`; }).join("") || `<li class="note">Mandami un link per iniziare la classifica.</li>`}</ol>
   </div>
-  <h2>Milano <small><a href="#milano">Tutta la sezione</a></small></h2>
-  <div class="btn4">
-    <a href="#milano/cliente">${ico("cliente")}<span>Valuta per un cliente</span></a>
-    <a href="#milano/inv">${ico("inv")}<span>Investire a Milano</span></a>
-    <a href="#milano/sub">${ico("sub")}<span>Subaffitto</span></a>
-    <a href="#milano/privati">${ico("privati")}<span>Privati${nuoviPriv ? ` <em>${nuoviPriv} nuovi</em>` : ""}</span></a>
-  </div>
+  <h2>Dove cercare <small>entro 3 ore</small></h2>
+  <div class="chips" id="dovek">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${k === store.get("dove_k", "breve") ? "on" : ""}" data-k="${k}">${t}</button>`).join("")}</div>
+  <div id="dove">${homeDove()}</div>
   ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
   ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}`;
 }
@@ -91,6 +103,8 @@ function afterHomeK() {
   const P = top.filter(x => x.im.lat != null).map((x, i) => ({ lon: x.im.lng, lat: x.im.lat, rank: i < 10 ? i + 1 : 0, col: stato(x.A.score).col,
     t: x.im.titolo || x.im.comune, s: `${x.im.comune} · ${eur(x.im.prezzo)} · ${x.A.score} punti · netto ${pct(x.A.rend)}`, h: `#imm/${x.src}/${encodeURIComponent(x.im.id)}` }));
   homeMappa(el, P);
+  $("#dovek")?.addEventListener("click", e => { const c = e.target.closest("[data-k]"); if (!c) return; store.set("dove_k", c.dataset.k);
+    document.querySelectorAll("#dovek .chip").forEach(x => x.classList.toggle("on", x === c)); $("#dove").innerHTML = homeDove(); });
   $("#plexp")?.addEventListener("click", () => { const w = $(".plancia"); w.classList.toggle("big"); setTimeout(() => HOME_MAP && HOME_MAP.resize(), 320); });
 }
 function vSeguiti() {
