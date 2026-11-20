@@ -39,7 +39,8 @@ Per ciascuno apri la scheda e scrivi una riga in fondo a `tools/terr/raw_immobil
 - privato = 1 se l'annuncio è di un privato (nessuna agenzia).
 - lat/lon: dalla scheda se c'è; altrimenti quelli della microzona (TERR.milano.micro, campo `n`) con 4 decimali.
 - microzona: il nome di Immobiliare (es. "Vigentino - Fatima"), che deve esistere in TERR.milano.micro.
-- Scarta: aste (prezzo base), "Progetto"/nuove costruzioni senza prezzo, nude proprietà.
+- **Leggi sempre la descrizione** (anche per Milano): scarta e scrivi in `tools/terr/esclusi.txt` (`id;motivo`) quote o comproprietà ("vendo quota", "50%"), nude proprietà, usufrutto, aste, rent to buy, cessioni di contratto, posti letto o stanze singole, locali commerciali. Scarta anche "Progetto"/nuove costruzioni senza prezzo.
+- Per i **privati** che superano il controllo aggiungi l'id a `tools/terr/privati_ok.txt`: solo quelli compaiono in home.
 
 ## 4. Generare, registrare, pubblicare
 ```

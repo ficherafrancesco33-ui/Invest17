@@ -98,7 +98,7 @@ function miPrivatiBind() {
   const box = $("#pf"), list = $("#plist"), f = store.get("f_priv", { solo: true, max: 0, mq: 0, ord: "nuovi" });
   const draw = () => {
     const L = miPrivatiRows(), seg = segIds();
-    list.innerHTML = L.length ? `<p class="note">${L.length} annunci${f.solo ? " di privati" : ""}. Tocca un annuncio per aprire la scheda.</p>
+    list.innerHTML = L.length ? `<p class="note">${L.length} annunci${f.solo ? " di privati" : ""}. Tocca un annuncio per aprire la scheda. Attenzione: un prezzo molto sotto la zona spesso nasconde una quota, una nuda proprietà o un'asta. Prima di chiamare leggi la descrizione su Immobiliare.</p>
       <div class="plist">${L.slice(0, 200).map(a => { const mi = a.micro ? TERR.milano.micro.find(m => m.n === a.micro) : null, dlt = mi ? a.mq2 / mi.v - 1 : null;
         return `<a class="pcard" href="#milano/privati/${encodeURIComponent(a.id)}">
         <div class="pc1"><b>${a.nuovo ? `<span class="tag new">nuovo</span> ` : ""}${esc(a.via || a.micro || "Milano")}</b><span>${esc(a.micro || (a.mun ? "Municipio " + a.mun : "Milano"))}</span></div>

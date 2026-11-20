@@ -111,12 +111,13 @@ def annunci(micro_names):
 
 
 def annunci_imm():
+    esc = {l.split(";")[0] for l in open(os.path.join(H, "esclusi.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")}
     out = {}   # per id: se un annuncio torna in un avviso successivo vale l'ultima riga (prezzo aggiornato)
     for line in open(os.path.join(H, "raw_immobiliare_milano.txt"), encoding="utf-8"):
         if line.startswith("#") or not line.strip():
             continue
         i, p, mq, loc, bag, piano, asc, st, tip, lat, lon, via, mic, com, priv, ex = line.rstrip("\n").split(";")
-        if tip == "Progetto":
+        if tip == "Progetto" or i in esc:   # esc: quote, nude proprietà, aste scoperte leggendo la descrizione
             continue
         p, mq = float(p), int(mq)
         if tip == "Appartamento" and not bag and p / mq < 3000:   # aste giudiziarie: prezzo base d'asta, non di mercato
@@ -199,6 +200,7 @@ def main():
                      imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (tutta Milano fino a 196.000 € + Milano Sud completa)", url="https://www.immobiliare.it/annunci/",
                               campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
     data["milano"]["fasce"] = fasce(data["annunci"]["imm"]["lista"])
+    data["milano"]["priv_ok"] = [int(l.strip()) for l in open(os.path.join(H, "privati_ok.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")]
     s = "// KEYSTONE — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)

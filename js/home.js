@@ -59,8 +59,8 @@ function vHomeK() {
   // 2. affare del giorno: il punteggio più alto tra gli arrivi recenti
   const rec = arr.filter(x => isNuovoInv(x.im)), aff = (rec.length ? rec : arr).slice().sort((a, b) => b.A.score - a.A.score)[0];
   const perche = x => [x.im.mq ? `${eur(x.im.prezzo / x.im.mq)}/m²` : "", x.A.best ? `rende meglio come ${CATS[x.A.best].toLowerCase()}` : "", x.A.val?.sconto > 0.05 ? `${pct(x.A.val.sconto, 0)} sotto il mercato` : "", x.im.affitti?.lungo?.stima === false ? "già affittato" : ""].filter(Boolean).join(" · ");
-  // 3. privati di Milano sotto la media della microzona, i più recenti prima
-  const M = TERR.milano.micro, priv = mmAnnunci().filter(a => a.priv && a.micro).map(a => { const mi = M.find(m => m.n === a.micro); return { ...a, dlt: mi ? a.mq2 / mi.v - 1 : 0, dal: dal[String(a.id).replace(/^i/, "")] || "" }; })
+  // 3. privati di Milano sotto la media della microzona (solo quelli con la descrizione già letta), i più recenti prima
+  const OK = new Set((TERR.milano.priv_ok || []).map(String)), M = TERR.milano.micro, priv = mmAnnunci().filter(a => a.priv && a.micro && OK.has(String(a.id).replace(/^i/, ""))).map(a => { const mi = M.find(m => m.n === a.micro); return { ...a, dlt: mi ? a.mq2 / mi.v - 1 : 0, dal: dal[String(a.id).replace(/^i/, "")] || "" }; })
     .filter(a => a.dlt < -0.05).sort((a, b) => b.dal.localeCompare(a.dal) || a.dlt - b.dlt).slice(0, 4);
   return `${novBanner()}
   ${arr.length ? `<h2>Da Immobiliare <small><a href="#inv/classifica" data-src="auto">fino a 60.000 €</a></small></h2>
