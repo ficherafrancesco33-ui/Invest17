@@ -110,6 +110,23 @@ def annunci(micro_names):
     return out
 
 
+def annunci_imm():
+    out = []
+    for line in open(os.path.join(H, "raw_immobiliare_milano.txt"), encoding="utf-8"):
+        if line.startswith("#") or not line.strip():
+            continue
+        i, p, mq, loc, bag, piano, asc, st, tip, lat, lon, via, mic, com, priv, ex = line.rstrip("\n").split(";")
+        if tip == "Progetto":
+            continue
+        p, mq = float(p), int(mq)
+        if tip == "Appartamento" and not bag and p / mq < 3000:   # aste giudiziarie: prezzo base d'asta, non di mercato
+            continue
+        if mq < 14 or not (1500 <= p / mq <= 25000):
+            continue
+        out.append([int(i), int(p), mq, loc.split(" ")[0].replace("+", ""), piano.split(",")[0].strip(), int(asc), st, tip, float(lat), float(lon), via.strip().rstrip(","), mic, int(priv), ex])
+    return out
+
+
 def coord_miei():
     f = os.path.join(ROOT, "data", "immobili.js").replace("\\", "/")
     r = subprocess.run(["node", "-e", "eval(require('fs').readFileSync('" + f + "','utf8')+';globalThis.M=MIEI');"
@@ -145,11 +162,13 @@ def main():
                     poi=[list(p) for p in POI],
                     micro=[dict(z=m[0], n=m[1], v=m[2], a=m[3], lat=m[4], lon=m[5]) for m in MICRO]),
         annunci=dict(fonte="Trovit, annunci in vendita a Milano letti il 20/11/2026", url="https://case.trovit.it/detail/trovit-IT-",
-                     lista=annunci([m[1] for m in MICRO])))
+                     lista=annunci([m[1] for m in MICRO]),
+                     imm=dict(fonte="Immobiliare.it, annunci in vendita a Milano letti il 20/11/2026 (fino a 196.000 €)", url="https://www.immobiliare.it/annunci/",
+                              campi="id,prezzo,mq,locali,piano,ascensore,stato,tipologia,lat,lon,indirizzo,microzona,privato,extra", lista=annunci_imm())))
     s = "// INVEST17 — analisi del territorio. File generato da tools/terr/gen.py: non modificare a mano.\n"
     s += "const TERR = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
     open(os.path.join(ROOT, "data", "territorio.js"), "w", encoding="utf-8").write(s)
-    print(len(data["annunci"]["lista"]), "annunci di Milano;", len(com), "comuni,", len(coord), "con coordinate,", len(st), "località affitti brevi,", len(ZONE), "zone di Milano")
+    print(len(data["annunci"]["lista"]), "+", len(data["annunci"]["imm"]["lista"]), "annunci di Milano;", len(com), "comuni,", len(coord), "con coordinate,", len(st), "località affitti brevi,", len(ZONE), "zone di Milano")
 
 
 if __name__ == "__main__":

@@ -111,7 +111,12 @@ const V_DEF = { tipo: "appartamento", mq: 60, locali: 2, bagni: 1, balcone: 0, t
   risc: "centralizzato", portineria: false, condominio: "buono", posizione: "media", arredato: false, prezzo: 0, condo: 0 };
 
 function vCalcola(inp, ctx) {
-  const q = Object.assign({}, V_DEF, inp), base = ctx.v, aff = ctx.a;
+  const q = Object.assign({}, V_DEF, inp), aff = ctx.a;
+  // se ci sono abbastanza annunci simili vicini, il prezzo di partenza tiene conto anche di loro (fino al 50%)
+  const cmp = ctx.milano && window.mmComps ? mmComps(ctx, q) : null;
+  // per ora gli annunci letti sono soprattutto sotto i 200.000 €: li uso solo se non si discostano troppo dalla zona, e al massimo per un terzo
+  const wC = cmp && cmp.norm && cmp.norm > ctx.v * 0.75 && cmp.norm < ctx.v * 1.25 ? Math.min(0.35, cmp.nNorm / 20) : 0;
+  const base = ctx.v * (1 - wC) + (wC ? cmp.norm * wC : 0);
   const mq = Math.max(10, +q.mq || 0);
   const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
   const sup = mq + est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
@@ -162,7 +167,7 @@ function vCalcola(inp, ctx) {
   const im = { prezzo: acquisto, mq, lavori, arredato: q.arredato, spese: { condominio_mese: +q.condo || Math.round(mq * (ctx.milano ? 2.2 : 1.4)), imu_anno: 0 },
     affitti: { lungo: canone ? { canone } : null, medio: medio ? { canone: medio, mesi_occupati: 10, stima: true } : null, breve } };
   const sc = scenari(im, { offMax: acquisto });
-  return { sup, k, kTot, st, sd, mqReale, base, box, valCasa, valore, min: valore * (1 - incer), max: valore * (1 + incer), valDopo, lavori,
+  return { cmp, wC, sup, k, kTot, st, sd, mqReale, base, box, valCasa, valore, min: valore * (1 - incer), max: valore * (1 + incer), valDopo, lavori,
     canone, medio, breve, sc, acquisto, prezzo: +q.prezzo || 0, sconto: +q.prezzo > 0 ? (valore - q.prezzo) / valore : null,
     offerta: +q.prezzo > 0 ? Math.min(+q.prezzo, valore) * (1 - sconto / 2) : valore * 0.97,
     margine: valDopo ? valDopo - (acquisto * (1 + IMPOSTAZIONI.costi_acquisto_pct) + lavori) : null };
@@ -225,11 +230,13 @@ function vRisultato(r, ctx) {
       ${card("breve", "B&B / Airbnb", r.breve ? `${eur(r.breve.adr)}/notte · ${pct(r.breve.occ, 0)}` : "")}
     </div>
     <p class="note">Rendimento netto sul ${r.prezzo ? "prezzo chiesto" : "valore stimato"} + ${pct(IMPOSTAZIONI.costi_acquisto_pct, 0)} di costi d'acquisto${r.lavori ? " + lavori" : ""}, tasse ${TAX === "srl" ? "SRL" : "da privata (cedolare)"}. ${r.breve ? `Affitto breve: ${esc(r.breve.fonte)}.` : ""}</p>
-    ${(() => { const C = window.mmComps ? mmComps(ctx, vRisultato._q || {}) : null; return C ? `<h3 class="vh3">Annunci comparabili <small style="color:var(--muted);letter-spacing:0;text-transform:none;font-style:normal">mediana ${eur(C.med)}/m² richiesti</small></h3>
-      <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)}</span></div><b class="cy">${eur(a.mq2)}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
+    ${(() => { const C = r.cmp || (window.mmComps ? mmComps(ctx, vRisultato._q || {}) : null); return C ? `<h3 class="vh3">Annunci comparabili <small style="color:var(--muted);letter-spacing:0;text-transform:none;font-style:normal">mediana ${eur(C.med)}/m² richiesti</small></h3>
+      <div class="vsav">${C.lista.map(a => `<a class="vs" href="${esc(a.url)}" target="_blank" rel="noopener"><div><b>${esc(a.via || (a.micro || "Municipio " + a.mun))}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.d)} · ${a.fonte}</span></div><b class="cy">${eur(a.mq2)}</b><span style="text-align:right">${eur(a.p)}<br>${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "municipio"}</span></a>`).join("")}</div>` : ""; })()}
     <details class="vdet"><summary>Come ho calcolato il valore</summary>
       <table><tbody>
-        <tr><td>Prezzo medio degli annunci (${esc(ctx.nome)})</td><td class="r">${eur(r.base)}/m²</td></tr>
+        ${r.wC ? `<tr><td>Prezzo medio della zona</td><td class="r">${eur(ctx.v)}/m²</td></tr>
+        <tr><td>${r.cmp.nNorm} annunci simili vicini, riportati a stato buono (pesano ${pct(r.wC, 0)})</td><td class="r">${eur(r.cmp.norm)}/m²</td></tr>
+        <tr><td>Prezzo di partenza</td><td class="r">${eur(r.base)}/m²</td></tr>` : `<tr><td>Prezzo medio degli annunci (${esc(ctx.nome)})</td><td class="r">${eur(r.base)}/m²</td></tr>`}
         <tr><td>Meno trattativa tipica (${pct(IMPOSTAZIONI.sconto_trattativa, 0)})</td><td class="r">${eur(r.mqReale)}/m²</td></tr>
         <tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>
         ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}

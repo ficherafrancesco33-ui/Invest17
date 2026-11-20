@@ -427,11 +427,13 @@ ${vicine.length ? `<h2>Valori di confronto nelle microzone vicine</h2>
 ${vicine.map(m => `<tr><td>${esc(m.n)}</td><td>${esc(m.z)}</td><td class="r">${num(m.d / 1000, 1)} km</td><td class="r">${eur(m.v)}</td><td class="r">${num(m.a, 2)}</td></tr>`).join("")}</tbody></table>` : ""}
 ${(() => { const C = mmComps(ctx, q); return C ? `<h2>Annunci comparabili in vendita</h2>
 <table class="sans"><thead><tr><th>Indirizzo</th><th class="r">m²</th><th class="r">Locali</th><th class="r">Prezzo</th><th class="r">€/m²</th><th class="r">Distanza</th></tr></thead><tbody>
-${C.lista.map(a => `<tr><td>${esc(a.via || "Zona " + (a.micro || "Municipio " + a.mun))}<br><span class="note">${esc(a.d)}</span></td><td class="r">${a.mq}</td><td class="r">${a.loc || "—"}</td><td class="r">${eur(a.p)}</td><td class="r">${eur(a.mq2)}</td><td class="r">${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "stesso municipio"}</td></tr>`).join("")}
-</tbody></table><p class="note sans">Prezzi richiesti negli annunci (Trovit, novembre 2026). Mediana dei comparabili: ${eur(C.med)}/m²; il valore stimato considera il prezzo di chiusura, in genere più basso del prezzo richiesto.</p>` : ""; })()}
+${C.lista.map(a => `<tr><td>${esc(a.via || "Zona " + (a.micro || "Municipio " + a.mun))}<br><span class="note">${esc(a.d)} · ${a.fonte}</span></td><td class="r">${a.mq}</td><td class="r">${a.loc || "—"}</td><td class="r">${eur(a.p)}</td><td class="r">${eur(a.mq2)}</td><td class="r">${a.lat != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "stesso municipio"}</td></tr>`).join("")}
+</tbody></table><p class="note sans">Prezzi richiesti negli annunci (Immobiliare.it e Trovit, novembre 2026).${C.norm ? ` ${C.nNorm} annunci entro 1,5 km riportati allo stato "buono": ${eur(C.norm)}/m².` : ""} Mediana dei comparabili: ${eur(C.med)}/m²; il valore stimato considera il prezzo di chiusura, in genere più basso del prezzo richiesto.</p>` : ""; })()}
 <h2>Come è stato calcolato il valore</h2>
 <table class="sans"><tbody>
-<tr><td>Prezzo medio richiesto nella zona</td><td class="r">${eur(r.base)}/m²</td></tr>
+${r.wC ? `<tr><td>Prezzo medio richiesto nella zona</td><td class="r">${eur(ctx.v)}/m²</td></tr>
+<tr><td>${r.cmp.nNorm} annunci simili entro 1,5 km, riportati a stato buono (peso ${pct(r.wC, 0)})</td><td class="r">${eur(r.cmp.norm)}/m²</td></tr>
+<tr><td>Prezzo di partenza</td><td class="r">${eur(r.base)}/m²</td></tr>` : `<tr><td>Prezzo medio richiesto nella zona</td><td class="r">${eur(r.base)}/m²</td></tr>`}
 <tr><td>Riduzione per trattativa (${pct(IMPOSTAZIONI.sconto_trattativa, 0)})</td><td class="r">${eur(r.mqReale)}/m²</td></tr>
 <tr><td>Stato: ${esc(r.st[0])}</td><td class="r">× ${num(r.st[1], 2)}</td></tr>
 ${r.k.map(([t, f]) => `<tr><td>${esc(t)}</td><td class="r">× ${num(f, 2)}</td></tr>`).join("")}
@@ -473,12 +475,22 @@ const MM_MUN = { "Centro": 1, "Arco della Pace, Arena, Pagano": 1, "Genova, Tici
   "Bisceglie, Baggio, Olmi": 7, "Ripamonti, Vigentino": 5, "Forlanini": 4, "Città Studi, Susa": 3, "Maggiolina, Istria": 9, "Precotto, Turro": 2,
   "Udine, Lambrate": 3, "Pasteur, Rovereto": 2, "Ponte Lambro, Santa Giulia": 4, "Corvetto, Rogoredo": 4, "Napoli, Soderini": 6 };
 const mmAnnGeo = () => store.get("geo_ann", {});
+const MM_ST = { N: ["Nuovo", 1.10], O: ["Ottimo / ristrutturato", 1.06], B: ["Buono / abitabile", 1.00], R: ["Da ristrutturare", 0.78] };
+const MM_EX = { b: "balcone", t: "terrazzo", c: "cantina", a: "arredato", d: "doppia esposizione", i: "esposizione interna" };
+let MM_ANN = null;
 function mmAnnunci() {
-  const G = mmAnnGeo(), M = TERR.milano.micro;
-  return TERR.annunci.lista.map(a => {
+  if (MM_ANN) return MM_ANN;
+  const G = mmAnnGeo(), M = TERR.milano.micro, I = TERR.annunci.imm;
+  const imm = I.lista.map(([id, p, mq, loc, piano, asc, st, tip, lat, lon, via, mic, priv, ex]) => ({ id: "i" + id, p, mq, loc: +loc || null, piano, asc, st, tip, lat, lon, via, micro: mic,
+    priv, mq2: p / mq, url: I.url + id + "/", fonte: "Immobiliare.it",
+    d: [tip, MM_ST[st]?.[0], piano ? (piano === "T" ? "piano terra" : piano === "R" ? "rialzato" : piano === "S" ? "seminterrato" : piano + "° piano") : "", asc ? "ascensore" : "", ...[...ex].map(x => MM_EX[x]), priv ? "privato" : ""].filter(Boolean).join(", ") }));
+  const tro = TERR.annunci.lista.map(a => {
     const g = G[a.id] || (a.micro ? (m => [m.lon, m.lat, 1])(M.find(m => m.n === a.micro)) : null);
-    return { ...a, lon: g ? g[0] : null, lat: g ? g[1] : null, appross: g ? !!g[2] : true, mq2: a.p / a.mq, url: TERR.annunci.url + a.id };
+    return { ...a, lon: g ? g[0] : null, lat: g ? g[1] : null, appross: g ? !!g[2] : true, mq2: a.p / a.mq, url: TERR.annunci.url + a.id, fonte: "Trovit" };
   });
+  const out = [...imm, ...tro];
+  if (!MM_GEO_RUN) MM_ANN = out;
+  return out;
 }
 let MM_GEO_RUN = false;
 async function mmGeocodifica() {   // 1 richiesta al secondo, come chiede OpenStreetMap; i risultati restano salvati nel telefono
@@ -491,7 +503,7 @@ async function mmGeocodifica() {   // 1 richiesta al secondo, come chiede OpenSt
         const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=it&q=${encodeURIComponent(a.via + ", Milano")}`, { headers: { "Accept-Language": "it" } });
         const L = await r.json(), g = mmAnnGeo();
         g[a.id] = L[0] ? [+(+L[0].lon).toFixed(5), +(+L[0].lat).toFixed(5)] : 0;
-        store.set("geo_ann", g);
+        store.set("geo_ann", g); MM_ANN = null;
         if (MM.map && MM.map.getSource("ann")) MM.map.getSource("ann").setData(mmAnnFC());
       } catch (e) { break; }
       await new Promise(r => setTimeout(r, 1100));
@@ -508,7 +520,7 @@ function mmAnnLayer(map) {
     paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 16, 8], "circle-color": "#ff2bd6", "circle-stroke-color": "#ffffff", "circle-stroke-width": 1.2, "circle-opacity": 0.95 } });
   map.on("click", "ann", e => { const f = e.features[0]; if (!f) return; const a = mmAnnunci().find(x => x.id === f.properties.id); if (!a) return;
     e.originalEvent.__ann = true;
-    const box = $("#mmsheet"); box.innerHTML = `<button class="mmx" data-close aria-label="Chiudi">✕</button><div class="loc">Annuncio in vendita</div>
+    const box = $("#mmsheet"); box.innerHTML = `<button class="mmx" data-close aria-label="Chiudi">✕</button><div class="loc">Annuncio in vendita · ${a.fonte}</div>
       <h3 class="mmt">${esc(a.via || "Milano")}</h3><div class="offer" style="margin-top:8px"><div><small>Prezzo</small><b>${eur(a.p)}</b><em>${a.mq} m² · ${a.loc || "?"} locali</em></div>
       <div><small>Al m²</small><b class="cy">${eur(a.mq2)}</b><em>prezzo richiesto</em></div><div><small>Microzona</small><b style="font-size:15px">${esc(mmMicroAt(a.lon, a.lat)?.n || "—")}</b><em>${eur(mmMicroAt(a.lon, a.lat)?.v)}/m²</em></div></div>
       <p class="note">${esc(a.d)}</p><div class="btns"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio</a></div>`; box.hidden = false; });
@@ -522,7 +534,10 @@ function mmComps(ctx, q) {
     if (a.lat != null) d = hav(s.lat, s.lon, a.lat, a.lon) + (a.appross ? 400 : 0);
     else if (a.mun && a.mun === mun) d = 2500;
     return { ...a, dist: d };
-  }).filter(a => a.dist != null && a.dist < 3000).sort((a, b) => a.dist - b.dist || Math.abs(a.mq - mq) - Math.abs(b.mq - mq)).slice(0, 8);
+  }).filter(a => a.dist != null && a.dist < 3000)
+    .sort((a, b) => (a.dist + Math.abs(a.mq - mq) * 15) - (b.dist + Math.abs(b.mq - mq) * 15)).slice(0, 10);
   if (!c.length) return null;
-  return { lista: c, med: median(c.map(a => a.mq2)) };
+  // prezzo "come se fosse in stato buono": tolgo l'effetto dello stato dichiarato nell'annuncio
+  const norm = c.filter(a => a.st && a.dist < 1500).map(a => a.mq2 / MM_ST[a.st][1]);
+  return { lista: c, med: median(c.map(a => a.mq2)), norm: norm.length >= 5 ? median(norm) : null, nNorm: norm.length };
 }

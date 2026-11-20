@@ -1,0 +1,1019 @@
+# Immobiliare.it, annunci in vendita Milano città letti il 20/11/2026 (fasce di prezzo fino a 196.000 €)
+# id;prezzo;mq;locali;bagni;piano;ascensore;stato(N/O/B/R);tipologia;lat;lon;indirizzo;microzona;comune;privato;extra(b balcone,t terrazzo,c cantina,a arredato,d doppia esp.,i esp. interna)
+119598469;449000;71;2 - 5;;;0;;Progetto;45.44500;9.15540;Via Giovanni Enrico Pestalozzi, 21;Barona;Milano;0;
+134501971;437000;65;2;1;T;1;N;Bilocale;45.46740;9.15550;Via Michelangelo Buonarroti;Vercelli - Wagner;Milano;0;i
+134475477;1150000;170;4;2;3;1;R;Quadrilocale;45.45530;9.15680;Via Cola di Rienzo, 38;Solari;Milano;0;bcd
+134665423;293000;46;2;1;R;0;N;Bilocale;45.48690;9.22380;Viale Lombardia;Casoretto;Milano;0;ci
+133473932;399000;70;3;1;4;1;O;Trilocale;45.48940;9.15310;Viale Certosa;Ghisolfa - Mac Mahon;Milano;0;ca
+133379356;520000;135;4;2;4;1;B;Quadrilocale;45.42900;9.20280;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;bcd
+133181532;162000;52;2;2;T;1;O;Bilocale;45.42650;9.25110;Via Rogoredo 113/A;Santa Giulia;Milano;0;i
+132812820;340000;90;3;1;1;1;B;Trilocale;45.49420;9.12600;Via Delle Ande;Gallaratese;Milano;0;bcd
+132531862;735000;130;3;2;T;1;O;Trilocale;45.45760;9.15502;Via Giorgio Washington;Washington;Milano;0;
+131174366;310000;60;2;1;T;1;B;Bilocale;45.49100;9.21280;Via Soperga;Pasteur;Milano;0;i
+134935331;430000;75;3;1;S;1;O;Trilocale;45.47000;9.21984;Via Ceradini, 18;Plebisciti - Susa;Milano;0;ad
+134672807;399000;115;3;1;2;1;B;Trilocale;45.50260;9.21100;Via Emilio De Marchi;Greco - Segnano;Milano;0;bcd
+133557262;279000;74;3;1;R;1;O;Trilocale;45.47340;9.14220;Via Carlo Dolci;San Siro;Milano;0;c
+133244530;800000;85;2;1;6;1;O;Bilocale;45.46210;9.20500;Corso di Porta Vittoria;Guastalla;Milano;0;a
+132096140;195000;42;1;1;7;1;B;Monolocale;45.47400;9.14280;Via Privata Martiri Triestini;San Siro;Milano;0;ti
+130764134;201500;60;2 - 4;;;0;;Progetto;45.46040;9.07950;Via Cusago, 96;Baggio;Milano;0;
+130235170;730000;149;4;2;8;1;R;Quadrilocale;45.46840;9.12990;Via Celio;San Siro;Milano;0;bc
+129865952;219000;55;3;1;2;0;R;Trilocale;45.50110;9.16350;Via Ercole Ricotti;Bovisa;Milano;0;c
+129263986;417600;85;2 - 3;;;0;;Progetto;45.45380;9.24420;Via Gianfranco Malipiero, 12;Viale Ungheria - Mecenate;Milano;0;
+128810126;680000;80;3;1;3;0;O;Trilocale;45.46680;9.20740;Viale Premuda;Piave - Tricolore;Milano;0;d
+128337518;175000;45;2;1;T;0;O;Bilocale;45.50890;9.23610;Via Ponte Nuovo;Ponte Nuovo;Milano;0;ai
+127923680;2200000;185;5;3;19;1;O;Appartamento;45.47860;9.19695;Piazza della Repubblica;Repubblica;Milano;0;btcd
+127216559;190000;50;2;1;T;0;O;Bilocale;45.50340;9.12270;Viale Certosa;Musocco;Milano;0;cad
+116426109;876000;128;3 - 4;;;0;;Progetto;45.49390;9.20940;Via Cristoforo Gluck, 46;Cascina dei Pomi;Milano;0;
+112617481;4600000;600;5+;3+;3;0;B;Appartamento;45.44850;9.17694;ALZAIA NAVIGLIO PAVESE 60;Navigli - Darsena;Milano;0;btcd
+133293328;134000;39;1;1;S, 3;1;B;Monolocale;45.52600;9.17450;Viale Mario Rapisardi;Bruzzano;Milano;0;bcai
+112886759;143000;42;1 - 3;;;0;;Progetto;45.40400;9.16950;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+127148715;149000;45;2;1;4 - 5;0;R;Bilocale;45.51970;9.22310;Via Fortezza;Villa San Giovanni;Milano;0;b
+130494454;135000;51;2;1;4;1;B;Bilocale;45.50120;9.13550;Via Barnaba Oriani, 31, 20156 Milano MI, Italia;Certosa;Milano;0;bd
+134133619;129000;25;1;1;4;0;B;Monolocale;45.45410;9.22679;Via Paolo Maspero 30;Molise - Cuoco;Milano;0;bi
+133327390;150000;30;1;1;3;1;O;Monolocale;45.45620;9.24326;Via Mecenate;Viale Ungheria - Mecenate;Milano;0;bai
+133248944;139000;45;1;1;S;1;O;Monolocale;45.46990;9.13240;Via Linda Malnati;San Siro;Milano;0;ad
+134818089;137000;25;1;1;1;1;O;Monolocale;45.43710;9.20260;Via Gian Francesco Pizzi;Ripamonti - Fondazione Prada;Milano;0;a
+130919324;135000;31;1;1;5;1;B;Monolocale;45.43690;9.21380;Via Marco D'Agrate 19;Corvetto;Milano;0;b
+129577574;139000;37;1;1;1;0;B;Monolocale;45.43340;9.20190;Via dell'Assunta;Vigentino - Fatima;Milano;0;ai
+130875592;139000;27;1;1;3;0;B;Monolocale;45.48620;9.23230;Via Nicola Antonio Porpora;Casoretto;Milano;0;cai
+131340182;140000;46;2;1;T;1;B;Bilocale;45.40660;9.17313;Via saponaro;Gratosoglio;Milano;0;a
+132812954;149000;35;1;1;6;1;R;Monolocale;45.50400;9.17560;Via Giuseppe Tartini;Dergano;Milano;0;b
+132418948;155000;20;1;1;5;1;B;Mansarda;45.48080;9.23300;Via alfonso corti 30;Città Studi;Milano;0;tcai
+134055399;155000;52;2;1;2;0;B;Bilocale;45.51830;9.15398;Via Bovisasca;Bovisasca;Milano;0;b
+132418920;109000;17;1;1;5;1;B;Mansarda;45.48280;9.22640;Via AMPERE 40;Città Studi;Milano;0;ai
+129387976;139000;35;1;1;5;1;B;Monolocale;45.43080;9.20200;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;ai
+133403916;105000;15;1;1;4;0;R;Mansarda;45.44460;9.21020;via Brembo;Ripamonti - Fondazione Prada;Milano;0;i
+133251010;118000;30;1;1;R;1;;Monolocale;45.50670;9.23890;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;0;bai
+128668898;130000;30;1;1;T;1;O;Monolocale;45.43290;9.17620;Via Anna Neera;Cermenate - Abbiategrasso;Milano;0;i
+132811548;135000;30;1;1;2;0;B;Monolocale;45.43340;9.20190;Via dell'Assunta;Vigentino - Fatima;Milano;0;a
+134933033;148000;15;1;1;T;0;B;Monolocale;45.45100;9.19100;Viale Bligny;Bocconi;Milano;0;i
+129983512;139000;39;2;1;T;0;O;Bilocale;45.46700;9.09190;Via Capri;Baggio;Milano;0;i
+133900949;155000;47;2;1;3;0;B;Bilocale;45.43810;9.22870;Viale Eugenio Brizi;Corvetto;Milano;0;d
+126130275;154000;35;1;1;S, 3;1;B;Monolocale;45.43680;9.21410;Via Marco d'Agrate;Corvetto;Milano;0;bc
+134565817;148000;28;1;1;4;1;;Monolocale;45.45690;9.24230;Via Mecenate;Viale Ungheria - Mecenate;Milano;0;b
+132339268;143000;42;1;1;T;1;N;Monolocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+133892953;153000;36;1;1;4;0;B;Monolocale;45.49900;9.14970;Via Console Marcello;Certosa;Milano;0;bai
+134610945;149000;30;2;1;1;1;R;Bilocale;45.43080;9.17890;Via Medeghino;Cermenate - Abbiategrasso;Milano;0;bi
+129758606;143000;40;2;1;2;0;R;Bilocale;45.49770;9.23100;Via Terenzio Mamiani;Cimiano;Milano;0;i
+134499507;154000;50;2;1;T;1;N;Bilocale;45.49700;9.14319;via baldo degli Ubaldi 6;Certosa;Milano;0;d
+134856369;120000;21;1;1;5;1;O;Monolocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
+134854987;110000;21;1;1;5;1;O;Monolocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;a
+134902223;139000;41;2;1;2;0;B;Mansarda;45.52950;9.17283;Via alberico da barbiano;Bruzzano;Milano;0;a
+134412049;139000;25;1;1;1;1;O;Monolocale;45.50010;9.22236;Via Matteo Maria Boiardo 11;Turro;Milano;0;ai
+125444687;150000;38;1;1;T;1;B;Monolocale;45.46970;9.13900;Via Daniele Ricciarelli;San Siro;Milano;0;
+134408267;150000;35;2;1;4;1;B;Bilocale;45.49290;9.22770;Via Arquà;Parco Trotter;Milano;0;b
+131347030;128000;27;1;1;1;0;O;Monolocale;45.51080;9.24740;Via San Mamete;Quartiere Adriano;Milano;0;
+128884444;145000;30;;1;T;0;R;Loft;45.49270;9.21650;Via Giulio e Corrado Venini;Pasteur;Milano;0;i
+124896127;135000;58;2;1;4;0;O;Bilocale;45.51370;9.13640;Via Michele Lessona;Vialba;Milano;0;bcd
+130988028;157000;60;3;1;T;0;O;Trilocale;45.45910;9.11340;Via Creta;Bisceglie;Milano;0;i
+133343146;110000;30;1;1;T;1;O;Monolocale;45.46440;9.09250;Via Giuseppe Galliano;Baggio;Milano;0;ad
+132369316;135000;18;1;1;T;0;R;Monolocale;45.47000;9.22820;Via Cesare Tallone;Città Studi;Milano;0;ci
+133474690;99000;19;1;1;1;0;O;Monolocale;45.48630;9.23240;Via Nicola Antonio Porpora 161/interna;Casoretto;Milano;0;cai
+134253089;118000;30;1;1;5;0;O;Monolocale;45.48620;9.23230;Via Nicola Antonio Porpora;Casoretto;Milano;0;ai
+132259338;155000;50;2;1;3;1;O;Bilocale;45.51640;9.14290;Via Maria Melato;Vialba;Milano;0;bc
+129488744;105000;30;1;1;T;1;O;Monolocale;45.50840;9.13100;Via Giorgio Stephenson;Quarto Oggiaro;Milano;0;i
+133190944;139000;36;1;1;6;1;R;Monolocale;45.50710;9.17920;Via Trevi;Dergano;Milano;0;bi
+133549666;149000;40;2;1;S;0;O;Bilocale;45.43020;9.17810;Piazza Abbiategrasso;Cermenate - Abbiategrasso;Milano;0;i
+134606257;145000;50;2;1;R;1;R;Bilocale;45.46730;9.09210;Via Capri;Baggio;Milano;0;bi
+134778777;149000;40;1;1;R;1;R;Monolocale;45.43900;9.19950;Via Tirso;Ripamonti - Fondazione Prada;Milano;0;cai
+133731512;151380;58;2;;R;0;R;Appartamento;45.47387;9.21858;Via Giovanni Pascoli;Città Studi;Milano;0;bcd
+134912075;135000;30;1;1;5;1;O;Monolocale;45.49680;9.21970;Viale Monza;Rovereto;Milano;0;cai
+134557073;95000;20;1;1;1;1;B;Monolocale;45.50970;9.22740;Via Val di Non;Precotto;Milano;0;bi
+133798034;119000;51;1;;3;0;R;Monolocale;45.48580;9.22970;Via Teodosio;Città Studi;Milano;0;ti
+134677129;128000;45;1;1;T;1;O;Monolocale;45.43770;9.12320;Via Lodovico il Moro;Tre Castelli - Faenza;Milano;0;cai
+133891520;85000;25;1;1;T;0;B;Monolocale;45.42510;9.20330;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;a
+134821105;155000;26;1;1;R;1;O;Monolocale;45.43690;9.15998;viale Famagosta, 28;Famagosta;Milano;0;ca
+133797464;149000;34;1;1;2;0;B;Monolocale;45.49250;9.14800;Piazzale Accursio , 4;Certosa;Milano;0;b
+132230058;120000;35;2;1;T;0;B;Bilocale;45.49430;9.14160;Viale Certosa 105;Certosa;Milano;0;
+129757252;155000;38;1;1;1;0;B;Monolocale;45.43290;9.22223;Via Ravenna 48;Corvetto;Milano;0;bcai
+132445468;99000;32;1;1;T;1;R;Monolocale;45.51750;9.22370;Via Vipacco 21;Villa San Giovanni;Milano;0;ci
+126276121;137000;46;2;1;T;1;O;Bilocale;45.41890;9.15800;Via del Mare;Cantalupa - San Paolo;Milano;0;ad
+133889912;139000;20;1;1;3;0;O;Monolocale;45.48950;9.21930;Via Guido Guinizelli;Pasteur;Milano;0;ai
+132437036;140000;58;1;;T;0;B;Monolocale;45.52420;9.16140;Via Val di Bondo;Comasina;Milano;0;c
+129357122;149000;40;2;1;1;0;R;Bilocale;45.51020;9.22990;Via VAL GARDENA 25;Precotto;Milano;0;bc
+133281586;129000;35;1;1;T;1;O;Monolocale;45.50160;9.18080;Via Legnone;Dergano;Milano;0;a
+134901851;149000;52;2;1;2;0;O;Bilocale;45.53230;9.16170;Via Comasina;Comasina;Milano;0;bai
+128552676;145000;32;1;1;T;0;R;Loft;45.49200;9.21620;Via Giulio e Corrado Venini;;Milano;0;i
+133741428;107000;32;1;1;T;0;O;Monolocale;45.49110;9.09960;Via Ratti;Trenno;Milano;0;
+132046224;155000;45;2;1;2;0;B;Bilocale;45.50980;9.21290;Via Antonio Angeleri;Bicocca;Milano;0;cai
+134604751;155000;40;2;1;T;1;O;Bilocale;45.46610;9.08380;Via Ugo Frigerio;Baggio;Milano;0;ad
+134794695;133000;44;2;1;T;0;B;Bilocale;45.44450;9.26340;Via Elio Vittorini;Ponte Lambro;Milano;0;ai
+134660907;98250;60;3;;4;0;B;Appartamento;45.44797;9.12699;Via Angelo Inganni;Inganni;Milano;0;
+130142664;133000;48;2;1;2;0;O;Bilocale;45.51220;9.13318;VIA ANTONIO ALDINI;Vialba;Milano;0;
+124631551;137000;46;2;1;T;1;O;Bilocale;45.41900;9.15828;VIA DEL MARE ;Cantalupa - San Paolo;Milano;0;a
+130118090;149000;53;2;1;1;0;B;Bilocale;45.46050;9.07980;Via Cusago;Baggio;Milano;0;d
+131619476;110000;40;2;1;R;1;B;Bilocale;45.42690;9.25111;Via Busseto 4;Santa Giulia;Milano;0;ta
+130171124;109000;30;1;1;1;0;O;Monolocale;45.51230;9.12721;Via Giovanni Battista Grassi;Vialba;Milano;0;a
+130120384;135000;20;1;1;S;0;B;Monolocale;45.46610;9.21040;Via Pietro Calvi;Piave - Tricolore;Milano;0;i
+132441532;135000;58;2;1;S;0;O;Bilocale;45.52880;9.17030;Via Antonio Oroboni;Bruzzano;Milano;0;i
+133463100;155000;41;2;1;T;1;O;Bilocale;45.46610;9.08380;Via Ugo Frigerio;Baggio;Milano;0;ad
+133505696;110000;24;1;1;T;0;B;Monolocale;45.48900;9.20533;Via Sammartini;Centrale;Milano;0;
+124735221;137000;46;2;1;T;0;O;Bilocale;45.41890;9.15790;Via del Mare;Cantalupa - San Paolo;Milano;0;ad
+98273332;110000;40;1;1;8;1;B;Monolocale;45.41000;9.17390;Via Michele Saponaro;Gratosoglio;Milano;0;i
+134565195;41625;120;5;;1;1;B;Appartamento;45.47534;9.18586;via Palermo;Moscova;Milano;0;btcd
+134803441;129751;71;3;;1;1;B;Appartamento;45.52661;9.20524;Arezzo;Bignami - Ponale;Milano;0;btcd
+134871969;98250;60;3;;1;1;B;Appartamento;45.44793;9.12692;Via Angelo Inganni;Inganni;Milano;0;btcd
+134605303;105000;53;2;;R;0;B;Appartamento;45.52995;9.17143;Via Pesaro;Bruzzano;Milano;0;c
+134839139;98251;60;3;;1;1;B;Appartamento;45.44793;9.12692;Via Angelo Inganni;Inganni;Milano;0;btcd
+130990270;140000;45;2;1;2;1;B;Bilocale;45.51790;9.17590;Via Annibal Caro;Affori;Milano;0;bc
+134563693;135000;20;1;1;T;0;O;Monolocale;45.50290;9.14820;Via Michele Pericle Negrotto;Bovisa;Milano;0;ai
+134812965;135000;34;1;1;2;1;R;Monolocale;45.49980;9.18560;Via Benigno Crespi;Dergano;Milano;0;bci
+132467086;155000;40;2;1;2;0;O;Bilocale;45.46920;9.13881;Via Felice Bisleri;San Siro;Milano;0;b
+133272868;129750;71;3;;R;0;B;Appartamento;45.52662;9.20526;Via Arezzo;Bignami - Ponale;Milano;0;c
+133544410;155000;45;2;1;T;1;O;Bilocale;45.51590;9.18740;Via Val d'Ossola;Niguarda;Milano;0;i
+134353499;140000;50;2;1;S;1;B;Bilocale;45.42540;9.20400;Via Fryderyk Chopin;Vigentino - Fatima;Milano;0;ai
+131381382;149000;40;1;1;6;1;O;Monolocale;45.43690;9.21277;VIA MARCO D' AGRATE;Corvetto;Milano;0;ba
+133907239;150000;28;3;1;3;0;B;Trilocale;45.49080;9.15307;Viale Monte Ceneri;Ghisolfa - Mac Mahon;Milano;0;a
+133797486;157000;50;2;1;T;0;O;Appartamento;45.50179;9.23397;Via Agordat;Cimiano;Milano;1;
+126549257;105000;53;1;1;T;0;R;Monolocale;45.44420;9.26550;Via umiliati;Ponte Lambro;Milano;0;c
+134387541;120000;40;2;1;1;0;B;Bilocale;45.52210;9.16940;Via Terracina;Affori;Milano;0;ai
+130487090;142000;30;1;1;3;1;B;Monolocale;45.43700;9.21602;Piazza angilberto 8;Corvetto;Milano;0;ai
+131601082;149000;40;2;1;T;0;R;Bilocale;45.46230;9.09099;Via Dalmine;Baggio;Milano;0;i
+128433330;110000;20;1;1;T;1;B;Monolocale;45.45470;9.22492;Via Abetone 6;Molise - Cuoco;Milano;0;
+134848193;119000;30;1;1;R;1;O;Monolocale;45.49700;9.22600;Via Angelo Mosso;Turro;Milano;0;cai
+129063918;147000;35;2;1;2;0;B;Bilocale;45.43030;9.24647;Via Monte Piana 5/B;Santa Giulia;Milano;0;cai
+133756392;149000;39;1;1;7;1;B;Monolocale;45.52610;9.17410;Viale Rapisardi;Bruzzano;Milano;0;bca
+132066878;100000;55;2;1;2;0;B;Bilocale;45.51340;9.19130;Via Graziano Imperatore 29;Niguarda;Milano;0;bci
+130813430;149000;31;1;1;2;1;B;Monolocale;45.43260;9.24467;Via Monte Palombino;Santa Giulia;Milano;0;
+130672594;155000;50;1;1;S;1;B;Monolocale;45.50710;9.17910;Via Trevi;Dergano;Milano;0;i
+133887274;135000;35;1;1;2;1;R;Monolocale;45.44850;9.13929;Via dei Biancospini;Giambellino;Milano;0;bc
+128194988;110000;20;1;1;7;1;O;Monolocale;45.45190;9.21150;Via Friuli;Porta Romana - Medaglie d'Oro;Milano;0;
+132150186;98000;28;1;1;5;1;O;Monolocale;45.49200;9.22780;Via Ruggero Leoncavallo 37;Parco Trotter;Milano;0;ai
+132260672;150000;36;1;1;T;1;O;Monolocale;45.45910;9.11210;Via della Martinella;Bisceglie;Milano;0;ai
+130120694;155000;79;2;1;S;1;O;Bilocale;45.46910;9.13800;Via Daniele Ricciarelli;San Siro;Milano;0;ci
+129842232;144000;27;1;1;1;0;B;Monolocale;45.45070;9.22060;Via SEBINO 17;Martini - Insubria;Milano;0;i
+133827556;105000;43;1;1;1;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;cd
+130842888;129000;38;2;1;T;0;R;Bilocale;45.50730;9.16420;Via Enrico Cosenz;Bovisa;Milano;0;i
+127280815;139000;30;1;1;1;0;O;Monolocale;45.49580;9.13840;Viale Certosa;Certosa;Milano;0;ca
+131911320;149000;70;1;1;S;0;R;Monolocale;45.46090;9.23130;Via Luigi Calamatta;Porta Vittoria;Milano;0;
+131344580;140000;40;2;1;1;0;R;Bilocale;45.49100;9.25260;Via Canelli;Parco Lambro;Milano;0;a
+132665072;150000;50;2;1;R;1;O;Bilocale;45.43940;9.26471;Via Guido Ucelli di Nemi 43;Ponte Lambro;Milano;0;cd
+124362421;129000;50;2;1;T;0;B;Bilocale;45.46220;9.08590;Via Cusago;Baggio;Milano;0;i
+133586648;139000;45;2;1;5;0;B;Bilocale;45.45190;9.22279;Via Emilio Faà di Bruno 5;Martini - Insubria;Milano;0;i
+125736819;149000;62;2;1;2;0;B;Bilocale;45.44150;9.26540;Via umiliati 21;Ponte Lambro;Milano;0;a
+119479771;150000;36;1;1;T;1;O;Monolocale;45.45910;9.11210;Via della Martinella;Bisceglie;Milano;0;ai
+133505512;150000;48;2;1;T;0;B;Bilocale;45.43030;9.24657;Via Monte Piana;Santa Giulia;Milano;0;
+124048379;115000;30;1;1;5;1;R;Monolocale;45.47050;9.24520;Via Tucidide;Ortica;Milano;0;
+129418042;150000;50;2;1;T;0;B;Bilocale;45.52560;9.17510;Viale Mario Rapisardi;Bruzzano;Milano;0;i
+132345308;145000;60;3;1;2;0;B;Trilocale;45.44290;9.26310;Via Carlo Parea;Ponte Lambro;Milano;0;bca
+133031632;150000;25;1;1;4;0;R;Monolocale;45.43870;9.18180;Via Francesco Brioschi;Pezzotti - Meda;Milano;0;cai
+131287050;156000;52;2;1;T;0;B;Bilocale;45.43390;9.22470;Viale Omero;Corvetto;Milano;0;b
+130590334;89000;35;1;1;1, 4;0;B;Monolocale;45.49660;9.22960;Via Francesco Cavezzali;Turro;Milano;0;a
+127001897;65000;20;1;1;6;0;B;Monolocale;45.49660;9.22960;Via Francesco Cavezzali;Turro;Milano;0;ai
+131273518;129000;30;1;1;2;1;B;Monolocale;45.43680;9.21350;Via Marco d'Agrate;Corvetto;Milano;0;bi
+133920931;109000;41;2;1;R;0;R;Bilocale;45.50440;9.23190;Via Liscate, 6, 20128 Milano MI, Italia;Gorla;Milano;0;c
+133158238;145000;25;1;1;T;0;O;Monolocale;45.49270;9.22800;Via Arquà;Parco Trotter;Milano;0;ai
+130621600;155000;45;2;1;S;0;B;Bilocale;45.51550;9.18788;Via Val d'Ossola;Niguarda;Milano;0;
+131254714;130000;49;1;1;R;1;R;Monolocale;45.47060;9.13970;Via Giacinto Gigante;San Siro;Milano;0;bcai
+125194229;72000;25;1;1;7;0;O;Monolocale;45.49660;9.22960;Via Francesco Cavezzali;Turro;Milano;0;i
+130521304;155000;51;1;1;T;0;B;Monolocale;45.49800;9.13320;Via Tibullo;Certosa;Milano;0;d
+134000671;135000;50;2;1;2;0;R;Bilocale;45.44350;9.26626;Via camaldoli 2;Ponte Lambro;Milano;0;bd
+133368686;140000;45;1;1;3;0;O;Monolocale;45.49670;9.13450;Via catullo;Certosa;Milano;0;
+131078220;155000;43;2;1;R;1;B;Bilocale;45.46100;9.10756;Via Breganze;San Carlo;Milano;0;b
+127664874;84000;27;1;1;S;0;B;Monolocale;45.46220;9.07810;Via Privata Rieti;Baggio;Milano;0;t
+134827503;130000;51;2;1;4;1;R;Bilocale;45.49360;9.14330;Viale Certosa;Certosa;Milano;0;bc
+133775198;149000;41;2;1;S;1;B;Bilocale;45.46540;9.21520;V. Archimede, 42, 20129 Milano MI, Italia;Indipendenza;Milano;0;a
+133178938;150000;45;2;1;1;0;O;Bilocale;45.51330;9.13585;Via Antonio Aldini;Vialba;Milano;0;bi
+132335058;139000;40;2;1;T;1;O;Bilocale;45.52380;9.17370;Via Caltagirone;Bruzzano;Milano;0;d
+128209082;105000;40;1;1;S;1;B;Monolocale;45.51000;9.13340;Via V Maggio;Quarto Oggiaro;Milano;0;a
+134006811;111000;45;1;1;1;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;cd
+133698048;119000;45;2;1;R;0;O;Bilocale;45.51980;9.13010;Via Val Lagarina 25;Roserio;Milano;0;bci
+134348289;125000;53;2;1;1;0;O;Bilocale;45.51740;9.14420;Via Privata Raffaele Calzini 6;Vialba;Milano;0;bi
+134337839;139000;45;2;1;T;0;B;Bilocale;45.48750;9.23340;Via Eugenio Carpi;Casoretto;Milano;0;cd
+125579443;95000;35;1;1;T;0;B;Monolocale;45.51220;9.13300;Via Piombino 2;Vialba;Milano;0;i
+134045015;135000;53;2;1;1;0;B;Bilocale;45.51730;9.14380;Via Privata Raffaele Calzini 4;Vialba;Milano;0;bi
+118622119;89000;35;1;1;7;0;B;Monolocale;45.49660;9.22960;Via Francesco Cavezzali;Turro;Milano;0;i
+128843504;149000;40;2;1;T;0;O;Bilocale;45.50910;9.13160;Via Giovanni Ameglio 5;Quarto Oggiaro;Milano;0;i
+134910945;110000;44;2;1;3;0;O;Bilocale;45.50900;9.12260;Via Triboniano, 133, 20156 Milano MI, Italia;Musocco;Milano;0;bai
+134519951;142000;50;2;1;3;0;R;Bilocale;45.49760;9.13340;Via Tibullo;Certosa;Milano;0;c
+133895361;115000;27;1;1;1;0;B;Monolocale;45.42680;9.25100;Via Busseto;Santa Giulia;Milano;0;
+134912523;120000;50;2;1;S;1;O;Loft;45.43930;9.21520;Via Arcivescovo Romilli;Corvetto;Milano;0;c
+134051271;135000;43;2;1;6;1;B;Bilocale;45.51290;9.13620;Via Antonio Aldini 16;Vialba;Milano;0;b
+131379900;145000;66;2;1;S;0;O;Bilocale;45.50050;9.22170;Via Matteo Maria Boiardo;Turro;Milano;0;
+128514156;127000;25;1;1;5;1;B;Monolocale;45.49240;9.21520;Via Nino Oxilia, 13, 20125 Milano MI, Italia;Pasteur;Milano;0;i
+129647570;149000;50;2;1;1;0;N;Bilocale;45.49670;9.13450;Via catullo;Certosa;Milano;0;ci
+131123740;85000;70;3;1;5;1;B;Trilocale;45.42690;9.25060;V. Rogoredo, 103, 20138 San Donato Milanese MI, Italia;Santa Giulia;Milano;0;bad
+127359821;119000;22;1;1;R;0;B;Monolocale;45.50390;9.17430;Via Bernardo Davanzati;Dergano;Milano;0;b
+134669553;115000;42;1;1;T;0;B;Monolocale;45.47630;9.09060;Via Di Vittorio;Quinto Romano;Milano;0;ca
+124407519;127000;35;1;1;1;0;O;Monolocale;45.49690;9.13440;Via catullo;Certosa;Milano;0;
+132841302;128000;39;1;1;1;1;B;Monolocale;45.51460;9.14296;Via Piero Montagnani Marelli;Vialba;Milano;0;tca
+123687973;149000;76;3;1;S;1;B;Loft;45.51840;9.19226;Via Palanzone;Niguarda;Milano;0;a
+134600563;130000;32;1;1;S;0;O;Monolocale;45.48510;9.23340;Via Astolfo;Città Studi;Milano;0;i
+131032758;138000;38;2;1;R;1;R;Bilocale;45.43880;9.22790;Via Carlo Marochetti;Corvetto;Milano;0;ci
+125749953;139000;33;1;1;R;1;B;Monolocale;45.51560;9.18872;Via val di ledro;Niguarda;Milano;0;a
+133836232;138500;25;2;1;R;1;O;Bilocale;45.49890;9.18390;Via Carlo Imbonati, 9, 20159 Milano MI, Italia;Dergano;Milano;0;ai
+133519648;155000;60;3;1;S;0;B;Trilocale;45.45310;9.22550;Via Monte Velino;Molise - Cuoco;Milano;0;i
+133374568;50000;50;2;1;S;0;B;Open space;45.43820;9.19270;Via Bernardino Verro;Ripamonti - Fondazione Prada;Milano;0;i
+132029188;115000;30;1;1;7;1;B;Monolocale;45.47050;9.24520;Via Tucidide;Ortica;Milano;0;
+129974402;110000;30;1;1;1;1;O;Monolocale;45.49190;9.22770;Via Ruggero Leoncavallo;Parco Trotter;Milano;0;ai
+132416914;125000;23;1;1;2;1;B;Monolocale;45.43460;9.23593;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
+132190324;139000;55;2;1;3;0;B;Bilocale;45.51130;9.19510;Via Ciriè;Prato Centenaro;Milano;0;bc
+130089282;149000;165;4;2;S;1;B;Loft;45.42648;9.25099;Via Rogoredo;Santa Giulia;Milano;1;
+128941170;150000;55;2;1;2;0;R;Bilocale;45.46120;9.09380;Via Francesco Rismondo;Baggio;Milano;0;ad
+134603883;125000;25;1;1;2;0;R;Monolocale;45.49080;9.15310;Viale Monte Ceneri;Ghisolfa - Mac Mahon;Milano;0;
+134672567;118000;33;1;1;1;0;R;Monolocale;45.51520;9.16930;Via Enrico Cialdini;Affori;Milano;0;i
+132601424;109000;30;1;1;S;1;O;Monolocale;45.50840;9.13100;Via Giorgio Stephenson;Quarto Oggiaro;Milano;0;i
+133626244;140000;37;2;1;T;1;R;Bilocale;45.43880;9.22789;Via Carlo Marochetti;Corvetto;Milano;0;ci
+127880828;149000;40;2;1;3;1;B;Bilocale;45.51880;9.13560;Via Carlo Amoretti;Roserio;Milano;0;ai
+127730970;155000;51;2;1;S, T;1;N;Bilocale;45.51250;9.15750;Via Dante Chiasserini;Bovisasca;Milano;0;cd
+133205848;85000;15;1;1;4;1;B;Monolocale;45.45310;9.21780;Via Ennio;Martini - Insubria;Milano;0;a
+132462032;148000;35;1;1;1;1;O;Monolocale;45.46050;9.10816;Via delle Forze Armate;San Carlo;Milano;0;bca
+132462370;129000;31;1;1;3;0;B;Monolocale;45.46130;9.11036;Via Del Mella;San Carlo;Milano;0;b
+134814515;155000;40;2;1;T;1;O;Bilocale;45.50130;9.23450;Via Agordat;Cimiano;Milano;0;a
+130623670;150000;60;2;1;3;0;B;Bilocale;45.50760;9.13380;Via Antonio Mambretti 5;Quarto Oggiaro;Milano;0;ci
+130623710;115000;50;2;1;T;1;B;Bilocale;45.52000;9.14200;Via Longarone 18//4;Roserio;Milano;0;c
+134140351;135000;35;1;1;1;1;;Monolocale;45.51360;9.19130;Via Graziano Imperatore 34;Niguarda;Milano;0;a
+132602066;125000;45;2;1;R;1;;Bilocale;45.51370;9.13640;Via Michele Lessona;Vialba;Milano;0;ci
+132296346;130000;40;1;1;T;0;O;Monolocale;45.50840;9.13080;Via Giorgio Stephenson 20;Quarto Oggiaro;Milano;0;i
+132504320;140000;55;2;1;1;1;B;Bilocale;45.50880;9.13280;Via Giorgio Stephenson 2;Quarto Oggiaro;Milano;0;bi
+132448138;120000;41;2;1;4;0;B;Bilocale;45.51240;9.12700;Via Giovanni Battista Grassi 5;Vialba;Milano;0;c
+125422075;120000;28;1;1;1;0;R;Monolocale;45.45340;9.21950;Piazza Insubria;Martini - Insubria;Milano;0;i
+128375478;150000;42;2;1;4;0;R;Bilocale;45.49990;9.18330;Via Carlo Imbonati;Dergano;Milano;0;d
+127343333;136000;40;1;1;3;1;B;Monolocale;45.50540;9.23830;Via Privata Giovanni Battista Carta 2;Ponte Nuovo;Milano;0;bca
+134724687;139000;53;2;1;R;1;R;Bilocale;45.52990;9.17150;Via Pesaro;Bruzzano;Milano;0;cad
+133603308;157000;35;1;1;2;0;O;Monolocale;45.52110;9.16914;Via Alessandro Astesani;Affori;Milano;0;b
+132956476;114000;33;1;1;2;0;R;Monolocale;45.51690;9.19555;Via Lanfranco della Pila 1;Niguarda;Milano;0;bi
+134528447;150000;15;1;1;6;1;O;Mansarda;45.46530;9.21450;Via Fratelli Bronzetti;Indipendenza;Milano;0;ai
+133102110;107000;32;1;1;T;0;B;Monolocale;45.49490;9.14741;Via Marcantonio dal Re 3;Certosa;Milano;0;ci
+131789878;105000;28;1;1;T;0;B;Monolocale;45.46840;9.09098;Via Privata Alessandro Scanini;Baggio;Milano;0;i
+131511292;145000;39;1;1;T;1;R;Monolocale;45.43890;9.22788;Via Carlo Marochetti 23;Corvetto;Milano;0;cai
+134017001;130000;30;1;1;T;1;N;Monolocale;45.49150;9.15280;Via Lorenzo Bartolini;Certosa;Milano;0;i
+130601664;135000;40;2;1;3;1;B;Bilocale;45.51880;9.13560;Via Carlo Amoretti;Roserio;Milano;0;a
+134017981;155000;30;1;1;3;0;O;Monolocale;45.48620;9.23230;Via Nicola Antonio Porpora;Casoretto;Milano;0;ai
+133193014;126000;37;1;1;5;0;B;Monolocale;45.43380;9.17810;Via Anton Giulio Barrili;Cermenate - Abbiategrasso;Milano;0;ai
+130333268;148000;28;1;1;4;1;B;Monolocale;45.45690;9.24230;Via Mecenate;Viale Ungheria - Mecenate;Milano;0;b
+133104918;139000;39;1;1;5;1;R;Monolocale;45.45080;9.22340;Piazzale Vincenzo Cuoco;Martini - Insubria;Milano;0;bca
+132178352;150000;30;1;1;4;1;O;Monolocale;45.49580;9.23870;Via Giorgio Marazzani;Cimiano;Milano;0;bai
+134863771;139000;45;2;1;2;1;R;Bilocale;45.50070;9.15066;Via Privata Riccione;Bovisa;Milano;0;bci
+134825655;125000;25;1;1;2;1;R;Monolocale;45.49080;9.15310;Viale Monte Ceneri;Ghisolfa - Mac Mahon;Milano;0;
+130662564;129000;30;1;1;1;1;B;Monolocale;45.49680;9.23890;Via Monfalcone;Cimiano;Milano;0;
+132361830;155000;36;1;1;8;1;O;Monolocale;45.50140;9.11510;Via Cefalù;Gallaratese;Milano;0;bca
+132295320;138000;45;2;1;5;0;R;Bilocale;45.49990;9.16856;Via degli Imbriani 30;Bovisa;Milano;0;c
+133106150;129000;30;1;1;T;0;O;Monolocale;45.45380;9.22540;Via Cadibona;Molise - Cuoco;Milano;0;i
+123710265;149000;60;2;1;5;1;R;Bilocale;45.50190;9.21220;Piazza Greco;Greco - Segnano;Milano;0;bca
+130736030;140000;38;1;;R;1;B;Appartamento;45.49633;9.20535;Via Gianni Caproni;Maggiolina;Milano;0;cd
+126859153;129000;40;1;1;T;0;B;Monolocale;45.47270;9.10960;Via Fratelli Zoia;Quarto Cagnino;Milano;0;ci
+134409631;145000;40;1;1;2;1;R;Monolocale;45.50040;9.14052;Viale Carlo Espinasse;Certosa;Milano;0;bci
+130922370;105000;20;1;1;4;1;O;Mansarda;45.46340;9.21340;Via Goffredo Mameli;Indipendenza;Milano;0;i
+128394384;145000;35;1;1;2;1;R;Monolocale;45.49770;9.21280;Viale delle Rimembranze di Greco 10;Cascina dei Pomi;Milano;0;bci
+127535402;89000;25;1;1;T;0;B;Monolocale;45.44900;9.17500;Via Emilio Gola;Navigli - Darsena;Milano;0;ai
+134253873;117000;20;1;1;1;1;O;Monolocale;45.47070;9.13420;Via Matteo Civitali;San Siro;Milano;0;ba
+134564119;80797;38;2;;3;0;B;Appartamento;45.43621;9.17908;Via de sanctis 33-35;;Milano;0;
+134555077;153000;45;2;1;1;0;B;Bilocale;45.46280;9.09055;Via pistoia;Baggio;Milano;0;b
+131910532;150000;50;2;1;R;0;B;Bilocale;45.44350;9.26380;Via Monte Oliveto;Ponte Lambro;Milano;0;bci
+133883196;102000;70;3;;2;0;B;Appartamento;45.47007;9.13861;Via Ricciarelli Daniele 20;;Milano;0;
+134830607;142339.5;91;5+;;1;0;B;Appartamento;45.51761;9.17528;Via Pietro Bembo;Affori;Milano;0;bc
+134794155;155000;43;2;1;5;1;B;Bilocale;45.45620;9.22640;Via Cesare Lombroso;Molise - Cuoco;Milano;0;ba
+133615736;131250;95;5;;3;0;B;Appartamento;45.45335;9.07857;Via dei Salici 67;;Milano;0;
+134412293;118000;40;1;1;R;0;O;Monolocale;45.44420;9.26550;Via degli Umiliati;Ponte Lambro;Milano;0;ci
+134498827;98250;60;3;;4;0;B;Appartamento;45.44793;9.12692;Via Inganni Angelo;;Milano;0;
+133230924;129750;71;3;;T;0;B;Appartamento;45.52661;9.20524;Via Arezzo 10;;Milano;0;
+134073315;142500;81;3;;T;0;B;Appartamento;45.50763;9.24358;Via Giovanni Paradisi 4;;Milano;0;
+134860063;142339;91;4;;1;0;B;Appartamento;45.51761;9.17518;Via privata pietro bembo 18;;Milano;0;
+134836021;37920;22;1;;4;0;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza , 73 ;Pezzotti - Meda;Milano;0;
+123786451;130000;80;2;1;T;0;R;Bilocale;45.46250;9.07786;Via PRIVATA rieti;Baggio;Milano;0;t
+133666686;131250;95;5;;3;1;B;Appartamento;45.45335;9.07857;Via dei Salici, 67 ;Quartiere Olmi;Milano;0;b
+130451312;145000;36;1;1;R;1;B;Monolocale;45.49420;9.14610;Via Dario Niccodemi;Certosa;Milano;0;ca
+131484018;145000;55;2;1;3;1;O;Bilocale;45.44110;9.17370;Via Bordighera;Famagosta;Milano;0;bcai
+133831224;95000;30;1;1;S;1;O;Monolocale;45.45480;9.21790;Via Scipione Pistrucci;Martini - Insubria;Milano;0;
+133591684;150000;58;2;1;3;0;O;Bilocale;45.42600;9.25150;Via Rogoredo;Santa Giulia;Milano;0;cai
+124183049;138000;51;1;1;5;1;B;Monolocale;45.49160;9.23840;Via Monfalcone;Udine;Milano;0;t
+129695362;149000;33;1;1;T;0;R;Open space;45.50080;9.22260;Via della Torre;Turro;Milano;0;cd
+133102378;127000;30;1;1;5;0;B;Monolocale;45.47140;9.24190;Via San Faustino;Ortica;Milano;0;bai
+129173734;149000;45;1;1;S;0;B;Monolocale;45.48540;9.22800;Via Accademia;Città Studi;Milano;0;ca
+134593135;105000;53;2;;R;0;B;Appartamento;45.52995;9.17153;Via Pesaro, 9 ;Bruzzano;Milano;0;
+132230008;140000;27;1;1;4;1;B;Monolocale;45.45100;9.14590;Via Giacinto Bruzzesi;Giambellino;Milano;0;bai
+133140802;130000;35;1;1;R;1;R;Monolocale;45.42650;9.25100;Via Rogoredo;Santa Giulia;Milano;0;
+133722392;142500;81;3;;T;0;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi , 4 ;Crescenzago;Milano;0;b
+127968382;152000;60;2;1;5;1;B;Bilocale;45.51420;9.14700;Via Sabatino Lopez;Vialba;Milano;0;bcd
+133806562;140000;65;2;1;S;1;O;Loft;45.45540;9.21720;Via Scipione Pistrucci;Martini - Insubria;Milano;0;
+134382095;80797;38;2;;3;0;B;Appartamento;45.43621;9.17908;Via de sanctis 33-35;Cermenate - Abbiategrasso;Milano;0;b
+134261669;98250;60;4;;4;0;B;Appartamento;45.44793;9.12692;Via Inganni Angelo , 29;Inganni;Milano;0;b
+129196912;99000;25;1;1;3;0;B;Monolocale;45.49290;9.22750;Via Arquà;Parco Trotter;Milano;0;ad
+132112970;139000;54;2;1;2;0;B;Bilocale;45.46070;9.08110;Via Cusago;Baggio;Milano;0;bcd
+127834208;135000;44;2;1;T;0;B;Bilocale;45.46150;9.09070;Via Dalmine;Baggio;Milano;0;d
+133891200;155000;56;2;1;T;0;B;Bilocale;45.46570;9.09120;Via Francesco Rismondo;Baggio;Milano;0;ca
+133854712;102000;70;3;;2;0;B;Appartamento;45.47007;9.13861;Via Ricciarelli Daniele, 20 ;San Siro;Milano;0;b
+131371950;129000;45;2;1;T;0;O;Bilocale;45.51880;9.13109;Via Val Trompia;Roserio;Milano;0;cd
+134907221;142339;91;3;;1;0;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;
+133791688;131250;96;4;1;S, 3;1;B;Quadrilocale;45.45330;9.07860;Via dei Salici;Quartiere Olmi;Milano;0;btc
+134380865;89000;22;1;1;R;0;B;Monolocale;45.49040;9.22318;Via Predabissi;Parco Trotter;Milano;0;ci
+133368704;142500;83;3;1;T, R, 3;0;B;Trilocale;45.50740;9.24380;Via Giovanni Paradisi;Crescenzago;Milano;0;b
+127893878;55800;40;2;1;T, 3;0;B;Bilocale;45.51240;9.12710;Via Giovanni Battista Grassi;Vialba;Milano;0;bc
+127533232;138000;30;1;1;T;0;B;Monolocale;45.43850;9.17510;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;ai
+134911519;157000;35;1;1;1;0;O;Monolocale;45.48370;9.24170;Via Muzio Scevola;Lambrate;Milano;0;a
+134854961;155000;47;2;1;T;1;O;Bilocale;45.51530;9.18780;Via Val d'Ossola;Niguarda;Milano;0;d
+128702228;145000;33;1;1;5;1;B;Monolocale;45.43680;9.21379;Via Marco D'Agrate;Corvetto;Milano;0;b
+126622537;155000;50;2;1;S;1;O;Bilocale;45.50310;9.17050;Via Antonio Carnevali;Dergano;Milano;0;ai
+134678209;148125;80;2;;T;1;B;Appartamento;45.49409;9.07220;Via Filippo Anghileri, 10;Figino;Milano;0;bt
+133475336;130000;34;2;1;4;1;R;Mansarda;45.47100;9.24260;Via Ortica, 3;Ortica;Milano;0;c
+121424258;155000;58;2;1;T;0;N;Bilocale;45.42020;9.15800;Via del Mare;Cantalupa - San Paolo;Milano;0;
+133831384;85000;30;1;1;S;1;O;Loft;45.45400;9.21930;Via Scipione Pistrucci;Martini - Insubria;Milano;0;
+133605694;145000;52;2;1;2;0;B;Bilocale;45.46090;9.09400;Via Francesco Rismondo;Baggio;Milano;0;bd
+131620560;149000;40;1;1;5;1;B;Monolocale;45.45910;9.10940;Via Sella Nuova 10/2;Bisceglie;Milano;0;bci
+131322708;120000;14;1;1;4;0;B;Monolocale;45.45310;9.21810;Via Ennio;Martini - Insubria;Milano;0;ai
+134727639;155000;47;2;1;2;0;B;Bilocale;45.50160;9.23692;Via Padova;Cimiano;Milano;0;bc
+130739324;75000;54;2;1;S;0;O;Bilocale;45.43900;9.19950;Via Tirso;Ripamonti - Fondazione Prada;Milano;0;i
+120739834;132000;50;2;1;2;0;N;Bilocale;45.40340;9.16770;Via Costantino Baroni;Gratosoglio;Milano;0;i
+133573186;125000;30;1;1;3;0;B;Monolocale;45.50150;9.23630;Via Treviso;Cimiano;Milano;0;bd
+133994877;149000;40;1;1;R;1;B;Monolocale;45.51770;9.20140;Via Lanfranco della Pila;Niguarda;Milano;0;cai
+133434548;135000;80;2;2;2;1;B;Bilocale;45.43260;9.18480;Via Felice Perussia;Chiesa Rossa;Milano;0;btcad
+134568027;149000;50;2;1;4;0;B;Bilocale;45.50220;9.23745;Via Padova;Cimiano;Milano;0;bc
+132533906;120000;52;2;;T;0;R;Bilocale;45.47680;9.24249;Via San Faustino;Rubattino;Milano;0;
+132532202;135000;30;1;1;2;0;R;Monolocale;45.49910;9.16568;Piazzale Lugano;Bovisa;Milano;0;
+134054191;135000;80;2;2;2;1;B;Bilocale;45.43260;9.18480;Via Felice Perussia;Chiesa Rossa;Milano;0;btcai
+128375242;105000;30;1;1;S;1;O;Monolocale;45.50840;9.13140;Via Giorgio Stephenson;Quarto Oggiaro;Milano;0;ai
+108540157;100000;40;1;1;R;0;O;Loft;45.46220;9.23560;Viale Corsica;Argonne - Corsica;Milano;0;i
+133417312;155000;46;1;1;3;1;N;Monolocale;45.44080;9.26533;Via Degli Umiliati;Ponte Lambro;Milano;0;t
+133924577;37000;13;1;1;T;0;O;Monolocale;45.49540;9.22180;Via Felicita Morandi;Rovereto;Milano;0;ai
+133417236;155000;46;1;1;3;1;N;Monolocale;45.44080;9.26533;Via Degli Umiliati;Ponte Lambro;Milano;0;b
+128037072;89000;40;1;1;T;0;B;Monolocale;45.51940;9.13410;Via Val Trompia;Roserio;Milano;0;cd
+128493488;118000;40;2;1;T;0;R;Bilocale;45.46840;9.22540;Viale Argonne;Argonne - Corsica;Milano;0;
+130613362;145000;45;2;1;2;0;B;Bilocale;45.51220;9.13290;Via Piombino;Vialba;Milano;0;b
+133915027;102000;73;4;;S, 2;0;B;Appartamento;45.47007;9.13861;Via Ricciarelli Daniele, 20;San Siro;Milano;0;bc
+134288075;149000;30;1;1;4;0;O;Monolocale;45.50500;9.18574;Via monzambano 7;Dergano;Milano;0;bi
+134601657;145000;40;1;1;S;0;O;Monolocale;45.47060;9.14460;Piazzale Brescia;San Siro;Milano;0;a
+129395064;155000;56;2;1;S;1;O;Bilocale;45.50010;9.15080;Via Giuseppe Sercognani;Bovisa;Milano;0;d
+134073185;142500;81;5;;T;0;R;Appartamento;45.50736;9.24381;Via Giovanni Paradisi;Crescenzago;Milano;0;b
+134100413;75000;23;1;1;T;1;O;Monolocale;45.50200;9.21020;Via Emilio De Marchi 45;Greco - Segnano;Milano;0;a
+130052006;140000;64;2;1;S;0;B;Bilocale;45.45340;9.21950;Piazza Insubria;Martini - Insubria;Milano;0;d
+133919681;120000;36;2;1;R;0;R;Bilocale;45.46180;9.10870;Via Marta Navarra Bernstein;San Carlo;Milano;0;
+129200552;155000;39;1;1;T;1;N;Monolocale;45.52580;9.20860;Viale Giovanni Suzzani;Bignami - Ponale;Milano;0;i
+128602436;145000;35;1;1;2;0;B;Monolocale;45.49380;9.14265;viale Certosa;Certosa;Milano;0;
+132639730;139000;25;1;;R;0;O;Monolocale;45.49900;9.18400;Via Carlo Imbonati;Dergano;Milano;0;
+133016508;140000;25;1;1;4;0;O;Monolocale;45.49170;9.22370;Via Padova;Parco Trotter;Milano;0;ai
+134044439;125000;26;1;1;T;0;B;Monolocale;45.51380;9.19112;Via Graziano Imperatore 35;Niguarda;Milano;0;a
+114438271;138000;22;1;1;1;0;O;Monolocale;45.49280;9.22760;Via Arquà;Parco Trotter;Milano;0;cai
+130910510;125000;33;1;1;2;1;B;Monolocale;45.43630;9.21300;Via Marco D'Agrate;Corvetto;Milano;0;b
+134064149;139000;50;2;1;3;0;B;Bilocale;45.50300;9.23880;Via Padova;Cimiano;Milano;0;bcad
+134249285;101990;70;4;;2;0;O;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli;;Milano;0;bcd
+132192156;97490;55;2;;1;0;B;Appartamento;45.49337;9.10077;Via Fratelli Rizzardi;;Milano;0;ad
+134117045;98240;60;3;;4;0;O;Appartamento;45.44797;9.12699;Via Inganni;;Milano;0;ba
+133511972;119000;30;1;1;4;1;R;Monolocale;45.43670;9.21405;Via Marco D'Agrate, 15;Corvetto;Milano;0;bd
+127708976;145000;46;1;1;2;0;B;Monolocale;45.46260;9.09329;VIA FRANCESCO RISMONDO;Baggio;Milano;0;a
+132169704;79990;50;2;;R;0;O;Appartamento;45.50157;9.14655;Via Demetrio Cretese;;Milano;0;ad
+131346670;135000;45;2;1;5;0;B;Bilocale;45.45850;9.09787;Via Palmi;Baggio;Milano;0;b
+132836016;145000;80;2;1;S;1;O;Loft;45.48910;9.22990;Via Teodosio;Casoretto;Milano;0;i
+133625188;148120;80;4;;T;1;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;;Milano;0;btd
+132192166;103130;58;3;;1;0;B;Appartamento;45.49337;9.10077;Via Fratelli Rizzardi;;Milano;0;a
+130048174;150000;33;1;1;6;1;B;Monolocale;45.43680;9.21380;Via Marco D'Agrate;Corvetto;Milano;0;b
+117394919;149000;26;1;1;4;1;B;Monolocale;45.50190;9.16230;Via Giovanni Battista Varé;Bovisa;Milano;0;ai
+132020036;149000;35;1;1;1;0;B;Monolocale;45.50680;9.22830;Via Stefanardo da Vimercate;Gorla;Milano;0;
+133776312;150000;69;2;1;S, 4;0;B;Bilocale;45.51580;9.13600;Via Michele Lessona;Vialba;Milano;0;bd
+133256616;140000;56;2;1;2;0;O;Bilocale;45.46840;9.09101;Via Privata Alessandro Scanini;Baggio;Milano;0;ba
+134905625;135000;40;1;1;4;1;B;Monolocale;45.50100;9.11406;Via Cefalù;Gallaratese;Milano;0;bca
+131124480;116240;74;4;;R;0;B;Appartamento;45.43926;9.22230;Via Polesine;;Milano;0;ca
+134053215;127000;51;1;1;T;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;i
+134051509;154000;45;2;1;1;1;O;Bilocale;45.50520;9.13650;Via Varesina;Certosa;Milano;0;cad
+129919614;144000;45;2;1;S;1;O;Bilocale;45.50160;9.23610;Via Treviso;Cimiano;Milano;0;ai
+134045967;115000;40;2;1;4;0;B;Bilocale;45.50150;9.15030;Via Arnaldo Fusinato;Bovisa;Milano;0;d
+133371134;148125;80;3;1;T;1;B;Trilocale;45.49420;9.07230;Via Filippo Anghileri;Figino;Milano;0;b
+132049998;84740;55;3;;3;1;B;Appartamento;45.46263;9.08788;Piazza Anita Garibaldi;;Milano;0;bd
+133831782;105000;41;1;1;T;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;i
+134858479;145000;77;2;1;R;0;B;Bilocale;45.45990;9.09840;Via delle Forze Armate;Baggio;Milano;0;bci
+126108417;123000;38;1;1;2;1;O;Monolocale;45.46450;9.09261;Via Giuseppe Galliano;Baggio;Milano;0;c
+134715555;145000;35;1;1;5;1;O;Monolocale;45.50550;9.22880;Via Oristano;Gorla;Milano;0;ad
+127738040;140000;35;1;1;T;1;O;Monolocale;45.52170;9.18950;Via Carlo Innocenzo Frugoni;Niguarda;Milano;0;d
+133832404;127000;52;1;1;T;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;i
+134053731;105000;43;1;1;T;0;R;Monolocale;45.41890;9.19440;Via Selvanesco;Chiesa Rossa;Milano;0;i
+127582708;157000;61;2;1;S, 2;0;O;Bilocale;45.46710;9.09100;Via Alessandro Scanini;Baggio;Milano;0;cd
+134775845;125000;48;2;1;3;0;B;Bilocale;45.51210;9.12740;Via Giovanni Battista Grassi;Vialba;Milano;0;d
+132045454;145000;35;1;1;5;1;O;Monolocale;45.50550;9.22880;Via Oristano;Gorla;Milano;0;ad
+134496839;104990;63;3;;R;0;;Appartamento;45.52992;9.17153;Via Pesaro;;Milano;0;cd
+133276130;129740;71;4;;T;0;;Appartamento;45.52770;9.20551;Via Arezzo 10/;;Milano;0;cd
+134626635;69666;69;2;;1;0;B;Appartamento;45.50044;9.23449;Via Pietro Toselli, 4;Cimiano;Milano;0;ca
+134370789;140000;30;1;1;4;1;B;Monolocale;45.44890;9.22370;Viale Puglie;Martini - Insubria;Milano;0;ba
+133932297;149000;28;1;1;5;1;B;Monolocale;45.48310;9.22660;Via André-Marie Ampère;Città Studi;Milano;0;ai
+132151958;135000;35;1;1;7;1;B;Monolocale;45.50140;9.11490;Via Cefalù;Gallaratese;Milano;0;bi
+134474933;102000;70;3;;2;0;B;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;c
+133434980;139000;40;1;1;S;0;O;Monolocale;45.51140;9.17430;Via Giovanni Nicotera;Affori;Milano;0;i
+128137868;89000;25;1;1;T;0;B;Monolocale;45.45210;9.18000;Piazza 24 Maggio;Ascanio Sforza;Milano;0;i
+133602852;131240;94;5+;;3;1;;Appartamento;45.45330;9.07859;Via Dei Salici;;Milano;0;bcad
+130675182;58490;41;3;;2;0;;Appartamento;45.49442;9.14144;Viale Certosa;;Milano;0;bca
+85851606;145000;25;1;1;T;0;O;Monolocale;45.47080;9.24310;Via Ortica;Ortica;Milano;0;ai
+133938025;149000;25;1;1;5;1;O;Monolocale;45.48270;9.22660;Via André-Marie Ampère;Città Studi;Milano;0;ai
+132098158;149000;25;1;1;1;1;B;Monolocale;45.44440;9.21550;Corso Lodi;Lodi - Brenta;Milano;0;
+129823496;125000;41;1;1;T;1;O;Monolocale;45.43910;9.21500;Via Arcivescovo Romilli;Corvetto;Milano;0;ad
+134787633;133000;30;1;1;2;1;B;Monolocale;45.43590;9.21840;Via Ravenna;Corvetto;Milano;0;b
+133276044;129740;71;4;;T;0;;Appartamento;45.52651;9.20491;Via Arezzo 10/;;Milano;0;cd
+131259380;101240;65;3;;T;0;;Appartamento;45.52423;9.16122;Via Val di Bondo;;Milano;0;cd
+131066494;72740;35;2;;2;1;;Appartamento;45.51353;9.19176;Via Luigi Bianchi D'Espinosa;;Milano;0;i
+133516296;139000;43;2;1;T;0;B;Bilocale;45.50470;9.20870;Via Comune Antico;Greco - Segnano;Milano;0;i
+134541443;142500;81;5;;T;0;R;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;c
+134341239;80790;35;3;;3;1;;Appartamento;45.43623;9.17906;Via De Sanctis 33-;;Milano;0;bci
+133935961;129000;45;2;1;1;0;B;Bilocale;45.47490;9.11350;Via Fratelli Bozzi;Quarto Cagnino;Milano;0;d
+133279362;145000;60;2;1;3;1;B;Bilocale;45.50230;9.14690;Via Cardinale Branda Castiglioni;Bovisa;Milano;0;bcd
+134821527;142330;80;3;;1;0;;Appartamento;45.51761;9.17528;Via Pietro Bembo;;Milano;0;bcad
+133182988;147990;59;4;;6;1;;Appartamento;45.50625;9.24351;Via Padova;;Milano;0;bcad
+131466736;104990;68;3;;T;0;;Appartamento;45.47607;9.09004;Via Giuseppe Di Vittorio;;Milano;0;cad
+134474417;112100;60;2;1;2;1;;Bilocale;45.47280;9.13700;Piazzale Selinunte;San Siro;Milano;0;b
+134481183;98250;60;2;1;4;0;;Bilocale;45.44800;9.12700;Via Angelo Inganni;Inganni;Milano;0;b
+134474521;148770;60;2;1;1;0;;Bilocale;45.46890;9.23230;Via Illirico;Città Studi;Milano;0;b
+134470713;146408;70;2;1;1;1;;Bilocale;45.49770;9.14960;Via Cesare Ajraghi;Certosa;Milano;0;bca
+134471185;144000;80;3;1;1;1;;Trilocale;45.51220;9.14480;Via Filippo De Pisis;Quarto Oggiaro;Milano;0;bc
+132718968;155000;25;1;1;3;1;O;Monolocale;45.45160;9.22050;Via Sebino;Martini - Insubria;Milano;0;ba
+132331174;120000;42;2;1;R;0;O;Bilocale;45.44320;9.26410;Via Monteoliveto;Ponte Lambro;Milano;0;c
+134571825;98250;60;2;;4;0;R;Appartamento;45.44793;9.12692;Via Angelo Inganni, 29;Inganni;Milano;0;
+133286288;125000;21;1;1;1;0;B;Monolocale;45.49140;9.22490;Via Privata Conegliano;Parco Trotter;Milano;0;ai
+134051667;143000;65;1;1;S;0;O;Monolocale;45.45650;9.11750;Via Zurigo;Inganni;Milano;0;i
+133332916;129750;71;3;1;S, T;1;B;Trilocale;45.52650;9.20490;Via Arezzo;Bignami - Ponale;Milano;0;bc
+133093464;125000;21;1;1;1;0;B;Monolocale;45.49140;9.22490;Via Privata Conegliano;Parco Trotter;Milano;0;ai
+134765561;131250;95;4;;1;1;B;Appartamento;45.45335;9.07857;Via dei Salici;Quartiere Olmi;Milano;0;btcd
+134802815;131251;95;4;;1;1;B;Appartamento;45.45335;9.07857;Via dei Salici;Quartiere Olmi;Milano;0;btcd
+133448514;130000;33;1;1;T;0;B;Monolocale;45.42790;9.17090;Via della Chiesa Rossa;Chiesa Rossa;Milano;0;a
+126479013;149000;50;2;1;R;0;R;Bilocale;45.43130;9.17270;Via della Chiesa Rossa;Cermenate - Abbiategrasso;Milano;0;i
+126974961;138000;31;1;1;R;1;O;Monolocale;45.44110;9.22396;Viale Lucania 3;Corvetto;Milano;0;bai
+134409105;125000;30;2;1;R;0;B;Bilocale;45.49180;9.21420;Via Nino Oxilia;Pasteur;Milano;0;i
+134780587;125000;37;1;1;S;1;B;Monolocale;45.47680;9.24260;Via San Faustino;Rubattino;Milano;0;
+133472548;129000;38;1;1;T;1;O;Monolocale;45.52580;9.20860;Viale Giovanni Suzzani;Bignami - Ponale;Milano;0;i
+128028032;148000;35;1;1;1;0;B;Monolocale;45.50130;9.23634;Via Treviso;Cimiano;Milano;0;b
+134800647;148125;80;3;;1;1;B;Appartamento;45.49349;9.07229;Via Filippo Anghileri;Figino;Milano;0;btcd
+124111937;155000;35;1;1;T;1;B;Monolocale;45.50980;9.17465;VIA GRAZIOLI;Affori;Milano;0;
+126812279;128000;25;1;1;5;1;B;Monolocale;45.49310;9.15130;Via Masolino da Panicale;Certosa;Milano;0;bi
+127309463;139000;61;2;1;2;0;B;Bilocale;45.40130;9.18300;Via Pescara;Gratosoglio;Milano;0;ai
+132334278;103132;66;3;;1;0;B;Appartamento;45.49367;9.10068;Via Fratelli Rizzardi, 25;Trenno;Milano;0;b
+134764917;155000;37;1;1;1;1;O;Monolocale;45.45190;9.14170;Piazza Pietro Frattini;Lorenteggio;Milano;0;ai
+134597779;129750;71;3;;R;0;B;Appartamento;45.52661;9.20524;Via Arezzo, 10/10;Bignami - Ponale;Milano;0;c
+134733903;65000;18;1;1;6;0;B;Monolocale;45.49660;9.22960;Via Francesco Cavezzali;Turro;Milano;0;
+125882667;108000;75;2;1;S;0;B;Bilocale;45.49980;9.16730;Via Giovanni Arrivabene;Bovisa;Milano;0;ai
+133795346;110000;26;1;1;2;0;N;Monolocale;45.51090;9.24860;Via San Mamete;Quartiere Adriano;Milano;0;i
+133855676;155000;25;1;1;T;0;B;Monolocale;45.49600;9.21770;Via Popoli Uniti;Rovereto;Milano;0;i
+134775073;139000;30;1;1;T;1;O;Monolocale;45.46150;9.11030;Via Fratelli Zoia 220;San Carlo;Milano;0;c
+134333001;102000;70;2;;T;1;B;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli 20 - Milano (MI);San Siro;Milano;0;bc
+132360540;149000;75;2;1;T;0;R;Bilocale;45.49830;9.23151;Via Privata Scipione Piattoli 5;Cimiano;Milano;0;d
+133796708;114000;32;1;1;R;0;B;Monolocale;45.50040;9.16916;Via Acerenza;Bovisa;Milano;0;ci
+130329024;140000;35;1;1;1;0;R;Monolocale;45.50430;9.17714;Via Cesare Brivio;Dergano;Milano;0;bci
+134899983;125000;50;2;1;2;0;R;Bilocale;45.51210;9.13320;Via Antonio Aldini;Quarto Oggiaro;Milano;0;btc
+133704612;135000;40;1;1;S, R;0;R;Monolocale;45.49820;9.23360;Via Atene;Cimiano;Milano;0;c
+134317137;136000;70;2;;;0;;Appartamento;45.47010;9.13861;Via Ricciarelli Daniele ,20;San Siro;Milano;0;
+134367063;98250;60;2;;4;0;R;Appartamento;45.44797;9.12699;Via Angelo Inganni;Inganni;Milano;0;bi
+134591723;37910;13;1;;4;0;O;Appartamento;45.44258;9.17616;Via Ascanio Sforza;;Milano;0;
+132303222;149000;35;1;1;4;1;B;Monolocale;45.44070;9.19970;Via Giuseppe Ripamonti;Ripamonti - Fondazione Prada;Milano;0;ba
+134085899;125000;31;1;1;3, 5;0;B;Monolocale;45.44370;9.15490;Via Ambrogio Binda;Barona;Milano;0;bi
+133361424;145000;60;2;1;T;0;O;Bilocale;45.46500;9.08661;Via Quinto Romano;Baggio;Milano;0;
+134932915;16490;16;1;;3;1;O;Appartamento;45.49663;9.22962;Via Francesco Cavezzali;;Milano;0;ai
+134788525;95000;40;1;1;T;0;B;Monolocale;45.51940;9.13410;Via Val Trompia;Roserio;Milano;0;cd
+134421771;150000;26;1;1;4;1;B;Monolocale;45.44610;9.12420;Via Lorenteggio;Inganni;Milano;0;ai
+132167220;105000;47;2;1;1;0;R;Bilocale;45.46420;9.08065;Via Seguro;Baggio;Milano;0;
+128836592;157000;57;2;1;T;0;O;Bilocale;45.41960;9.15780;Via del Mare;Cantalupa - San Paolo;Milano;0;
+133854026;124000;28;1;1;1;0;B;Monolocale;45.50640;9.13420;Via Triboniano;Certosa;Milano;0;a
+133725078;150000;28;1;1;3;0;O;Monolocale;45.49070;9.15309;Via Monte Ceneri;Ghisolfa - Mac Mahon;Milano;0;a
+127289643;150000;35;1;1;T;1;N;Monolocale;45.49150;9.15280;Via Lorenzo Bartolini;Certosa;Milano;0;i
+133589020;149000;54;2;1;1;0;N;Bilocale;45.51020;9.13010;Via Antonio Mambretti;Quarto Oggiaro;Milano;0;bai
+134917041;142339.5;81;3;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo;Affori;Milano;0;btcd
+130690446;89000;27;1;1;4;1;B;Monolocale;45.47010;9.24440;Via Tucidide;Ortica;Milano;0;a
+132342634;110000;40;2;1;T;0;O;Bilocale;45.43930;9.21520;Via Arcivescovo Romilli, 15;Corvetto;Milano;0;
+134350481;139000;40;1;1;5;0;O;Monolocale;45.49280;9.22053;Via Marco Aurelio;Pasteur;Milano;0;d
+134608261;148000;55;1;1;T;0;B;Loft;45.43030;9.24650;Via Monte Piana;Santa Giulia;Milano;0;i
+124502233;155000;37;;1;3;1;N;Appartamento;45.44080;9.26533;via degli umiliati 25 milano;Ponte Lambro;Milano;0;b
+134816513;150000;45;2;1;S;0;N;Bilocale;45.50510;9.24040;Via Paolo Paruta;Crescenzago;Milano;0;
+132924594;139000;40;1;1;R;1;R;Monolocale;45.43090;9.18130;Via Pietro Ogliari;Chiesa Rossa;Milano;0;c
+133795056;110000;26;1;1;2;0;N;Monolocale;45.51090;9.24860;Via San Mamete;Quartiere Adriano;Milano;0;i
+128286710;155000;28;1;1;4;1;B;Monolocale;45.49880;9.22530;Via Gerolamo Rovetta;Turro;Milano;0;ca
+117556351;78000;60;2;1;S;0;R;Loft;45.50570;9.23770;Via Ponte Nuovo;Ponte Nuovo;Milano;0;ci
+129899470;155000;25;;1;R;1;O;Appartamento;45.46332;9.13560;Via delle Forze Armate;Piazzale Siena;Milano;1;ba
+134777531;155000;40;2;1;T;0;O;Bilocale;45.49980;9.22640;Via dei Valtorta;Turro;Milano;0;a
+130517708;130000;50;2;1;4;0;B;Bilocale;45.51080;9.24740;Via San Mamete;Quartiere Adriano;Milano;0;d
+132613822;150000;27;1;1;2;0;O;Monolocale;45.49670;9.21780;Via Ottavio Rinuccini;Rovereto;Milano;0;cad
+133590236;149000;21;1;1;5;1;B;Monolocale;45.47020;9.15090;Via Correggio;Amendola - Buonarroti;Milano;0;a
+126845107;75000;60;2;1;S;0;R;Bilocale;45.42020;9.15822;Via Del Mare;Cantalupa - San Paolo;Milano;0;
+134919257;103000;25;1;1;1;0;R;Monolocale;45.49270;9.22790;Via Arquà;Parco Trotter;Milano;0;ci
+111629421;155000;31;;1;3;1;N;Appartamento;45.44080;9.26533;via degli umiliati 25 milano;Ponte Lambro;Milano;0;b
+134554877;155000;40;2;1;R;0;O;Bilocale;45.49980;9.22640;Via dei Valtorta;Turro;Milano;0;
+126813685;120000;100;3;2;S;0;R;Trilocale;45.42020;9.15822;Via Del Mare;Cantalupa - San Paolo;Milano;0;
+134871471;37920;22;2;;1;1;B;Appartamento;45.44249;9.17617;Ascanio Sforza;Pezzotti - Meda;Milano;0;btcd
+132502676;148770;59;2;;2;0;;Appartamento;45.46946;9.23229;Via Illirico, 1;Città Studi;Milano;0;c
+128435200;135000;26;1;1;7;1;O;Monolocale;45.50130;9.11378;Via cefalù;Gallaratese;Milano;0;bca
+133532844;143000;45;2;1;1;1;R;Bilocale;45.46890;9.13780;Via Daniele Ricciarelli;San Siro;Milano;0;bi
+134800015;102000;70;3;;1;1;B;Appartamento;45.47007;9.13861;Daniele Ricciarelli;San Siro;Milano;0;btcd
+130188920;130000;110;2;1;S;0;B;Bilocale;45.50160;9.21850;Via Privata Monte Lungo 10;Turro;Milano;0;d
+134872867;129750;71;3;;1;1;B;Appartamento;45.52661;9.20524;Arezzo;Bignami - Ponale;Milano;0;btcd
+132231534;125000;30;1;1;R;0;B;Monolocale;45.43850;9.15510;Via Biella;Famagosta;Milano;0;c
+133895713;140000;35;1;1;2;0;B;Monolocale;45.42730;9.25010;Via Rogoredo;Santa Giulia;Milano;0;ba
+130454390;143000;45;2;1;1;1;R;Bilocale;45.46890;9.13780;Via Daniele Ricciarelli;San Siro;Milano;0;bi
+132531698;140000;60;2;1;T;0;B;Bilocale;45.46240;9.07790;Via Rieti;Baggio;Milano;0;cd
+134330319;128000;31;1;1;T;1;O;Monolocale;45.45380;9.22540;Via Cadibona;Molise - Cuoco;Milano;0;ai
+134826601;142339.5;80;4;;1;0;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;c
+134897759;131250;93;4;;3;1;B;Appartamento;45.45335;9.07857;Via Dei salici, 67;Quartiere Olmi;Milano;0;bc
+133011594;148000;40;2;1;S;0;O;Bilocale;45.50170;9.23616;Via Treviso;Cimiano;Milano;0;a
+121177040;125000;35;1;1;S;1;O;Monolocale;45.50310;9.17050;Via Antonio Carnevali;Dergano;Milano;0;ai
+132032140;134000;46;2;1;2;0;B;Bilocale;45.46480;9.09080;Via Anselmo da Baggio;Baggio;Milano;0;bca
+134822093;148125;80;2;;T;0;B;Appartamento;45.49345;9.07231;Via Filippo Anghileri;Figino;Milano;0;
+120867508;135000;30;1;1;T;0;O;Monolocale;45.50330;9.17960;Via Legnone;Dergano;Milano;0;ca
+134796683;105000;51;2;;R;0;R;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;c
+134922541;142501;81;3;;1;1;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi;Crescenzago;Milano;0;btcd
+132165634;129000;40;2;1;2;1;B;Bilocale;45.46220;9.08018;Via Frosinone;Baggio;Milano;0;
+134784567;131250;95;4;;3;0;R;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;c
+134920777;142500;81;3;;1;1;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi;Crescenzago;Milano;0;btcd
+126624073;130000;45;1;1;2;0;B;Monolocale;45.43650;9.21750;Via San Dionigi;Corvetto;Milano;0;d
+122193558;153000;30;1;1;1;0;O;Monolocale;45.49960;9.24310;Via Pusiano;Cimiano;Milano;0;cai
+133595946;119000;20;1;1;5;1;O;Monolocale;45.49340;9.22860;Via Clitumno;Parco Trotter;Milano;0;ci
+124055921;145000;81;2;1;R;1;B;Bilocale;45.44530;9.22660;Via Sulmona;Bologna - Sulmona;Milano;0;bc
+124158499;153000;77;2;1;2;1;B;Bilocale;45.44460;9.22840;Via Sulmona;Bologna - Sulmona;Milano;0;bc
+120728490;155000;48;1;1;3;1;O;Monolocale;45.44080;9.26540;Via degli Umiliati;Ponte Lambro;Milano;0;ti
+133101618;155000;51;2;1;T;0;B;Bilocale;45.51680;9.13830;Via Sebastiano Satta;Vialba;Milano;0;tcai
+129403882;87000;30;1;1;T;0;O;Monolocale;45.44030;9.26519;Via degli Umiliati;Ponte Lambro;Milano;0;c
+134910255;142339;91;5+;;1;0;N;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;
+123921933;123000;25;1;1;5;1;B;Mansarda;45.49500;9.21910;Viale Monza;Rovereto;Milano;0;i
+133406366;129750;69;3;;R;0;B;Appartamento;45.52661;9.20524;Via Arezzo, 10/10;Bignami - Ponale;Milano;0;c
+132465268;130000;30;1;1;R;1;O;Monolocale;45.43460;9.21980;Via dei Cinquecento;Corvetto;Milano;0;bai
+133621460;149000;37;1;1;2;0;B;Monolocale;45.50100;9.17569;Via Giuseppe Guerzoni;Dergano;Milano;0;
+134505011;129000;17;1;1;5;1;O;Soffitta;45.47290;9.18720;Via Pontaccio;Lanza;Milano;0;
+134338805;131250;103;5;;3;1;B;Appartamento;45.45330;9.07859;Via dei Salici;Quartiere Olmi;Milano;0;bc
+134269103;102000;70;2;;2;0;B;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli;San Siro;Milano;0;bc
+124345109;155000;56;2;1;S;1;O;Bilocale;45.50050;9.15140;Via Giuseppe Sercognani;Bovisa;Milano;0;c
+134344169;98250;60;2;;4;0;B;Appartamento;45.44797;9.12699;Via Angelo Inganni;Inganni;Milano;0;b
+133683098;148125;148;5+;;T;0;B;Appartamento;45.49349;9.07229;Via Filippo Anghileri, 20153 Figino MI, Italia - Milano (MI);Figino;Milano;0;t
+134794809;80797.5;35;1;;S2;0;B;Appartamento;45.43615;9.17968;Via Francesco de Sanctis, 33;Cermenate - Abbiategrasso;Milano;0;c
+134367077;102000;68;2;;2;0;R;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli;San Siro;Milano;0;bcd
+134337841;142500;81;3;;T;0;B;Appartamento;45.50736;9.24381;Via Giovanni Paradisi;Crescenzago;Milano;0;bc
+134922831;102001;70;3;;1;1;B;Appartamento;45.47007;9.13861;Daniele Ricciarelli;San Siro;Milano;0;btcd
+132121546;129000;38;1;1;1;0;B;Monolocale;45.46160;9.10850;Via Cascina Barocco;San Carlo;Milano;0;ti
+133683096;131250;95;4;;3;0;B;Appartamento;45.45335;9.07857;Via dei Salici, 67, 20152 Milano MI, Italia - 20152 Milano (MI);Quartiere Olmi;Milano;0;c
+133685276;148125;80;2;;T;0;B;Appartamento;45.49411;9.07222;Via Filippo Anghileri;Figino;Milano;0;
+133630550;142500;81;3;;T;0;B;Appartamento;45.50740;9.24388;Via Giovanni Paradisi;Crescenzago;Milano;0;b
+132756018;139000;21;1;1;R;0;O;Monolocale;45.49890;9.18395;Via Carlo Imbonati;Dergano;Milano;0;i
+134753475;41626;120;5;;1;1;B;Appartamento;45.47534;9.18586;via Palermo;Moscova;Milano;0;btcd
+134330385;98250;60;2;;4;0;B;Appartamento;45.44795;9.12694;Via Angelo Inganni;Inganni;Milano;0;b
+133747248;144000;80;3;;1;1;B;Appartamento;45.51215;9.14479;Via Filippo De Pisis, 61;Quarto Oggiaro;Milano;0;bcd
+134493477;105000;53;2;;T;0;B;Appartamento;45.52995;9.17153;Via Pesaro, 9, 20161 Milano MI, Italia - 20161 Milano (MI);Bruzzano;Milano;0;c
+133338090;130000;33;1;1;T;0;B;Monolocale;45.46140;9.09040;Via delle Forze Armate;Baggio;Milano;0;a
+134591001;37920;38;1;;1;0;B;Appartamento;45.44249;9.17618;Via Ascanio Sforza, 73, 20136 Milano MI, Italia - 20136 Milano (MI);Pezzotti - Meda;Milano;0;
+134368083;80798;40;2;;T;0;B;Appartamento;45.43624;9.17921;Via De Sanctis nn. 33-35 - Milano (MI);Cermenate - Abbiategrasso;Milano;0;bc
+133255092;110000;60;2;1;3;0;B;Bilocale;45.50480;9.23217;Via liscate 4;Gorla;Milano;0;bcd
+124151561;135000;35;1;1;T;0;O;Monolocale;45.44230;9.17600;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;d
+133732324;151380;58;2;;T;0;B;Appartamento;45.47384;9.21855;VIA PASCOLI, 4;Città Studi;Milano;0;bcd
+133381216;126000;35;1;1;T;0;B;Monolocale;45.46090;9.09120;Via delle Forze Armate;Baggio;Milano;0;a
+98968448;123000;35;1;1;T;0;O;Monolocale;45.52790;9.17550;Via Luigi Angeloni;Bruzzano;Milano;0;a
+121837408;123000;48;1;1;3;0;R;Monolocale;45.48580;9.22970;Via Teodosio;Città Studi;Milano;0;bti
+134902741;95000;25;1;1;R;1;O;Monolocale;45.49410;9.14570;Via Dario Niccodemi;Certosa;Milano;0;ai
+133839204;102000;69;2;;2;0;B;Appartamento;45.47007;9.13861;Via Ricciarelli Daniele, 20;San Siro;Milano;0;bcd
+134671277;79000;22;1;;4;0;B;Monolocale;45.44260;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;a
+134530463;105000;53;2;;T;0;B;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;bcd
+134793825;135000;40;2;1;1;0;B;Bilocale;45.46150;9.10880;Via Cascina Barocco;San Carlo;Milano;0;d
+134667731;140000;40;2;1;R;1;R;Bilocale;45.46020;9.10850;Via delle Forze Armate;Bisceglie;Milano;0;d
+134816537;140000;52;1;1;S;0;N;Monolocale;45.50490;9.24030;Via Paolo Paruta;Crescenzago;Milano;0;
+131254006;153000;18;1;1;1;1;B;Monolocale;45.48310;9.18310;Via Pietro Maroncelli;Garibaldi - Corso Como;Milano;0;ai
+134836341;130000;32;2;1;T;0;O;Bilocale;45.49430;9.14170;Viale Certosa;Certosa;Milano;0;
+133433360;142500;81;3;;T;0;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;bd
+126736965;129000;40;1;1;1;0;B;Monolocale;45.46180;9.10850;Via Cascina Barocco;San Carlo;Milano;0;ti
+133732152;146408;63;2;;2;0;B;Appartamento;45.49746;9.14934;Via Cesare Ajraghi, 3;Certosa;Milano;0;bcd
+134506657;37920;22;1;;4;0;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;bd
+130447876;149000;55;2;1;2;0;R;Bilocale;45.43680;9.23614;Via Toffetti, 18;Rogoredo;Milano;0;c
+134394341;148125;80;2;;T;1;B;Appartamento;45.49409;9.07220;Via F. ANGHILARI, 10;Figino;Milano;0;td
+133606800;131250;94;4;;3;0;B;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;bcd
+132924884;126000;37;1;1;T;0;B;Monolocale;45.46090;9.09120;Via delle Forze Armate;Baggio;Milano;0;i
+132841596;148000;45;2;1;2;0;B;Bilocale;45.50900;9.16750;Via Lisiade Pedroni;Affori;Milano;0;bad
+134158467;98250;60;2;;4;0;B;Appartamento;45.44793;9.12692;Via Angelo Inganni, 29;Inganni;Milano;0;bd
+134924289;140000;40;2;1;R;1;R;Bilocale;45.43910;9.21458;Via Romilli;Corvetto;Milano;0;
+125803963;108000;41;1;1;1;0;O;Monolocale;45.49310;9.07410;Via Fratelli Morelli;Figino;Milano;0;i
+133839352;141000;37;1;1;4;0;O;Monolocale;45.49580;9.13839;VIALE CERTOSA;Certosa;Milano;0;c
+133724922;148125;80;5;;T;1;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;bt
+134394365;80797;38;1;;3;0;B;Appartamento;45.43621;9.17908;Via de sanctis, 33-35;Cermenate - Abbiategrasso;Milano;0;bcd
+126678629;131250;69;3;;T;0;B;Appartamento;45.47617;9.08997;Via Giuseppe Di Vittorio;Quinto Romano;Milano;0;cd
+128869178;145000;50;2;1;4;1;B;Bilocale;45.51080;9.24740;Via San Mamete;Quartiere Adriano;Milano;0;d
+107684569;139000;55;2;1;1;0;B;Bilocale;45.47560;9.09100;Via Caldera;Quinto Romano;Milano;0;bi
+134832895;119000;25;1;1;T;1;B;Monolocale;45.50210;9.16200;Via Giovanni Battista Varé;Bovisa;Milano;0;ai
+133290846;129750;71;3;;T;1;;Appartamento;45.52660;9.20525;Via Arezzo, 10;Bignami - Ponale;Milano;0;c
+133234962;120000;45;2;1;S;0;B;Bilocale;45.45350;9.22600;Via Cadibona;Molise - Cuoco;Milano;0;ai
+133511438;95000;40;2;1;3;0;B;Bilocale;45.53230;9.16170;Via Comasina;Comasina;Milano;0;bad
+132532636;110000;63;2;1;2;0;R;Bilocale;45.52520;9.20820;Viale Giovanni Suzzani;Bignami - Ponale;Milano;0;tci
+133481860;139000;50;3;1;T;0;B;Trilocale;45.50470;9.20870;Via Comune Antico;Greco - Segnano;Milano;0;i
+123271213;109000;25;1;1;4;0;B;Monolocale;45.43090;9.24590;Via Monte Popera;Santa Giulia;Milano;0;
+134864567;37920;14;1;;4;0;R;Attico;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+133732090;148770;60;2;;4;0;B;Appartamento;45.46946;9.23229;Via Illirico , 1;Città Studi;Milano;0;bd
+129402278;145000;32;1;1;2;1;B;Monolocale;45.51790;9.22729;Via Euclide;Villa San Giovanni;Milano;0;ba
+126417325;137000;46;2;1;T;0;O;Bilocale;45.41890;9.15790;Via del Mare;Cantalupa - San Paolo;Milano;0;a
+128649380;155000;50;1;1;T;0;B;Monolocale;45.47060;9.14030;Via Daniele Ricciarelli;San Siro;Milano;0;ca
+134051815;148770;60;2;;4;0;R;Appartamento;45.46946;9.23229;Via Illirico, 1;Città Studi;Milano;0;b
+133279476;147000;46;1;1;2;1;R;Monolocale;45.49120;9.16040;Via Masolino da Panicale pari;Ghisolfa - Mac Mahon;Milano;0;bci
+127595614;128000;45;1;1;R;1;;Monolocale;45.50770;9.24500;Via Padova;Crescenzago;Milano;0;
+133245940;129750;71;3;;T;0;B;Appartamento;45.52661;9.20524;Via Arezzo, 10;Bignami - Ponale;Milano;0;bcd
+133731044;130000;25;1;1;R;1;;Monolocale;45.49980;9.22490;Via Gerolamo Rovetta;Turro;Milano;0;c
+133686876;140000;35;1;1;3;1;B;Monolocale;45.43650;9.21348;Via Marco D'Agrate;Corvetto;Milano;0;bi
+134899269;145000;70;3;1;1;1;R;Trilocale;45.51220;9.13370;Via Antonio Aldini;Quarto Oggiaro;Milano;0;bci
+133572202;142500;86;3;;T;1;;Appartamento;45.50736;9.24381;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
+133758690;142500;81;3;;T;0;;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;ca
+134260727;98250;60;3;;4;1;;Appartamento;45.44797;9.12699;Via Inganni, 29;Inganni;Milano;0;b
+133897135;150000;30;1;1;3;1;O;Monolocale;45.43600;9.21320;Via Marco d'Agrate;Corvetto;Milano;0;bcai
+121787130;115000;47;2;1;S;1;O;Open space;45.49440;9.21520;Via Nicola d'Apulia;Rovereto;Milano;0;ad
+134937253;81000;43;2;;4;0;B;Appartamento;45.49961;9.23432;Via Padova;Cimiano;Milano;0;
+128239444;125000;15;1;1;5;1;B;Monolocale;45.48600;9.22490;Via Nicola Antonio Porpora;Città Studi;Milano;0;a
+128614858;125000;15;1;1;5;0;B;Monolocale;45.48550;9.22500;Viale Lombardia;Città Studi;Milano;0;a
+134002273;102000;70;2;;2;0;B;Appartamento;45.47006;9.13861;Via Daniele Ricciarelli;San Siro;Milano;0;bc
+129874070;120000;45;2;1;R;0;R;Bilocale;45.50670;9.22590;Via Demostene;Gorla;Milano;0;cd
+134465435;119000;50;2;1;1;1;B;Bilocale;45.51330;9.13690;Via Michele Lessona;Vialba;Milano;0;ci
+133732098;112100;59;2;;5;1;B;Appartamento;45.47277;9.13708;Piazzale Selinunte, 11;San Siro;Milano;0;bd
+130963192;150000;50;2;1;1;1;B;Bilocale;45.43120;9.24340;Via Rogoredo;Santa Giulia;Milano;0;b
+134127877;129750;71;3;;T;0;B;Appartamento;45.52661;9.20524;Via arezzo , 10/10;Bignami - Ponale;Milano;0;d
+133258372;118000;37;1;1;T;0;B;Monolocale;45.46470;9.09194;Via Francesco Rismondo 70 Milano;Baggio;Milano;0;d
+133913819;151380;58;2;;;0;R;Appartamento;45.47373;9.21820;Via Pascoli, 2;Città Studi;Milano;0;bc
+127479172;135000;45;2;1;3;0;R;Bilocale;45.45990;9.15610;Via Costanza;Washington;Milano;0;bcai
+126201081;110000;35;2;1;1;1;B;Bilocale;45.43650;9.21348;Via Marco D'Agrate;Corvetto;Milano;0;bai
+133927235;139000;20;1;1;1;0;O;Monolocale;45.50860;9.23370;Via Treviglio;Ponte Nuovo;Milano;0;
+134387169;120000;40;2;1;1;0;B;Bilocale;45.52220;9.16951;VIA TERRACINA, 6;Affori;Milano;0;a
+132505314;115000;25;1;1;1;0;O;Monolocale;45.41400;9.16290;Via Icilio Calzolari;Gratosoglio;Milano;0;ad
+129729652;155000;45;2;1;1;0;B;Bilocale;45.50520;9.23130;Via Iglesias;Gorla;Milano;0;bcad
+131436340;140000;56;2;1;1;0;B;Bilocale;45.53230;9.16170;Via Comasina;Comasina;Milano;0;bd
+123949471;115000;45;2;1;1;0;O;Bilocale;45.46090;9.09120;Via delle Forze Armate;Baggio;Milano;0;d
+134259621;149000;65;2;1;T;0;R;Bilocale;45.52460;9.17450;Via Casarsa;Bruzzano;Milano;0;cd
+134473659;68000;18;1;1;1;0;B;Monolocale;45.49680;9.22957;Via Cavezzali;Turro;Milano;0;i
+134529623;131000;60;;;;0;;Appartamento;45.44790;9.12692;Via Inganni Angelo ,29;Inganni;Milano;0;
+129858980;110000;21;1;1;1;0;B;Monolocale;45.50790;9.23900;Via Antonio Meucci;Ponte Nuovo;Milano;0;ai
+134854337;139000;20;1;1;S;1;B;Monolocale;45.47100;9.15010;Via Alberto Mario;Amendola - Buonarroti;Milano;0;i
+133136990;105000;28;1;1;2;0;O;Monolocale;45.46990;9.08140;Via Quinto Romano;Baggio;Milano;0;ai
+131029142;125000;75;3;1;T;1;R;Trilocale;45.43950;9.26520;Via degli Umiliati;Ponte Lambro;Milano;0;c
+133340026;148000;64;2;;6;0;;Appartamento;45.50626;9.24360;Via Padova, 256;Crescenzago;Milano;0;c
+131285752;109000;35;1;1;T;0;O;Monolocale;45.44180;9.26530;Via degli Umiliati;Ponte Lambro;Milano;0;c
+130081934;130000;35;1;1;S - T;1;O;Loft;45.51500;9.17240;Via Pellegrino Rossi;Affori;Milano;0;cad
+134601565;95000;35;1;1;T;0;O;Monolocale;45.52030;9.13270;Via Val Lagarina;Roserio;Milano;0;i
+129773786;135000;30;;1;2;0;O;Appartamento;45.50800;9.19990;Via Cino da Pistoia;Ca' Granda;Milano;0;ai
+133860418;131250;95;4;;3;1;B;Appartamento;45.45330;9.07859;Via dei Salici;Quartiere Olmi;Milano;0;bcd
+133615458;131250;94;5+;;3;1;;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;bc
+134407401;80797;38;2;;3;0;B;Appartamento;45.43623;9.17908;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;bc
+134393585;149000;37;1;1;4;1;O;Monolocale;45.43350;9.17860;Via Attilio Momigliano;Cermenate - Abbiategrasso;Milano;0;i
+131256142;18500;13;;;S;0;B;Soffitta;45.47090;9.20990;Via Felice Bellotti;Piave - Tricolore;Milano;0;c
+132097722;98000;60;2;1;3;0;B;Bilocale;45.50520;9.23070;Via Iglesias;Gorla;Milano;0;bci
+134679775;135000;28;1;1;T;0;N;Monolocale;45.50710;9.24010;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;0;
+133630814;131250;94;4;;3;1;B;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;bc
+134679777;135000;28;1;1;T;0;N;Monolocale;45.50720;9.24007;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;0;
+128935568;45000;46;2;;1;0;B;Appartamento;45.49969;9.14300;Via Varesina;Certosa;Milano;0;
+131277240;116250;10;3;;T;0;;Appartamento;45.43926;9.22230;Via Polesine;Corvetto;Milano;0;
+134639517;145000;35;1;1;2;1;;Monolocale;45.50330;9.19390;Via Fiuggi;Istria;Milano;0;i
+127285565;128000;37;1;1;2;0;O;Monolocale;45.44110;9.26530;Via degli Umiliati;Ponte Lambro;Milano;0;bd
+134414313;120000;45;2;1;3;0;O;Bilocale;45.49980;9.14288;via varesina;Certosa;Milano;0;bi
+133717554;120000;30;1;1;R;1;;Monolocale;45.43920;9.15020;Via Bari;Tre Castelli - Faenza;Milano;0;bi
+134716511;80798;40;2;1;3;1;;Bilocale;45.43620;9.17910;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;bc
+133591580;145000;15;1;1;5;1;B;Monolocale;45.48310;9.22660;Via André-Marie Ampère;Città Studi;Milano;0;ai
+134458901;89000;25;1;1;7;1;B;Monolocale;45.44840;9.13590;Largo dei Gelsomini;Giambellino;Milano;0;
+134929655;16500;16;1;;3;1;R;Appartamento;45.49680;9.22945;Via Francesco Cavezzali, 11;Turro;Milano;0;
+126010953;145000;30;1;;R;1;B;Monolocale;45.43680;9.21379;Via Marco D'Agrate;Corvetto;Milano;0;i
+134673039;149000;45;1;1;2;0;B;Monolocale;45.51200;9.13313;Via Antonio Aldini;Quarto Oggiaro;Milano;0;bc
+133755452;144000;80;3;;1;1;B;Appartamento;45.51215;9.14479;Via Filippo De Pisis, 61;Quarto Oggiaro;Milano;0;
+134336367;119000;46;2;1;3;0;B;Bilocale;45.43920;9.26500;Via degli Umiliati;Ponte Lambro;Milano;0;bc
+132670634;155000;42;2;1;R;0;B;Bilocale;45.50560;9.20560;Via Giuseppe Ugolini;Greco - Segnano;Milano;0;cai
+133733348;112100;59;2;;5;1;B;Appartamento;45.47277;9.13708;Piazzale Selinunte, 11;San Siro;Milano;0;
+133735040;146408;63;2;;2;0;B;Appartamento;45.49746;9.14934;Via Cesare Ajraghi, 3;Certosa;Milano;0;
+127677840;124000;28;1;1;1;0;B;Monolocale;45.50630;9.13450;Via Triboniano, 11;Certosa;Milano;0;
+134780101;155000;25;1;1;3;0;B;Monolocale;45.49490;9.21833;Via Martiri Oscuri, 4;Rovereto;Milano;0;a
+133733424;148770;60;2;;4;0;B;Appartamento;45.46946;9.23229;Via Illirico, 1;Città Studi;Milano;0;
+133636526;127000;19;1;1;;0;O;Monolocale;45.47080;9.13419;Via Matteo Civitali, 25;San Siro;Milano;0;
+134492463;98250;60;2;;4;0;R;Appartamento;45.44793;9.12692;Via Angelo Inganni, 29;Inganni;Milano;0;b
+133252626;148000;50;2;1;3;0;R;Bilocale;45.49900;9.16580;Piazzale Lugano;Bovisa;Milano;0;bd
+132358300;142471;69;2;;3;1;B;Appartamento;45.51961;9.15419;Via Alessandro Litta Modignani, 115;Affori;Milano;0;bc
+133502692;129750;71;4;;R;1;B;Appartamento;45.52661;9.20524;Via Arezzo, 10;Bignami - Ponale;Milano;0;c
+133773182;148770;60;2;;2;1;B;Appartamento;45.46946;9.23229;Via Illirico, 1;Città Studi;Milano;0;b
+133756534;132000;25;1;;T;1;B;Monolocale;45.45050;9.14750;Via Giambellino;Giambellino;Milano;0;ci
+133431660;142500;106;3;;T;1;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
+134524543;105000;63;2;;T;1;B;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;c
+134867287;142339;80;3;;1;0;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;c
+128800478;104000;25;1;1;4;0;R;Monolocale;45.49960;9.18344;Via Carlo Imbonati;Dergano;Milano;0;
+132358244;120600;67;2;;7;1;B;Appartamento;45.51229;9.14475;Via Filippo de Pisis, 63;Quarto Oggiaro;Milano;0;bc
+132329940;132066;58;2;;T;1;B;Appartamento;45.44625;9.25161;Viale Ungheria, 19;Viale Ungheria - Mecenate;Milano;0;c
+133431638;148125;80;2;;T;1;B;Appartamento;45.49409;9.07220;Via F. Anghilari, 10;Figino;Milano;0;t
+132329902;146291;59;2;;2;1;B;Appartamento;45.46946;9.23229;Via Illirico, 1;Città Studi;Milano;0;b
+134475257;133000;48;2;1;2;0;O;Bilocale;45.51230;9.13396;VIA ANTONIO ALDINI;Quarto Oggiaro;Milano;0;
+133773306;112100;59;2;;3;1;B;Appartamento;45.47277;9.13708;Piazzale Selinunte, 11;San Siro;Milano;0;b
+132329878;89262;36;1;;2;1;B;Appartamento;45.46974;9.23139;Via Dalmazio Birago, 4;Città Studi;Milano;0;
+133773308;146408;63;2;;2;1;B;Appartamento;45.49746;9.14934;Via Cesare Ajraghi, 3;Certosa;Milano;0;bc
+134524525;37920;40;1;;4;1;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+133640818;131250;104;4;;3;1;B;Appartamento;45.45335;9.07857;Via dei Salici, 67;Quartiere Olmi;Milano;0;bc
+130944600;150000;50;1;1;T;0;O;Loft;45.43690;9.20600;Via Gargano;Ripamonti - Fondazione Prada;Milano;0;
+133773290;140000;80;3;;4;1;B;Appartamento;45.51215;9.14479;via Filippo de Pisis, 61;Quarto Oggiaro;Milano;0;bc
+132766446;148000;59;2;;6;1;B;Appartamento;45.50626;9.24360;Via Padova, 256;Crescenzago;Milano;0;bc
+133431710;129750;77;3;;T;1;B;Appartamento;45.52661;9.20524;Via Arezzo, 10;Bignami - Ponale;Milano;0;c
+134001919;102000;75;2;;2;1;B;Appartamento;45.47007;9.13861;Via Ricciarelli Daniele, 20;San Siro;Milano;0;bc
+132358386;140198;67;2;;2;1;B;Appartamento;45.49808;9.10411;Via Enrico Falck, 17;Gallaratese;Milano;0;bc
+134448123;80797;35;2;;3;1;B;Appartamento;45.43624;9.17921;Via De Sanctis, 33;Cermenate - Abbiategrasso;Milano;0;bc
+134387953;102000;71;2;;2;1;R;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli, 20;San Siro;Milano;0;bc
+133773264;151380;58;2;;T;1;B;Appartamento;45.47384;9.21855;Via Giovanni Pascoli, 4;Città Studi;Milano;0;c
+132329884;113794;63;2;;5;1;B;Appartamento;45.40639;9.17114;Via Costantino Baroni, 67;Gratosoglio;Milano;0;c
+131127466;144000;40;1;1;S;1;O;Loft;45.43630;9.17720;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;i
+134910039;142339;129;3;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;bc
+134266897;98250;62;2;;4;1;B;Appartamento;45.44793;9.12692;Via Angelo Inganni, 29;Inganni;Milano;0;b
+133060064;140000;29;1;1;R;1;B;Monolocale;45.43920;9.15020;Via Bari;Tre Castelli - Faenza;Milano;0;bi
+134114133;150000;40;2;1;T;0;B;Bilocale;45.50820;9.20760;Via Roberto Cozzi;Greco - Segnano;Milano;0;i
+133619596;148125;181;4;;3;1;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri, 10;Figino;Milano;0;btc
+133786326;129750;71;4;;S, T;1;B;Appartamento;45.52661;9.20524;Via arezzo , 10/10;Bignami - Ponale;Milano;0;c
+133860448;148125;84;2;;T;0;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;bt
+133786114;142500;81;5;;R;0;;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
+134729207;80797;38;2;;3;1;B;Appartamento;45.43623;9.17906;Via De Sanctis, 33-35;Cermenate - Abbiategrasso;Milano;0;bc
+134507157;105000;60;2;;T;1;B;Appartamento;45.52992;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;c
+131757966;140000;24;1;;4;0;B;Appartamento;45.49158;9.22371;Via Padova;Parco Trotter;Milano;1;a
+132464092;105000;70;3;;2;1;B;Appartamento;45.47629;9.09056;Via giuseppe di vittorio, 8;Quinto Romano;Milano;0;b
+133459646;148125;80;2;;;1;B;Appartamento;45.49409;9.07220;Via F. ANGHILARI , 10;Figino;Milano;0;b
+133729996;151380;58;2;;;0;B;Appartamento;45.47384;9.21855;Via Giovanni Pascoli, 4;Città Studi;Milano;0;
+134829419;142339;86;2;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;bc
+129176492;116400;107;5;;2;0;B;Appartamento;45.43064;9.24122;Via George Orwell;Rogoredo;Milano;0;
+131276824;72750;35;1;;4;0;;Appartamento;45.51353;9.19176;Via Luigi Bianchi d'Espinosa;Niguarda;Milano;0;
+134713911;47400;22;1;;4;0;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+132709222;148000;59;2;;6;1;B;Appartamento;45.50626;9.24360;Via Padova , 256;Crescenzago;Milano;0;
+133635872;131250;97;4;;3;1;B;Appartamento;45.45335;9.07857;Via Dei Salici, 67;Quartiere Olmi;Milano;0;bc
+129794128;119000;15;1;1;1;1;R;Monolocale;45.42510;9.20330;Via Giuseppe Ripamonti;Vigentino - Fatima;Milano;0;ai
+132259222;100000;15;1;;5;1;R;Mansarda;45.46020;9.20780;Viale Monte Nero;Montenero;Milano;0;
+134590749;37920;22;1;;3;1;B;Appartamento;45.44255;9.17610;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+133901871;65000;26;1;1;6;0;R;Monolocale;45.49720;9.22990;Via Francesco Cavezzali;Cimiano;Milano;0;
+133153996;110000;50;;1;T;0;R;Appartamento;45.49320;9.22740;Via Arquà;Parco Trotter;Milano;0;
+132082636;49000;40;2;1;S;1;;Bilocale;45.52180;9.22710;Viale Monza;Villa San Giovanni;Milano;0;a
+134129585;131250;94;4;;3;1;B;Appartamento;45.45335;9.07857;Via dei salici, 67;Quartiere Olmi;Milano;0;
+134204037;102394;111;4;;T;1;N;Appartamento;45.40403;9.16951;Via Costantino Baroni;Gratosoglio;Milano;0;ai
+134919613;107990;111;4;;T;1;N;Appartamento;45.49948;9.23417;Via Padova;Cimiano;Milano;0;ai
+134519257;105000;53;3;;T;0;;Appartamento;45.52995;9.17153;via Pesaro, 9;Bruzzano;Milano;0;c
+133901589;55000;22;1;1;4;0;R;Monolocale;45.49060;9.22283;Via Padova;Parco Trotter;Milano;0;
+134481303;37910;111;4;;T;1;N;Appartamento;45.44255;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;ai
+134126479;55000;22;1;1;5;0;R;Monolocale;45.49720;9.22990;Via Francesco Cavezzali;Cimiano;Milano;0;
+129977636;110000;74;2;1;5;1;;Bilocale;45.52410;9.16240;Via Santuario del Sacro Cuore;Comasina;Milano;0;bcd
+134480547;139990;111;4;;T;1;N;Appartamento;45.52992;9.17153;Via Pesaro;Bruzzano;Milano;0;ai
+134600017;80797.5;35;1;;3;0;;Appartamento;45.43623;9.17906;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;bc
+134502109;50000;22;1;1;3;0;;Monolocale;45.50990;9.22840;Via Val di Non;Precotto;Milano;0;
+134833247;105000;72;2;1;S;0;O;Bilocale;45.51750;9.17350;Via Giuseppe Regaldi;Affori;Milano;0;d
+129082724;81000;48;4;;;0;B;Appartamento;45.51617;9.14185;Via Privata Maria Melato;Vialba;Milano;0;
+133261360;145000;24;1;1;R;0;B;Monolocale;45.50390;9.12860;Via Garegnano , 45;Musocco;Milano;0;bca
+133860502;69666;69;2;;1;0;B;Appartamento;45.50037;9.23461;Via Pietro Toselli;Cimiano;Milano;0;tad
+133294052;129000;40;1;1;2;0;R;Monolocale;45.41690;9.23860;Via San Bernardo;Quintosole - Chiaravalle;Milano;0;bd
+134854013;89000;14;1;1;8;1;R;Monolocale;45.49410;9.14570;Via Dario Niccodemi;Certosa;Milano;0;
+133700442;148000;58;4;;6;1;;Appartamento;45.50626;9.24360;via Padova, 256;Crescenzago;Milano;0;bc
+129124164;80250;33;3;;;0;B;Appartamento;45.50502;9.17550;Via Tartini Giuseppe;Dergano;Milano;0;
+134078305;55000;22;1;1;5;0;R;Monolocale;45.49720;9.22990;Via Francesco Cavezzali;Cimiano;Milano;0;
+132170304;84750;58;3;;3;1;B;Appartamento;45.46263;9.08788;Piazza Anita Garibaldi;Baggio;Milano;0;b
+134595021;105500;63;2;;R;0;B;Appartamento;45.52992;9.17153;Via Pesaro;Bruzzano;Milano;0;c
+133476426;148000;23;1;1;1;0;O;Monolocale;45.50760;9.23230;Via Andrea Cesalpino;Gorla;Milano;0;a
+134274987;98250;60;3;;4;0;;Appartamento;45.44793;9.12692;via Angelo Inganni, 29;Inganni;Milano;0;b
+134469619;80797.5;38;2;;3;1;B;Appartamento;45.43623;9.17906;Via Francesco De Sanctis;Cermenate - Abbiategrasso;Milano;0;c
+133700422;131250;94;5+;;3;1;;Appartamento;45.45335;9.07857;via dei Salici, 67;Quartiere Olmi;Milano;0;bc
+132510486;150000;50;2;1;2;0;B;Bilocale;45.46840;9.09101;via scanini, 54;Baggio;Milano;0;b
+134262039;98250;60;2;;;0;B;Appartamento;45.44793;9.12692;Via Inganni Angelo, 29;Inganni;Milano;0;
+129694000;130500;54;1;;2;1;B;Appartamento;45.50225;9.14645;Via Cardinale Branda Castiglioni;Bovisa;Milano;0;bcd
+133871718;151380;58;2;;1;0;;Appartamento;45.47387;9.21858;Via Giovanni Pascoli;Città Studi;Milano;0;
+132215980;80000;41;2;;R;0;B;Appartamento;45.50157;9.14655;Via Demetrio Cretese;Bovisa;Milano;0;
+133878950;112100;59;2;;1;1;;Appartamento;45.47275;9.13701;Piazzale Selinunte;San Siro;Milano;0;
+132463988;100000;30;1;1;7;1;R;Monolocale;45.49660;9.22916;Via Francesco Cavezzali, 11;Turro;Milano;0;
+133700330;142500;81;5;;T;0;;Appartamento;45.50740;9.24386;via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
+134004597;148125;80;4;;T;1;;Appartamento;45.49409;9.07220;via Filippo Anghileri, 10;Figino;Milano;0;bt
+133878954;146408;63;2;;1;0;;Appartamento;45.49766;9.14958;Via Cesare Ajraghi;Certosa;Milano;0;
+134613999;37920;22;2;;4;0;;Appartamento;45.44249;9.17617;via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+134128595;152640;101;4;;;1;B;Appartamento;45.43508;9.21688;Via San Dionigi, 22;Corvetto;Milano;0;bc
+133878962;144000;80;3;;1;1;;Appartamento;45.51215;9.14478;Via Filippo De Pisis;Quarto Oggiaro;Milano;0;
+133700498;129750;71;4;;T;1;;Appartamento;45.52661;9.20524;via Arezzo , 10/10;Bignami - Ponale;Milano;0;c
+120469582;10000;5;1;;;0;B;Rustico;45.48770;9.24004;Via Maniago;Quartiere Feltre;Milano;0;
+134393725;102000;69;4;;2;0;;Appartamento;45.47007;9.13861;via Daniele Ricciarelli, 20;San Siro;Milano;0;bc
+134639731;105000;51;2;;R;0;B;Appartamento;45.52992;9.17153;Via Pesaro;Bruzzano;Milano;0;c
+134871067;142339;80;5+;;1;0;;Appartamento;45.51761;9.17518;via Privata Pietro Bembo, 18;Affori;Milano;0;bc
+134598857;131250;94;5+;;3;1;B;Appartamento;45.45335;9.07857;Via dei Salici, ;Quartiere Olmi;Milano;0;bc
+134455145;148125;78;2;;T;0;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;bt
+132889358;155000;38;1;1;2;1;B;Monolocale;45.41690;9.17990;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
+128261994;115000;50;2;1;S;0;O;Bilocale;45.44160;9.18860;Via Bernardino Verro;Pezzotti - Meda;Milano;0;c
+133878952;148770;60;2;;1;0;;Appartamento;45.46892;9.23226;Via Illirico;Città Studi;Milano;0;
+134777849;37920;14;1;;4;0;R;Appartamento;45.44255;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;
+128809968;30000;19;1;;1;0;;Appartamento;45.50988;9.22830;Via Val di Non;Precotto;Milano;0;a
+134016755;98250;61;2;;4;0;;Appartamento;45.44793;9.12692; Via Angelo Inganni n. 29;Inganni;Milano;0;b
+133823562;102000;70;2;;2;0;;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli;San Siro;Milano;0;bc
+134459219;105000;63;2;;R;0;;Appartamento;45.52995;9.17153; via Pesaro n. 9,;Bruzzano;Milano;0;c
+133173606;129750;68;3;;R;1;;Appartamento;45.52661;9.20524; VIA AREZZO 10/10;Bignami - Ponale;Milano;0;
+133594786;148125;77;2;;;0;;Appartamento;45.49409;9.07220;Via F. ANGHILARI , 10;Figino;Milano;0;
+133883630;102000;75;2;;2;0;;Appartamento;45.47007;9.13861;VIA DANIELE RICCIARELLI N. 20;San Siro;Milano;0;bc
+134821027;135000;31;1;1;R;0;O;Monolocale;45.43490;9.18010;Via Nicola Palmieri;Cermenate - Abbiategrasso;Milano;0;i
+131898004;135000;58;3;1;R;0;O;Trilocale;45.48930;9.15110;Viale Renato Serra;Portello - Parco Vittoria;Milano;0;c
+131898024;135000;58;3;1;R;0;O;Trilocale;45.49470;9.14110;Viale Certosa;Certosa;Milano;0;c
+128810056;141000;58;4;;;0;;Appartamento;45.45153;9.21743;Via Tito Livio;Lodi - Brenta;Milano;0;a
+134914517;81000;43;2;;4;1;;Appartamento;45.49957;9.23421;VIA PADOVA N. 147;Cimiano;Milano;0;
+134530863;156000;50;2;1;1;1;B;Bilocale;45.47320;9.12730;Via Alfonso Capecelatro;San Siro;Milano;0;bci
+133367226;142500;105;3;;R;0;;Appartamento;45.50740;9.24386;Via Giovanni Paradisi n. 4;Crescenzago;Milano;0;b
+128521702;89000;20;1;1;6;1;;Monolocale;45.44950;9.13690;Largo Dei Gelsomini, 14;Giambellino;Milano;0;
+134905425;148125;84;4;;T;0;B;Appartamento;45.49409;9.07220;Via Filippo Anghileri, ;Figino;Milano;0;bt
+133831748;129750;71;3;;T;0;B;Appartamento;45.52651;9.20491;Via Arezzo;Bignami - Ponale;Milano;0;c
+133727894;151380;58;2;;R;0;;Appartamento;45.47384;9.21855;VIA PASCOLI 4;Città Studi;Milano;0;
+130706904;129000;25;1;1;1;0;B;Monolocale;45.48140;9.14630;Viale Paolo Onorato Vigliani;Monte Rosa - Lotto;Milano;0;i
+134128335;131250;94;4;;3;1;B;Appartamento;45.45330;9.07859;Via dei Salici;Quartiere Olmi;Milano;0;bc
+133368130;148125;78;2;;T;0;;Appartamento;45.49409;9.07220; VIA F. ANGHILERI 10;Figino;Milano;0;bt
+134915181;16500;16;1;;3;1;;Appartamento;45.49664;9.22964;Via Cavezzali 11;Turro;Milano;0;
+134354235;37920;37;1;;4;0;;Appartamento;45.44255;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;0;b
+134006297;102000;70;2;;2;0;R;Appartamento;45.46989;9.13878;Via Daniele Ricciarelli;San Siro;Milano;0;bc
+134666145;142500;81;5;;T;0;R;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, ;Crescenzago;Milano;0;b
+134833961;142339;80;3;;1;0;;Appartamento;45.51761;9.17518;VIA PIETRO BEMBO N. 18;Affori;Milano;0;
+130569712;150000;30;1;1;T;1;;Monolocale;45.49130;9.22601;Via Ruggero Leoncavallo No Number;Parco Trotter;Milano;0;
+133831310;148125;84;2;;T;0;B;Appartamento;45.49416;9.07232;Via Filippo Anghileri;Figino;Milano;0;
+134367837;80797;35;1;;3;0;;Appartamento;45.43615;9.17968;Via De Sanctis nn. 33-35;Cermenate - Abbiategrasso;Milano;0;b
+134645883;80797;35;2;;;0;;Appartamento;45.43621;9.17908;Via de sanctis 33-35 ;Cermenate - Abbiategrasso;Milano;0;
+133794426;89667;587;5;;;1;B;Appartamento;45.40345;9.16780;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+134645889;98250;60;3;;;0;;Appartamento;45.44793;9.12692;Via angelo inganni 29 ;Inganni;Milano;0;
+133100108;145000;28;1;1;2;1;O;Appartamento;45.47046;9.24523;Via Tucidide;Ortica;Milano;1;a
+134569913;98000;60;2;;4;0;B;Appartamento;45.44793;9.12692;via inganni, 29;Inganni;Milano;0;b
+129640564;145000;45;2;1;1;0;N;Bilocale;45.46840;9.25614;via privata Taverna, 34;Ortica;Milano;0;
+134288669;102000;70;2;;;1;B;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;
+133541706;102404;98;5;;;1;B;Appartamento;45.40345;9.16780;Via Costantino Baroni, 190;Gratosoglio;Milano;0;
+132463488;120000;98;5;;;1;B;Appartamento;45.52359;9.19310;Via Guido Da Velate, 3;Niguarda;Milano;0;
+134646415;102000;70;2;;;0;;Appartamento;45.47007;9.13861;Via daniele ricciarelli 20 ;San Siro;Milano;0;
+134906293;135000;50;2;1;3;1;B;Bilocale;45.42630;9.25125;Via Rogoredo 113;Santa Giulia;Milano;0;b
+134910489;125000;32;;1;R;1;O;Appartamento;45.51260;9.13575;;Quarto Oggiaro;Milano;0;ai
+133370528;142500;81;3;;R;0;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;b
+133654282;142500;81;3;;;1;B;Appartamento;45.50740;9.24386;Via Giovanni Paradisi, 4;Crescenzago;Milano;0;
+134901715;142340;91;5;;;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;
+134899549;81000;43;2;;4;1;R;Appartamento;45.49957;9.23421;Via Padova, 147;Cimiano;Milano;0;b
+129536080;150000;50;2;;3;0;O;Bilocale;45.43860;9.15350;Via Santa Rita da Cascia;Famagosta;Milano;0;bc
+133795308;27375;70;2;;;0;B;Appartamento;45.50048;9.14888;Via Paolo Mantegazza, 25;Bovisa;Milano;0;
+133654280;131250;96;4;;;1;B;Appartamento;45.45335;9.07857;Via Dei Salici, 67;Quartiere Olmi;Milano;0;
+134525907;80798;35;2;;;1;B;Appartamento;45.43615;9.17968;Via Francesco De Sanctis, 33;Cermenate - Abbiategrasso;Milano;0;
+133654284;148125;77;2;;;1;B;Appartamento;45.49345;9.07231;Via Filippo Anghileri S.N.C;Figino;Milano;0;
+133158794;129750;71;3;;R;0;B;Appartamento;45.52661;9.20524;Via Arezzo, 10;Bignami - Ponale;Milano;0;c
+134628375;37920;22;1;;;1;B;Appartamento;45.44249;9.17617;Via Ascanio Sforza, 73;Pezzotti - Meda;Milano;0;
+134716319;50000;15;5;;;1;B;Appartamento;45.46202;9.21844;Corso Ventidue Marzo, 32;Porta Vittoria;Milano;0;
+134525909;105000;51;2;;;1;B;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;
+128626824;155000;87;3;;;0;;Trilocale;45.47040;9.14045;Via Daniele Ricciarelli, 19;San Siro;Milano;0;
+133369820;148125;77;3;;;0;B;Appartamento;45.49409;9.07220;Via Filippo Anghileri, 10;Figino;Milano;0;bt
+134342341;80797;35;2;;3;1;B;Appartamento;45.43624;9.17921;Via De Sanctis , 33;Cermenate - Abbiategrasso;Milano;0;b
+134820973;142339;91;3;;1;1;B;Appartamento;45.51761;9.17518;Via Privata Pietro Bembo, 18;Affori;Milano;0;b
+134646497;105000;51;3;;;0;;Appartamento;45.52995;9.17153;Via pesaro 9 ;Bruzzano;Milano;0;
+134248551;102000;70;2;;2;0;;Appartamento;45.47007;9.13861;Via Daniele Ricciarelli, 20;San Siro;Milano;0;b
+134646361;37920;30;1;;;0;;Appartamento;45.44249;9.17617;Via Ascanio Sforza 73;Pezzotti - Meda;Milano;0;
+126262127;88000;23;1;;T;0;;Monolocale;45.43650;9.23180;Via Giovanni Battista Cassinis;Rogoredo;Milano;0;
+128657482;120000;170;;;S;1;B;Appartamento;45.44160;9.15180;Via Ettore Ponti;Barona;Milano;0;
+134494543;105000;51;2;;T;0;;Appartamento;45.52995;9.17153;Via Pesaro, 9;Bruzzano;Milano;0;
+134929803;50000;19;;;S;1;O;Appartamento;45.48910;9.14793;Via TRAIANO;Portello - Parco Vittoria;Milano;0;
+128493814;139700;46;2;;T;0;;Bilocale;45.42150;9.15870;Via del Mare;Cantalupa - San Paolo;Milano;0;
+134926047;1150;55;2;1;3;0;B;Appartamento;45.46565;9.20873;Via Pasquale Sottocorno;Piave - Tricolore;Milano;1;a
+127878210;140000;17;1;1;6;1;B;Appartamento;45.44583;9.12811;Via Angelo Inganni;Giambellino;Milano;1;
+119269513;149000;90;3;1;2;0;R;Appartamento;45.51760;9.17414;Via Giuseppe Regaldi;Affori;Milano;1;
+130025028;132000;45;2;1;T;1;O;Appartamento;45.51368;9.13430;Via Carolina Invernizio;Vialba;Milano;1;
+133110570;144000;35;2;1;S;1;B;Appartamento;45.50671;9.23869;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;1;a
+134288019;79000;30;;;S;0;;Loft;45.45985;9.16509;Viale Coni Zugna;Dezza;Milano;1;
+133629188;109000;30;2;1;8;1;O;Appartamento;45.49663;9.22962;Via Francesco Cavezzali;Turro;Milano;1;a
+131611362;1000;68;3;1;1;0;B;Loft;45.47054;9.24604;Via Tucidide;Ortica;Milano;1;a
+121789774;149000;33;1;1;T;0;N;Appartamento;45.42673;9.20667;Via Fryderyk Chopin;Vigentino - Fatima;Milano;1;
+131611182;1000;68;3;1;1;0;B;Loft;45.47054;9.24604;Via Tucidide;Ortica;Milano;1;
+133466536;95000;22;1;1;5;1;B;Mansarda;45.49136;9.22614;Via Ruggero Leoncavallo;Casoretto;Milano;1;
+128139812;153000;18;1;1;1;1;B;Appartamento;45.48309;9.18308;Via Pietro Maroncelli;Garibaldi - Corso Como;Milano;1;a
+134525465;148000;25;1;1;4;1;O;Appartamento;45.49785;9.23247;Via Padova;Cimiano;Milano;1;ca
+131097088;130000;33;1;1;T;0;B;Appartamento;45.46091;9.09119;Via delle Forze Armate;Baggio;Milano;1;a
+127598188;115000;19;1;2;4;1;R;Mansarda;45.44255;9.17610;Via Cardinale Ascanio Sforza;Pezzotti - Meda;Milano;1;
+132897088;146000;45;1;1;6;1;B;Appartamento;45.51290;9.13629;Via Antonio Aldini;Vialba;Milano;1;
+129928732;195000;45;2;1;T;1;O;Bilocale;45.51670;9.22460;Via Alfredo Soffredini;Villa San Giovanni;Milano;0;a
+124614379;178500;45;1 - 2;;;0;;Progetto;45.50500;9.13550;Via Angelo Brunetti, 8;Certosa;Milano;0;
+120077160;190000;60;2;1;2;1;R;Bilocale;45.50190;9.21220;Piazza Greco;Greco - Segnano;Milano;0;bci
+132294080;181000;42;1 - 3;;;0;;Progetto;45.47000;9.24330;Via Tucidide, 17;Ortica;Milano;0;
+134495141;190000;65;2;1;3;1;O;Bilocale;45.45460;9.08090;Via degli Ontani;Quartiere Olmi;Milano;0;bcai
+131177850;179000;27;1;1;8;1;B;Monolocale;45.46080;9.23070;Via Giovanni Battista Piranesi;Porta Vittoria;Milano;0;bai
+133422376;185000;36;1;1;2;0;O;Monolocale;45.50080;9.23470;via Paruta;Cimiano;Milano;0;btc
+134861099;190000;72;2;1;1;0;B;Bilocale;45.47440;9.13980;Piazza Monte Falterona;San Siro;Milano;0;bd
+131367976;166000;49;2;1;T;1;O;Bilocale;45.51370;9.13430;Via Carolina Invernizio;Vialba;Milano;0;ai
+119552705;177000;44;2 - 3;;;0;;Progetto;45.51200;9.12050;Via Giorgio Stephenson, 81;Musocco;Milano;0;
+115299289;189000;48;2 - 3;;;0;;Progetto;45.46670;9.09050;Via Francesco Rismondo, 110;Baggio;Milano;0;
+133855644;185000;41;1;1;T;1;O;Monolocale;45.47210;9.23690;Via Filippo Tajani;Città Studi;Milano;0;ai
+133256670;170000;45;1;1;R;1;O;Monolocale;45.45880;9.10050;Via Cividale del Friuli;Baggio;Milano;0;bcai
+133802608;185000;48;2;1;3;1;R;Bilocale;45.43870;9.21617;Via Riva di Trento 1;Corvetto;Milano;0;
+132541846;189000;55;2;1;3;0;B;Bilocale;45.50660;9.23560;Via Federico Jarach;Ponte Nuovo;Milano;0;bd
+132342568;183000;51;2;1;3;1;N;Bilocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+133313478;190000;46;1 - 3;;;0;;Progetto;45.45430;9.24350;Via Gianfranco Malipiero, 6;Viale Ungheria - Mecenate;Milano;0;
+132343404;193000;52;2;1;3;1;N;Bilocale;45.40400;9.16950;Via Costantino Baroni;Gratosoglio;Milano;0;bd
+134936427;190000;50;2;1;9;1;B;Bilocale;45.42520;9.21100;Via Paolo Mezzanotte;Vigentino - Fatima;Milano;0;btcd
+131155650;169000;40;1;1;S;0;N;Monolocale;45.46430;9.23300;Via Negroli 26//2;Argonne - Corsica;Milano;0;i
+132342416;188000;89;3;1;2;0;B;Trilocale;45.51840;9.13146;Via val trompia;Roserio;Milano;0;bc
+134828381;195000;25;1;1;3;0;O;Monolocale;45.47440;9.20890;Via Melzo;Porta Venezia;Milano;0;i
+134908995;165000;27;1;1;4;1;R;Monolocale;45.46560;9.23130;Via Giancarlo Sismondi 50/1;Argonne - Corsica;Milano;0;bcai
+127716630;195000;50;2;1;2;1;B;Bilocale;45.50700;9.24000;Via Giovanni Battista Prandina;Ponte Nuovo;Milano;0;bd
+134630907;165000;38;2;1;4;1;B;Bilocale;45.51550;9.19250;Via Paulucci di Calbioli Fulcieri;Niguarda;Milano;0;bc
+134813573;180000;56;2;1;3;0;O;Bilocale;45.50470;9.17540;Via Giuseppe Tartini;Dergano;Milano;0;i
+133626808;190000;60;2;1;8;1;O;Bilocale;45.40380;9.17161;Via costantino baroni;Gratosoglio;Milano;0;b
+130869594;170000;35;2;1;5;1;R;Bilocale;45.46250;9.22950;Viale Corsica;Argonne - Corsica;Milano;0;ai
+133603406;180000;42;1;1;3;1;B;Monolocale;45.46760;9.13570;Via Rembrandt;San Siro;Milano;0;bci
+130986486;189000;50;2;1;2;0;B;Bilocale;45.51250;9.22440;Via Giuseppe Pelitti 1;Precotto;Milano;0;cd
+134630045;180000;39;1;1;S, R;1;N;Monolocale;45.43590;9.20930;Via Passo Pordoi;Corvetto;Milano;0;cd
+132068256;189000;57;2;1;1;0;O;Bilocale;45.52520;9.17510;Via Achille Fontanelli;Bruzzano;Milano;0;cad
+127924658;159000;38;1;1;T;0;B;Monolocale;45.52070;9.22480;Via Sant'Uguzzone 21;Villa San Giovanni;Milano;0;a
+129840076;189000;47;1;1;6;1;B;Monolocale;45.50440;9.24090;Via Padova 217;Crescenzago;Milano;0;b
+133501208;179000;40;2;1;S;1;O;Bilocale;45.51380;9.17349;Via Pellegrino Rossi;Affori;Milano;0;a
+98314716;168000;39;2;1;2;1;O;Bilocale;45.44380;9.22970;Via Enrico Caviglia 3;Bologna - Sulmona;Milano;0;a
+122530416;189000;48;2;1;1;1;N;Bilocale;45.46670;9.09050;Via Francesco Rismondo;Baggio;Milano;0;bcd
+133004614;159000;60;1;1;S;0;B;Monolocale;45.45740;9.22230;Via Caposile;Martini - Insubria;Milano;0;i
+134055663;175000;50;1;1;4;1;B;Monolocale;45.43910;9.12840;Via Giorgio Merula;Tre Castelli - Faenza;Milano;0;a
+126758231;185000;43;1;1;R;0;O;Monolocale;45.47740;9.10810;Via Novara;Quarto Cagnino;Milano;0;ca
+132801334;175000;55;2;1;2 - 3;0;B;Bilocale;45.51210;9.22560;Via Luigi Cislaghi;Precotto;Milano;0;d
+133798496;165000;50;2;1;T;1;O;Bilocale;45.51590;9.18740;Via Val d'Ossola;Niguarda;Milano;0;d
+125073355;190500;33;1 - 5+;;;0;;Progetto;45.51800;9.22240;Via Fortezza, 1;Villa San Giovanni;Milano;0;
+126173849;175000;60;2;1;T;0;O;Bilocale;45.49270;9.14960;Via Privata della Bindellina;Certosa;Milano;0;bad
+128432576;159000;24;1;1;2;0;O;Monolocale;45.49690;9.18566;Via Luigi Federico Menabrea 26;Farini;Milano;0;ca
+132465632;170000;65;2 - 4;;;0;;Progetto;45.52260;9.15860;Via Alessandro Litta Modignani;Comasina;Milano;0;
+120686050;170000;56;2;1;1;1;B;Bilocale;45.49820;9.15000;Via Cesare Ajraghi;Certosa;Milano;0;cd
+134634713;169000;40;2;1;T;0;O;Bilocale;45.45430;9.13310;Via Francesco Primaticcio;Bande Nere;Milano;0;ad
+131375762;169000;49;2;1;1;0;B;Bilocale;45.50650;9.23280;Via Asiago, 77;Gorla;Milano;0;ci
+132295672;195000;40;1 - 4;;;0;;Progetto;45.50860;9.16920;Via Don Bartolomeo Grazioli, 76;Affori;Milano;0;
+132400796;185000;38;2;1;1;0;B;Bilocale;45.51290;9.22410;Via Giuseppe Pelitti, 1;Precotto;Milano;0;ad
+133416890;180000;47;2;1;2;0;B;Bilocale;45.50160;9.14660;Via Demetrio Cretese;Bovisa;Milano;0;bd
+131138876;165000;53;2;1;S, 5;1;R;Bilocale;45.49470;9.22950;Via Carlo Esterle;Parco Trotter;Milano;0;bc
+133175950;179000;54;2;1;R;0;R;Bilocale;45.50250;9.21010;Via Pigello Portinari;Greco - Segnano;Milano;0;ci
+134595911;185000;48;1;1;T;0;B;Monolocale;45.50140;9.17550;Via Giuseppe Guerzoni;Dergano;Milano;0;a
+133512852;165000;35;1;1;T;1;O;Monolocale;45.46340;9.13850;Via delle Forze Armate;Gambara;Milano;0;ci
+128614082;170000;65;2;1;1;1;N;Bilocale;45.52200;9.15500;Via Alessandro Litta Modignani;Comasina;Milano;0;bc
+133103012;160000;37;2;1;1;1;B;Bilocale;45.51750;9.22540;Via Vipacco;Villa San Giovanni;Milano;0;ci
+132263878;159000;55;2;1;4;0;B;Bilocale;45.49870;9.23120;Via Privata Scipione Piattoli 7;Cimiano;Milano;0;bca
+134739759;190000;47;2;1;4;1;R;Bilocale;45.49470;9.22948;Via Carlo Esterle, 25;Parco Trotter;Milano;0;bca
+133902745;189000;45;2;1;T;0;B;Bilocale;45.49950;9.17360;Via Carlo Cafiero;Dergano;Milano;0;d
+133915493;158000;28;1;1;4;0;O;Monolocale;45.49220;9.21747;Via delle Leghe;Pasteur;Milano;0;a
+133369072;178000;35;1;1;2;1;O;Monolocale;45.50900;9.24800;Via Domenico Berra;Crescenzago;Milano;0;bcai
+132738732;190000;44;2;1;1;0;N;Bilocale;45.51010;9.17500;Via Giovanni Nicotera;Affori;Milano;0;
+132432096;163000;42;2;1;S;0;N;Bilocale;45.50250;9.18110;Via Giuseppe Cesare Abba;Dergano;Milano;0;i
+132940960;195000;70;2;1;R;1;B;Bilocale;45.49840;9.10430;Via Enrico Falck;Gallaratese;Milano;0;bcd
+134919193;191000;64;2;1;3 - 4;0;B;Bilocale;45.52360;9.18950;Via Antonio da Saluzzo;Niguarda;Milano;0;b
+134459755;160000;55;2;1;3;0;O;Bilocale;45.50700;9.23830;Via Giovanni Battista Carta;Ponte Nuovo;Milano;0;bi
+132740136;175000;44;1;1;1;0;N;Monolocale;45.51010;9.17500;Via Giovanni Nicotera;Affori;Milano;0;bi
+132839778;165000;38;2;1;T;1;O;Bilocale;45.52270;9.17040;Via Gian Rinaldo Carli;Affori;Milano;0;i
+134447693;195000;53;2;1;T;1;O;Bilocale;45.43600;9.19560;Via Cuore Immacolato di Maria;Vigentino - Fatima;Milano;0;i
+134370333;168000;39;2;1;S, T;1;O;Bilocale;45.49210;9.22890;Via Ruggero Leoncavallo;Casoretto;Milano;0;ci
+134461963;158000;44;2;1;5;0;O;Bilocale;45.49750;9.22860;Via Filippo Tommaso Marinetti;Turro;Milano;0;d
+133087526;195000;41;1;1;S;0;O;Monolocale;45.45270;9.21240;Via Contardo Ferrini;Porta Romana - Medaglie d'Oro;Milano;0;
+134384527;180000;55;2;1;R;0;B;Bilocale;45.49610;9.21023;Via Zuretti, 59;Cascina dei Pomi;Milano;0;ca
+133811520;180000;40;1;1;S;1;;Monolocale;45.45360;9.15630;Via Montecatini;Solari;Milano;0;i
+134810203;175000;35;1;1;R;1;B;Monolocale;45.44820;9.15880;Ripa di Porta Ticinese 127\A;Navigli - Darsena;Milano;0;bd
+112980641;170000;45;2;1;3;0;B;Bilocale;45.49220;9.14580;Piazzale Francesco Accursio;Portello - Parco Vittoria;Milano;0;ad
+132337942;190000;40;2;1;T;1;B;Bilocale;45.52070;9.22490;Via Sant'Uguzzone;Villa San Giovanni;Milano;0;a
+129466300;159000;57;2;1;3;0;B;Bilocale;45.47240;9.11950;Via Novara;San Carlo;Milano;0;b
+133727314;158000;48;2;1;T;0;O;Bilocale;45.45170;9.14309;Piazza Frattini;Giambellino;Milano;0;
+133736848;169000;40;2;1;2;0;B;Bilocale;45.50040;9.16320;Via Giovanni Battista Varé;Bovisa;Milano;0;bai
+127820952;185000;40;2;1;1;1;B;Bilocale;45.46950;9.14010;via Altamura;San Siro;Milano;0;ba
+131299474;178000;46;2;1;4;1;B;Bilocale;45.49790;9.23040;Via Terenzio Mamiani;Cimiano;Milano;0;bcai
+134910177;190000;35;2;1;2;1;O;Bilocale;45.49960;9.23645;Via Derna, 15;Cimiano;Milano;0;a
+129040456;165000;47;2;1;4 - 5;0;B;Bilocale;45.47280;9.14140;Via Filippo Abbiati;San Siro;Milano;0;bai
+133589792;175000;85;3;1;2;0;B;Trilocale;45.52020;9.13220;Via Val Lagarina 26;Roserio;Milano;0;bc
+130806040;189000;45;2;1;3;0;O;Bilocale;45.49220;9.22480;Via Padova;Parco Trotter;Milano;0;cai
+134420127;179000;41;1;1;2;1;B;Monolocale;45.47760;9.24280;Via San Faustino, 78;Rubattino;Milano;0;bci
+134672719;190000;43;2;1;6;1;O;Bilocale;45.45880;9.24080;Via Maria Montessori 14;Quartiere Forlanini;Milano;0;a
+131092286;159000;60;3;1;3;1;B;Trilocale;45.50990;9.13050;Via Antonio Mambretti 29;Quarto Oggiaro;Milano;0;ci
+130142656;175000;45;3;1;4;1;O;Trilocale;45.43900;9.22690;Via Carlo Marochetti, 19;Corvetto;Milano;0;
+129432400;193000;45;2;1;1;1;O;Bilocale;45.49840;9.14281;Via Panfilo Nuvolone;Certosa;Milano;0;ci
+129831158;182000;51;2;1;4;0;O;Bilocale;45.49220;9.22480;Via Padova;Parco Trotter;Milano;0;c
+125845663;159000;56;1;1;T;1;O;Loft;45.50310;9.21140;Via Emilio De Marchi;Greco - Segnano;Milano;0;d
+134046003;159000;50;2;1;1;0;B;Bilocale;45.46550;9.09087;Via Terni;Baggio;Milano;0;c
+133368186;185000;20;1;1;1;1;B;Monolocale;45.46890;9.15280;Via Raffaello Sanzio;Amendola - Buonarroti;Milano;0;ai
+134266999;189000;27;1;1;8;1;O;Monolocale;45.45230;9.22020;Piazza Insubria;Martini - Insubria;Milano;0;bai
+134128457;165000;39;1;1;7;1;O;Monolocale;45.41590;9.17680;Via Ettore Bugatti;Gratosoglio;Milano;0;d
+133243860;185000;20;1;1;6;1;B;Mansarda;45.47620;9.20370;Via Lecco;Porta Venezia;Milano;0;ai
+133287956;190000;65;2;1;T;0;O;Bilocale;45.41540;9.16360;Via della Chiesa Rossa;Gratosoglio;Milano;0;i
+133629392;185000;57;2;1;1;0;R;Bilocale;45.51300;9.19110;Via Imperatore Graziano;Niguarda;Milano;0;bc
+129176120;190000;50;3;1;R;1;O;Trilocale;45.49480;9.22880;Via Padova;Parco Trotter;Milano;0;a
+134822265;180000;25;1;1;5;1;B;Monolocale;45.48130;9.17600;Via Paolo Sarpi;Paolo Sarpi;Milano;0;ai
+133692246;183000;40;1;1;R;1;O;Monolocale;45.50480;9.17950;Via Magellano;Dergano;Milano;0;i
+127738540;170000;55;2;1;T;1;O;Bilocale;45.52170;9.18950;Via Carlo Innocenzo Frugoni;Niguarda;Milano;0;d
+130994882;190000;54;2;1;1;0;O;Bilocale;45.49730;9.14590;Via Varesina;Certosa;Milano;0;ai
+133853952;168000;38;1;1;2;0;O;Monolocale;45.49850;9.23130;Via Scipione Piattoli;Cimiano;Milano;0;bcai
+133733158;185000;50;2;1;5;1;O;Bilocale;45.52550;9.17000;Via del Reno;Bruzzano;Milano;0;ca
+128378984;190000;35;2;1;R;0;O;Bilocale;45.50180;9.21940;Via Rovigno;Turro;Milano;0;c
+133888208;190000;35;1;1;R;0;B;Monolocale;45.44940;9.19650;Via Vignola;Bocconi;Milano;0;a
+133502560;172000;47;1;1;3;1;R;Monolocale;45.49590;9.21770;Via Popoli Uniti;Rovereto;Milano;0;
+133100008;175000;50;2;1;1;1;R;Bilocale;45.50860;9.17060;Via Don Bartolomeo Grazioli;Affori;Milano;0;bcd
+133758610;158000;57;2;1;3;0;R;Bilocale;45.43320;9.14970;Via Boffalora;Cantalupa - San Paolo;Milano;0;
+112314905;170000;55;2;1;T;0;B;Loft;45.50260;9.14750;Via Michele Pericle Negrotto;Bovisa;Milano;0;i
+134593655;165000;48;2;1;R;1;B;Bilocale;45.46600;9.12710;Via Edoardo Chinotto;Piazzale Siena;Milano;0;ad
+126277093;195000;95;3;1;T;1;O;Trilocale;45.41890;9.15790;Via del Mare;Cantalupa - San Paolo;Milano;0;ad
+134367901;160000;53;2;1;2;0;B;Bilocale;45.44350;9.26377;via Monteoliveto, 10;Ponte Lambro;Milano;0;bc
+132447436;195000;60;2;1;1;0;O;Bilocale;45.44470;9.24340;Via Romualdo Bonfadini;Viale Ungheria - Mecenate;Milano;0;d
+133340862;160000;49;2;1;2;1;O;Bilocale;45.51240;9.15790;Via Dante Chiasserini;Bovisasca;Milano;0;bai
+134593793;160000;39;1;1;S, 1;1;B;Monolocale;45.51210;9.17040;Via Enrico Cialdini;Affori;Milano;0;ci
+134674701;190000;25;1;1;1;1;O;Monolocale;45.48030;9.23640;Via Carlo Valvassori Peroni;Città Studi;Milano;0;bai
+127387679;169000;40;1;1;T;0;O;Monolocale;45.49740;9.23240;Via Anacreonte;Cimiano;Milano;0;i
+134792803;183000;45;1;1;2;0;;Monolocale;45.50350;9.20870;Via Felice Romani;Greco - Segnano;Milano;0;bca
+127060331;195000;95;3;2;T;1;O;Trilocale;45.41900;9.15828;VIA DEL MARE ;Cantalupa - San Paolo;Milano;0;a
+133422116;185000;36;2;1;1;0;O;Bilocale;45.50080;9.23470;via Paruta;Cimiano;Milano;0;btcd
+132227042;185000;60;2;1;2;1;R;Bilocale;45.44600;9.25001;Viale Ungheria;Viale Ungheria - Mecenate;Milano;0;bc
+133209144;160000;60;2;1;3;1;R;Bilocale;45.50520;9.13645;Via Varesina;Certosa;Milano;0;d
+133890062;169000;35;2;1;5;1;O;Bilocale;45.43800;9.17750;Viale Giovanni da Cermenate;Pezzotti - Meda;Milano;0;i
+128789530;169000;50;2;1;T;1;B;Bilocale;45.51260;9.25120;Via Trasimeno;Quartiere Adriano;Milano;0;
+134774065;180000;53;1;1;2;1;N;Monolocale;45.51240;9.25360;Via San Mamete;Quartiere Adriano;Milano;0;t
+129365644;169000;38;2;1;T;1;B;Bilocale;45.49690;9.23810;Via Giorgio Marazzani;Cimiano;Milano;0;cai
+132460634;170000;35;1;1;5;1;B;Monolocale;45.45130;9.22080;Via Sebino;Martini - Insubria;Milano;0;i
+131283464;195000;20;1;1;R;0;O;Monolocale;45.47910;9.20258;Via Felice Casati, 27;Repubblica;Milano;0;a
+133915335;169000;40;1;1;2;0;B;Monolocale;45.50800;9.19990;Via Cino da Pistoia;Ca' Granda;Milano;0;d
+134287991;174000;70;2;1;5;1;O;Bilocale;45.51380;9.12538;Via Giovanni Battista Grassi;Vialba;Milano;0;b
+127699104;189000;40;2;1;T;1;O;Bilocale;45.45150;9.22124;Via LUIGI RESNATI 2;Martini - Insubria;Milano;0;i
+132931524;189000;61;2;1;5;1;B;Bilocale;45.52700;9.17540;Via Luigi Angeloni;Bruzzano;Milano;0;bcd
+132939960;159000;29;1;1;4;1;B;Monolocale;45.49010;9.23070;via Cambiasi, 5;Casoretto;Milano;0;bci
+132999506;193000;28;1;1;T;1;O;Loft;45.50110;9.22130;Viale Monza;Turro;Milano;0;i
+133918031;159000;35;1;1;6;1;O;Monolocale;45.50410;9.17590;Via tartini;Dergano;Milano;0;b
+134387371;185000;50;2;1;S;1;B;Bilocale;45.45400;9.21360;Via Angelo Maj;Cadore;Milano;0;ai
+127585686;195000;51;2;1;R;1;B;Bilocale;45.49980;9.21260;Via Rho;Cascina dei Pomi;Milano;0;c
+130672632;189000;52;2;1;3;1;R;Bilocale;45.50470;9.18070;Via Cannero;Dergano;Milano;0;bci
+132056944;179000;45;2;1;1;0;O;Bilocale;45.51990;9.22330;Via Fortezza;Villa San Giovanni;Milano;0;bc
+115416317;180000;44;2;1;1;1;R;Bilocale;45.51020;9.17490;Via Giovanni Nicotera;Affori;Milano;0;b
+133090390;179000;38;2;1;3;0;R;Bilocale;45.44400;9.15260;Via Giacomo Watt;Barona;Milano;0;cd
+132405954;190000;31;1;1;3;1;B;Monolocale;45.48740;9.16719;via Cenisio;Cenisio;Milano;0;b
+132812914;169000;45;1;1;1;0;O;Monolocale;45.50250;9.12870;Via Garegnano;Musocco;Milano;0;bci
+130494260;175000;40;1;1;T;0;R;Monolocale;45.45090;9.22470;Piazzale Vincenzo Cuoco;Molise - Cuoco;Milano;0;bai
+134663185;170000;63;2;1;1;1;B;Bilocale;45.41850;9.17860;Via Fratelli Fraschini;Gratosoglio;Milano;0;ta
+133143842;190000;46;2;1;5;1;B;Bilocale;45.50640;9.16820;Via Don Giovanni Minzoni;Bovisa;Milano;0;a
+134744009;190000;67;2;1;S;0;B;Bilocale;45.50920;9.22540;Via Aristotele;Precotto;Milano;0;bi
+134902173;189000;45;1;1;3;1;B;Monolocale;45.43800;9.15190;Via Benevento;Tre Castelli - Faenza;Milano;0;b
+133892919;175000;44;2;1;R;1;B;Bilocale;45.51550;9.19250;Via Paulucci di Calbioli Fulcieri;Niguarda;Milano;0;bi
+134898843;170000;62;2;1;T;1;O;Bilocale;45.52720;9.20580;Piazza San Giuseppe;Bignami - Ponale;Milano;0;cad
+133344546;195000;61;2;1;1;0;B;Bilocale;45.44570;9.24401;Viale Ungheria;Viale Ungheria - Mecenate;Milano;0;bca
+130564616;183000;90;3;1;5;1;B;Trilocale;45.51810;9.11870;Via Cristina Belgioioso;Roserio;Milano;0;td
+132219180;179000;35;1;1;S;0;O;Monolocale;45.50150;9.17920;Via Luigi Manzotti;Dergano;Milano;0;ai
+133916939;178000;60;2;1;4;1;B;Bilocale;45.46530;9.09040;Via Terni;Baggio;Milano;0;bci
+129035754;185000;64;2;1;2;0;B;Bilocale;45.50610;9.23560;Via Federico Jarach;Ponte Nuovo;Milano;0;ca
+130249386;160000;35;1;1;4;0;B;Monolocale;45.48600;9.22850;Via Nicola Antonio Porpora;Città Studi;Milano;0;ta
+123745335;185000;56;2;1;3;0;B;Bilocale;45.51640;9.20894;Viale Sarca;Bicocca;Milano;0;bc
+134409367;180000;40;1;1;7;1;R;Monolocale;45.46640;9.13350;Via Privata Piero Martinetti;Piazzale Siena;Milano;0;bi
+134793405;159000;41;2;1;R;0;O;Bilocale;45.45980;9.09710;via palmi, 4;Baggio;Milano;0;b
+134663607;159000;24;1;1;2;1;O;Monolocale;45.46700;9.14430;Via Pietro Rubens;Gambara;Milano;0;ai
+132161328;180000;54;2;1;1;1;R;Bilocale;45.49320;9.15593;viale Monteceneri, 14;Ghisolfa - Mac Mahon;Milano;0;bc
+125069411;165000;31;1;1;5;0;B;Monolocale;45.45880;9.24110;Via Maria Montessori 14;Quartiere Forlanini;Milano;0;
+127073237;169000;40;2;1;T;0;O;Loft;45.49740;9.23240;Via Anacreonte;Cimiano;Milano;0;i
+134345281;190000;45;2;1;5;0;O;Bilocale;45.41850;9.17840;Via Fratelli Fraschini;Gratosoglio;Milano;0;t
