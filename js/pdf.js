@@ -8,14 +8,14 @@
 const PDF_C = { bx: "#6e1423", bx2: "#4a0d17", oro: "#b08d57", oro2: "#d9bd84", oro3: "#f4ead8", ink: "#2a2124", mut: "#7d6f68", line: "#eadfcd", ok: "#2f7d55", ko: "#a3253a" };
 
 /* mosaico di tessere OpenStreetMap con segnaposti (in pixel, niente librerie) */
-function pdfMappa(lat, lon, z, W, H, pins = [], cls = "") {
-  const n = 2 ** z, wx = (lon + 180) / 360 * n * 256, s = Math.sin(lat * Math.PI / 180);
-  const wy = (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * n * 256;
-  const x0 = wx - W / 2, y0 = wy - H / 2, tx0 = Math.floor(x0 / 256), ty0 = Math.floor(y0 / 256), tx1 = Math.floor((x0 + W) / 256), ty1 = Math.floor((y0 + H) / 256);
+function pdfMappa(lat, lon, z, W, H, pins = [], cls = "", hd = true) {
+  const zt = hd ? z + 1 : z, ts = hd ? 128 : 256, n = 2 ** zt, S = n * ts;   // hd: tessere del livello dopo, disegnate a metà (nitide in stampa)
+  const wx = (lon + 180) / 360 * S, sn = Math.sin(lat * Math.PI / 180), wy = (0.5 - Math.log((1 + sn) / (1 - sn)) / (4 * Math.PI)) * S;
+  const x0 = wx - W / 2, y0 = wy - H / 2, tx0 = Math.floor(x0 / ts), ty0 = Math.floor(y0 / ts), tx1 = Math.floor((x0 + W) / ts), ty1 = Math.floor((y0 + H) / ts);
   let t = "";
   for (let x = tx0; x <= tx1; x++) for (let y = ty0; y <= ty1; y++)
-    t += `<img src="https://tile.openstreetmap.org/${z}/${((x % n) + n) % n}/${y}.png" style="left:${Math.round(x * 256 - x0)}px;top:${Math.round(y * 256 - y0)}px" alt="">`;
-  const px = (la, lo) => { const ss = Math.sin(la * Math.PI / 180); return [(lo + 180) / 360 * n * 256 - x0, (0.5 - Math.log((1 + ss) / (1 - ss)) / (4 * Math.PI)) * n * 256 - y0]; };
+    t += `<img src="https://tile.openstreetmap.org/${zt}/${((x % n) + n) % n}/${y}.png" style="left:${Math.round(x * ts - x0)}px;top:${Math.round(y * ts - y0)}px;width:${ts}px;height:${ts}px" alt="">`;
+  const px = (la, lo) => { const ss = Math.sin(la * Math.PI / 180); return [(lo + 180) / 360 * S - x0, (0.5 - Math.log((1 + ss) / (1 - ss)) / (4 * Math.PI)) * S - y0]; };
   const P = pins.map(p => { const [x, y] = px(p.lat, p.lon); return x < 6 || y < 6 || x > W - 6 || y > H - 6 ? "" :
     `<span class="pin ${p.k || ""}" style="left:${x.toFixed(1)}px;top:${y.toFixed(1)}px">${p.t ?? ""}</span>`; }).join("");
   return `<div class="mapw ${cls}" style="width:${W}px;height:${H}px"><div class="tiles">${t}</div>${P}<span class="osm">© OpenStreetMap</span></div>`;
@@ -65,7 +65,7 @@ function pdfSpiega(t, f) {
 PL_T.mc = { grass: "#f4eee3", res: "#f2ebdf", ind: "#ece3d4", wood: "#dfe2cc", park: "#e1e5cf", water: "#c6d6dc", road: "#ffffff", roadCase: "#e0d1b5", major: "#e2c88f", majorCase: "#b08d57", dash: "#ffffff",
   school: "#eee3cf", farm: "#ede6d4", sand: "#eee2c8", rock: "#e9e3d9", grassy: "#e2e6d2", path: "#e8dcc5", rail: "#bfae95", bnd: "#6e1423", out: "#d8c8ae",
   roofs: ["#fbf8f2", "#f5eee3", "#f8f2e8", "#f1e9dc", "#fdfaf5", "#eee5d6"], lab: "#4a0d17", halo: "#ffffff", num: "#6e1423", accent: "#6e1423", city: "#6e1423", town: "#5b4c40", lake: "#2f6f80" };
-const PDF_TEMI = { notte: ["Notte morbida", "lo stile dell'app: blu notte, palazzi in 3D, il tuo in oro", "#f2cf5b"],
+const PDF_TEMI = { piantina: ["Piantina dall'alto", "vista dall'alto stile pianta, color seppia, con il segnaposto bordeaux", "#7a1628"], notte: ["Notte morbida", "lo stile dell'app: blu notte, palazzi in 3D, il tuo in oro", "#f2cf5b"],
   mc: ["Avorio e bordeaux", "chiara ed elegante, nei colori Maison Collection: il palazzo in bordeaux", "#7a1628"],
   oro: ["Carbone e oro", "nera e oro, molto scenografica", "#f2cf5b"],
   sat: ["Satellite", "foto aerea reale con il palazzo evidenziato in oro", "#f2cf5b"] };
@@ -125,10 +125,10 @@ function pdfFoto(sn, W, H, cls = "") {
 async function mmPdfFoto(arg) {
   const { ctx, q } = arg, s = ctx.sel || {};
   const lat = s.lat ?? ctx.micro?.lat ?? ctx.com?.lat, lon = s.lon ?? ctx.micro?.lon ?? ctx.com?.lon;
-  const foto = {}, tema = store.get("pdf_tema", "sat"), selCol = (PDF_TEMI[tema] || PDF_TEMI.sat)[2];
-  if (lat == null) return foto;
+  const foto = {}, tema = store.get("pdf_mappa", "piantina"), selCol = (PDF_TEMI[tema] || PDF_TEMI.piantina)[2];
+  if (lat == null || tema === "piantina") return foto;
   const tm = (p, ms) => Promise.race([p, new Promise(r => setTimeout(() => r(null), ms))]);
-  foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 25000);
+  foto.cov = await tm(pdfSnap({ lat, lon, zoom: 17, pitch: 58, bearing: -28, w: 600, h: 300, evidenzia: true, geom: s.geom, hb: s.h, tema, selCol }), 25000);
   const C = arg.r.cmp || (window.mmComps ? mmComps(ctx, q) : null);
   const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
   if (pts.length) {
@@ -144,6 +144,7 @@ function pdfApri(html) {
 }
 async function mmPdf(arg) {
   if (window.__pdfHtml) return mmPdfHtml(arg, {});
+  if (store.get("pdf_mappa", "piantina") === "piantina") { pdfApri(mmPdfHtml(arg, {})); return; }   // piantina: niente da disegnare, si apre subito
   document.getElementById("pdfov")?.remove();
   const ov = document.createElement("div"); ov.id = "pdfov";
   ov.innerHTML = `<div class="pdfbox"><div class="spin"></div><b>Preparo il PDF</b><span>Disegno la mappa satellite e le pagine della valutazione…</span><button class="btn sec" data-pdfx>Annulla</button></div>`;
@@ -248,7 +249,7 @@ function mmPdfHtml({ r, q, ctx }, foto = {}) {
 
   /* --- mappe --- */
   const pins = comps.filter(a => a.lat != null && !a.appross).map(a => ({ lat: a.lat, lon: a.lon, t: a.i, k: a.star ? "st" : "" }));
-  const mapCover = foto.cov ? pdfFoto(foto.cov, 615, 300, "cov") : lat != null ? pdfMappa(lat, lon, 16, 615, 300, [{ lat, lon, k: "me", t: "" }], "cov") : "";
+  const mapCover = foto.cov ? pdfFoto(foto.cov, 600, 300, "cov") : lat != null ? pdfMappa(lat, lon, 16, 600, 300, [{ lat, lon, k: "me", t: "" }], "cov") : "";
   const maxD = Math.max(400, ...comps.filter(a => a.lat != null && !a.appross).map(a => a.dist || 0));
   const zC = maxD > 1400 ? 14 : maxD > 700 ? 15 : 16;
   const mapComp = foto.cmp ? pdfFoto(foto.cmp, 690, 270) : lat != null && pins.length ? pdfMappa(lat, lon, zC, 690, 270, [...pins, { lat, lon, k: "me", t: "" }]) : "";
@@ -285,7 +286,7 @@ body{margin:0;font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;font-weig
 /* mappe */
 .mapw{position:relative;overflow:hidden;break-inside:avoid;border:.6pt solid ${C.oro2};background:#efe8dc}
 .mapw .tiles{position:absolute;inset:0;filter:grayscale(1) sepia(.28) contrast(.92) brightness(1.06)}
-.mapw .tiles img{position:absolute;width:256px;height:256px}
+.mapw .tiles img{position:absolute}
 .mapw img.snap{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.mapw.foto{border-color:${C.oro};box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .mapw .osm{position:absolute;right:3px;bottom:2px;font-size:5.5pt;color:#6b5f58;background:rgba(255,255,255,.7);padding:0 3px}
 .pin{position:absolute;transform:translate(-50%,-50%);width:15px;height:15px;border-radius:50%;background:#fff;border:1.4px solid ${C.oro};color:${C.bx};font-size:6.5pt;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.3)}
@@ -513,7 +514,7 @@ function pdfEsempio() {
   return { r: vCalcola(q, ctx), q, ctx };
 }
 function vAnteprima() {
-  const scelto = store.get("pdf_tema", "sat");
+  const scelto = store.get("pdf_mappa", "piantina");
   return `<div class="hubhead"><small>Rendering</small><h1>Copertina del PDF</h1><p class="sub">Quattro versioni della mappa sulla stessa valutazione di esempio (Via Ripamonti 166). Le mappe si generano adesso, ci vogliono una decina di secondi. Tocca "Apri il PDF completo" per vederlo tutto.</p></div>
   ${Object.entries(PDF_TEMI).map(([k, [t, d]]) => `<div class="card" style="margin:0 0 18px;padding:14px">
     <h2 style="margin:0 0 2px">${esc(t)} ${k === scelto ? '<small style="color:var(--cy)">· in uso ora</small>' : ""}</h2><p class="note" style="margin:0 0 10px">${esc(d)}</p>
@@ -523,14 +524,14 @@ function vAnteprima() {
 async function afterAnteprima() {
   const E = pdfEsempio(), s = E.ctx.sel, C = E.r.cmp, H = {};
   const pts = C ? C.lista.map((a, i) => ({ lat: a.lat, lon: a.lon, t: i + 1, k: i < 3 ? "st" : "", ok: a.lat != null && !a.appross })).filter(a => a.ok) : [];
-  $("#app").addEventListener("click", e => { const u = e.target.closest("[data-antuse]"); if (u) { store.set("pdf_tema", u.dataset.antuse); document.querySelectorAll("[data-antuse]").forEach(x => { const on = x === u; x.textContent = on ? "✓ In uso" : "Usa questa"; x.className = "btn " + (on ? "sec" : "pri"); }); return; }
+  $("#app").addEventListener("click", e => { const u = e.target.closest("[data-antuse]"); if (u) { store.set("pdf_mappa", u.dataset.antuse); document.querySelectorAll("[data-antuse]").forEach(x => { const on = x === u; x.textContent = on ? "✓ In uso" : "Usa questa"; x.className = "btn " + (on ? "sec" : "pri"); }); return; }
     const b = e.target.closest("[data-antpdf]"); if (!b || !H[b.dataset.antpdf]) return;
     pdfApri(H[b.dataset.antpdf]); });
   for (const k of Object.keys(PDF_TEMI)) {
     const box = document.querySelector(`[data-ant="${k}"]`); if (!box) return;
     const selCol = PDF_TEMI[k][2];
-    const foto = { cov: await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 17, pitch: 58, bearing: -28, w: 615, h: 300, evidenzia: true, tema: k, selCol }) };
-    if (pts.length) foto.cmp = await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 15, w: 690, h: 270, pins: [...pts, { lat: s.lat, lon: s.lon, k: "me", t: "" }], evidenzia: true, tema: k === "sat" ? "mc" : k, selCol: k === "sat" ? "#7a1628" : selCol });
+    const foto = k === "piantina" ? {} : { cov: await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 17, pitch: 58, bearing: -28, w: 600, h: 300, evidenzia: true, tema: k, selCol }) };
+    if (pts.length && k !== "piantina") foto.cmp = await pdfSnap({ lat: s.lat, lon: s.lon, zoom: 15, w: 690, h: 270, pins: [...pts, { lat: s.lat, lon: s.lon, k: "me", t: "" }], evidenzia: true, tema: k === "sat" ? "mc" : k, selCol: k === "sat" ? "#7a1628" : selCol });
     const html = mmPdfHtml(E, foto); H[k] = html;
     const fr = document.createElement("iframe"); fr.className = "antf"; fr.srcdoc = html.replace(/<script>\(async\(\)=>[\s\S]*?<\/script>/, "");
     box.innerHTML = ""; box.appendChild(fr);
