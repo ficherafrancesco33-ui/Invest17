@@ -597,10 +597,14 @@ function mmComps(ctx, q) {
   const sc = a => a.dist / 250 + Math.abs(Math.log(a.mq / mq)) * 5 + Math.min(2, Math.abs((+a.loc || loc) - loc)) * 0.8 + (a.st ? 0 : 0.5);
   const c = pool.filter(a => a.dist <= R).map(a => ({ ...a, score: sc(a) })).sort((a, b) => a.score - b.score)
     .filter(function (a) { const k = a.lat.toFixed(4) + "," + a.lon.toFixed(4); this[k] = (this[k] || 0) + 1; return this[k] <= 2; }, {})
-    .slice(0, 10);
+    .slice(0, 8);
   if (c.length < 4) return null;
-  c.forEach(a => { a.w = 1 / (1 + a.score); a.adj = a.vO; });
-  const ord = [...c].sort((a, b) => a.vO - b.vO), tot = ord.reduce((x, a) => x + a.w, 0);
-  let acc = 0, vO = ord[ord.length - 1].vO; for (const a of ord) { acc += a.w; if (acc >= tot / 2) { vO = a.vO; break; } }
+  // media pesata, non mediana: il peso scende in fretta con la distanza e la differenza (≈ dimezza ogni 0,45 punti di scarto)
+  // es. stesso palazzo/via e metratura simile ≈ 40–60% del peso; uno a 1 km e diverso ≈ 2–5%
+  c.forEach(a => { a.w = Math.exp(-1.55 * a.score); a.adj = a.vO; });
+  const tot = c.reduce((x, a) => x + a.w, 0);
+  c.forEach(a => { a.peso = a.w / tot; });
+  c.sort((a, b) => b.peso - a.peso);
+  const vO = c.reduce((x, a) => x + a.vO * a.peso, 0);
   return { lista: c, med: median(c.map(a => a.mq2)), vO, norm: vO, nNorm: c.length, raggio: R };
 }

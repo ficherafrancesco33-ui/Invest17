@@ -474,12 +474,12 @@ ${sec(1, "Immobile oggetto di valutazione", `
 </tbody></table>`)}
 
 ${comps.length ? sec(2, "Comparabili di mercato analizzati", `
-<p class="lead">Analizzati ${comps.length} annunci in vendita con metratura simile (${Math.round(q.mq * 0.6)}–${Math.round(q.mq * 1.6)} m²), ordinati per vicinanza e somiglianza. Le ★ indicano i tre più affini. Media dei comparabili: <b>${eur(mediaC)}/m²</b>${mediaO ? `; media dei ${buoni.length} in ottimo stato o ristrutturati: <b>${eur(mediaO)}/m²</b>` : ""}.</p>
+<p class="lead">Analizzati ${comps.length} annunci in vendita con metratura simile (${Math.round(q.mq * 0.6)}–${Math.round(q.mq * 1.6)} m²), ordinati per peso nella stima: il valore è una media pesata in cui contano molto di più gli annunci vicinissimi e più simili per metratura e locali (colonna Peso), dopo averli riportati a stato ottimo, piano di riferimento e senza accessori. Le ★ indicano i tre più affini. Media dei comparabili: <b>${eur(mediaC)}/m²</b>${mediaO ? `; media dei ${buoni.length} in ottimo stato o ristrutturati: <b>${eur(mediaO)}/m²</b>` : ""}.</p>
 ${mapComp}${legenda}
-<table style="margin-top:3mm"><thead><tr><th>#</th><th>Indirizzo</th><th class="r">Prezzo</th><th class="r">m²</th><th class="r">€/m²</th><th>Piano</th><th>Note</th><th class="r">Dist.</th></tr></thead><tbody>
+<table style="margin-top:3mm"><thead><tr><th>#</th><th>Indirizzo</th><th class="r">Prezzo</th><th class="r">m²</th><th class="r">€/m²</th><th>Piano</th><th>Note</th><th class="r">Dist.</th><th class="r">Peso</th></tr></thead><tbody>
 ${comps.map(a => `<tr class="${a.star ? "hl" : ""}"><td style="white-space:nowrap"><i class="cn" style="background:${a.col}">${a.i}</i>${a.star ? ' <span class="star">★</span>' : ""}</td><td style="width:30%"><b style="font-weight:500">${esc(a.via || "Zona " + (a.micro || ""))}</b>${a.micro ? ` <span class="small">· ${esc(a.micro)}</span>` : ""}</td>
 <td class="r">${eur(a.p)}</td><td class="r">${a.mq}</td><td class="r"><b style="color:${C.bx}">${eur(a.mq2)}</b></td><td>${a.piano ? (a.piano === "T" ? "Terra" : a.piano === "R" ? "Rialzato" : a.piano === "S" ? "Semint." : a.piano + "°") : "—"}${a.asc ? ", asc." : a.piano && a.piano !== "T" ? ", no asc." : ""}</td>
-<td class="small">${esc((a.d || "").split(", ").filter(x => !/piano|rialzato|seminterrato|^ascensore$/.test(x)).join(", "))}${a.loc ? `, ${a.loc} locali` : ""}</td><td class="r">${a.dist != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "—"}</td></tr>`).join("")}
+<td class="small">${esc((a.d || "").split(", ").filter(x => !/piano|rialzato|seminterrato|^ascensore$/.test(x)).join(", "))}${a.loc ? `, ${a.loc} locali` : ""}</td><td class="r">${a.dist != null ? (a.appross ? "~" : "") + num(a.dist / 1000, 1) + " km" : "—"}</td><td class="r">${a.peso != null ? Math.round(a.peso * 100) + "%" : "—"}</td></tr>`).join("")}
 </tbody></table>
 <p class="note">Prezzi richiesti negli annunci di ${[...new Set(comps.map(a => a.fonte))].join(" e ")} (novembre 2026). La valutazione è espressa come prezzo di richiesta in linea con questi annunci.</p>`) : ""}
 
