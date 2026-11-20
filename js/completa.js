@@ -34,13 +34,12 @@ function ciInv() {
   const st = [...seen.values()].map(o => { const k = o.c.n + "|" + o.c.p, n = caricati[tnorm(o.c.n)] || 0, ctrl = k in C;
     return { o, n, ctrl, s: n ? "ok" : ctrl ? "fatto" : o.c.v > 3000 ? "sopra" : link.has(tnorm(o.c.n)) ? "parz" : "da" }; });
   const ord = { da: 0, parz: 1, ok: 2, fatto: 3, sopra: 4 }; st.sort((a, b) => ord[a.s] - ord[b.s]);
-  return { st, f, ok: st.filter(x => x.s === "ok" || x.s === "fatto").length, parz: st.filter(x => x.s === "parz").length, tot: st.length };
+  return { st, f, ok: st.filter(x => x.s === "ok").length, parz: st.filter(x => x.s === "fatto" || x.s === "sopra").length, da: st.filter(x => x.s === "da" || x.s === "parz").length, tot: st.length };
 }
 function ciPrompt(tab) {
   if (tab === "milano") {
-    const L = cmMilano().st.filter(x => x.s !== "ok");
-    return `Completa Milano su Keystone: con Chrome leggi gli annunci in vendita di Immobiliare (tutte le pagine, con calma per non farti bloccare) di queste microzone ancora incomplete e caricali come comparabili. Niente telefoni.\n\n` +
-      L.map(x => `- ${x.m.n} (${x.m.z})${x.n ? `, ora ${x.n} annunci` : ""}: ${cmUrl(x.m.n)}`).join("\n");
+    const L = cmMilano().st.filter(x => x.s !== "ok").slice(0, 20);
+    return `Completa Milano su Keystone: leggi con Chrome gli annunci in vendita di Immobiliare (tutte le pagine, con calma) di queste microzone e caricali come comparabili: ${L.map(x => x.m.n).join(", ")}.`;
   }
   const L = ciInv().st.filter(x => x.s === "da" || x.s === "parz").slice(0, 15);
   return `Completa Investimenti su Keystone: cerca su Immobiliare gli annunci fino a 60.000 € in buono stato (niente aste, rustici, baite, ruderi) in questi comuni e carica i migliori come automatici: ${L.map(x => `${x.o.c.n} (${x.o.c.p})`).join(", ")}.`;
@@ -51,29 +50,27 @@ function vCompleta(tab) {
   const head = `<div class="hubhead"><small>Raccolta dati</small><h1>Completamento</h1><p class="sub">Cosa abbiamo già e cosa manca. Si aggiorna da solo ogni volta che carico nuovi annunci, anche quelli letti con Chrome.</p></div>
   <nav class="bread nob" style="margin-top:16px;margin-bottom:16px"><a href="#completa/milano" class="${tab === "milano" ? "on" : ""}">${ico("mappa")}<span>Milano</span></a><a href="#completa/inv" class="${tab === "inv" ? "on" : ""}">${ico("comuni")}<span>Investimenti</span></a></nav>
   <div class="cmprog"><div class="cmbar"><span style="width:${T.ok / T.tot * 100}%"></span><span class="ap" style="width:${T.parz / T.tot * 100}%"></span></div>
-    <b>${T.ok} su ${T.tot} ${tab === "milano" ? "microzone complete" : "comuni fatti"}</b><span>${T.parz ? `${T.parz} ${tab === "milano" ? "parziali" : "con il link in cartella"}` : ""}</span></div>
-  <div class="cmleg"><span><i style="background:${CM_COL.ok}"></i>${tab === "milano" ? "Completa" : "Annunci caricati"}</span><span><i style="background:${CM_COL.parz}"></i>${tab === "milano" ? "Parziale" : "Link in cartella"}</span>${tab === "inv" ? `<span><i style="background:${CM_COL.fatto}"></i>Controllato, niente di buono</span><span><i style="background:${CM_COL.sopra}"></i>Sopra budget</span>` : ""}<span><i style="background:${CM_COL.da}"></i>Da fare</span></div>
+    <b>${tab === "milano" ? `${T.ok} su ${T.tot} microzone complete` : `${T.ok + T.parz} su ${T.tot} comuni controllati`}</b><span>${tab === "milano" ? (T.parz ? T.parz + " parziali" : "") : `${T.ok} con annunci caricati · ${T.da} da fare`}</span></div>
+  <div class="cmleg"><span><i style="background:${CM_COL.ok}"></i>${tab === "milano" ? "Completa" : "Annunci caricati"}</span>${tab === "milano" ? `<span><i style="background:${CM_COL.parz}"></i>Parziale</span>` : ""}${tab === "inv" ? `<span><i style="background:${CM_COL.fatto}"></i>Controllato, niente di buono</span><span><i style="background:${CM_COL.sopra}"></i>Sopra budget</span>` : ""}<span><i style="background:${CM_COL.da}"></i>Da fare</span></div>
   <div class="clmapw"><div class="map clmap" id="cmmap"></div></div>
-  <div class="lbox"><div class="lbh"><b>Chiedi a Claude di completare</b><span>${T.tot - T.ok} da fare</span></div>
+  <div class="lbox"><div class="lbh"><b>Chiedi a Claude di completare</b><span>${tab === "milano" ? T.tot - T.ok : T.da} da fare</span></div>
     <div class="btns"><button class="btn pri" id="cmcopy">Copia la richiesta per Claude</button></div>
-    <p class="note">Incollala in chat: cerco io gli annunci, zona per zona, e qui i pallini si colorano da soli. Non serve raccogliere link a mano.</p></div>`;
+    <p class="note">Il modo migliore: dal PC con Chrome aperto scrivimi "riprova" e leggo io le ricerche di Immobiliare, già filtrate e ordinate per prezzo. Dal telefono puoi incollarmi questa richiesta (solo nomi, niente link). In ogni caso i pallini qui si aggiornano da soli.</p></div>`;
   if (tab === "milano") {
     return head + `<h2>Tutte le microzone</h2>
     ${TERR.milano.zone.map(z => { const mm = T.st.filter(x => x.m.z === z.n); const ok = mm.filter(x => x.s === "ok").length;
       return `<details class="cmz" ${ok < mm.length && ok ? "open" : ""}><summary><b>${esc(z.n)}</b><span>${ok}/${mm.length}</span></summary>
-        ${mm.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.m.n)}<em class="mut"> · ${x.n ? num(x.n) + " annunci" : "nessun annuncio"}</em></span>
-          <a class="btn sec" href="${esc(cmUrl(x.m.n))}" target="_blank" rel="noopener">Apri ↗</a></div>`).join("")}</details>`; }).join("")}`;
+        ${mm.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.m.n)}<em class="mut"> · ${x.n ? num(x.n) + " annunci" : "nessun annuncio"}</em></span></div>`).join("")}</details>`; }).join("")}`;
   }
   return head + `<p class="note">I comuni di <a href="#inv/dove">Dove cercare</a> con dati veri di affitto (B&B misurati e affitto normale), entro ${tOre(+T.f.ore)}. La richiesta per Claude prende i primi 15 ancora da fare, così resta un messaggio corto.${typeof AUTO_CONTROLLO_DATA !== "undefined" ? ` Ultimo controllo: ${AUTO_CONTROLLO_DATA.split("-").reverse().join("/")}.` : ""}</p>
-  <div class="cmz" style="padding:4px 0">${T.st.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.o.c.n)} <em class="mut">(${esc(x.o.c.p)}) · ${x.n ? x.n + " annunci caricati" : x.s === "fatto" ? "controllato: niente di buono sotto 60.000 €" : x.s === "sopra" ? `sopra budget (media ${eur(x.o.c.v)}/m²)` : x.s === "parz" ? "link in cartella" : "da fare"} · ${pct(x.o[T.f.uso], 1)} netto</em></span>
-    <a class="btn sec" href="${esc(immUrl(x.o.c.n))}" target="_blank" rel="noopener">Apri ↗</a></div>`).join("")}</div>`;
+  <div class="cmz" style="padding:4px 0">${T.st.map(x => `<div class="cmr"><i style="background:${CM_COL[x.s]}"></i><span>${esc(x.o.c.n)} <em class="mut">(${esc(x.o.c.p)}) · ${x.n ? x.n + " annunci caricati" : x.s === "fatto" ? "controllato: niente di buono sotto 60.000 €" : x.s === "sopra" ? `sopra budget (media ${eur(x.o.c.v)}/m²)` : x.s === "parz" ? "link in cartella" : "da fare"} · ${pct(x.o[T.f.uso], 1)} netto</em></span></div>`).join("")}</div>`;
 }
 function afterCompleta(tab) {
   tab = tab === "inv" ? "inv" : "milano";
   const m = tMap($("#cmmap"), [[45.4642, 9.19], tab === "milano" ? 12 : 8]);
   if (m) {
-    const pts = tab === "milano" ? cmMilano().st.map(x => ({ la: x.m.lat, lo: x.m.lon, s: x.s, t: `<b>${esc(x.m.n)}</b><br><span style="color:#9aa8bb">${esc(x.m.z)} · ${x.n} annunci</span><br><a class="go" href="${esc(cmUrl(x.m.n))}" target="_blank" rel="noopener">Apri su Immobiliare ↗</a>` }))
-      : ciInv().st.map(x => ({ la: x.o.c.lat, lo: x.o.c.lon, s: x.s, t: `<b>${esc(x.o.c.n)}</b> (${esc(x.o.c.p)})<br><span style="color:#9aa8bb">${x.n} annunci caricati</span><br><a class="go" href="${esc(immUrl(x.o.c.n))}" target="_blank" rel="noopener">Apri su Immobiliare ↗</a>` }));
+    const pts = tab === "milano" ? cmMilano().st.map(x => ({ la: x.m.lat, lo: x.m.lon, s: x.s, t: `<b>${esc(x.m.n)}</b><br><span style="color:#9aa8bb">${esc(x.m.z)} · ${x.n} annunci</span><br>` }))
+      : ciInv().st.map(x => ({ la: x.o.c.lat, lo: x.o.c.lon, s: x.s, t: `<b>${esc(x.o.c.n)}</b> (${esc(x.o.c.p)})<br><span style="color:#9aa8bb">${x.n} annunci caricati</span><br>` }));
     pts.forEach(p => L.circleMarker([p.la, p.lo], { radius: 9, color: "#0d1320", weight: 2, fillColor: CM_COL[p.s], fillOpacity: .95 }).addTo(m).bindPopup(p.t));
     if (pts.length) m.fitBounds(pts.map(p => [p.la, p.lo]), { padding: [20, 20] });
   }
