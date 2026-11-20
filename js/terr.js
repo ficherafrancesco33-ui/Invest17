@@ -118,8 +118,10 @@ function vCalcola(inp, ctx) {
   const wC = cmp ? 1 : 0;
   // senza comparabili sufficienti: fascia della microzona per lo stato dell'immobile, altrimenti media di zona
   const Fm = ctx.milano && ctx.micro && TERR.milano.fasce?.micro?.[ctx.micro.n], gq = { nuovo: "o", ristrutturato: "o", ottimo: "o", buono: "b", rinfrescare: "b", ristrutturare: "r" }[q.stato] || "b";
-  const base = cmp ? cmp.norm : Fm && Fm[gq] ? Fm[gq][1] : ctx.v;
-  const statoGiaDentro = !!cmp || !!(Fm && Fm[gq]);   // lo stato è già nel prezzo di partenza: non lo riapplico
+  // fascia "buono" della microzona come ancora (le etichette ottimo/buono degli annunci sono poco affidabili), poi il costo dei lavori in €/m²
+  const fasciaMq = Fm && Fm.b ? Fm.b[1] + 450 - (V_COSTO[q.stato] ?? 450) : null;
+  const base = cmp ? cmp.norm : fasciaMq || ctx.v;
+  const statoGiaDentro = !!cmp || !!(Fm && Fm.b);   // lo stato è già nel prezzo di partenza: non lo riapplico
   const mq = Math.max(10, +q.mq || 0);
   const est = (x, lim, p1, p2) => Math.min(x, lim) * p1 + Math.max(0, x - lim) * p2;
   const sup = mq + est(+q.balcone || 0, 25, 0.30, 0.10) + est(+q.terrazzo || 0, 25, 0.35, 0.10) + est(+q.giardino || 0, mq, 0.10, 0.02) + (+q.cantina || 0) * 0.25;
@@ -155,11 +157,11 @@ function vCalcola(inp, ctx) {
   const box = q.box === "no" ? 0 : base * (1 - sconto) * 15 * (ctx.milano ? 0.45 : 0.5) * ({ posto: 0.5, singolo: 1, doppio: 1.7 }[q.box] || 0);
   const st0 = V_STATO[q.stato] || V_STATO.buono, sd0 = V_STATO[q.statoDopo] || V_STATO.ristrutturato;
   // stato già compreso nel prezzo di partenza: fattore 1 (salvo "da rinfrescare", un gradino sotto il buono); dopo i lavori: rapporto tra i gruppi di stato
-  const SFz = cmp ? cmp.SF : { R: 0.82, B: 1, O: 1.18 }, gN = { nuovo: "O", ristrutturato: "O", ottimo: "O", buono: "B", rinfrescare: "B", ristrutturare: "R" };
-  const st = statoGiaDentro ? [st0[0], q.stato === "rinfrescare" ? 0.94 : 1, st0[2]] : st0;
-  const sd = statoGiaDentro ? [sd0[0], SFz[gN[q.statoDopo] || "O"] / SFz[gN[q.stato] || "B"] * st[1], sd0[2]] : sd0;
+  // stato già nel prezzo di partenza; dopo i lavori: + il costo dei lavori evitati (in €/m², come sopra)
+  const st = statoGiaDentro ? [st0[0], 1, st0[2]] : st0;
+  const sd = statoGiaDentro ? [sd0[0], (base + (V_COSTO[q.stato] ?? 450) - (V_COSTO[q.statoDopo] ?? 0)) / base, sd0[2]] : sd0;
   const m1 = sup * mqReale * kTot * st[1];
-  const m2 = cmp && Fm && Fm[gq] ? sup * Fm[gq][1] * kTot * (q.stato === "rinfrescare" ? 0.94 : 1) : null;
+  const m2 = cmp && fasciaMq ? sup * fasciaMq * kTot : null;
   const valCasa = m2 ? m1 * 0.75 + m2 * 0.25 : m1, valore = valCasa + box;
   // frazionamento: quanto vale per chi lo divide in N unità ristrutturate (prezzi dei tagli piccoli vicini), meno lavori, pratiche e margine dell'investitore
   let fraz = null;
