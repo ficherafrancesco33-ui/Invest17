@@ -321,6 +321,28 @@ function afterInvClassifica() {
 /* ---------------- DOVE CERCARE: tutti i comuni con rendimento netto B&B e affitto normale ---------------- */
 const DV_TAG = { lago: ["Lago", "🏞"], sci: ["Montagna e sci", "⛷"], ospedale: ["Ospedale", "🏥"], uni: ["Università", "🎓"], aziende: ["Aziende", "🏭"] };
 const DV_F0 = { uso: "breve", tags: [], ore: 180, prov: "", max: 0 };
+const IMM_F0 = { prezzo: 60000, mq: 0, locali: 0, aste: true, ordine: "prezzo" };
+/* link alla ricerca di Immobiliare con i filtri già impostati */
+function immUrl(n) {
+  const q = Object.assign({}, IMM_F0, store.get("imm_f", {})), p = [];
+  if (+q.prezzo) p.push("prezzoMassimo=" + q.prezzo); if (+q.mq) p.push("superficieMinima=" + q.mq); if (+q.locali) p.push("localiMinimo=" + q.locali);
+  if (q.aste) p.push("noAste=1"); if (q.ordine === "prezzo") p.push("criterio=prezzo&ordine=asc"); else if (q.ordine === "recenti") p.push("criterio=data&ordine=desc");
+  return `https://www.immobiliare.it/vendita-case/${immSlug(n)}/${p.length ? "?" + p.join("&") : ""}`;
+}
+/* cartella dei link: li raccogli comune per comune e poi copi un unico messaggio per Claude */
+const lbAll = () => store.get("linkbox", []);
+function lbAdd(url, com, prov) {
+  url = String(url || "").trim(); if (!/^https?:\/\//.test(url)) return false;
+  if (!com) { const m = url.match(/vendita-case\/([^/?#]+)/), c = m && tIdx().com.find(x => immSlug(x.n) === m[1]);
+    com = c ? c.n : m ? m[1].replace(/-/g, " ").replace(/\b\w/g, ch => ch.toUpperCase()) : "Link"; if (c && !prov) prov = c.p; }
+  const L = lbAll().filter(x => x.url !== url); L.unshift({ url, com, prov: prov || "", dal: new Date().toISOString().slice(0, 10) }); store.set("linkbox", L.slice(0, 200)); return true;
+}
+function lbPrompt() {
+  const L = lbAll(); if (!L.length) return "";
+  return `Carica in Keystone gli annunci di queste ricerche (Investimenti), con scheda completa, comparabili, valore e business plan. Escludi aste, case da ristrutturare completamente e annunci senza foto.\n\n` +
+    L.map(x => `- ${x.com}${x.prov ? " (" + x.prov + ")" : ""}: ${x.url}`).join("\n");
+}
+async function lbCopy(t) { try { await navigator.clipboard.writeText(t); return true; } catch (e) { const a = document.createElement("textarea"); a.value = t; document.body.appendChild(a); a.select(); let ok = false; try { ok = document.execCommand("copy"); } catch (x) {} a.remove(); return ok; } }
 const DV_CACHE = new Map();
 function dvTags(c) {
   const out = [];
@@ -356,14 +378,36 @@ function vDove() {
       <select data-f="max"><option value="0">Ogni prezzo</option>${[60000, 100000, 150000, 250000].map(v => `<option value="${v}" ${+f.max === v ? "selected" : ""}>Bilocale fino a ${keur(v)}</option>`).join("")}</select>
     </div>
   </div>
+  ${dvImmHtml()}
+  ${dvBoxHtml()}
   <p class="note" id="dvnote">${rows.length} comuni${f.prov ? "" : ` · scegli una provincia per vedere anche i paesi più piccoli`}${f.tags.length ? ` · con ${f.tags.map(t => DV_TAG[t][0].toLowerCase()).join(" e ")} vicino` : ""}.</p>
   <div class="map" id="dvmap"></div>
-  <div class="dove">${rows.slice(0, 80).map((o, i) => `<div class="dv"><b>${i + 1}</b><span><a href="https://www.immobiliare.it/vendita-case/${immSlug(o.c.n)}/" target="_blank" rel="noopener">${esc(o.c.n)} <i>(${esc(o.c.p)})</i> ↗</a>
+  <div class="dove">${rows.slice(0, 80).map((o, i) => `<div class="dv"><b>${i + 1}</b><span><a href="${esc(immUrl(o.c.n))}" target="_blank" rel="noopener">${esc(o.c.n)} <i>(${esc(o.c.p)})</i> ↗</a>
       <small>${f.uso === "breve" ? `${eur(o.adr)} a notte · ${pct(o.occ, 0)}${o.stima ? " (stima vicina)" : ""}` : `affitto ${eur(o.canone)}/mese`} · bilocale ~${keur(o.prezzo)} · ${tOre(o.d.min)}</small>
       ${o.tags.length ? `<small class="dvt">${o.tags.map(t => `<span title="${DV_TAG[t][0]}">${DV_TAG[t][1]} ${DV_TAG[t][0]}</span>`).join("")}</small>` : ""}</span>
-      <em>${pct(o[f.uso], 1)}${o.br ? `<a href="#brevi/${encodeURIComponent(o.br.n)}">analisi</a>` : ""}</em></div>`).join("") || `<div class="empty"><b>Nessun comune</b><p>Togli un filtro o allarga il tempo di viaggio.</p></div>`}</div>
+      <em>${pct(o[f.uso], 1)}<button class="lbadd ${lbAll().some(x => x.com === o.c.n) ? "on" : ""}" data-lb="${esc(o.c.n)}|${esc(o.c.p)}">${lbAll().some(x => x.com === o.c.n) ? "✓ link" : "+ link"}</button></em></div>`).join("") || `<div class="empty"><b>Nessun comune</b><p>Togli un filtro o allarga il tempo di viaggio.</p></div>`}</div>
   ${rows.length > 80 ? `<p class="note">Mostro i primi 80 su ${rows.length}.</p>` : ""}
   <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (meno la trattativa, più costi d'acquisto e arredo), dopo spese e tasse da privata. B&amp;B: dati della località o, se non ci sono, della località turistica più vicina ridotti del 15%. Affitto normale solo dove i canoni del portale sono affidabili. Lago, sci, ospedali, università e aziende: distanza dai punti principali, indicativa.</p>`;
+}
+function dvImmHtml() {
+  const q = Object.assign({}, IMM_F0, store.get("imm_f", {}));
+  return `<details class="immf" ${store.get("immf_open", true) ? "open" : ""}><summary>Filtri della ricerca su Immobiliare <small>${+q.prezzo ? "fino a " + keur(q.prezzo) : "ogni prezzo"}${q.aste ? " · senza aste" : ""}</small></summary>
+    <div class="selrow" id="immf">
+      <select data-i="prezzo">${[[0, "Ogni prezzo"], [40000, "Fino a 40k"], [60000, "Fino a 60k"], [80000, "Fino a 80k"], [100000, "Fino a 100k"], [150000, "Fino a 150k"], [200000, "Fino a 200k"]].map(([v, t]) => `<option value="${v}" ${+q.prezzo === v ? "selected" : ""}>${t}</option>`).join("")}</select>
+      <select data-i="mq"><option value="0">Ogni metratura</option>${[30, 40, 50, 60, 80].map(v => `<option value="${v}" ${+q.mq === v ? "selected" : ""}>Da ${v} m²</option>`).join("")}</select>
+      <select data-i="locali"><option value="0">Ogni taglio</option>${[[2, "Da bilocale"], [3, "Da trilocale"]].map(([v, t]) => `<option value="${v}" ${+q.locali === v ? "selected" : ""}>${t}</option>`).join("")}</select>
+      <select data-i="ordine">${[["prezzo", "Prima i più economici"], ["recenti", "Prima i più recenti"], ["rilevanza", "Ordine di Immobiliare"]].map(([v, t]) => `<option value="${v}" ${q.ordine === v ? "selected" : ""}>${t}</option>`).join("")}</select>
+      <label class="tog"><input type="checkbox" data-i="aste" ${q.aste ? "checked" : ""}> Senza aste</label>
+    </div>
+    <p class="note">Tocca il nome di un comune: si apre Immobiliare con questi filtri. Lì scegli lo stato "buono / ristrutturato" se vuoi, poi copia il link della pagina e torna qui: con "+ link" lo metti nella cartella.</p></details>`;
+}
+function dvBoxHtml() {
+  const L = lbAll();
+  return `<div class="lbox"><div class="lbh"><b>📁 Cartella link</b><span>${L.length} ${L.length === 1 ? "ricerca" : "ricerche"}</span></div>
+    <div class="lbin"><input type="url" id="lburl" placeholder="Incolla qui un link di Immobiliare" autocomplete="off"><button class="btn sec" id="lbpaste">Incolla</button></div>
+    ${L.length ? `<div class="lblist">${L.map((x, i) => `<div><span>${esc(x.com)}${x.prov ? ` <i>(${esc(x.prov)})</i>` : ""}<small>${esc(x.url.replace(/^https?:\/\/(www\.)?/, "").slice(0, 70))}</small></span><button data-lbdel="${i}" aria-label="Togli">✕</button></div>`).join("")}</div>
+    <div class="btns"><button class="btn pri" id="lbcopy">Copia il messaggio per Claude</button><button class="btn sec" id="lbclear">Svuota</button></div>
+    <p class="note">Copia il messaggio e incollalo in chat con Claude: carico tutte le ricerche in una volta.</p>` : `<p class="note">Qui raccogli i link delle ricerche, comune per comune. Quando hai finito, un tocco copia un unico messaggio con tutti i link da mandarmi.</p>`}</div>`;
 }
 function afterDove() {
   const f = Object.assign({}, DV_F0, store.get("f_dove", {})), save = () => { store.set("f_dove", f); render(true); };
@@ -371,9 +415,25 @@ function afterDove() {
   if (m) { const rows = dvRows(f), vals = rows.map(o => o[f.uso]), b = [];
     const bins = [0.03, 0.045, 0.06, 0.08];
     rows.slice(0, 300).forEach((o, i) => { L.circleMarker([o.c.lat, o.c.lon], { radius: i < 10 ? 8 : 5, color: "#000", weight: 1, fillColor: tCol(o[f.uso], bins), fillOpacity: .95 })
-      .bindPopup(`<b>${esc(o.c.n)}</b> (${o.c.p})<br>Netto ${f.uso === "breve" ? "B&B" : "affitto"}: <b>${pct(o[f.uso], 1)}</b><br>${tOre(o.d.min)} da casa${o.tags.length ? "<br>" + o.tags.map(t => DV_TAG[t][1] + " " + DV_TAG[t][0]).join(" · ") : ""}<br><a class="go" href="https://www.immobiliare.it/vendita-case/${immSlug(o.c.n)}/" target="_blank" rel="noopener">Cerca su Immobiliare ↗</a>`).addTo(m); b.push([o.c.lat, o.c.lon]); });
+      .bindPopup(`<b>${esc(o.c.n)}</b> (${o.c.p})<br>Netto ${f.uso === "breve" ? "B&B" : "affitto"}: <b>${pct(o[f.uso], 1)}</b><br>${tOre(o.d.min)} da casa${o.tags.length ? "<br>" + o.tags.map(t => DV_TAG[t][1] + " " + DV_TAG[t][0]).join(" · ") : ""}<br><a class="go" href="${esc(immUrl(o.c.n))}" target="_blank" rel="noopener">Cerca su Immobiliare ↗</a>`).addTo(m); b.push([o.c.lat, o.c.lon]); });
     if (b.length) m.fitBounds(b, { padding: [20, 20], maxZoom: 11 });
     tHomeMarkers && tHomeMarkers(m); }
+  // filtri di Immobiliare
+  $("#immf")?.addEventListener("change", e => { const k = e.target.dataset.i; if (!k) return; const q = Object.assign({}, IMM_F0, store.get("imm_f", {}));
+    q[k] = e.target.type === "checkbox" ? e.target.checked : e.target.value; store.set("imm_f", q); render(true); });
+  $(".immf")?.addEventListener("toggle", e => store.set("immf_open", e.target.open));
+  // cartella link
+  const addFrom = async (com, prov) => { let t = "";
+    try { t = await navigator.clipboard.readText(); } catch (e) {}
+    if (!/^https?:\/\//.test(t || "")) t = window.prompt(`Incolla il link della ricerca${com ? " di " + com : ""}:`, "") || "";
+    if (lbAdd(t, com, prov)) render(true); else if (t) alert("Non sembra un link valido."); };
+  $("#lbpaste")?.addEventListener("click", () => { const v = $("#lburl").value; if (v) { if (lbAdd(v)) render(true); } else addFrom(); });
+  $("#lburl")?.addEventListener("keydown", e => { if (e.key === "Enter" && lbAdd(e.target.value)) render(true); });
+  $("#lbcopy")?.addEventListener("click", async e => { const ok = await lbCopy(lbPrompt()); e.target.textContent = ok ? "✓ Copiato: incollalo in chat" : "Copia non riuscita"; });
+  $("#lbclear")?.addEventListener("click", () => { if (confirm("Svuotare la cartella dei link?")) { store.set("linkbox", []); render(true); } });
+  $(".lbox")?.addEventListener("click", e => { const d = e.target.closest("[data-lbdel]"); if (!d) return; const L = lbAll(); L.splice(+d.dataset.lbdel, 1); store.set("linkbox", L); render(true); });
+  document.querySelector(".dove")?.addEventListener("click", e => { const b = e.target.closest("[data-lb]"); if (!b) return; const [com, prov] = b.dataset.lb.split("|");
+    if (lbAll().some(x => x.com === com)) { if (confirm(`Togliere il link di ${com} dalla cartella?`)) { store.set("linkbox", lbAll().filter(x => x.com !== com)); render(true); } } else addFrom(com, prov); });
   const box = $("#dvf");
   box.addEventListener("click", e => { const u = e.target.closest("[data-uso]"), t = e.target.closest("[data-tag]");
     if (u) { f.uso = u.dataset.uso; save(); }

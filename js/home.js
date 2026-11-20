@@ -31,7 +31,7 @@ function homeDove() {
     .map(({ c, d }) => ({ n: c.n, p: c.p, val: net({ v: c.v, a: c.a, nome: c.n, milano: false }, "lungo"), sub: `${eur(c.v)}/m² · affitto ${num(c.a, 1)} €/m² al mese`, d }));
   R = R.filter(x => x.val != null).sort((a, b) => b.val - a.val).slice(0, 10);
   const max = Math.max(...R.map(x => x.val), 1e-9);
-  return `<div class="dove">${R.map((x, i) => `<div class="dv"><b>${i + 1}</b><span><a href="https://www.immobiliare.it/vendita-case/${immSlug(x.n)}/" target="_blank" rel="noopener">${esc(x.n)} <i>(${esc(x.p)})</i> ↗</a><small>${x.sub} · ${tOre(x.d.min)}</small>
+  return `<div class="dove">${R.map((x, i) => `<div class="dv"><b>${i + 1}</b><span><a href="${esc(immUrl(x.n))}" target="_blank" rel="noopener">${esc(x.n)} <i>(${esc(x.p)})</i> ↗</a><small>${x.sub} · ${tOre(x.d.min)}</small>
     <span class="tb"><span style="width:${Math.max(4, x.val / max * 100)}%"></span></span></span><em>${pct(x.val, 1)}${x.an ? `<a href="${x.an}">analisi</a>` : ""}</em></div>`).join("")}</div>
   <p class="note">Rendimento netto di un bilocale di 50 m² comprato al prezzo medio del comune (più costi d'acquisto e arredo) e ${k === "breve" ? "affittato a notte" : "affittato con contratto normale"}, dopo spese e tasse. Tempo di viaggio da casa tua. Tocca il nome per aprire la ricerca su Immobiliare: scegli gli annunci che ti piacciono e mandami il link.</p>`;
 }
