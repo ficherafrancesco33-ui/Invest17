@@ -334,7 +334,8 @@ function vMilano3D(zona, mode = "mappa") {
   const f = store.get("f_mm", null); if (f) { MM.metric = f.metric || "v"; Object.assign(MM.lay, f.lay || {}); }
   MM.sel = store.get("mm_sel", null);
   const M = TERR.milano;
-  if (mode === "privati") MM.lay.ann = true;
+  if (mode === "privati") return `${miBread(mode)}<h1>${esc(MD.t)}</h1><p class="sub">${MD.sub}</p>${miPrivatiHtml()}
+    <p class="src">Annunci: Immobiliare.it e Trovit, letti il 20/11/2026. Mappa: © OpenStreetMap.</p>`;
   return `${miBread(mode)}<h1>${esc(MD.t)}</h1><p class="sub">${MD.sub}</p>
   <div class="mmbar">
     <div class="mmsearch"><input type="search" id="mmq" placeholder="Cerca un indirizzo: via Tortona 27" autocomplete="off"><div id="mmres" class="mmres" hidden></div></div>
@@ -360,6 +361,7 @@ function vMilano3D(zona, mode = "mappa") {
 }
 function afterMilano3D(zona) {
   const M = TERR.milano, mode = MM.mode;
+  if (mode === "privati") { miPrivatiBind(); return; }
   const saveF = () => store.set("f_mm", { metric: MM.metric, lay: MM.lay });
   $("#mmm").addEventListener("click", e => { const c = e.target.closest("[data-m]"); if (!c) return; MM.metric = c.dataset.m; saveF();
     document.querySelectorAll("#mmm .chip").forEach(x => x.classList.toggle("on", x === c)); mmApplyLayers();

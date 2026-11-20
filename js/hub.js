@@ -28,8 +28,8 @@ const ico = (k, cls = "") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none
 const MI_MODI = {
   cliente: { t: "Valutazione per il cliente", c: "Per chi vende", d: "Stima professionale con comparabili e PDF Maison Collection da consegnare al proprietario.",
     sub: "Tocca il palazzo sulla mappa (o cerca l'indirizzo), inserisci le caratteristiche: ottieni valore, prezzo consigliato di pubblicazione e PDF con il logo.", form: "Dati dell'immobile del cliente" },
-  privati: { t: "Annunci dei privati", c: "Vendite senza agenzia", d: "Sulla mappa gli immobili messi in vendita da privati, con il link all'annuncio. I nuovi vengono segnalati.",
-    sub: "Gli annunci di vendita dei privati sulla mappa e in elenco, con il link per aprirli. Quelli che non hai ancora visto sono segnati come nuovi.", form: "" },
+  privati: { t: "Annunci dei privati", c: "Vendite senza agenzia", d: "L'elenco degli immobili messi in vendita da privati: apri la scheda per dettagli, posizione e confronto con la zona.",
+    sub: "Tocca un annuncio per aprire la scheda con tutti i dettagli, la posizione sulla mappa e il confronto con i prezzi della zona. Quelli che non hai ancora visto sono segnati come nuovi.", form: "" },
 };
 function miBread(mode) {
   return `<nav class="bread nob">${Object.entries(MI_MODI).map(([k, m]) => `<a href="#milano/${k}" class="${k === mode ? "on" : ""}">${ico(k)}<span>${esc(m.t.replace("Valutazione per il ", "Valuta ").replace("Annunci dei privati", "Privati").replace("Mappa di Milano", "Mappa"))}</span></a>`).join("")}</nav>`;
@@ -98,21 +98,62 @@ function miPrivatiBind() {
   const box = $("#pf"), list = $("#plist"), f = store.get("f_priv", { solo: true, max: 0, mq: 0, ord: "nuovi" });
   const draw = () => {
     const L = miPrivatiRows(), seg = segIds();
-    list.innerHTML = L.length ? `<p class="note">${L.length} annunci${f.solo ? " di privati" : ""}. ${f.solo ? "Per ora i privati sono pochi: i portali li mostrano mescolati alle agenzie. Con la raccolta automatica ogni mattina ne arriveranno di nuovi." : ""}</p>
-      <div class="vsav">${L.slice(0, 150).map(a => `<div class="vs ann" data-ann="${a.id}"><div><b>${a.nuovo ? `<span class="tag new">nuovo</span> ` : ""}${esc(a.via || a.micro || "Milano")}</b><span>${a.mq} m² · ${a.loc || "?"} locali · ${esc(a.micro || "")} · ${esc(a.d)}${a.priv ? " · privato" : ""}</span></div>
-        <b class="cy">${eur(a.mq2)}/m²</b><span style="text-align:right">${eur(a.p)}<br><a href="${esc(a.url)}" target="_blank" rel="noopener" data-open="${a.id}">Apri ↗</a> <button class="star ${seg.has("a:" + a.id) ? "on" : ""}" data-seg="${a.id}" aria-label="Segui">${ico("star")}</button></span></div>`).join("")}</div>`
+    list.innerHTML = L.length ? `<p class="note">${L.length} annunci${f.solo ? " di privati" : ""}. Tocca un annuncio per aprire la scheda.</p>
+      <div class="plist">${L.slice(0, 200).map(a => { const mi = a.micro ? TERR.milano.micro.find(m => m.n === a.micro) : null, dlt = mi ? a.mq2 / mi.v - 1 : null;
+        return `<a class="pcard" href="#milano/privati/${encodeURIComponent(a.id)}">
+        <div class="pc1"><b>${a.nuovo ? `<span class="tag new">nuovo</span> ` : ""}${esc(a.via || a.micro || "Milano")}</b><span>${esc(a.micro || (a.mun ? "Municipio " + a.mun : "Milano"))}</span></div>
+        <div class="pc2"><span>${a.mq} m²</span><span>${a.loc || "?"} locali</span>${a.piano ? `<span>${a.piano === "T" ? "piano terra" : a.piano === "R" ? "rialzato" : a.piano === "S" ? "seminterrato" : a.piano + "° piano"}</span>` : ""}${a.st ? `<span>${esc(MM_ST[a.st][0].split(" /")[0])}</span>` : ""}</div>
+        <div class="pc3"><b>${eur(a.p)}</b><em>${eur(a.mq2)}/m²${dlt != null ? ` · <i class="${dlt < 0 ? "s-good" : "s-bad"}">${dlt < 0 ? "−" : "+"}${pct(Math.abs(dlt), 0)} zona</i>` : ""}</em></div>
+        <button class="star ${seg.has("a:" + a.id) ? "on" : ""}" data-seg="${a.id}" aria-label="Segui">${ico("star")}</button></a>`; }).join("")}</div>`
       : `<div class="empty"><b>Nessun privato con questi filtri</b><p>Prova "Tutti gli annunci" oppure togli i limiti di prezzo e metratura.</p></div>`;
-    if (MM.map && MM.map.getSource("ann")) MM.map.getSource("ann").setData(mmAnnFC());
   };
   box.addEventListener("click", e => { const c = e.target.closest("[data-solo]"); if (!c) return; f.solo = c.dataset.solo === "1"; store.set("f_priv", f);
     box.querySelectorAll("[data-solo]").forEach(x => x.classList.toggle("on", x === c)); draw(); });
   box.addEventListener("change", e => { const k = e.target.dataset.f; if (!k) return; f[k] = e.target.value; store.set("f_priv", f); draw(); });
   list.addEventListener("click", e => {
-    const o = e.target.closest("[data-open]"); if (o) { const v = store.get("ann_visti", []); if (!v.includes(o.dataset.open)) { v.push(o.dataset.open); store.set("ann_visti", v.slice(-3000)); } setTimeout(draw, 300); return; }
-    const st = e.target.closest("[data-seg]"); if (st) { const a = mmAnnunci().find(x => x.id === st.dataset.seg); if (a) segToggle(segAnn(a)); draw(); return; }
-    const row = e.target.closest("[data-ann]"); if (row && MM.map) { const a = mmAnnunci().find(x => x.id === row.dataset.ann); if (a && a.lat != null) { MM.map.flyTo({ center: [a.lon, a.lat], zoom: 16.5, pitch: 55, duration: 1200 }); $("#mm3d").scrollIntoView({ behavior: "smooth", block: "center" }); } }
+    const st = e.target.closest("[data-seg]"); if (st) { e.preventDefault(); const a = mmAnnunci().find(x => x.id === st.dataset.seg); if (a) segToggle(segAnn(a)); draw(); }
   });
   draw();
+}
+
+/* ---- scheda di un annuncio di privato: dettagli, posizione, confronto con la zona ---- */
+function vPrivato(id) {
+  const a = mmAnnunci().find(x => x.id === id);
+  if (!a) return `${miBread("privati")}<div class="empty"><b>Annuncio non più disponibile</b><p><a href="#milano/privati">Torna all'elenco</a></p></div>`;
+  const v = store.get("ann_visti", []); if (!v.includes(a.id)) { v.push(a.id); store.set("ann_visti", v.slice(-3000)); }
+  const mi = a.micro ? TERR.milano.micro.find(m => m.n === a.micro) : (a.lat != null ? mmMicroAt(a.lon, a.lat) : null);
+  const F = mi && TERR.milano.fasce?.micro[mi.n], dlt = mi ? a.mq2 / mi.v - 1 : null;
+  const near = a.lat != null && !a.appross ? mzVicini({ lat: a.lat, lon: a.lon }) : null;
+  const pianoT = !a.piano ? "—" : a.piano === "T" ? "Piano terra" : a.piano === "R" ? "Rialzato" : a.piano === "S" ? "Seminterrato" : a.piano + "° piano";
+  const simili = mmAnnunci().filter(x => x.id !== a.id && x.micro && x.micro === a.micro && Math.abs(x.mq - a.mq) <= a.mq * 0.25).sort((x, y) => Math.abs(x.mq - a.mq) - Math.abs(y.mq - a.mq)).slice(0, 5);
+  const W = Math.min(innerWidth - 32, 760);
+  return `${miBread("privati")}
+  <div class="loc" style="margin-top:6px">${esc([mi?.z, mi?.n].filter(Boolean).join(" · ") || "Milano")}${a.priv ? " · <b>privato</b>" : ""}</div>
+  <h1 style="margin-top:2px">${esc(a.via || "Milano")}</h1>
+  <div class="offer" style="margin:10px 0">
+    <div><small>Prezzo</small><b>${eur(a.p)}</b><em>prezzo richiesto</em></div>
+    <div><small>Al m²</small><b class="cy">${eur(a.mq2)}</b><em>${dlt != null ? `${dlt < 0 ? "−" : "+"}${pct(Math.abs(dlt), 0)} sulla media della zona` : "—"}</em></div>
+    <div><small>Media zona</small><b>${mi ? eur(mi.v) : "—"}</b><em>${mi ? esc(mi.n) : ""}</em></div>
+  </div>
+  ${a.lat != null ? `<div class="pvmap">${pdfMappa(a.lat, a.lon, a.appross ? 15 : 16, W, 230, [{ lat: a.lat, lon: a.lon, k: "me", t: "" }])}</div>${a.appross ? `<p class="note">Posizione indicativa (centro della microzona).</p>` : ""}` : ""}
+  <h2>Dettagli</h2>
+  <table class="pvtab"><tbody>
+    <tr><td>Tipologia</td><td>${esc(a.tip || "Appartamento")}</td></tr>
+    <tr><td>Superficie</td><td>${a.mq} m²</td></tr>
+    <tr><td>Locali</td><td>${a.loc || "—"}</td></tr>
+    <tr><td>Piano</td><td>${pianoT}${a.asc ? ", con ascensore" : a.piano && a.piano !== "T" ? ", senza ascensore" : ""}</td></tr>
+    <tr><td>Stato</td><td>${a.st ? esc(MM_ST[a.st][0]) : "Non indicato"}</td></tr>
+    <tr><td>Caratteristiche</td><td>${esc(a.d || "—")}</td></tr>
+    <tr><td>Venditore</td><td>${a.priv ? "Privato" : "Agenzia"} · ${esc(a.fonte)}</td></tr>
+    <tr><td>Online da</td><td>Nell'app dal 20/11/2026 <span class="note">(la data di pubblicazione la leggo dalla prossima raccolta)</span></td></tr>
+  </tbody></table>
+  ${F ? `<h2>Com'è messo rispetto alla zona</h2><p class="note">Prezzi richiesti nella microzona ${esc(mi.n)} (${num(F.n)} annunci): da ristrutturare ${F.r ? eur(F.r[1]) : "—"}/m², buono ${F.b ? eur(F.b[1]) : "—"}/m², ottimo o nuovo ${F.o ? eur(F.o[1]) : "—"}/m². Questo è a <b>${eur(a.mq2)}/m²</b>.</p>` : ""}
+  ${near && near.staz.length ? `<p class="note">Metro: ${near.staz.slice(0, 3).map(x => `${esc(x.n)} (${[...x.ln].join(", ")}) ${num(Math.round(x.d / 10) * 10)} m`).join(" · ")}</p>` : ""}
+  <div class="btns" style="margin:14px 0"><a class="btn pri" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'annuncio ↗</a><button class="btn sec" data-segp="${a.id}">${segIds().has("a:" + a.id) ? "★ Seguito" : "☆ Segui"}</button></div>
+  ${simili.length ? `<h2>Simili nella stessa zona</h2><div class="plist">${simili.map(x => `<a class="pcard" href="#milano/privati/${encodeURIComponent(x.id)}"><div class="pc1"><b>${esc(x.via || x.micro)}</b><span>${x.mq} m² · ${x.loc || "?"} locali${x.priv ? " · privato" : ""}</span></div><div class="pc3"><b>${eur(x.p)}</b><em>${eur(x.mq2)}/m²</em></div></a>`).join("")}</div>` : ""}`;
+}
+function afterPrivato() {
+  $("#app").querySelector("[data-segp]")?.addEventListener("click", e => { const a = mmAnnunci().find(x => x.id === e.target.dataset.segp); if (a) e.target.textContent = segToggle(segAnn(a)) ? "★ Seguito" : "☆ Segui"; });
 }
 
 /* ---- subaffitto (rent to rent) ---- */
@@ -461,8 +502,8 @@ function afterInv(a, b, c) { if (!a || a === "zona") a = "classifica"; if (a ===
 /* ---------------- collegamento al router ---------------- */
 const MI_ALIAS = { bnb: "cliente", lungo: "cliente", inv: "cliente", sub: "cliente", mappa: "cliente" };
 document.addEventListener("change", e => { const t = e.target.closest("[data-target]"); if (!t) return; store.set("inv_target", +t.value); $("#mvf")?.dispatchEvent(new Event("change", { bubbles: true })); });
-TERR_VIEWS.milano = [a => { a = MI_ALIAS[a] || a; return !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "cliente"); },
-  (a, b) => { a = MI_ALIAS[a] || a; if (!a) return afterMilanoHub(); MM.onSel = null; afterMilano3D(MI_MODI[a] ? (a === "mappa" ? b : null) : a); }];
+TERR_VIEWS.milano = [(a, b) => { a = MI_ALIAS[a] || a; if (a === "privati" && b) return vPrivato(b); return !a ? vMilanoHub() : MI_MODI[a] ? vMilano3D(null, a) : vMilano3D(a, "cliente"); },
+  (a, b) => { a = MI_ALIAS[a] || a; if (!a) return afterMilanoHub(); if (a === "privati" && b) return afterPrivato(); MM.onSel = null; afterMilano3D(MI_MODI[a] ? (a === "mappa" ? b : null) : a); }];
 
 /* ---------------- illustrazioni per gli annunci senza foto ----------------
    Ogni immobile ha un disegno suo, sempre uguale (dipende dal suo id): tipo di casa,
