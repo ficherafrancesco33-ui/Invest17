@@ -53,7 +53,9 @@ function vHomeK() {
   <div class="chips" id="dovek">${[["breve", "B&B"], ["lungo", "Affitto normale"]].map(([k, t]) => `<button class="chip ${k === store.get("dove_k", "breve") ? "on" : ""}" data-k="${k}">${t}</button>`).join("")}</div>
   <div id="dove">${homeDove()}</div>
   ${seg.length ? `<h2>Seguiti <small><a href="#seguiti">Tutti</a></small></h2><div class="segrow">${seg.slice(0, 12).map(x => `<a href="${esc(x.href || x.url)}" ${x.url ? 'target="_blank" rel="noopener"' : ""}>★ ${esc(x.t)}</a>`).join("")}</div>` : ""}
-  ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}`;
+  ${NOTIZIE.length ? `<h2>Notizie <small><a href="#notizie">Tutte</a></small></h2><div class="list">${[...NOTIZIE].sort((a, b) => (b.data || "").localeCompare(a.data || "")).slice(0, 3).map(cardNews).join("")}</div>` : ""}
+  <h2>Guida <small><a href="#guida">Tutta la guida</a></small></h2>
+  <div class="list">${GUIDA.slice(0, 2).map(cardGuida).join("")}</div>`;
 }
 /* mappa d'Italia: stile Carbone e oro con rilievi (ombreggiatura delle montagne) e nomi di città, laghi e regioni */
 function itStile() {

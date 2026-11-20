@@ -222,7 +222,7 @@ const INV_MODI = {
   dove: { t: "Dove cercare", c: "Tutti i comuni", d: "Rendimento netto di B&B e affitto normale comune per comune, con filtri lago, sci, ospedali, università e aziende.", href: "#inv/dove", i: "zona" },
 };
 function invBread(k) {
-  return `<nav class="bread"><a href="#inv">Investimenti</a>${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
+  return `<nav class="bread tabs">${Object.entries(INV_MODI).map(([x, m]) => `<a href="${m.href}" class="${x === k ? "on" : ""}">${ico(m.i || x)}<span>${esc(m.t.replace("Trovati in automatico", "Automatici").replace("I miei immobili", "Archivio"))}</span></a>`).join("")}</nav>`;
 }
 const invAll = () => [...MIEI.map(im => ({ im, src: "miei" })), ...AUTO.map(im => ({ im, src: "auto" }))];
 function vInvHub() {
@@ -383,8 +383,8 @@ function afterDove() {
     else render(true); });
 }
 
-function vInv(a, b, c) { if (a === "zona") a = "classifica"; return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : a === "dove" ? vDove() : vInvHub(); }
-function afterInv(a, b, c) { if (a === "zona") a = "classifica"; if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
+function vInv(a, b, c) { if (!a || a === "zona") a = "classifica"; return a === "classifica" ? vInvClassifica() : a === "zona" ? vInvZona() : a === "dove" ? vDove() : vInvHub(); }
+function afterInv(a, b, c) { if (!a || a === "zona") a = "classifica"; if (a === "classifica") afterInvClassifica(); else if (a === "zona") afterInvZona(); else if (a === "dove") afterDove(); }
 
 /* ---------------- collegamento al router ---------------- */
 const MI_ALIAS = { bnb: "inv", lungo: "inv" };
