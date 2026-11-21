@@ -7,7 +7,7 @@
   "Bene Lario|CO": 0,
   "Lovero|SO": 0,
   "Rezzago|CO": 0,
-  "Sormano|CO": 1,
+  "Sormano|CO": 3,
   "Mello|SO": 0,
   "Tirano|SO": 1,
   "Bellano|LC": 4,
@@ -64,7 +64,14 @@
   "Zelbio|CO": 2,
   "Alta Valle Intelvi|CO": 1,
   "Sueglio|LC": 1,
-  "Civo|SO": 1
+  "Civo|SO": 1,
+  "Premana|LC": 2,
+  "Casargo|LC": 1,
+  "Primaluna|LC": 2,
+  "Taceno|LC": 1,
+  "Gravedona ed Uniti|CO": 1,
+  "Schignano|CO": 1,
+  "Dongo|CO": 1
  },
  "coord": {
   "Edolo": [
@@ -110,6 +117,34 @@
   "Civo": [
    46.1483,
    9.5623
+  ],
+  "Premana": [
+   46.0519,
+   9.4253
+  ],
+  "Casargo": [
+   46.0345,
+   9.3617
+  ],
+  "Primaluna": [
+   45.9915,
+   9.4126
+  ],
+  "Taceno": [
+   46.0203,
+   9.3642
+  ],
+  "Gravedona ed Uniti": [
+   46.1433,
+   9.2461
+  ],
+  "Schignano": [
+   45.9293,
+   9.0961
+  ],
+  "Dongo": [
+   46.1352,
+   9.2797
   ]
  },
  "annunci": [
@@ -1245,6 +1280,392 @@
     "Classe energetica non indicata"
    ],
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "130327828",
+   "comune": "Premana",
+   "p": "LC",
+   "prezzo": 40000,
+   "mq": 100,
+   "locali": 3,
+   "bagni": 2,
+   "piano": "T",
+   "stato": "ristrutturato",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Cadorna 5, Premana",
+   "titolo": "Casa indipendente ristrutturata e arredata nel borgo di Premana",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1961798790/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1954963764/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1954964132/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1954964138/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1954964142/m-c.jpg"
+   ],
+   "aggiornato": "03/07/2026",
+   "agenzia": "Valsassina Case",
+   "pro": [
+    "Ristrutturata, arredo in legno massello su misura, pronta da abitare",
+    "Due bagni e seminterrato con ingresso indipendente: seconda camera o taverna",
+    "Riscaldamento autonomo a metano, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Centro storico pedonale: auto a 50 metri",
+    "Alta Valsassina: Bellano e il lago a circa 25 minuti"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "125247679",
+   "comune": "Casargo",
+   "p": "LC",
+   "prezzo": 39000,
+   "mq": 60,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via della Deputazione, Indovero, Casargo",
+   "titolo": "Appartamento mai abitato con box a Indovero",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1832511313/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1832511331/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1832511345/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1832511361/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1832511383/m-c.jpg"
+   ],
+   "aggiornato": "09/09/2026",
+   "agenzia": "Privato",
+   "spese_mese": 80,
+   "pro": [
+    "Mai abitato, caldaia autonoma nuova",
+    "Venduto arredato con box auto incluso",
+    "Alta Valsassina: Pian delle Betulle e lago di Dervio vicini"
+   ],
+   "contro": [
+    "Impianti conformi all'epoca ma senza certificazioni",
+    "Visite solo nei weekend; secondo piano senza ascensore"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133415260",
+   "comune": "Primaluna",
+   "p": "LC",
+   "prezzo": 47000,
+   "mq": 64,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": true,
+   "indirizzo": "Via Provinciale 156/A, Primaluna",
+   "titolo": "Bilocale con balcone panoramico e ascensore a Primaluna",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2025951280/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025951290/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025951302/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025951312/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025951320/m-c.jpg"
+   ],
+   "aggiornato": "09/10/2026",
+   "agenzia": "Centro Servizi Immobiliari",
+   "spese_mese": 120,
+   "pro": [
+    "Palazzina con ascensore, vicino ai servizi",
+    "Balcone con vista sulle montagne, bagno finestrato",
+    "Box con cantina acquistabile a parte (15.000 €)"
+   ],
+   "contro": [
+    "Riscaldamento centralizzato: spese 120 € al mese",
+    "Valsassina: lago a circa 20 minuti"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "134532097",
+   "comune": "Primaluna",
+   "p": "LC",
+   "prezzo": 30000,
+   "mq": 72,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "buono",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Umberto I 48, Cortabbio, Primaluna",
+   "titolo": "Bilocale arredato di 72 m² a Cortabbio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2057125083/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2057125351/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2057125409/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2057125999/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2057126363/m-c.jpg"
+   ],
+   "aggiornato": "14/11/2026",
+   "agenzia": "Privato",
+   "pro": [
+    "Solo 30.000 € per 72 m², arredato e con cucina",
+    "Nessuna spesa condominiale, balcone",
+    "Annuncio di pochi giorni fa"
+   ],
+   "contro": [
+    "Riscaldamento con stufa a gas o radiatori elettrici",
+    "Classe energetica in attesa; visite solo il sabato mattina"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "104725341",
+   "comune": "Taceno",
+   "p": "LC",
+   "prezzo": 58000,
+   "mq": 70,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "R",
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Sparavera, Taceno",
+   "titolo": "Trilocale arredato con terrazzo vista Grigna e box",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1745768230/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1370887781/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1370887785/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1370887789/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1370887793/m-c.jpg"
+   ],
+   "aggiornato": "04/07/2025",
+   "agenzia": "Immobiliare Grigna",
+   "pro": [
+    "Arredato, due camere, terrazzo con vista sulla Grigna",
+    "Box singolo incluso",
+    "Taceno: Bellano e il lago a 10 minuti"
+   ],
+   "contro": [
+    "Online da metà 2025: margine per trattare",
+    "Riscaldamento non indicato (c'è il camino)"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "131032420",
+   "comune": "Premana",
+   "p": "LC",
+   "prezzo": 38000,
+   "mq": 132,
+   "locali": 4,
+   "bagni": 2,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Sant'Antonio, Premana",
+   "titolo": "Porzione di casa arredata su quattro livelli con terrazzo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2006341222/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1971617008/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1971617042/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1971617060/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1971616706/m-c.jpg"
+   ],
+   "aggiornato": "17/09/2026",
+   "agenzia": "I.B. Group",
+   "pro": [
+    "132 m² a 38.000 €: due camere con due bagni separati",
+    "Venduta arredata, riscaldamento autonomo a metano",
+    "Terrazzo all'ultimo livello, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Su quattro livelli: tante scale",
+    "Alta Valsassina, lontana dal lago (25 minuti)"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "130871294",
+   "comune": "Sormano",
+   "p": "CO",
+   "prezzo": 39000,
+   "mq": 123,
+   "locali": 4,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Torretta 9, Sormano",
+   "titolo": "Porzione di casa di corte con terrazzo a Sormano",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1967829938/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1967829804/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1967830024/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1967830788/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1967830420/m-c.jpg"
+   ],
+   "aggiornato": "11/07/2026",
+   "agenzia": "Larius",
+   "pro": [
+    "123 m² su tre livelli, due camere e terrazzo",
+    "Riscaldamento autonomo a metano, nessuna spesa condominiale",
+    "Disponibile subito; Pian del Tivano e Bellagio vicini"
+   ],
+   "contro": [
+    "Ristrutturata nel 1987: finiture datate",
+    "Un solo bagno per 123 m²"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129733270",
+   "comune": "Sormano",
+   "p": "CO",
+   "prezzo": 24000,
+   "mq": 56,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Piano del Tivano 34, Sormano",
+   "titolo": "Bilocale al piano terra vicino alla Colma di Sormano",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1940422428/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940422430/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940422436/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940422446/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940422454/m-c.jpg"
+   ],
+   "aggiornato": "08/09/2026",
+   "agenzia": "Privato",
+   "spese_mese": 40,
+   "pro": [
+    "24.000 €: il prezzo più basso della zona",
+    "Piano terra con posti auto nel cortile",
+    "Colma di Sormano e piste da sci a pochi chilometri"
+   ],
+   "contro": [
+    "Stato \"accettabile\": da personalizzare",
+    "Riscaldamento non indicato: chiedere"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129968492",
+   "comune": "Gravedona ed Uniti",
+   "p": "CO",
+   "prezzo": 60000,
+   "mq": 86,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Baltrigo, Gravedona ed Uniti",
+   "titolo": "Baita indipendente con vista lago e 2.000 m² di terreno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1946278260/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946295648/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946295658/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946295670/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946295684/m-c.jpg"
+   ],
+   "aggiornato": "07/08/2026",
+   "agenzia": "Tecnocasa Colico",
+   "pro": [
+    "Vista panoramica sul lago di Como",
+    "Terreno privato di 2.080 m², posto per due auto",
+    "Casa indipendente su tre livelli, due camere"
+   ],
+   "contro": [
+    "Al tetto dei 60.000 €",
+    "Riscaldamento non indicato; strada privata di accesso"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "105862601",
+   "comune": "Schignano",
+   "p": "CO",
+   "prezzo": 48000,
+   "mq": 78,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Carlo Peduzzi 29, Occagno, Schignano",
+   "titolo": "Casa cielo-terra nel borgo di Occagno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1398823681/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1398827259/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1398827843/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1398828241/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1398828883/m-c.jpg"
+   ],
+   "aggiornato": "24/04/2026",
+   "agenzia": "Immobiliare Girola Daniela",
+   "pro": [
+    "Casa indipendente cielo-terra in buone condizioni",
+    "Due camere e balcone, due vani accessori",
+    "Val d'Intelvi: Argegno e il lago a 15 minuti"
+   ],
+   "contro": [
+    "Descrizione breve: chiedere riscaldamento e impianti",
+    "Classe G"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "109837851",
+   "comune": "Dongo",
+   "p": "CO",
+   "prezzo": 60000,
+   "mq": 134,
+   "locali": 5,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Strada Provinciale per Garzeno, Dongo",
+   "titolo": "Casa indipendente con terrazzo e giardino sopra Dongo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1482670309/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1482666641/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1482667107/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1482666775/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1482666519/m-c.jpg"
+   ],
+   "aggiornato": "02/03/2024",
+   "agenzia": "Studio Immobiliario",
+   "pro": [
+    "Appartamento abitabile con terrazzo e giardino",
+    "Due soffitte da ricavare in un secondo appartamento da affittare",
+    "Cantina, deposito e spazio auto"
+   ],
+   "contro": [
+    "Le soffitte vanno ristrutturate per il secondo appartamento",
+    "Online dal 2024: margine per trattare"
+   ],
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -1402,6 +1823,71 @@
    "id": "131339022",
    "comune": "Bellano",
    "motivo": "in descrizione prezzo di partenza 65.000 €, manca la caldaia"
+  },
+  {
+   "id": "87557230",
+   "comune": "Castelmarte",
+   "motivo": "da ristrutturare"
+  },
+  {
+   "id": "111914233",
+   "comune": "Torno",
+   "motivo": "raggiungibile solo in 4x4"
+  },
+  {
+   "id": "123318461",
+   "comune": "Veleso",
+   "motivo": "da ristrutturare, senza riscaldamento"
+  },
+  {
+   "id": "127391125",
+   "comune": "Taceno",
+   "motivo": "da ristrutturare"
+  },
+  {
+   "id": "129046840",
+   "comune": "Monguzzo",
+   "motivo": "da ristrutturare"
+  },
+  {
+   "id": "130104096",
+   "comune": "Tavernerio",
+   "motivo": "da rimodernare"
+  },
+  {
+   "id": "132661820",
+   "comune": "Cremeno",
+   "motivo": "asta"
+  },
+  {
+   "id": "133087828",
+   "comune": "Taceno",
+   "motivo": "servono interventi"
+  },
+  {
+   "id": "132924030",
+   "comune": "Novate Mezzola",
+   "motivo": "trattativa in corso"
+  },
+  {
+   "id": "119360877",
+   "comune": "San Bartolomeo Val Cavargna",
+   "motivo": "descrizione di una riga, senza dati"
+  },
+  {
+   "id": "119717048",
+   "comune": "Sormano",
+   "motivo": "descrizione troppo scarna"
+  },
+  {
+   "id": "132991700",
+   "comune": "Casargo",
+   "motivo": "\"da ristrutturare o abitare\": probabili lavori"
+  },
+  {
+   "id": "73704102",
+   "comune": "Schignano",
+   "motivo": "online dal 2019, ingresso in comune con terzi"
   }
  ]
 }
