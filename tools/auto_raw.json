@@ -229,6 +229,50 @@
     "2059095811",
     "2059095821",
     "2059095831"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Loft a Tirano (0,5 km)",
+     "prezzo": 240000,
+     "mq": 73,
+     "url": "https://www.immobiliare.it/annunci/127972110/",
+     "stato": ""
+    },
+    {
+     "titolo": "Mansarda a Tirano (0,7 km)",
+     "prezzo": 209000,
+     "mq": 96,
+     "url": "https://www.immobiliare.it/annunci/133236902/",
+     "stato": "ristrutturato"
+    },
+    {
+     "titolo": "Bilocale a Tirano (0,7 km)",
+     "prezzo": 129000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/134911935/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Tirano (0,7 km)",
+     "prezzo": 155000,
+     "mq": 82,
+     "url": "https://www.immobiliare.it/annunci/134786465/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Tirano (0,7 km)",
+     "prezzo": 29000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/129144744/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Tirano (0,9 km)",
+     "prezzo": 102000,
+     "mq": 98,
+     "url": "https://www.immobiliare.it/annunci/102424926/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -286,6 +330,50 @@
     "2035558588",
     "2035558592",
     "2035558598"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Trilocale a Codogno (0,2 km)",
+     "prezzo": 150000,
+     "mq": 100,
+     "url": "https://www.immobiliare.it/annunci/128881730/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Codogno (0,2 km)",
+     "prezzo": 160000,
+     "mq": 100,
+     "url": "https://www.immobiliare.it/annunci/128940120/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Codogno (0,2 km)",
+     "prezzo": 160000,
+     "mq": 100,
+     "url": "https://www.immobiliare.it/annunci/129021386/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Codogno (0,3 km)",
+     "prezzo": 185000,
+     "mq": 90,
+     "url": "https://www.immobiliare.it/annunci/134566757/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Codogno (0,3 km)",
+     "prezzo": 185000,
+     "mq": 86,
+     "url": "https://www.immobiliare.it/annunci/133710362/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Codogno (0,3 km)",
+     "prezzo": 83000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/114530095/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -339,6 +427,36 @@
     "1968619524",
     "1968619594",
     "1968619620"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Trilocale a Sormano (0,1 km)",
+     "prezzo": 49000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/121553682/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Sormano (0,2 km)",
+     "prezzo": 24000,
+     "mq": 56,
+     "url": "https://www.immobiliare.it/annunci/129733270/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Sormano (0,2 km)",
+     "prezzo": 55000,
+     "mq": 62,
+     "url": "https://www.immobiliare.it/annunci/125556539/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Sormano (0,3 km)",
+     "prezzo": 100000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/134908397/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -872,6 +990,50 @@
     "1774834950",
     "1774834954",
     "1774834964"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Vercelli (0,3 km)",
+     "prezzo": 53000,
+     "mq": 42,
+     "url": "https://www.immobiliare.it/annunci/134023005/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Vercelli (0,5 km)",
+     "prezzo": 55000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/129777654/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Vercelli (0,6 km)",
+     "prezzo": 50000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/130483014/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Vercelli (0,7 km)",
+     "prezzo": 64000,
+     "mq": 73,
+     "url": "https://www.immobiliare.it/annunci/53112619/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Vercelli (0,8 km)",
+     "prezzo": 63000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/134867965/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Vercelli (0,8 km)",
+     "prezzo": 53000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/126787759/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -926,6 +1088,50 @@
     "2057919017",
     "2057919033",
     "2057919079"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Novara (0,5 km)",
+     "prezzo": 95000,
+     "mq": 44,
+     "url": "https://www.immobiliare.it/annunci/134721091/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Novara (0,5 km)",
+     "prezzo": 62000,
+     "mq": 46,
+     "url": "https://www.immobiliare.it/annunci/120669084/",
+     "stato": ""
+    },
+    {
+     "titolo": "Monolocale a Novara (0,7 km)",
+     "prezzo": 91000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/129631682/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Novara (0,7 km)",
+     "prezzo": 79000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/134776993/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Novara (0,7 km)",
+     "prezzo": 75000,
+     "mq": 69,
+     "url": "https://www.immobiliare.it/annunci/133418874/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Novara (0,8 km)",
+     "prezzo": 160000,
+     "mq": 46,
+     "url": "https://www.immobiliare.it/annunci/133512648/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -1379,6 +1585,36 @@
     "1855700133",
     "1855702073",
     "1855703413"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Trilocale a Mortara (0,6 km)",
+     "prezzo": 125000,
+     "mq": 90,
+     "url": "https://www.immobiliare.it/annunci/124256621/",
+     "stato": "ristrutturato"
+    },
+    {
+     "titolo": "Bilocale a Mortara (0,8 km)",
+     "prezzo": 50000,
+     "mq": 73,
+     "url": "https://www.immobiliare.it/annunci/129835756/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Mortara (0,9 km)",
+     "prezzo": 75000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/132628662/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Mortara (0,9 km)",
+     "prezzo": 95000,
+     "mq": 99,
+     "url": "https://www.immobiliare.it/annunci/126236809/",
+     "stato": ""
+    }
    ]
   },
   {
@@ -1681,7 +1917,26 @@
    ],
    "classe": "F",
    "spese_mese": 50,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2058823891",
+    "2058823717",
+    "2058823733",
+    "2058823753",
+    "2058823769",
+    "2058824009",
+    "2058823797",
+    "2058823837",
+    "2058823861",
+    "2058823907",
+    "2058823933",
+    "2058823957",
+    "2058823993",
+    "2058824045",
+    "2058824075",
+    "2058824109",
+    "2058824139"
+   ]
   },
   {
    "id": "128523510",
@@ -1720,7 +1975,32 @@
    ],
    "classe": "G",
    "spese_mese": 50,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1913122066",
+    "1913122084",
+    "1913122108",
+    "1913122130",
+    "1913122148",
+    "1913122170",
+    "1913122188",
+    "1913122200",
+    "1913122224",
+    "1913122236",
+    "1913122254",
+    "1913122270",
+    "1913122286",
+    "1913122298",
+    "1913122314",
+    "1913122326",
+    "1913122338",
+    "1913122352",
+    "1913122366",
+    "1913122380",
+    "1913122394",
+    "1913122400",
+    "1913122410"
+   ]
   },
   {
    "id": "133152750",
@@ -1760,7 +2040,79 @@
    ],
    "classe": "G",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2020237678",
+    "2020237772",
+    "2020237774",
+    "2020237780",
+    "2020449134",
+    "2020237784",
+    "2020237798",
+    "2020237802",
+    "2020237808",
+    "2020237812",
+    "2020237814",
+    "2020237822",
+    "2020237828",
+    "2020237832",
+    "2020237838",
+    "2020237842",
+    "2020237856",
+    "2020237860",
+    "2020237866",
+    "2020237874",
+    "2020237880",
+    "2020237884",
+    "2020237894",
+    "2020237900",
+    "2020237904",
+    "2020237934"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Cesate (0,1 km)",
+     "prezzo": 79000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/127098529/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Cesate (0,2 km)",
+     "prezzo": 65000,
+     "mq": 35,
+     "url": "https://www.immobiliare.it/annunci/93602606/",
+     "stato": ""
+    },
+    {
+     "titolo": "Monolocale a Cesate (0,3 km)",
+     "prezzo": 84000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/118499563/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cesate (0,3 km)",
+     "prezzo": 129000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/128994040/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cesate (0,5 km)",
+     "prezzo": 110000,
+     "mq": 48,
+     "url": "https://www.immobiliare.it/annunci/132379616/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cesate (1 km)",
+     "prezzo": 129000,
+     "mq": 51,
+     "url": "https://www.immobiliare.it/annunci/123061509/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "124771659",
@@ -1799,7 +2151,20 @@
    ],
    "classe": "",
    "spese_mese": 108,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1820645879",
+    "1820645909",
+    "1820645931",
+    "1820645945",
+    "1820645969",
+    "1820645989",
+    "1820646001",
+    "1820646031",
+    "1820646051",
+    "1820646073",
+    "1820646085"
+   ]
   },
   {
    "id": "129849826",
@@ -1840,7 +2205,23 @@
    ],
    "classe": "G",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1943507752",
+    "1943507858",
+    "1943507866",
+    "1943507874",
+    "1943507886",
+    "1943507894",
+    "1943507904",
+    "1943507912",
+    "1943507926",
+    "1943507936",
+    "1943507948",
+    "1943507954",
+    "1943507966",
+    "1943507994"
+   ]
   },
   {
    "id": "130105494",
@@ -1881,7 +2262,19 @@
    ],
    "classe": "F",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1949844152",
+    "1949844158",
+    "1949844162",
+    "1949844164",
+    "1949844166",
+    "1949844168",
+    "1949844172",
+    "1949844182",
+    "1949844186",
+    "1949844192"
+   ]
   },
   {
    "id": "121786804",
@@ -1922,7 +2315,21 @@
    ],
    "classe": "F",
    "spese_mese": 150,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1744920598",
+    "1744920738",
+    "1744920668",
+    "1744920556",
+    "1744920700",
+    "1744920518",
+    "1744920626",
+    "1744920650",
+    "1744920682",
+    "1744920712",
+    "1744920536",
+    "1744920570"
+   ]
   },
   {
    "id": "130049750",
@@ -1962,7 +2369,21 @@
    ],
    "classe": "",
    "spese_mese": 63,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1948358522",
+    "1948358806",
+    "1948358824",
+    "1948358838",
+    "1948358858",
+    "1948358870",
+    "1948358884",
+    "1948358896",
+    "1948358914",
+    "1948358926",
+    "1948358940",
+    "1948359032"
+   ]
   },
   {
    "id": "132059390",
@@ -2002,7 +2423,19 @@
    ],
    "classe": "G",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1995902158",
+    "1995902162",
+    "1995902164",
+    "1995902166",
+    "1995902168",
+    "1995902170",
+    "1995902174",
+    "1995902176",
+    "1995902178",
+    "1995902182"
+   ]
   },
   {
    "id": "122228388",
@@ -2041,7 +2474,14 @@
    ],
    "classe": "F",
    "spese_mese": 21,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2056683799",
+    "2056683805",
+    "2056683819",
+    "2056683829",
+    "2056683839"
+   ]
   },
   {
    "id": "130176266",
@@ -2081,7 +2521,24 @@
    ],
    "classe": "E",
    "spese_mese": 50,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2006092270",
+    "1951467778",
+    "2006092308",
+    "1951468552",
+    "1951468560",
+    "1951468568",
+    "1951468572",
+    "1951468580",
+    "1951468588",
+    "1951468594",
+    "1951468598",
+    "1951468602",
+    "1951468606",
+    "1951468612",
+    "1951468614"
+   ]
   },
   {
    "id": "129986234",
@@ -2121,7 +2578,20 @@
    ],
    "classe": "G",
    "spese_mese": 40,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1946684642",
+    "1946684976",
+    "1946684982",
+    "1946684984",
+    "1946684988",
+    "1946684994",
+    "1946685000",
+    "1946685002",
+    "1946685008",
+    "1946685014",
+    "1946685020"
+   ]
   },
   {
    "id": "134781865",
@@ -2162,7 +2632,68 @@
    ],
    "classe": "G",
    "spese_mese": 108,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2058013949",
+    "2058013963",
+    "2058013965",
+    "2058013981",
+    "2058013983",
+    "2058013985",
+    "2058013993",
+    "2058013995",
+    "2058013999",
+    "2058014005",
+    "2058014011",
+    "2058014017",
+    "2058014029",
+    "2058014031",
+    "2058014033"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Quadrilocale a Valenza (0,2 km)",
+     "prezzo": 73000,
+     "mq": 80,
+     "url": "https://www.immobiliare.it/annunci/129886768/",
+     "stato": ""
+    },
+    {
+     "titolo": "Quadrilocale a Valenza (0,3 km)",
+     "prezzo": 52000,
+     "mq": 110,
+     "url": "https://www.immobiliare.it/annunci/130765254/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Valenza (0,3 km)",
+     "prezzo": 69000,
+     "mq": 101,
+     "url": "https://www.immobiliare.it/annunci/122682910/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Valenza (0,4 km)",
+     "prezzo": 55000,
+     "mq": 76,
+     "url": "https://www.immobiliare.it/annunci/130445088/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Valenza (0,4 km)",
+     "prezzo": 78000,
+     "mq": 90,
+     "url": "https://www.immobiliare.it/annunci/126841333/",
+     "stato": ""
+    },
+    {
+     "titolo": "Quadrilocale a Valenza (0,4 km)",
+     "prezzo": 75000,
+     "mq": 91,
+     "url": "https://www.immobiliare.it/annunci/133151846/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "129232564",
@@ -2203,7 +2734,19 @@
    ],
    "classe": "F",
    "spese_mese": 30,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1928001780",
+    "1928001766",
+    "1928001832",
+    "1928001798",
+    "1928001852",
+    "1928001868",
+    "1928001882",
+    "1928001898",
+    "1928001912",
+    "1928001952"
+   ]
   },
   {
    "id": "120914640",
@@ -2243,7 +2786,33 @@
    ],
    "classe": "D",
    "spese_mese": 30,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1717324658",
+    "1717324858",
+    "1717324868",
+    "1717324874",
+    "1717324884",
+    "1717324892",
+    "1717324898",
+    "1717324908",
+    "1717324916",
+    "1717324922",
+    "1717324930",
+    "1780543761",
+    "1780543773",
+    "1780543777",
+    "1717324968",
+    "1717324976",
+    "1717324986",
+    "1717324988",
+    "1717325000",
+    "1717325006",
+    "1717325008",
+    "1717325018",
+    "1717325026",
+    "1717325030"
+   ]
   },
   {
    "id": "122172770",
@@ -2283,7 +2852,20 @@
    ],
    "classe": "D",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1756218818",
+    "1756218828",
+    "1756218830",
+    "1756218834",
+    "1756218836",
+    "1756218838",
+    "1756218840",
+    "1756218844",
+    "1756218846",
+    "1756218848",
+    "1756218858"
+   ]
   },
   {
    "id": "127536468",
@@ -2324,7 +2906,23 @@
    ],
    "classe": "D",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2049771713",
+    "1886789582",
+    "1886789586",
+    "1886789588",
+    "1886789590",
+    "1886789592",
+    "1886789594",
+    "1886789596",
+    "1886789598",
+    "1886789600",
+    "1886789602",
+    "1886789604",
+    "1886789606",
+    "1886789608"
+   ]
   },
   {
    "id": "125581575",
@@ -2364,7 +2962,21 @@
    ],
    "classe": "G",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1840664583",
+    "1840664531",
+    "1840664535",
+    "1840664537",
+    "1841008865",
+    "1841048659",
+    "1840664541",
+    "1840664543",
+    "1840664561",
+    "1840664545",
+    "1840664551",
+    "1841008705"
+   ]
   },
   {
    "id": "103044846",
@@ -2405,7 +3017,27 @@
    ],
    "classe": "C",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1336763506",
+    "1336763584",
+    "1336763596",
+    "1336763624",
+    "1336763632",
+    "1336763604",
+    "1336763646",
+    "1336763654",
+    "1336763610",
+    "1336763666",
+    "1336763676",
+    "1336771304",
+    "1336763574",
+    "1336763512",
+    "1336763542",
+    "1336763530",
+    "1336763554",
+    "1336763564"
+   ]
   },
   {
    "id": "124663869",
@@ -2444,7 +3076,21 @@
    ],
    "classe": "F",
    "spese_mese": 15,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1817974307",
+    "1817974309",
+    "1817974311",
+    "1817974315",
+    "1817974321",
+    "1817974323",
+    "1817974325",
+    "1817974327",
+    "1817974331",
+    "1817974337",
+    "1817974339",
+    "1817974341"
+   ]
   },
   {
    "id": "130484396",
@@ -2485,7 +3131,78 @@
    ],
    "classe": "",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1958796540",
+    "1958870426",
+    "1958870460",
+    "1958870478",
+    "1958870496",
+    "1958870520",
+    "1958870544",
+    "1958870564",
+    "1958870586",
+    "1958870610",
+    "1958870634",
+    "1958870666",
+    "1958870702",
+    "1958870732",
+    "1958870770",
+    "1958870798",
+    "1958870812",
+    "1958870844",
+    "1958870876",
+    "1958870902",
+    "1958870940",
+    "1958870986",
+    "1958871020",
+    "1958871044",
+    "1958871180"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Galliate Lombardo (0,1 km)",
+     "prezzo": 52000,
+     "mq": 54,
+     "url": "https://www.immobiliare.it/annunci/134831147/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Galliate Lombardo (1,1 km)",
+     "prezzo": 254000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/131645094/",
+     "stato": ""
+    },
+    {
+     "titolo": "Monolocale a Galliate Lombardo (1,8 km)",
+     "prezzo": 49000,
+     "mq": 41,
+     "url": "https://www.immobiliare.it/annunci/129660852/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Galliate Lombardo (2 km)",
+     "prezzo": 99000,
+     "mq": 55,
+     "url": "https://www.immobiliare.it/annunci/129055304/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Galliate Lombardo (2 km)",
+     "prezzo": 57000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/130619456/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Galliate Lombardo (2 km)",
+     "prezzo": 139000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/125286059/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "133422128",
@@ -2525,7 +3242,21 @@
    ],
    "classe": "",
    "spese_mese": 20,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2026093028",
+    "2026093260",
+    "2026093264",
+    "2026093268",
+    "2026093272",
+    "2026093274",
+    "2026093280",
+    "2026093284",
+    "2026093290",
+    "2026093292",
+    "2026093298",
+    "2026093302"
+   ]
   },
   {
    "id": "129063926",
@@ -2566,7 +3297,74 @@
    ],
    "classe": "F",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1923844426",
+    "1923844434",
+    "1923844132",
+    "1923844374",
+    "1923844376",
+    "1923844380",
+    "1923844384",
+    "1923844388",
+    "1923844390",
+    "1923844392",
+    "1923844394",
+    "1923844396",
+    "1923844398",
+    "1923844402",
+    "1923844404",
+    "1923844408",
+    "1923844414",
+    "1923844418",
+    "1923844422",
+    "1923844430",
+    "1923844448"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Cambiasca (0,1 km)",
+     "prezzo": 70000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/128868418/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cambiasca (1,4 km)",
+     "prezzo": 89000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/116548379/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cambiasca (1,4 km)",
+     "prezzo": 75000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/127789990/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Cambiasca (1,9 km)",
+     "prezzo": 95000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/131078254/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Cambiasca (1,9 km)",
+     "prezzo": 123000,
+     "mq": 61,
+     "url": "https://www.immobiliare.it/annunci/132299098/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cambiasca (1,9 km)",
+     "prezzo": 68000,
+     "mq": 44,
+     "url": "https://www.immobiliare.it/annunci/131091916/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "127149875",
@@ -2606,7 +3404,50 @@
    ],
    "classe": "G",
    "spese_mese": 20,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1877691119",
+    "1877692341",
+    "1877692347",
+    "1877692353",
+    "1877692357",
+    "1877692363",
+    "1877692365",
+    "1877692379",
+    "1877692385",
+    "1877692389",
+    "1877692393"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Appartamento a Leggiuno (0,8 km)",
+     "prezzo": 169000,
+     "mq": 48,
+     "url": "https://www.immobiliare.it/annunci/131749588/",
+     "stato": ""
+    },
+    {
+     "titolo": "Monolocale a Leggiuno (0,8 km)",
+     "prezzo": 120000,
+     "mq": 37,
+     "url": "https://www.immobiliare.it/annunci/110976775/",
+     "stato": "ristrutturato"
+    },
+    {
+     "titolo": "Monolocale a Leggiuno (0,9 km)",
+     "prezzo": 120000,
+     "mq": 42,
+     "url": "https://www.immobiliare.it/annunci/123416379/",
+     "stato": ""
+    },
+    {
+     "titolo": "Monolocale a Leggiuno (0,9 km)",
+     "prezzo": 43000,
+     "mq": 38,
+     "url": "https://www.immobiliare.it/annunci/113858023/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "134930107",
@@ -2646,7 +3487,64 @@
    ],
    "classe": "D",
    "spese_mese": 25,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2061469993",
+    "2061376247",
+    "2061376353",
+    "2061376359",
+    "2061376361",
+    "2061376365",
+    "2061376375",
+    "2061376383",
+    "2061376387",
+    "2061376393",
+    "2061376401"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,1 km)",
+     "prezzo": 139000,
+     "mq": 83,
+     "url": "https://www.immobiliare.it/annunci/123840851/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,2 km)",
+     "prezzo": 135000,
+     "mq": 52,
+     "url": "https://www.immobiliare.it/annunci/121567800/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,3 km)",
+     "prezzo": 112000,
+     "mq": 87,
+     "url": "https://www.immobiliare.it/annunci/129608336/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,3 km)",
+     "prezzo": 125000,
+     "mq": 55,
+     "url": "https://www.immobiliare.it/annunci/134248667/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,3 km)",
+     "prezzo": 95000,
+     "mq": 55,
+     "url": "https://www.immobiliare.it/annunci/133735788/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Darfo Boario Terme (0,4 km)",
+     "prezzo": 125000,
+     "mq": 83,
+     "url": "https://www.immobiliare.it/annunci/134911453/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "134958259",
@@ -2686,7 +3584,67 @@
    ],
    "classe": "F",
    "spese_mese": 55,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2062077809",
+    "2062077963",
+    "2062077789",
+    "2062077825",
+    "2062077939",
+    "2062077897",
+    "2062077853",
+    "2062077919",
+    "2062077873",
+    "2062077981",
+    "2062078005",
+    "2062078039",
+    "2062077765",
+    "2062078023"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Appartamento a Seriate (0 km)",
+     "prezzo": 60000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/126430479/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Seriate (0,1 km)",
+     "prezzo": 50000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/132640816/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Seriate (0,2 km)",
+     "prezzo": 55000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/120129130/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Seriate (0,3 km)",
+     "prezzo": 45000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/133510122/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Seriate (0,4 km)",
+     "prezzo": 118000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/126285321/",
+     "stato": ""
+    },
+    {
+     "titolo": "Appartamento a Seriate (0,5 km)",
+     "prezzo": 79000,
+     "mq": 30,
+     "url": "https://www.immobiliare.it/annunci/129299874/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "132428760",
@@ -2726,7 +3684,85 @@
    ],
    "classe": "E",
    "spese_mese": 75,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "2004689946",
+    "2004689890",
+    "2004682060",
+    "2004689916",
+    "2004682080",
+    "2004682096",
+    "2004682116",
+    "2004682132",
+    "2004682156",
+    "2004682214",
+    "2004682662",
+    "2004682806",
+    "2004683096",
+    "2004683146",
+    "2004683208",
+    "2004683238",
+    "2004683270",
+    "2004689264",
+    "2004689312",
+    "2004689366",
+    "2004689426",
+    "2004689610",
+    "2004689690",
+    "2004689740",
+    "2004689778",
+    "2004689802",
+    "2004689824",
+    "2004689842",
+    "2004689856",
+    "2004689876",
+    "2004682018",
+    "2004682034"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,2 km)",
+     "prezzo": 99000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/130326006/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,2 km)",
+     "prezzo": 70000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/128317300/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,3 km)",
+     "prezzo": 85000,
+     "mq": 48,
+     "url": "https://www.immobiliare.it/annunci/106301159/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,4 km)",
+     "prezzo": 63000,
+     "mq": 75,
+     "url": "https://www.immobiliare.it/annunci/132519362/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,5 km)",
+     "prezzo": 89000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/129355726/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Ponte San Pietro (0,7 km)",
+     "prezzo": 129000,
+     "mq": 61,
+     "url": "https://www.immobiliare.it/annunci/134634871/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "124962439",
@@ -2766,7 +3802,64 @@
    ],
    "classe": "G",
    "spese_mese": 0,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1825488449",
+    "1825496263",
+    "1825496277",
+    "1825496281",
+    "1825496309",
+    "1825496259",
+    "1825496271",
+    "1825496289",
+    "1825496299",
+    "1825496317",
+    "2045327831"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Appartamento a Cantù (0 km)",
+     "prezzo": 27000,
+     "mq": 35,
+     "url": "https://www.immobiliare.it/annunci/117346575/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cantù (0,4 km)",
+     "prezzo": 99000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/129492886/",
+     "stato": ""
+    },
+    {
+     "titolo": "Mansarda a Cantù (0,6 km)",
+     "prezzo": 75000,
+     "mq": 50,
+     "url": "https://www.immobiliare.it/annunci/108738125/",
+     "stato": ""
+    },
+    {
+     "titolo": "Trilocale a Cantù (1,1 km)",
+     "prezzo": 125000,
+     "mq": 55,
+     "url": "https://www.immobiliare.it/annunci/133340060/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cantù (1,1 km)",
+     "prezzo": 73000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/133888924/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Cantù (1,1 km)",
+     "prezzo": 75000,
+     "mq": 40,
+     "url": "https://www.immobiliare.it/annunci/125434613/",
+     "stato": ""
+    }
+   ]
   },
   {
    "id": "130060612",
@@ -2806,7 +3899,71 @@
    ],
    "classe": "G",
    "spese_mese": 42,
-   "trovato": "2026-11-21"
+   "trovato": "2026-11-21",
+   "galleria": [
+    "1948582418",
+    "1948582432",
+    "1948582454",
+    "1948582470",
+    "1948582486",
+    "1948582498",
+    "1948582518",
+    "1948582538",
+    "1948582556",
+    "1948582572",
+    "1948582586",
+    "1948582598",
+    "1948582612",
+    "1948582624",
+    "1948582638",
+    "1948582646",
+    "1948582656",
+    "1948582724"
+   ],
+   "comparabili": [
+    {
+     "titolo": "Bilocale a Erba (0,2 km)",
+     "prezzo": 50000,
+     "mq": 45,
+     "url": "https://www.immobiliare.it/annunci/130060604/",
+     "stato": ""
+    },
+    {
+     "titolo": "Mansarda a Erba (0,2 km)",
+     "prezzo": 115000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/132362234/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Erba (0,2 km)",
+     "prezzo": 45000,
+     "mq": 60,
+     "url": "https://www.immobiliare.it/annunci/126108851/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Erba (0,3 km)",
+     "prezzo": 60000,
+     "mq": 47,
+     "url": "https://www.immobiliare.it/annunci/130060618/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Erba (0,5 km)",
+     "prezzo": 50000,
+     "mq": 65,
+     "url": "https://www.immobiliare.it/annunci/134346121/",
+     "stato": ""
+    },
+    {
+     "titolo": "Bilocale a Erba (0,9 km)",
+     "prezzo": 85000,
+     "mq": 55,
+     "url": "https://www.immobiliare.it/annunci/126532109/",
+     "stato": ""
+    }
+   ]
   }
  ],
  "scartati": [

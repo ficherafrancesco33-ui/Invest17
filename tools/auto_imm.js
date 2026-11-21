@@ -41,7 +41,7 @@ const out = raw.annunci.map(a => {
   // affitto normale: canone OMI della zona (valore medio) se c'è, altrimenti la media degli annunci del comune ridotta del 30%
   const locOmi = om && om.loc ? (om.loc[0] + om.loc[1]) / 2 : null;
   const canone = Math.round(Math.min(a.mq, 90) * (locOmi ? locOmi : eurMq * 0.7) / 10) * 10;
-  const comps = raw.annunci.filter(x => x.comune === a.comune && x.id !== a.id).map(x => ({ titolo: x.titolo, prezzo: x.prezzo, mq: x.mq, url: `https://www.immobiliare.it/annunci/${x.id}/`, stato: x.stato }));
+  const comps = raw.annunci.filter(x => x.comune === a.comune && x.id !== a.id).map(x => ({ titolo: x.titolo, prezzo: x.prezzo, mq: x.mq, url: `https://www.immobiliare.it/annunci/${x.id}/`, stato: x.stato })).concat(a.comparabili || []);   // + annunci in vendita vicini (cercati a parte)
   return {
     id: "auto-" + a.id, titolo: a.titolo, url: `https://www.immobiliare.it/annunci/${a.id}/`, fonte: "Immobiliare.it (ricerca automatica di Claude)",
     aggiunto: a.trovato || raw.data, trovato: a.trovato || raw.data, regione: REG[a.p] || "", provincia: a.p, comune: a.comune, zona: a.indirizzo,
