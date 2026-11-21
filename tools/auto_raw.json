@@ -29,7 +29,7 @@
   "Valeggio sul Mincio|VR": 0,
   "Arona|NO": 0,
   "La Spezia|SP": 1,
-  "Genova|GE": 11,
+  "Genova|GE": 13,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 7,
@@ -43,7 +43,7 @@
   "Novi Ligure|AL": 0,
   "Lonate Pozzolo|VA": 0,
   "Cardano al Campo|VA": 1,
-  "Tortona|AL": 4,
+  "Tortona|AL": 5,
   "Erba|CO": 0,
   "Borgomanero|NO": 1,
   "Sondrio|SO": 1,
@@ -76,7 +76,7 @@
   "Voghera|PV": 5,
   "Mortara|PV": 1,
   "Cremona|CR": 1,
-  "Asti|AT": 2,
+  "Asti|AT": 3,
   "Biella|BI": 3,
   "Ivrea|TO": 1,
   "Banchette|TO": 1,
@@ -2220,6 +2220,87 @@
    "classe": "D",
    "spese_mese": 30,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "122172770",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 45000,
+   "lavori": 5000,
+   "mq": 50,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": false,
+   "indirizzo": "Via Borzoli 70, Borzoli, Genova",
+   "titolo": "Trilocale ristrutturato semi indipendente, senza spese",
+   "lat": 44.4395,
+   "lon": 8.8798,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1756218818/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1756218828/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1756218830/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1756218834/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1756218836/m-c.jpg"
+   ],
+   "aggiornato": "20/02/2026",
+   "agenzia": "Tempocasa Genova",
+   "canone": 520,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova ponente: mediana 12,2 €/m²; stima prudente",
+   "pro": [
+    "Recentemente ristrutturato, finiture moderne",
+    "Due camere, cucina a vista, cantina",
+    "Semi indipendente, nessuna spesa condominiale, parcheggio e bus vicini"
+   ],
+   "contro": [
+    "Arredo da completare (5.000 € già contati)"
+   ],
+   "classe": "D",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "127536468",
+   "comune": "Tortona",
+   "p": "AL",
+   "prezzo": 35000,
+   "lavori": 5000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": false,
+   "indirizzo": "Via Gherardo Opizzoni 8, Tortona",
+   "titolo": "Loft moderno di 50 m² senza spese condominiali",
+   "lat": 44.896,
+   "lon": 8.8562,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2049771713/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1886789582/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1886789586/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1886789588/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1886789590/m-c.jpg"
+   ],
+   "aggiornato": "04/11/2026",
+   "agenzia": "Tecnocasa",
+   "canone": 430,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Tortona: mediana 9,3 €/m²; stima prudente",
+   "pro": [
+    "Moderno, climatizzato, classe D",
+    "Nessuna spesa condominiale",
+    "Centrale, vicino ai servizi"
+   ],
+   "contro": [
+    "Piano terra",
+    "Arredo da completare (5.000 € già contati)"
+   ],
+   "classe": "D",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -2712,6 +2793,16 @@
    "id": "134470633",
    "comune": "Genova",
    "motivo": "Rendita netta 5,0% con spese alte: sotto la soglia"
+  },
+  {
+   "id": "117293109",
+   "comune": "Asti",
+   "motivo": "Rendita netta 6,6% con arredo: sotto il 7%"
+  },
+  {
+   "id": "134439301",
+   "comune": "Genova",
+   "motivo": "Rendita netta 6,4%: sotto il 7%"
   }
  ]
 }
