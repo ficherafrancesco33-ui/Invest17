@@ -11,10 +11,11 @@ Scopo: leggere gli avvisi email di Immobiliare.it che arrivano nella Gmail colle
 - Non si cancellano né si modificano le email (niente etichette, niente "letto"): gli id delle email già lette stanno in `tools/novita.json` → `email`.
 
 ## 1. Trovare gli avvisi
-Gmail: `from:noreply@immobiliare.it newer_than:3d -subject:"ricerca è stata salvata" -subject:Benvenuto`.
+Gmail: `from:(noreply@immobiliare.it OR noreply@notifiche.immobiliare.it) newer_than:3d -subject:"ricerca è stata salvata" -subject:Benvenuto`.
 Salta i messaggi il cui id è già in `tools/novita.json` → `email`.
 Per ogni avviso leggi il corpo (`get_thread`): titolo della ricerca (es. "Residenziale in vendita nell'area disegnata" = **Investimenti**; una ricerca su Milano = **Milano**), e per ogni annuncio il link, prezzo, m², locali, indirizzo.
 L'id dell'annuncio è il numero in `/annunci/NNNNNNNNN/`. Se il link è un redirect di tracciamento, aprilo con WebFetch e segui il redirect fino a `www.immobiliare.it/annunci/ID/`.
+Nota (21/11/2026): gli avvisi da `noreply@notifiche.immobiliare.it` hanno link `clicks.immobiliare.it` troppo lunghi per WebFetch (403 "url exceeds the maximum fetchable length") e non contengono l'id dell'annuncio: in quel caso non si cambia strada, gli annunci vanno in `pendenti` con titolo, prezzo e link.
 Scarta subito gli id già presenti: `tools/auto_raw.json` (annunci + scartati) e `tools/terr/raw_immobiliare_milano.txt` (prima colonna).
 
 ## 2. Investimenti (avviso con l'area disegnata, 20.000–60.000 €)

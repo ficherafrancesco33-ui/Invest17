@@ -616,6 +616,36 @@
   "134947273": "2026-11-20",
   "134948311": "2026-11-20"
  },
- "email": [],
- "pendenti": []
+ "email": [
+  "1a1fc7b48ec68fb3"
+ ],
+ "pendenti": [
+  {
+   "titolo": "Trilocale piazza Meriggi 1, Stradella",
+   "prezzo": 43000,
+   "mq": 92,
+   "locali": 3,
+   "link": "https://clicks.immobiliare.it/f/a/GztcSigwEWTYpETAHGaEQw~~/AAAHahA~/zObuI-ACPvbFLWHDhuyT_0U-mpcCp64CIapKt-E5gcpoH3YaJ-XaIkDF0_FrYfmYuuK_UDzjdQIJmerzxtz0MtYGIkgiX_JmSFG9ZLm7uUj0HpYfQv-lQE2wUDA_gl7obFbAbyUqCyyyaKMV0S_5nw9sb-o5qZ-7-S8FDvzKlOCVVwxrmxL7hjZhbET8bNV973UgpcMnSvMB_hMizZWs6QY8lgY5dBdpdSq6uImZi6JmhsOZHA_9LR9m8Ie_BMEB",
+   "email": "1a1fc7b48ec68fb3",
+   "motivo": "link di tracciamento troppo lungo per WebFetch, id non presente nell'email"
+  },
+  {
+   "titolo": "Terratetto via Ticino 22, Stradella (in evidenza)",
+   "prezzo": 55000,
+   "mq": 57,
+   "locali": 2,
+   "link": "https://clicks.immobiliare.it/f/a/eB9bRIFWqSlcSxsgy0C_wA~~/AAAHahA~/9O_IZbJPqk3DQ1NM451e6BMkPyrsBLRTuaE5Huc7qyl9y4GYXKjUbTw-x10GgLL0DXKNKkzz-7t9ooDLLdrpXMPmo6acpk6bZ3EPGg2W8_A5wWsq3RyLeuK7wXnk_3M-A0wW6XAdfovTg4gJbmRt0LDt9PAVBPkN4UFM4vJYJrfmuUp8K1TiPIRsULnXl3m-hzY1_fq1eMesrvy9ka6ILIsWDHAVOPDGI_I81Kjsfa73ekSLpuu_34FlGyEwBjVoVFA-REVCgnPM1kcn9Wnh-g~~",
+   "email": "1a1fc7b48ec68fb3",
+   "motivo": "link di tracciamento troppo lungo per WebFetch"
+  },
+  {
+   "titolo": "Bilocale buono stato, piano terra, Cameri (in evidenza)",
+   "prezzo": 40000,
+   "mq": 60,
+   "locali": 2,
+   "link": "https://clicks.immobiliare.it/f/a/bUo7jQv6KSSshnbEFGchag~~/AAAHahA~/9O_IZbJPqk3DQ1NM451e6BMkPyrsBLRTuaE5Huc7qylQ0bxNLUjyAW-tb5kMqcC6O0wwkJbQuvdUZhkFIVEpQWsaJSfD2bhfZ4Gr9BchxlqPD7oSDw7WpEBXDXAnQY4jrcb9irTybaqPuGBg9xPzJL12VbkCKYyvn3RR5U8zX_XAAWoGvKJV39nnhG8ROXyBz6lV09EV3Ogdvfz7JzviTdEXW7_4OdRUeuFWFpL-UW34W0kDfSkQalzadDdxOFy98c3XsSQco_i-nrzGewjOuw~~",
+   "email": "1a1fc7b48ec68fb3",
+   "motivo": "link di tracciamento troppo lungo per WebFetch"
+  }
+ ]
 }
