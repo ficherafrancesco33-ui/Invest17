@@ -56,7 +56,7 @@ async function dtCerca(im) {
 function dtSezione(im) {
   if (im.lat == null || im.lng == null) return "";
   return `<h2>Dove si trova <small>tempi in auto</small></h2>
-  <div class="card dtcard"><div class="map small" id="dtmap"></div>
+  <div class="card dtcard"><div class="dtmap" id="dtmap"><div class="spin"></div></div><p class="note" style="margin-top:6px">Trascina per spostarti, due dita per ingrandire e inclinare, ⛶ per vederla a tutto schermo.</p>
     <div class="dtlist" id="dtlist"><div class="spin"></div><p class="note">Cerco stazione, supermercato, ospedale, lago, impianti e caselli vicini…</p></div>
     <p class="note">Luoghi da OpenStreetMap, tempi di guida senza traffico. ${im.pos_indicativa ? "La posizione dell'immobile è indicativa." : ""}</p></div>`;
 }
@@ -71,8 +71,32 @@ async function dtDisegna(im) {
   box.innerHTML = P.map(p => { const c = cat(p.k); return `<div class="dtrow"><i style="--dc:${c.col}">${c.ico}</i><span><b>${esc(c.n || p.n)}</b><small>${esc(p.n !== c.n ? p.n : "")}</small></span><em>${p.stima ? "~" : ""}${dtMin(p.min)}<small>${num(p.km, p.km < 10 ? 1 : 0)} km</small></em></div>`; }).join("")
     || `<p class="note">Non sono riuscito a calcolare le distanze: riprova più tardi.</p>`;
   const vicini = P.filter(p => !["casa", "milano", "aeroporto"].includes(p.k));
-  drawMap(el, [...vicini.map(p => { const c = cat(p.k); return { lat: p.lat, lng: p.lon, col: c.col, r: 7, tip: `${c.n || p.n}: ${dtMin(p.min)}` }; }),
-    { lat: +im.lat, lng: +im.lng, col: "#7a1f33", r: 11, tip: "L'immobile" }], { maxZoom: 14 });
+  dtMappa(el, im, vicini.map(p => { const c = cat(p.k); return { lat: p.lat, lon: p.lon, col: c.col, ico: c.ico, t: c.n || p.n, s: (p.n !== c.n ? p.n + " · " : "") + dtMin(p.min) + " in auto" }; }));
+}
+// la mappa classica di Keystone (rilievo 3D, colori notte): si allarga, si gira e si ingrandisce con le dita
+function dtMappa(el, im, P) {
+  mmLoad().then(() => {
+    if (!document.body.contains(el)) return; el.innerHTML = "";
+    const map = new maplibregl.Map({ container: el, style: itStile(), center: [+im.lng, +im.lat], zoom: 12.5, pitch: 50, bearing: -10, maxPitch: 75, attributionControl: { compact: true } });
+    try { attrChiusa(map); } catch (e) {}
+    map.scrollZoom.disable(); el.addEventListener("wheel", e => { if (e.ctrlKey || document.fullscreenElement) map.scrollZoom.enable(); }, { passive: true });
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+    map.addControl(new maplibregl.FullscreenControl(), "top-right");
+    map.on("load", () => {
+      try { map.setTerrain({ source: "dem", exaggeration: 1.3 }); } catch (e) {}
+      const F = [{ type: "Feature", properties: { i: -1, c: "#7a1f33", ico: "★", me: 1 }, geometry: { type: "Point", coordinates: [+im.lng, +im.lat] } },
+        ...P.map((p, i) => ({ type: "Feature", properties: { i, c: p.col, ico: p.ico, me: 0 }, geometry: { type: "Point", coordinates: [p.lon, p.lat] } }))];
+      map.addSource("dt", { type: "geojson", data: { type: "FeatureCollection", features: F } });
+      map.addLayer({ id: "dtglow", type: "circle", source: "dt", filter: ["==", ["get", "me"], 1], paint: { "circle-radius": 26, "circle-color": "#c9a227", "circle-opacity": 0.22, "circle-blur": 0.9 } });
+      map.addLayer({ id: "dtdot", type: "circle", source: "dt", paint: { "circle-radius": ["case", ["==", ["get", "me"], 1], 13, 10], "circle-color": ["get", "c"], "circle-stroke-color": ["case", ["==", ["get", "me"], 1], "#f2cf5b", "#14100a"], "circle-stroke-width": 2 } });
+      map.addLayer({ id: "dtico", type: "symbol", source: "dt", layout: { "text-field": ["get", "ico"], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-allow-overlap": true }, paint: { "text-color": ["case", ["==", ["get", "me"], 1], "#f2cf5b", "#1d0d10"] } });
+      const b = new maplibregl.LngLatBounds(); b.extend([+im.lng, +im.lat]); P.filter(p => dtKm(+im.lat, +im.lng, p.lat, p.lon) < 25).forEach(p => b.extend([p.lon, p.lat]));
+      map.fitBounds(b, { padding: 46, maxZoom: 14, pitch: 50, bearing: -10, duration: 1200 });
+      map.on("click", "dtdot", e => { const i = e.features[0].properties.i, p = P[i]; new maplibregl.Popup({ closeButton: false, offset: 12 }).setLngLat(e.features[0].geometry.coordinates)
+        .setHTML(i < 0 ? `<b>${esc(im.titolo || "L'immobile")}</b><br>${esc(im.comune || "")}` : `<b>${esc(p.t)}</b><br>${esc(p.s)}`).addTo(map); });
+      map.on("mouseenter", "dtdot", () => map.getCanvas().style.cursor = "pointer"); map.on("mouseleave", "dtdot", () => map.getCanvas().style.cursor = "");
+    });
+  }).catch(() => { el.innerHTML = `<div class="mapfb">Mappa non disponibile senza connessione.</div>`; });
 }
 { const v0 = vScheda; vScheda = function (src, id) { const h = v0(src, id), im = findIm(src, id); if (!im) return h; return h.replace("<h2>Il prezzo è giusto?</h2>", dtSezione(im) + "<h2>Il prezzo è giusto?</h2>"); }; }
 { const a0 = afterScheda; afterScheda = function (src, id) { a0(src, id); const im = findIm(src, id); if (im) dtDisegna(im).catch(e => { const b = $("#dtlist"); if (b) b.innerHTML = `<p class="note">Distanze non disponibili ora.</p>`; }); }; }
