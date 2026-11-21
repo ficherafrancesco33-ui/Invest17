@@ -1,0 +1,1649 @@
+{
+ "nota": "Coda di lettura Immobiliare (vendita) per Milano e province: si legge in ordine, a macchia d'olio. stato: da | fatto | bloccato. Vedi tools/terr/CODA_MILANO.md",
+ "fatti": [
+  {
+   "n": "Quintosole - Chiaravalle",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Barona",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Santa Giulia",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Ponte Lambro",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Tre Castelli - Faenza",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Giambellino",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Viale Ungheria - Mecenate",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Monluè",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Muggiano",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Tripoli - Soderini",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Lorenteggio",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Carrobbio",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Missori",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "San Vittore",
+   "tipo": "micro",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "Rozzano",
+   "tipo": "comune",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  },
+  {
+   "n": "San Donato Milanese",
+   "tipo": "comune",
+   "stato": "fatto",
+   "data": "2026-11-21"
+  }
+ ],
+ "coda": [
+  {
+   "n": "Borgogna - Largo Augusto",
+   "path": "/vendita-case/milano/borgogna-largo-augusto/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "San Babila",
+   "path": "/vendita-case/milano/san-babila/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Duomo",
+   "path": "/vendita-case/milano/duomo/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Piave - Tricolore",
+   "path": "/vendita-case/milano/piave-tricolore/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quadrilatero della Moda",
+   "path": "/vendita-case/milano/quadrilatero-della-moda/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Plebisciti - Susa",
+   "path": "/vendita-case/milano/plebisciti-susa/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Scala - Manzoni",
+   "path": "/vendita-case/milano/scala-manzoni/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Indipendenza",
+   "path": "/vendita-case/milano/indipendenza/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Palestro",
+   "path": "/vendita-case/milano/palestro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Sant'Ambrogio",
+   "path": "/vendita-case/milano/sant-ambrogio/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Brera",
+   "path": "/vendita-case/milano/brera/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Cadorna - Castello",
+   "path": "/vendita-case/milano/cadorna-castello/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Turati",
+   "path": "/vendita-case/milano/turati/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Lanza",
+   "path": "/vendita-case/milano/lanza/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Porta Venezia",
+   "path": "/vendita-case/milano/porta-venezia/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Arena",
+   "path": "/vendita-case/milano/arena/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Dezza",
+   "path": "/vendita-case/milano/dezza/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Repubblica",
+   "path": "/vendita-case/milano/repubblica/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Moscova",
+   "path": "/vendita-case/milano/moscova/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Buenos Aires",
+   "path": "/vendita-case/milano/buenos-aires/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Morgagni",
+   "path": "/vendita-case/milano/morgagni/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Vincenzo Monti",
+   "path": "/vendita-case/milano/vincenzo-monti/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Porta Nuova",
+   "path": "/vendita-case/milano/porta-nuova/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Città Studi",
+   "path": "/vendita-case/milano/citta-studi/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Pagano",
+   "path": "/vendita-case/milano/pagano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quartiere Forlanini",
+   "path": "/vendita-case/milano/quartiere-forlanini/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Arco della Pace",
+   "path": "/vendita-case/milano/arco-della-pace/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Vercelli - Wagner",
+   "path": "/vendita-case/milano/vercelli-wagner/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Garibaldi - Corso Como",
+   "path": "/vendita-case/milano/garibaldi-corso-como/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Paolo Sarpi",
+   "path": "/vendita-case/milano/paolo-sarpi/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Washington",
+   "path": "/vendita-case/milano/washington/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Centrale",
+   "path": "/vendita-case/milano/centrale/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Melchiorre Gioia",
+   "path": "/vendita-case/milano/melchiorre-gioia/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Frua",
+   "path": "/vendita-case/milano/frua/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Ortica",
+   "path": "/vendita-case/milano/ortica/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Piazza Napoli",
+   "path": "/vendita-case/milano/piazza-napoli/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Isola",
+   "path": "/vendita-case/milano/isola/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Sempione",
+   "path": "/vendita-case/milano/sempione/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Piazzale Siena",
+   "path": "/vendita-case/milano/piazzale-siena/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "De Angeli",
+   "path": "/vendita-case/milano/de-angeli/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Amendola - Buonarroti",
+   "path": "/vendita-case/milano/amendola-buonarroti/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Pasteur",
+   "path": "/vendita-case/milano/pasteur/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Casoretto",
+   "path": "/vendita-case/milano/casoretto/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Maggiolina",
+   "path": "/vendita-case/milano/maggiolina/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "City Life",
+   "path": "/vendita-case/milano/city-life/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Lambrate",
+   "path": "/vendita-case/milano/lambrate/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Cenisio",
+   "path": "/vendita-case/milano/cenisio/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Gambara",
+   "path": "/vendita-case/milano/gambara/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Cascina dei Pomi",
+   "path": "/vendita-case/milano/cascina-dei-pomi/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Zara",
+   "path": "/vendita-case/milano/zara/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Farini",
+   "path": "/vendita-case/milano/farini/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Rovereto",
+   "path": "/vendita-case/milano/rovereto/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bande Nere",
+   "path": "/vendita-case/milano/bande-nere/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Rubattino",
+   "path": "/vendita-case/milano/rubattino/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Udine",
+   "path": "/vendita-case/milano/udine/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Parco Trotter",
+   "path": "/vendita-case/milano/parco-trotter/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Monte Rosa - Lotto",
+   "path": "/vendita-case/milano/monte-rosa-lotto/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Turro",
+   "path": "/vendita-case/milano/turro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Istria",
+   "path": "/vendita-case/milano/istria/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Portello - Parco Vittoria",
+   "path": "/vendita-case/milano/portello-parco-vittoria/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Primaticcio",
+   "path": "/vendita-case/milano/primaticcio/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Ghisolfa - Mac Mahon",
+   "path": "/vendita-case/milano/ghisolfa-mac-mahon/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Greco - Segnano",
+   "path": "/vendita-case/milano/greco-segnano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Prato Centenaro",
+   "path": "/vendita-case/milano/prato-centenaro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Cimiano",
+   "path": "/vendita-case/milano/cimiano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Inganni",
+   "path": "/vendita-case/milano/inganni/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Parco Lambro",
+   "path": "/vendita-case/milano/parco-lambro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quartiere Feltre",
+   "path": "/vendita-case/milano/quartiere-feltre/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Gorla",
+   "path": "/vendita-case/milano/gorla/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "QT8",
+   "path": "/vendita-case/milano/qt8/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Dergano",
+   "path": "/vendita-case/milano/dergano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Ca' Granda",
+   "path": "/vendita-case/milano/ca-granda/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bovisa",
+   "path": "/vendita-case/milano/bovisa/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "San Siro",
+   "path": "/vendita-case/milano/san-siro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Precotto",
+   "path": "/vendita-case/milano/precotto/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Monte Stella",
+   "path": "/vendita-case/milano/monte-stella/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Crescenzago",
+   "path": "/vendita-case/milano/crescenzago/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Certosa",
+   "path": "/vendita-case/milano/certosa/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bicocca",
+   "path": "/vendita-case/milano/bicocca/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bisceglie",
+   "path": "/vendita-case/milano/bisceglie/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Ponte Nuovo",
+   "path": "/vendita-case/milano/ponte-nuovo/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Niguarda",
+   "path": "/vendita-case/milano/niguarda/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Affori",
+   "path": "/vendita-case/milano/affori/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Villa San Giovanni",
+   "path": "/vendita-case/milano/villa-san-giovanni/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Cascina Gobba",
+   "path": "/vendita-case/milano/cascina-gobba/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quarto Cagnino",
+   "path": "/vendita-case/milano/quarto-cagnino/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "San Carlo",
+   "path": "/vendita-case/milano/san-carlo/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bignami - Ponale",
+   "path": "/vendita-case/milano/bignami-ponale/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quartiere Adriano",
+   "path": "/vendita-case/milano/quartiere-adriano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quartiere Olmi",
+   "path": "/vendita-case/milano/quartiere-olmi/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bovisasca",
+   "path": "/vendita-case/milano/bovisasca/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Musocco",
+   "path": "/vendita-case/milano/musocco/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quarto Oggiaro",
+   "path": "/vendita-case/milano/quarto-oggiaro/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Gallaratese",
+   "path": "/vendita-case/milano/gallaratese/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Bruzzano",
+   "path": "/vendita-case/milano/bruzzano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Comasina",
+   "path": "/vendita-case/milano/comasina/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Baggio",
+   "path": "/vendita-case/milano/baggio/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Vialba",
+   "path": "/vendita-case/milano/vialba/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Trenno",
+   "path": "/vendita-case/milano/trenno/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Roserio",
+   "path": "/vendita-case/milano/roserio/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Quinto Romano",
+   "path": "/vendita-case/milano/quinto-romano/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Uptown - MIND - Cascina Merlata",
+   "path": "/vendita-case/milano/uptown-mind-cascina-merlata/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Figino",
+   "path": "/vendita-case/milano/figino/",
+   "tipo": "micro",
+   "stato": "da"
+  },
+  {
+   "n": "Opera",
+   "path": "/vendita-case/opera/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Assago",
+   "path": "/vendita-case/assago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Buccinasco",
+   "path": "/vendita-case/buccinasco/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Corsico",
+   "path": "/vendita-case/corsico/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cesano Boscone",
+   "path": "/vendita-case/cesano-boscone/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Trezzano sul Naviglio",
+   "path": "/vendita-case/trezzano-sul-naviglio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "San Giuliano Milanese",
+   "path": "/vendita-case/san-giuliano-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Peschiera Borromeo",
+   "path": "/vendita-case/peschiera-borromeo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Segrate",
+   "path": "/vendita-case/segrate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Vimodrone",
+   "path": "/vendita-case/vimodrone/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cologno Monzese",
+   "path": "/vendita-case/cologno-monzese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Sesto San Giovanni",
+   "path": "/vendita-case/sesto-san-giovanni/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Bresso",
+   "path": "/vendita-case/bresso/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cinisello Balsamo",
+   "path": "/vendita-case/cinisello-balsamo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cusano Milanino",
+   "path": "/vendita-case/cusano-milanino/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cormano",
+   "path": "/vendita-case/cormano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Novate Milanese",
+   "path": "/vendita-case/novate-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Baranzate",
+   "path": "/vendita-case/baranzate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Pero",
+   "path": "/vendita-case/pero/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Settimo Milanese",
+   "path": "/vendita-case/settimo-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Cusago",
+   "path": "/vendita-case/cusago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Locate di Triulzi",
+   "path": "/vendita-case/locate-di-triulzi/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Pieve Emanuele",
+   "path": "/vendita-case/pieve-emanuele/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Basiglio",
+   "path": "/vendita-case/basiglio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Zibido San Giacomo",
+   "path": "/vendita-case/zibido-san-giacomo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 1,
+   "stato": "da"
+  },
+  {
+   "n": "Bollate",
+   "path": "/vendita-case/bollate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Rho",
+   "path": "/vendita-case/rho/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Cornaredo",
+   "path": "/vendita-case/cornaredo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Arese",
+   "path": "/vendita-case/arese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Garbagnate Milanese",
+   "path": "/vendita-case/garbagnate-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Paderno Dugnano",
+   "path": "/vendita-case/paderno-dugnano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Pioltello",
+   "path": "/vendita-case/pioltello/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Cernusco sul Naviglio",
+   "path": "/vendita-case/cernusco-sul-naviglio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Cassina de' Pecchi",
+   "path": "/vendita-case/cassina-de-pecchi/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Carugate",
+   "path": "/vendita-case/carugate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Rodano",
+   "path": "/vendita-case/rodano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Mediglia",
+   "path": "/vendita-case/mediglia/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Pantigliate",
+   "path": "/vendita-case/pantigliate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Melegnano",
+   "path": "/vendita-case/melegnano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Lacchiarella",
+   "path": "/vendita-case/lacchiarella/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Binasco",
+   "path": "/vendita-case/binasco/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Noviglio",
+   "path": "/vendita-case/noviglio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Gaggiano",
+   "path": "/vendita-case/gaggiano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Vittuone",
+   "path": "/vendita-case/vittuone/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Sedriano",
+   "path": "/vendita-case/sedriano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Bareggio",
+   "path": "/vendita-case/bareggio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Senago",
+   "path": "/vendita-case/senago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Limbiate",
+   "path": "/vendita-case/limbiate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Bussero",
+   "path": "/vendita-case/bussero/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Gorgonzola",
+   "path": "/vendita-case/gorgonzola/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Vignate",
+   "path": "/vendita-case/vignate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Settala",
+   "path": "/vendita-case/settala/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Paullo",
+   "path": "/vendita-case/paullo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Vizzolo Predabissi",
+   "path": "/vendita-case/vizzolo-predabissi/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Cerro al Lambro",
+   "path": "/vendita-case/cerro-al-lambro/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Carpiano",
+   "path": "/vendita-case/carpiano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Siziano",
+   "path": "/vendita-case/siziano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Casarile",
+   "path": "/vendita-case/casarile/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Rosate",
+   "path": "/vendita-case/rosate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Vermezzo con Zelo",
+   "path": "/vendita-case/vermezzo-con-zelo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 2,
+   "stato": "da"
+  },
+  {
+   "n": "Abbiategrasso",
+   "path": "/vendita-case/abbiategrasso/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Magenta",
+   "path": "/vendita-case/magenta/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Corbetta",
+   "path": "/vendita-case/corbetta/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Legnano",
+   "path": "/vendita-case/legnano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Parabiago",
+   "path": "/vendita-case/parabiago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Nerviano",
+   "path": "/vendita-case/nerviano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Lainate",
+   "path": "/vendita-case/lainate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Pogliano Milanese",
+   "path": "/vendita-case/pogliano-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Pregnana Milanese",
+   "path": "/vendita-case/pregnana-milanese/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Vanzago",
+   "path": "/vendita-case/vanzago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Arluno",
+   "path": "/vendita-case/arluno/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Melzo",
+   "path": "/vendita-case/melzo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Pozzo d'Adda",
+   "path": "/vendita-case/pozzo-d-adda/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Trezzo sull'Adda",
+   "path": "/vendita-case/trezzo-sull-adda/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Inzago",
+   "path": "/vendita-case/inzago/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Cassano d'Adda",
+   "path": "/vendita-case/cassano-d-adda/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Truccazzano",
+   "path": "/vendita-case/truccazzano/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Liscate",
+   "path": "/vendita-case/liscate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "San Zenone al Lambro",
+   "path": "/vendita-case/san-zenone-al-lambro/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Cesano Maderno",
+   "path": "/vendita-case/cesano-maderno/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Solaro",
+   "path": "/vendita-case/solaro/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Cesate",
+   "path": "/vendita-case/cesate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Canegrate",
+   "path": "/vendita-case/canegrate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "San Vittore Olona",
+   "path": "/vendita-case/san-vittore-olona/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Cerro Maggiore",
+   "path": "/vendita-case/cerro-maggiore/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Rescaldina",
+   "path": "/vendita-case/rescaldina/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Busto Garolfo",
+   "path": "/vendita-case/busto-garolfo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Castano Primo",
+   "path": "/vendita-case/castano-primo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Cuggiono",
+   "path": "/vendita-case/cuggiono/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Robecco sul Naviglio",
+   "path": "/vendita-case/robecco-sul-naviglio/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Motta Visconti",
+   "path": "/vendita-case/motta-visconti/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Besate",
+   "path": "/vendita-case/besate/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Casorate Primo",
+   "path": "/vendita-case/casorate-primo/",
+   "tipo": "comune",
+   "prov": "MI",
+   "anello": 3,
+   "stato": "da"
+  },
+  {
+   "n": "Monza",
+   "path": "/vendita-case/monza/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Brugherio",
+   "path": "/vendita-case/brugherio/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Lissone",
+   "path": "/vendita-case/lissone/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Desio",
+   "path": "/vendita-case/desio/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Seregno",
+   "path": "/vendita-case/seregno/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Muggiò",
+   "path": "/vendita-case/muggio/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Nova Milanese",
+   "path": "/vendita-case/nova-milanese/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Varedo",
+   "path": "/vendita-case/varedo/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Vimercate",
+   "path": "/vendita-case/vimercate/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Agrate Brianza",
+   "path": "/vendita-case/agrate-brianza/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Concorezzo",
+   "path": "/vendita-case/concorezzo/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Arcore",
+   "path": "/vendita-case/arcore/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Villasanta",
+   "path": "/vendita-case/villasanta/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Biassono",
+   "path": "/vendita-case/biassono/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Macherio",
+   "path": "/vendita-case/macherio/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Sovico",
+   "path": "/vendita-case/sovico/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Giussano",
+   "path": "/vendita-case/giussano/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Carate Brianza",
+   "path": "/vendita-case/carate-brianza/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Meda",
+   "path": "/vendita-case/meda/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Seveso",
+   "path": "/vendita-case/seveso/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Bovisio-Masciago",
+   "path": "/vendita-case/bovisiomasciago/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Lentate sul Seveso",
+   "path": "/vendita-case/lentate-sul-seveso/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  },
+  {
+   "n": "Besana in Brianza",
+   "path": "/vendita-case/besana-in-brianza/",
+   "tipo": "comune",
+   "prov": "MB",
+   "anello": 4,
+   "stato": "da"
+  }
+ ]
+}
