@@ -350,7 +350,12 @@ function rnTocco(q) {
     if (RS.modo === "mano") { RS.manuale.push(q); rnDisegna(); rnPannello(); return; }
     const gia = (p.stanze || []).find(st => RN.dentro(q, st.poly));
     if (gia) { RS.sel = gia; rnDisegna(); rnPannello(); return; }
-    const r = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], rnRaggio(p));
+    // provo da aperture larghe a strette: il raggio più grande che lascia libero il punto toccato chiude meglio le porte
+    let r = null;
+    if (p.aperture != null) r = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], p.aperture);
+    else { const max = p.scala ? 0.55 / p.scala : Math.max(p.W, p.H) * 0.055;
+      for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; r = t; break; }
+      r = r || { errore: "muro" }; }
     if (r.errore === "muro") return rnGuida(`<b>Hai toccato un muro.</b> Tocca il pavimento al centro della stanza.`);
     if (r.errore === "aperta") return rnGuida(`<b>Questa stanza non risulta chiusa</b> (forse una porta molto larga o un'apertura). Alza <i>"Chiudi le aperture"</i> qui sotto e ritocca, oppure usa <i>"Disegna a mano"</i> e tocca gli angoli.`);
     const poly = RN.contorno(r.reg, p.W, p.H);
@@ -371,13 +376,13 @@ function rnPannello() {
     const sel = RS.sel && p.stanze?.includes(RS.sel) ? RS.sel : null;
     pan.innerHTML = `${sel ? `<div class="rnsel"><b>Che stanza è?</b><div class="chips">${Object.entries(RN_TIPI).map(([k, t]) => `<button class="chip ${sel.tipo === k ? "on" : ""}" data-rntipo="${k}">${t.n}</button>`).join("")}</div>
         <button class="lnk" data-rntogli>Togli questa stanza</button></div>` : ""}
-      <div class="rnctl"><label><span>Chiudi le aperture (porte larghe)</span><input type="range" min="4" max="${Math.round(Math.max(p.W, p.H) * 0.07)}" value="${rnRaggio(p)}" data-rnap></label>
+      <div class="rnctl"><label><span>Chiudi le aperture: a sinistra automatico, verso destra per porte molto larghe</span><input type="range" min="0" max="${Math.round(Math.max(p.W, p.H) * 0.07)}" value="${p.aperture ?? 0}" data-rnap></label>
         <button class="btn sec" data-rnmano>${RS.modo === "mano" ? (RS.manuale.length >= 3 ? "Chiudi la stanza" : "Annulla disegno") : "Disegna a mano"}</button></div>
       ${RS.modo === "mano" ? `<p class="note">Tocca gli angoli della stanza uno dopo l'altro, poi "Chiudi la stanza".</p>` : ""}
       ${p.stanze?.length ? `<div class="btns"><a class="btn pri" href="#rendering/${p.id}/scala">Avanti: misure</a></div>` : ""}`;
     pan.querySelectorAll("[data-rntipo]").forEach(b => b.addEventListener("click", () => { sel.tipo = b.dataset.rntipo; sel.manuale = true; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); }));
     pan.querySelector("[data-rntogli]")?.addEventListener("click", () => { p.stanze = p.stanze.filter(x => x !== sel); RS.sel = null; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); });
-    pan.querySelector("[data-rnap]").addEventListener("change", e => { p.aperture = +e.target.value; rnSalva(); });
+    pan.querySelector("[data-rnap]").addEventListener("change", e => { p.aperture = +e.target.value || null; rnSalva(); });
     pan.querySelector("[data-rnmano]").addEventListener("click", () => {
       if (RS.modo !== "mano") { RS.modo = "mano"; RS.manuale = []; }
       else { if (RS.manuale.length >= 3) { const st = { id: "s" + Date.now().toString(36), poly: RS.manuale.slice(), tipo: null }; p.stanze = [...(p.stanze || []), st]; rnIndovina(p.stanze, s); RS.sel = st; p.mobili = null; rnSalva(); }
