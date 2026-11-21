@@ -29,7 +29,7 @@
   "Valeggio sul Mincio|VR": 0,
   "Arona|NO": 0,
   "La Spezia|SP": 1,
-  "Genova|GE": 13,
+  "Genova|GE": 14,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 7,
@@ -81,7 +81,8 @@
   "Ivrea|TO": 1,
   "Banchette|TO": 1,
   "Cesate|MI": 1,
-  "Valenza|AL": 1
+  "Valenza|AL": 1,
+  "Sant'Olcese|GE": 2
  },
  "coord": {
   "Edolo": [
@@ -2301,6 +2302,87 @@
    "classe": "D",
    "spese_mese": 0,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "125581575",
+   "comune": "Sant'Olcese",
+   "p": "GE",
+   "prezzo": 26000,
+   "mq": 60,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Sant'Olcese 10, Sant'Olcese (Genova)",
+   "titolo": "Bilocale arredato luminoso, senza spese condominiali",
+   "lat": 44.491,
+   "lon": 8.9698,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1840664583/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1840664531/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1840664535/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1840664537/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1841008865/m-c.jpg"
+   ],
+   "aggiornato": "16/11/2026",
+   "agenzia": "privato",
+   "canone": 380,
+   "canone_fonte": "Paese a 20 minuti da Genova: affitti stimati prudenti a circa 6,5 €/m²",
+   "pro": [
+    "Arredato, luminoso su tre lati, cucina abitabile",
+    "Nessuna spesa condominiale, prezzo trattabile",
+    "Vendita da privato: niente provvigione"
+   ],
+   "contro": [
+    "Paese collinare a 20 minuti da Genova",
+    "Riscaldamento a stufa a pellet, classe G"
+   ],
+   "classe": "G",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "103044846",
+   "comune": "Sant'Olcese",
+   "p": "GE",
+   "prezzo": 44000,
+   "lavori": 6000,
+   "mq": 78,
+   "locali": 4,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": false,
+   "indirizzo": "Via Sant'Olcese, Sant'Olcese (Genova)",
+   "titolo": "Quadrilocale nel verde, classe C, senza spese",
+   "lat": 44.4904,
+   "lon": 8.9715,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1336763506/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1336763584/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1336763596/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1336763624/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1336763632/m-c.jpg"
+   ],
+   "aggiornato": "19/11/2026",
+   "agenzia": "Immobiliare Del Guasta",
+   "canone": 480,
+   "canone_fonte": "Paese a 20 minuti da Genova: affitti stimati prudenti a circa 6,5 €/m²",
+   "pro": [
+    "Due camere più studio, classe C",
+    "Gres effetto parquet, doppi vetri, porta blindata, autonomo",
+    "Nessuna spesa condominiale, vista aperta"
+   ],
+   "contro": [
+    "Paese collinare a 20 minuti da Genova",
+    "Arredo da completare (6.000 € già contati)"
+   ],
+   "classe": "C",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -2803,6 +2885,11 @@
    "id": "134439301",
    "comune": "Genova",
    "motivo": "Rendita netta 6,4%: sotto il 7%"
+  },
+  {
+   "id": "132371588",
+   "comune": "Genova",
+   "motivo": "Rendita netta 6,9% con arredo: sotto il 7%"
   }
  ]
 }
