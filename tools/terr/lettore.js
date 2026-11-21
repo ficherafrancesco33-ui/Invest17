@@ -9,8 +9,10 @@
      4. per portarli fuori: await __prepara()  → salva in localStorage '__keyout' (gzip+base64) e dice in quante parti;
         poi in una seconda scheda su https://www.immobiliare.it/robots.txt incolla __PARTI (sotto) e per ogni parte k:
         __show(k) e subito get_page_text: l'output finisce in un file (è > 49 KB) e si decodifica con tools/terr/ricevi.py */
+// fetch con tempo massimo (una richiesta appesa bloccava tutto il giro)
+window.__f = (u, ms = 25000) => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), ms); return fetch(u, { signal: ac.signal }).finally(() => clearTimeout(t)); };
 window.__ARC = window.__ARC || {}; window.__PROG = window.__PROG || {}; window.__INVIATI = window.__INVIATI || new Set();
-window.__parametri = async path => { const r = await fetch(path + '?noAste=1'); if (r.status !== 200) return { st: r.status };
+window.__parametri = async path => { let r; try { r = await __f(path + '?noAste=1'); } catch (e) { return { st: 'rete' }; } if (r.status !== 200) return { st: r.status };
   const h = await r.text(); const i = h.indexOf('"real-estate-list\\",{'); if (i < 0) return { st: 'nokey' };
   let s = h.slice(i + 20); s = s.slice(0, s.indexOf('}') + 1).replace(/\\"/g, '"'); return { q: JSON.parse(s) }; };
 window.__mappa = (x, label) => { const re = x.realEstate, p = (re.properties || [])[0] || {}, L = p.location || {},
@@ -25,7 +27,7 @@ window.__leggi = async (path, label, maxPag = 60) => { const P = __PROG[label] =
   const z = await __parametri(path);
   if (!z.q) { P.stop = 'param ' + z.st; P.fine = true; return; } const q = { ...z.q, path, criterio: 'data', ordine: 'desc' };
   for (let pag = 1; pag <= maxPag; pag++) { let r;
-    try { r = await fetch('/api-next/search-list/listings/?' + new URLSearchParams({ ...q, pag }).toString().replace(/idMZona=/, 'idMZona%5B%5D=').replace(/idQuartiere=/, 'idQuartiere%5B%5D=')); } catch (e) { P.stop = 'rete'; break; }
+    try { r = await __f('/api-next/search-list/listings/?' + new URLSearchParams({ ...q, pag }).toString().replace(/idMZona=/, 'idMZona%5B%5D=').replace(/idQuartiere=/, 'idQuartiere%5B%5D=')); } catch (e) { P.stop = 'rete'; break; }
     if (r.status !== 200) { P.stop = 'http ' + r.status; break; } let j; try { j = await r.json(); } catch (e) { P.stop = 'captcha?'; break; }
     P.max = j.maxPages; P.count = j.count; for (const x of j.results || []) { const a = __mappa(x, label); if (a.id) { __ARC[a.id] = a; P.n++; } } P.pag = pag;
     if (!j.results?.length || pag >= j.maxPages) break; await new Promise(ok => setTimeout(ok, 1500 + Math.random() * 1000)); }
