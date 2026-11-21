@@ -604,7 +604,7 @@ async function rnRisultato() {
   box.querySelector("[data-rnpng3]").addEventListener("click", () => V3 && scarica(V3.foto(), `3d-${p.nome}.png`));
   box.querySelector("[data-rnpdf]").addEventListener("click", async () => { const I = await imgs(); pdfApri(rnPdfHtml(p, I.p2, I.p3)); });
   box.querySelector("[data-rnall]").addEventListener("click", async () => { const I = await imgs();
-    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
     await RNDB.kvSet("allegato", all); window.__RENDER_ALL = all;
     $("#rnmsg").innerHTML = `Fatto: il prossimo PDF di valutazione avrà la pagina con la pianta arredata e il 3D di <b>${esc(p.nome)}</b>. Lo togli dalla pagina Rendering.`; });
 }
@@ -623,7 +623,7 @@ function rnPagina(all, C) {
   </section>`;
 }
 function rnPdfHtml(p, p2, p3) {
-  const all = { nome: p.nome, p2, p3, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+  const all = { nome: p.nome, p2, p3, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
   return `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Rendering · ${esc(p.nome)} · Maison Collection</title>
   <style>@page{size:A4;margin:0}body{margin:0;font-family:Helvetica,Arial,sans-serif;color:#2a1418}.pg{width:210mm;min-height:297mm;box-sizing:border-box}
   .top{display:flex;justify-content:space-between;align-items:center;padding:10mm 14mm 0;color:#6a1828;font-family:Georgia,serif;letter-spacing:.15em;font-size:10pt}
