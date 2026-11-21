@@ -166,17 +166,21 @@ function fzTagliaStanze(p, seg) {
     if (!passa) { nuove.push(st); continue; }
     // un punto per lato del nuovo muro, dentro la stanza
     const mx = (x0 + x1) / 2, my = (y0 + y1) / 2, nx = -(y1 - y0), ny = x1 - x0, L = Math.hypot(nx, ny) || 1, parti = [];
-    for (const sgn of [1, -1]) for (let d = 8; d < Math.max(bb.x1 - bb.x0, bb.y1 - bb.y0); d += 6) { const q = [Math.round(mx + sgn * nx / L * d), Math.round(my + sgn * ny / L * d)];
-      if (!RN.dentro(q, st.poly) || RS.muri[q[1] * p.W + q[0]]) continue; const r = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], Math.max(3, Math.round((p.scala ? 0.12 / p.scala : 6))));
-      if (!r.errore) { const poly = RN.contorno(r.reg, p.W, p.H); if (poly.length >= 3) parti.push(poly); } break; }
-    if (parti.length === 2) { const [a, b] = parti.sort((u, v) => RN.area(v) - RN.area(u)); nuove.push({ ...st, poly: a }, { id: st.id + "b", poly: b, tipo: "altro", fin: 0 }); }
+    const span = Math.max(bb.x1 - bb.x0, bb.y1 - bb.y0), aSt = RN.area(st.poly);
+    for (const sgn of [1, -1]) { let best = null;
+      // provo punti a distanze diverse dal muro nuovo: tengo la regione più piccola che resta chiusa
+      for (const f of [0.08, 0.15, 0.25, 0.35, 0.45]) { const d = span * f, q = [Math.round(mx + sgn * nx / L * d), Math.round(my + sgn * ny / L * d)];
+        if (q[0] < 0 || q[1] < 0 || q[0] >= p.W || q[1] >= p.H || !RN.dentro(q, st.poly) || RS.muri[q[1] * p.W + q[0]]) continue;
+        const r = rnStanzaAuto(p, q); if (r.errore || r.n < aSt * 0.05) continue; if (!best || r.n < best.n) best = r; }
+      if (best) { const poly = RN.contorno(best.reg, p.W, p.H); if (poly.length >= 3) parti.push(poly); } }
+    if (parti.length === 2 && RN.area(parti[0]) + RN.area(parti[1]) < RN.area(st.poly) * 1.15) { const [a, b] = parti.sort((u, v) => RN.area(v) - RN.area(u)); nuove.push({ ...st, poly: a }, { id: st.id + "b" + Date.now().toString(36).slice(-3), poly: b, tipo: "altro", fin: 0 }); }
     else nuove.push(st);
   }
   p.stanze = nuove;
 }
 
 /* ---- aggancio all'editor del Rendering ---- */
-RN_FASI.splice(3, 0, ["fraz", "Frazionamento"]);
+RN_FASI.splice(RN_FASI.findIndex(f => f[0] === "arredo"), 0, ["fraz", "Frazionamento"]);
 { const prep = rnPrepara; rnPrepara = async function (p) { await prep(p); fzApplicaMuri(p); }; }
 { const dis = rnDisegna; rnDisegna = function () { dis(); if (RS.fase !== "fraz") return; const cv = $("#rncv"); if (!cv) return; const g = cv.getContext("2d"), p = RS.p, lw = Math.max(2, p.W / 350), fs = Math.max(14, p.W / 50);
   (p.stanze || []).forEach(st => { const u = p.fzAss?.[st.id]; if (u == null) return; g.beginPath(); st.poly.forEach(([x, y], j) => j ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();

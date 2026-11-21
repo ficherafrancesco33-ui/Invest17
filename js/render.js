@@ -272,14 +272,17 @@ async function rnElenco(box) {
   box.querySelector("[data-rnstacca]")?.addEventListener("click", async () => { await RNDB.kvSet("allegato", null); window.__RENDER_ALL = null; rnElenco(box); });
 }
 
-const RN_FASI = [["stanze", "1 · Stanze"], ["scala", "2 · Misure"], ["arredo", "3 · Arredo"], ["risultato", "4 · Risultato"]];
+const RN_FASI = [["stanze", "Stanze"], ["scala", "Misure"], ["arredo", "Arredo"], ["risultato", "Risultato"]];
 function rnEditor(box) {
   const p = RS.p, f = RS.fase;
   box.innerHTML = `<div class="rnbar"><input class="rnnome" value="${esc(p.nome)}" aria-label="Nome del rendering">
       <button class="lnk" data-rndel>Elimina</button></div>
     <nav class="rnfasi">${RN_FASI.map(([k, t]) => `<a href="#rendering/${p.id}/${k}" class="${k === f ? "on" : ""}">${t}</a>`).join("")}</nav>
     <div id="rnguida" class="rnguida"></div>
-    ${f === "risultato" ? `<div id="rnris"></div>` : `<div class="rnwrap"><canvas id="rncv"></canvas></div><div id="rnpan"></div>`}`;
+    ${f === "risultato" ? `<div id="rnris"></div>` : `<div class="rnzoom"><button class="btn sec" data-rnz="-1" aria-label="Rimpicciolisci">−</button><button class="btn sec" data-rnz="1" aria-label="Ingrandisci">+</button><span class="note">due dita per spostarti</span></div>
+      <div class="rnwrap" id="rnwrap"><canvas id="rncv" style="width:${(RS.zoom || 1) * 100}%"></canvas></div><div id="rnpan"></div>`}`;
+  box.querySelectorAll("[data-rnz]").forEach(b => b.addEventListener("click", () => { const w = $("#rnwrap"), c = $("#rncv"), z0 = RS.zoom || 1; RS.zoom = Math.max(1, Math.min(4, z0 * (b.dataset.rnz === "1" ? 1.5 : 1 / 1.5)));
+    const cx = (w.scrollLeft + w.clientWidth / 2) / z0, cy = (w.scrollTop + w.clientHeight / 2) / z0; c.style.width = RS.zoom * 100 + "%"; w.scrollLeft = cx * RS.zoom - w.clientWidth / 2; w.scrollTop = cy * RS.zoom - w.clientHeight / 2; }));
   box.querySelector(".rnnome").addEventListener("change", e => { p.nome = e.target.value.trim() || p.nome; rnSalva(); });
   box.querySelector("[data-rndel]").addEventListener("click", async () => { if (!confirm("Eliminare questo rendering?")) return; await RNDB.del(p.id); location.hash = "#rendering"; });
   if (f === "risultato") return rnRisultato();
@@ -291,18 +294,25 @@ function rnGuida(t) { const g = $("#rnguida"); if (g) g.innerHTML = t; }
 function rnCanvasInit() {
   const cv = $("#rncv"), p = RS.p; cv.width = p.W; cv.height = p.H;
   const pt = e => { const r = cv.getBoundingClientRect(), t = e.touches ? e.touches[0] || e.changedTouches[0] : e; return [Math.round((t.clientX - r.left) * p.W / r.width), Math.round((t.clientY - r.top) * p.H / r.height)]; };
-  let giu = null;
-  const down = e => { const q = pt(e); giu = q;
+  let giu = null, due = null;
+  const down = e => {
+    if (e.touches && e.touches.length >= 2) { const w = $("#rnwrap"); due = { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2, sl: w.scrollLeft, st: w.scrollTop }; giu = null; RS.drag = null; e.preventDefault(); return; }
+    const q = pt(e); giu = q;
+    if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel)) { const h = rnManiglia(q, RS.sel); if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
     if (RS.fase === "arredo") { const m = rnMobileA(q); if (m) { RS.sel = m; RS.drag = { m, dx: q[0] - m.x, dy: q[1] - m.y, mosso: false }; e.preventDefault(); rnDisegna(); rnPannello(); } }
     if (RS.fase === "scala" && RS.misura && RS.misura.a) { const a = RS.misura.a, b = RS.misura.b; const near = (u, v) => Math.hypot(u[0] - v[0], u[1] - v[1]) < Math.max(p.W, p.H) * 0.03;
       if (near(q, a)) RS.drag = { maniglia: "a" }; else if (b && near(q, b)) RS.drag = { maniglia: "b" }; if (RS.drag) e.preventDefault(); } };
-  const move = e => { if (!RS.drag) return; const q = pt(e); e.preventDefault();
-    if (RS.drag.m) { RS.drag.m.x = q[0] - RS.drag.dx; RS.drag.m.y = q[1] - RS.drag.dy; RS.drag.mosso = true; }
+  const move = e => {
+    if (due && e.touches && e.touches.length >= 2) { const w = $("#rnwrap"), x = (e.touches[0].clientX + e.touches[1].clientX) / 2, y = (e.touches[0].clientY + e.touches[1].clientY) / 2; w.scrollLeft = due.sl - (x - due.x); w.scrollTop = due.st - (y - due.y); e.preventDefault(); return; }
+    if (!RS.drag) return; const q = pt(e); e.preventDefault();
+    if (RS.drag.res) { rnRidimensiona(RS.drag, q); RS.drag.mosso = true; }
+    else if (RS.drag.m) { RS.drag.m.x = q[0] - RS.drag.dx; RS.drag.m.y = q[1] - RS.drag.dy; RS.drag.mosso = true; }
     else if (RS.drag.maniglia) RS.misura[RS.drag.maniglia] = q;
     rnDisegna(); };
-  const up = e => { const q = giu; giu = null; const d = RS.drag; RS.drag = null;
-    if (d?.m) { if (d.mosso) rnSalva(); return; }
+  const up = e => { if (due) { if (!e.touches || !e.touches.length) due = null; return; } const q = giu; giu = null; const d = RS.drag; RS.drag = null;
+    if (d?.m) { if (d.mosso) { rnSalva(); rnPannello(); } return; }
     if (d?.maniglia) { rnPannello(); return; }
+    if (d?.res) { if (d.mosso) { rnSalva(); rnPannello(); } return; }
     if (!q) return; rnTocco(q); };
   cv.addEventListener("mousedown", down); cv.addEventListener("mousemove", move); window.addEventListener("mouseup", up, { once: false });
   cv.addEventListener("touchstart", down, { passive: false }); cv.addEventListener("touchmove", move, { passive: false }); cv.addEventListener("touchend", e => { e.preventDefault(); up(e); }, { passive: false });
@@ -332,6 +342,25 @@ function rnDisegna() {
 function rnMobileA(q) { const p = RS.p, s = rnScala(p); if (!s || !p.mobili) return null;
   return [...p.mobili].reverse().find(m => { const [w, d] = rnDim(m), a = -m.rot * Math.PI / 180, dx = q[0] - m.x, dy = q[1] - m.y, lx = dx * Math.cos(a) - dy * Math.sin(a), ly = dx * Math.sin(a) + dy * Math.cos(a);
     const marg = 0.12 / s; return Math.abs(lx) <= w / s / 2 + marg && Math.abs(ly) <= d / s / 2 + marg; }); }
+/* maniglie del mobile selezionato: lato destro (larghezza), lato basso (profondità), angolo (tutte e due), pallino sopra (rotazione) */
+const rnUniforme = m => m.v === "tondo" || m.v === "quadrato";
+function rnManiglie(m) {
+  const s = RS.p.scala, [w, d] = rnDim(m), a = m.rot * Math.PI / 180, W = w / s / 2, D = d / s / 2, rot = ([x, y]) => [m.x + x * Math.cos(a) - y * Math.sin(a), m.y + x * Math.sin(a) + y * Math.cos(a)];
+  const off = rnTocco1() * 1.6, L = { wd: rot([W, D]), r: rot([0, -D - off]) };
+  if (!rnUniforme(m)) { L.w = rot([W, 0]); L.d = rot([0, D]); }
+  return L;
+}
+// raggio utile di un tocco, in pixel dell'immagine (circa 22 px sullo schermo)
+const rnTocco1 = () => { const cv = $("#rncv"); return cv ? 22 * RS.p.W / cv.clientWidth : 30; };
+function rnManiglia(q, m) { const L = rnManiglie(m), r = rnTocco1(); let best = null, bd = r * 1.3; for (const [k, h] of Object.entries(L)) { const d = Math.hypot(q[0] - h[0], q[1] - h[1]); if (d < bd) { bd = d; best = k; } } return best; }
+function rnRidimensiona(D, q) {
+  const m = D.m, s = RS.p.scala, a = -m.rot * Math.PI / 180, dx = q[0] - m.x, dy = q[1] - m.y, lx = dx * Math.cos(a) - dy * Math.sin(a), ly = dx * Math.sin(a) + dy * Math.cos(a);
+  const arr = v => Math.round(Math.max(0.3, Math.min(6, v)) * 20) / 20;
+  if (D.res === "r") { let g = Math.atan2(dx, -dy) * 180 / Math.PI; g = (Math.round(g / 15) * 15 + 360) % 360; m.rot = g; return; }
+  if (rnUniforme(m)) { const v = arr(Math.max(Math.abs(lx), Math.abs(ly)) * 2 * s); m.w = v; m.d = v; return; }
+  if (D.res === "w" || D.res === "wd") m.w = arr(Math.abs(lx) * 2 * s);
+  if (D.res === "d" || D.res === "wd") m.d = arr(Math.abs(ly) * 2 * s);
+}
 const RN_MCACHE = new Map();
 function rnMobileCanvas(g, m, s, sel) {
   const [w, d] = rnDim(m), key = m.tipo + "|" + (m.v || "") + "|" + (m.lato || "") + "|" + w + "|" + d;
@@ -340,27 +369,41 @@ function rnMobileCanvas(g, m, s, sel) {
     im.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(sv); im.onload = () => rnDisegna(); RN_MCACHE.set(key, im); }
   g.save(); g.translate(m.x, m.y); g.rotate(m.rot * Math.PI / 180);
   if (im.complete && im.naturalWidth) g.drawImage(im, (-w / 2 - 0.5) / s, (-d / 2 - 0.5) / s, (w + 1) / s, (d + 1) / s);
-  if (sel) { g.strokeStyle = "#c9a24b"; g.setLineDash([0.08 / s, 0.06 / s]); g.lineWidth = Math.max(2, 0.03 / s); g.strokeRect(-w / 2 / s - 0.06 / s, -d / 2 / s - 0.06 / s, w / s + 0.12 / s, d / s + 0.12 / s); }
+  if (sel) { g.strokeStyle = "#c9a24b"; g.setLineDash([0.08 / s, 0.06 / s]); g.lineWidth = Math.max(2, 0.03 / s); g.strokeRect(-w / 2 / s - 0.06 / s, -d / 2 / s - 0.06 / s, w / s + 0.12 / s, d / s + 0.12 / s); g.setLineDash([]); }
   g.restore();
+  if (sel) { const L = rnManiglie(m), r = rnTocco1() * 0.55;
+    g.strokeStyle = "#c9a24b"; g.lineWidth = Math.max(2, r * 0.15); g.beginPath(); g.moveTo(m.x, m.y); g.lineTo(...L.r); g.stroke();
+    for (const [k, h] of Object.entries(L)) { g.beginPath(); g.arc(h[0], h[1], r, 0, 7); g.fillStyle = k === "r" ? "#c9a24b" : "#6a1828"; g.fill(); g.lineWidth = r * 0.25; g.strokeStyle = "#fff"; g.stroke();
+      g.fillStyle = "#fff"; g.font = `800 ${r * 1.1}px Barlow, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(k === "r" ? "↻" : k === "wd" ? "⤡" : k === "w" ? "↔" : "↕", h[0], h[1] + 1); }
+    g.textBaseline = "alphabetic"; }
 }
 /* ---- tocchi sul canvas a seconda della fase ---- */
+// punto più interno di una stanza (lontano dai muri): da lì il riconoscimento chiude bene le porte
+function rnSeme(poly) {
+  const bb = RN.bbox(poly), m = RS.muri, W = RS.p.W; let best = null, bd = -1;
+  for (let i = 1; i < 14; i++) for (let j = 1; j < 14; j++) { const q = [Math.round(bb.x0 + (bb.x1 - bb.x0) * i / 14), Math.round(bb.y0 + (bb.y1 - bb.y0) * j / 14)];
+    if (!RN.dentro(q, poly) || m[q[1] * W + q[0]]) continue; const d = RN.distBordo(q, poly); if (d > bd) { bd = d; best = q; } }
+  return best;
+}
+// stanza dal punto: provo da aperture larghe a strette, il raggio più grande che lascia libero il punto chiude meglio le porte
+function rnStanzaAuto(p, q) {
+  if (p.aperture != null) return RN.stanza(RS.muri, p.W, p.H, q[0], q[1], p.aperture);
+  const max = p.scala ? 0.55 / p.scala : Math.max(p.W, p.H) * 0.055;
+  for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; return t; }
+  return { errore: "muro" };
+}
 function rnTocco(q) {
   const p = RS.p;
   if (RS.fase === "stanze") {
     if (RS.modo === "mano") { RS.manuale.push(q); rnDisegna(); rnPannello(); return; }
     const gia = (p.stanze || []).find(st => RN.dentro(q, st.poly));
     if (gia) { RS.sel = gia; rnDisegna(); rnPannello(); return; }
-    // provo da aperture larghe a strette: il raggio più grande che lascia libero il punto toccato chiude meglio le porte
-    let r = null;
-    if (p.aperture != null) r = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], p.aperture);
-    else { const max = p.scala ? 0.55 / p.scala : Math.max(p.W, p.H) * 0.055;
-      for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; r = t; break; }
-      r = r || { errore: "muro" }; }
+    const r = rnStanzaAuto(p, q);
     if (r.errore === "muro") return rnGuida(`<b>Hai toccato un muro.</b> Tocca il pavimento al centro della stanza.`);
     if (r.errore === "aperta") return rnGuida(`<b>Questa stanza non risulta chiusa</b> (forse una porta molto larga o un'apertura). Alza <i>"Chiudi le aperture"</i> qui sotto e ritocca, oppure usa <i>"Disegna a mano"</i> e tocca gli angoli.`);
     const poly = RN.contorno(r.reg, p.W, p.H);
     if (poly.length < 3 || RN.area(poly) < p.W * p.H * 0.002) return rnGuida(`<b>Zona troppo piccola.</b> Tocca più al centro della stanza.`);
-    const st = { id: "s" + Date.now().toString(36), poly, tipo: null };
+    const st = { id: "s" + Date.now().toString(36), poly, tipo: null, seed: rnSeme(poly) || q };
     p.stanze = [...(p.stanze || []), st]; rnIndovina(p.stanze, rnScala(p)); RS.sel = st; p.mobili = null; rnSalva(); rnDisegna(); rnPannello();
     return;
   }
@@ -409,7 +452,7 @@ function rnPannello() {
   if (RS.fase === "arredo") {
     if (!s) { pan.innerHTML = `<p class="note">Prima serve la misura.</p><a class="btn pri" href="#rendering/${p.id}/scala">Vai alle misure</a>`; return; }
     if (!p.mobili) { p.mobili = []; for (const st of p.stanze) for (const m of rnArreda(st, s)) p.mobili.push({ ...m, st: st.id }); rnSalva(); rnDisegna(); }
-    rnGuida(`<b>Ho arredato io le stanze.</b> Se un mobile copre una porta o non ti piace: toccalo e <b>trascinalo</b>, ruotalo o toglilo. Puoi anche aggiungerne.`);
+    rnGuida(`<b>Ho arredato io le stanze.</b> Tocca un mobile: <b>trascinalo</b> per spostarlo, tira i pallini bordeaux per <b>allungarlo o allargarlo</b> (↔ ↕ ⤡) e quello oro per <b>ruotarlo</b>. Sotto cambi la forma.`);
     const sel = RS.sel && p.mobili.includes(RS.sel) ? RS.sel : null;
     const [sw, sd] = sel ? rnDim(sel) : [0, 0], V = sel && RN_VAR[sel.tipo];
     pan.innerHTML = `${sel ? `<div class="rnsel"><b>${RN_MOB[sel.tipo][2]}</b> <span class="note">trascinalo con il dito per spostarlo</span>
@@ -519,12 +562,12 @@ function rnSvg(p, opt = {}) {
     ${stanze}<image href="${muri}" xlink:href="${muri}" x="0" y="0" width="${p.W}" height="${p.H}"/>${mob}${lab}</svg>`;
 }
 // pianta → PNG a tre strati: pavimenti, muri, mobili e scritte (funziona anche su iPhone)
-async function rnPng(p, larg = 1800) {
+async function rnPng(p, larg = 1800, opt = {}) {
   const pad = 40, Wt = p.W + 2 * pad, Ht = p.H + 2 * pad, k = larg / Wt, c = document.createElement("canvas"); c.width = larg; c.height = Math.round(Ht * k);
   const g = c.getContext("2d"), svgImg = sv => rnImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(sv));
-  g.drawImage(await svgImg(rnSvg(p, { solo: "sotto", muri: 1 })), 0, 0, c.width, c.height);
+  g.drawImage(await svgImg(rnSvg(p, { ...opt, solo: "sotto", muri: 1 })), 0, 0, c.width, c.height);
   g.drawImage(await rnImg(rnMuriPng(p)), pad * k, pad * k, p.W * k, p.H * k);
-  g.drawImage(await svgImg(rnSvg(p, { solo: "sopra", muri: 1 })), 0, 0, c.width, c.height);
+  g.drawImage(await svgImg(rnSvg(p, { ...opt, solo: "sopra", muri: 1 })), 0, 0, c.width, c.height);
   return c.toDataURL("image/png");
 }
 /* ============ 3D (three.js) ============ */
@@ -590,6 +633,7 @@ async function rnRisultato() {
   const svg = rnSvg(p), mq = p.stanze.reduce((x, st) => x + RN.area(st.poly), 0) * p.scala * p.scala;
   rnGuida(`<b>Ecco la pianta arredata e il 3D.</b> Gira il 3D con il dito, poi scegli cosa farne.`);
   box.innerHTML = `<h2>Pianta arredata</h2><div class="rn2d">${svg}</div>
+    ${(p.lavori || []).length ? `<h2>Lavori <small>in giallo si demolisce, in rosso si costruisce</small></h2><div class="rn2d">${rnSvg({ ...p, mobili: [] }, { lavori: true })}</div>` : ""}
     <h2>Vista 3D <small>trascina per girare, due dita per lo zoom</small></h2><div class="rn3d" id="rn3d"><div class="spin"></div></div>
     <div class="rntab">${p.stanze.map(st => `<span>${esc(RN_TIPI[st.tipo]?.n || "")}<b>${num(RN.area(st.poly) * p.scala * p.scala, 1)} m²</b></span>`).join("")}<span class="tot">Totale calpestabile<b>${num(mq, 1)} m²</b></span></div>
     <div class="btns"><button class="btn pri" data-rnpdf>PDF del rendering</button><button class="btn sec" data-rnall>Metti nel PDF della valutazione</button></div>
@@ -597,14 +641,14 @@ async function rnRisultato() {
     <p class="note" id="rnmsg"></p>`;
   let V3 = null; try { V3 = await rn3D($("#rn3d"), p); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
   const scarica = (url, nome) => { const a = document.createElement("a"); a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); };
-  const imgs = async () => ({ p2: await rnPng(p), p3: V3 ? V3.foto() : null });
+  const imgs = async () => ({ p2: await rnPng(p), p3: V3 ? V3.foto() : null, p4: (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null });
   // miniatura per l'elenco
   rnPng(p, 360).then(t => { p.thumb = t; rnSalva(); }).catch(() => {});
   box.querySelector("[data-rnpng2]").addEventListener("click", async () => scarica(await rnPng(p, 2400), `pianta-${p.nome}.png`));
   box.querySelector("[data-rnpng3]").addEventListener("click", () => V3 && scarica(V3.foto(), `3d-${p.nome}.png`));
-  box.querySelector("[data-rnpdf]").addEventListener("click", async () => { const I = await imgs(); pdfApri(rnPdfHtml(p, I.p2, I.p3)); });
+  box.querySelector("[data-rnpdf]").addEventListener("click", async () => { const I = await imgs(); pdfApri(rnPdfHtml(p, I.p2, I.p3, I.p4)); });
   box.querySelector("[data-rnall]").addEventListener("click", async () => { const I = await imgs();
-    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, p4: I.p4, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
     await RNDB.kvSet("allegato", all); window.__RENDER_ALL = all;
     $("#rnmsg").innerHTML = `Fatto: il prossimo PDF di valutazione avrà la pagina con la pianta arredata e il 3D di <b>${esc(p.nome)}</b>. Lo togli dalla pagina Rendering.`; });
 }
@@ -620,10 +664,13 @@ function rnPagina(all, C) {
     <div style="display:flex;gap:6mm;margin-top:5mm;align-items:flex-start">
       ${all.p3 ? `<img src="${all.p3}" style="width:62%;border-radius:2mm;border:0.3mm solid #ead9c2">` : ""}
       <table style="flex:1;font-size:9pt;border-collapse:collapse;width:100%">${tab}<tr><td style="border-top:0.3mm solid ${C.oro};padding-top:1mm"><b>Totale calpestabile</b></td><td style="text-align:right;border-top:0.3mm solid ${C.oro};padding-top:1mm"><b>${num(tot, 1)} m²</b></td></tr></table></div>
-  </section>`;
+  </section>${all.p4 ? `<section class="pg rnpg" style="page-break-before:always;padding:14mm 14mm 10mm">
+    <div style="font-family:Georgia,serif;font-size:20pt;color:${C.bx};margin-bottom:2mm">Lavori previsti</div>
+    <div style="font-size:9pt;color:#7a6c66;margin-bottom:5mm">In giallo le demolizioni, in rosso le nuove costruzioni. Schema indicativo, da sviluppare con un tecnico.</div>
+    <img src="${all.p4}" style="width:100%;max-height:200mm;object-fit:contain;border:0.3mm solid #ead9c2;border-radius:2mm;background:#fffdf9"></section>` : ""}`;
 }
-function rnPdfHtml(p, p2, p3) {
-  const all = { nome: p.nome, p2, p3, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+function rnPdfHtml(p, p2, p3, p4) {
+  const all = { nome: p.nome, p2, p3, p4, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
   return `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Rendering · ${esc(p.nome)} · Maison Collection</title>
   <style>@page{size:A4;margin:0}body{margin:0;font-family:Helvetica,Arial,sans-serif;color:#2a1418}.pg{width:210mm;min-height:297mm;box-sizing:border-box}
   .top{display:flex;justify-content:space-between;align-items:center;padding:10mm 14mm 0;color:#6a1828;font-family:Georgia,serif;letter-spacing:.15em;font-size:10pt}

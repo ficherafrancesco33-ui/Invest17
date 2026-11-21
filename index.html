@@ -650,7 +650,8 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .rnbar{display:flex;gap:8px;align-items:center;margin-bottom:8px}.rnnome{flex:1;min-width:0;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);padding:8px 12px;font-size:16px;font-weight:600}
 .rnfasi{display:flex;gap:6px;overflow-x:auto;margin-bottom:8px}.rnfasi a{flex:none;padding:7px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--tx2);font-size:13px;font-weight:600;background:var(--panel)}.rnfasi a.on{background:var(--cy);color:var(--on);border-color:var(--cy)}
 .rnguida{font-size:14px;line-height:1.4;padding:10px 12px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);margin-bottom:8px}
-.rnwrap{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;touch-action:none}.rnwrap canvas{display:block;width:100%;height:auto;touch-action:none}
+.rnwrap{border-radius:12px;overflow:auto;max-height:72vh;border:1px solid var(--line);background:#fff;touch-action:none;-webkit-overflow-scrolling:touch}.rnwrap canvas{display:block;max-width:none;height:auto;touch-action:none}
+.rnzoom{display:flex;gap:6px;align-items:center;margin-bottom:6px}.rnzoom .btn{padding:4px 14px;font-size:20px;min-width:44px}
 #rnpan{margin-top:10px;display:grid;gap:10px}.rnsel{padding:10px;border:1px solid var(--line2);border-radius:14px;background:var(--panel)}.rnsel .chips{flex-wrap:wrap;margin:8px 0}
 .rnctl{display:grid;gap:8px}.rnctl label,.rnsl label{display:grid;gap:4px;font-size:13px;color:var(--tx2)}.rnctl select{height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);padding:0 10px;font-size:15px}
 .rnsl{display:grid;gap:6px;margin:6px 0}.rnsl b{color:var(--cy2)}
@@ -687,19 +688,19 @@ if(typeof plSet==="function")plSet();if(typeof render==="function")render(true);
 </script>
 <div class="tip" id="tip" hidden></div>
 
-<script src="data/impostazioni.js?v=2611210910"></script>
-<script src="data/immobili.js?v=2611210910"></script>
-<script src="data/auto.js?v=2611210910"></script><script src="data/novita.js?v=2611210910"></script>
-<script src="data/notizie.js?v=2611210910"></script>
-<script src="data/guida.js?v=2611210910"></script>
-<script src="data/territorio.js?v=2611210910"></script>
-<script src="data/servizi.js?v=2611210910"></script><script src="data/zone_profili.js?v=2611210910"></script><script src="data/coeff.js?v=2611210910"></script><script src="data/omi.js?v=2611210910"></script><script src="data/nil_demo.js?v=2611210910"></script>
+<script src="data/impostazioni.js?v=2611210919"></script>
+<script src="data/immobili.js?v=2611210919"></script>
+<script src="data/auto.js?v=2611210919"></script><script src="data/novita.js?v=2611210919"></script>
+<script src="data/notizie.js?v=2611210919"></script>
+<script src="data/guida.js?v=2611210919"></script>
+<script src="data/territorio.js?v=2611210919"></script>
+<script src="data/servizi.js?v=2611210919"></script><script src="data/zone_profili.js?v=2611210919"></script><script src="data/coeff.js?v=2611210919"></script><script src="data/omi.js?v=2611210919"></script><script src="data/nil_demo.js?v=2611210919"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="js/terr.js?v=2611210910"></script>
-<script src="js/milmap.js?v=2611210910"></script>
-<script src="js/hub.js?v=2611210910"></script>
-<script src="js/home.js?v=2611210910"></script>
-<script src="js/render.js?v=2611210910"></script><script src="js/fraz.js?v=2611210910"></script><script src="js/completa.js?v=2611210910"></script><script src="js/pdf.js?v=2611210910"></script>
+<script src="js/terr.js?v=2611210919"></script>
+<script src="js/milmap.js?v=2611210919"></script>
+<script src="js/hub.js?v=2611210919"></script>
+<script src="js/home.js?v=2611210919"></script>
+<script src="js/render.js?v=2611210919"></script><script src="js/fraz.js?v=2611210919"></script><script src="js/ristr.js?v=2611210919"></script><script src="js/completa.js?v=2611210919"></script><script src="js/pdf.js?v=2611210919"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */

@@ -567,7 +567,8 @@ ${(() => { const A = window.__RENDER_ALL; if (!A || !A.p2) return ""; const tot 
     <p class="small">Proposta di arredo indicativa, ricostruita dalla planimetria. Superficie calpestabile ${num(tot, 1)} m².</p>
     <img src="${A.p2}" style="width:100%;max-height:140mm;object-fit:contain;border-radius:2mm;border:0.3mm solid #ead9c2;background:#fffdf9;margin-top:2mm">
     <div style="display:flex;gap:5mm;margin-top:4mm;align-items:flex-start">${A.p3 ? `<img src="${A.p3}" style="width:60%;border-radius:2mm;border:0.3mm solid #ead9c2">` : ""}
-    <table style="flex:1;font-size:8.5pt;border-collapse:collapse">${(A.stanze || []).map(([n, m]) => `<tr><td style="padding:0.6mm 0">${esc(n)}</td><td style="text-align:right">${num(m, 1)} m²</td></tr>`).join("")}</table></div></section>`; })()}
+    <table style="flex:1;font-size:8.5pt;border-collapse:collapse">${(A.stanze || []).map(([n, m]) => `<tr><td style="padding:0.6mm 0">${esc(n)}</td><td style="text-align:right">${num(m, 1)} m²</td></tr>`).join("")}</table></div>
+    ${A.p4 ? `<p class="small" style="margin-top:4mm"><b>Lavori previsti</b>: in giallo le demolizioni, in rosso le nuove costruzioni.</p><img src="${A.p4}" style="width:100%;max-height:90mm;object-fit:contain;border-radius:2mm;border:0.3mm solid #ead9c2;background:#fffdf9">` : ""}</section>`; })()}
 <div class="endf"><img src="${logo}" alt=""><span>Maison Collection · Agenzia immobiliare · Milano<br>Relazione generata con Keystone il ${oggiL}</span></div>
 </div>
 <script>
