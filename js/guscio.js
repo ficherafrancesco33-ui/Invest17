@@ -13,7 +13,7 @@ function gsStanzeMaschera(p) {
 { const prev = rnMaschera; rnMaschera = function (p) { const m = prev(p); if (!p.scala || !(p.stanze || []).length) return m;
   const k = (p.stanze || []).map(st => st.id + st.poly.length + RN.area(st.poly).toFixed(0)).join("|") + (p.lavori || []).length + (p.fzChiudi || []).length + (p.fzApri || []).length + "f" + (p.finestre || []).map(f => f.seg.map(Math.round).join(",")).join(";");
   if (RS.gsK === k && RS.gsM && RS.gsM.length === m.length) return RS.gsM;
-  const vic = RN.dilata(gsStanzeMaschera(p), p.W, p.H, Math.round(0.42 / p.scala)), out = new Uint8Array(m.length);
+  const T = Math.min(0.55, Math.max(0.15, p.spMuro || 0.35)), vic = RN.dilata(gsStanzeMaschera(p), p.W, p.H, Math.round((T + 0.06) / p.scala)), out = new Uint8Array(m.length);
   for (let i = 0; i < m.length; i++) out[i] = m[i] && vic[i] ? 1 : 0;
   // muri disegnati a doppia linea: riempio lo spazio tra le due linee (chiusura morfologica, fino a ~35 cm di spessore)
   const r = Math.max(2, Math.round(0.17 / p.scala)), dil = RN.dilata(out, p.W, p.H, r), inv = new Uint8Array(m.length);
@@ -28,7 +28,7 @@ function gsStanzeMaschera(p) {
 /* ---- riconoscimento delle finestre ---- */
 function gsFinestre(p) {
   const s = p.scala; if (!s) return [];
-  const M = RS.muri, W = p.W, H = p.H, dentroStanza = gsStanzeMaschera(p), passo = Math.max(2, 0.08 / s), Lmax = 0.75 / s, out = [];
+  const M = RS.muri, W = p.W, H = p.H, dentroStanza = gsStanzeMaschera(p), passo = Math.max(1, 0.03 / s), Lmax = 1.3 / s, out = [], spessori = []; let conTacche = false;
   for (const st of p.stanze || []) {
     if (["balcone", "terrazzo"].includes(st.tipo)) continue;
     const P = st.poly, cen = (() => { const b = RN.bbox(P); return [(b.x0 + b.x1) / 2, (b.y0 + b.y1) / 2]; })();
@@ -38,27 +38,52 @@ function gsFinestre(p) {
       const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]; if (RN.dentro([mid[0] + nx * 4, mid[1] + ny * 4], P)) { nx = -nx; ny = -ny; }
       const camp = [];
       for (let d = passo; d < L - passo; d += passo) {
-        const q = [a[0] + tx * d, a[1] + ty * d]; let runs = 0, buio = false, bianco = 0, est = false, scuri = 0, k;
+        const q = [a[0] + tx * d, a[1] + ty * d]; let runs = 0, buio = false, bianco = 0, est = false, scuri = 0, ultimo = 0, k;
         for (k = 1; k < Lmax; k++) { const x = Math.round(q[0] + nx * k), y = Math.round(q[1] + ny * k); if (x < 0 || y < 0 || x >= W || y >= H) { est = true; break; }
           const i = y * W + x; if (dentroStanza[i] && runs > 0) { est = false; break; }      // dall'altra parte c'è un'altra stanza: muro interno
-          if (M[i]) { if (!buio) runs++; buio = true; bianco = 0; scuri++; } else { buio = false; if (runs) bianco++; if (runs && bianco * s > 0.25) { est = true; break; } } }
-        if (k >= Lmax && runs) est = !dentroStanza[Math.round(q[1] + ny * Lmax) * W + Math.round(q[0] + nx * Lmax)];
-        camp.push({ q, runs, est, scuri });
+          if (M[i]) { if (!buio) runs++; buio = true; bianco = 0; scuri++; ultimo = k; } else { buio = false; if (runs) bianco++; if (runs && bianco * s > 0.55) { est = true; break; } } }
+        if (k >= Lmax) est = !dentroStanza[Math.round(q[1] + ny * Lmax) * W + Math.round(q[0] + nx * Lmax)];
+        camp.push({ q, runs, est, scuri, ultimo: ultimo * s });
       }
       const ext = camp.filter(c => c.est && c.runs); if (ext.length < 4) continue;
-      // il muro "normale" di questo lato: numero di linee più frequente; la finestra ne ha di più (telaio e vetro)
+      // il muro "normale" di questo lato: numero di linee e spessore più frequenti
       const freq = {}; ext.forEach(c => { freq[c.runs] = (freq[c.runs] || 0) + 1; }); const moda = +Object.entries(freq).sort((x, y) => y[1] - x[1])[0][0];
       const medScuri = ext.map(c => c.scuri).sort((x, y) => x - y)[ext.length >> 1];
+      const norm = ext.filter(c => c.runs === moda).map(c => c.ultimo).sort((x, y) => x - y), Tm = norm[norm.length >> 1] || 0.3;
+      spessori.push(Tm);
       let run = [];
-      const chiudi = () => { if (run.length) { const l = (run.length) * passo * s; if (l >= 0.5 && l <= 3.6) out.push({ st: st.id, seg: [run[0].q[0], run[0].q[1], run[run.length - 1].q[0], run[run.length - 1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, auto: true }); } run = []; };
+      const chiudi = () => { if (run.length) { const l = (run.length) * passo * s; if (l >= 0.5 && l <= 3.6) out.push({ st: st.id, seg: [run[0].q[0], run[0].q[1], run[run.length - 1].q[0], run[run.length - 1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.5, Math.max(0.12, Tm)), prof: Math.max(...run.map(c => c.ultimo)), auto: true }); } run = []; };
+      // segno distintivo della finestra: il trattino perpendicolare che esce dal filo esterno del muro (asse della finestra),
+      // con ai lati le spallette più corte (l'incavo). Misuro per ogni punto quanto "sporge" una linea sottile oltre il muro.
+      const sporge = c => { let st0 = -1, len = 0; for (let k = Math.round((Tm - 0.04) / s); k < Math.round((Tm + 1.0) / s); k++) { const x = Math.round(c.q[0] + nx * k), y = Math.round(c.q[1] + ny * k);
+          if (x < 0 || y < 0 || x >= W || y >= H || dentroStanza[y * W + x]) break; if (M[y * W + x]) { if (st0 < 0) { if ((k * s) > Tm + 0.12) break; if (k * s < Tm - 0.03) continue; st0 = k; } len = k - st0 + 1; } else if (st0 >= 0) break; }
+        return st0 < 0 ? 0 : len * s; };
+      const fuori = c => { const k = Math.round((Tm + 0.6) / s), x = Math.round(c.q[0] + nx * k), y = Math.round(c.q[1] + ny * k); return x < 0 || y < 0 || x >= W || y >= H || !dentroStanza[y * W + x]; };
+      camp.forEach(c => { c.sp = c.est && fuori(c) ? sporge(c) : 0; });
+      const vic = Math.max(1, Math.round(0.07 / (passo * s))), sottile = i => { const v = camp[i].sp; if (v < 0.04) return false; const l = camp[i - vic]?.sp ?? 0, r = camp[i + vic]?.sp ?? 0; return l < v * 0.45 && r < v * 0.45; };
+      const tacche = []; camp.forEach((c, i) => { if (c.sp > 0 && c.sp < 0.95 && sottile(i)) { const u = tacche[tacche.length - 1]; if (u && i - u.i <= vic) { if (c.sp > u.sp) Object.assign(u, { i, sp: c.sp }); } else tacche.push({ i, sp: c.sp }); } });
+      // asse = il trattino più lungo; spallette = trattini vicini molto più corti
+      const dm = Math.round(1.6 / (passo * s)), spalla = t => tacche.some(u => u !== t && Math.abs(u.i - t.i) <= dm && u.sp * 0.6 >= t.sp);
+      const esterno = ext.length >= camp.length * 0.5, assi = esterno ? tacche.filter(t => t.sp >= 0.12 && !spalla(t)) : [], spall = tacche.filter(t => spalla(t));
+      if (assi.length) { conTacche = true;
+        for (const t of assi) { const dmax = Math.round(1.6 / (passo * s));
+          const sx = spall.filter(u => u.i < t.i && t.i - u.i <= dmax).pop(), dx = spall.find(u => u.i > t.i && u.i - t.i <= dmax);
+          let i0 = sx ? sx.i : t.i - Math.round(0.6 / (passo * s)), i1 = dx ? dx.i : t.i + Math.round(0.6 / (passo * s));
+          if (sx && !dx) i1 = t.i + (t.i - sx.i); if (dx && !sx) i0 = t.i - (dx.i - t.i);
+          i0 = Math.max(0, i0); i1 = Math.min(camp.length - 1, i1); const l = (i1 - i0) * passo * s; if (l < 0.4) continue;
+          out.push({ st: st.id, seg: [camp[i0].q[0], camp[i0].q[1], camp[i1].q[0], camp[i1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.5, Math.max(0.12, Tm)), prof: Tm + t.sp, auto: true, asse: true }); }
+        continue; }
+      // planimetrie senza trattino: finestra dove il muro ha più linee del solito (telaio e vetro)
       for (const c of camp) { const fin = c.est && c.runs && (c.runs > moda || (moda === 1 && c.scuri < medScuri * 0.6 && c.runs >= 2)); if (fin) run.push(c); else chiudi(); }
       chiudi();
     }
   }
+  p.spMuro = spessori.length ? spessori.sort((x, y) => x - y)[spessori.length >> 1] : 0.3;
+  if (conTacche) return out.filter(f => f.asse);
   return out;
 }
 function gsAggiornaFin(p) { const per = {}; (p.finestre || []).forEach(f => { per[f.st] = (per[f.st] || 0) + f.l; }); (p.stanze || []).forEach(st => { st.fin = Math.round((per[st.id] || 0) * 10) / 10; }); }
-function gsRiconosci(p) { const man = (p.finestre || []).filter(f => !f.auto); p.finestre = [...gsFinestre(p), ...man]; gsAggiornaFin(p); p.finAuto = true; }
+function gsRiconosci(p) { const man = (p.finestre || []).filter(f => !f.auto); p.finestre = [...gsFinestre(p), ...man]; gsAggiornaFin(p); p.finAuto = true; p.finV = 2; }
 // tocco su un muro: tolgo la finestra che c'è lì, oppure ne aggiungo una da 1,2 m
 function gsToccaFinestra(p, q) {
   const s = p.scala, L = p.finestre || [], vic = L.findIndex(f => { const [x0, y0, x1, y1] = f.seg; return RN.distBordo(q, [[x0, y0], [x1, y1]]) < 0.4 / s; });
@@ -73,7 +98,7 @@ function gsToccaFinestra(p, q) {
 }
 
 /* ---- aggancio: riconosco le finestre appena c'è la misura; nel frazionamento le correggi toccando il muro ---- */
-{ const pan = rnPannello; rnPannello = function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && !p.finAuto) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return pan(); }; }
+{ const pan = rnPannello; rnPannello = function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && (!p.finAuto || p.finV !== 2)) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return pan(); }; }
 { const toc = rnTocco; rnTocco = function (q) { const p = RS.p; if (RS.fase === "fraz" && RS.fzModo === "finestre" && p.scala) { const r = gsToccaFinestra(p, q); if (r) { rnSalva(); rnDisegna(); rnPannello(); rnGuida(r === "tolta" ? "<b>Finestra tolta.</b>" : "<b>Finestra aggiunta</b> (1,2 m): se è diversa scrivi la misura nella stanza."); return; } } return toc(q); }; }
 { const dis = rnDisegna; rnDisegna = function () { dis(); const cv = $("#rncv"), p = RS.p; if (!cv || !p || !["fraz", "stanze", "scala"].includes(RS.fase) || !(p.finestre || []).length) return; const g = cv.getContext("2d"), lw = Math.max(3, p.W / 220);
   g.lineCap = "round"; for (const f of p.finestre) { const [x0, y0, x1, y1] = f.seg; g.strokeStyle = "rgba(47,111,115,.9)"; g.lineWidth = lw * 2; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); } }; }
@@ -89,10 +114,10 @@ function gsToccaFinestra(p, q) {
 
 /* ---- 2D: finestre col simbolo architettonico (spallette, due fili del muro, vetro al centro) ---- */
 { const sv = rnSvg; rnSvg = function (p, opt = {}) { const out = sv(p, opt); if (opt.solo === "sotto" || !(p.finestre || []).length || !p.scala) return out;
-  const k = 1 / p.scala, sp = 0.3 * k, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n }) => { const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
+  const k = 1 / p.scala, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n, sp: spm }) => { const sp = Math.min(0.5, Math.max(0.12, spm || p.spMuro || 0.3)) * k; const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
     const lin = (o, col, w) => `<line x1="${x0 + nx * o}" y1="${y0 + ny * o}" x2="${x1 + nx * o}" y2="${y1 + ny * o}" stroke="${col}" stroke-width="${w}"/>`;
     const spal = (x, y) => `<line x1="${x}" y1="${y}" x2="${x + nx * sp}" y2="${y + ny * sp}" stroke="#2e161c" stroke-width="${0.05 * k}"/>`;
     return `<g><polygon points="${x0},${y0} ${x1},${y1} ${x1 + nx * sp},${y1 + ny * sp} ${x0 + nx * sp},${y0 + ny * sp}" fill="#f4f8f9"/>${lin(0, "#2e161c", 0.02 * k)}${lin(sp, "#2e161c", 0.02 * k)}${lin(sp / 2, "#7fb0c4", 0.05 * k)}${spal(x0, y0)}${spal(x1, y1)}</g>`; }).join("");
   return out.replace(/<\/svg>$/, `${f}</svg>`); }; }
 // nel risultato riconosco le finestre se non l'ho ancora fatto (rendering fatti prima)
-{ const ris = rnRisultato; rnRisultato = async function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && !p.finAuto) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return ris(); }; }
+{ const ris = rnRisultato; rnRisultato = async function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && (!p.finAuto || p.finV !== 2)) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return ris(); }; }
