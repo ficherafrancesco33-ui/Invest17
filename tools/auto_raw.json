@@ -1781,7 +1781,7 @@
    "comune": "Voghera",
    "p": "PV",
    "prezzo": 39000,
-   "lavori": 3000,
+   "lavori": 5000,
    "mq": 56,
    "locali": 1,
    "bagni": 1,
@@ -1811,7 +1811,7 @@
    ],
    "contro": [
     "Piano terra, classe G",
-    "Arredo da completare (3.000 € già contati)"
+    "Arredo da completare (5.000 € già contati)"
    ],
    "classe": "G",
    "spese_mese": 0,
@@ -1822,7 +1822,7 @@
    "comune": "Casale Monferrato",
    "p": "AL",
    "prezzo": 32000,
-   "lavori": 3000,
+   "lavori": 6000,
    "mq": 78,
    "locali": 2,
    "bagni": 1,
@@ -1852,7 +1852,7 @@
    ],
    "contro": [
     "Bagno cieco, primo piano senza ascensore",
-    "Arredo da completare (3.000 € già contati)"
+    "Arredo da completare (6.000 € già contati)"
    ],
    "classe": "F",
    "spese_mese": 0,
@@ -1863,7 +1863,7 @@
    "comune": "Casale Monferrato",
    "p": "AL",
    "prezzo": 45000,
-   "lavori": 3000,
+   "lavori": 6000,
    "mq": 75,
    "locali": 3,
    "bagni": 1,
@@ -1893,7 +1893,7 @@
    ],
    "contro": [
     "Spese condominiali 150 €/mese, riscaldamento centralizzato",
-    "Arredo da completare (3.000 € già contati)"
+    "Arredo da completare (6.000 € già contati)"
    ],
    "classe": "F",
    "spese_mese": 150,
@@ -1904,7 +1904,7 @@
    "comune": "Casale Monferrato",
    "p": "AL",
    "prezzo": 40000,
-   "lavori": 2000,
+   "lavori": 3000,
    "mq": 60,
    "locali": 2,
    "bagni": 1,
@@ -1930,7 +1930,7 @@
    "pro": [
     "Completamente ristrutturato, caldaia a condensazione",
     "Riscaldamento e acqua autonomi, lavanderia, cantina",
-    "In parte arredato (2.000 € per completare già contati)"
+    "In parte arredato (3.000 € per completare già contati)"
    ],
    "contro": [
     "Primo piano senza ascensore"
@@ -1944,7 +1944,7 @@
    "comune": "Alessandria",
    "p": "AL",
    "prezzo": 35000,
-   "lavori": 3000,
+   "lavori": 6000,
    "mq": 60,
    "locali": 3,
    "bagni": 2,
@@ -1973,7 +1973,7 @@
    ],
    "contro": [
     "Piano terra, classe G",
-    "Arredo da completare (3.000 € già contati)"
+    "Arredo da completare (6.000 € già contati)"
    ],
    "classe": "G",
    "spese_mese": 0,
@@ -2023,7 +2023,7 @@
    "comune": "Alessandria",
    "p": "AL",
    "prezzo": 39000,
-   "lavori": 3000,
+   "lavori": 6000,
    "mq": 65,
    "locali": 2,
    "bagni": 1,
@@ -2052,7 +2052,7 @@
     "Piccola palazzina, ripostiglio"
    ],
    "contro": [
-    "Arredo da completare (3.000 € già contati)"
+    "Arredo da completare (6.000 € già contati)"
    ],
    "classe": "E",
    "spese_mese": 50,
