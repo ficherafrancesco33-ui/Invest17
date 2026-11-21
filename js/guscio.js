@@ -11,12 +11,12 @@ function gsStanzeMaschera(p) {
 }
 // guscio: i muri a meno di ~45 cm dalle stanze
 { const prev = rnMaschera; rnMaschera = function (p) { const m = prev(p); if (!p.scala || !(p.stanze || []).length) return m;
-  const k = (p.stanze || []).map(st => st.id + st.poly.length + RN.area(st.poly).toFixed(0)).join("|") + (p.lavori || []).length + (p.fzChiudi || []).length + (p.fzApri || []).length + "f" + (p.finestre || []).map(f => f.seg.map(Math.round).join(",")).join(";");
+  const k = (p.stanze || []).map(st => st.id + st.poly.length + RN.area(st.poly).toFixed(0)).join("|") + (p.lavori || []).length + (p.fzChiudi || []).length + (p.fzApri || []).length + "s" + (p.spMuro || 0).toFixed(2) + "f" + (p.finestre || []).map(f => f.seg.map(Math.round).join(",")).join(";");
   if (RS.gsK === k && RS.gsM && RS.gsM.length === m.length) return RS.gsM;
   const T = Math.min(0.55, Math.max(0.15, p.spMuro || 0.35)), vic = RN.dilata(gsStanzeMaschera(p), p.W, p.H, Math.round((T + 0.06) / p.scala)), out = new Uint8Array(m.length);
   for (let i = 0; i < m.length; i++) out[i] = m[i] && vic[i] ? 1 : 0;
   // muri disegnati a doppia linea: riempio lo spazio tra le due linee (chiusura morfologica, fino a ~35 cm di spessore)
-  const r = Math.max(2, Math.round(0.17 / p.scala)), dil = RN.dilata(out, p.W, p.H, r), inv = new Uint8Array(m.length);
+  const r = Math.max(2, Math.round(Math.min(0.33, Math.max(0.17, (p.spMuro || 0.3) / 2 + 0.03)) / p.scala)), dil = RN.dilata(out, p.W, p.H, r), inv = new Uint8Array(m.length);
   for (let i = 0; i < m.length; i++) inv[i] = dil[i] ? 0 : 1;
   const er = RN.dilata(inv, p.W, p.H, r), stanze = gsStanzeMaschera(p);
   for (let i = 0; i < m.length; i++) if (!er[i] && !stanze[i]) out[i] = 1;     // mai dentro le stanze
@@ -52,7 +52,7 @@ function gsFinestre(p) {
       const norm = ext.filter(c => c.runs === moda).map(c => c.ultimo).sort((x, y) => x - y), Tm = norm[norm.length >> 1] || 0.3;
       spessori.push(Tm);
       let run = [];
-      const chiudi = () => { if (run.length) { const l = (run.length) * passo * s; if (l >= 0.5 && l <= 3.6) out.push({ st: st.id, seg: [run[0].q[0], run[0].q[1], run[run.length - 1].q[0], run[run.length - 1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.5, Math.max(0.12, Tm)), prof: Math.max(...run.map(c => c.ultimo)), auto: true }); } run = []; };
+      const chiudi = () => { if (run.length) { const l = (run.length) * passo * s; if (l >= 0.5 && l <= 3.6) out.push({ st: st.id, seg: [run[0].q[0], run[0].q[1], run[run.length - 1].q[0], run[run.length - 1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.66, Math.max(0.12, Tm)), prof: Math.max(...run.map(c => c.ultimo)), auto: true }); } run = []; };
       // segno distintivo della finestra: il trattino perpendicolare che esce dal filo esterno del muro (asse della finestra),
       // con ai lati le spallette più corte (l'incavo). Misuro per ogni punto quanto "sporge" una linea sottile oltre il muro.
       const sporge = c => { let st0 = -1, len = 0; for (let k = Math.round((Tm - 0.04) / s); k < Math.round((Tm + 1.0) / s); k++) { const x = Math.round(c.q[0] + nx * k), y = Math.round(c.q[1] + ny * k);
@@ -71,7 +71,7 @@ function gsFinestre(p) {
           let i0 = sx ? sx.i : t.i - Math.round(0.6 / (passo * s)), i1 = dx ? dx.i : t.i + Math.round(0.6 / (passo * s));
           if (sx && !dx) i1 = t.i + (t.i - sx.i); if (dx && !sx) i0 = t.i - (dx.i - t.i);
           i0 = Math.max(0, i0); i1 = Math.min(camp.length - 1, i1); const l = (i1 - i0) * passo * s; if (l < 0.4) continue;
-          out.push({ st: st.id, seg: [camp[i0].q[0], camp[i0].q[1], camp[i1].q[0], camp[i1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.5, Math.max(0.12, Tm)), prof: Tm + t.sp, auto: true, asse: true }); }
+          out.push({ st: st.id, seg: [camp[i0].q[0], camp[i0].q[1], camp[i1].q[0], camp[i1].q[1]], n: [nx, ny], l: Math.round(l * 10) / 10, sp: Math.min(0.66, Math.max(0.12, Tm)), prof: Tm + t.sp, auto: true, asse: true }); }
         continue; }
       // planimetrie senza trattino: finestra dove il muro ha più linee del solito (telaio e vetro)
       for (const c of camp) { const fin = c.est && c.runs && (c.runs > moda || (moda === 1 && c.scuri < medScuri * 0.6 && c.runs >= 2)); if (fin) run.push(c); else chiudi(); }
@@ -114,10 +114,10 @@ function gsToccaFinestra(p, q) {
 
 /* ---- 2D: finestre col simbolo architettonico (spallette, due fili del muro, vetro al centro) ---- */
 { const sv = rnSvg; rnSvg = function (p, opt = {}) { const out = sv(p, opt); if (opt.solo === "sotto" || !(p.finestre || []).length || !p.scala) return out;
-  const k = 1 / p.scala, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n, sp: spm }) => { const sp = Math.min(0.5, Math.max(0.12, spm || p.spMuro || 0.3)) * k; const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
+  const k = 1 / p.scala, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n, sp: spm }) => { const sp = Math.min(0.66, Math.max(0.12, spm || p.spMuro || 0.3)) * k; const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
     const lin = (o, col, w) => `<line x1="${x0 + nx * o}" y1="${y0 + ny * o}" x2="${x1 + nx * o}" y2="${y1 + ny * o}" stroke="${col}" stroke-width="${w}"/>`;
     const spal = (x, y) => `<line x1="${x}" y1="${y}" x2="${x + nx * sp}" y2="${y + ny * sp}" stroke="#2e161c" stroke-width="${0.05 * k}"/>`;
-    return `<g><polygon points="${x0},${y0} ${x1},${y1} ${x1 + nx * sp},${y1 + ny * sp} ${x0 + nx * sp},${y0 + ny * sp}" fill="#f4f8f9"/>${lin(0, "#2e161c", 0.02 * k)}${lin(sp, "#2e161c", 0.02 * k)}${lin(sp / 2, "#7fb0c4", 0.05 * k)}${spal(x0, y0)}${spal(x1, y1)}</g>`; }).join("");
+    return `<g><polygon points="${x0},${y0} ${x1},${y1} ${x1 + nx * sp},${y1 + ny * sp} ${x0 + nx * sp},${y0 + ny * sp}" fill="#fbf7f0"/>${lin(sp * 0.44, "#8fbccc", 0.018 * k)}${lin(sp * 0.56, "#8fbccc", 0.018 * k)}</g>`; }).join("");
   return out.replace(/<\/svg>$/, `${f}</svg>`); }; }
 // nel risultato riconosco le finestre se non l'ho ancora fatto (rendering fatti prima)
 { const ris = rnRisultato; rnRisultato = async function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && (!p.finAuto || p.finV !== 2)) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return ris(); }; }

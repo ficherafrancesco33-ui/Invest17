@@ -298,7 +298,8 @@ function rnCanvasInit() {
   const down = e => {
     if (e.touches && e.touches.length >= 2) { const w = $("#rnwrap"); due = { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2, sl: w.scrollLeft, st: w.scrollTop }; giu = null; RS.drag = null; e.preventDefault(); return; }
     const q = pt(e); giu = q;
-    if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel) && rnMobileA(q, true) !== RS.sel) { const h = rnManiglia(q, RS.sel); if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
+    if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel) && rnMobileA(q, true) !== RS.sel) { const h = rnManiglia(q, RS.sel); if (h === "x") { p.mobili = p.mobili.filter(m => m !== RS.sel); RS.sel = null; rnSalva(); rnDisegna(); rnPannello(); e.preventDefault(); return; }
+      if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
     if (RS.fase === "arredo") { const m = rnMobileA(q); if (m) { RS.sel = m; RS.drag = { m, dx: q[0] - m.x, dy: q[1] - m.y, mosso: false }; e.preventDefault(); rnDisegna(); rnPannello(); } }
     if (RS.fase === "scala" && RS.misura && RS.misura.a) { const a = RS.misura.a, b = RS.misura.b; const near = (u, v) => Math.hypot(u[0] - v[0], u[1] - v[1]) < Math.max(p.W, p.H) * 0.03;
       if (near(q, a)) RS.drag = { maniglia: "a" }; else if (b && near(q, b)) RS.drag = { maniglia: "b" }; if (RS.drag) e.preventDefault(); } };
@@ -323,11 +324,14 @@ function rnCanvasInit() {
 const RN_COL = { soggiorno: "#d9b46a", cucsogg: "#d9b46a", cucina: "#c98b6b", camera: "#b06a78", cameretta: "#c58a95", studio: "#9b7aa0", bagno: "#7fa6b3", ingresso: "#b9a487", disimpegno: "#c7b79c", ripostiglio: "#a59a8a", balcone: "#8fa77a", terrazzo: "#8fa77a", altro: "#aaa" };
 function rnDisegna() {
   const cv = $("#rncv"); if (!cv) return; const g = cv.getContext("2d"), p = RS.p, s = rnScala(p);
-  g.clearRect(0, 0, p.W, p.H); g.drawImage(RS.img, 0, 0, p.W, p.H);
+  g.clearRect(0, 0, p.W, p.H);
+  const pulita = RS.fase === "arredo" && s && (p.stanze || []).length && RS.pulita?.id === p.id;
+  if (RS.fase === "arredo" && s && (p.stanze || []).length) rnPreparaPulita(p);
+  if (pulita) { g.fillStyle = "#fffdf9"; g.fillRect(0, 0, p.W, p.H); g.drawImage(RS.pulita.im, 0, 0, p.W, p.H); } else g.drawImage(RS.img, 0, 0, p.W, p.H);
   const lw = Math.max(2, p.W / 400), fs = Math.max(14, p.W / 55);
   (p.stanze || []).forEach((st, i) => {
     g.beginPath(); st.poly.forEach(([x, y], j) => j ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
-    g.fillStyle = (RN_COL[st.tipo] || "#aaa") + (RS.sel === st ? "88" : "55"); g.fill(); g.lineWidth = lw; g.strokeStyle = RS.sel === st ? "#6a1828" : "#6a182899"; g.stroke();
+    if (!pulita) { g.fillStyle = (RN_COL[st.tipo] || "#aaa") + (RS.sel === st ? "88" : "55"); g.fill(); g.lineWidth = lw; g.strokeStyle = RS.sel === st ? "#6a1828" : "#6a182899"; g.stroke(); }
     const bb = RN.bbox(st.poly), cx = st.lx ?? (bb.x0 + bb.x1) / 2, cy = st.ly ?? (bb.y0 + bb.y1) / 2;
     g.font = `700 ${fs}px Barlow, sans-serif`; g.textAlign = "center"; g.fillStyle = "#3a1018";
     g.fillText(RN_TIPI[st.tipo]?.n || "?", cx, cy); if (s) { g.font = `500 ${fs * 0.85}px Barlow, sans-serif`; g.fillText(num(RN.area(st.poly) * s * s, 1) + " m²", cx, cy + fs); }
@@ -339,6 +343,13 @@ function rnDisegna() {
     [a, b].filter(Boolean).forEach(q => { g.beginPath(); g.arc(q[0], q[1], lw * 5, 0, 7); g.fillStyle = "#6a1828"; g.fill(); g.lineWidth = lw; g.strokeStyle = "#fff"; g.stroke(); }); }
   if (RS.fase === "arredo" && s && p.mobili) p.mobili.forEach(m => rnMobileCanvas(g, m, s, RS.sel === m));
 }
+// fondo pulito per l'arredo: pavimenti, muri del guscio, finestre, tende e piante (senza scale e senza l'esterno)
+function rnChiavePulita(p) { return (p.stanze || []).map(st => st.poly.length + ":" + RN.area(st.poly).toFixed(0) + st.tipo).join("|") + (p.finestre || []).length + (p.lavori || []).length + "|" + (p.mobili || []).map(m => Math.round(m.x / 8) + "," + Math.round(m.y / 8)).join(";"); }
+function rnPreparaPulita(p) { const k = rnChiavePulita(p); if (RS.pulitaK === k) return; RS.pulitaK = k; clearTimeout(RS.pulitaT);
+  RS.pulitaT = setTimeout(() => rnFaiPulita(p, k), RS.pulita?.id === p.id ? 450 : 0); }
+function rnFaiPulita(p, k) { if (RS.p !== p || RS.pulitaK !== k) return;
+  const svg = rnSvg(p, { muri: rnMuriPng(p), noLab: true, noMob: true }).replace(/viewBox="[^"]*" width="[^"]*" height="[^"]*"/, `viewBox="0 0 ${p.W} ${p.H}" width="${p.W}" height="${p.H}"`);
+  rnImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg)).then(im => { if (RS.pulitaK !== k) return; RS.pulita = { id: p.id, im }; rnDisegna(); }).catch(() => {}); }
 function rnMobileA(q, stretto) { const p = RS.p, s = rnScala(p); if (!s || !p.mobili) return null;
   return [...p.mobili].reverse().find(m => { const [w, d] = rnDim(m), a = -m.rot * Math.PI / 180, dx = q[0] - m.x, dy = q[1] - m.y, lx = dx * Math.cos(a) - dy * Math.sin(a), ly = dx * Math.sin(a) + dy * Math.cos(a);
     const marg = stretto ? 0 : 0.12 / s; return Math.abs(lx) <= w / s / 2 + marg && Math.abs(ly) <= d / s / 2 + marg; }); }
@@ -347,7 +358,7 @@ const rnUniforme = m => m.v === "tondo" || m.v === "quadrato";
 function rnManiglie(m) {
   const s = RS.p.scala, [w, d] = rnDim(m), a = m.rot * Math.PI / 180, W = w / s / 2, D = d / s / 2, rot = ([x, y]) => [m.x + x * Math.cos(a) - y * Math.sin(a), m.y + x * Math.sin(a) + y * Math.cos(a)];
   // maniglie staccate dal mobile: così toccando il mobile lo sposti e basta
-  const off = rnTocco1() * 1.25, L = { wd: rot([W + off, D + off]), r: rot([0, -D - off * 1.6]) };
+  const off = rnTocco1() * 1.25, L = { wd: rot([W + off, D + off]), r: rot([0, -D - off * 1.6]), x: rot([-W - off, -D - off]) };
   if (!rnUniforme(m)) { L.w = rot([W + off, 0]); L.d = rot([0, D + off]); }
   return L;
 }
@@ -376,8 +387,8 @@ function rnMobileCanvas(g, m, s, sel) {
   if (sel) { const L = rnManiglie(m), r = rnTocco1() * 0.36;
     g.strokeStyle = "rgba(201,162,75,.7)"; g.lineWidth = Math.max(1.5, r * 0.12); g.setLineDash([r * 0.5, r * 0.4]);
     for (const h of Object.values(L)) { g.beginPath(); g.moveTo(m.x, m.y); g.lineTo(...h); g.stroke(); } g.setLineDash([]);
-    for (const [k, h] of Object.entries(L)) { g.beginPath(); g.arc(h[0], h[1], r, 0, 7); g.fillStyle = k === "r" ? "rgba(201,162,75,.92)" : "rgba(106,24,40,.85)"; g.fill(); g.lineWidth = r * 0.22; g.strokeStyle = "#fff"; g.stroke();
-      g.fillStyle = "#fff"; g.font = `700 ${r * 1.15}px Barlow, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(k === "r" ? "↻" : k === "wd" ? "⤡" : k === "w" ? "↔" : "↕", h[0], h[1] + 1); }
+    for (const [k, h] of Object.entries(L)) { g.beginPath(); g.arc(h[0], h[1], r, 0, 7); g.fillStyle = k === "r" ? "rgba(201,162,75,.92)" : k === "x" ? "rgba(176,40,40,.92)" : "rgba(106,24,40,.85)"; g.fill(); g.lineWidth = r * 0.22; g.strokeStyle = "#fff"; g.stroke();
+      g.fillStyle = "#fff"; g.font = `700 ${r * 1.15}px Barlow, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(k === "x" ? "✕" : k === "r" ? "↻" : k === "wd" ? "⤡" : k === "w" ? "↔" : "↕", h[0], h[1] + 1); }
     g.textBaseline = "alphabetic"; }
 }
 /* ---- tocchi sul canvas a seconda della fase ---- */
@@ -555,16 +566,22 @@ function rnSvg(p, opt = {}) {
   const lab = (p.stanze || []).map(st => { const bb = RN.bbox(st.poly), cx = (bb.x0 + bb.x1) / 2, cy = (bb.y0 + bb.y1) / 2, mq = RN.area(st.poly) * s * s;
     // etichetta dove c'è spazio: il punto della stanza più lontano dai mobili, vicino al centro
     const serve = ((RN_TIPI[st.tipo]?.n || "").length * fs * 0.33) + fs * 0.3;
-    let best = [cx, cy], bs = -1; for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) { const q = [bb.x0 + (bb.x1 - bb.x0) * i / 8, bb.y0 + (bb.y1 - bb.y0) * j / 8]; if (!RN.dentro(q, st.poly) || RN.distBordo(q, st.poly) < Math.min(serve, (bb.x1 - bb.x0) / 2.2)) continue;
+    const nome = (RN_TIPI[st.tipo]?.n || "").toUpperCase(), tw = nome.length * fs * 0.34 + fs * 0.2;
+    const ret = (p.mobili || []).filter(m => m.tipo !== "tappeto").map(m => { const [w, d] = rnDim(m), a = m.rot * Math.PI / 180, hw = (Math.abs(Math.cos(a)) * w + Math.abs(Math.sin(a)) * d) / s / 2, hd = (Math.abs(Math.sin(a)) * w + Math.abs(Math.cos(a)) * d) / s / 2; return [m.x - hw, m.y - hd, m.x + hw, m.y + hd]; });
+    const libera = (x, y) => { const B = [x - tw, y - fs * 1.05, x + tw, y + fs * 1.45]; if (![[B[0], B[1]], [B[2], B[1]], [B[0], B[3]], [B[2], B[3]]].every(q => RN.dentro(q, st.poly))) return false;
+      return !ret.some(r => r[0] < B[2] && r[2] > B[0] && r[1] < B[3] && r[3] > B[1]); };
+    let lib = null, ld = Infinity; for (let i = 0; i <= 16; i++) for (let j = 0; j <= 16; j++) { const x = bb.x0 + (bb.x1 - bb.x0) * i / 16, y = bb.y0 + (bb.y1 - bb.y0) * j / 16, dd = Math.hypot(x - cx, y - cy); if (dd < ld && libera(x, y)) { ld = dd; lib = [x, y]; } }
+    let best = lib || [cx, cy], bs = lib ? Infinity : -1; for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) { const q = [bb.x0 + (bb.x1 - bb.x0) * i / 8, bb.y0 + (bb.y1 - bb.y0) * j / 8]; if (!RN.dentro(q, st.poly) || RN.distBordo(q, st.poly) < Math.min(serve, (bb.x1 - bb.x0) / 2.2)) continue;
       const dm = Math.min(1e9, ...(p.mobili || []).filter(m => m.tipo !== "tappeto").map(m => Math.hypot(m.x - q[0], m.y - q[1]))), dc = Math.hypot(q[0] - cx, q[1] - cy), sc = Math.min(dm, 2.2 * k) - dc * 0.25 + Math.min(RN.distBordo(q, st.poly), 0.6 * k);
       if (sc > bs) { bs = sc; best = q; } }
     return `<g font-family="Barlow, Arial, sans-serif" text-anchor="middle"><text x="${best[0]}" y="${best[1]}" font-size="${fs}" font-weight="700" fill="#3a1018" letter-spacing="0.5">${esc((RN_TIPI[st.tipo]?.n || "").toUpperCase())}</text>
       <text x="${best[0]}" y="${best[1] + fs * 1.15}" font-size="${fs * 0.85}" fill="#8a6414">${num(mq, 1)} m²</text></g>`; }).join("");
   const apri = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${vb}" width="${F.w}" height="${F.h}">${defs}`;
   if (opt.solo === "sotto") return `${apri}<rect x="${F.x}" y="${F.y}" width="${F.w}" height="${F.h}" fill="#fffdf9"/>${stanze}</svg>`;
-  if (opt.solo === "sopra") return `${apri}${mob}${lab}</svg>`;
+  const mob2 = opt.noMob ? "" : mob, lab2 = opt.noLab ? "" : lab;
+  if (opt.solo === "sopra") return `${apri}${mob2}${lab2}<g font-family="Barlow"></g></svg>`;
   return `${apri}<rect x="${F.x}" y="${F.y}" width="${F.w}" height="${F.h}" fill="#fffdf9"/>
-    ${stanze}<image href="${muri}" xlink:href="${muri}" x="0" y="0" width="${p.W}" height="${p.H}"/>${mob}${lab}</svg>`;
+    ${stanze}<image href="${muri}" xlink:href="${muri}" x="0" y="0" width="${p.W}" height="${p.H}"/>${mob2}${lab2}<g font-family="Barlow"></g></svg>`;
 }
 // pianta → PNG a tre strati: pavimenti, muri, mobili e scritte (funziona anche su iPhone)
 // inquadratura: solo l'appartamento, con un metro di margine
@@ -662,6 +679,7 @@ async function rnRisultato() {
     <div class="chips">${Object.entries(RN_STILI3D).map(([k, v]) => `<button class="chip ${(RN_STILI3D[p.stile3d] ? p.stile3d : "maison") === k ? "on" : ""}" data-rn3s="${k}">${v[0]}</button>`).join("")}</div>
     <div class="rn3d" id="rn3d"><div class="spin"></div></div>
     <div class="rntab">${p.stanze.map(st => `<span>${esc(RN_TIPI[st.tipo]?.n || "")}<b>${num(RN.area(st.poly) * p.scala * p.scala, 1)} m²</b></span>`).join("")}<span class="tot">Totale calpestabile<b>${num(mq, 1)} m²</b></span></div>
+    <div class="rnsel"><span>Nel PDF metti</span>${[["p2", "Pianta 2D"], ["p3", "Vista 3D"], ...((p.lavori || []).length ? [["p4", "Lavori"]] : [])].map(([k, n]) => `<button class="chip ${rnSel(p)[k] ? "on" : ""}" data-rnsel="${k}">${n}</button>`).join("")}</div>
     <div class="btns"><button class="btn pri" data-rnpdf>PDF del rendering</button><button class="btn sec" data-rnall>Metti nel PDF della valutazione</button></div>
     <div class="btns"><button class="btn sec" data-rnpng2>Scarica la pianta (PNG)</button><button class="btn sec" data-rnpng3>Scarica il 3D (PNG)</button></div>
     <p class="note" id="rnmsg"></p>`;
@@ -669,7 +687,8 @@ async function rnRisultato() {
   box.querySelectorAll("[data-rn3s]").forEach(b => b.addEventListener("click", async () => { p.stile3d = b.dataset.rn3s; rnSalva(); box.querySelectorAll("[data-rn3s]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, p.stile3d); }));
   try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "maison"); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
   const scarica = (url, nome) => { const a = document.createElement("a"); a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); };
-  const imgs = async () => ({ p2: await rnPng(p), p3: V3 ? V3.foto() : null, p4: (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null });
+  box.querySelectorAll("[data-rnsel]").forEach(b => b.addEventListener("click", () => { const S = rnSel(p); S[b.dataset.rnsel] = !S[b.dataset.rnsel]; if (!S.p2 && !S.p3 && !S.p4) S.p2 = true; p.pdfSel = S; rnSalva(); box.querySelectorAll("[data-rnsel]").forEach(c => c.classList.toggle("on", !!S[c.dataset.rnsel])); }));
+  const imgs = async () => { const S = rnSel(p); return { p2: S.p2 ? await rnPng(p) : null, p3: S.p3 && V3 ? V3.foto() : null, p4: S.p4 && (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null }; };
   // miniatura per l'elenco
   rnPng(p, 360).then(t => { p.thumb = t; rnSalva(); }).catch(() => {});
   box.querySelector("[data-rnpng2]").addEventListener("click", async () => scarica(await rnPng(p, 2400), `pianta-${p.nome}.png`));
@@ -680,6 +699,7 @@ async function rnRisultato() {
     await RNDB.kvSet("allegato", all); window.__RENDER_ALL = all;
     $("#rnmsg").innerHTML = `Fatto: il prossimo PDF di valutazione avrà la pagina con la pianta arredata e il 3D di <b>${esc(p.nome)}</b>. Lo togli dalla pagina Rendering.`; });
 }
+function rnSel(p) { return { p2: true, p3: false, p4: true, ...(p.pdfSel || {}) }; }
 // pagina (o pagine) per il PDF: usata da sola e dentro la valutazione
 function rnPagina(all, C) {
   C = C || { bx: "#6a1828", oro: "#c9a24b" };
@@ -688,9 +708,9 @@ function rnPagina(all, C) {
   return `<section class="pg rnpg" style="page-break-before:always;padding:14mm 14mm 10mm">
     <div style="font-family:Georgia,serif;font-size:20pt;color:${C.bx};margin-bottom:2mm">Planimetria arredata</div>
     <div style="font-size:9pt;color:#7a6c66;margin-bottom:5mm">${esc(all.nome)} · proposta di arredo indicativa, misure dalla planimetria</div>
-    <img src="${all.p2}" style="width:100%;max-height:150mm;object-fit:contain;border:0.3mm solid #ead9c2;border-radius:2mm;background:#fffdf9">
+    ${all.p2 ? `<img src="${all.p2}" style="width:100%;max-height:${all.p3 ? 150 : 205}mm;object-fit:contain;border:0.3mm solid #ead9c2;border-radius:2mm;background:#fffdf9">` : ""}
     <div style="display:flex;gap:6mm;margin-top:5mm;align-items:flex-start">
-      ${all.p3 ? `<img src="${all.p3}" style="width:62%;border-radius:2mm;border:0.3mm solid #ead9c2">` : ""}
+      ${all.p3 ? `<img src="${all.p3}" style="width:${all.p2 ? 62 : 75}%;border-radius:2mm;border:0.3mm solid #ead9c2">` : ""}
       <table style="flex:1;font-size:9pt;border-collapse:collapse;width:100%">${tab}<tr><td style="border-top:0.3mm solid ${C.oro};padding-top:1mm"><b>Totale calpestabile</b></td><td style="text-align:right;border-top:0.3mm solid ${C.oro};padding-top:1mm"><b>${num(tot, 1)} m²</b></td></tr></table></div>
   </section>${all.p4 ? `<section class="pg rnpg" style="page-break-before:always;padding:14mm 14mm 10mm">
     <div style="font-family:Georgia,serif;font-size:20pt;color:${C.bx};margin-bottom:2mm">Lavori previsti</div>
