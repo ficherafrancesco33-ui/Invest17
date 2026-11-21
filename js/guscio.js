@@ -11,7 +11,7 @@ function gsStanzeMaschera(p) {
 }
 // guscio: i muri a meno di ~45 cm dalle stanze
 { const prev = rnMaschera; rnMaschera = function (p) { const m = prev(p); if (!p.scala || !(p.stanze || []).length) return m;
-  const k = (p.stanze || []).map(st => st.id + st.poly.length + RN.area(st.poly).toFixed(0)).join("|") + (p.lavori || []).length + (p.fzChiudi || []).length + (p.fzApri || []).length;
+  const k = (p.stanze || []).map(st => st.id + st.poly.length + RN.area(st.poly).toFixed(0)).join("|") + (p.lavori || []).length + (p.fzChiudi || []).length + (p.fzApri || []).length + "f" + (p.finestre || []).map(f => f.seg.map(Math.round).join(",")).join(";");
   if (RS.gsK === k && RS.gsM && RS.gsM.length === m.length) return RS.gsM;
   const vic = RN.dilata(gsStanzeMaschera(p), p.W, p.H, Math.round(0.42 / p.scala)), out = new Uint8Array(m.length);
   for (let i = 0; i < m.length; i++) out[i] = m[i] && vic[i] ? 1 : 0;
@@ -20,6 +20,9 @@ function gsStanzeMaschera(p) {
   for (let i = 0; i < m.length; i++) inv[i] = dil[i] ? 0 : 1;
   const er = RN.dilata(inv, p.W, p.H, r), stanze = gsStanzeMaschera(p);
   for (let i = 0; i < m.length; i++) if (!er[i] && !stanze[i]) out[i] = 1;     // mai dentro le stanze
+  // dove ci sono finestre il muro si apre: la finestra la disegno io (niente blocchi pieni)
+  for (const f of p.finestre || []) { const [x0, y0, x1, y1] = f.seg, L = Math.hypot(x1 - x0, y1 - y0) || 1, tx = (x1 - x0) / L, ty = (y1 - y0) / L, [nx, ny] = f.n || [-ty, tx], prof = 0.7 / p.scala;
+    for (let a = 0; a <= L; a += 0.7) for (let b = -2; b <= prof; b += 0.7) { const x = Math.round(x0 + tx * a + nx * b), y = Math.round(y0 + ty * a + ny * b); if (x >= 0 && y >= 0 && x < p.W && y < p.H && !stanze[y * p.W + x]) out[y * p.W + x] = 0; } }
   RS.gsK = k; RS.gsM = out; return out; }; }
 
 /* ---- riconoscimento delle finestre ---- */
@@ -84,10 +87,12 @@ function gsToccaFinestra(p, q) {
 // le stanze cambiano (lavori, nuovi muri): le finestre si riconoscono di nuovo
 { const r = rzRifai; rzRifai = async function (p) { p.finAuto = false; return r(p); }; }
 
-/* ---- 2D: finestre col simbolo classico (tre linee sottili nel muro) ---- */
+/* ---- 2D: finestre col simbolo architettonico (spallette, due fili del muro, vetro al centro) ---- */
 { const sv = rnSvg; rnSvg = function (p, opt = {}) { const out = sv(p, opt); if (opt.solo === "sotto" || !(p.finestre || []).length || !p.scala) return out;
-  const k = 1 / p.scala, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n }) => { const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
-    // la finestra sta nello spessore del muro: sposto il simbolo verso l'esterno di ~12 cm
-    const o = 0.13 * k, X0 = x0 + nx * o, Y0 = y0 + ny * o, X1 = x1 + nx * o, Y1 = y1 + ny * o, sg = n => `<line x1="${X0 + nx * n}" y1="${Y0 + ny * n}" x2="${X1 + nx * n}" y2="${Y1 + ny * n}" stroke="#2f6f73" stroke-width="${0.025 * k}"/>`;
-    return `<g><line x1="${X0}" y1="${Y0}" x2="${X1}" y2="${Y1}" stroke="#fffdf9" stroke-width="${0.26 * k}"/>${sg(-0.1 * k)}${sg(0)}${sg(0.1 * k)}</g>`; }).join("");
+  const k = 1 / p.scala, sp = 0.3 * k, f = p.finestre.map(({ seg: [x0, y0, x1, y1], n }) => { const L = Math.hypot(x1 - x0, y1 - y0) || 1, [nx, ny] = n || [-(y1 - y0) / L, (x1 - x0) / L];
+    const lin = (o, col, w) => `<line x1="${x0 + nx * o}" y1="${y0 + ny * o}" x2="${x1 + nx * o}" y2="${y1 + ny * o}" stroke="${col}" stroke-width="${w}"/>`;
+    const spal = (x, y) => `<line x1="${x}" y1="${y}" x2="${x + nx * sp}" y2="${y + ny * sp}" stroke="#2e161c" stroke-width="${0.05 * k}"/>`;
+    return `<g><polygon points="${x0},${y0} ${x1},${y1} ${x1 + nx * sp},${y1 + ny * sp} ${x0 + nx * sp},${y0 + ny * sp}" fill="#f4f8f9"/>${lin(0, "#2e161c", 0.02 * k)}${lin(sp, "#2e161c", 0.02 * k)}${lin(sp / 2, "#7fb0c4", 0.05 * k)}${spal(x0, y0)}${spal(x1, y1)}</g>`; }).join("");
   return out.replace(/<\/svg>$/, `${f}</svg>`); }; }
+// nel risultato riconosco le finestre se non l'ho ancora fatto (rendering fatti prima)
+{ const ris = rnRisultato; rnRisultato = async function () { const p = RS.p; if (p && p.scala && (p.stanze || []).length && !p.finAuto) { try { gsRiconosci(p); rnSalva(); } catch (e) { } } return ris(); }; }
