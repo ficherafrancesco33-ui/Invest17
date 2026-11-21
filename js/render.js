@@ -280,7 +280,7 @@ function rnEditor(box) {
     <nav class="rnfasi">${RN_FASI.map(([k, t]) => `<a href="#rendering/${p.id}/${k}" class="${k === f ? "on" : ""}">${t}</a>`).join("")}</nav>
     <div id="rnguida" class="rnguida"></div>
     ${f === "risultato" ? `<div id="rnris"></div>` : `<div class="rnzoom"><button class="btn sec" data-rnz="-1" aria-label="Rimpicciolisci">−</button><button class="btn sec" data-rnz="1" aria-label="Ingrandisci">+</button><span class="note">due dita per spostarti</span></div>
-      <div class="rnwrap" id="rnwrap"><canvas id="rncv" style="width:${(RS.zoom || 1) * 100}%"></canvas></div><div id="rnpan"></div>`}`;
+      <div class="rnedit"><div class="rnwrap" id="rnwrap"><canvas id="rncv" style="width:${(RS.zoom || 1) * 100}%"></canvas></div><div id="rnpan"></div></div>`}`;
   box.querySelectorAll("[data-rnz]").forEach(b => b.addEventListener("click", () => { const w = $("#rnwrap"), c = $("#rncv"), z0 = RS.zoom || 1; RS.zoom = Math.max(1, Math.min(4, z0 * (b.dataset.rnz === "1" ? 1.5 : 1 / 1.5)));
     const cx = (w.scrollLeft + w.clientWidth / 2) / z0, cy = (w.scrollTop + w.clientHeight / 2) / z0; c.style.width = RS.zoom * 100 + "%"; w.scrollLeft = cx * RS.zoom - w.clientWidth / 2; w.scrollTop = cy * RS.zoom - w.clientHeight / 2; }));
   box.querySelector(".rnnome").addEventListener("change", e => { p.nome = e.target.value.trim() || p.nome; rnSalva(); });

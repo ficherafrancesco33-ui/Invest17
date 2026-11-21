@@ -68,7 +68,8 @@
 @keyframes khzoom{to{transform:scale(1.12)}}
 @keyframes khgold{to{background-position:-200% 0}}
 @media (prefers-reduced-motion:reduce){.kh *{animation:none!important}.kh .fu{opacity:1;transform:none}}
-@media (min-width:760px){.kh-bento{grid-template-columns:repeat(4,1fr)}.kh-hero{height:300px}}`;
+@media (min-width:760px){.kh-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px;align-items:stretch;margin-bottom:6px}.kh-top .kh-hero{height:auto;min-height:280px;margin:0}.kh-top .kh-bento{margin:0}.kh-rkl{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}.kh-rkl .kh-empty{grid-column:1/-1}.kh-stats{flex-wrap:wrap}.kh-stat{flex:1 1 140px}}
+@media (min-width:1200px){.kh-top .kh-hero{min-height:340px}.kh-rkl{grid-template-columns:1fr 1fr 1fr}.kh-c{flex-basis:180px}.kh-c .win{height:124px}}`;
   const st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   const IC = {
@@ -114,7 +115,7 @@
         <a class="kh-stat gl" href="#seguiti"><strong>${segN}</strong><span>seguiti</span></a>
         <a class="kh-stat gl" href="#seguiti"><strong>${media != null ? pct(media) : "—"}</strong><span>netto medio seguiti</span></a>
       </div>
-      ${hero}
+      <div class="kh-top">${hero}
       <div class="kh-bento">
         <a class="kh-t gl w ${fu()}" href="#seguiti">${ico("seg")}<div><b>Seguiti</b><span>${segN ? `${segN} immobil${segN === 1 ? "e" : "i"} che tieni d'occhio` : "Tocca ☆ Segui in una scheda"}</span></div>
           <div class="kh-av">${S.slice(0, 4).map(x => win(x.im, stato(x.A.score).col)).join("")}</div></a>
@@ -122,8 +123,8 @@
         <a class="kh-t gl ${fu()}" href="#milano/cliente">${ico("val")}<span class="n">${val.length}</span><div><b>Valutazioni</b><span>${v0 ? `${esc(v0.nome)} · ${eur(v0.valore)}` : "Nessuna salvata"}</span></div></a>
         <a class="kh-t gl ${fu()}" href="#inv/classifica" data-src="auto">${ico("inv")}<span class="n">${AUTO.length}</span><div><b>Investimenti</b><span>Nord Italia, finiti e arredati</span></div></a>
         <a class="kh-t gl ${fu()}" href="#milano/privati">${ico("mil")}<span class="n">${np || ""}</span><div><b>Milano</b><span>${np ? "privati sotto la media di zona" : "Mappa, zone e privati"}</span></div></a>
-      </div>
-      <h2 class="kh-h">Classifica dei seguiti <a href="#seguiti">Tutti</a></h2>${rank}
+      </div></div>
+      <h2 class="kh-h">Classifica dei seguiti <a href="#seguiti">Tutti</a></h2><div class="kh-rkl">${rank}</div>
       ${arr.length ? `<h2 class="kh-h">Ultimi arrivi da Immobiliare <a href="#inv/classifica" data-src="auto">Tutti</a></h2>
       <div class="kh-row">${arr.map(x => `<a class="kh-c gl" href="#imm/auto/${encodeURIComponent(x.im.id)}">${isNuovoInv(x.im) ? '<span class="nw">Nuovo</span>' : ""}<span class="p">${p1(x.A.rend)}</span>${win(x.im, stato(x.A.score).col)}
         <b>${esc(x.im.comune)}</b><span>${eur(x.im.prezzo)} · ${num(x.im.mq)} m²</span></a>`).join("")}</div>` : ""}

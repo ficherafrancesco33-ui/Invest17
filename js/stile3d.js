@@ -52,7 +52,7 @@ rn3D = async function (host, p, stile, opt = {}) {
   const ren = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); ren.setPixelRatio(Math.min(2, devicePixelRatio));
   ren.shadowMap.enabled = !ill; ren.shadowMap.type = THREE.PCFSoftShadowMap;
   if (FOTO) { ren.toneMapping = THREE.ACESFilmicToneMapping; ren.toneMappingExposure = 1.0; }
-  const w = host.clientWidth, h = Math.round(w * 0.75); ren.setSize(w, h); host.innerHTML = ""; host.appendChild(ren.domElement);
+  const w = host.clientWidth, h = Math.round(Math.min(w * 0.75, Math.max(260, innerHeight * 0.8))); ren.setSize(w, h); host.innerHTML = ""; host.appendChild(ren.domElement);
   const scene = new THREE.Scene(); scene.background = new THREE.Color(S.sfondo);
   let cam;
   if (ill) { const e = span * 0.75; cam = new THREE.OrthographicCamera(-e * w / h, e * w / h, e, -e, 0.1, 200); cam.position.set(cx + span, span * 1.15, cz + span); }
