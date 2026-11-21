@@ -214,7 +214,27 @@ RNDB.kvGet("allegato").then(v => { window.__RENDER_ALL = v || null; }).catch(() 
 
 /* ============ stato dell'editor ============ */
 const RS = { p: null, img: null, lum: null, muri: null, W: 0, H: 0, fase: "stanze", sel: null, misura: null, modo: "tocca", manuale: [], drag: null, three: null };
-const rnScala = p => p.scala || null;        // metri per pixel (nelle coordinate dell'immagine di lavoro)
+const rnScala = p => p.scala || null;
+// riquadro della casa: l'utente lo appoggia sui muri esterni, tutto quello che sta fuori conta come muro
+function rnCasaInit(p) { if (p.casa) return; if ((p.stanze || []).length) { const b = RN.bbox(p.stanze.flatMap(st => st.poly)), m = Math.max(p.W, p.H) * 0.02; p.casa = { x0: Math.max(0, b.x0 - m), y0: Math.max(0, b.y0 - m), x1: Math.min(p.W, b.x1 + m), y1: Math.min(p.H, b.y1 + m) }; }
+  else p.casa = { x0: p.W * 0.15, y0: p.H * 0.15, x1: p.W * 0.85, y1: p.H * 0.85 }; }
+function rnMuriCasa(p) { const c = p.casa; if (!c) return RS.muri; const k = [c.x0, c.y0, c.x1, c.y1].map(Math.round).join(",");
+  if (RS.mcK === k && RS.mcSrc === RS.muri) return RS.mc; const m = RS.muri.slice(), W = p.W, H = p.H, x0 = Math.max(0, Math.round(c.x0)), x1 = Math.min(W - 1, Math.round(c.x1)), y0 = Math.max(0, Math.round(c.y0)), y1 = Math.min(H - 1, Math.round(c.y1));
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (x <= x0 || x >= x1 || y <= y0 || y >= y1) m[y * W + x] = 1;
+  // la fascia tra il riquadro e i muri esterni (messo a occhio) è fuori casa: la riempio dal bordo, con porte e finestre chiuse
+  const ch = RN.dilata(RS.muri, W, H, rnRaggio(p)), est = new Uint8Array(W * H), st = new Int32Array(W * H); let top = 0;
+  const semina = i => { const x = i % W, y = (i / W) | 0; if (x > x0 && x < x1 && y > y0 && y < y1 && !ch[i] && !est[i]) { est[i] = 1; st[top++] = i; } };
+  for (let x = x0 + 1; x < x1; x++) for (let d = 1; d < 4; d++) { semina((y0 + d) * W + x); semina((y1 - d) * W + x); }
+  for (let y = y0 + 1; y < y1; y++) for (let d = 1; d < 4; d++) { semina(y * W + x0 + d); semina(y * W + x1 - d); }
+  while (top) { const i = st[--top], x = i % W; if (x > 0) semina(i - 1); if (x < W - 1) semina(i + 1); if (i >= W) semina(i - W); if (i + W < W * H) semina(i + W); }
+  let ne = 0; for (let i = 0; i < W * H; i++) ne += est[i];
+  // se il riquadro taglia delle stanze il riempimento le mangerebbe: in quel caso tengo solo il riquadro
+  if (ne < (x1 - x0) * (y1 - y0) * 0.4) { const fuori = RN.dilata(est, W, H, rnRaggio(p)); for (let i = 0; i < W * H; i++) if (fuori[i]) m[i] = 1; }
+  RS.mc = m; RS.mcK = k; RS.mcSrc = RS.muri; return m; }
+function rnCasaManiglia(q) { const c = RS.p.casa, r = rnTocco1() * 1.2; if (!c) return null; const mx = (c.x0 + c.x1) / 2, my = (c.y0 + c.y1) / 2;
+  const H = { nw: [c.x0, c.y0], ne: [c.x1, c.y0], sw: [c.x0, c.y1], se: [c.x1, c.y1], n: [mx, c.y0], s: [mx, c.y1], w: [c.x0, my], e: [c.x1, my] };
+  let best = null, bd = r; for (const [k, h] of Object.entries(H)) { const d = Math.hypot(q[0] - h[0], q[1] - h[1]); if (d < bd) { bd = d; best = k; } }
+  if (best) return best; return q[0] > c.x0 && q[0] < c.x1 && q[1] > c.y0 && q[1] < c.y1 ? "move" : null; }        // metri per pixel (nelle coordinate dell'immagine di lavoro)
 
 async function rnCaricaFile(f) {
   let url;
@@ -298,6 +318,7 @@ function rnCanvasInit() {
   const down = e => {
     if (e.touches && e.touches.length >= 2) { const w = $("#rnwrap"); due = { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2, sl: w.scrollLeft, st: w.scrollTop }; giu = null; RS.drag = null; e.preventDefault(); return; }
     const q = pt(e); giu = q;
+    if (RS.fase === "stanze" && RS.modo === "casa") { const h = rnCasaManiglia(q); if (h) { RS.drag = { casa: h, q0: q, c0: { ...p.casa } }; e.preventDefault(); } return; }
     if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel) && rnMobileA(q, true) !== RS.sel) { const h = rnManiglia(q, RS.sel); if (h === "x") { p.mobili = p.mobili.filter(m => m !== RS.sel); RS.sel = null; rnSalva(); rnDisegna(); rnPannello(); e.preventDefault(); return; }
       if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
     if (RS.fase === "arredo") { const m = rnMobileA(q); if (m) { RS.sel = m; RS.drag = { m, dx: q[0] - m.x, dy: q[1] - m.y, mosso: false }; e.preventDefault(); rnDisegna(); rnPannello(); } }
@@ -306,13 +327,19 @@ function rnCanvasInit() {
   const move = e => {
     if (due && e.touches && e.touches.length >= 2) { const w = $("#rnwrap"), x = (e.touches[0].clientX + e.touches[1].clientX) / 2, y = (e.touches[0].clientY + e.touches[1].clientY) / 2; w.scrollLeft = due.sl - (x - due.x); w.scrollTop = due.st - (y - due.y); e.preventDefault(); return; }
     if (!RS.drag) return; const q = pt(e); e.preventDefault();
-    if (RS.drag.res) { rnRidimensiona(RS.drag, q); RS.drag.mosso = true; }
+    if (RS.drag.casa) { const D = RS.drag, c = p.casa, c0 = D.c0, dx = q[0] - D.q0[0], dy = q[1] - D.q0[1], min = Math.max(p.W, p.H) * 0.05, cl = (v, a, b) => Math.max(a, Math.min(b, v));
+      if (D.casa === "move") { const w = c0.x1 - c0.x0, h = c0.y1 - c0.y0; c.x0 = cl(c0.x0 + dx, 0, p.W - w); c.y0 = cl(c0.y0 + dy, 0, p.H - h); c.x1 = c.x0 + w; c.y1 = c.y0 + h; }
+      else { if (/w/.test(D.casa)) c.x0 = cl(c0.x0 + dx, 0, c.x1 - min); if (/e/.test(D.casa)) c.x1 = cl(c0.x1 + dx, c.x0 + min, p.W); if (/n/.test(D.casa)) c.y0 = cl(c0.y0 + dy, 0, c.y1 - min); if (/s/.test(D.casa)) c.y1 = cl(c0.y1 + dy, c.y0 + min, p.H); }
+      D.mosso = true; }
+    else if (RS.drag.res) { rnRidimensiona(RS.drag, q); RS.drag.mosso = true; }
     else if (RS.drag.m) { RS.drag.m.x = q[0] - RS.drag.dx; RS.drag.m.y = q[1] - RS.drag.dy; RS.drag.mosso = true; }
     else if (RS.drag.maniglia) RS.misura[RS.drag.maniglia] = q;
     rnDisegna(); };
   const up = e => { if (due) { if (!e.touches || !e.touches.length) due = null; return; } const q = giu; giu = null; const d = RS.drag; RS.drag = null;
     if (d?.m) { if (d.mosso) { rnSalva(); rnPannello(); } return; }
     if (d?.maniglia) { rnPannello(); return; }
+    if (d?.casa) { if (d.mosso) rnSalva(); return; }
+    if (RS.fase === "stanze" && RS.modo === "casa") return;
     if (d?.res) { if (d.mosso) { rnSalva(); rnPannello(); } return; }
     if (!q) return; rnTocco(q); };
   cv.addEventListener("mousedown", down); cv.addEventListener("mousemove", move); window.addEventListener("mouseup", up, { once: false });
@@ -336,8 +363,11 @@ function rnDisegna() {
     g.font = `700 ${fs}px Barlow, sans-serif`; g.textAlign = "center"; g.fillStyle = "#3a1018";
     g.fillText(RN_TIPI[st.tipo]?.n || "?", cx, cy); if (s) { g.font = `500 ${fs * 0.85}px Barlow, sans-serif`; g.fillText(num(RN.area(st.poly) * s * s, 1) + " m²", cx, cy + fs); }
   });
-  if (RS.manuale.length) { g.beginPath(); RS.manuale.forEach(([x, y], j) => j ? g.lineTo(x, y) : g.moveTo(x, y)); g.strokeStyle = "#6a1828"; g.lineWidth = lw * 1.5; g.stroke();
-    RS.manuale.forEach(([x, y]) => { g.beginPath(); g.arc(x, y, lw * 3, 0, 7); g.fillStyle = "#c9a24b"; g.fill(); }); }
+  if (RS.fase === "stanze" && p.casa) { const c = p.casa, ed = RS.modo === "casa";
+    g.fillStyle = ed ? "rgba(30,8,14,.45)" : "rgba(30,8,14,.22)"; g.beginPath(); g.rect(0, 0, p.W, p.H); g.rect(c.x0, c.y0, c.x1 - c.x0, c.y1 - c.y0); g.fill("evenodd");
+    g.setLineDash(ed ? [] : [lw * 4, lw * 3]); g.strokeStyle = "#c9a24b"; g.lineWidth = lw * (ed ? 2 : 1.4); g.strokeRect(c.x0, c.y0, c.x1 - c.x0, c.y1 - c.y0); g.setLineDash([]);
+    if (ed) { const r = rnTocco1() * 0.55, mx = (c.x0 + c.x1) / 2, my = (c.y0 + c.y1) / 2;
+      [[c.x0, c.y0], [c.x1, c.y0], [c.x0, c.y1], [c.x1, c.y1], [mx, c.y0], [mx, c.y1], [c.x0, my], [c.x1, my]].forEach(([x, y], i) => { g.beginPath(); g.arc(x, y, i < 4 ? r : r * 0.75, 0, 7); g.fillStyle = "#c9a24b"; g.fill(); g.lineWidth = lw; g.strokeStyle = "#fff"; g.stroke(); }); } }
   if (RS.fase === "scala" && RS.misura?.a) { const { a, b } = RS.misura; g.strokeStyle = "#c9a24b"; g.lineWidth = lw * 2;
     if (b) { g.beginPath(); g.moveTo(...a); g.lineTo(...b); g.stroke(); }
     [a, b].filter(Boolean).forEach(q => { g.beginPath(); g.arc(q[0], q[1], lw * 5, 0, 7); g.fillStyle = "#6a1828"; g.fill(); g.lineWidth = lw; g.strokeStyle = "#fff"; g.stroke(); }); }
@@ -401,20 +431,22 @@ function rnSeme(poly) {
 }
 // stanza dal punto: provo da aperture larghe a strette, il raggio più grande che lascia libero il punto chiude meglio le porte
 function rnStanzaAuto(p, q) {
-  if (p.aperture != null) return RN.stanza(RS.muri, p.W, p.H, q[0], q[1], p.aperture);
+  const M = rnMuriCasa(p);
+  if (p.aperture != null) return RN.stanza(M, p.W, p.H, q[0], q[1], p.aperture);
   const max = p.scala ? 0.55 / p.scala : Math.max(p.W, p.H) * 0.055;
-  for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(RS.muri, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; return t; }
+  for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(M, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; return t; }
   return { errore: "muro" };
 }
 function rnTocco(q) {
   const p = RS.p;
   if (RS.fase === "stanze") {
-    if (RS.modo === "mano") { RS.manuale.push(q); rnDisegna(); rnPannello(); return; }
+    if (RS.modo === "casa") return;
+    const c = p.casa; if (c && (q[0] < c.x0 || q[0] > c.x1 || q[1] < c.y0 || q[1] > c.y1)) return rnGuida(`<b>Questo punto è fuori dalla casa.</b> Tocca dentro il riquadro, oppure allargalo con "Riquadro della casa".`);
     const gia = (p.stanze || []).find(st => RN.dentro(q, st.poly));
     if (gia) { RS.sel = gia; rnDisegna(); rnPannello(); return; }
     const r = rnStanzaAuto(p, q);
     if (r.errore === "muro") return rnGuida(`<b>Hai toccato un muro.</b> Tocca il pavimento al centro della stanza.`);
-    if (r.errore === "aperta") return rnGuida(`<b>Questa stanza non risulta chiusa</b> (forse una porta molto larga o un'apertura). Alza <i>"Chiudi le aperture"</i> qui sotto e ritocca, oppure usa <i>"Disegna a mano"</i> e tocca gli angoli.`);
+    if (r.errore === "aperta") return rnGuida(`<b>Questa stanza non risulta chiusa</b> (forse una porta molto larga o un'apertura). Alza <i>"Chiudi le aperture"</i> qui sotto e ritocca, oppure usa <i>"Riquadro della casa"</i> e appoggialo sui muri esterni.`);
     const poly = RN.contorno(r.reg, p.W, p.H);
     if (poly.length < 3 || RN.area(poly) < p.W * p.H * 0.002) return rnGuida(`<b>Zona troppo piccola.</b> Tocca più al centro della stanza.`);
     const st = { id: "s" + Date.now().toString(36), poly, tipo: null, seed: rnSeme(poly) || q };
@@ -429,22 +461,22 @@ function rnTocco(q) {
 function rnPannello() {
   const pan = $("#rnpan"); if (!pan) return; const p = RS.p, s = rnScala(p);
   if (RS.fase === "stanze") {
-    rnGuida(p.stanze?.length ? `<b>Tocca le altre stanze</b> (anche bagni, corridoi e balconi). Se il nome è sbagliato, tocca la stanza e scegli quello giusto.` : `<b>Tocca il pavimento di ogni stanza</b>: l'app trova da sola i muri e la superficie. Inizia dal soggiorno.`);
+    rnGuida(RS.modo === "casa" ? `<b>Delimita la casa</b>: appoggia il riquadro sui muri esterni dell'appartamento, poi tocca "Fatto".` : p.stanze?.length ? `<b>Tocca le altre stanze</b> (anche bagni, corridoi e balconi). Se il nome è sbagliato, tocca la stanza e scegli quello giusto.` : `<b>Tocca il pavimento di ogni stanza</b>: l'app trova da sola i muri e la superficie. Inizia dal soggiorno.`);
     const sel = RS.sel && p.stanze?.includes(RS.sel) ? RS.sel : null;
     pan.innerHTML = `${sel ? `<div class="rnsel"><b>Che stanza è?</b><div class="chips">${Object.entries(RN_TIPI).map(([k, t]) => `<button class="chip ${sel.tipo === k ? "on" : ""}" data-rntipo="${k}">${t.n}</button>`).join("")}</div>
         <button class="lnk" data-rntogli>Togli questa stanza</button></div>` : ""}
       <div class="rnctl"><label><span>Chiudi le aperture: a sinistra automatico, verso destra per porte molto larghe</span><input type="range" min="0" max="${Math.round(Math.max(p.W, p.H) * 0.07)}" value="${p.aperture ?? 0}" data-rnap></label>
-        <button class="btn sec" data-rnmano>${RS.modo === "mano" ? (RS.manuale.length >= 3 ? "Chiudi la stanza" : "Annulla disegno") : "Disegna a mano"}</button></div>
-      ${RS.modo === "mano" ? `<p class="note">Tocca gli angoli della stanza uno dopo l'altro, poi "Chiudi la stanza".</p>` : ""}
+        <div class="rncasa"><button class="btn ${RS.modo === "casa" ? "pri" : "sec"}" data-rncasa>${RS.modo === "casa" ? "Fatto" : p.casa ? "Sposta il riquadro della casa" : "Riquadro della casa"}</button>${p.casa && RS.modo !== "casa" ? `<button class="btn sec" data-rncasano>Togli riquadro</button>` : ""}</div></div>
+      ${RS.modo === "casa" ? `<p class="note">Trascina angoli e lati del riquadro fino ai <b>muri esterni</b> della casa (va bene a occhio). Tutto quello che resta fuori viene ignorato: cortile, ballatoio, altre unità.</p>` : ""}
       ${p.stanze?.length ? `<div class="btns"><a class="btn pri" href="#rendering/${p.id}/scala">Avanti: misure</a></div>` : ""}`;
     pan.querySelectorAll("[data-rntipo]").forEach(b => b.addEventListener("click", () => { sel.tipo = b.dataset.rntipo; sel.manuale = true; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); }));
     pan.querySelector("[data-rntogli]")?.addEventListener("click", () => { p.stanze = p.stanze.filter(x => x !== sel); RS.sel = null; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); });
     pan.querySelector("[data-rnap]").addEventListener("change", e => { p.aperture = +e.target.value || null; rnSalva(); });
-    pan.querySelector("[data-rnmano]").addEventListener("click", () => {
-      if (RS.modo !== "mano") { RS.modo = "mano"; RS.manuale = []; }
-      else { if (RS.manuale.length >= 3) { const st = { id: "s" + Date.now().toString(36), poly: RS.manuale.slice(), tipo: null }; p.stanze = [...(p.stanze || []), st]; rnIndovina(p.stanze, s); RS.sel = st; p.mobili = null; rnSalva(); }
-        RS.modo = "tocca"; RS.manuale = []; }
-      rnDisegna(); rnPannello(); });
+    pan.querySelector("[data-rncasa]").addEventListener("click", () => {
+      if (RS.modo !== "casa") { rnCasaInit(p); RS.modo = "casa"; RS.sel = null; }
+      else { RS.modo = "tocca"; const c = p.casa; if (c && p.stanze?.length) { const fuori = p.stanze.filter(st => { const b = RN.bbox(st.poly), cx = (b.x0 + b.x1) / 2, cy = (b.y0 + b.y1) / 2; return cx < c.x0 || cx > c.x1 || cy < c.y0 || cy > c.y1; }); if (fuori.length) { p.stanze = p.stanze.filter(st => !fuori.includes(st)); p.mobili = null; } } }
+      rnSalva(); rnDisegna(); rnPannello(); });
+    pan.querySelector("[data-rncasano]")?.addEventListener("click", () => { p.casa = null; rnSalva(); rnDisegna(); rnPannello(); });
     return;
   }
   if (RS.fase === "scala") {
@@ -585,7 +617,8 @@ function rnSvg(p, opt = {}) {
 }
 // pianta → PNG a tre strati: pavimenti, muri, mobili e scritte (funziona anche su iPhone)
 // inquadratura: solo l'appartamento, con un metro di margine
-function rnInquadra(p) { if (!(p.stanze || []).length) return { x: 0, y: 0, w: p.W, h: p.H }; const b = RN.bbox(p.stanze.flatMap(st => st.poly)), m = p.scala ? 1 / p.scala : 40;
+function rnInquadra(p) { if (p.casa && (p.stanze || []).length) { const c = p.casa, m = p.scala ? 0.6 / p.scala : 24; return { x: c.x0 - m, y: c.y0 - m, w: c.x1 - c.x0 + 2 * m, h: c.y1 - c.y0 + 2 * m }; }
+  if (!(p.stanze || []).length) return { x: 0, y: 0, w: p.W, h: p.H }; const b = RN.bbox(p.stanze.flatMap(st => st.poly)), m = p.scala ? 1 / p.scala : 40;
   const x = Math.max(-40, b.x0 - m), y = Math.max(-40, b.y0 - m), x1 = Math.min(p.W + 40, b.x1 + m), y1 = Math.min(p.H + 40, b.y1 + m); return { x, y, w: x1 - x, h: y1 - y }; }
 async function rnPng(p, larg = 1800, opt = {}) {
   const F = rnInquadra(p), k = larg / F.w, c = document.createElement("canvas"); c.width = larg; c.height = Math.round(F.h * k);
