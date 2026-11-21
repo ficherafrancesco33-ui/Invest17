@@ -1,5 +1,5 @@
 {
- "data": "2026-11-20",
+ "data": "2026-11-21",
  "controllati": {
   "Lasnigo|CO": 0,
   "Garzeno|CO": 0,
@@ -7,10 +7,10 @@
   "Bene Lario|CO": 0,
   "Lovero|SO": 0,
   "Rezzago|CO": 0,
-  "Sormano|CO": 0,
+  "Sormano|CO": 1,
   "Mello|SO": 0,
   "Tirano|SO": 1,
-  "Bellano|LC": 1,
+  "Bellano|LC": 4,
   "Edolo|BS": 0,
   "Delebio|SO": 1,
   "Omegna|VB": 0,
@@ -56,7 +56,15 @@
   "Busto Arsizio|VA": 0,
   "Varese|VA": 1,
   "Crema|CR": 0,
-  "Cinisello Balsamo|MI": 0
+  "Cinisello Balsamo|MI": 0,
+  "Stazzona|CO": 1,
+  "Esino Lario|LC": 1,
+  "Margno|LC": 1,
+  "Magreglio|CO": 1,
+  "Zelbio|CO": 2,
+  "Alta Valle Intelvi|CO": 1,
+  "Sueglio|LC": 1,
+  "Civo|SO": 1
  },
  "coord": {
   "Edolo": [
@@ -66,6 +74,42 @@
   "Delebio": [
    46.1373,
    9.4638
+  ],
+  "Stazzona": [
+   46.1385,
+   9.2753
+  ],
+  "Esino Lario": [
+   45.9957,
+   9.3357
+  ],
+  "Sormano": [
+   45.8782,
+   9.2491
+  ],
+  "Margno": [
+   46.0303,
+   9.3793
+  ],
+  "Magreglio": [
+   45.9182,
+   9.2602
+  ],
+  "Zelbio": [
+   45.9051,
+   9.1784
+  ],
+  "Alta Valle Intelvi": [
+   45.9792,
+   9.0643
+  ],
+  "Sueglio": [
+   46.0854,
+   9.3316
+  ],
+  "Civo": [
+   46.1483,
+   9.5623
   ]
  },
  "annunci": [
@@ -748,6 +792,459 @@
    ],
    "spese_mese": 0,
    "trovato": "2026-11-20"
+  },
+  {
+   "id": "127998408",
+   "comune": "Bellano",
+   "p": "LC",
+   "prezzo": 33000,
+   "mq": 61,
+   "locali": 2,
+   "bagni": 2,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Frazione Noceno, Bellano",
+   "titolo": "Casa terra-cielo a Noceno, sopra Bellano",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1897912378/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1897912442/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1897912504/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1897912544/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1897912560/m-c.jpg"
+   ],
+   "aggiornato": "02/04/2026",
+   "agenzia": "Tempocasa Oggiono",
+   "pro": [
+    "Prezzo molto basso: 33.000 € per 61 m², sopra il lago di Bellano",
+    "Due bagni: si può dividere in due monolocali da affittare",
+    "Sul Sentiero del Viandante, cercato dagli escursionisti"
+   ],
+   "contro": [
+    "Classe G e su più piani (interrato, terra, primo)",
+    "Riscaldamento non indicato: chiedere prima di visitare"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "132047616",
+   "comune": "Bellano",
+   "p": "LC",
+   "prezzo": 55000,
+   "mq": 66,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "buono",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Roma, Vendrogno, Bellano",
+   "titolo": "Trilocale arredato con terrazzo panoramico a Vendrogno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1995647518/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1995648378/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1995647472/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1995647572/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1995647628/m-c.jpg"
+   ],
+   "aggiornato": "09/10/2026",
+   "agenzia": "Privato",
+   "pro": [
+    "Arredato e subito abitabile, riscaldamento autonomo a caldaia",
+    "Grande terrazzo con vista sulle montagne, due camere",
+    "Nessuna spesa condominiale; 15 minuti dal lago"
+   ],
+   "contro": [
+    "Vendrogno è in quota: d'estate e nei weekend, meno in inverno",
+    "Foto da guardare prima di contattare"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "103713046",
+   "comune": "Bellano",
+   "p": "LC",
+   "prezzo": 57000,
+   "mq": 100,
+   "locali": 3,
+   "bagni": 2,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Sanico, Vendrogno, Bellano",
+   "titolo": "Casa indipendente su tre livelli nel borgo di Sanico",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1350386136/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1350386140/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1350386148/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1350386150/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1350386156/m-c.jpg"
+   ],
+   "aggiornato": "07/06/2023",
+   "agenzia": "Valsassina Case",
+   "pro": [
+    "Casa indipendente di 100 m² con due bagni e cantina, arredata",
+    "Pensata come casa vacanza, clima mite a 730 m",
+    "Nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Online dal 2023: c'è margine per trattare",
+    "Classe G, su tre livelli",
+    "Foto da guardare prima di contattare"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "119048833",
+   "comune": "Stazzona",
+   "p": "CO",
+   "prezzo": 55000,
+   "mq": 63,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Morbio 25, Stazzona",
+   "titolo": "Casetta indipendente con cortile nel borgo di Stazzona",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1665755949/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1665756293/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1665756575/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1665757083/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1665757379/m-c.jpg"
+   ],
+   "aggiornato": "16/07/2026",
+   "agenzia": "Studio Immobiliario",
+   "pro": [
+    "Casa indipendente con cortile, pochi minuti dalle spiagge dell'Alto Lario",
+    "Arredata e abitabile",
+    "Nessuna spesa condominiale"
+   ],
+   "contro": [
+    "La camera al primo piano si raggiunge da una scala esterna",
+    "L'annuncio suggerisce una piccola ristrutturazione per valorizzarla"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "114153269",
+   "comune": "Esino Lario",
+   "p": "LC",
+   "prezzo": 58000,
+   "mq": 98,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Via Solferino, Esino Lario",
+   "titolo": "Bilocale con taverna e terrazzino nel Villaggio Giardino",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1566117441/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1566117467/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1566117493/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1566117571/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1566117691/m-c.jpg"
+   ],
+   "aggiornato": "22/07/2026",
+   "agenzia": "Bufi Francesco srl",
+   "spese_mese": 90,
+   "pro": [
+    "Villaggio con piscina, tennis e parco: adatto a chi affitta per le vacanze",
+    "Taverna con ingresso autonomo usabile come seconda camera",
+    "Termoautonomo, arredamento acquistabile a parte"
+   ],
+   "contro": [
+    "A 30 minuti da Varenna e dal lago",
+    "Spese condominiali 90 € al mese"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "130907804",
+   "comune": "Sormano",
+   "p": "CO",
+   "prezzo": 25000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Giuseppe Mazzini 10, Sormano",
+   "titolo": "Bilocale ristrutturato a Sormano, sopra Bellagio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1968619566/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1968619552/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1968619582/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1968619534/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1968619418/m-c.jpg"
+   ],
+   "aggiornato": "13/11/2026",
+   "agenzia": "Tempocasa Oggiono",
+   "pro": [
+    "Solo 25.000 €: il prezzo più basso trovato, già ristrutturato",
+    "Nessuna spesa condominiale",
+    "Triangolo Lariano: Pian del Tivano e Bellagio a 20 minuti"
+   ],
+   "contro": [
+    "Senza riscaldamento: va installata una stufa o una pompa di calore",
+    "Classe G"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129718244",
+   "comune": "Margno",
+   "p": "LC",
+   "prezzo": 48000,
+   "mq": 75,
+   "locali": 3,
+   "bagni": 2,
+   "piano": "2",
+   "stato": "ristrutturato",
+   "classe": "G",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Via Volta, Margno",
+   "titolo": "Trilocale appena ristrutturato nel centro di Margno",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1940065204/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940087248/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940087262/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940087268/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940087272/m-c.jpg"
+   ],
+   "aggiornato": "30/06/2026",
+   "agenzia": "Immobiliare Grigna",
+   "pro": [
+    "Ristrutturato di recente, solo da arredare",
+    "Valsassina: Pian delle Betulle (sci) a due passi, Bellano a 15 minuti",
+    "Spese condominiali minime"
+   ],
+   "contro": [
+    "Riscaldamento solo predisposto per stufa a pellet, acqua calda con boiler elettrico",
+    "Secondo piano senza ascensore"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "120023360",
+   "comune": "Magreglio",
+   "p": "CO",
+   "prezzo": 60000,
+   "mq": 70,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Via Attilio Prevost, Magreglio",
+   "titolo": "Bilocale con ingresso indipendente e posto auto al Ghisallo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1689748746/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1689748812/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1689748822/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1689749114/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1689749154/m-c.jpg"
+   ],
+   "aggiornato": "10/10/2025",
+   "agenzia": "Il Polo Immobiliare Erba",
+   "pro": [
+    "Ingresso indipendente e posto auto nella proprietà",
+    "Zona di ville per le vacanze, 10 minuti da Bellagio",
+    "Nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Al tetto dei 60.000 €",
+    "Piano terra in casa anni '70: verificare umidità"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "116196659",
+   "comune": "Zelbio",
+   "p": "CO",
+   "prezzo": 45000,
+   "mq": 76,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "2",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Centro storico, Zelbio",
+   "titolo": "Trilocale all'ultimo piano nel centro storico di Zelbio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1608709681/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1608709791/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1608709761/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1612625777/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1608709943/m-c.jpg"
+   ],
+   "aggiornato": "04/01/2025",
+   "agenzia": "Le Case del Lago",
+   "pro": [
+    "Abitabile, bagno rifatto di recente, due camere e balcone",
+    "Casa di sole due unità, nessuna spesa condominiale",
+    "Pian del Tivano e lago a pochi km"
+   ],
+   "contro": [
+    "Caldaia a gasolio (il gas arriva già alla casa)",
+    "Secondo piano senza ascensore, niente posto auto",
+    "Online da inizio 2025: margine per trattare"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "132412276",
+   "comune": "Zelbio",
+   "p": "CO",
+   "prezzo": 50000,
+   "mq": 80,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Centro storico, Zelbio",
+   "titolo": "Bilocale su due livelli con camino a Zelbio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/2004309184/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004309188/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004309194/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004309200/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004309204/m-c.jpg"
+   ],
+   "aggiornato": "14/09/2026",
+   "agenzia": "Le Case del Lago",
+   "pro": [
+    "Non servono lavori, bagno rifatto di recente",
+    "Riscaldamento autonomo, garage acquistabile a parte",
+    "Raggiungibile in auto, parcheggio vicino"
+   ],
+   "contro": [
+    "Scala a chiocciola tra i piani",
+    "Serramenti a vetro singolo"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "50056255",
+   "comune": "Alta Valle Intelvi",
+   "p": "CO",
+   "prezzo": 49000,
+   "mq": 52,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "R",
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Piazza Lanfranconi, Pellio Intelvi, Alta Valle Intelvi",
+   "titolo": "Bilocale rinnovato a Pellio Intelvi",
+   "foto": [
+    "https://pwm.im-cdn.it/image/564265838/m-c.jpg",
+    "https://pwm.im-cdn.it/image/418950177/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1884439782/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1884443346/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1884440206/m-c.jpg"
+   ],
+   "aggiornato": "24/10/2026",
+   "agenzia": "Privato",
+   "pro": [
+    "Impianti, infissi e bagno nuovi, cappotto isolante, termoautonomo a metano",
+    "Pellio Intelvi ha tra le occupazioni B&B più alte della zona (54%)",
+    "Venduto arredato, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Valle d'Intelvi: 15-20 minuti dal lago ad Argegno",
+    "Foto da guardare prima di contattare"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "99358710",
+   "comune": "Sueglio",
+   "p": "LC",
+   "prezzo": 58000,
+   "mq": 57,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "stato": "buono",
+   "arredato": false,
+   "ascensore": false,
+   "indirizzo": "Via ai Monti, Sueglio",
+   "titolo": "Bilocale con vista lago e box a Sueglio",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1243457644/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1243457668/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1243457684/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1243457696/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1243458192/m-c.jpg"
+   ],
+   "aggiornato": "09/11/2022",
+   "agenzia": "Immobiliare Miralago",
+   "pro": [
+    "Vista panoramica sul lago e sulla valle",
+    "Box privato incluso",
+    "Dervio e il lago a pochi chilometri"
+   ],
+   "contro": [
+    "Online dal 2022: chiedere se è ancora disponibile, margine per trattare",
+    "Classe energetica non indicata"
+   ],
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "107710585",
+   "comune": "Civo",
+   "p": "SO",
+   "prezzo": 49000,
+   "mq": 54,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "stato": "buono",
+   "arredato": true,
+   "ascensore": false,
+   "indirizzo": "Frazione Santa Croce, Civo",
+   "titolo": "Porzione di casa con terrazzo e vigneto a Civo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1440789925/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1440789929/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1440789931/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1440789935/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1440789937/m-c.jpg"
+   ],
+   "aggiornato": "12/04/2026",
+   "agenzia": "Immobiliare Del Martino Mario",
+   "pro": [
+    "Terrazzo panoramico e vigneto di 587 m² con cantina per il vino",
+    "Costiera dei Cech, soleggiata, a 15 minuti dal lago a Colico",
+    "Arredata"
+   ],
+   "contro": [
+    "Descrizione breve: chiedere riscaldamento e stato degli impianti",
+    "Classe energetica non indicata"
+   ],
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -855,6 +1352,56 @@
    "id": "122412740",
    "comune": "Novi Ligure",
    "motivo": "4° piano senza ascensore"
+  },
+  {
+   "id": "69890036",
+   "comune": "Torno",
+   "motivo": "raggiungibile solo con auto 4x4, senza riscaldamento"
+  },
+  {
+   "id": "132085998",
+   "comune": "Torno",
+   "motivo": "Montepiatto: raggiungibile solo con auto 4x4"
+  },
+  {
+   "id": "134557219",
+   "comune": "Colico",
+   "motivo": "baita senza bagno né fognatura"
+  },
+  {
+   "id": "132082108",
+   "comune": "Sorico",
+   "motivo": "casa in costruzione, impianti da fare"
+  },
+  {
+   "id": "90027253",
+   "comune": "Cerano d'Intelvi",
+   "motivo": "in ristrutturazione"
+  },
+  {
+   "id": "126992139",
+   "comune": "Mello",
+   "motivo": "servono interventi strutturali"
+  },
+  {
+   "id": "128250176",
+   "comune": "Civo",
+   "motivo": "da ristrutturare, sottotetto allo stato grezzo"
+  },
+  {
+   "id": "131249832",
+   "comune": "Lecco",
+   "motivo": "asta il 15/12/2026"
+  },
+  {
+   "id": "130459294",
+   "comune": "Sueglio",
+   "motivo": "gravato da uso civico"
+  },
+  {
+   "id": "131339022",
+   "comune": "Bellano",
+   "motivo": "in descrizione prezzo di partenza 65.000 €, manca la caldaia"
   }
  ]
 }
