@@ -4,8 +4,8 @@ Procedura che Claude segue ogni mattina (attività programmata). Repo: `ficheraf
 Scopo: leggere gli avvisi email di Immobiliare.it che arrivano nella Gmail collegata (ricerche salvate da Imma), aprire ogni annuncio e caricarlo nell'app.
 
 ## Regole che non si toccano
-- Si aprono **solo** gli annunci arrivati negli avvisi, **uno alla volta**, con WebFetch. Niente pagine di ricerca, niente scorrimento di elenchi.
-- Se Immobiliare blocca (403, "accesso temporaneamente limitato", captcha): **ci si ferma subito**. Non si cambia strada (niente proxy, cache, mirror, Chrome, altre connessioni). Gli annunci non aperti vanno in `pendenti` e si riprovano il giorno dopo.
+- Si leggono **tutti** gli annunci nuovi della ricerca salvata di Imma (l'email ne mostra solo 10 anche quando sono 43): si apre la ricerca dal link "Avvia ricerca" dell'avviso, in Chrome sul Mac di Imma (Claude in Chrome), e si leggono gli annunci più recenti (vedi sezione 1b). Niente altre ricerche.
+- Se Immobiliare blocca (403, 429, "accesso temporaneamente limitato", captcha): **ci si ferma subito**. Non si cambia strada (niente proxy, cache, mirror, altre connessioni). Gli annunci non aperti vanno in `pendenti` e si riprovano il giorno dopo.
 - Niente idealista: non si usa per riempire l'app.
 - Niente numeri di telefono dei privati, niente nomi di privati.
 - Non si cancellano né si modificano le email (niente etichette, niente "letto"): gli id delle email già lette stanno in `tools/novita.json` → `email`.
@@ -17,6 +17,19 @@ Per ogni avviso leggi il corpo (`get_thread`): titolo della ricerca (es. "Reside
 L'id dell'annuncio è il numero in `/annunci/NNNNNNNNN/`. Se il link è un redirect di tracciamento, aprilo con WebFetch e segui il redirect fino a `www.immobiliare.it/annunci/ID/`.
 Nota (21/11/2026): gli avvisi da `noreply@notifiche.immobiliare.it` hanno link `clicks.immobiliare.it` troppo lunghi per WebFetch (403 "url exceeds the maximum fetchable length") e non contengono l'id dell'annuncio: in quel caso non si cambia strada, gli annunci vanno in `pendenti` con titolo, prezzo e link.
 Scarta subito gli id già presenti: `tools/auto_raw.json` (annunci + scartati) e `tools/terr/raw_immobiliare_milano.txt` (prima colonna).
+
+## 1b. Tutti gli annunci dell'avviso, non solo i 10 dell'email (con Chrome)
+L'email mostra al massimo 10 annunci. Per leggerli tutti:
+1. Apri in una nuova scheda di Chrome il link **"Avvia ricerca"** dell'avviso (redirect `clicks.immobiliare.it` → `www.immobiliare.it/search-list/?vrt=...&criterio=data&ordine=desc`). Se la scheda non si apre o chiede l'accesso, fermati e segna tutto in `pendenti`.
+2. Sulla pagina, con lo strumento JavaScript di Chrome: prendi l'URL della chiamata `/api-next/search-list/listings/` (da `performance.getEntriesByType('resource')`), aggiungi `noAste=1` (toglie le aste) e leggi le pagine `pag=1,2,3…` (pausa di 2-3 secondi tra una pagina e l'altra) finché trovi solo annunci già visti. Gli annunci sono ordinati dal più nuovo.
+3. Nuovi = id non presenti in `tools/auto_raw.json` (annunci + scartati) né in `tools/novita.json` → `visti`. Al massimo 4 pagine per volta.
+4. Primo filtro sui dati della lista: niente aste, quote, nude proprietà; almeno 30 m²; almeno 6 foto; niente 3° piano e oltre senza ascensore.
+5. Guarda le foto: metti 6 annunci per volta in un riquadro sulla pagina di Immobiliare (immagini `https://pwm.im-cdn.it/image/ID/xxs-c.jpg`) e fai uno screenshot. Tieni solo case finite e belle, che attirano inquilini. Niente case da ristrutturare, rustici, case di corte malmesse.
+6. Per quelle rimaste apri la scheda (`fetch('/annunci/ID/')` e `__NEXT_DATA__`, 3-4 secondi tra una e l'altra) e leggi la **descrizione intera**, poi applica la sezione 2.
+7. Affitto: stima con gli annunci di affitto della stessa zona (stessa chiamata API con `idContratto=2`, area di circa 3×3 km intorno al comune, 30-75 m²), mediana €/m² meno 10%; scrivilo in `canone` e `canone_fonte`.
+8. Case non arredate: aggiungi l'arredo come `lavori`: 5.000 € sotto i 60 m², 6.000 € fino a 80 m², 7.000 € oltre.
+9. Tieni solo se la rendita netta calcolata dall'app è almeno il 7% (case sul lago, con il lago entro 10 minuti: almeno il 6%, budget fino a 70.000 € tutto compreso solo per Lago Maggiore e Lago di Como). Per controllare apri l'app in locale e guarda `analizza(im).rend`.
+10. Aggiungi tutti gli id letti in `tools/novita.json` → `visti`.
 
 ## 2. Investimenti (avviso con l'area disegnata, 20.000–60.000 €)
 Apri la scheda `https://www.immobiliare.it/annunci/ID/` e leggi: prezzo, m², locali, bagni, piano, stato, classe energetica, spese condominiali, agenzia, data "aggiornato il", indirizzo, descrizione, elenco foto (`pwm.im-cdn.it/image/NNN/...`).
