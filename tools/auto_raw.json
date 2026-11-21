@@ -416,40 +416,6 @@
    "trovato": "2026-11-20"
   },
   {
-   "id": "134351293",
-   "comune": "Broni",
-   "p": "PV",
-   "prezzo": 51000,
-   "mq": 98,
-   "locali": 3,
-   "bagni": 2,
-   "piano": "2",
-   "stato": "buono",
-   "classe": "G",
-   "arredato": false,
-   "indirizzo": "Via dei Recoaro 75, Valle Recoaro, Broni",
-   "titolo": "Due unità collegate nella Valle Recoaro, Broni",
-   "foto": [
-    "https://pwm.im-cdn.it/image/2046832327/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2046832339/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2046832347/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2046832307/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2046832333/m-c.jpg"
-   ],
-   "aggiornato": "03/11/2026",
-   "agenzia": "Tecnocasa Broni",
-   "pro": [
-    "98 m² in due unità collegate: si possono affittare separate",
-    "Posto auto, terrazza, nessuna spesa condominiale"
-   ],
-   "contro": [
-    "Arredi datati",
-    "Classe G, fuori dal centro"
-   ],
-   "spese_mese": 0,
-   "trovato": "2026-11-20"
-  },
-  {
    "id": "133255342",
    "comune": "Casale Monferrato",
    "p": "AL",
@@ -1889,6 +1855,11 @@
    "id": "73704102",
    "comune": "Schignano",
    "motivo": "online dal 2019, ingresso in comune con terzi"
+  },
+  {
+   "id": "134351293",
+   "comune": "Broni",
+   "motivo": "la descrizione dice che servono lavori di ristrutturazione interna"
   }
  ]
 }

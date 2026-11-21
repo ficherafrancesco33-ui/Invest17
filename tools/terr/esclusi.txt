@@ -224,3 +224,6 @@
 134940941;nuda proprietà
 134945881;asta
 134947091;nuda proprietà
+88543591;magazzino seminterrato, non abitazione
+127365567;asta pubblica
+127598188;locale C/2 (deposito) venduto come non abitativo
