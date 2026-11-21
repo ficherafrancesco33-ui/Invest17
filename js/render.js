@@ -541,9 +541,8 @@ function rnMobSvg(t, w, d, m = {}) {
 }
 function rnSvg(p, opt = {}) {
   const s = p.scala || 0.01, k = 1 / s;   // px per metro
-  const muri = opt.muri || rnMuriPng(p), pad = 40;
-  const bbAll = RN.bbox((p.stanze || []).flatMap(st => st.poly).concat([[0, 0], [p.W, p.H]]));
-  const vb = `${-pad} ${-pad} ${p.W + 2 * pad} ${p.H + 2 * pad}`;
+  const muri = opt.muri || rnMuriPng(p), F = rnInquadra(p), pad = 0;
+  const vb = `${F.x} ${F.y} ${F.w} ${F.h}`;
   const defs = `<defs>
     <pattern id="pLegno" width="${0.12 * k}" height="${0.9 * k}" patternUnits="userSpaceOnUse"><rect width="${0.12 * k}" height="${0.9 * k}" fill="#ead8b8"/><rect width="${0.12 * k}" height="${0.9 * k}" fill="none" stroke="#d9c19a" stroke-width="${0.01 * k}"/></pattern>
     <pattern id="pPiast" width="${0.3 * k}" height="${0.3 * k}" patternUnits="userSpaceOnUse"><rect width="${0.3 * k}" height="${0.3 * k}" fill="#f4eee6"/><rect width="${0.3 * k}" height="${0.3 * k}" fill="none" stroke="#ddd2c4" stroke-width="${0.012 * k}"/></pattern>
@@ -555,41 +554,49 @@ function rnSvg(p, opt = {}) {
     const [w, d] = rnDim(m); return `<g transform="translate(${m.x},${m.y}) rotate(${m.rot}) scale(${k})">${rnMobSvg(m.tipo, w, d, m)}</g>`; }).join("");
   const lab = (p.stanze || []).map(st => { const bb = RN.bbox(st.poly), cx = (bb.x0 + bb.x1) / 2, cy = (bb.y0 + bb.y1) / 2, mq = RN.area(st.poly) * s * s;
     // etichetta dove c'è spazio: il punto della stanza più lontano dai mobili, vicino al centro
-    let best = [cx, cy], bs = -1; for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) { const q = [bb.x0 + (bb.x1 - bb.x0) * i / 6, bb.y0 + (bb.y1 - bb.y0) * j / 6]; if (!RN.dentro(q, st.poly)) continue;
+    const serve = ((RN_TIPI[st.tipo]?.n || "").length * fs * 0.33) + fs * 0.3;
+    let best = [cx, cy], bs = -1; for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) { const q = [bb.x0 + (bb.x1 - bb.x0) * i / 8, bb.y0 + (bb.y1 - bb.y0) * j / 8]; if (!RN.dentro(q, st.poly) || RN.distBordo(q, st.poly) < Math.min(serve, (bb.x1 - bb.x0) / 2.2)) continue;
       const dm = Math.min(1e9, ...(p.mobili || []).filter(m => m.tipo !== "tappeto").map(m => Math.hypot(m.x - q[0], m.y - q[1]))), dc = Math.hypot(q[0] - cx, q[1] - cy), sc = Math.min(dm, 2.2 * k) - dc * 0.25 + Math.min(RN.distBordo(q, st.poly), 0.6 * k);
       if (sc > bs) { bs = sc; best = q; } }
     return `<g font-family="Barlow, Arial, sans-serif" text-anchor="middle"><text x="${best[0]}" y="${best[1]}" font-size="${fs}" font-weight="700" fill="#3a1018" letter-spacing="0.5">${esc((RN_TIPI[st.tipo]?.n || "").toUpperCase())}</text>
       <text x="${best[0]}" y="${best[1] + fs * 1.15}" font-size="${fs * 0.85}" fill="#8a6414">${num(mq, 1)} m²</text></g>`; }).join("");
-  const apri = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${vb}" width="${p.W + 2 * pad}" height="${p.H + 2 * pad}">${defs}`;
-  if (opt.solo === "sotto") return `${apri}<rect x="${-pad}" y="${-pad}" width="${p.W + 2 * pad}" height="${p.H + 2 * pad}" fill="#fffdf9"/>${stanze}</svg>`;
+  const apri = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${vb}" width="${F.w}" height="${F.h}">${defs}`;
+  if (opt.solo === "sotto") return `${apri}<rect x="${F.x}" y="${F.y}" width="${F.w}" height="${F.h}" fill="#fffdf9"/>${stanze}</svg>`;
   if (opt.solo === "sopra") return `${apri}${mob}${lab}</svg>`;
-  return `${apri}<rect x="${-pad}" y="${-pad}" width="${p.W + 2 * pad}" height="${p.H + 2 * pad}" fill="#fffdf9"/>
+  return `${apri}<rect x="${F.x}" y="${F.y}" width="${F.w}" height="${F.h}" fill="#fffdf9"/>
     ${stanze}<image href="${muri}" xlink:href="${muri}" x="0" y="0" width="${p.W}" height="${p.H}"/>${mob}${lab}</svg>`;
 }
 // pianta → PNG a tre strati: pavimenti, muri, mobili e scritte (funziona anche su iPhone)
+// inquadratura: solo l'appartamento, con un metro di margine
+function rnInquadra(p) { if (!(p.stanze || []).length) return { x: 0, y: 0, w: p.W, h: p.H }; const b = RN.bbox(p.stanze.flatMap(st => st.poly)), m = p.scala ? 1 / p.scala : 40;
+  const x = Math.max(-40, b.x0 - m), y = Math.max(-40, b.y0 - m), x1 = Math.min(p.W + 40, b.x1 + m), y1 = Math.min(p.H + 40, b.y1 + m); return { x, y, w: x1 - x, h: y1 - y }; }
 async function rnPng(p, larg = 1800, opt = {}) {
-  const pad = 40, Wt = p.W + 2 * pad, Ht = p.H + 2 * pad, k = larg / Wt, c = document.createElement("canvas"); c.width = larg; c.height = Math.round(Ht * k);
+  const F = rnInquadra(p), k = larg / F.w, c = document.createElement("canvas"); c.width = larg; c.height = Math.round(F.h * k);
   const g = c.getContext("2d"), svgImg = sv => rnImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(sv));
   g.drawImage(await svgImg(rnSvg(p, { ...opt, solo: "sotto", muri: 1 })), 0, 0, c.width, c.height);
-  g.drawImage(await rnImg(rnMuriPng(p)), pad * k, pad * k, p.W * k, p.H * k);
+  g.drawImage(await rnImg(rnMuriPng(p)), -F.x * k, -F.y * k, p.W * k, p.H * k);
   g.drawImage(await svgImg(rnSvg(p, { ...opt, solo: "sopra", muri: 1 })), 0, 0, c.width, c.height);
   return c.toDataURL("image/png");
 }
 /* ============ 3D (three.js) ============ */
-async function rn3D(host, p) {
+const RN_STILI3D = { bambola: ["Casa di bambola", 1.3], realistico: ["Realistico", 2.7], pianta: ["Pianta in rilievo", 0.35] };
+async function rn3D(host, p, stile = "bambola") {
   const THREE = await import("https://esm.sh/three@0.160.0");
   const { OrbitControls } = await import("https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js");
-  const s = p.scala, Wm = p.W * s, Hm = p.H * s, cx = Wm / 2, cz = Hm / 2;
+  const s = p.scala, bbA = RN.bbox((p.stanze || []).flatMap(st => st.poly)), pad = 0.6 / s;
+  // inquadro solo l'appartamento (il guscio), non tutta la planimetria
+  const X0 = (bbA.x0 - pad) * s, X1 = (bbA.x1 + pad) * s, Z0 = (bbA.y0 - pad) * s, Z1 = (bbA.y1 + pad) * s, Wm = X1 - X0, Hm = Z1 - Z0, cx = (X0 + X1) / 2, cz = (Z0 + Z1) / 2;
   const ren = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); ren.setPixelRatio(Math.min(2, devicePixelRatio)); ren.shadowMap.enabled = true; ren.shadowMap.type = THREE.PCFSoftShadowMap;
   const w = host.clientWidth, h = Math.round(w * 0.75); ren.setSize(w, h); host.innerHTML = ""; host.appendChild(ren.domElement);
   const scene = new THREE.Scene(); scene.background = new THREE.Color("#f6efe4");
-  const cam = new THREE.PerspectiveCamera(38, w / h, 0.1, 200); const dist = Math.max(Wm, Hm) * 1.25; cam.position.set(cx + dist * 0.35, dist * 0.95, cz + dist * 0.75);
+  const cam = new THREE.PerspectiveCamera(38, w / h, 0.1, 200); const dist = Math.max(Wm, Hm) * (stile === "pianta" ? 1.25 : 1.15);
+  if (stile === "pianta") cam.position.set(cx, dist * 1.25, cz + dist * 0.25); else if (stile === "realistico") cam.position.set(cx + dist * 0.45, dist * 0.7, cz + dist * 0.85); else cam.position.set(cx + dist * 0.3, dist * 0.9, cz + dist * 0.7);
   const ctl = new OrbitControls(cam, ren.domElement); ctl.target.set(cx, 0, cz); ctl.maxPolarAngle = Math.PI * 0.47; ctl.enableDamping = true; ctl.update();
   scene.add(new THREE.HemisphereLight(0xfff6e8, 0xb9a487, 0.9));
   const sun = new THREE.DirectionalLight(0xfff2dc, 1.6); sun.position.set(cx - Wm * 0.6, Math.max(Wm, Hm) * 1.3, cz - Hm * 0.4); sun.target.position.set(cx, 0, cz); sun.castShadow = true;
   const sc = Math.max(Wm, Hm) * 0.75; Object.assign(sun.shadow.camera, { left: -sc, right: sc, top: sc, bottom: -sc }); sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0005; scene.add(sun, sun.target);
   // pavimento esterno
-  const base = new THREE.Mesh(new THREE.PlaneGeometry(Wm * 1.4, Hm * 1.4), new THREE.MeshStandardMaterial({ color: "#efe6d6" })); base.rotation.x = -Math.PI / 2; base.position.set(cx, -0.01, cz); base.receiveShadow = true; scene.add(base);
+  const base = new THREE.Mesh(new THREE.PlaneGeometry(Wm * 1.6, Hm * 1.6), new THREE.MeshStandardMaterial({ color: "#efe6d6" })); base.rotation.x = -Math.PI / 2; base.position.set(cx, -0.01, cz); base.receiveShadow = true; scene.add(base);
   // pavimenti delle stanze
   const tinte = { legno: "#d9bb8c", piastrelle: "#ece6dc", esterno: "#cfc6b4" };
   for (const st of p.stanze || []) { const sh = new THREE.Shape(st.poly.map(([x, y]) => new THREE.Vector2(x * s, y * s)));
@@ -604,10 +611,22 @@ async function rn3D(host, p) {
     let x2 = x; while (x2 + 1 < gw && G[y * gw + x2 + 1] && !usato[y * gw + x2 + 1]) x2++;
     let y2 = y; outer: while (y2 + 1 < gh) { for (let i = x; i <= x2; i++) if (!G[(y2 + 1) * gw + i] || usato[(y2 + 1) * gw + i]) break outer; y2++; }
     for (let j = y; j <= y2; j++) for (let i = x; i <= x2; i++) usato[j * gw + i] = 1; rects.push([x, y, x2, y2]); }
-  const HW = 2.7, mats = [0, 1, 2, 3, 4, 5].map(i => new THREE.MeshStandardMaterial({ color: i === 2 ? "#6a1828" : "#fbf7f0", roughness: 0.9 }));
-  const box = new THREE.BoxGeometry(1, 1, 1), inst = new THREE.InstancedMesh(box, mats, rects.length), M = new THREE.Matrix4();
-  rects.forEach(([x, y, x2, y2], i) => { const a = cell * s; M.compose(new THREE.Vector3((x + x2 + 1) / 2 * a, HW / 2, (y + y2 + 1) / 2 * a), new THREE.Quaternion(), new THREE.Vector3((x2 - x + 1) * a, HW, (y2 - y + 1) * a)); inst.setMatrixAt(i, M); });
-  inst.castShadow = true; inst.receiveShadow = true; scene.add(inst);
+  const HW = RN_STILI3D[stile]?.[1] || 1.3, mats = [0, 1, 2, 3, 4, 5].map(i => new THREE.MeshStandardMaterial({ color: i === 2 ? "#6a1828" : "#fbf7f0", roughness: 0.9 }));
+  // finestre: nei tratti segnati il muro diventa davanzale (90 cm) + vetro + architrave
+  const FIN = (p.finestre || []).map(f => f.seg), inFin = (x, y) => { const px = (x + 0.5) * cell, py = (y + 0.5) * cell;
+    return FIN.some(([x0, y0, x1, y1]) => { const oriz = Math.abs(x1 - x0) >= Math.abs(y1 - y0), t = 0.45 / s;
+      return oriz ? px >= Math.min(x0, x1) && px <= Math.max(x0, x1) && Math.abs(py - y0) <= t : py >= Math.min(y0, y1) && py <= Math.max(y0, y1) && Math.abs(px - x0) <= t; }); };
+  const pieni = [], fin = []; rects.forEach(r => { const [x, y, x2, y2] = r, mx = (x + x2) >> 1, my = (y + y2) >> 1; (FIN.length && inFin(mx, my) ? fin : pieni).push(r); });
+  const box = new THREE.BoxGeometry(1, 1, 1), M = new THREE.Matrix4(), a = cell * s;
+  const blocchi = (L, y0, y1, mt) => { if (!L.length || y1 <= y0) return; const im = new THREE.InstancedMesh(box, mt, L.length);
+    L.forEach(([x, y, x2, y2], i) => { M.compose(new THREE.Vector3((x + x2 + 1) / 2 * a, (y0 + y1) / 2, (y + y2 + 1) / 2 * a), new THREE.Quaternion(), new THREE.Vector3((x2 - x + 1) * a, y1 - y0, (y2 - y + 1) * a)); im.setMatrixAt(i, M); });
+    im.castShadow = true; im.receiveShadow = true; scene.add(im); };
+  blocchi(pieni, 0, HW, mats);
+  if (fin.length) { const hDav = Math.min(0.9, HW * 0.45); blocchi(fin, 0, hDav, mats);
+    if (HW > 2.2) blocchi(fin, 2.2, HW, mats);
+    const vetro = new THREE.MeshStandardMaterial({ color: "#9fc3d1", transparent: true, opacity: 0.45, roughness: 0.1 });
+    const im = new THREE.InstancedMesh(box, vetro, fin.length); fin.forEach(([x, y, x2, y2], i) => { const top = Math.min(HW, 2.2), wx = (x2 - x + 1) * a, wz = (y2 - y + 1) * a;
+      M.compose(new THREE.Vector3((x + x2 + 1) / 2 * a, (hDav + top) / 2, (y + y2 + 1) / 2 * a), new THREE.Quaternion(), new THREE.Vector3(wx > wz ? wx : 0.03, top - hDav, wx > wz ? 0.03 : wz)); im.setMatrixAt(i, M); }); scene.add(im); }
   // mobili: volumi semplici
   const mat = c => new THREE.MeshStandardMaterial({ color: c, roughness: 0.75 });
   const MB = { divano: [0.42, "#e6d5ba"], poltrona: [0.42, "#e6d5ba"], tavolino: [0.4, "#c9a77a"], tv: [0.5, "#e9dcc6"], tavolo6: [0.75, "#c9a77a"], tavolo4: [0.75, "#c9a77a"], tappeto: [0.01, "#d8c08a"],
@@ -639,12 +658,16 @@ async function rnRisultato() {
   rnGuida(`<b>Ecco la pianta arredata e il 3D.</b> Gira il 3D con il dito, poi scegli cosa farne.`);
   box.innerHTML = `<h2>Pianta arredata</h2><div class="rn2d">${svg}</div>
     ${(p.lavori || []).length ? `<h2>Lavori <small>in giallo si demolisce, in rosso si costruisce</small></h2><div class="rn2d">${rnSvg({ ...p, mobili: [] }, { lavori: true })}</div>` : ""}
-    <h2>Vista 3D <small>trascina per girare, due dita per lo zoom</small></h2><div class="rn3d" id="rn3d"><div class="spin"></div></div>
+    <h2>Vista 3D <small>trascina per girare, due dita per lo zoom</small></h2>
+    <div class="chips">${Object.entries(RN_STILI3D).map(([k, v]) => `<button class="chip ${(p.stile3d || "bambola") === k ? "on" : ""}" data-rn3s="${k}">${v[0]}</button>`).join("")}</div>
+    <div class="rn3d" id="rn3d"><div class="spin"></div></div>
     <div class="rntab">${p.stanze.map(st => `<span>${esc(RN_TIPI[st.tipo]?.n || "")}<b>${num(RN.area(st.poly) * p.scala * p.scala, 1)} m²</b></span>`).join("")}<span class="tot">Totale calpestabile<b>${num(mq, 1)} m²</b></span></div>
     <div class="btns"><button class="btn pri" data-rnpdf>PDF del rendering</button><button class="btn sec" data-rnall>Metti nel PDF della valutazione</button></div>
     <div class="btns"><button class="btn sec" data-rnpng2>Scarica la pianta (PNG)</button><button class="btn sec" data-rnpng3>Scarica il 3D (PNG)</button></div>
     <p class="note" id="rnmsg"></p>`;
-  let V3 = null; try { V3 = await rn3D($("#rn3d"), p); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
+  let V3 = null;
+  box.querySelectorAll("[data-rn3s]").forEach(b => b.addEventListener("click", async () => { p.stile3d = b.dataset.rn3s; rnSalva(); box.querySelectorAll("[data-rn3s]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, p.stile3d); }));
+  try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "bambola"); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
   const scarica = (url, nome) => { const a = document.createElement("a"); a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); };
   const imgs = async () => ({ p2: await rnPng(p), p3: V3 ? V3.foto() : null, p4: (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null });
   // miniatura per l'elenco

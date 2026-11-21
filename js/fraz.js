@@ -395,7 +395,7 @@ function fzReport(p, C) {
     + (p.fzApri || []).map(([x0, y0, x1, y1]) => `<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="#c9a24b" stroke-width="${0.08 * k}" stroke-dasharray="${0.08 * k} ${0.05 * k}"/>`).join("");
   const nuovi = (p.fzMuri || []).map(([x0, y0, x1, y1]) => `<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="#c9a24b" stroke-width="${0.12 * k}" stroke-linecap="round"/>`).join("");
   const ing = (p.fzIng || []).map((e, i) => { const t = fzEtich(p, i); if (!t) return ""; const w = (t.length + 2) * fs * 0.62, c = p.fzTipoIng === "comune" ? FZ_VANO : FZ_COL[i];
-    const ex = Math.max(-40 + w / 2 + 4, Math.min(p.W + 40 - w / 2 - 4, e.x)), ey = Math.max(-40 + fs, Math.min(p.H + 40 - fs, e.y)); e = { x: ex, y: ey };
+    const F = rnInquadra(p), ex = Math.max(F.x + w / 2 + 4, Math.min(F.x + F.w - w / 2 - 4, e.x)), ey = Math.max(F.y + fs, Math.min(F.y + F.h - fs, e.y)); e = { x: ex, y: ey };
     return `<g><rect x="${e.x - w / 2}" y="${e.y - fs * 0.85}" width="${w}" height="${fs * 1.7}" rx="${fs * 0.85}" fill="${c}" stroke="#fff" stroke-width="${fs * 0.12}"/><text x="${e.x}" y="${e.y + fs * 0.36}" font-size="${fs}" font-weight="800" fill="#fff" text-anchor="middle" font-family="Barlow, Arial, sans-serif">➜ ${esc(t.toUpperCase())}</text></g>`; }).join("");
   const unita = (p.fzPiani || []).map((pl, u) => { const ids = Object.entries(p.fzAss).filter(([, v]) => v === u).map(([id]) => id), sts = p.stanze.filter(x => ids.includes(x.id)); if (!sts.length) return "";
     const big = sts.sort((a, b) => RN.area(b.poly) - RN.area(a.poly))[0], bb = RN.bbox(big.poly);
