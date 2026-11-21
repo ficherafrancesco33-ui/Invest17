@@ -186,37 +186,6 @@
    ]
   },
   {
-   "id": "134259939",
-   "comune": "Bellano",
-   "p": "LC",
-   "prezzo": 60000,
-   "mq": 39,
-   "locali": 1,
-   "bagni": 1,
-   "piano": "rialzato",
-   "stato": "buono",
-   "classe": "G",
-   "arredato": true,
-   "indirizzo": "Frazione Lezzeno, Bellano",
-   "titolo": "Monolocale già usato come casa vacanze",
-   "foto": [
-    "https://pwm.im-cdn.it/image/2045118977/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2045118999/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2045119023/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2045119037/m-c.jpg"
-   ],
-   "aggiornato": "30/10/2026",
-   "agenzia": "Molteni Real Estate",
-   "pro": [
-    "Già utilizzato come casa vacanze sul Lago di Como",
-    "Cantina e nessuna spesa condominiale"
-   ],
-   "contro": [
-    "Classe energetica G",
-    "Frazione collinare, non sul lungolago"
-   ]
-  },
-  {
    "id": "133829174",
    "comune": "Codogno",
    "p": "LO",
@@ -326,46 +295,6 @@
    "trovato": "2026-11-21",
    "canone": 540,
    "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova, zona Bolzaneto, Rivarolo, Certosa: mediana 13,2 €/m² al mese su 7 bilocali e trilocali, ridotta del 10% (i canoni chiesti sono un po' più alti di quelli firmati)"
-  },
-  {
-   "id": "132290714",
-   "comune": "Genova",
-   "p": "GE",
-   "prezzo": 55000,
-   "mq": 40,
-   "locali": 2,
-   "bagni": 1,
-   "piano": "2",
-   "ascensore": false,
-   "stato": "ristrutturato",
-   "classe": "E",
-   "arredato": true,
-   "indirizzo": "Via Confalonieri, Sestri Ponente, Genova",
-   "titolo": "Bilocale ristrutturato e arredato a Sestri Ponente",
-   "lat": 44.4257,
-   "lon": 8.8464,
-   "foto": [
-    "https://pwm.im-cdn.it/image/2001192192/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2001192242/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2001192676/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2001192316/m-c.jpg",
-    "https://pwm.im-cdn.it/image/2001192276/m-c.jpg"
-   ],
-   "aggiornato": "23/10/2026",
-   "agenzia": "Elite Casa Immobiliare",
-   "spese_mese": 50,
-   "pro": [
-    "Ristrutturato e arredato, climatizzato, riscaldamento autonomo",
-    "Spese basse (50 € al mese)",
-    "Sestri Ponente: centro vivace, ospedale, Fincantieri e aeroporto vicini"
-   ],
-   "contro": [
-    "Secondo piano senza ascensore",
-    "40 m²: adatto a una persona o una coppia"
-   ],
-   "trovato": "2026-11-21",
-   "canone": 460,
-   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova, zona Sestri Ponente: mediana 12,9 €/m² al mese su 31 bilocali e trilocali, ridotta del 10% (i canoni chiesti sono un po' più alti di quelli firmati)"
   },
   {
    "id": "128298422",
@@ -1749,6 +1678,16 @@
    "id": "134289543",
    "comune": "Cremona",
    "motivo": "Costo totale sopra 60.000 € e rendita netta 6,4%"
+  },
+  {
+   "id": "134259939",
+   "comune": "Bellano",
+   "motivo": "Rendita netta 3,9% con costi al limite dei 60.000 €"
+  },
+  {
+   "id": "132290714",
+   "comune": "Genova",
+   "motivo": "Rendita netta 5,7%: sotto la soglia"
   }
  ]
 }
