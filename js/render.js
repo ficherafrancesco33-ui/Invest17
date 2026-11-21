@@ -482,9 +482,11 @@ function rnPannello() {
 
 /* ============ pianta 2D (SVG) ============ */
 // maschera dei muri come immagine: bordeaux scuro su trasparente
+// muri del risultato finale (il frazionamento ci aggiunge porte chiuse e aperte)
+function rnMaschera(p) { return RS.muri; }
 function rnMuriPng(p) {
   const c = document.createElement("canvas"); c.width = p.W; c.height = p.H; const g = c.getContext("2d"), d = g.createImageData(p.W, p.H);
-  const m = RS.muri; for (let i = 0; i < m.length; i++) if (m[i]) { d.data[i * 4] = 46; d.data[i * 4 + 1] = 22; d.data[i * 4 + 2] = 28; d.data[i * 4 + 3] = 255; }
+  const m = rnMaschera(p); for (let i = 0; i < m.length; i++) if (m[i]) { d.data[i * 4] = 46; d.data[i * 4 + 1] = 22; d.data[i * 4 + 2] = 28; d.data[i * 4 + 3] = 255; }
   g.putImageData(d, 0, 0); return c.toDataURL("image/png");
 }
 // disegno vettoriale di ogni mobile, visto dall'alto (unità: metri, origine al centro, schiena in alto)
@@ -592,7 +594,7 @@ async function rn3D(host, p) {
     m.rotation.x = Math.PI / 2; m.position.y = 0.002; m.receiveShadow = true; scene.add(m); }
   // muri: celle della maschera unite in rettangoli (greedy), estrusi a 2,7 m; testa dei muri bordeaux (sezione)
   const cell = Math.max(1, Math.round(0.05 / s)), gw = Math.ceil(p.W / cell), gh = Math.ceil(p.H / cell), G = new Uint8Array(gw * gh);
-  for (let y = 0; y < p.H; y++) for (let x = 0; x < p.W; x++) if (RS.muri[y * p.W + x]) G[((y / cell) | 0) * gw + ((x / cell) | 0)]++;
+  const MM3 = rnMaschera(p); for (let y = 0; y < p.H; y++) for (let x = 0; x < p.W; x++) if (MM3[y * p.W + x]) G[((y / cell) | 0) * gw + ((x / cell) | 0)]++;
   const soglia = cell * cell * 0.35; for (let i = 0; i < G.length; i++) G[i] = G[i] > soglia ? 1 : 0;
   const rects = [], usato = new Uint8Array(gw * gh);
   for (let y = 0; y < gh; y++) for (let x = 0; x < gw; x++) { if (!G[y * gw + x] || usato[y * gw + x]) continue;

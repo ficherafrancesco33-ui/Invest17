@@ -26,13 +26,13 @@ function fzAdiacenze(stanze, s) {
   return A;
 }
 function fzPorte(stanze, A, s) {
-  const P = new Set(), m = RS.muri, W = RS.p.W;
+  const P = new Set(), m = RS.muri, W = RS.p.W; P.dove = {};
   for (let i = 0; i < stanze.length; i++) for (const j of A[i]) { if (j < i) continue; const Pi = stanze[i].poly, Pj = stanze[j].poly; let varco = 0, run = 0;
     for (let e = 0; e < Pi.length && varco < 3; e++) { const a = Pi[e], b = Pi[(e + 1) % Pi.length], n = Math.max(2, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / (0.1 / s)));
       for (let k = 0; k <= n; k++) { const q = [a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n]; if (RN.distBordo(q, Pj) > 0.45 / s) continue;
         // punto di mezzo tra le due stanze: se non è muro, lì c'è un'apertura
         let best = null, bd = Infinity; for (let f = 0; f < Pj.length; f++) { const c = Pj[f], d2 = Pj[(f + 1) % Pj.length], dx = d2[0] - c[0], dy = d2[1] - c[1], t = Math.max(0, Math.min(1, ((q[0] - c[0]) * dx + (q[1] - c[1]) * dy) / (dx * dx + dy * dy || 1))), r = [c[0] + t * dx, c[1] + t * dy], dd = Math.hypot(r[0] - q[0], r[1] - q[1]); if (dd < bd) { bd = dd; best = r; } }
-        const mx = Math.round((q[0] + best[0]) / 2), my = Math.round((q[1] + best[1]) / 2); if (!m[my * W + mx]) { run++; if (run >= 3) varco = 3; } else run = 0; } }
+        const mx = Math.round((q[0] + best[0]) / 2), my = Math.round((q[1] + best[1]) / 2); if (!m[my * W + mx]) { run++; (P.dove[i + "-" + j] = P.dove[i + "-" + j] || []).push([mx, my, q, best]); if (run >= 3) varco = 3; } else run = 0; } }
     if (varco >= 3) P.add(i + "-" + j); }
   return P;
 }
@@ -42,6 +42,48 @@ const fzConnessa = (idx, A) => { if (!idx.length) return false; const S = new Se
 // stanza in cui (o accanto a cui) sta un punto
 const fzStanzaDi = (q, stanze) => { let b = -1, bd = Infinity; stanze.forEach((st, i) => { const d = RN.dentro(q, st.poly) ? 0 : RN.distBordo(q, st.poly); if (d < bd) { bd = d; b = i; } }); return b; };
 
+/* ---- lavori per separare davvero le unità: porte da chiudere tra unità diverse, porte da aprire dentro ogni unità ---- */
+// tratto di muro da costruire sul varco tra due stanze (attraverso lo spessore del muro)
+function fzSegChiusura(pts) {
+  const xs = pts.map(q => q[0]), ys = pts.map(q => q[1]), oriz = Math.max(...xs) - Math.min(...xs) >= Math.max(...ys) - Math.min(...ys);
+  const c = oriz ? ys.reduce((a, b) => a + b, 0) / ys.length : xs.reduce((a, b) => a + b, 0) / xs.length;
+  return oriz ? [Math.min(...xs) - 3, c, Math.max(...xs) + 3, c] : [c, Math.min(...ys) - 3, c, Math.max(...ys) + 3];
+}
+// dove aprire una porta tra due stanze confinanti: a metà del muro in comune, 80 cm
+function fzSegApertura(Pi, Pj, s) {
+  const pts = [];
+  for (let e = 0; e < Pi.length; e++) { const a = Pi[e], b = Pi[(e + 1) % Pi.length], n = Math.max(2, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / (0.1 / s)));
+    for (let k = 0; k <= n; k++) { const q = [a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n]; if (RN.distBordo(q, Pj) < 0.45 / s) pts.push(q); } }
+  if (pts.length < 4) return null;
+  // tolgo gli estremi (angoli) e prendo il centro del tratto comune
+  const xs = pts.map(q => q[0]), ys = pts.map(q => q[1]), oriz = Math.max(...xs) - Math.min(...xs) >= Math.max(...ys) - Math.min(...ys);
+  const L = (oriz ? Math.max(...xs) - Math.min(...xs) : Math.max(...ys) - Math.min(...ys)) * s; if (L < 1.0) return null;
+  const cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2, h = 0.4 / s;
+  return oriz ? [cx - h, cy, cx + h, cy] : [cx, cy - h, cx, cy + h];
+}
+function fzLavori(p) {
+  const s = p.scala, st = p.stanze, A = fzAdiacenze(st, s), PT = fzPorte(st, A, s), chiudi = [], apri = [], u = i => p.fzAss?.[st[i].id] ?? (st[i].id === p.fzVanoId ? "v" : null);
+  // tra due unità diverse non resta nessun passaggio (il vano comune può avere la porta verso ogni unità)
+  for (let i = 0; i < st.length; i++) for (const j of A[i]) { if (j < i) continue; const ui = u(i), uj = u(j);
+    if (ui == null || uj == null || ui === uj || ui === "v" || uj === "v") continue;
+    if (fzHaPorta(PT, i, j)) { const pts = PT.dove[Math.min(i, j) + "-" + Math.max(i, j)] || []; if (pts.length) chiudi.push({ seg: fzSegChiusura(pts), tra: [i, j] }); } }
+  // porte da aprire dentro ogni unità
+  const N = p.fzN || 2;
+  for (let k = 0; k < N; k++) { const g = st.map((r, i) => i).filter(i => u(i) === k); for (const [i, j] of fzDaAprire(g, A, PT)) { const seg = fzSegApertura(st[i].poly, st[j].poly, s); if (seg) apri.push({ seg, tra: [i, j] }); } }
+  // porta d'ingresso dal vano comune, se manca
+  const v = st.findIndex(r => r.id === p.fzVanoId);
+  if (v >= 0) for (let k = 0; k < N; k++) { const adj = [...A[v]].filter(i => u(i) === k); if (adj.length && !adj.some(i => fzHaPorta(PT, v, i))) { const e = fzEntrate(adj, st, PT, v)[0], seg = fzSegApertura(st[v].poly, st[e].poly, s); if (seg) apri.push({ seg, tra: [v, e], ingresso: k }); } }
+  p.fzChiudi = chiudi.map(c => c.seg); p.fzApri = apri.map(a => a.seg);
+  return { chiudi, apri };
+}
+// muri del risultato: porte chiuse e aperte del frazionamento
+rnMaschera = function (p) {
+  if (!p.fzAss || (!(p.fzChiudi || []).length && !(p.fzApri || []).length)) return RS.muri;
+  const m = RS.muri.slice(), sp = p.scala ? 0.12 / p.scala : 7;
+  for (const seg of p.fzChiudi || []) fzMuroInMaschera(m, p.W, p.H, seg, sp);
+  for (const seg of p.fzApri || []) rzDemolisci(m, p.W, p.H, seg, p);
+  return m;
+};
 // porte da aprire perché tutte le stanze di un'unità siano raggiungibili (prima le porte che ci sono già)
 function fzDaAprire(g, A, PT) {
   const S = new Set(g), vis = new Set([g[0]]), aperte = [];
@@ -108,7 +150,7 @@ function fzPiano(idx, stanze, A, s, PT, ents) {
     if (ents.every(e => uso[e] === "bagno")) err.push("Si entra direttamente nel bagno.");
     else if (ents.every(e => cam(e) || uso[e] === "bagno")) note.push("Si entra direttamente in una camera: meglio un ingresso o un disimpegno.");
   }
-  if (PT) for (const [i, j] of fzDaAprire(idx, A, PT)) note.push(`Aprire una porta tra ${RN_TIPI[uso[i]]?.n.toLowerCase() || "stanza"} e ${RN_TIPI[uso[j]]?.n.toLowerCase() || "stanza"}.`);
+  if (PT) for (const [i, j] of fzDaAprire(idx, A, PT)) note.push(`Da aprire (in oro sulla pianta): porta tra ${RN_TIPI[uso[i]]?.n.toLowerCase() || "stanza"} e ${RN_TIPI[uso[j]]?.n.toLowerCase() || "stanza"}.`);
   if (utili.filter(r => r.fin > 0).length < 2) note.push("Riscontro d'aria: servono finestre su due pareti diverse (opposte o ad angolo), oppure la VMC.");
   return { sup, uso, ok, err, note, camere: utili.filter(r => ["camera", "cameretta"].includes(uso[r.i])).length };
 }
@@ -173,7 +215,7 @@ function fzApplica(p, best) {
   p.fzEnts = best.ents.map(e => e.map(i => p.stanze[i].id));
   best.piani.forEach(pl => Object.entries(pl.uso).forEach(([i, u]) => { const st = p.stanze[+i]; if (!st.tipo0) st.tipo0 = st.tipo; st.tipo = u; }));
   p.fzPiani = best.piani.map(pl => ({ sup: pl.sup, ok: pl.ok, err: pl.err, note: pl.note, camere: pl.camere }));
-  p.mobili = null;
+  fzLavori(p); p.mobili = null;
 }
 // controllo di una divisione fatta a mano
 function fzControlla(p) {
@@ -183,7 +225,8 @@ function fzControlla(p) {
   const PT = fzPorte(st, A, s), ents = gruppi.map((g, u) => vest >= 0 ? fzEntrate(g.filter(i => A[vest].has(i)), st, PT, vest) : ing[u] != null ? [ing[u]] : []);
   const piani = gruppi.map((g, u) => g.length ? fzPiano(g, st, A, s, PT, ents[u]) : { sup: 0, ok: [], err: ["Nessuna stanza assegnata."], note: [], uso: {} });
   for (let i = 0; i < st.length; i++) for (const j of A[i]) { const ui = p.fzAss?.[st[i].id], uj = p.fzAss?.[st[j].id];
-    if (j > i && ui != null && uj != null && ui !== uj && fzHaPorta(PT, i, j)) piani[Math.min(ui, uj)].note.push(`Chiudere la porta tra ${RN_TIPI[st[i].tipo]?.n.toLowerCase()} (${FZ_LET[ui]}) e ${RN_TIPI[st[j].tipo]?.n.toLowerCase()} (${FZ_LET[uj]}).`); }
+    if (j > i && ui != null && uj != null && ui !== uj && fzHaPorta(PT, i, j)) piani[Math.min(ui, uj)].ok.push(`Separazione: la porta tra ${RN_TIPI[st[i].tipo]?.n.toLowerCase()} (${FZ_LET[ui]}) e ${RN_TIPI[st[j].tipo]?.n.toLowerCase()} (${FZ_LET[uj]}) viene chiusa con un muro (in rosso).`); }
+  fzLavori(p);
   gruppi.forEach((g, u) => { if (g.length && !fzConnessa(g, A)) piani[u].err.unshift("Le stanze non sono tutte collegate tra loro.");
     if (g.length && !ents[u].length) piani[u].err.unshift(vest >= 0 ? "L'unità non dà sul vano d'ingresso comune." : "L'unità non ha un ingresso segnato.");
     if (vest >= 0 && ents[u].length) piani[u][ents[u].some(i => fzHaPorta(PT, vest, i)) ? "ok" : "note"].push(ents[u].some(i => fzHaPorta(PT, vest, i)) ? "Porta d'ingresso dal vano comune: c'è già." : "Porta d'ingresso dal vano comune: da aprire (porta blindata)."); });
@@ -230,6 +273,8 @@ const FZ_VANO = "#8a7a5a";
   (p.stanze || []).forEach(st => { const u = p.fzAss?.[st.id], vano = st.id === (p.fzVanoId || p.fzVano); if (u == null && !vano) return; g.beginPath(); st.poly.forEach(([x, y], j) => j ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
     const c = vano ? FZ_VANO : FZ_COL[u]; g.fillStyle = c + "4a"; g.fill(); g.lineWidth = lw * 1.8; g.strokeStyle = c; g.stroke(); });
   (p.fzMuri || []).forEach(([x0, y0, x1, y1]) => { g.strokeStyle = "#c0392b"; g.lineWidth = lw * 2.5; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); });
+  if (p.fzAss) { (p.fzChiudi || []).forEach(([x0, y0, x1, y1]) => { g.strokeStyle = "#c0392b"; g.lineWidth = lw * 4; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); });
+    (p.fzApri || []).forEach(([x0, y0, x1, y1]) => { g.strokeStyle = "#c9a24b"; g.lineWidth = lw * 4; g.setLineDash([lw * 3, lw * 2]); g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); g.setLineDash([]); }); }
   if (RS.fzA) { g.beginPath(); g.arc(RS.fzA[0], RS.fzA[1], lw * 4, 0, 7); g.fillStyle = "#c9a24b"; g.fill(); }
   (p.fzIng || []).forEach((e, k) => { const t = fzEtich(p, k); if (t) fzBadgeCanvas(g, e.x, e.y, "➜ " + t, p.fzTipoIng === "comune" ? FZ_VANO : (FZ_COL[k] || "#333"), fs * 0.8); });
   if (p.scala) (p.stanze || []).forEach(st => { if (!st.fin) return; const bb = RN.bbox(st.poly); g.font = `600 ${fs * 0.7}px Barlow, sans-serif`; g.fillStyle = "#2f6f73"; g.textAlign = "center"; g.fillText(`finestre ${num(st.fin, 1)} m`, (bb.x0 + bb.x1) / 2, bb.y1 - fs * 0.6); });
@@ -295,7 +340,8 @@ function fzMini(p, x) {
   el.querySelectorAll("[data-fzs]").forEach(b => b.addEventListener("click", () => { const i = +b.dataset.fzs; p.fzScelta = i; fzApplica(p, SOL[i]); rnSalva(); rnDisegna(); rnPannello(); }));
 }; }
 function fzReport(p, C) {
-  return `<div class="fzrep">${C.piani.map((pl, u) => `<div class="fzu" style="border-color:${FZ_COL[u]}"><b style="color:${FZ_COL[u]}">Unità ${FZ_LET[u]} · ${num(pl.sup, 1)} m²</b>
+  const nc = (p.fzChiudi || []).length, na = (p.fzApri || []).length;
+  return `<div class="fzrep"><div class="rnsel"><b>Separazione delle unità</b><div style="font-size:13px">${nc ? `<span style="color:#c0392b">■</span> ${nc} ${nc === 1 ? "porta da chiudere" : "porte da chiudere"} tra le unità` : "Nessun passaggio da chiudere tra le unità"}${na ? ` · <span style="color:#c9a24b">■</span> ${na} ${na === 1 ? "porta da aprire" : "porte da aprire"}` : ""}. Le unità non comunicano tra loro${p.fzVanoId ? ": l'unica parte in comune è il vano d'ingresso" : ""}.</div></div>${C.piani.map((pl, u) => `<div class="fzu" style="border-color:${FZ_COL[u]}"><b style="color:${FZ_COL[u]}">Unità ${FZ_LET[u]} · ${num(pl.sup, 1)} m²</b>
     ${pl.err.map(t => `<div class="fzx">✕ ${esc(t)}</div>`).join("")}${pl.note.map(t => `<div class="fzn">! ${esc(t)}</div>`).join("")}${pl.ok.map(t => `<div class="fzok">✓ ${esc(t)}</div>`).join("")}</div>`).join("")}
     <p class="note">Controlli secondo il Regolamento Edilizio di Milano e il DM 5/7/1975 sui dati che hai segnato (superfici, finestre, collegamenti). Altezze, impianti, scarichi, distanze e vincoli condominiali vanno verificati da un tecnico prima dei lavori.</p></div>`;
 }
@@ -304,7 +350,9 @@ function fzReport(p, C) {
 { const sv = rnSvg; rnSvg = function (p, opt = {}) { const out = sv(p, opt); if (!p.fzAss || opt.solo === "sotto") return out;
   const k = 1 / (p.scala || 0.01), fs = Math.max(12, 0.3 * k);
   const bordi = (p.stanze || []).map(st => { const u = p.fzAss[st.id], vano = st.id === p.fzVanoId; if (u == null && !vano) return ""; const c = vano ? FZ_VANO : FZ_COL[u];
-    return `<polygon points="${st.poly.map(q => q.join(",")).join(" ")}" fill="${vano ? c : "none"}" fill-opacity="${vano ? 0.18 : 0}" stroke="${c}" stroke-width="${0.07 * k}" stroke-opacity=".85"/>`; }).join("");
+    return `<polygon points="${st.poly.map(q => q.join(",")).join(" ")}" fill="${c}" fill-opacity="${vano ? 0.2 : 0.1}" stroke="${c}" stroke-width="${0.07 * k}" stroke-opacity=".85"/>`; }).join("")
+    + (p.fzChiudi || []).map(([x0, y0, x1, y1]) => `<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="#c0392b" stroke-width="${0.16 * k}" stroke-linecap="butt"/>`).join("")
+    + (p.fzApri || []).map(([x0, y0, x1, y1]) => `<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="#c9a24b" stroke-width="${0.08 * k}" stroke-dasharray="${0.08 * k} ${0.05 * k}"/>`).join("");
   const nuovi = (p.fzMuri || []).map(([x0, y0, x1, y1]) => `<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="#c9a24b" stroke-width="${0.12 * k}" stroke-linecap="round"/>`).join("");
   const ing = (p.fzIng || []).map((e, i) => { const t = fzEtich(p, i); if (!t) return ""; const w = (t.length + 2) * fs * 0.62, c = p.fzTipoIng === "comune" ? FZ_VANO : FZ_COL[i];
     const ex = Math.max(-40 + w / 2 + 4, Math.min(p.W + 40 - w / 2 - 4, e.x)), ey = Math.max(-40 + fs, Math.min(p.H + 40 - fs, e.y)); e = { x: ex, y: ey };
