@@ -74,7 +74,10 @@
   "Dongo|CO": 1,
   "Novara|NO": 2,
   "Voghera|PV": 3,
-  "Mortara|PV": 1
+  "Mortara|PV": 1,
+  "Cremona|CR": 1,
+  "Asti|AT": 2,
+  "Biella|BI": 3
  },
  "coord": {
   "Edolo": [
@@ -1080,6 +1083,205 @@
    "classe": "",
    "spese_mese": 50,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "134576537",
+   "comune": "Asti",
+   "p": "AT",
+   "prezzo": 39900,
+   "mq": 52,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Corso Alessandro Volta, Asti",
+   "titolo": "Bilocale arredato a 5 minuti dal centro",
+   "lat": 44.9067,
+   "lon": 8.2154,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2053057359/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2053057385/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2053057393/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2053057403/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2053057407/m-c.jpg"
+   ],
+   "aggiornato": "09/11/2026",
+   "agenzia": "Vendocasa Asti",
+   "canone": 440,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Asti: mediana 9,6 €/m², 500 € al mese; stima prudente",
+   "pro": [
+    "Arredato nelle foto (chiedere se l'arredo resta)",
+    "Riscaldamento autonomo, doppi vetri, doppio affaccio",
+    "Cantina, spese 41 €/mese"
+   ],
+   "contro": [
+    "Classe F",
+    "Primo piano senza ascensore",
+    "Cucinotto separato"
+   ],
+   "classe": "F",
+   "spese_mese": 41,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133347084",
+   "comune": "Asti",
+   "p": "AT",
+   "prezzo": 49000,
+   "mq": 51,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": true,
+   "stato": "ottimo",
+   "arredato": true,
+   "indirizzo": "Piazza Medaglie d'Oro, zona Stazione, Asti",
+   "titolo": "Bilocale completamente ristrutturato vicino alla stazione",
+   "lat": 44.8957,
+   "lon": 8.2089,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2024339814/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2024339816/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2024339826/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2024339822/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2024339828/m-c.jpg"
+   ],
+   "aggiornato": "13/11/2026",
+   "agenzia": "Auris Real Estate",
+   "canone": 450,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Asti: mediana 9,6 €/m²; stima prudente",
+   "pro": [
+    "Completamente ristrutturato, moderno, arredato",
+    "Vicino alla stazione, ascensore, balcone",
+    "Cucina abitabile, bagno ampio"
+   ],
+   "contro": [
+    "Spese condominiali 100 €/mese (utenze comprese)"
+   ],
+   "classe": "",
+   "spese_mese": 100,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "119136193",
+   "comune": "Biella",
+   "p": "BI",
+   "prezzo": 35000,
+   "mq": 44,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Quintino Sella 31, Centro, Biella",
+   "titolo": "Bilocale arredato in centro, già affittato",
+   "lat": 45.5616,
+   "lon": 8.0487,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1667693223/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1667693207/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1667693199/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1667693237/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1667693241/m-c.jpg"
+   ],
+   "aggiornato": "25/06/2026",
+   "agenzia": "Biella Case",
+   "canone": 380,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Biella centro: mediana 10 €/m²; stima prudente (chiedere il canone attuale)",
+   "pro": [
+    "Già affittato e arredato",
+    "Centro, vicino agli uffici della Provincia",
+    "Riscaldamento autonomo, doppi vetri, nessuna spesa condominiale"
+   ],
+   "contro": [
+    "Primo piano senza ascensore"
+   ],
+   "classe": "D",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133701268",
+   "comune": "Biella",
+   "p": "BI",
+   "prezzo": 40000,
+   "mq": 66,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": true,
+   "indirizzo": "Via Belletti Bona 10, Centro storico, Biella",
+   "titolo": "Trilocale arredato con carattere nel centro storico",
+   "lat": 45.5695,
+   "lon": 8.0525,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2032294602/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2032294626/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2032294650/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2032294664/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2032294678/m-c.jpg"
+   ],
+   "aggiornato": "23/10/2026",
+   "agenzia": "Casaidea Immobiliare",
+   "canone": 470,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Biella centro: mediana 10 €/m²; per 66 m² stima prudente",
+   "pro": [
+    "Venduto con tutti gli arredi, chiavi in mano",
+    "Caldaia a condensazione nuova, doppi vetri",
+    "Spese condominiali contenute, balcone"
+   ],
+   "contro": [
+    "Primo piano senza ascensore",
+    "Arredo di gusto particolare"
+   ],
+   "classe": "",
+   "spese_mese": 30,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133095862",
+   "comune": "Biella",
+   "p": "BI",
+   "prezzo": 32000,
+   "mq": 40,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": true,
+   "indirizzo": "Costa del Vernato, Centro storico, Biella",
+   "titolo": "Bilocale arredato già avviato come casa vacanze",
+   "lat": 45.5617,
+   "lon": 8.0458,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2018921376/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2018922070/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2018923412/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2018922102/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2018921412/m-c.jpg"
+   ],
+   "aggiornato": "30/09/2026",
+   "agenzia": "privato",
+   "canone": 360,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Biella centro: mediana 10 €/m²; stima prudente",
+   "pro": [
+    "Arredato senza costi aggiuntivi, bagno moderno in resina",
+    "Già avviato per affitti turistici (codici CIN e CIR)",
+    "Caldaia nuova, doppi vetri, giardinetto comune"
+   ],
+   "contro": [
+    "Spese condominiali 113 €/mese",
+    "Piano terra"
+   ],
+   "classe": "E",
+   "spese_mese": 113,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -1542,6 +1744,11 @@
    "id": "129927340",
    "comune": "Tortona",
    "motivo": "Rendita netta 6,2% con affitti di zona: sotto la soglia"
+  },
+  {
+   "id": "134289543",
+   "comune": "Cremona",
+   "motivo": "Costo totale sopra 60.000 € e rendita netta 6,4%"
   }
  ]
 }
