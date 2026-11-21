@@ -299,3 +299,79 @@
 134727775;nuda proprietà
 134763515;affitto con riscatto
 134935735;uso non abitativo
+69727756;non residenziale
+95306894;nuda proprietà
+95953626;non residenziale
+96602410;non residenziale
+96839440;non residenziale
+100874847;non residenziale
+101563275;non residenziale
+102480830;non residenziale
+102684698;non residenziale
+104303139;non residenziale
+105356485;non residenziale
+108445371;non residenziale
+109049067;uso non abitativo
+112587715;uso non abitativo
+117528853;non residenziale
+120410316;non residenziale
+120886288;non residenziale
+120985312;progetto / nuova costruzione
+123016231;progetto / nuova costruzione
+123073791;non residenziale
+123093303;progetto / nuova costruzione
+123201975;non residenziale
+124196789;non residenziale
+125527219;non residenziale
+125554527;non residenziale
+126611589;non residenziale
+126612397;non residenziale
+126974077;nuda proprietà
+126975655;nuda proprietà
+127478966;nuda proprietà
+127896462;non residenziale
+128289230;progetto / nuova costruzione
+128364732;progetto / nuova costruzione
+128373048;nuda proprietà
+129550956;non residenziale
+129967062;non residenziale
+130017564;non residenziale
+130569366;non residenziale
+130569372;non residenziale
+130569406;non residenziale
+130569420;non residenziale
+130569424;non residenziale
+130569536;non residenziale
+130765272;nuda proprietà
+131180210;progetto / nuova costruzione
+131631234;progetto / nuova costruzione
+132084926;non residenziale
+132243884;non residenziale
+132244080;non residenziale
+132250696;progetto / nuova costruzione
+132252802;progetto / nuova costruzione
+132991540;nuda proprietà
+133177096;quota / comproprietà
+133274082;uso non abitativo
+133547754;non residenziale
+133624772;non residenziale
+133631292;non residenziale
+133668998;non residenziale
+133671562;non residenziale
+133686024;nuda proprietà
+133822976;non residenziale
+134004633;uso non abitativo
+134315317;non residenziale
+134389767;uso non abitativo
+134480071;non residenziale
+134502633;progetto / nuova costruzione
+134540761;uso non abitativo
+134638097;nuda proprietà
+134644825;non residenziale
+134664889;non residenziale
+134820803;nuda proprietà
+134823225;progetto / nuova costruzione
+134850541;nuda proprietà
+134899867;non residenziale
+134910407;non residenziale
+134931461;non residenziale

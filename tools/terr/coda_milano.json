@@ -103,85 +103,99 @@
    "n": "Borgogna - Largo Augusto",
    "path": "/vendita-case/milano/borgogna-largo-augusto/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "San Babila",
    "path": "/vendita-case/milano/san-babila/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Duomo",
    "path": "/vendita-case/milano/duomo/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Piave - Tricolore",
    "path": "/vendita-case/milano/piave-tricolore/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Quadrilatero della Moda",
    "path": "/vendita-case/milano/quadrilatero-della-moda/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Plebisciti - Susa",
    "path": "/vendita-case/milano/plebisciti-susa/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Scala - Manzoni",
    "path": "/vendita-case/milano/scala-manzoni/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Indipendenza",
    "path": "/vendita-case/milano/indipendenza/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Palestro",
    "path": "/vendita-case/milano/palestro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Sant'Ambrogio",
    "path": "/vendita-case/milano/sant-ambrogio/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "da",
+   "nota": "slug sant-ambrogio e santambrogio danno 404: cercare il link giusto sulla pagina di Immobiliare"
   },
   {
    "n": "Brera",
    "path": "/vendita-case/milano/brera/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Cadorna - Castello",
    "path": "/vendita-case/milano/cadorna-castello/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Turati",
    "path": "/vendita-case/milano/turati/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Lanza",
    "path": "/vendita-case/milano/lanza/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Porta Venezia",

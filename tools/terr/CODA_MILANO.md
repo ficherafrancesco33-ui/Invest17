@@ -9,6 +9,8 @@ Servono alle valutazioni (comparabili e fasce di prezzo) e agli annunci dei priv
 Prima le microzone di Milano città (per distanza da Porta Romana), poi i comuni MI ad anelli (1 = confinanti), poi MB.
 
 ## Un giro (circa 40 minuti di lettura)
+0. La scheda Immobiliare può avere già in memoria letture di un giro precedente (`window.__ARC`, `__PROG`, `__INVIATI`):
+   incollando lettore.js non si perdono. Controlla `__PROG` (zone già lette) e porta fuori prima quello che non è stato consegnato.
 1. Chrome (Claude in Chrome): `tabs_context_mcp`, poi una scheda su `https://www.immobiliare.it/` (o una già aperta su immobiliare.it).
    Se compare un captcha o una pagina di blocco: fermati subito e chiudi il giro (niente tentativi per aggirarlo).
 2. Incolla `tools/terr/lettore.js` nella scheda (javascript_tool), poi
