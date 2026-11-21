@@ -201,61 +201,71 @@
    "n": "Porta Venezia",
    "path": "/vendita-case/milano/porta-venezia/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Arena",
    "path": "/vendita-case/milano/arena/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Dezza",
    "path": "/vendita-case/milano/dezza/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Repubblica",
    "path": "/vendita-case/milano/repubblica/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Moscova",
    "path": "/vendita-case/milano/moscova/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Buenos Aires",
    "path": "/vendita-case/milano/buenos-aires/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Morgagni",
    "path": "/vendita-case/milano/morgagni/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Vincenzo Monti",
    "path": "/vendita-case/milano/vincenzo-monti/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Porta Nuova",
    "path": "/vendita-case/milano/porta-nuova/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Città Studi",
    "path": "/vendita-case/milano/citta-studi/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-21"
   },
   {
    "n": "Pagano",

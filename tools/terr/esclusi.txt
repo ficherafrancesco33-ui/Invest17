@@ -375,3 +375,66 @@
 134899867;non residenziale
 134910407;non residenziale
 134931461;non residenziale
+106321449;non residenziale
+111353313;non residenziale
+112861577;progetto / nuova costruzione
+114878439;non residenziale
+114879461;non residenziale
+115021955;non residenziale
+116094259;nuda proprietà
+119485241;progetto / nuova costruzione
+120421668;non residenziale
+122200274;non residenziale
+123374413;non residenziale
+123702983;non residenziale
+123703181;non residenziale
+124425621;uso non abitativo
+125130851;non residenziale
+125329579;progetto / nuova costruzione
+127154761;nuda proprietà
+127227353;nuda proprietà
+127235471;non residenziale
+127895278;non residenziale
+127923656;non residenziale
+128239582;nuda proprietà
+128369948;progetto / nuova costruzione
+128672710;progetto / nuova costruzione
+128771688;nuda proprietà
+128988366;non residenziale
+129178912;nuda proprietà
+129605918;non residenziale
+129637748;progetto / nuova costruzione
+129748614;nuda proprietà
+129791372;uso non abitativo
+129932048;non residenziale
+130038156;nuda proprietà
+130171748;nuda proprietà
+130569416;non residenziale
+131031474;uso non abitativo
+131398050;uso non abitativo
+132045128;non residenziale
+132073742;nuda proprietà
+132514440;uso non abitativo
+132538222;non residenziale
+132934860;non residenziale
+133053462;nuda proprietà
+133419536;nuda proprietà
+133435476;non residenziale
+133461624;nuda proprietà
+133546298;non residenziale
+133547672;non residenziale
+133587290;nuda proprietà
+133652258;non residenziale
+134335543;uso non abitativo
+134384809;nuda proprietà
+134385323;nuda proprietà
+134409465;non residenziale
+134474205;asta
+134474521;asta
+134597135;asta
+134825365;progetto / nuova costruzione
+134910693;non residenziale
+134911525;uso non abitativo
+134924447;uso non abitativo
+134961547;nuda proprietà
+134961787;non residenziale
