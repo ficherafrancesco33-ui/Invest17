@@ -86,7 +86,13 @@
   "Sovere|BG": 3,
   "Galliate Lombardo|VA": 2,
   "Varano Borghi|VA": 1,
-  "Costa Volpino|BG": 1
+  "Costa Volpino|BG": 1,
+  "Cambiasca|VB": 1,
+  "Cossogno|VB": 1,
+  "Gignese|VB": 1,
+  "Nebbiuno|NO": 1,
+  "Massino Visconti|NO": 1,
+  "Leggiuno|VA": 1
  },
  "coord": {
   "Edolo": [
@@ -2511,6 +2517,87 @@
    "classe": "",
    "spese_mese": 20,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "129063926",
+   "comune": "Cambiasca",
+   "p": "VB",
+   "prezzo": 35000,
+   "lavori": 5000,
+   "mq": 45,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": false,
+   "indirizzo": "Via per Unchio 2, Cambiasca (Verbania, Lago Maggiore)",
+   "titolo": "Bilocale su due livelli sopra Verbania, Lago Maggiore",
+   "lat": 45.9633,
+   "lon": 8.5404,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1923844426/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1923844434/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1923844132/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1923844374/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1923844376/m-c.jpg"
+   ],
+   "aggiornato": "28/09/2026",
+   "agenzia": "Tempocasa Verbania",
+   "canone": 400,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Verbania: mediana 14 €/m², 650 € al mese; per Cambiasca stima prudente",
+   "pro": [
+    "Casa sul lago: tenuta anche sotto il 7%, si può usare anche per sé",
+    "Due livelli con due ingressi, cucina a vista, lavanderia",
+    "Nessuna spesa condominiale; Verbania e il lago a circa 10 minuti"
+   ],
+   "contro": [
+    "Casa di corte, classe F",
+    "Arredo da completare (5.000 € già contati)"
+   ],
+   "classe": "F",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "127149875",
+   "comune": "Leggiuno",
+   "p": "VA",
+   "prezzo": 55000,
+   "mq": 40,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Arolo, Leggiuno (Lago Maggiore)",
+   "titolo": "Monolocale a pochi passi dalla spiaggia di Arolo",
+   "lat": 45.8636,
+   "lon": 8.6074,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1877691119/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1877692341/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1877692347/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1877692353/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1877692357/m-c.jpg"
+   ],
+   "aggiornato": "19/03/2026",
+   "agenzia": "Freehome",
+   "canone": 420,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare tra Laveno e Leggiuno: mediana 13,3 €/m²; stima prudente",
+   "pro": [
+    "Casa sul lago: tenuta anche sotto il 7%, si può usare anche per sé",
+    "A pochi passi dalla spiaggia, centro storico di Arolo",
+    "Cucina arredata a vista, ripostiglio"
+   ],
+   "contro": [
+    "Monolocale senza vista lago",
+    "Classe G"
+   ],
+   "classe": "G",
+   "spese_mese": 20,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -3028,6 +3115,46 @@
    "id": "121608438",
    "comune": "Costa Volpino",
    "motivo": "Lago d Iseo: rendita netta 5,8%, sotto il 6% chiesto per le case sul lago"
+  },
+  {
+   "id": "131184990",
+   "comune": "Cossogno",
+   "motivo": "Lago Maggiore: rendita netta 5,4%, sotto il 6%"
+  },
+  {
+   "id": "132247376",
+   "comune": "Gignese",
+   "motivo": "Lago Maggiore: rendita netta 5,5%, sotto il 6%"
+  },
+  {
+   "id": "112954651",
+   "comune": "Nebbiuno",
+   "motivo": "Lago Maggiore: rendita netta 5,5%, sotto il 6%"
+  },
+  {
+   "id": "131674112",
+   "comune": "Massino Visconti",
+   "motivo": "Terzo piano senza ascensore"
+  },
+  {
+   "id": "119900480",
+   "comune": "",
+   "motivo": "Lago di Como: Schignano, borgo in montagna, casa da arredare con rendita bassa"
+  },
+  {
+   "id": "130527240",
+   "comune": "",
+   "motivo": "Lago di Como: Livo, borgo in montagna, rendita stimata sotto il 6%"
+  },
+  {
+   "id": "134607575",
+   "comune": "",
+   "motivo": "Quota di proprietà"
+  },
+  {
+   "id": "122498784",
+   "comune": "",
+   "motivo": "Da ristrutturare"
   }
  ]
 }
