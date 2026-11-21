@@ -44,7 +44,7 @@
   "Lonate Pozzolo|VA": 0,
   "Cardano al Campo|VA": 1,
   "Tortona|AL": 5,
-  "Erba|CO": 0,
+  "Erba|CO": 1,
   "Borgomanero|NO": 1,
   "Sondrio|SO": 1,
   "Fiorenzuola d'Arda|PC": 0,
@@ -95,9 +95,13 @@
   "Leggiuno|VA": 1,
   "Darfo Boario Terme|BS": 1,
   "Albuzzano|PV": 1,
-  "Seriate|BG": 1,
+  "Seriate|BG": 2,
   "Castiglione d'Adda|LO": 1,
-  "Olgiate Olona|VA": 1
+  "Olgiate Olona|VA": 1,
+  "Ponte San Pietro|BG": 1,
+  "Cantù|CO": 1,
+  "Malnate|VA": 1,
+  "Olginate|LC": 1
  },
  "coord": {
   "Edolo": [
@@ -2683,6 +2687,126 @@
    "classe": "F",
    "spese_mese": 55,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "132428760",
+   "comune": "Ponte San Pietro",
+   "p": "BG",
+   "prezzo": 49000,
+   "mq": 58,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Vicolo Amedeo Avogadro, Centro storico, Ponte San Pietro",
+   "titolo": "Bilocale con cucina abitabile vicino al Policlinico San Pietro",
+   "lat": 45.6971,
+   "lon": 9.5889,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2004689946/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004689890/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004682060/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004689916/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2004682080/m-c.jpg"
+   ],
+   "aggiornato": "26/10/2026",
+   "agenzia": "Tempocasa Bergamo Centro",
+   "canone": 560,
+   "canone_fonte": "Affitti chiesti oggi a ovest di Bergamo: mediana 14,7 €/m², 700 € al mese; stima prudente",
+   "pro": [
+    "Centro storico, cucina abitabile, riscaldamento autonomo",
+    "Policlinico San Pietro e stazione vicini, Bergamo a 15 minuti",
+    "Buone condizioni"
+   ],
+   "contro": [
+    "Arredato nelle foto: chiedere se l'arredo resta",
+    "Spese 75 €/mese, classe E"
+   ],
+   "classe": "E",
+   "spese_mese": 75,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "124962439",
+   "comune": "Cantù",
+   "p": "CO",
+   "prezzo": 29000,
+   "mq": 41,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Montello, Vighizzolo, Cantù",
+   "titolo": "Bilocale già affittato a 300 € al mese fino al 2028",
+   "lat": 45.731,
+   "lon": 9.1545,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1825488449/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1825496263/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1825496277/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1825496281/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1825496309/m-c.jpg"
+   ],
+   "aggiornato": "30/10/2026",
+   "agenzia": "Tempocasa Cantù",
+   "canone": 300,
+   "canone_fonte": "Canone in corso indicato nell'annuncio: 3.600 € l'anno, contratto fino a maggio 2028",
+   "pro": [
+    "Già affittato a 300 € al mese fino al 2028",
+    "Nessuna spesa condominiale, bagno finestrato",
+    "Cantù, ospedale e Como a 15 minuti"
+   ],
+   "contro": [
+    "Piano terra in corte, classe G",
+    "Canone basso rispetto alla zona: si potrà alzare al rinnovo"
+   ],
+   "classe": "G",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "130060612",
+   "comune": "Erba",
+   "p": "CO",
+   "prezzo": 50000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Tassera, Centro, Erba",
+   "titolo": "Bilocale in pieno centro a Erba, affittato ancora un anno",
+   "lat": 45.8082,
+   "lon": 9.2154,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1948582418/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1948582432/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1948582454/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1948582470/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1948582486/m-c.jpg"
+   ],
+   "aggiornato": "19/06/2026",
+   "agenzia": "Tempocasa Erba",
+   "canone": 520,
+   "canone_fonte": "Affittato per un altro anno (canone da chiedere); affitti chiesti oggi a Erba: mediana 12,5 €/m², stima prudente",
+   "pro": [
+    "Già affittato per un altro anno",
+    "Pieno centro, stazione a pochi minuti (treni per Milano)",
+    "Ospedale di Erba e laghi di Pusiano e Alserio vicini"
+   ],
+   "contro": [
+    "Piano terra, classe G",
+    "Chiedere il canone in corso"
+   ],
+   "classe": "G",
+   "spese_mese": 42,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -3255,6 +3379,21 @@
    "id": "134791167",
    "comune": "Olgiate Olona",
    "motivo": "Rendita netta 6,2%: sotto il 7%"
+  },
+  {
+   "id": "132640816",
+   "comune": "Seriate",
+   "motivo": "Rendita netta 6,9%: sotto il 7%"
+  },
+  {
+   "id": "100264086",
+   "comune": "Malnate",
+   "motivo": "Rendita netta 6,4%: sotto il 7%"
+  },
+  {
+   "id": "134370441",
+   "comune": "Olginate",
+   "motivo": "Lago di Garlate: rendita netta 5,5% con il canone in corso, sotto il 6%"
   }
  ]
 }
