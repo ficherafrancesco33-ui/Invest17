@@ -186,6 +186,12 @@ function rnIndovina(stanze, s) {
   // ordine per area: la più grande è il soggiorno; bagni piccoli e quadrati; corridoi stretti e lunghi
   const A = stanze.map(st => { const bb = RN.bbox(st.poly), lw = [(bb.x1 - bb.x0), (bb.y1 - bb.y0)].sort((a, b) => a - b); return { st, mq: RN.area(st.poly) * (s ? s * s : 1), asp: lw[1] / Math.max(1, lw[0]) }; });
   const max = Math.max(...A.map(a => a.mq)), tot = A.reduce((x, a) => x + a.mq, 0);
+  if (s) { // con la scala uso i metri quadri veri
+    const vicini = st => { const b = RN.bbox(st.poly), m = 0.6 / s; return stanze.filter(o => o !== st && (() => { const c = RN.bbox(o.poly); return c.x0 < b.x1 + m && c.x1 > b.x0 - m && c.y0 < b.y1 + m && c.y1 > b.y0 - m; })()).length; };
+    let sogg = false;
+    A.sort((a, b) => b.mq - a.mq).forEach(a => { if (a.st.tipo && a.st.manuale) return;
+      a.st.tipo = !sogg && a.mq === max ? (sogg = true, "soggiorno") : a.mq < 3.5 ? (a.asp > 2.4 || vicini(a.st) >= 3 ? "disimpegno" : "ripostiglio") : a.asp > 2.8 && a.mq < 8 ? "disimpegno" : a.mq < 7 ? "bagno" : a.mq < 9 ? "cameretta" : "camera"; });
+    return; }
   let sogg = false;
   A.sort((a, b) => b.mq - a.mq).forEach(a => {
     if (a.st.tipo && a.st.manuale) return;
@@ -431,12 +437,22 @@ function rnSeme(poly) {
 }
 // stanza dal punto: provo da aperture larghe a strette, il raggio più grande che lascia libero il punto chiude meglio le porte
 function rnStanzaAuto(p, q) {
-  const M = rnMuriCasa(p);
+  let M = rnMuriCasa(p);
+  // le stanze già segnate fanno da muro: così corridoi e disimpegni non scappano nelle stanze vicine dalle porte
+  if ((p.stanze || []).length && typeof gsStanzeMaschera === "function") { const S = gsStanzeMaschera(p); M = M.slice(); for (let i = 0; i < M.length; i++) if (S[i]) M[i] = 1; }
+  RS.mTocco = M;
   if (p.aperture != null) return RN.stanza(M, p.W, p.H, q[0], q[1], p.aperture);
   const max = p.scala ? 0.55 / p.scala : Math.max(p.W, p.H) * 0.055;
   for (let rr = max; rr >= 3; rr *= 0.85) { const t = RN.stanza(M, p.W, p.H, q[0], q[1], Math.round(rr)); if (t.errore === "muro") continue; return t; }
   return { errore: "muro" };
 }
+// stanza forzata: rettangolo tra i muri più vicini (per ogni lato la distanza mediana su più raggi, così le porte non contano)
+function rnStanzaBox(M, p, q) { const W = p.W, H = p.H, o = Math.round(Math.max(W, H) * 0.02), med = a => a.sort((x, y) => x - y)[a.length >> 1];
+  const raggio = (x, y, dx, dy) => { let k = 1; for (; k < Math.max(W, H); k++) { const X = x + dx * k, Y = y + dy * k; if (X < 0 || Y < 0 || X >= W || Y >= H || M[Y * W + X]) break; } return k - 1; };
+  const L = [], R = [], U = [], D = []; for (let t = -o; t <= o; t += Math.max(1, o >> 3)) { const y = Math.min(H - 1, Math.max(0, q[1] + t)), x = Math.min(W - 1, Math.max(0, q[0] + t));
+    if (!M[y * W + q[0]]) { L.push(raggio(q[0], y, -1, 0)); R.push(raggio(q[0], y, 1, 0)); } if (!M[q[1] * W + x]) { U.push(raggio(x, q[1], 0, -1)); D.push(raggio(x, q[1], 0, 1)); } }
+  if (!L.length || !U.length) return null; const x0 = q[0] - med(L), x1 = q[0] + med(R), y0 = q[1] - med(U), y1 = q[1] + med(D);
+  if (x1 - x0 < 6 || y1 - y0 < 6 || (x1 - x0) * (y1 - y0) > W * H * 0.3) return null; return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]; }
 function rnTocco(q) {
   const p = RS.p;
   if (RS.fase === "stanze") {
@@ -446,6 +462,12 @@ function rnTocco(q) {
     if (gia) { RS.sel = gia; rnDisegna(); rnPannello(); return; }
     const r = rnStanzaAuto(p, q);
     if (r.errore === "muro") return rnGuida(`<b>Hai toccato un muro.</b> Tocca il pavimento al centro della stanza.`);
+    if (r.errore === "aperta") { const u = RS.ultimoAperta, ora = Date.now();
+      if (u && ora - u.t < 15000 && Math.hypot(q[0] - u.q[0], q[1] - u.q[1]) < rnTocco1() * 2.5) { RS.ultimoAperta = null; const poly = rnStanzaBox(RS.mTocco, p, q);
+        if (poly) { const st = { id: "s" + Date.now().toString(36), poly, tipo: null, seed: q }; p.stanze = [...(p.stanze || []), st]; rnIndovina(p.stanze, rnScala(p)); RS.sel = st; p.mobili = null; rnSalva(); rnDisegna(); rnPannello();
+          return rnGuida(`<b>Stanza forzata</b>: l'ho chiusa con un rettangolo tra i muri più vicini. Se serve correggila con il riquadro o la barra delle aperture.`); } }
+      RS.ultimoAperta = { q, t: ora };
+      return rnGuida(`<b>Questa zona ha aperture verso fuori</b> e non riesco a chiuderla da solo. <b>Tocca di nuovo lo stesso punto</b> per forzarla: la chiudo tra i muri più vicini.`); }
     if (r.errore === "aperta") return rnGuida(`<b>Questa stanza non risulta chiusa</b> (forse una porta molto larga o un'apertura). Alza <i>"Chiudi le aperture"</i> qui sotto e ritocca, oppure usa <i>"Riquadro della casa"</i> e appoggialo sui muri esterni.`);
     const poly = RN.contorno(r.reg, p.W, p.H);
     if (poly.length < 3 || RN.area(poly) < p.W * p.H * 0.002) return rnGuida(`<b>Zona troppo piccola.</b> Tocca più al centro della stanza.`);
@@ -492,7 +514,7 @@ function rnPannello() {
       if (lung > 0 && L) { p.scala = lung / L; p.misMuro = lung; }
       else if (mq > 0 && pxTot) { p.scala = Math.sqrt(mq / pxTot); p.misMuro = null; }
       else return rnGuida(`<b>Manca la misura.</b> Tocca i due capi di un muro e scrivi i metri, oppure scrivi la superficie totale.`);
-      p.mqTot = Math.round(pxTot * p.scala * p.scala * 10) / 10; p.aperture = null; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); });
+      p.mqTot = Math.round(pxTot * p.scala * p.scala * 10) / 10; rnIndovina(p.stanze, p.scala); p.aperture = null; p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); });
     return;
   }
   if (RS.fase === "arredo") {

@@ -52,7 +52,7 @@ function rzRicalcola(p) {
 async function rzRifai(p) { await rnPrepara(p); rzRicalcola(p); p.mobili = null; rnSalva(); rnDisegna(); rnPannello(); }
 
 /* ---- fase Ristrutturazione nell'editor ---- */
-RN_FASI.splice(RN_FASI.findIndex(f => f[0] === "fraz") >= 0 ? RN_FASI.findIndex(f => f[0] === "fraz") : RN_FASI.findIndex(f => f[0] === "arredo"), 0, ["ristr", "Ristrutturazione"]);
+RN_FASI.splice(RN_FASI.findIndex(f => f[0] === "fraz") >= 0 ? RN_FASI.findIndex(f => f[0] === "fraz") : RN_FASI.findIndex(f => f[0] === "risultato"), 0, ["ristr", "Ristrutturazione"]);
 { const prep = rnPrepara; rnPrepara = async function (p) { await prep(p); rzApplica(p); }; }
 { const dis = rnDisegna; rnDisegna = function () { dis(); if (RS.fase !== "ristr") return; const cv = $("#rncv"); if (!cv) return; const g = cv.getContext("2d"), p = RS.p, lw = Math.max(3, p.W / 300);
   // stato di progetto sopra la planimetria: demolizioni gialle, costruzioni rosse

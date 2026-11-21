@@ -301,7 +301,7 @@ function fzTagliaStanze(p, seg) {
 }
 
 /* ---- aggancio all'editor del Rendering ---- */
-RN_FASI.splice(RN_FASI.findIndex(f => f[0] === "arredo"), 0, ["fraz", "Frazionamento"]);
+RN_FASI.splice(RN_FASI.findIndex(f => f[0] === "risultato"), 0, ["fraz", "Frazionamento"]);
 { const prep = rnPrepara; rnPrepara = async function (p) { await prep(p); fzApplicaMuri(p); }; }
 // etichetta di un ingresso: "Ingresso A", oppure "Ingresso comune" se si entra in un vano condiviso
 const fzEtich = (p, k) => p.fzTipoIng === "comune" ? (k === 0 ? "Ingresso comune" : "") : "Ingresso " + FZ_LET[k];
