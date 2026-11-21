@@ -26,21 +26,16 @@ async function dtCerca(im) {
   // centro del paese
   const cc = (typeof TERR !== "undefined" && (TERR.coord[im.comune] || (typeof AUTO_COORD !== "undefined" && AUTO_COORD[im.comune]))) || null;
   if (cc && dtKm(lat, lon, cc[0], cc[1]) > 0.25) punti.push({ k: "centro", n: im.comune, lat: cc[0], lon: cc[1] });
-  // luoghi vicini da OpenStreetMap
-  try {
-    const q = `[out:json][timeout:25];(${DT_CAT.filter(c => c.q).map(c => c.q(c.r, a)).join("")});out center tags 400;`;
-    // due server: il primo che risponde vince (quello principale spesso è sovraccarico)
-    const ask = u => { const ac = new AbortController(); setTimeout(() => ac.abort(), 25000);
-      return fetch(u, { method: "POST", body: "data=" + encodeURIComponent(q), signal: ac.signal }).then(r => r.ok ? r.json() : Promise.reject(r.status)); };
-    const j = await Promise.any(["https://overpass.kumi.systems/api/interpreter", "https://overpass-api.de/api/interpreter"].map(ask));
-    const tipo = t => t.amenity === "ferry_terminal" || t.natural === "beach" || t.leisure === "beach_resort" ? "lago" : t.railway === "station" ? "stazione" : t.shop === "supermarket" ? "supermercato"
-      : t.amenity === "pharmacy" ? "farmacia" : t.amenity === "hospital" ? "ospedale" : t.landuse === "winter_sports" || t.aerialway === "station" ? "sci" : t.amenity === "university" ? "uni" : t.highway === "motorway_junction" ? "autostrada" : null;
-    const best = {};
-    for (const e of j.elements || []) { const t = e.tags || {}, k = tipo(t), la = e.lat ?? e.center?.lat, lo = e.lon ?? e.center?.lon; if (!k || la == null) continue;
-      if (k === "ospedale" && /veterin|clinica privata|rsa|casa di riposo/i.test(t.name || "")) continue;
-      const d = dtKm(lat, lon, la, lo); if (!best[k] || d < best[k].d) best[k] = { k, d, lat: la, lon: lo, n: t.name || (k === "autostrada" ? (t.ref ? "Uscita " + t.ref : "Uscita autostrada") : DT_CAT.find(c => c.k === k).n) }; }
-    Object.values(best).forEach(p => punti.push(p));
-  } catch (e) { console.warn("overpass", e); }
+  // luoghi vicini da OpenStreetMap (ricerca Nominatim: una domanda al secondo, più affidabile di Overpass)
+  const Q = [["farmacia", "[pharmacy]", .05, "amenity.pharmacy"], ["supermercato", "[supermarket]", .05, "shop.supermarket"], ["ospedale", "[hospital]", .35, "amenity.hospital"],
+    ["stazione", "[railway station]", .25, "railway.station"], ["uni", "università", .45, "amenity.university"]];
+  for (const [k, q, d, cat] of Q) {
+    try { const u = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=10&bounded=1&viewbox=${lon - d},${lat + d},${lon + d},${lat - d}&q=${encodeURIComponent(q)}`;
+      const j = await (await fetch(u)).json();
+      const b = j.filter(x => x.category + "." + x.type === cat && !/veterin|rsa|casa di riposo/i.test(x.name || "")).map(x => ({ k, n: x.name, lat: +x.lat, lon: +x.lon, d: dtKm(lat, lon, +x.lat, +x.lon) })).sort((x, y) => x.d - y.d)[0];
+      if (b) { if (k === "stazione") b.n = "Stazione di " + b.n; punti.push(b); } } catch (e) {}
+    await new Promise(r => setTimeout(r, 1100));
+  }
   // aeroporto più vicino, Milano e casa
   const ae = DT_AEROPORTI.map(([n, la, lo]) => ({ k: "aeroporto", n: "Aeroporto di " + n, lat: la, lon: lo, d: dtKm(lat, lon, la, lo) })).sort((x, y) => x.d - y.d)[0]; punti.push(ae);
   DT_FISSI.forEach(f => punti.push({ ...f }));
