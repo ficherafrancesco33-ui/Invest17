@@ -29,7 +29,7 @@
   "Valeggio sul Mincio|VR": 0,
   "Arona|NO": 0,
   "La Spezia|SP": 1,
-  "Genova|GE": 7,
+  "Genova|GE": 10,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 4,
@@ -77,7 +77,9 @@
   "Mortara|PV": 1,
   "Cremona|CR": 1,
   "Asti|AT": 2,
-  "Biella|BI": 3
+  "Biella|BI": 3,
+  "Ivrea|TO": 1,
+  "Banchette|TO": 1
  },
  "coord": {
   "Edolo": [
@@ -1614,6 +1616,85 @@
     "2018917354",
     "2018923380"
    ]
+  },
+  {
+   "id": "134817203",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 44000,
+   "mq": 53,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Valentino Armirotti 10, Sampierdarena, Genova",
+   "titolo": "Trilocale arredato a Sampierdarena, vicino al Villa Scassi",
+   "lat": 44.4172,
+   "lon": 8.8878,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2058823891/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058823717/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058823733/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058823753/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058823769/m-c.jpg"
+   ],
+   "aggiornato": "17/11/2026",
+   "agenzia": "Agenzia a Genova",
+   "canone": 520,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova ponente: mediana 12,2 €/m², 750 € al mese; stima prudente",
+   "pro": [
+    "Due camere e cucina abitabile, arredato",
+    "Caldaia a condensazione, doppi vetri, porta blindata",
+    "Vicino all'ospedale Villa Scassi"
+   ],
+   "contro": [
+    "Classe F",
+    "Secondo piano senza ascensore"
+   ],
+   "classe": "F",
+   "spese_mese": 50,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "128523510",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 47000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": true,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Pierino Negrotto Cambiaso 1, Rivarolo, Genova",
+   "titolo": "Bilocale arredato a Rivarolo, vista sugli orti",
+   "lat": 44.4385,
+   "lon": 8.8966,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1913122066/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1913122084/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1913122108/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1913122130/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1913122148/m-c.jpg"
+   ],
+   "aggiornato": "27/04/2026",
+   "agenzia": "A&I Immobiliare",
+   "canone": 470,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare in Valpolcevera: mediana 10,4 €/m²; stima prudente",
+   "pro": [
+    "Arredato, ascensore",
+    "Vicino a via Vezzani, negozi e bus",
+    "Bagno finestrato, affaccio sul verde"
+   ],
+   "contro": [
+    "Classe G"
+   ],
+   "classe": "G",
+   "spese_mese": 50,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -2091,6 +2172,21 @@
    "id": "132290714",
    "comune": "Genova",
    "motivo": "Rendita netta 5,7%: sotto la soglia"
+  },
+  {
+   "id": "133685522",
+   "comune": "Ivrea",
+   "motivo": "Rendita netta 5,1%: sotto la soglia"
+  },
+  {
+   "id": "126131583",
+   "comune": "Banchette",
+   "motivo": "Rendita netta 5,2%: sotto la soglia"
+  },
+  {
+   "id": "134470633",
+   "comune": "Genova",
+   "motivo": "Rendita netta 5,0% con spese alte: sotto la soglia"
   }
  ]
 }
