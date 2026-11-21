@@ -83,9 +83,10 @@
   "Cesate|MI": 1,
   "Valenza|AL": 1,
   "Sant'Olcese|GE": 2,
-  "Sovere|BG": 1,
-  "Galliate Lombardo|VA": 1,
-  "Varano Borghi|VA": 1
+  "Sovere|BG": 3,
+  "Galliate Lombardo|VA": 2,
+  "Varano Borghi|VA": 1,
+  "Costa Volpino|BG": 1
  },
  "coord": {
   "Edolo": [
@@ -2390,6 +2391,126 @@
    "classe": "C",
    "spese_mese": 0,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "124663869",
+   "comune": "Sovere",
+   "p": "BG",
+   "prezzo": 47000,
+   "mq": 53,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": true,
+   "indirizzo": "Sovere, a 3 km da Lovere (Lago d'Iseo)",
+   "titolo": "Trilocale arredato a 3 km dal Lago d'Iseo",
+   "foto": [
+    "https://pwm.im-cdn.it/image/1817974307/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1817974309/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1817974311/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1817974315/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1817974321/m-c.jpg"
+   ],
+   "aggiornato": "15/11/2026",
+   "agenzia": "privato",
+   "canone": 420,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare tra Lovere e Pisogne: mediana 13,3 €/m²; per Sovere stima prudente",
+   "pro": [
+    "Ottime condizioni, appena imbiancato, tetto rifatto nel 2020",
+    "A 3 km dal lago e dall'ospedale di Lovere, vicino alle piste della Presolana",
+    "Autonomo a metano, nessuna spesa condominiale, loggia",
+    "Casa sul lago: tenuta anche sotto il 7%, si può usare anche per sé"
+   ],
+   "contro": [
+    "Acqua in comune con le altre unità (spese da dividere)",
+    "Vendita da privato: verificare bene i documenti"
+   ],
+   "classe": "F",
+   "spese_mese": 15,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "130484396",
+   "comune": "Galliate Lombardo",
+   "p": "VA",
+   "prezzo": 39000,
+   "lavori": 5000,
+   "mq": 45,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": false,
+   "indirizzo": "Via Carletto Ferrari 16, Galliate Lombardo (Lago di Varese)",
+   "titolo": "Bilocale pronto a due passi dal Lago di Varese",
+   "lat": 45.7846,
+   "lon": 8.7711,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1958796540/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1958870426/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1958870460/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1958870478/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1958870496/m-c.jpg"
+   ],
+   "aggiornato": "30/07/2026",
+   "agenzia": "Tempocasa Azzate",
+   "canone": 420,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare intorno al Lago di Varese: mediana 9,2 €/m², 600 € al mese; stima prudente",
+   "pro": [
+    "Pronto da abitare, cucina nuova a vista, bagno finestrato",
+    "Palazzina di 4 unità, nessuna spesa condominiale",
+    "Lago di Varese a due passi; Varese (ospedale e università) a 15 minuti; frontalieri",
+    "Casa sul lago: tenuta anche sotto il 7%, si può usare anche per sé"
+   ],
+   "contro": [
+    "Arredo da completare (5.000 € già contati)"
+   ],
+   "classe": "",
+   "spese_mese": 0,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133422128",
+   "comune": "Sovere",
+   "p": "BG",
+   "prezzo": 50000,
+   "mq": 65,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Sellere, frazione di Sovere (Lago d'Iseo)",
+   "titolo": "Bilocale soleggiato a pochi minuti dal Lago d'Iseo",
+   "lat": 45.8165,
+   "lon": 10.0462,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2026093028/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2026093260/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2026093264/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2026093268/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2026093272/m-c.jpg"
+   ],
+   "aggiornato": "30/10/2026",
+   "agenzia": "RE/MAX Orange",
+   "canone": 450,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare tra Lovere e Pisogne: mediana 13,3 €/m²; per Sovere stima prudente",
+   "pro": [
+    "Casa sul lago: tenuta anche sotto il 7%, si può usare anche per sé",
+    "Pochi minuti da Lovere, lago d'Iseo e lago di Endine",
+    "Piccola palazzina, balcone, cucina separata, molto soleggiato"
+   ],
+   "contro": [
+    "Frazione di Sovere, serve l'auto",
+    "Arredo da verificare con l'agenzia"
+   ],
+   "classe": "",
+   "spese_mese": 20,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -2899,19 +3020,14 @@
    "motivo": "Rendita netta 6,9% con arredo: sotto il 7%"
   },
   {
-   "id": "124663869",
-   "comune": "Sovere",
-   "motivo": "Lago d Iseo: rendita netta 6,0%, sotto il 7%"
-  },
-  {
-   "id": "130484396",
-   "comune": "Galliate Lombardo",
-   "motivo": "Lago di Varese: rendita netta 6,7% con arredo, sotto il 7%"
-  },
-  {
    "id": "97303294",
    "comune": "Varano Borghi",
    "motivo": "Lago di Comabbio: rendita netta 5,8%, sotto il 7%"
+  },
+  {
+   "id": "121608438",
+   "comune": "Costa Volpino",
+   "motivo": "Lago d Iseo: rendita netta 5,8%, sotto il 6% chiesto per le case sul lago"
   }
  ]
 }
