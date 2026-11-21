@@ -45,7 +45,7 @@ const out = raw.annunci.map(a => {
   return {
     id: "auto-" + a.id, titolo: a.titolo, url: `https://www.immobiliare.it/annunci/${a.id}/`, fonte: "Immobiliare.it (ricerca automatica di Claude)",
     aggiunto: a.trovato || raw.data, trovato: a.trovato || raw.data, regione: REG[a.p] || "", provincia: a.p, comune: a.comune, zona: a.indirizzo,
-    lat: co ? co[0] : null, lng: co ? co[1] : null, pos_indicativa: true,
+    lat: a.lat ?? (co ? co[0] : null), lng: a.lon ?? (co ? co[1] : null), pos_indicativa: a.lat == null,
     prezzo: a.prezzo, mq: a.mq, locali: a.locali, bagni: a.bagni, piano: a.piano, arredato: !!a.arredato, stato: a.stato || "buono", lavori: 0,
     classe_energetica: a.classe || "", foto: a.foto[0], foto_extra: a.foto.slice(1), agenzia: a.agenzia, aggiornato_annuncio: a.aggiornato,
     spese: { condominio_mese: a.spese_mese || 0, imu_anno: Math.max(250, Math.round(a.prezzo * 0.008 / 10) * 10), stima: true },
