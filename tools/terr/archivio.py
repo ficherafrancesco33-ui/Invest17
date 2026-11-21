@@ -75,7 +75,7 @@ for k, a in arc.items():
     if "g" in ex: ex = ex.replace("s", "")
     piano = (a.get("pianoA") or "").replace(",", "/")
     righe[k] = ";".join(str(x) for x in [k, a["prezzo"], a["mq"], a.get("locali") or "", a.get("bagni") or "", piano, a.get("asc") or 0, st, a.get("tip") or "",
-                                         f'{a["lat"]:.5f}', f'{a["lon"]:.5f}', (a.get("via") or "").replace(";", ","), a.get("micro") or "", "Milano", a.get("priv") or 0, ex, mercato(a)])
+                                         f'{a["lat"]:.5f}', f'{a["lon"]:.5f}', (a.get("via") or "").replace(";", ","), a.get("micro") or "", a.get("comune") or "Milano", a.get("priv") or 0, ex, mercato(a)])
     if a.get("priv"): pok.append(k)
 
 # raw: sostituisco le righe con id presente nell'archivio, tengo le altre (zone non rilette)

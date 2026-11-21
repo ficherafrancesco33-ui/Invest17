@@ -1,5 +1,8 @@
 # annunci di Milano esclusi dopo aver letto la descrizione: id;motivo
 132647020;vende una quota del 50% in comproprietà
+88543591;magazzino seminterrato, non abitazione
+127365567;asta pubblica
+127598188;locale C/2 (deposito) venduto come non abitativo
 98104068;progetto / nuova costruzione
 99954196;non residenziale
 99954200;non residenziale
@@ -224,6 +227,75 @@
 134940941;nuda proprietà
 134945881;asta
 134947091;nuda proprietà
-88543591;magazzino seminterrato, non abitazione
-127365567;asta pubblica
-127598188;locale C/2 (deposito) venduto come non abitativo
+97492874;progetto / nuova costruzione
+97637134;non residenziale
+97935318;nuda proprietà
+103219180;progetto / nuova costruzione
+108282447;non residenziale
+114385127;non residenziale
+114768825;non residenziale
+115493651;progetto / nuova costruzione
+116373335;uso non abitativo
+118323565;progetto / nuova costruzione
+119056827;nuda proprietà
+119251511;progetto / nuova costruzione
+119598469;progetto / nuova costruzione
+119730896;progetto / nuova costruzione
+120420860;non residenziale
+123678639;progetto / nuova costruzione
+123855927;non residenziale
+124113199;uso non abitativo
+124464641;progetto / nuova costruzione
+124683453;non residenziale
+125480883;progetto / nuova costruzione
+125526685;non residenziale
+125740167;non residenziale
+125966565;progetto / nuova costruzione
+126491659;non residenziale
+126608149;progetto / nuova costruzione
+126646231;non residenziale
+126782479;progetto / nuova costruzione
+127106035;non residenziale
+127211691;progetto / nuova costruzione
+127401603;nuda proprietà
+127624726;nuda proprietà
+127726994;non residenziale
+127924138;non residenziale
+128393344;progetto / nuova costruzione
+128526176;progetto / nuova costruzione
+128552176;nuda proprietà
+128657482;uso non abitativo
+128709084;non residenziale
+128812384;nuda proprietà
+128818090;non residenziale
+129066106;progetto / nuova costruzione
+129120768;non residenziale
+129263986;progetto / nuova costruzione
+129552204;non residenziale
+129552448;non residenziale
+130177136;nuda proprietà
+130453896;nuda proprietà
+131123740;nuda proprietà
+131446278;non residenziale
+132047016;nuda proprietà
+132060574;non residenziale
+132068110;progetto / nuova costruzione
+132249044;non residenziale
+132257892;progetto / nuova costruzione
+132728218;nuda proprietà
+132905406;nuda proprietà
+133177872;non residenziale
+133313478;progetto / nuova costruzione
+133401494;nuda proprietà
+133636372;nuda proprietà
+133743784;asta
+133755676;nuda proprietà
+133760630;uso non abitativo
+134047017;nuda proprietà
+134481183;asta
+134562823;progetto / nuova costruzione
+134668269;nuda proprietà
+134715789;nuda proprietà
+134727775;nuda proprietà
+134763515;affitto con riscatto
+134935735;uso non abitativo
