@@ -677,28 +677,41 @@ async function rnRisultato() {
     ${(p.lavori || []).length ? `<h2>Lavori <small>in giallo si demolisce, in rosso si costruisce</small></h2><div class="rn2d">${rnSvg({ ...p, mobili: [] }, { lavori: true })}</div>` : ""}
     <h2>Vista 3D <small>trascina per girare, due dita per lo zoom</small></h2>
     <div class="chips">${Object.entries(RN_STILI3D).map(([k, v]) => `<button class="chip ${(RN_STILI3D[p.stile3d] ? p.stile3d : "maison") === k ? "on" : ""}" data-rn3s="${k}">${v[0]}</button>`).join("")}</div>
+    ${p.stile3d === "foto" ? `<div class="chips rnviste">${[["alto", "Dall'alto"], ...p.stanze.filter(st => !["balcone", "terrazzo"].includes(st.tipo)).map(st => [st.id, RN_TIPI[st.tipo]?.n || "Stanza"])].map(([k, n]) => `<button class="chip ${(p.vista3d || "alto") === k ? "on" : ""}" data-rnvista="${k}">${esc(n)}</button>`).join("")}</div>` : ""}
     <div class="rn3d" id="rn3d"><div class="spin"></div></div>
+    ${p.stile3d === "foto" ? `<div class="btns"><button class="btn pri" data-rnscatta>Scatta foto</button></div><p class="note">Trascina per guardarti intorno, poi scatta: le foto vanno nel PDF se scegli "Foto 3D".</p>` : ""}
+    <div class="rnscatti">${(p.scatti || []).map((u, i) => `<div><img src="${u}"><button data-rntoglifoto="${i}" aria-label="Togli">✕</button></div>`).join("")}</div>
     <div class="rntab">${p.stanze.map(st => `<span>${esc(RN_TIPI[st.tipo]?.n || "")}<b>${num(RN.area(st.poly) * p.scala * p.scala, 1)} m²</b></span>`).join("")}<span class="tot">Totale calpestabile<b>${num(mq, 1)} m²</b></span></div>
-    <div class="rnsel"><span>Nel PDF metti</span>${[["p2", "Pianta 2D"], ["p3", "Vista 3D"], ...((p.lavori || []).length ? [["p4", "Lavori"]] : [])].map(([k, n]) => `<button class="chip ${rnSel(p)[k] ? "on" : ""}" data-rnsel="${k}">${n}</button>`).join("")}</div>
+    <div class="rnsel"><span>Nel PDF metti</span>${[["p2", "Pianta 2D"], ["p3", "Vista 3D"], ...((p.lavori || []).length ? [["p4", "Lavori"]] : []), ...((p.scatti || []).length ? [["p5", "Foto 3D"]] : [])].map(([k, n]) => `<button class="chip ${rnSel(p)[k] ? "on" : ""}" data-rnsel="${k}">${n}</button>`).join("")}</div>
     <div class="btns"><button class="btn pri" data-rnpdf>PDF del rendering</button><button class="btn sec" data-rnall>Metti nel PDF della valutazione</button></div>
     <div class="btns"><button class="btn sec" data-rnpng2>Scarica la pianta (PNG)</button><button class="btn sec" data-rnpng3>Scarica il 3D (PNG)</button></div>
     <p class="note" id="rnmsg"></p>`;
   let V3 = null;
-  box.querySelectorAll("[data-rn3s]").forEach(b => b.addEventListener("click", async () => { p.stile3d = b.dataset.rn3s; rnSalva(); box.querySelectorAll("[data-rn3s]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, p.stile3d); }));
-  try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "maison"); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
+  box.querySelectorAll("[data-rnvista]").forEach(b => b.addEventListener("click", async () => { p.vista3d = b.dataset.rnvista; rnSalva(); box.querySelectorAll("[data-rnvista]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, "foto", { vista: p.vista3d }); }));
+  box.querySelector("[data-rnscatta]")?.addEventListener("click", async () => { if (!V3) return; const im = await rnImg(V3.foto()), c = document.createElement("canvas"); c.width = Math.min(1600, im.naturalWidth); c.height = Math.round(c.width * im.naturalHeight / im.naturalWidth); c.getContext("2d").drawImage(im, 0, 0, c.width, c.height);
+    p.scatti = [...(p.scatti || []), c.toDataURL("image/jpeg", 0.86)].slice(-8); p.pdfSel = { ...rnSel(p), p5: true }; rnSalva(); rnRisultato(); });
+  box.querySelectorAll("[data-rntoglifoto]").forEach(b => b.addEventListener("click", () => { p.scatti.splice(+b.dataset.rntoglifoto, 1); rnSalva(); rnRisultato(); }));
+  box.querySelectorAll("[data-rn3s]").forEach(b => b.addEventListener("click", async () => { const prima = p.stile3d; p.stile3d = b.dataset.rn3s; rnSalva(); if ((prima === "foto") !== (p.stile3d === "foto")) { V3?.stop(); return rnRisultato(); } box.querySelectorAll("[data-rn3s]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, p.stile3d); }));
+  try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "maison", { vista: p.vista3d || "alto" }); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
   const scarica = (url, nome) => { const a = document.createElement("a"); a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); };
   box.querySelectorAll("[data-rnsel]").forEach(b => b.addEventListener("click", () => { const S = rnSel(p); S[b.dataset.rnsel] = !S[b.dataset.rnsel]; if (!S.p2 && !S.p3 && !S.p4) S.p2 = true; p.pdfSel = S; rnSalva(); box.querySelectorAll("[data-rnsel]").forEach(c => c.classList.toggle("on", !!S[c.dataset.rnsel])); }));
-  const imgs = async () => { const S = rnSel(p); return { p2: S.p2 ? await rnPng(p) : null, p3: S.p3 && V3 ? V3.foto() : null, p4: S.p4 && (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null }; };
+  const imgs = async () => { const S = rnSel(p); return { p2: S.p2 ? await rnPng(p) : null, p3: S.p3 && V3 ? V3.foto() : null, p4: S.p4 && (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null, p5: S.p5 && (p.scatti || []).length ? p.scatti.slice() : null }; };
   // miniatura per l'elenco
   rnPng(p, 360).then(t => { p.thumb = t; rnSalva(); }).catch(() => {});
   box.querySelector("[data-rnpng2]").addEventListener("click", async () => scarica(await rnPng(p, 2400), `pianta-${p.nome}.png`));
   box.querySelector("[data-rnpng3]").addEventListener("click", () => V3 && scarica(V3.foto(), `3d-${p.nome}.png`));
-  box.querySelector("[data-rnpdf]").addEventListener("click", async () => { const I = await imgs(); pdfApri(rnPdfHtml(p, I.p2, I.p3, I.p4)); });
+  box.querySelector("[data-rnpdf]").addEventListener("click", async () => { const I = await imgs(); pdfApri(rnPdfHtml(p, I.p2, I.p3, I.p4, I.p5)); });
   box.querySelector("[data-rnall]").addEventListener("click", async () => { const I = await imgs();
-    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, p4: I.p4, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+    const all = { id: p.id, nome: p.nome, p2: I.p2, p3: I.p3, p4: I.p4, p5: I.p5, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
     await RNDB.kvSet("allegato", all); window.__RENDER_ALL = all;
     $("#rnmsg").innerHTML = `Fatto: il prossimo PDF di valutazione avrà la pagina con la pianta arredata e il 3D di <b>${esc(p.nome)}</b>. Lo togli dalla pagina Rendering.`; });
 }
+// pagine con le foto scattate dentro casa (2 per pagina)
+function rnPaginaFoto(all, C) { const F = all.p5 || []; if (!F.length) return ""; let h = "";
+  for (let i = 0; i < F.length; i += 2) h += `<section class="pg rnpg" style="page-break-before:always;padding:14mm 14mm 10mm">
+    ${i === 0 ? `<div style="font-family:Georgia,serif;font-size:20pt;color:${C.bx};margin-bottom:2mm">Gli ambienti</div><div style="font-size:9pt;color:#7a6c66;margin-bottom:5mm">Viste 3D indicative dell'arredo proposto</div>` : ""}
+    ${F.slice(i, i + 2).map(u => `<img src="${u}" style="width:100%;max-height:120mm;object-fit:cover;border-radius:2mm;margin-bottom:5mm">`).join("")}</section>`;
+  return h; }
 function rnSel(p) { return { p2: true, p3: false, p4: true, ...(p.pdfSel || {}) }; }
 // pagina (o pagine) per il PDF: usata da sola e dentro la valutazione
 function rnPagina(all, C) {
@@ -715,10 +728,10 @@ function rnPagina(all, C) {
   </section>${all.p4 ? `<section class="pg rnpg" style="page-break-before:always;padding:14mm 14mm 10mm">
     <div style="font-family:Georgia,serif;font-size:20pt;color:${C.bx};margin-bottom:2mm">Lavori previsti</div>
     <div style="font-size:9pt;color:#7a6c66;margin-bottom:5mm">In giallo le demolizioni, in rosso le nuove costruzioni. Schema indicativo, da sviluppare con un tecnico.</div>
-    <img src="${all.p4}" style="width:100%;max-height:200mm;object-fit:contain;border:0.3mm solid #ead9c2;border-radius:2mm;background:#fffdf9"></section>` : ""}`;
+    <img src="${all.p4}" style="width:100%;max-height:200mm;object-fit:contain;border:0.3mm solid #ead9c2;border-radius:2mm;background:#fffdf9"></section>` : ""}${rnPaginaFoto(all, C)}`;
 }
-function rnPdfHtml(p, p2, p3, p4) {
-  const all = { nome: p.nome, p2, p3, p4, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
+function rnPdfHtml(p, p2, p3, p4, p5) {
+  const all = { nome: p.nome, p2, p3, p4, p5, fz: p.fzAss ? p.fzPiani : null, stanze: p.stanze.map(st => [RN_TIPI[st.tipo]?.n || "", Math.round(RN.area(st.poly) * p.scala * p.scala * 10) / 10]) };
   return `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Rendering · ${esc(p.nome)} · Maison Collection</title>
   <style>@page{size:A4;margin:0}body{margin:0;font-family:Helvetica,Arial,sans-serif;color:#2a1418}.pg{width:210mm;min-height:297mm;box-sizing:border-box}
   .top{display:flex;justify-content:space-between;align-items:center;padding:10mm 14mm 0;color:#6a1828;font-family:Georgia,serif;letter-spacing:.15em;font-size:10pt}
