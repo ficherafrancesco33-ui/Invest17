@@ -592,7 +592,6 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 :root[data-th=bianco] .thbtn i{background:#5a2133}
 
 /* sezione Seguiti tolta per ora: niente stelline */
-[data-seg],[data-segp],[data-segim],[data-segann],[data-unseg]{display:none!important}
 
 /* Bianco e bordeaux: tutto nei colori del marchio */
 :root[data-th=bianco] .novb{border-color:#d9b767;background:linear-gradient(135deg,#fbf1dc,#fffaf1)}
@@ -663,6 +662,7 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
 .fzrep{display:grid;gap:8px}.fzu{border-left:5px solid;border-radius:10px;padding:8px 10px;background:var(--panel2);font-size:13px;display:grid;gap:3px}.fzx{color:#b0384a}.fzn{color:#9a6f1c}.fzok{color:var(--tx2)}
 .fzsol{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fzcard{display:grid;gap:3px;text-align:left;padding:6px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--tx);font:inherit;cursor:pointer}.fzcard.on{border:2px solid var(--cy2)}.fzcard svg{width:100%;height:auto;border-radius:8px}.fzcard span{font-size:12px}
 .rnscatti{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.rnscatti div{position:relative}.rnscatti img{width:100%;border-radius:10px;display:block}.rnscatti button{position:absolute;top:6px;right:6px;width:28px;height:28px;border-radius:50%;border:0;background:rgba(176,40,40,.92);color:#fff;font-size:14px}
+.delbtn{border:1px solid var(--line);background:transparent;color:var(--muted,#b9a);border-radius:999px;padding:7px 12px;font:600 12.5px var(--body,sans-serif)}.delbtn.conf{background:#8b1e2b;color:#fff;border-color:#8b1e2b}
 .dtmap{height:340px;border-radius:14px;overflow:hidden;position:relative;background:var(--card2)}.dtmap:fullscreen{height:100%;border-radius:0}
 .dtlist{display:grid;gap:2px;margin:10px 0 4px}.dtrow{display:flex;align-items:center;gap:10px;padding:7px 2px;border-bottom:1px solid var(--line)}.dtrow i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;background:var(--dc);color:#1d0d10;flex:none}.dtrow span{flex:1;display:flex;flex-direction:column;font-size:13.5px}.dtrow span small{opacity:.65;font-size:11.5px}.dtrow em{font-style:normal;font-weight:800;text-align:right;color:var(--cy2,#c9a24b);display:flex;flex-direction:column}.dtrow em small{font-weight:500;opacity:.6;font-size:11px}
 .rnsel{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 4px}.rnsel span{font-size:13px;opacity:.75;margin-right:4px}
@@ -693,19 +693,19 @@ if(typeof plSet==="function")plSet();if(typeof render==="function")render(true);
 </script>
 <div class="tip" id="tip" hidden></div>
 
-<script src="data/impostazioni.js?v=2611211223"></script>
-<script src="data/immobili.js?v=2611211223"></script>
-<script src="data/auto.js?v=2611211223"></script><script src="data/novita.js?v=2611211223"></script>
-<script src="data/notizie.js?v=2611211223"></script>
-<script src="data/guida.js?v=2611211223"></script>
-<script src="data/territorio.js?v=2611211223"></script>
-<script src="data/servizi.js?v=2611211223"></script><script src="data/zone_profili.js?v=2611211223"></script><script src="data/coeff.js?v=2611211223"></script><script src="data/omi.js?v=2611211223"></script><script src="data/nil_demo.js?v=2611211223"></script>
+<script src="data/impostazioni.js?v=2611211224"></script>
+<script src="data/immobili.js?v=2611211224"></script>
+<script src="data/auto.js?v=2611211224"></script><script src="data/novita.js?v=2611211224"></script>
+<script src="data/notizie.js?v=2611211224"></script>
+<script src="data/guida.js?v=2611211224"></script>
+<script src="data/territorio.js?v=2611211224"></script>
+<script src="data/servizi.js?v=2611211224"></script><script src="data/zone_profili.js?v=2611211224"></script><script src="data/coeff.js?v=2611211224"></script><script src="data/omi.js?v=2611211224"></script><script src="data/nil_demo.js?v=2611211224"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="js/terr.js?v=2611211223"></script>
-<script src="js/milmap.js?v=2611211223"></script>
-<script src="js/hub.js?v=2611211223"></script>
-<script src="js/home.js?v=2611211223"></script>
-<script src="js/render.js?v=2611211223"></script><script src="js/fraz.js?v=2611211223"></script><script src="js/ristr.js?v=2611211223"></script><script src="js/guscio.js?v=2611211223"></script><script src="js/stile3d.js?v=2611211223"></script><script src="js/pianta2d.js?v=2611211223"></script><script src="js/vano.js?v=2611211223"></script><script src="js/completa.js?v=2611211223"></script><script src="js/pdf.js?v=2611211223"></script>
+<script src="js/terr.js?v=2611211224"></script>
+<script src="js/milmap.js?v=2611211224"></script>
+<script src="js/hub.js?v=2611211224"></script>
+<script src="js/home.js?v=2611211224"></script>
+<script src="js/render.js?v=2611211224"></script><script src="js/fraz.js?v=2611211224"></script><script src="js/ristr.js?v=2611211224"></script><script src="js/guscio.js?v=2611211224"></script><script src="js/stile3d.js?v=2611211224"></script><script src="js/pianta2d.js?v=2611211224"></script><script src="js/vano.js?v=2611211224"></script><script src="js/completa.js?v=2611211224"></script><script src="js/pdf.js?v=2611211224"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */
@@ -1159,7 +1159,7 @@ function render(keepScroll) {
   else if (v === "notizie") { html = vNotizie(); after = afterNotizie; }
   else if (v === "guida") html = vGuida(a);
   else if (v === "inv") { html = vInv(a, b, c); after = () => afterInv(a, b, c); }
-  else if (v === "seguiti") { location.hash = "#home"; return; }
+  else if (v === "seguiti") { html = vSeguiti(); after = afterSeguiti; }
   else if (v === "completa") { html = vCompleta(a); after = () => afterCompleta(a); }
   else if (TERR_VIEWS[v]) { html = TERR_VIEWS[v][0](a, b, c); after = () => TERR_VIEWS[v][1](a, b, c); }
   else { html = vHomeK(); after = afterHomeK; }
@@ -1206,6 +1206,7 @@ $("#logo").addEventListener("click", e => { e.preventDefault(); $("#logo").class
 render();
 try { const y = sessionStorage.getItem("ks_y"); if (y != null) { sessionStorage.removeItem("ks_y"); const go = () => window.scrollTo(0, +y); go(); setTimeout(go, 400); setTimeout(go, 1200); } } catch {}
 </script>
-<script src="js/dintorni.js?v=2611211223"></script>
+<script src="js/seguiti.js?v=2611211224"></script>
+<script src="js/dintorni.js?v=2611211224"></script>
 </body>
 </html>
