@@ -82,7 +82,10 @@
   "Banchette|TO": 1,
   "Cesate|MI": 1,
   "Valenza|AL": 1,
-  "Sant'Olcese|GE": 2
+  "Sant'Olcese|GE": 2,
+  "Sovere|BG": 1,
+  "Galliate Lombardo|VA": 1,
+  "Varano Borghi|VA": 1
  },
  "coord": {
   "Edolo": [
@@ -156,6 +159,10 @@
   "Dongo": [
    46.1352,
    9.2797
+  ],
+  "Sovere": [
+   45.8117,
+   10.0328
   ]
  },
  "annunci": [
@@ -2890,6 +2897,21 @@
    "id": "132371588",
    "comune": "Genova",
    "motivo": "Rendita netta 6,9% con arredo: sotto il 7%"
+  },
+  {
+   "id": "124663869",
+   "comune": "Sovere",
+   "motivo": "Lago d Iseo: rendita netta 6,0%, sotto il 7%"
+  },
+  {
+   "id": "130484396",
+   "comune": "Galliate Lombardo",
+   "motivo": "Lago di Varese: rendita netta 6,7% con arredo, sotto il 7%"
+  },
+  {
+   "id": "97303294",
+   "comune": "Varano Borghi",
+   "motivo": "Lago di Comabbio: rendita netta 5,8%, sotto il 7%"
   }
  ]
 }
