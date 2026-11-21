@@ -659,7 +659,7 @@ async function rnRisultato() {
   box.innerHTML = `<h2>Pianta arredata</h2><div class="rn2d">${svg}</div>
     ${(p.lavori || []).length ? `<h2>Lavori <small>in giallo si demolisce, in rosso si costruisce</small></h2><div class="rn2d">${rnSvg({ ...p, mobili: [] }, { lavori: true })}</div>` : ""}
     <h2>Vista 3D <small>trascina per girare, due dita per lo zoom</small></h2>
-    <div class="chips">${Object.entries(RN_STILI3D).map(([k, v]) => `<button class="chip ${(p.stile3d || "bambola") === k ? "on" : ""}" data-rn3s="${k}">${v[0]}</button>`).join("")}</div>
+    <div class="chips">${Object.entries(RN_STILI3D).map(([k, v]) => `<button class="chip ${(RN_STILI3D[p.stile3d] ? p.stile3d : "maison") === k ? "on" : ""}" data-rn3s="${k}">${v[0]}</button>`).join("")}</div>
     <div class="rn3d" id="rn3d"><div class="spin"></div></div>
     <div class="rntab">${p.stanze.map(st => `<span>${esc(RN_TIPI[st.tipo]?.n || "")}<b>${num(RN.area(st.poly) * p.scala * p.scala, 1)} m²</b></span>`).join("")}<span class="tot">Totale calpestabile<b>${num(mq, 1)} m²</b></span></div>
     <div class="btns"><button class="btn pri" data-rnpdf>PDF del rendering</button><button class="btn sec" data-rnall>Metti nel PDF della valutazione</button></div>
@@ -667,7 +667,7 @@ async function rnRisultato() {
     <p class="note" id="rnmsg"></p>`;
   let V3 = null;
   box.querySelectorAll("[data-rn3s]").forEach(b => b.addEventListener("click", async () => { p.stile3d = b.dataset.rn3s; rnSalva(); box.querySelectorAll("[data-rn3s]").forEach(c => c.classList.toggle("on", c === b)); V3?.stop(); V3 = await rn3D($("#rn3d"), p, p.stile3d); }));
-  try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "bambola"); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
+  try { V3 = await rn3D($("#rn3d"), p, p.stile3d || "maison"); } catch (e) { $("#rn3d").innerHTML = `<p class="note">Il 3D non si è caricato (${esc(e.message || e)}). La pianta 2D funziona lo stesso.</p>`; }
   const scarica = (url, nome) => { const a = document.createElement("a"); a.href = url; a.download = nome; document.body.appendChild(a); a.click(); a.remove(); };
   const imgs = async () => ({ p2: await rnPng(p), p3: V3 ? V3.foto() : null, p4: (p.lavori || []).length ? await rnPng({ ...p, mobili: [] }, 1800, { lavori: true }) : null });
   // miniatura per l'elenco
