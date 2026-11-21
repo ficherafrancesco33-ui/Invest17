@@ -8,14 +8,14 @@ const DT_FISSI = [
 const DT_AEROPORTI = [["Malpensa", 45.6301, 8.7255], ["Linate", 45.4495, 9.2783], ["Orio al Serio", 45.6689, 9.7004], ["Torino Caselle", 45.2008, 7.6496], ["Genova", 44.4133, 8.8375], ["Verona", 45.3957, 10.8885]];
 const DT_CAT = [
   { k: "centro", n: "Centro del paese", ico: "●", col: "#e8d9b8" },
-  { k: "lago", n: "Lago / imbarcadero", ico: "≈", col: "#5fa8c8", q: (r, a) => `nwr(around:${r},${a})[amenity=ferry_terminal];nwr(around:${r},${a})[natural=beach];nwr(around:${r},${a})[leisure=beach_resort];`, r: 20000 },
-  { k: "stazione", n: "Stazione", ico: "▣", col: "#9aa7c7", q: (r, a) => `node(around:${r},${a})[railway=station];`, r: 20000 },
-  { k: "supermercato", n: "Supermercato", ico: "◼", col: "#8fbf7a", q: (r, a) => `nwr(around:${r},${a})[shop=supermarket];`, r: 12000 },
-  { k: "farmacia", n: "Farmacia", ico: "+", col: "#7fc8a9", q: (r, a) => `node(around:${r},${a})[amenity=pharmacy];`, r: 12000 },
-  { k: "ospedale", n: "Ospedale", ico: "H", col: "#d9686b", q: (r, a) => `nwr(around:${r},${a})[amenity=hospital];`, r: 40000 },
-  { k: "sci", n: "Impianti da sci", ico: "▲", col: "#d8e4ef", q: (r, a) => `nwr(around:${r},${a})[landuse=winter_sports];node(around:${r},${a})[aerialway=station];`, r: 30000 },
-  { k: "uni", n: "Università", ico: "U", col: "#b28ad1", q: (r, a) => `nwr(around:${r},${a})[amenity=university];`, r: 35000 },
-  { k: "autostrada", n: "Casello autostradale", ico: "A", col: "#7fa0d8", q: (r, a) => `node(around:${r},${a})[highway=motorway_junction];`, r: 35000 },
+  { k: "lago", n: "Lago / imbarcadero", ico: "≈", col: "#5fa8c8", q: (r, a) => `nwr(around:${r},${a})[amenity=ferry_terminal];nwr(around:${r},${a})[natural=beach];nwr(around:${r},${a})[leisure=beach_resort];`, r: 15000 },
+  { k: "stazione", n: "Stazione", ico: "▣", col: "#9aa7c7", q: (r, a) => `node(around:${r},${a})[railway=station];`, r: 15000 },
+  { k: "supermercato", n: "Supermercato", ico: "◼", col: "#8fbf7a", q: (r, a) => `nwr(around:${r},${a})[shop=supermarket];`, r: 5000 },
+  { k: "farmacia", n: "Farmacia", ico: "+", col: "#7fc8a9", q: (r, a) => `node(around:${r},${a})[amenity=pharmacy];`, r: 5000 },
+  { k: "ospedale", n: "Ospedale", ico: "H", col: "#d9686b", q: (r, a) => `nwr(around:${r},${a})[amenity=hospital];`, r: 30000 },
+  { k: "sci", n: "Impianti da sci", ico: "▲", col: "#d8e4ef", q: (r, a) => `nwr(around:${r},${a})[landuse=winter_sports];node(around:${r},${a})[aerialway=station];`, r: 25000 },
+  { k: "uni", n: "Università", ico: "U", col: "#b28ad1", q: (r, a) => `nwr(around:${r},${a})[amenity=university];`, r: 30000 },
+  { k: "autostrada", n: "Casello autostradale", ico: "A", col: "#7fa0d8", q: (r, a) => `node(around:${r},${a})[highway=motorway_junction];`, r: 25000 },
   { k: "aeroporto", n: "Aeroporto", ico: "✈", col: "#c9a24b" }
 ];
 const dtKm = (a, b, c, d) => { const r = Math.PI / 180, x = Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(x)); };
@@ -29,8 +29,10 @@ async function dtCerca(im) {
   // luoghi vicini da OpenStreetMap
   try {
     const q = `[out:json][timeout:25];(${DT_CAT.filter(c => c.q).map(c => c.q(c.r, a)).join("")});out center tags 400;`;
-    const r = await fetch("https://overpass-api.de/api/interpreter", { method: "POST", body: "data=" + encodeURIComponent(q) });
-    const j = await r.json();
+    // due server: il primo che risponde vince (quello principale spesso è sovraccarico)
+    const ask = u => { const ac = new AbortController(); setTimeout(() => ac.abort(), 25000);
+      return fetch(u, { method: "POST", body: "data=" + encodeURIComponent(q), signal: ac.signal }).then(r => r.ok ? r.json() : Promise.reject(r.status)); };
+    const j = await Promise.any(["https://overpass.kumi.systems/api/interpreter", "https://overpass-api.de/api/interpreter"].map(ask));
     const tipo = t => t.amenity === "ferry_terminal" || t.natural === "beach" || t.leisure === "beach_resort" ? "lago" : t.railway === "station" ? "stazione" : t.shop === "supermarket" ? "supermercato"
       : t.amenity === "pharmacy" ? "farmacia" : t.amenity === "hospital" ? "ospedale" : t.landuse === "winter_sports" || t.aerialway === "station" ? "sci" : t.amenity === "university" ? "uni" : t.highway === "motorway_junction" ? "autostrada" : null;
     const best = {};
