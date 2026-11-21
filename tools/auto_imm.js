@@ -47,7 +47,7 @@ const out = raw.annunci.map(a => {
     aggiunto: a.trovato || raw.data, trovato: a.trovato || raw.data, regione: REG[a.p] || "", provincia: a.p, comune: a.comune, zona: a.indirizzo,
     lat: a.lat ?? (co ? co[0] : null), lng: a.lon ?? (co ? co[1] : null), pos_indicativa: a.lat == null,
     prezzo: a.prezzo, mq: a.mq, locali: a.locali, bagni: a.bagni, piano: a.piano, arredato: !!a.arredato, stato: a.stato || "buono", lavori: a.lavori || 0,
-    classe_energetica: a.classe || "", foto: a.foto[0], foto_extra: a.foto.slice(1), agenzia: a.agenzia, aggiornato_annuncio: a.aggiornato,
+    classe_energetica: a.classe || "", foto: a.galleria ? `https://pwm.im-cdn.it/image/${a.galleria[0]}/s-c.jpg` : a.foto[0], foto_extra: a.foto.slice(1), galleria: a.galleria || null, agenzia: a.agenzia, aggiornato_annuncio: a.aggiornato,
     spese: { condominio_mese: a.spese_mese || 0, imu_anno: Math.max(250, Math.round(a.prezzo * 0.008 / 10) * 10), stima: true },
     affitti: { breve, lungo: a.canone ? { canone: a.canone, stima: false, fonte: a.canone_fonte } : { canone, stima: true, fonte: locOmi ? `Stima OMI ${OMI_SEM}, zona ${om.zona} (${om.descr.toLowerCase()}): affitto ${om.loc[0].toLocaleString("it-IT")}–${om.loc[1].toLocaleString("it-IT")} €/m² al mese, preso il valore medio.` : `Stima: ${eurMq.toLocaleString("it-IT")} €/m² al mese (media degli annunci d'affitto del comune, Immobiliare.it), ridotta del 30% per prudenza.` } },
     giudizio: { pro: a.pro, contro: a.contro, sintesi: `${a.titolo} a ${Math.round(a.prezzo / a.mq)} €/m², in ${a.stato || "buono"} stato.` },

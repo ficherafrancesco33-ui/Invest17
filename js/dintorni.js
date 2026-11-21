@@ -62,7 +62,8 @@ function dtSezione(im) {
 }
 async function dtDisegna(im) {
   const el = $("#dtmap"), box = $("#dtlist"); if (!el || !box) return;
-  const chiave = "dint_" + im.id; let D = store.get(chiave, null);
+  const chiave = "dint_" + im.id, pre = window.DT_PRE && DT_PRE[String(im.id).replace(/^auto-/, "")];
+  let D = pre ? { punti: pre.map(([k, n, lat, lon, min, km, stima]) => ({ k, n: n || (DT_FISSI.find(f => f.k === k) || {}).n || "", lat, lon, min, km, stima: !!stima })), quando: Date.now() } : store.get(chiave, null);
   if (!D || !D.punti || Date.now() - D.quando > 30 * 864e5) { D = await dtCerca(im); if (D.punti.some(p => !p.stima)) store.set(chiave, D); }
   if (!document.body.contains(box)) return;
   const ord = ["centro", "lago", "supermercato", "farmacia", "stazione", "ospedale", "sci", "uni", "autostrada", "aeroporto", "milano", "casa"];
@@ -100,4 +101,6 @@ function dtMappa(el, im, P) {
 }
 { const v0 = vScheda; vScheda = function (src, id) { const h = v0(src, id), im = findIm(src, id); if (!im) return h; return h.replace("<h2>Il prezzo è giusto?</h2>", dtSezione(im) + "<h2>Il prezzo è giusto?</h2>"); }; }
 { const a0 = afterScheda; afterScheda = function (src, id) { a0(src, id); const im = findIm(src, id); if (im) dtDisegna(im).catch(e => { const b = $("#dtlist"); if (b) b.innerHTML = `<p class="note">Distanze non disponibili ora.</p>`; }); }; }
+// carico in anticipo la libreria della mappa, così la scheda la mostra subito
+setTimeout(() => { try { mmLoad(); } catch (e) {} }, 1500);
 if (/^#imm\//.test(location.hash)) render();
