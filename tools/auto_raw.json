@@ -29,7 +29,7 @@
   "Valeggio sul Mincio|VR": 0,
   "Arona|NO": 0,
   "La Spezia|SP": 1,
-  "Genova|GE": 10,
+  "Genova|GE": 11,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 7,
@@ -43,7 +43,7 @@
   "Novi Ligure|AL": 0,
   "Lonate Pozzolo|VA": 0,
   "Cardano al Campo|VA": 1,
-  "Tortona|AL": 2,
+  "Tortona|AL": 4,
   "Erba|CO": 0,
   "Borgomanero|NO": 1,
   "Sondrio|SO": 1,
@@ -80,7 +80,8 @@
   "Biella|BI": 3,
   "Ivrea|TO": 1,
   "Banchette|TO": 1,
-  "Cesate|MI": 1
+  "Cesate|MI": 1,
+  "Valenza|AL": 1
  },
  "coord": {
   "Edolo": [
@@ -2056,6 +2057,168 @@
    ],
    "classe": "E",
    "spese_mese": 50,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129986234",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 35000,
+   "mq": 68,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Bertolotti, Cornigliano, Genova",
+   "titolo": "Trilocale già affittato a 600 € al mese fino al 2028",
+   "lat": 44.415,
+   "lon": 8.8675,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1946684642/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946684976/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946684982/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946684984/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1946684988/m-c.jpg"
+   ],
+   "aggiornato": "29/10/2026",
+   "agenzia": "Tecnocasa",
+   "canone": 600,
+   "canone_fonte": "Canone in corso indicato nell'annuncio: 600 € al mese, contratto fino al 2028",
+   "pro": [
+    "Già affittato a 600 € al mese fino al 2028",
+    "Tre locali, cucina ampia, riscaldamento autonomo",
+    "Luminoso, zona servita e collegata"
+   ],
+   "contro": [
+    "Classe G, edificio del 1930",
+    "Secondo piano senza ascensore"
+   ],
+   "classe": "G",
+   "spese_mese": 40,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "134781865",
+   "comune": "Valenza",
+   "p": "AL",
+   "prezzo": 33500,
+   "lavori": 7000,
+   "mq": 88,
+   "locali": 3,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": true,
+   "stato": "buono",
+   "arredato": false,
+   "indirizzo": "Via Felice Cavallotti 69, Centro, Valenza",
+   "titolo": "Trilocale moderno in centro con ascensore",
+   "lat": 45.0153,
+   "lon": 8.6448,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2058013949/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058013963/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058013965/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058013981/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2058013983/m-c.jpg"
+   ],
+   "aggiornato": "16/11/2026",
+   "agenzia": "Tecnorete",
+   "canone": 500,
+   "canone_fonte": "Valenza, 15 minuti da Alessandria: affitti stimati prudenti a circa 6 €/m² per 88 m²",
+   "pro": [
+    "Moderno e in buono stato, ascensore",
+    "Cucina abitabile, ripostiglio, cantina",
+    "Centrale; Valenza è il polo dei gioielli, 15 minuti da Alessandria"
+   ],
+   "contro": [
+    "Classe G, spese 108 €/mese",
+    "Arredo da completare (7.000 € già contati)"
+   ],
+   "classe": "G",
+   "spese_mese": 108,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129232564",
+   "comune": "Tortona",
+   "p": "AL",
+   "prezzo": 42000,
+   "lavori": 6000,
+   "mq": 73,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": false,
+   "indirizzo": "Centro storico, Tortona",
+   "titolo": "Ampio bilocale con parquet in palazzo d'epoca",
+   "lat": 44.8987,
+   "lon": 8.8681,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1928001780/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1928001766/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1928001832/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1928001798/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1928001852/m-c.jpg"
+   ],
+   "aggiornato": "09/11/2026",
+   "agenzia": "Agorà Immobiliare",
+   "canone": 500,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Tortona centro: mediana 9,3 €/m²; stima prudente",
+   "pro": [
+    "Parquet, doppi vetri, porta blindata",
+    "Bagno finestrato, cantina",
+    "Centro storico, palazzo d'epoca"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore",
+    "Arredo e cucina da completare (6.000 € già contati)"
+   ],
+   "classe": "F",
+   "spese_mese": 30,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "120914640",
+   "comune": "Tortona",
+   "p": "AL",
+   "prezzo": 40000,
+   "lavori": 6000,
+   "mq": 69,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "arredato": false,
+   "indirizzo": "Via Gherardo Opizzoni, Tortona",
+   "titolo": "Loft su due livelli in complesso recintato",
+   "lat": 44.8951,
+   "lon": 8.8562,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1717324658/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1717324858/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1717324868/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1717324874/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1717324884/m-c.jpg"
+   ],
+   "aggiornato": "04/11/2026",
+   "agenzia": "Tecnocasa",
+   "canone": 480,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Tortona: mediana 9,3 €/m²; stima prudente",
+   "pro": [
+    "Loft moderno con soffitti alti, camera soppalcata",
+    "Complesso privato recintato con cancello elettrico",
+    "Cucina abitabile, bagno finestrato, classe D"
+   ],
+   "contro": [
+    "Arredo da completare (6.000 € già contati)"
+   ],
+   "classe": "D",
+   "spese_mese": 30,
    "trovato": "2026-11-21"
   }
  ],
