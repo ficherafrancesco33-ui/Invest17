@@ -92,7 +92,12 @@
   "Gignese|VB": 1,
   "Nebbiuno|NO": 1,
   "Massino Visconti|NO": 1,
-  "Leggiuno|VA": 1
+  "Leggiuno|VA": 1,
+  "Darfo Boario Terme|BS": 1,
+  "Albuzzano|PV": 1,
+  "Seriate|BG": 1,
+  "Castiglione d'Adda|LO": 1,
+  "Olgiate Olona|VA": 1
  },
  "coord": {
   "Edolo": [
@@ -2598,6 +2603,86 @@
    "classe": "G",
    "spese_mese": 20,
    "trovato": "2026-11-21"
+  },
+  {
+   "id": "134930107",
+   "comune": "Darfo Boario Terme",
+   "p": "BS",
+   "prezzo": 49000,
+   "mq": 68,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ristrutturato",
+   "arredato": true,
+   "indirizzo": "Corso Italia 77, Boario Terme",
+   "titolo": "Bilocale ristrutturato nel 2024, già affittato, accanto alle Terme",
+   "lat": 45.8906,
+   "lon": 10.1861,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2061469993/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061376247/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061376353/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061376359/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2061376361/m-c.jpg"
+   ],
+   "aggiornato": "20/11/2026",
+   "agenzia": "Tecnorete",
+   "canone": 520,
+   "canone_fonte": "Già affittato (canone da chiedere); affitti chiesti oggi a Boario: circa 650 € al mese, stima prudente",
+   "pro": [
+    "Già affittato: rende da subito",
+    "Ristrutturato nel 2024, climatizzato, infissi nuovi in PVC",
+    "A 50 m dalle Terme di Boario; Lago d'Iseo a 15 minuti, ospedale di Esine vicino"
+   ],
+   "contro": [
+    "Primo piano senza ascensore",
+    "Chiedere canone e scadenza del contratto"
+   ],
+   "classe": "D",
+   "spese_mese": 25,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "134958259",
+   "comune": "Seriate",
+   "p": "BG",
+   "prezzo": 45000,
+   "mq": 39,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via dei Tasca, Centro, Seriate (Bergamo)",
+   "titolo": "Bilocale arredato in centro a Seriate",
+   "lat": 45.6849,
+   "lon": 9.7232,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2062077809/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2062077963/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2062077789/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2062077825/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2062077939/m-c.jpg"
+   ],
+   "aggiornato": "21/11/2026",
+   "agenzia": "Bgy House",
+   "canone": 480,
+   "canone_fonte": "Affitti chiesti oggi a Seriate: 21 annunci, mediana 14,6 €/m² e 750 € al mese; per 39 m² stima prudente",
+   "pro": [
+    "Arredamento compreso nel prezzo",
+    "Centralissimo, riscaldamento autonomo, spese minime",
+    "Ospedale di Seriate e Bergamo vicini, aeroporto di Orio a 10 minuti"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore",
+    "Classe F"
+   ],
+   "classe": "F",
+   "spese_mese": 55,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -3155,6 +3240,21 @@
    "id": "122498784",
    "comune": "",
    "motivo": "Da ristrutturare"
+  },
+  {
+   "id": "134912029",
+   "comune": "Albuzzano",
+   "motivo": "Rendita netta 6,5%: sotto il 7%"
+  },
+  {
+   "id": "134948767",
+   "comune": "Castiglione d'Adda",
+   "motivo": "Rendita netta 5,3%, paese con pochi inquilini"
+  },
+  {
+   "id": "134791167",
+   "comune": "Olgiate Olona",
+   "motivo": "Rendita netta 6,2%: sotto il 7%"
   }
  ]
 }
