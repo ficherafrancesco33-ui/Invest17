@@ -61,6 +61,7 @@
 .kh-c b{display:block;padding:8px 10px 0;font-size:13px}.kh-c span{display:block;padding:0 10px 10px;font-size:11.5px;color:var(--muted)}
 .kh-c .p{position:absolute;top:8px;right:8px;z-index:2;padding:3px 9px;border-radius:999px;font:600 12px var(--body,sans-serif);color:#f3d9a0;background:rgba(10,4,8,.55);border:1px solid rgba(243,217,160,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .kh-c .nw{position:absolute;top:8px;left:8px;z-index:2;padding:3px 8px;border-radius:999px;font:700 10px var(--body,sans-serif);letter-spacing:.08em;text-transform:uppercase;background:var(--cy);color:var(--on,#24101a)}
+.kh .novb{background:linear-gradient(145deg,rgba(var(--accrgb),.22),rgba(255,255,255,.05));border:1px solid rgba(var(--accrgb),.45);border-radius:20px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-bottom:14px}
 .kh .fu{opacity:0;transform:translateY(14px);animation:khup .6s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes khup{to{opacity:1;transform:none}}
 @keyframes khsheen{0%,55%{left:-60%}100%{left:130%}}
@@ -106,6 +107,7 @@
       : `<div class="gl kh-empty ${fu()}">Non segui ancora nessun immobile. Apri una scheda e tocca <b>☆ Segui</b>: qui vedrai i tuoi preferiti in ordine di rendita netta.</div>`;
     return `<div class="kh"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
       <div class="kh-date ${fu()}"><span>${gg[d.getDay()]} ${d.getDate()} ${mesi[d.getMonth()]}</span><b>${(() => { const u = novUltimo(); return u ? "Aggiornato il " + novData(u.data) : ""; })()}</b></div>
+      ${typeof novBanner === "function" ? novBanner() : ""}
       <div class="kh-stats ${fu()}">
         <a class="kh-stat gl" href="#inv/classifica" data-src="auto"><strong>${AUTO.length}</strong><span>investimenti ≤ 60.000 €</span></a>
         <a class="kh-stat gl" href="#inv/classifica" data-nov="inv"><strong>${nuovi.length}</strong><span>nuovi nell'ultima ricerca</span></a>
@@ -128,6 +130,9 @@
     </div>`;
   };
   afterHomeK = function () {
+    const nb = document.getElementById("novb"); if (nb) nb.addEventListener("click", e => { const u = novUltimo();
+      if (e.target.closest("[data-nov]") && e.target.closest("[data-nov]").dataset.nov === "inv") store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "oggi" });
+      if (e.target.closest("[data-nov],[data-novx]") && u) { store.set("nov_visto", u.data); if (e.target.closest("[data-novx]")) nb.remove(); } });
     document.querySelectorAll(".kh [data-src=auto]").forEach(a => a.addEventListener("click", () => store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "auto" })));
     document.querySelectorAll(".kh [data-nov=inv]").forEach(a => a.addEventListener("click", () => store.set("f_inv", { ...store.get("f_inv", INV_F0), src: "oggi" })));
     if (window.RNDB) RNDB.tutti().then(L => { L = (L || []).sort((a, b) => (b.agg || 0) - (a.agg || 0)); const n = document.getElementById("khRenN"), s = document.getElementById("khRenS");
