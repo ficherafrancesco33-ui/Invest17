@@ -58,18 +58,23 @@ function fzSegApertura(Pi, Pj, s) {
   // tolgo gli estremi (angoli) e prendo il centro del tratto comune
   const xs = pts.map(q => q[0]), ys = pts.map(q => q[1]), oriz = Math.max(...xs) - Math.min(...xs) >= Math.max(...ys) - Math.min(...ys);
   const L = (oriz ? Math.max(...xs) - Math.min(...xs) : Math.max(...ys) - Math.min(...ys)) * s; if (L < 1.0) return null;
-  const cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2, h = 0.4 / s;
+  let cx = (Math.max(...xs) + Math.min(...xs)) / 2, cy = (Math.max(...ys) + Math.min(...ys)) / 2, h = 0.4 / s;
+  // al centro dello spessore del muro: a metà tra le due stanze
+  if (oriz) { let bd = Infinity, by = cy; for (let e = 0; e < Pj.length; e++) { const a = Pj[e], b = Pj[(e + 1) % Pj.length]; if (Math.abs(a[1] - b[1]) < 2 && cx >= Math.min(a[0], b[0]) - 2 && cx <= Math.max(a[0], b[0]) + 2 && Math.abs(a[1] - cy) < bd) { bd = Math.abs(a[1] - cy); by = a[1]; } } cy = (cy + by) / 2; }
+  else { let bd = Infinity, bx = cx; for (let e = 0; e < Pj.length; e++) { const a = Pj[e], b = Pj[(e + 1) % Pj.length]; if (Math.abs(a[0] - b[0]) < 2 && cy >= Math.min(a[1], b[1]) - 2 && cy <= Math.max(a[1], b[1]) + 2 && Math.abs(a[0] - cx) < bd) { bd = Math.abs(a[0] - cx); bx = a[0]; } } cx = (cx + bx) / 2; }
   return oriz ? [cx - h, cy, cx + h, cy] : [cx, cy - h, cx, cy + h];
 }
 function fzLavori(p) {
   const s = p.scala, st = p.stanze, A = fzAdiacenze(st, s), PT = fzPorte(st, A, s), chiudi = [], apri = [], u = i => p.fzAss?.[st[i].id] ?? (st[i].id === p.fzVanoId ? "v" : null);
   // tra due unità diverse non resta nessun passaggio (il vano comune può avere la porta verso ogni unità)
   for (let i = 0; i < st.length; i++) for (const j of A[i]) { if (j < i) continue; const ui = u(i), uj = u(j);
-    if (ui == null || uj == null || ui === uj || ui === "v" || uj === "v") continue;
+    if (ui === "v" || uj === "v") { const o = ui === "v" ? j : i, uo = u(o), ent = (p.fzEnts?.[uo] || []).includes(st[o].id);
+      if (uo != null && uo !== "v" && !ent && fzHaPorta(PT, i, j)) { const pts = PT.dove[Math.min(i, j) + "-" + Math.max(i, j)] || []; if (pts.length) chiudi.push({ seg: fzSegChiusura(pts), tra: [i, j] }); } continue; }
+    if (ui == null || uj == null || ui === uj) continue;
     if (fzHaPorta(PT, i, j)) { const pts = PT.dove[Math.min(i, j) + "-" + Math.max(i, j)] || []; if (pts.length) chiudi.push({ seg: fzSegChiusura(pts), tra: [i, j] }); } }
   // porte da aprire dentro ogni unità
-  const N = p.fzN || 2;
-  for (let k = 0; k < N; k++) { const g = st.map((r, i) => i).filter(i => u(i) === k); for (const [i, j] of fzDaAprire(g, A, PT)) { const seg = fzSegApertura(st[i].poly, st[j].poly, s); if (seg) apri.push({ seg, tra: [i, j] }); } }
+  const N = p.fzN || 2, idx = id => st.findIndex(r => r.id === id);
+  for (const [a, b] of p.fzApriId || []) { const i = idx(a), j = idx(b); if (i < 0 || j < 0) continue; const seg = fzSegApertura(st[i].poly, st[j].poly, s); if (seg) apri.push({ seg, tra: [i, j] }); }
   // porta d'ingresso dal vano comune, se manca
   const v = st.findIndex(r => r.id === p.fzVanoId);
   if (v >= 0) for (let k = 0; k < N; k++) { const adj = [...A[v]].filter(i => u(i) === k); if (adj.length && !adj.some(i => fzHaPorta(PT, v, i))) { const e = fzEntrate(adj, st, PT, v)[0], seg = fzSegApertura(st[v].poly, st[e].poly, s); if (seg) apri.push({ seg, tra: [v, e], ingresso: k }); } }
@@ -92,6 +97,33 @@ function fzDaAprire(g, A, PT) {
   while (vis.size < S.size) { let arco = null; for (const i of vis) { for (const j of A[i]) if (S.has(j) && !vis.has(j)) { arco = [i, j]; break; } if (arco) break; }
     if (!arco) break; aperte.push(arco); vis.add(arco[1]); espandi(); }
   return aperte;
+}
+/* ---- regola base: dall'ingresso si deve arrivare in ogni stanza dell'unità.
+   Si passa solo attraverso ingresso, disimpegno, soggiorno, cucina, studio; bagni, camere e ripostigli sono stanze "di arrivo".
+   Se una stanza non si raggiunge, apro una porta dal locale di passaggio più adatto (mai dentro un bagno o una camera). */
+const FZ_PASSO = new Set(["ingresso", "disimpegno", "soggiorno", "cucsogg", "cucina", "studio", "altro"]);
+function fzAccessi(idx, ents, uso, A, PT, stanze, s) {
+  const S = new Set(idx), porta = new Set(), apri = [], passo = i => FZ_PASSO.has(uso[i]);
+  const ha = (i, j) => fzHaPorta(PT, i, j) || porta.has(Math.min(i, j) + "-" + Math.max(i, j));
+  const raggiunte = () => { const vis = new Set(ents.filter(e => S.has(e))), st = [...vis];
+    while (st.length) { const i = st.pop(), cam = ["camera", "cameretta"].includes(uso[i]);
+      if (!passo(i) && !ents.includes(i) && !cam) continue;
+      // da una camera si arriva solo al suo bagno (bagno in camera), non oltre
+      for (const j of A[i]) if (S.has(j) && !vis.has(j) && ha(i, j) && (!cam || ents.includes(i) || uso[j] === "bagno")) { vis.add(j); if (!cam || ents.includes(i)) st.push(j); } }
+    return vis; };
+  let vis = raggiunte();
+  for (let giro = 0; giro < idx.length && vis.size < S.size; giro++) {
+    // candidati: da una stanza di passaggio già raggiunta a una non raggiunta, con abbastanza muro in comune
+    let best = null;
+    for (const i of vis) { if (!passo(i) && !ents.includes(i)) continue;
+      for (const j of A[i]) { if (!S.has(j) || vis.has(j)) continue; if (["bagno", "camera", "cameretta"].includes(uso[i])) continue;
+        const seg = fzSegApertura(stanze[i].poly, stanze[j].poly, s); if (!seg) continue;
+        const sc = (["disimpegno", "ingresso"].includes(uso[i]) ? 0 : 1) + (passo(j) ? -0.5 : 0) + (uso[j] === "bagno" && ["soggiorno", "cucsogg", "cucina"].includes(uso[i]) ? 5 : 0);
+        if (!best || sc < best.sc) best = { i, j, sc }; } }
+    if (!best) break;
+    porta.add(Math.min(best.i, best.j) + "-" + Math.max(best.i, best.j)); apri.push([best.i, best.j]); vis = raggiunte();
+  }
+  return { apri, irragg: idx.filter(i => !vis.has(i)) };
 }
 /* ---- piano di un'unità: usi delle stanze e controllo delle regole ---- */
 function fzPiano(idx, stanze, A, s, PT, ents) {
@@ -133,33 +165,39 @@ function fzPiano(idx, stanze, A, s, PT, ents) {
   for (const b of bagni) {
     if (!b.fin && sup > FZ_REG.bagnoCiecoMax) note.push(`Bagno senza finestra in un alloggio oltre ${FZ_REG.bagnoCiecoMax} m²: serve la VMC (ventilazione meccanica).`);
     else if (!b.fin) note.push("Bagno senza finestra: serve l'aspirazione meccanica.");
-    const vic = [...A[b.i]].filter(j => idx.includes(j)).map(j => uso[j]);
-    if (vic.length && vic.every(u => ["soggiorno", "cucsogg", "cucina"].includes(u))) err.push("Il bagno si apre sulla zona giorno: serve un antibagno o un disimpegno con porta.");
+    b.vic = [...A[b.i]].filter(j => idx.includes(j));
     const bb = RN.bbox(b.st.poly), lato = Math.min(bb.x1 - bb.x0, bb.y1 - bb.y0) * s; if (lato < FZ_REG.bagnoLato) note.push(`Bagno largo ${num(lato, 2)} m: verifica il lato minimo (${FZ_REG.bagnoLato} m).`);
   }
   // camere
   for (const r of utili) { if (uso[r.i] === "camera") ok.push(`Camera doppia ${num(r.mq, 1)} m² (minimo ${FZ_REG.cameraDoppia}).`); if (uso[r.i] === "cameretta") ok.push(`Camera singola ${num(r.mq, 1)} m² (minimo ${FZ_REG.cameraSingola}).`);
     if (r.orig === "camera" || r.orig === "cameretta") { if (["soggiorno", "cucsogg", "cucina"].includes(uso[r.i])) note.push(`${RN_TIPI[r.orig].n} di ${num(r.mq, 1)} m² diventa ${RN_TIPI[uso[r.i]].n.toLowerCase()}: servono gli attacchi per la cucina.`);
       else if (!["camera", "cameretta"].includes(uso[r.i])) note.push(`${RN_TIPI[r.orig].n} di ${num(r.mq, 1)} m² diventa ${RN_TIPI[uso[r.i]].n.toLowerCase()}: ${r.fin ? "troppo piccola" : "non ha finestre"}.`); } }
-  // percorsi dall'ingresso: soggiorno e almeno un bagno raggiungibili senza passare da una camera
-  if (ents && ents.length) {
-    const S = new Set(idx), cam = i => ["camera", "cameretta"].includes(uso[i]), vis = new Set(ents.filter(e => S.has(e))), st2 = [...vis];
-    while (st2.length) { const i = st2.pop(); if (cam(i) && !ents.includes(i)) continue; for (const j of A[i]) if (S.has(j) && !vis.has(j)) { vis.add(j); st2.push(j); } }
-    if (giorno && !vis.has(giorno.i)) err.push("Dall'ingresso al soggiorno si passa per forza da una camera.");
-    if (bagni.length && !bagni.some(b => vis.has(b.i))) err.push("Il bagno si raggiunge solo passando da una camera.");
-    if (ents.every(e => uso[e] === "bagno")) err.push("Si entra direttamente nel bagno.");
-    else if (ents.every(e => cam(e) || uso[e] === "bagno")) note.push("Si entra direttamente in una camera: meglio un ingresso o un disimpegno.");
+  // regola base: ogni stanza raggiungibile dall'ingresso (porte esistenti + porte da aprire)
+  let acc = { apri: [], irragg: [] };
+  if (ents && ents.length && PT) {
+    acc = fzAccessi(idx, ents, uso, A, PT, stanze, s);
+    for (const i of acc.irragg) err.unshift(`${RN_TIPI[uso[i]]?.n || "Una stanza"} (${num(fzMq(stanze[i], s), 1)} m²) non si raggiunge dall'ingresso senza passare da un bagno o da una camera.`);
+    for (const [i, j] of acc.apri) note.push(`Da aprire (in oro sulla pianta): porta tra ${RN_TIPI[uso[i]]?.n.toLowerCase() || "stanza"} e ${RN_TIPI[uso[j]]?.n.toLowerCase() || "stanza"}.`);
+    // bagno: da quali stanze si entra davvero (porte che ci sono + porte da aprire)
+    const pa = new Set(acc.apri.map(([i, j]) => Math.min(i, j) + "-" + Math.max(i, j)));
+    for (const b of bagni) { const da = (b.vic || []).filter(j => fzHaPorta(PT, b.i, j) || pa.has(Math.min(b.i, j) + "-" + Math.max(b.i, j))).map(j => uso[j]);
+      if (da.length && da.every(u => ["soggiorno", "cucsogg", "cucina"].includes(u))) err.push("Il bagno si apre sulla zona giorno: serve un antibagno o un disimpegno con porta.");
+      else if (da.length && da.every(u => ["camera", "cameretta"].includes(u)) && bagni.length === 1) note.push("L'unico bagno si raggiunge solo dalla camera: meglio un disimpegno.");
+    }
+    if (ents.every(e => uso[e] === "bagno")) err.unshift("Si entra direttamente nel bagno.");
+    else if (ents.every(e => ["camera", "cameretta", "bagno"].includes(uso[e]))) note.push("Si entra direttamente in una camera: meglio un ingresso o un disimpegno.");
   }
-  if (PT) for (const [i, j] of fzDaAprire(idx, A, PT)) note.push(`Da aprire (in oro sulla pianta): porta tra ${RN_TIPI[uso[i]]?.n.toLowerCase() || "stanza"} e ${RN_TIPI[uso[j]]?.n.toLowerCase() || "stanza"}.`);
   if (utili.filter(r => r.fin > 0).length < 2) note.push("Riscontro d'aria: servono finestre su due pareti diverse (opposte o ad angolo), oppure la VMC.");
-  return { sup, uso, ok, err, note, camere: utili.filter(r => ["camera", "cameretta"].includes(uso[r.i])).length };
+  return { apri: acc.apri, sup, uso, ok, err, note, camere: utili.filter(r => ["camera", "cameretta"].includes(uso[r.i])).length };
 }
 
 /* ---- proposta automatica: tutte le divisioni possibili, scelgo quella che rispetta le regole e le quote ---- */
 // da quale stanza si entra dal vano comune: meglio una con la porta già fatta, mai il bagno se c'è altro
 function fzEntrate(adj, st, PT, vest) {
   const tipo = i => st[i].tipo0 || st[i].tipo, nonBagno = adj.filter(i => tipo(i) !== "bagno"), conPorta = nonBagno.filter(i => fzHaPorta(PT, vest, i));
-  return conPorta.length ? conPorta : nonBagno.length ? nonBagno : adj;
+  // una sola porta d'ingresso per unità: la stanza più grande tra le migliori
+  const L = conPorta.length ? conPorta : nonBagno.length ? nonBagno : adj;
+  return L.length ? [L.slice().sort((a, b) => RN.area(st[b].poly) - RN.area(st[a].poly))[0]] : [];
 }
 function fzProponi(p) {
   const s = p.scala, st = p.stanze, N = p.fzN || 2, A = fzAdiacenze(st, s), PT = fzPorte(st, A, s), comune = p.fzTipoIng === "comune";
@@ -189,7 +227,7 @@ function fzProponi(p) {
     const piani = gruppi.map((g, u) => fzPiano(g, st, A, s, PT, ents[u]));
     let pen = 0; piani.forEach((pl, u) => { pen += pl.err.length * 40 + pl.note.length * 4 + Math.abs(pl.sup - tot * quote[u]) * 1.5; });
     for (let i = 0; i < n; i++) for (const j of A[i]) if (j > i && cur[i] >= 0 && cur[j] >= 0 && cur[i] !== cur[j]) pen += fzHaPorta(PT, i, j) ? 3 : 0.5;
-    gruppi.forEach(g => { pen += fzDaAprire(g, A, PT).length * 6; });
+    piani.forEach(pl => { pen += (pl.apri || []).length * 6; });
     // porte dal vano comune: se manca, va aperta
     if (comune) ents.forEach(e => { if (!e.some(i => fzHaPorta(PT, vest, i))) pen += 6; });
     sol.push({ pen, gruppi, piani, ents, ass: cur.slice(), vest });
@@ -215,6 +253,7 @@ function fzApplica(p, best) {
   p.fzEnts = best.ents.map(e => e.map(i => p.stanze[i].id));
   best.piani.forEach(pl => Object.entries(pl.uso).forEach(([i, u]) => { const st = p.stanze[+i]; if (!st.tipo0) st.tipo0 = st.tipo; st.tipo = u; }));
   p.fzPiani = best.piani.map(pl => ({ sup: pl.sup, ok: pl.ok, err: pl.err, note: pl.note, camere: pl.camere }));
+  p.fzApriId = best.piani.flatMap(pl => (pl.apri || []).map(([i, j]) => [p.stanze[i].id, p.stanze[j].id]));
   fzLavori(p); p.mobili = null;
 }
 // controllo di una divisione fatta a mano
@@ -226,6 +265,7 @@ function fzControlla(p) {
   const piani = gruppi.map((g, u) => g.length ? fzPiano(g, st, A, s, PT, ents[u]) : { sup: 0, ok: [], err: ["Nessuna stanza assegnata."], note: [], uso: {} });
   for (let i = 0; i < st.length; i++) for (const j of A[i]) { const ui = p.fzAss?.[st[i].id], uj = p.fzAss?.[st[j].id];
     if (j > i && ui != null && uj != null && ui !== uj && fzHaPorta(PT, i, j)) piani[Math.min(ui, uj)].ok.push(`Separazione: la porta tra ${RN_TIPI[st[i].tipo]?.n.toLowerCase()} (${FZ_LET[ui]}) e ${RN_TIPI[st[j].tipo]?.n.toLowerCase()} (${FZ_LET[uj]}) viene chiusa con un muro (in rosso).`); }
+  p.fzApriId = piani.flatMap(pl => (pl.apri || []).map(([i, j]) => [st[i].id, st[j].id])); p.fzEnts = ents.map(e => e.map(i => st[i].id));
   fzLavori(p);
   gruppi.forEach((g, u) => { if (g.length && !fzConnessa(g, A)) piani[u].err.unshift("Le stanze non sono tutte collegate tra loro.");
     if (g.length && !ents[u].length) piani[u].err.unshift(vest >= 0 ? "L'unità non dà sul vano d'ingresso comune." : "L'unità non ha un ingresso segnato.");

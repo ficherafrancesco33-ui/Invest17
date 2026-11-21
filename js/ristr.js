@@ -11,9 +11,10 @@ function rzDemolisci(m, W, H, seg, p) {
   const a = oriz ? Math.min(x0, x1) : Math.min(y0, y1), b = oriz ? Math.max(x0, x1) : Math.max(y0, y1), c = oriz ? y0 : x0;
   for (let t = Math.round(a); t <= b; t++) {
     // a ogni passo cerco lo spessore del muro attorno alla linea e lo svuoto
-    for (const dir of [1, -1]) for (let k = dir === 1 ? 0 : -1; Math.abs(k) <= maxSp; k += dir) {
-      const x = oriz ? t : c + k, y = oriz ? c + k : t; if (x < 0 || y < 0 || x >= W || y >= H) break; const i = y * W + x;
-      if (!m[i] && Math.abs(k) > 2) break; m[i] = 0; }
+    for (const dir of [1, -1]) { let trovato = false;
+      for (let k = dir === 1 ? 0 : -1; Math.abs(k) <= maxSp; k += dir) {
+        const x = Math.round(oriz ? t : c + k), y = Math.round(oriz ? c + k : t); if (x < 0 || y < 0 || x >= W || y >= H) break; const i = y * W + x;
+        if (m[i]) { trovato = true; m[i] = 0; } else if (trovato || Math.abs(k) > maxSp / 2) break; } }
   }
 }
 // apertura di una porta larga 80 cm, centrata dove tocchi, nel verso del muro

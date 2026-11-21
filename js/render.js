@@ -298,7 +298,7 @@ function rnCanvasInit() {
   const down = e => {
     if (e.touches && e.touches.length >= 2) { const w = $("#rnwrap"); due = { x: (e.touches[0].clientX + e.touches[1].clientX) / 2, y: (e.touches[0].clientY + e.touches[1].clientY) / 2, sl: w.scrollLeft, st: w.scrollTop }; giu = null; RS.drag = null; e.preventDefault(); return; }
     const q = pt(e); giu = q;
-    if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel)) { const h = rnManiglia(q, RS.sel); if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
+    if (RS.fase === "arredo" && RS.sel && p.mobili?.includes(RS.sel) && rnMobileA(q, true) !== RS.sel) { const h = rnManiglia(q, RS.sel); if (h) { RS.drag = { res: h, m: RS.sel, mosso: false }; e.preventDefault(); return; } }
     if (RS.fase === "arredo") { const m = rnMobileA(q); if (m) { RS.sel = m; RS.drag = { m, dx: q[0] - m.x, dy: q[1] - m.y, mosso: false }; e.preventDefault(); rnDisegna(); rnPannello(); } }
     if (RS.fase === "scala" && RS.misura && RS.misura.a) { const a = RS.misura.a, b = RS.misura.b; const near = (u, v) => Math.hypot(u[0] - v[0], u[1] - v[1]) < Math.max(p.W, p.H) * 0.03;
       if (near(q, a)) RS.drag = { maniglia: "a" }; else if (b && near(q, b)) RS.drag = { maniglia: "b" }; if (RS.drag) e.preventDefault(); } };
@@ -339,27 +339,29 @@ function rnDisegna() {
     [a, b].filter(Boolean).forEach(q => { g.beginPath(); g.arc(q[0], q[1], lw * 5, 0, 7); g.fillStyle = "#6a1828"; g.fill(); g.lineWidth = lw; g.strokeStyle = "#fff"; g.stroke(); }); }
   if (RS.fase === "arredo" && s && p.mobili) p.mobili.forEach(m => rnMobileCanvas(g, m, s, RS.sel === m));
 }
-function rnMobileA(q) { const p = RS.p, s = rnScala(p); if (!s || !p.mobili) return null;
+function rnMobileA(q, stretto) { const p = RS.p, s = rnScala(p); if (!s || !p.mobili) return null;
   return [...p.mobili].reverse().find(m => { const [w, d] = rnDim(m), a = -m.rot * Math.PI / 180, dx = q[0] - m.x, dy = q[1] - m.y, lx = dx * Math.cos(a) - dy * Math.sin(a), ly = dx * Math.sin(a) + dy * Math.cos(a);
-    const marg = 0.12 / s; return Math.abs(lx) <= w / s / 2 + marg && Math.abs(ly) <= d / s / 2 + marg; }); }
+    const marg = stretto ? 0 : 0.12 / s; return Math.abs(lx) <= w / s / 2 + marg && Math.abs(ly) <= d / s / 2 + marg; }); }
 /* maniglie del mobile selezionato: lato destro (larghezza), lato basso (profondità), angolo (tutte e due), pallino sopra (rotazione) */
 const rnUniforme = m => m.v === "tondo" || m.v === "quadrato";
 function rnManiglie(m) {
   const s = RS.p.scala, [w, d] = rnDim(m), a = m.rot * Math.PI / 180, W = w / s / 2, D = d / s / 2, rot = ([x, y]) => [m.x + x * Math.cos(a) - y * Math.sin(a), m.y + x * Math.sin(a) + y * Math.cos(a)];
-  const off = rnTocco1() * 1.6, L = { wd: rot([W, D]), r: rot([0, -D - off]) };
-  if (!rnUniforme(m)) { L.w = rot([W, 0]); L.d = rot([0, D]); }
+  // maniglie staccate dal mobile: così toccando il mobile lo sposti e basta
+  const off = rnTocco1() * 1.25, L = { wd: rot([W + off, D + off]), r: rot([0, -D - off * 1.6]) };
+  if (!rnUniforme(m)) { L.w = rot([W + off, 0]); L.d = rot([0, D + off]); }
   return L;
 }
 // raggio utile di un tocco, in pixel dell'immagine (circa 22 px sullo schermo)
 const rnTocco1 = () => { const cv = $("#rncv"); return cv ? 22 * RS.p.W / cv.clientWidth : 30; };
-function rnManiglia(q, m) { const L = rnManiglie(m), r = rnTocco1(); let best = null, bd = r * 1.3; for (const [k, h] of Object.entries(L)) { const d = Math.hypot(q[0] - h[0], q[1] - h[1]); if (d < bd) { bd = d; best = k; } } return best; }
+function rnManiglia(q, m) { const L = rnManiglie(m), r = rnTocco1(); let best = null, bd = r * 0.9; for (const [k, h] of Object.entries(L)) { const d = Math.hypot(q[0] - h[0], q[1] - h[1]); if (d < bd) { bd = d; best = k; } } return best; }
 function rnRidimensiona(D, q) {
   const m = D.m, s = RS.p.scala, a = -m.rot * Math.PI / 180, dx = q[0] - m.x, dy = q[1] - m.y, lx = dx * Math.cos(a) - dy * Math.sin(a), ly = dx * Math.sin(a) + dy * Math.cos(a);
   const arr = v => Math.round(Math.max(0.3, Math.min(6, v)) * 20) / 20;
   if (D.res === "r") { let g = Math.atan2(dx, -dy) * 180 / Math.PI; g = (Math.round(g / 15) * 15 + 360) % 360; m.rot = g; return; }
-  if (rnUniforme(m)) { const v = arr(Math.max(Math.abs(lx), Math.abs(ly)) * 2 * s); m.w = v; m.d = v; return; }
-  if (D.res === "w" || D.res === "wd") m.w = arr(Math.abs(lx) * 2 * s);
-  if (D.res === "d" || D.res === "wd") m.d = arr(Math.abs(ly) * 2 * s);
+  const off = rnTocco1() * 1.25, ax = Math.max(0, Math.abs(lx) - off), ay = Math.max(0, Math.abs(ly) - off);
+  if (rnUniforme(m)) { const v = arr(Math.max(ax, ay) * 2 * s); m.w = v; m.d = v; return; }
+  if (D.res === "w" || D.res === "wd") m.w = arr(ax * 2 * s);
+  if (D.res === "d" || D.res === "wd") m.d = arr(ay * 2 * s);
 }
 const RN_MCACHE = new Map();
 function rnMobileCanvas(g, m, s, sel) {
@@ -371,10 +373,11 @@ function rnMobileCanvas(g, m, s, sel) {
   if (im.complete && im.naturalWidth) g.drawImage(im, (-w / 2 - 0.5) / s, (-d / 2 - 0.5) / s, (w + 1) / s, (d + 1) / s);
   if (sel) { g.strokeStyle = "#c9a24b"; g.setLineDash([0.08 / s, 0.06 / s]); g.lineWidth = Math.max(2, 0.03 / s); g.strokeRect(-w / 2 / s - 0.06 / s, -d / 2 / s - 0.06 / s, w / s + 0.12 / s, d / s + 0.12 / s); g.setLineDash([]); }
   g.restore();
-  if (sel) { const L = rnManiglie(m), r = rnTocco1() * 0.55;
-    g.strokeStyle = "#c9a24b"; g.lineWidth = Math.max(2, r * 0.15); g.beginPath(); g.moveTo(m.x, m.y); g.lineTo(...L.r); g.stroke();
-    for (const [k, h] of Object.entries(L)) { g.beginPath(); g.arc(h[0], h[1], r, 0, 7); g.fillStyle = k === "r" ? "#c9a24b" : "#6a1828"; g.fill(); g.lineWidth = r * 0.25; g.strokeStyle = "#fff"; g.stroke();
-      g.fillStyle = "#fff"; g.font = `800 ${r * 1.1}px Barlow, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(k === "r" ? "↻" : k === "wd" ? "⤡" : k === "w" ? "↔" : "↕", h[0], h[1] + 1); }
+  if (sel) { const L = rnManiglie(m), r = rnTocco1() * 0.36;
+    g.strokeStyle = "rgba(201,162,75,.7)"; g.lineWidth = Math.max(1.5, r * 0.12); g.setLineDash([r * 0.5, r * 0.4]);
+    for (const h of Object.values(L)) { g.beginPath(); g.moveTo(m.x, m.y); g.lineTo(...h); g.stroke(); } g.setLineDash([]);
+    for (const [k, h] of Object.entries(L)) { g.beginPath(); g.arc(h[0], h[1], r, 0, 7); g.fillStyle = k === "r" ? "rgba(201,162,75,.92)" : "rgba(106,24,40,.85)"; g.fill(); g.lineWidth = r * 0.22; g.strokeStyle = "#fff"; g.stroke();
+      g.fillStyle = "#fff"; g.font = `700 ${r * 1.15}px Barlow, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(k === "r" ? "↻" : k === "wd" ? "⤡" : k === "w" ? "↔" : "↕", h[0], h[1] + 1); }
     g.textBaseline = "alphabetic"; }
 }
 /* ---- tocchi sul canvas a seconda della fase ---- */
@@ -452,7 +455,7 @@ function rnPannello() {
   if (RS.fase === "arredo") {
     if (!s) { pan.innerHTML = `<p class="note">Prima serve la misura.</p><a class="btn pri" href="#rendering/${p.id}/scala">Vai alle misure</a>`; return; }
     if (!p.mobili) { p.mobili = []; for (const st of p.stanze) for (const m of rnArreda(st, s)) p.mobili.push({ ...m, st: st.id }); rnSalva(); rnDisegna(); }
-    rnGuida(`<b>Ho arredato io le stanze.</b> Tocca un mobile: <b>trascinalo</b> per spostarlo, tira i pallini bordeaux per <b>allungarlo o allargarlo</b> (↔ ↕ ⤡) e quello oro per <b>ruotarlo</b>. Sotto cambi la forma.`);
+    rnGuida(`<b>Ho arredato io le stanze.</b> Tocca un mobile e <b>trascinalo</b> per spostarlo. Le misure si cambiano con i pallini <b>staccati</b> dal mobile (↔ ↕ ⤡) o con i cursori qui sotto; il pallino oro lo <b>ruota</b>.`);
     const sel = RS.sel && p.mobili.includes(RS.sel) ? RS.sel : null;
     const [sw, sd] = sel ? rnDim(sel) : [0, 0], V = sel && RN_VAR[sel.tipo];
     pan.innerHTML = `${sel ? `<div class="rnsel"><b>${RN_MOB[sel.tipo][2]}</b> <span class="note">trascinalo con il dito per spostarlo</span>
