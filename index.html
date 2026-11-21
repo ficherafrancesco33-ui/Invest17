@@ -725,6 +725,10 @@ table.bp .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-num
   .kh-hero{min-height:240px}
 }
 .rncasa{display:flex;gap:8px}.rncasa .btn{flex:1;height:50px;padding:0 12px;font-size:15px;white-space:nowrap}
+.rnalbum{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:8px 0}
+.rnal{display:grid;gap:6px;padding:8px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.rnal img{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:8px;background:#fffdf9}
+.rnal input{height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--tx);padding:0 10px;font-size:14px;min-width:0}
+.rnalb{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.rnalb button{height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--tx);font-size:15px}.rnalb button:disabled{opacity:.3}
 </style>
 </head>
 <body>
@@ -752,19 +756,19 @@ if(typeof plSet==="function")plSet();if(typeof render==="function")render(true);
 </script>
 <div class="tip" id="tip" hidden></div>
 
-<script src="data/impostazioni.js?v=2611211513"></script>
-<script src="data/immobili.js?v=2611211513"></script>
-<script src="data/auto.js?v=2611211513"></script><script src="data/dintorni.js?v=2611211513"></script><script src="data/novita.js?v=2611211513"></script>
-<script src="data/notizie.js?v=2611211513"></script>
-<script src="data/guida.js?v=2611211513"></script>
-<script src="data/territorio.js?v=2611211513"></script>
-<script src="data/servizi.js?v=2611211513"></script><script src="data/zone_profili.js?v=2611211513"></script><script src="data/coeff.js?v=2611211513"></script><script src="data/omi.js?v=2611211513"></script><script src="data/nil_demo.js?v=2611211513"></script>
+<script src="data/impostazioni.js?v=2611211516"></script>
+<script src="data/immobili.js?v=2611211516"></script>
+<script src="data/auto.js?v=2611211516"></script><script src="data/dintorni.js?v=2611211516"></script><script src="data/novita.js?v=2611211516"></script>
+<script src="data/notizie.js?v=2611211516"></script>
+<script src="data/guida.js?v=2611211516"></script>
+<script src="data/territorio.js?v=2611211516"></script>
+<script src="data/servizi.js?v=2611211516"></script><script src="data/zone_profili.js?v=2611211516"></script><script src="data/coeff.js?v=2611211516"></script><script src="data/omi.js?v=2611211516"></script><script src="data/nil_demo.js?v=2611211516"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="js/terr.js?v=2611211513"></script>
-<script src="js/milmap.js?v=2611211513"></script>
-<script src="js/hub.js?v=2611211513"></script>
-<script src="js/home.js?v=2611211513"></script>
-<script src="js/render.js?v=2611211513"></script><script src="js/fraz.js?v=2611211513"></script><script src="js/ristr.js?v=2611211513"></script><script src="js/guscio.js?v=2611211513"></script><script src="js/stile3d.js?v=2611211513"></script><script src="js/pianta2d.js?v=2611211513"></script><script src="js/vano.js?v=2611211513"></script><script src="js/completa.js?v=2611211513"></script><script src="js/pdf.js?v=2611211513"></script>
+<script src="js/terr.js?v=2611211516"></script>
+<script src="js/milmap.js?v=2611211516"></script>
+<script src="js/hub.js?v=2611211516"></script>
+<script src="js/home.js?v=2611211516"></script>
+<script src="js/render.js?v=2611211516"></script><script src="js/fraz.js?v=2611211516"></script><script src="js/ristr.js?v=2611211516"></script><script src="js/guscio.js?v=2611211516"></script><script src="js/stile3d.js?v=2611211516"></script><script src="js/pianta2d.js?v=2611211516"></script><script src="js/vano.js?v=2611211516"></script><script src="js/completa.js?v=2611211516"></script><script src="js/pdf.js?v=2611211516"></script>
 <script>
 "use strict";
 /* ============ utilità ============ */
@@ -1265,10 +1269,10 @@ $("#logo").addEventListener("click", e => { e.preventDefault(); $("#logo").class
 render();
 try { const y = sessionStorage.getItem("ks_y"); if (y != null) { sessionStorage.removeItem("ks_y"); const go = () => window.scrollTo(0, +y); go(); setTimeout(go, 400); setTimeout(go, 1200); } } catch {}
 </script>
-<script src="js/seguiti.js?v=2611211513"></script>
-<script src="js/home2.js?v=2611211513"></script>
-<script src="js/vicino.js?v=2611211513"></script>
-<script src="js/galleria.js?v=2611211513"></script>
-<script src="js/dintorni.js?v=2611211513"></script>
+<script src="js/seguiti.js?v=2611211516"></script>
+<script src="js/home2.js?v=2611211516"></script>
+<script src="js/vicino.js?v=2611211516"></script>
+<script src="js/galleria.js?v=2611211516"></script>
+<script src="js/dintorni.js?v=2611211516"></script>
 </body>
 </html>

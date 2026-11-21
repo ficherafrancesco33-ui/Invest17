@@ -110,15 +110,15 @@ rn3D = async function (host, p, stile, opt = {}) {
   const inFin = (mx, mz) => FIN.some(({ seg: [x0, y0, x1, y1] }) => { const t = 0.5, X = [x0 * s, x1 * s], Z = [y0 * s, y1 * s];
     return Math.abs(X[1] - X[0]) >= Math.abs(Z[1] - Z[0]) ? mx >= Math.min(...X) - 0.02 && mx <= Math.max(...X) + 0.02 && Math.abs(mz - Z[0]) <= t : mz >= Math.min(...Z) - 0.02 && mz <= Math.max(...Z) + 0.02 && Math.abs(mx - X[0]) <= t; });
   const mMuro = [0, 1, 2, 3, 4, 5].map(i => mat(i === 2 ? S.cap : S.muro)), mDav = [0, 1, 2, 3, 4, 5].map(i => mat(i === 2 ? S.davanzale : S.muro));
-  const vetro = mat("#bcd9e3", { transparent: true, opacity: 0.45 });
-  const muro = (x, z, w0, h0, d0, y0, mm) => { const o = new THREE.Mesh(BOX, mm); o.position.set(x, y0 + h0 / 2, z); o.scale.set(w0, h0, d0); o.castShadow = !ill; o.receiveShadow = !ill; scene.add(o); if (ill) o.add(new THREE.LineSegments(EDGES, EDGE)); };
+  const vetro = mat("#bcd9e3", { transparent: true, opacity: 0.45 }), MURI3 = [];
+  const muro = (x, z, w0, h0, d0, y0, mm) => { const o = new THREE.Mesh(BOX, mm); o.position.set(x, y0 + h0 / 2, z); o.scale.set(w0, h0, d0); o.castShadow = !ill; o.receiveShadow = !ill; scene.add(o); if (ill) o.add(new THREE.LineSegments(EDGES, EDGE)); o.userData.muro = { y0, h0 }; MURI3.push(o); };
   for (let y = 0; y < gh; y++) for (let x = 0; x < gw; x++) { if (!G[y * gw + x] || usato[y * gw + x]) continue;
     let x2 = x; while (x2 + 1 < gw && G[y * gw + x2 + 1] && !usato[y * gw + x2 + 1]) x2++;
     let y2 = y; fuori: while (y2 + 1 < gh) { for (let i = x; i <= x2; i++) if (!G[(y2 + 1) * gw + i] || usato[(y2 + 1) * gw + i]) break fuori; y2++; }
     for (let j = y; j <= y2; j++) for (let i = x; i <= x2; i++) usato[j * gw + i] = 1;
     const mx = (x + x2 + 1) / 2 * a, mz = (y + y2 + 1) / 2 * a, ww = (x2 - x + 1) * a, dd = (y2 - y + 1) * a, hm = (mz > Z1 - 0.05 || mx > X1 - 0.05) ? S.fronte : HW;
     if (FIN.length && inFin(mx, mz)) { muro(mx, mz, ww, Math.min(0.9, hm), dd, 0, mDav); if (hm > 2.25) muro(mx, mz, ww, hm - 2.2, dd, 2.2, mMuro);
-      if (hm > 1) { const o = new THREE.Mesh(BOX, vetro); o.position.set(mx, (0.9 + Math.min(hm, 2.2)) / 2, mz); o.scale.set(ww > dd ? ww : 0.03, Math.min(hm, 2.2) - 0.9, dd > ww ? dd : 0.03); scene.add(o); } }
+      if (hm > 1) { const o = new THREE.Mesh(BOX, vetro); o.position.set(mx, (0.9 + Math.min(hm, 2.2)) / 2, mz); o.scale.set(ww > dd ? ww : 0.03, Math.min(hm, 2.2) - 0.9, dd > ww ? dd : 0.03); scene.add(o); o.userData.muro = { y0: 0.9, h0: Math.min(hm, 2.2) - 0.9 }; MURI3.push(o); } }
     else muro(mx, mz, ww, hm, dd, 0, mMuro); }
   // ---- arredo dettagliato ----
   for (const m of p.mobili || []) {
@@ -233,6 +233,15 @@ rn3D = async function (host, p, stile, opt = {}) {
       else if (m.tipo.startsWith("tavolo") && dentro) { const X = m.x * s, Z = m.y * s; for (const d of [-0.25, 0, 0.25]) { const g0 = new THREE.Mesh(new THREE.SphereGeometry(0.11, 20, 14), new THREE.MeshStandardMaterial({ color: "#fff7ea", emissive: "#ffe2b0", emissiveIntensity: 1.2, roughness: 0.3 })); g0.position.set(X + d, 1.65, Z); scene.add(g0);
           const fl = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, HW - 1.76, 6), telaio); fl.position.set(X + d, (HW + 1.76) / 2, Z); scene.add(fl); }
         const l = new THREE.PointLight("#ffdcaa", 2.2, 4.5, 2); l.position.set(X, 1.5, Z); scene.add(l); nl++; } } }
+  // muri che coprono la vista: si abbassano a 15 cm (come nei programmi di arredo), tornano su quando giri la vista
+  { const rc = new THREE.Raycaster(), V3 = THREE.Vector3, mete = dentro ? [] : (p.stanze || []).map(st => { const b = RN.bbox(st.poly); return new V3((b.x0 + b.x1) / 2 * s, 1.0, (b.y0 + b.y1) / 2 * s); });
+    const taglia = (o, giu) => { const u = o.userData.muro; if (u.giu === giu) return; u.giu = giu; const h = giu ? (u.y0 > 0.05 ? 0 : Math.min(u.h0, 0.15)) : u.h0;
+      o.visible = h > 0; if (h > 0) { o.scale.y = h; o.position.y = u.y0 + h / 2; } };
+    const aggiorna = () => { const tagliati = new Set(), dir = new V3(); cam.getWorldDirection(dir); for (const o of MURI3) taglia(o, false); scene.updateMatrixWorld(true);
+      for (const t of [...mete, ctl.target.clone().setY(1.0)]) { const da = cam.isOrthographicCamera ? t.clone().addScaledVector(dir, -120) : cam.position.clone(), v = t.clone().sub(da), L = v.length(); rc.set(da, v.normalize()); rc.far = L;
+        for (const h of rc.intersectObjects(MURI3, false)) tagliati.add(h.object); }
+      for (const o of MURI3) taglia(o, tagliati.has(o)); };
+    if (MURI3.length) { ctl.addEventListener("change", aggiorna); aggiorna(); } }
   let vivo = true; const loop = () => { if (!vivo || !document.body.contains(ren.domElement)) { ren.dispose(); return; } ctl.update(); ren.render(scene, cam); requestAnimationFrame(loop); }; loop();
   return { foto: () => { ren.render(scene, cam); return ren.domElement.toDataURL("image/png"); }, stop: () => { vivo = false; } };
 };

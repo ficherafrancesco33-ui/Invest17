@@ -151,11 +151,19 @@ async function mmPdfFoto(arg) {
   }
   return foto;
 }
-function pdfApri(html) {
-  const w = window.open("", "_blank");
-  if (!w) { alert("Il browser ha bloccato la finestra del PDF: consenti le finestre pop-up per questo sito e riprova."); return false; }
+// la finestra va aperta subito al tocco (Safari blocca le finestre aperte dopo un'attesa); il PDF ci viene scritto dopo
+function pdfFinestra() { const w = window.open("", "_blank"); if (w) try { w.document.write('<!doctype html><meta name="viewport" content="width=device-width"><body style="font:600 18px -apple-system,Arial;color:#6a1828;display:grid;place-items:center;height:90vh;background:#fbf7f0">Preparo il PDF…</body>'); } catch (e) {} return w; }
+function pdfApri(html, w0) {
+  const w = w0 && !w0.closed ? w0 : window.open("", "_blank");
+  if (!w) { pdfInApp(html); return true; }
   w.document.open(); w.document.write(html); w.document.close(); return true;
 }
+// se le finestre sono bloccate lo apro dentro l'app, a tutto schermo, con Stampa / Salva PDF
+function pdfInApp(html) { document.getElementById("pdfapp")?.remove(); const d = document.createElement("div"); d.id = "pdfapp";
+  d.style.cssText = "position:fixed;inset:0;z-index:5000;background:#e9e4dc;display:flex;flex-direction:column";
+  d.innerHTML = `<div style="display:flex;justify-content:space-between;gap:8px;padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 8px;background:#fbf7f0;border-bottom:1px solid #c9a24b"><button class="btn sec" data-x style="height:44px">‹ Torna all'app</button><button class="btn pri" data-p style="height:44px">Stampa / Salva PDF</button></div><iframe style="flex:1;border:0;width:100%;background:#fff"></iframe>`;
+  document.body.appendChild(d); const f = d.querySelector("iframe"); f.srcdoc = html;
+  d.querySelector("[data-x]").onclick = () => d.remove(); d.querySelector("[data-p]").onclick = () => { try { f.contentWindow.focus(); f.contentWindow.print(); } catch (e) {} }; }
 async function mmPdf(arg) {
   if (window.__pdfHtml) return mmPdfHtml(arg, {});
   if (store.get("pdf_mappa", "piantina") === "piantina") { pdfApri(mmPdfHtml(arg, {})); return; }   // piantina: niente da disegnare, si apre subito
