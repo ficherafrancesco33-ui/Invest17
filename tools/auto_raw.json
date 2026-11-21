@@ -29,14 +29,14 @@
   "Valeggio sul Mincio|VR": 0,
   "Arona|NO": 0,
   "La Spezia|SP": 1,
-  "Genova|GE": 0,
+  "Genova|GE": 7,
   "Castelnuovo del Garda|VR": 0,
   "Broni|PV": 1,
   "Casale Monferrato|AL": 2,
   "Castel San Giovanni|PC": 0,
   "Vigevano|PV": 0,
   "Stradella|PV": 0,
-  "Alessandria|AL": 1,
+  "Alessandria|AL": 8,
   "Garlasco|PV": 0,
   "Ferno|VA": 0,
   "Codogno|LO": 1,
@@ -280,42 +280,6 @@
    "ascensore": true
   },
   {
-   "id": "129515688",
-   "comune": "Alessandria",
-   "p": "AL",
-   "prezzo": 59000,
-   "mq": 53,
-   "locali": 2,
-   "bagni": 1,
-   "piano": "8",
-   "stato": "buono",
-   "classe": "E",
-   "arredato": true,
-   "indirizzo": "Spalto Marengo 90, Piazza Genova, Alessandria",
-   "titolo": "Bilocale già affittato fino al 2027, Alessandria",
-   "foto": [
-    "https://pwm.im-cdn.it/image/1935086194/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1935086214/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1935086196/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1935086220/m-c.jpg",
-    "https://pwm.im-cdn.it/image/1935086198/m-c.jpg"
-   ],
-   "aggiornato": "12/06/2026",
-   "agenzia": "Tecnocasa Forza",
-   "pro": [
-    "Già affittato fino a dicembre 2027: rende da subito",
-    "Arredato in modo moderno, aria condizionata, ascensore, spese basse"
-   ],
-   "contro": [
-    "Canone attuale non indicato: chiederlo all'agenzia",
-    "Ottavo piano di un palazzo anni '60"
-   ],
-   "spese_mese": 33,
-   "trovato": "2026-11-20",
-   "omi_zona": "B1",
-   "ascensore": true
-  },
-  {
    "id": "129927340",
    "comune": "Tortona",
    "p": "AL",
@@ -420,6 +384,399 @@
    "trovato": "2026-11-21",
    "lat": 45.8782,
    "lon": 9.2491
+  },
+  {
+   "id": "129732438",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 49000,
+   "mq": 46,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "4",
+   "ascensore": true,
+   "stato": "buono",
+   "classe": "F",
+   "arredato": true,
+   "indirizzo": "Via Canepari 27, Certosa, Genova",
+   "titolo": "Bilocale arredato con ascensore a Certosa",
+   "lat": 44.4293,
+   "lon": 8.8935,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1940403984/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940404074/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940404080/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940404094/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1940404098/m-c.jpg"
+   ],
+   "aggiornato": "26/06/2026",
+   "agenzia": "Tempocasa Genova",
+   "pro": [
+    "Pronto da abitare: cucina attrezzata, aria condizionata, infissi doppio vetro",
+    "Quarto piano con ascensore, bagno finestrato",
+    "Certosa: metro e treno a pochi minuti, forte domanda di affitto"
+   ],
+   "contro": [
+    "Classe F",
+    "Spese condominiali non indicate"
+   ],
+   "trovato": "2026-11-21",
+   "canone": 540,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova, zona Bolzaneto, Rivarolo, Certosa: mediana 13,2 €/m² al mese su 7 bilocali e trilocali, ridotta del 10% (i canoni chiesti sono un po' più alti di quelli firmati)"
+  },
+  {
+   "id": "132290714",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 55000,
+   "mq": 40,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "ristrutturato",
+   "classe": "E",
+   "arredato": true,
+   "indirizzo": "Via Confalonieri, Sestri Ponente, Genova",
+   "titolo": "Bilocale ristrutturato e arredato a Sestri Ponente",
+   "lat": 44.4257,
+   "lon": 8.8464,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2001192192/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2001192242/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2001192676/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2001192316/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2001192276/m-c.jpg"
+   ],
+   "aggiornato": "23/10/2026",
+   "agenzia": "Elite Casa Immobiliare",
+   "spese_mese": 50,
+   "pro": [
+    "Ristrutturato e arredato, climatizzato, riscaldamento autonomo",
+    "Spese basse (50 € al mese)",
+    "Sestri Ponente: centro vivace, ospedale, Fincantieri e aeroporto vicini"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore",
+    "40 m²: adatto a una persona o una coppia"
+   ],
+   "trovato": "2026-11-21",
+   "canone": 460,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova, zona Sestri Ponente: mediana 12,9 €/m² al mese su 31 bilocali e trilocali, ridotta del 10% (i canoni chiesti sono un po' più alti di quelli firmati)"
+  },
+  {
+   "id": "128298422",
+   "comune": "Genova",
+   "p": "GE",
+   "prezzo": 53000,
+   "mq": 52,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": false,
+   "stato": "buono",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Germano Jori, Rivarolo, Genova",
+   "titolo": "Bilocale davanti all'autobus a Rivarolo",
+   "lat": 44.4338,
+   "lon": 8.8925,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1905353328/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1905354116/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1905351006/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1905351142/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1905351250/m-c.jpg"
+   ],
+   "aggiornato": "08/11/2026",
+   "agenzia": "Alterego Immobiliare",
+   "spese_mese": 70,
+   "pro": [
+    "Pronto da abitare, soggiorno con cucina a vista e dispensa",
+    "Davanti alla fermata dell'autobus, zona con molta richiesta di affitti",
+    "Spese contenute"
+   ],
+   "contro": [
+    "Secondo piano senza ascensore",
+    "Classe G"
+   ],
+   "trovato": "2026-11-21",
+   "canone": 560,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare a Genova, zona Bolzaneto, Rivarolo, Certosa: mediana 13,2 €/m² al mese su 7 bilocali e trilocali, ridotta del 10% (i canoni chiesti sono un po' più alti di quelli firmati)"
+  },
+  {
+   "id": "122432924",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 30000,
+   "mq": 70,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Giovanni Scazzola 48, Cristo, Alessandria",
+   "titolo": "Bilocale di 70 m² a 30.000 € al Cristo",
+   "lat": 44.9048,
+   "lon": 8.6018,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1880781131/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762837276/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762847082/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762847084/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1762847088/m-c.jpg"
+   ],
+   "aggiornato": "13/11/2026",
+   "agenzia": "Tecnocasa Alessandria",
+   "canone": 430,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Solo 30.000 €: il prezzo più basso trovato, libero subito",
+    "Riscaldamento autonomo, spese condominiali 20 € al mese",
+    "Open space con cucina a vista e camera grande"
+   ],
+   "contro": [
+    "Bagno cieco, classe G",
+    "Primo piano su ballatoio"
+   ],
+   "classe": "G",
+   "spese_mese": 20,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "94740814",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 43000,
+   "mq": 38,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": true,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Faà di Bruno, Piazza della Libertà, Alessandria",
+   "titolo": "Monolocale con volte in mattoni in pieno centro",
+   "lat": 44.9115,
+   "lon": 8.617,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2025783988/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025783842/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025783886/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025783866/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2025783962/m-c.jpg"
+   ],
+   "aggiornato": "06/11/2026",
+   "agenzia": "Repetto Intermediazioni",
+   "canone": 370,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Centro di Alessandria, vicino a università e servizi",
+    "Volte in mattoni a vista, cucina e bagno moderni, ascensore"
+   ],
+   "contro": [
+    "38 m²: adatto a una persona",
+    "Descrizione breve: chiedere spese e riscaldamento"
+   ],
+   "classe": "E",
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133735374",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 49000,
+   "mq": 42,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Cavour, Piazza Garibaldi, Alessandria",
+   "titolo": "Monolocale con balcone e cantina in via Cavour",
+   "lat": 44.9102,
+   "lon": 8.616,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2050249217/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2050249153/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2050249113/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2050249273/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2033050656/m-c.jpg"
+   ],
+   "aggiornato": "05/11/2026",
+   "agenzia": "Fortino Immobiliare",
+   "canone": 380,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Palazzo in ottimo stato in centro, riscaldamento autonomo",
+    "Doppio affaccio, balcone e cantina, spese 25 € al mese"
+   ],
+   "contro": [
+    "Primo piano senza ascensore",
+    "Classe F"
+   ],
+   "classe": "F",
+   "spese_mese": 25,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133473690",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 49000,
+   "mq": 44,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "R",
+   "ascensore": true,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Tortona, Piazza Genova, Alessandria",
+   "titolo": "Bilocale arredato già affittato in zona Piazza Genova",
+   "lat": 44.9125,
+   "lon": 8.6262,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2027304958/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2027304944/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2027304952/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2027304966/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2027304972/m-c.jpg"
+   ],
+   "aggiornato": "12/10/2026",
+   "agenzia": "Immobiliare Massera",
+   "canone": 400,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Già affittato e arredato: rende da subito",
+    "Cucina, camera matrimoniale e balcone"
+   ],
+   "contro": [
+    "Canone attuale non indicato: chiederlo",
+    "Piano rialzato"
+   ],
+   "classe": "E",
+   "spese_mese": 70,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "129182352",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 53000,
+   "mq": 44,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "buono",
+   "arredato": true,
+   "indirizzo": "Via Santa Caterina da Siena, Ospedale, Alessandria",
+   "titolo": "Bilocale con box a due passi dall'ospedale",
+   "lat": 44.916,
+   "lon": 8.6208,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1926836422/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1926836446/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1926836456/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1926836462/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1926836474/m-c.jpg"
+   ],
+   "aggiornato": "20/05/2026",
+   "agenzia": "Angela Immobiliare",
+   "canone": 430,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "A due passi dall'Ospedale Civile: richiesto da medici e infermieri",
+    "Box auto incluso, ristrutturato, nessun lavoro importante"
+   ],
+   "contro": [
+    "Piano terra",
+    "Classe F"
+   ],
+   "classe": "F",
+   "spese_mese": 30,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "133177794",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 55000,
+   "mq": 50,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ristrutturato",
+   "arredato": true,
+   "indirizzo": "Via Santa Caterina da Siena, Ospedale, Alessandria",
+   "titolo": "Monolocale ristrutturato e arredato nuovo accanto all'ospedale",
+   "lat": 44.916,
+   "lon": 8.6208,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2020804896/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2020804904/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2020804918/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2020804924/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2020804932/m-c.jpg"
+   ],
+   "aggiornato": "02/10/2026",
+   "agenzia": "Gualco Immobiliare",
+   "canone": 450,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Ristrutturato di recente, arredo nuovo incluso",
+    "Accanto all'Ospedale Civile: richiesto da personale sanitario e specializzandi",
+    "Riscaldamento autonomo, classe D"
+   ],
+   "contro": [
+    "Primo piano senza ascensore"
+   ],
+   "classe": "D",
+   "spese_mese": 30,
+   "trovato": "2026-11-21"
+  },
+  {
+   "id": "126406661",
+   "comune": "Alessandria",
+   "p": "AL",
+   "prezzo": 57000,
+   "mq": 49,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "3",
+   "ascensore": true,
+   "stato": "ottimo",
+   "arredato": true,
+   "indirizzo": "Via della Palazzina 86, Cristo, Alessandria",
+   "titolo": "Mansarda arredata con grande terrazzo e posto auto",
+   "lat": 44.8946,
+   "lon": 8.5884,
+   "foto": [
+    "https://pwm.im-cdn.it/image/1860215307/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1860215337/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1860215281/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1860215225/m-c.jpg",
+    "https://pwm.im-cdn.it/image/1860215377/m-c.jpg"
+   ],
+   "aggiornato": "14/05/2026",
+   "agenzia": "Agenzia Letizia",
+   "canone": 450,
+   "canone_fonte": "Affitti chiesti oggi su Immobiliare ad Alessandria: 70 annunci da 30 a 75 m², mediana 9 €/m² e 500 € al mese; per questo taglio stima prudente",
+   "pro": [
+    "Arredata, pronta all'uso, caldaia a condensazione nuova, classe C",
+    "Grande terrazzo, posto auto, ascensore",
+    "Zona residenziale tra parchi e villette"
+   ],
+   "contro": [
+    "Terrazzo esposto a nord",
+    "Periferia del quartiere Cristo"
+   ],
+   "classe": "C",
+   "spese_mese": 58,
+   "trovato": "2026-11-21"
   }
  ],
  "scartati": [
@@ -822,6 +1179,36 @@
    "id": "109837851",
    "comune": "Dongo",
    "motivo": "foto: casa datata o esterno trascurato, oppure solo foto esterne; non è una casa finita e curata"
+  },
+  {
+   "id": "134470633",
+   "comune": "Genova",
+   "motivo": "già affittato sotto mercato: netto 5%"
+  },
+  {
+   "id": "134908145",
+   "comune": "Genova",
+   "motivo": "già affittato sotto mercato: netto 4,7%"
+  },
+  {
+   "id": "134743529",
+   "comune": "Genova",
+   "motivo": "rendita netta 4,4%: affitti bassi a Molassana"
+  },
+  {
+   "id": "129236004",
+   "comune": "Genova",
+   "motivo": "canone non indicato, netto stimato 5,4%"
+  },
+  {
+   "id": "134460669",
+   "comune": "Alessandria",
+   "motivo": "la descrizione dice \"da risistemare\""
+  },
+  {
+   "id": "129515688",
+   "comune": "Alessandria",
+   "motivo": "già affittato sotto mercato: netto 4%"
   }
  ]
 }
