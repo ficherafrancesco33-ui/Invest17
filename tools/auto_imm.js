@@ -4,6 +4,14 @@ const fs = require("fs"), path = require("path");
 const R = p => path.join(__dirname, "..", p);
 eval(fs.readFileSync(R("data/territorio.js"), "utf8") + ";globalThis.TERR=TERR");
 eval(fs.readFileSync(R("data/omi.js"), "utf8") + ";globalThis.OMI=OMI;globalThis.OMI_SEM=OMI_SEM");
+// affitti veri letti su Immobiliare (tools/terr/archivio_affitti.py): se il comune ha abbastanza annunci affidabili correggono la stima OMI
+globalThis.AFF = fs.existsSync(R("data/affitti.js")) ? eval(fs.readFileSync(R("data/affitti.js"), "utf8") + ";AFF") : { comuni: {} };
+// canone dagli annunci d'affitto del comune: mediana €/m² della stessa taglia (o di tutti), -10% perché il canone firmato è di solito sotto quello chiesto
+function canoneAnnunci(a) {
+  const z = AFF.comuni[a.comune]; if (!z || z.n < 6) return null;
+  const t = a.mq < 50 ? "s" : a.mq < 85 ? "m" : "l", b = z[t] && z[t][1] >= 4 ? z[t] : null, e = b ? b[0] : z.med;
+  return { canone: Math.round(Math.min(a.mq, 90) * e * 0.9 / 10) * 10, e, n: b ? b[1] : z.n, taglia: !!b, tot: z.n, agg: AFF.agg };
+}
 // zona OMI dell'annuncio: parola della via trovata nella descrizione della zona, altrimenti il centro se l'annuncio è in centro, altrimenti la zona tipica (semicentro/periferia)
 const nz = x => (x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 function omiZona(a) {
@@ -40,7 +48,10 @@ const out = raw.annunci.map(a => {
   const eurMq = aff && aff < 20 ? aff : 7, om = omiZona(a);
   // affitto normale: canone OMI della zona (valore medio) se c'è, altrimenti la media degli annunci del comune ridotta del 30%
   const locOmi = om && om.loc ? (om.loc[0] + om.loc[1]) / 2 : null;
-  const canone = Math.round(Math.min(a.mq, 90) * (locOmi ? locOmi : eurMq * 0.7) / 10) * 10;
+  const canoneOmi = Math.round(Math.min(a.mq, 90) * (locOmi ? locOmi : eurMq * 0.7) / 10) * 10, ca = canoneAnnunci(a);
+  const canone = ca ? ca.canone : canoneOmi;
+  const fonteOmi = locOmi ? `Stima OMI ${OMI_SEM}, zona ${om.zona} (${om.descr.toLowerCase()}): affitto ${om.loc[0].toLocaleString("it-IT")}–${om.loc[1].toLocaleString("it-IT")} €/m² al mese, preso il valore medio.` : `Stima: ${eurMq.toLocaleString("it-IT")} €/m² al mese (media degli annunci d'affitto del comune, Immobiliare.it), ridotta del 30% per prudenza.`;
+  const fonteAff = ca ? `Annunci d'affitto veri a ${a.comune} (Immobiliare.it, letti il ${ca.agg.split("-").reverse().join("/")}): ${ca.n} annunci affidabili${ca.taglia ? " di taglia simile" : ""}, mediana ${ca.e.toLocaleString("it-IT")} €/m² al mese, tolto il 10% (il canone firmato è di solito sotto quello chiesto). La stima OMI dava ${canoneOmi.toLocaleString("it-IT")} €.` : null;
   const comps = raw.annunci.filter(x => x.comune === a.comune && x.id !== a.id).map(x => ({ titolo: x.titolo, prezzo: x.prezzo, mq: x.mq, url: `https://www.immobiliare.it/annunci/${x.id}/`, stato: x.stato })).concat(a.comparabili || []);   // + annunci in vendita vicini (cercati a parte)
   return {
     id: "auto-" + a.id, titolo: a.titolo, url: `https://www.immobiliare.it/annunci/${a.id}/`, fonte: "Immobiliare.it (ricerca automatica di Claude)",
@@ -49,7 +60,7 @@ const out = raw.annunci.map(a => {
     prezzo: a.prezzo, mq: a.mq, locali: a.locali, bagni: a.bagni, piano: a.piano, arredato: !!a.arredato, stato: a.stato || "buono", lavori: a.lavori || 0,
     classe_energetica: a.classe || "", foto: a.galleria ? `https://pwm.im-cdn.it/image/${a.galleria[0]}/s-c.jpg` : a.foto[0], foto_extra: a.foto.slice(1), galleria: a.galleria || null, agenzia: a.agenzia, aggiornato_annuncio: a.aggiornato,
     spese: { condominio_mese: a.spese_mese || 0, imu_anno: Math.max(250, Math.round(a.prezzo * 0.008 / 10) * 10), stima: true },
-    affitti: { breve, lungo: a.canone ? { canone: a.canone, stima: false, fonte: a.canone_fonte } : { canone, stima: true, fonte: locOmi ? `Stima OMI ${OMI_SEM}, zona ${om.zona} (${om.descr.toLowerCase()}): affitto ${om.loc[0].toLocaleString("it-IT")}–${om.loc[1].toLocaleString("it-IT")} €/m² al mese, preso il valore medio.` : `Stima: ${eurMq.toLocaleString("it-IT")} €/m² al mese (media degli annunci d'affitto del comune, Immobiliare.it), ridotta del 30% per prudenza.` } },
+    affitti: { breve, lungo: a.canone ? { canone: a.canone, stima: false, fonte: a.canone_fonte } : { canone, stima: !ca, fonte: fonteAff || fonteOmi, omi: canoneOmi } },
     giudizio: { pro: a.pro, contro: a.contro, sintesi: `${a.titolo} a ${Math.round(a.prezzo / a.mq)} €/m², in ${a.stato || "buono"} stato.` },
     valutazione: { omi: om ? { min: om.min, max: om.max, medio: om.medio, zona: om.zona, fascia: om.fascia, descr: om.descr, loc: om.loc,
       fonte: `OMI Agenzia delle Entrate ${OMI_SEM}, zona ${om.zona} ${om.descr.toLowerCase()}: ${om.tip}, stato ${om.stato}` }

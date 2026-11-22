@@ -36,3 +36,13 @@ Prima le microzone di Milano città (per distanza da Porta Romana), poi i comuni
 - Una pagina ogni 1,5–2,5 s, una zona alla volta; mai più di un giro in parallelo.
 - Mai aggirare blocchi o captcha. Mai idealista.
 - Le descrizioni si leggono (archivio.py scarta aste, quote, nude proprietà, usufrutto, rent to buy, posti letto, locali commerciali).
+
+## Affitti (dal 22/11/2026, hanno la precedenza sulle vendite che mancano in Brianza)
+Coda: `tools/terr/coda_affitti.json` (prima i 27 comuni degli investimenti, poi le 103 microzone di Milano, poi i 65 comuni già letti in vendita).
+Stesso giro: incolla `lettore.js` e `coda_affitti.js` (crea `window.__CODAA`), poi `__giro(__CODAA, 90)` senza await e `__stato()` ogni 40 s.
+Le zone d'affitto si chiamano `A:<microzona>` o `A:C:<slug comune>`: `__giro` salta quelle già finite.
+Portare fuori come per le vendite (`__prepTr()`, `__show(k)` nella scheda robots.txt) e poi `bash tools/terr/carica_affitti.sh N "msg"`:
+`archivio_affitti.py` tiene solo gli annunci seri (niente stanze, affitti brevi, subentri, uffici, richieste; privati con almeno 4 foto,
+descrizione vera, senza segni di truffa e non sotto il 60% della zona; doppioni tolti) e scrive `data/affitti.js` (mediane €/m² per zona);
+`auto_imm.js` usa quei canoni (−10%) per gli investimenti quando il comune ha almeno 6 annunci affidabili, al posto della stima OMI.
+Quando la coda affitti è finita si torna a `coda_milano.json` (Brianza, vendite).
