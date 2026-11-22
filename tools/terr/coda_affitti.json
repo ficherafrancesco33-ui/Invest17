@@ -266,7 +266,8 @@
    "path": "/affitto-case/milano/guastalla/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:Cadore",
@@ -274,7 +275,8 @@
    "path": "/affitto-case/milano/cadore/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:Missori",
@@ -282,7 +284,8 @@
    "path": "/affitto-case/milano/missori/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:Borgogna - Largo Augusto",
@@ -290,7 +293,8 @@
    "path": "/affitto-case/milano/borgogna-largo-augusto/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:Ticinese",
@@ -298,7 +302,8 @@
    "path": "/affitto-case/milano/ticinese/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:Piave - Tricolore",
@@ -306,7 +311,8 @@
    "path": "/affitto-case/milano/piave-tricolore/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:San Babila",
