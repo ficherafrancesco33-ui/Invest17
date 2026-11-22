@@ -166,8 +166,9 @@
    "n": "Sant'Ambrogio",
    "path": "/vendita-case/milano/sant-ambrogio/",
    "tipo": "micro",
-   "stato": "da",
-   "nota": "slug sant-ambrogio e santambrogio danno 404: cercare il link giusto sulla pagina di Immobiliare"
+   "stato": "fatto",
+   "nota": "slug sant-ambrogio e santambrogio danno 404: cercare il link giusto sulla pagina di Immobiliare",
+   "data": "2026-11-22"
   },
   {
    "n": "Brera",
@@ -271,385 +272,449 @@
    "n": "Pagano",
    "path": "/vendita-case/milano/pagano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quartiere Forlanini",
    "path": "/vendita-case/milano/quartiere-forlanini/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Arco della Pace",
    "path": "/vendita-case/milano/arco-della-pace/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Vercelli - Wagner",
    "path": "/vendita-case/milano/vercelli-wagner/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Garibaldi - Corso Como",
    "path": "/vendita-case/milano/garibaldi-corso-como/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Paolo Sarpi",
    "path": "/vendita-case/milano/paolo-sarpi/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Washington",
    "path": "/vendita-case/milano/washington/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Centrale",
    "path": "/vendita-case/milano/centrale/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Melchiorre Gioia",
    "path": "/vendita-case/milano/melchiorre-gioia/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Frua",
    "path": "/vendita-case/milano/frua/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Ortica",
    "path": "/vendita-case/milano/ortica/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Piazza Napoli",
    "path": "/vendita-case/milano/piazza-napoli/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Isola",
    "path": "/vendita-case/milano/isola/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Sempione",
    "path": "/vendita-case/milano/sempione/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Piazzale Siena",
    "path": "/vendita-case/milano/piazzale-siena/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "De Angeli",
    "path": "/vendita-case/milano/de-angeli/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Amendola - Buonarroti",
    "path": "/vendita-case/milano/amendola-buonarroti/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Pasteur",
    "path": "/vendita-case/milano/pasteur/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Casoretto",
    "path": "/vendita-case/milano/casoretto/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Maggiolina",
    "path": "/vendita-case/milano/maggiolina/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "City Life",
    "path": "/vendita-case/milano/city-life/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Lambrate",
    "path": "/vendita-case/milano/lambrate/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Cenisio",
    "path": "/vendita-case/milano/cenisio/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Gambara",
    "path": "/vendita-case/milano/gambara/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Cascina dei Pomi",
    "path": "/vendita-case/milano/cascina-dei-pomi/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Zara",
    "path": "/vendita-case/milano/zara/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Farini",
    "path": "/vendita-case/milano/farini/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Rovereto",
    "path": "/vendita-case/milano/rovereto/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bande Nere",
    "path": "/vendita-case/milano/bande-nere/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Rubattino",
    "path": "/vendita-case/milano/rubattino/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Udine",
    "path": "/vendita-case/milano/udine/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Parco Trotter",
    "path": "/vendita-case/milano/parco-trotter/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Monte Rosa - Lotto",
    "path": "/vendita-case/milano/monte-rosa-lotto/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Turro",
    "path": "/vendita-case/milano/turro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Istria",
    "path": "/vendita-case/milano/istria/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Portello - Parco Vittoria",
    "path": "/vendita-case/milano/portello-parco-vittoria/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Primaticcio",
    "path": "/vendita-case/milano/primaticcio/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Ghisolfa - Mac Mahon",
    "path": "/vendita-case/milano/ghisolfa-mac-mahon/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Greco - Segnano",
    "path": "/vendita-case/milano/greco-segnano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Prato Centenaro",
    "path": "/vendita-case/milano/prato-centenaro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Cimiano",
    "path": "/vendita-case/milano/cimiano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Inganni",
    "path": "/vendita-case/milano/inganni/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Parco Lambro",
    "path": "/vendita-case/milano/parco-lambro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quartiere Feltre",
    "path": "/vendita-case/milano/quartiere-feltre/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Gorla",
    "path": "/vendita-case/milano/gorla/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "QT8",
    "path": "/vendita-case/milano/qt8/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Dergano",
    "path": "/vendita-case/milano/dergano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Ca' Granda",
    "path": "/vendita-case/milano/ca-granda/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bovisa",
    "path": "/vendita-case/milano/bovisa/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "San Siro",
    "path": "/vendita-case/milano/san-siro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Precotto",
    "path": "/vendita-case/milano/precotto/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Monte Stella",
    "path": "/vendita-case/milano/monte-stella/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Crescenzago",
    "path": "/vendita-case/milano/crescenzago/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Certosa",
    "path": "/vendita-case/milano/certosa/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bicocca",
    "path": "/vendita-case/milano/bicocca/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bisceglie",
    "path": "/vendita-case/milano/bisceglie/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Ponte Nuovo",
    "path": "/vendita-case/milano/ponte-nuovo/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Niguarda",
    "path": "/vendita-case/milano/niguarda/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Affori",
    "path": "/vendita-case/milano/affori/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Villa San Giovanni",
    "path": "/vendita-case/milano/villa-san-giovanni/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Cascina Gobba",
    "path": "/vendita-case/milano/cascina-gobba/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quarto Cagnino",
    "path": "/vendita-case/milano/quarto-cagnino/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "San Carlo",
    "path": "/vendita-case/milano/san-carlo/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bignami - Ponale",
    "path": "/vendita-case/milano/bignami-ponale/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quartiere Adriano",

@@ -35,7 +35,7 @@ window.__leggi = async (path, label, maxPag = 60) => { const P = __PROG[label] =
 // legge le zone in ordine finché non scade il tempo o arriva un blocco; restituisce lo stato zona per zona
 window.__giro = async (zone, minuti = 40) => { const t0 = Date.now(); window.__BLOCCO = null;
   for (const z of zone) { if (Date.now() - t0 > minuti * 60000) break; if (__PROG[z.n]?.fine && !__PROG[z.n].stop) continue;
-    await __leggi(z.path, z.n); const s = __PROG[z.n].stop; if (s && /http 403|http 429|captcha/.test(s)) { window.__BLOCCO = z.n + ': ' + s; break; }
+    await __leggi(z.path, z.n); const s = __PROG[z.n].stop; if (s && /403|429|captcha/.test(s)) { window.__BLOCCO = z.n + ': ' + s; break; }
     await new Promise(ok => setTimeout(ok, 2500)); }
   return Object.fromEntries(Object.entries(__PROG).map(([k, v]) => [k, v.n + '/' + (v.count ?? '?') + (v.stop ? ' ' + v.stop : '')])); };
 window.__prepara = async () => { const ids = Object.keys(__ARC).filter(i => !__INVIATI.has(i)); window.__ULTIMI = ids;
