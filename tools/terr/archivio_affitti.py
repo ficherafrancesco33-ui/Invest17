@@ -50,8 +50,9 @@ def motivo(a):
     if e < lo or e > hi: return "€/m² impossibile"
     if a.get("priv"):
         if re.search(TRUFFA, t): return "privato: segni di truffa"
-        if (a.get("nfoto") or 0) < 4: return "privato: meno di 4 foto"
-        if len(a.get("desc") or "") < 150: return "privato: descrizione troppo corta"
+        d = a.get("desc") or ""
+        if d and len(d) < 150: return "privato: descrizione troppo corta"
+        if (a.get("nfoto") or 0) < (4 if d else 5): return "privato: troppe poche foto"   # nella lista degli affitti la descrizione spesso manca: servono più foto
     return None
 
 def zona(a): return ("M:" + (a.get("micro") or "")) if milano(a) else ("C:" + (a.get("comune") or ""))
@@ -105,3 +106,20 @@ open(os.path.join(R, "data", "affitti.js"), "w", encoding="utf-8").write("const 
 open(os.path.join(H, "affitti_esclusi.txt"), "w", encoding="utf-8").write("# affitti esclusi: id;motivo\n" + "\n".join(f"{k};{m}" for k, m in esc.items()) + "\n")
 print(len(arc), "affitti in archivio;", len(buoni), "affidabili;", len(esc), "esclusi:", dict(Counter(esc.values()).most_common()), ";",
       len(out["milano"]), "zone di Milano,", len(out["comuni"]), "comuni con almeno 3 annunci")
+
+# canone vicino a ogni investimento: affitti affidabili entro 1 km (poi 2, 4) di taglia simile (0,6–1,6 volte i m²), almeno 6
+import math
+def dist(a, b, c, d): return 6371000 * math.hypot(math.radians(c - a), math.radians(d - b) * math.cos(math.radians(a)))
+INV = os.path.join(os.path.dirname(H), "auto_raw.json"); vic = {}
+if os.path.exists(INV):
+    for x in json.load(open(INV, encoding="utf-8"))["annunci"]:
+        if x.get("lat") is None or not x.get("mq"): continue
+        sim = [a for a in buoni.values() if a.get("lat") and 0.6 * x["mq"] <= a["mq"] <= 1.6 * x["mq"]]
+        for r in (1000, 2000, 4000):
+            L = [a for a in sim if dist(x["lat"], x["lon"], a["lat"], a["lon"]) <= r]
+            if len(L) >= 6:
+                e = [a["prezzo"] / a["mq"] for a in L]
+                vic[str(x["id"])] = {"e": round(median(e), 1), "n": len(L), "r": r, "p25": round(q(e, .25), 1), "p75": round(q(e, .75), 1), "agg": out["agg"]}
+                break
+json.dump(vic, open(os.path.join(H, "affitti_vicini.json"), "w"), ensure_ascii=False, indent=0)
+print(len(vic), "investimenti con affitti vicini")
