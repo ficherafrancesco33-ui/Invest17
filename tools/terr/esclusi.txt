@@ -732,3 +732,75 @@
 134907071;nuda proprietà
 134932709;nuda proprietà
 134934453;nuda proprietà
+99172448;progetto / nuova costruzione
+99947956;progetto / nuova costruzione
+101182261;non residenziale
+103150234;non residenziale
+103516276;nuda proprietà
+105406477;non residenziale
+105907743;progetto / nuova costruzione
+112269737;non residenziale
+115299289;progetto / nuova costruzione
+116128813;progetto / nuova costruzione
+116593629;nuda proprietà
+117924779;non residenziale
+119138109;progetto / nuova costruzione
+119552705;progetto / nuova costruzione
+120778366;non residenziale
+122503642;progetto / nuova costruzione
+122939236;non residenziale
+123466283;non residenziale
+124581591;progetto / nuova costruzione
+125285925;uso non abitativo
+125384945;non residenziale
+127149477;non residenziale
+127247137;non residenziale
+127349621;non residenziale
+128032288;progetto / nuova costruzione
+128408012;progetto / nuova costruzione
+128408016;progetto / nuova costruzione
+128524802;non residenziale
+128648898;non residenziale
+129119906;non residenziale
+129241006;non residenziale
+129543564;non residenziale
+129761472;non residenziale
+129914546;nuda proprietà
+129977636;nuda proprietà
+130123744;non residenziale
+130513228;nuda proprietà
+130764134;progetto / nuova costruzione
+131120526;nuda proprietà
+131239432;nuda proprietà
+132156672;progetto / nuova costruzione
+132371702;non residenziale
+132431710;non residenziale
+132521480;nuda proprietà
+133174174;nuda proprietà
+133285002;uso non abitativo
+133743596;asta
+133802708;nuda proprietà
+133827092;nuda proprietà
+134251703;nuda proprietà
+134268433;nuda proprietà
+134318871;progetto / nuova costruzione
+134336591;progetto / nuova costruzione
+134378397;progetto / nuova costruzione
+134379267;non residenziale
+134417653;non residenziale
+134471185;asta
+134471277;asta
+134471459;asta
+134471913;asta
+134480863;asta
+134480983;asta
+134591473;uso non abitativo
+134613413;uso non abitativo
+134626739;progetto / nuova costruzione
+134628141;non residenziale
+134628205;non residenziale
+134716563;asta
+134825901;nuda proprietà
+134901531;uso non abitativo
+134941937;non residenziale
+134945025;non residenziale

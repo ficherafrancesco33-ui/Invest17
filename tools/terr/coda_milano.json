@@ -720,91 +720,106 @@
    "n": "Quartiere Adriano",
    "path": "/vendita-case/milano/quartiere-adriano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quartiere Olmi",
    "path": "/vendita-case/milano/quartiere-olmi/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bovisasca",
    "path": "/vendita-case/milano/bovisasca/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Musocco",
    "path": "/vendita-case/milano/musocco/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quarto Oggiaro",
    "path": "/vendita-case/milano/quarto-oggiaro/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Gallaratese",
    "path": "/vendita-case/milano/gallaratese/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Bruzzano",
    "path": "/vendita-case/milano/bruzzano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Comasina",
    "path": "/vendita-case/milano/comasina/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Baggio",
    "path": "/vendita-case/milano/baggio/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Vialba",
    "path": "/vendita-case/milano/vialba/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Trenno",
    "path": "/vendita-case/milano/trenno/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Roserio",
    "path": "/vendita-case/milano/roserio/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Quinto Romano",
    "path": "/vendita-case/milano/quinto-romano/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Uptown - MIND - Cascina Merlata",
    "path": "/vendita-case/milano/uptown-mind-cascina-merlata/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Figino",
    "path": "/vendita-case/milano/figino/",
    "tipo": "micro",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Opera",
@@ -812,7 +827,8 @@
    "tipo": "comune",
    "prov": "MI",
    "anello": 1,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Assago",
@@ -820,7 +836,8 @@
    "tipo": "comune",
    "prov": "MI",
    "anello": 1,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Buccinasco",
@@ -828,7 +845,8 @@
    "tipo": "comune",
    "prov": "MI",
    "anello": 1,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Corsico",
@@ -836,7 +854,8 @@
    "tipo": "comune",
    "prov": "MI",
    "anello": 1,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Cesano Boscone",
@@ -844,7 +863,8 @@
    "tipo": "comune",
    "prov": "MI",
    "anello": 1,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "Trezzano sul Naviglio",
