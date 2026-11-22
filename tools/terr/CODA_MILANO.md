@@ -46,3 +46,13 @@ Portare fuori come per le vendite (`__prepTr()`, `__show(k)` nella scheda robots
 descrizione vera, senza segni di truffa e non sotto il 60% della zona; doppioni tolti) e scrive `data/affitti.js` (mediane €/m² per zona);
 `auto_imm.js` usa quei canoni (−10%) per gli investimenti quando il comune ha almeno 6 annunci affidabili, al posto della stima OMI.
 Quando la coda affitti è finita si torna a `coda_milano.json` (Brianza, vendite).
+
+## Osservatorio (si impara da ogni annuncio)
+Ogni caricamento (carica_affitti.sh, carica_vendite.sh) lancia `tools/terr/sapere.py`, che riscrive `tools/terr/SAPERE.md` e `data/sapere.js`
+e aggiunge una riga a `sapere_storia.jsonl` (mediane per zona e data, per vedere i prezzi che si muovono). Contiene:
+- per zona: vendita €/m² (25°–50°–75°) per taglia e per stato, affitto €/m² per taglia, resa lorda, anni per ripagare, tensione
+  (affitti offerti per casa in vendita), quota privati e nuove costruzioni, premi (terrazzo, box, giardino, piano alto), margine del da ristrutturare,
+  confronto con le zone vicine (zone che costano meno ma si affittano uguale);
+- regole generali (ogni annuncio confrontato con la mediana della sua zona): quanto valgono tipologia, taglia, stato, piano, bagni, dotazioni,
+  in vendita e in affitto, Milano e fuori; con le riletture: cosa sparisce prima (si vende o si affitta più in fretta).
+Prima di valutare un investimento o rispondere a Imma su prezzi e rendite, leggere SAPERE.md.

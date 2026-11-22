@@ -17,6 +17,7 @@ for c in d['coda']:
 json.dump(d,open(p,'w'),ensure_ascii=False,indent=1)
 print('zone segnate',n,'restano',sum(c['stato']!='fatto' for c in d['coda']))
 PY
+python3 tools/terr/sapere.py | tail -1
 V=$(date +%y%m%d%H%M); sed -i -E "s#<script src=\"((js|data)/[a-z_0-9]+\.js)(\?v=[0-9]+)?\"#<script src=\"\1?v=$V\"#g" index.html
 git add -A; git commit -qm "$2
 
