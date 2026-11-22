@@ -19,7 +19,8 @@ Prima le microzone di Milano città (per distanza da Porta Romana), poi i comuni
 3. Portare fuori i dati (le chiamate a get_page_text con più di 49 KB finiscono in un file e non riempiono la conversazione):
    - `await __prepara()` → `{annunci, parti}`
    - apri una seconda scheda su `https://www.immobiliare.it/robots.txt`, incolla il blocco `__PARTI` (in fondo a lettore.js),
-     poi per k = 0 … parti-1: `__show(k)` e `get_page_text` sulla seconda scheda.
+     poi per k = 0 … parti-1: `__show(k)` e `get_page_text` sulla seconda scheda. Più veloce: `browser_batch` con 8 coppie
+     (javascript_tool `__show(k)` + get_page_text) per chiamata: l'output finisce in un file e ricevi.py lo legge.
    - `python3 tools/terr/ricevi.py /tmp/lotto.json 90` ricompone e controlla che non manchi nessuna parte;
      poi nella prima scheda `__consegnati()`.
    - Se il collegamento al Mac funziona (cartella Download collegata) si può anche scaricare il json e usare device_stage_files.
