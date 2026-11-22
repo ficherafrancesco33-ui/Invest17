@@ -1,5 +1,5 @@
 {
- "nota": "Affitti Immobiliare: prima i comuni degli investimenti (verifica rendite), poi Milano microzona per microzona, poi i comuni già letti in vendita",
+ "nota": "Affitti Immobiliare: prima i comuni degli investimenti, poi Milano (da Porta Romana verso fuori), poi i comuni già letti in vendita",
  "coda": [
   {
    "n": "A:C:alessandria",
@@ -7,7 +7,8 @@
    "path": "/affitto-case/alessandria/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:asti",
@@ -15,7 +16,8 @@
    "path": "/affitto-case/asti/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:biella",
@@ -23,7 +25,8 @@
    "path": "/affitto-case/biella/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:cambiasca",
@@ -31,7 +34,8 @@
    "path": "/affitto-case/cambiasca/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:cantu",
@@ -39,7 +43,8 @@
    "path": "/affitto-case/cantu/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:casale-monferrato",
@@ -47,7 +52,8 @@
    "path": "/affitto-case/casale-monferrato/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:cesate",
@@ -55,7 +61,8 @@
    "path": "/affitto-case/cesate/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:codogno",
@@ -63,7 +70,8 @@
    "path": "/affitto-case/codogno/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:darfo-boario-terme",
@@ -71,7 +79,8 @@
    "path": "/affitto-case/darfo-boario-terme/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:erba",
@@ -79,7 +88,8 @@
    "path": "/affitto-case/erba/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:galliate-lombardo",
@@ -87,7 +97,8 @@
    "path": "/affitto-case/galliate-lombardo/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:genova",
@@ -95,7 +106,8 @@
    "path": "/affitto-case/genova/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:leggiuno",
@@ -103,7 +115,8 @@
    "path": "/affitto-case/leggiuno/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:mortara",
@@ -111,7 +124,8 @@
    "path": "/affitto-case/mortara/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:novara",
@@ -119,7 +133,8 @@
    "path": "/affitto-case/novara/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:ponte-san-pietro",
@@ -127,7 +142,8 @@
    "path": "/affitto-case/ponte-san-pietro/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:sant-olcese",
@@ -135,7 +151,8 @@
    "path": "/affitto-case/sant-olcese/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:seriate",
@@ -143,7 +160,8 @@
    "path": "/affitto-case/seriate/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:sormano",
@@ -167,7 +185,8 @@
    "path": "/affitto-case/tirano/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:tortona",
@@ -175,7 +194,8 @@
    "path": "/affitto-case/tortona/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:valenza",
@@ -183,7 +203,8 @@
    "path": "/affitto-case/valenza/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:vercelli",
@@ -191,7 +212,8 @@
    "path": "/affitto-case/vercelli/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:vigevano",
@@ -199,7 +221,8 @@
    "path": "/affitto-case/vigevano/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:voghera",
@@ -207,7 +230,8 @@
    "path": "/affitto-case/voghera/",
    "tipo": "comune",
    "gruppo": "investimenti",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-22"
   },
   {
    "n": "A:C:oneta",
@@ -215,6 +239,49 @@
    "path": "/affitto-case/oneta/",
    "tipo": "comune",
    "gruppo": "investimenti",
+   "stato": "fatto",
+   "data": "2026-11-22"
+  },
+  {
+   "n": "A:Montenero",
+   "nome": "Montenero",
+   "path": "/affitto-case/milano/montenero/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "fatto",
+   "data": "2026-11-22"
+  },
+  {
+   "n": "A:Quadronno - Crocetta",
+   "nome": "Quadronno - Crocetta",
+   "path": "/affitto-case/milano/quadronno-crocetta/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "fatto",
+   "data": "2026-11-22"
+  },
+  {
+   "n": "A:Guastalla",
+   "nome": "Guastalla",
+   "path": "/affitto-case/milano/guastalla/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Cadore",
+   "nome": "Cadore",
+   "path": "/affitto-case/milano/cadore/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Missori",
+   "nome": "Missori",
+   "path": "/affitto-case/milano/missori/",
+   "tipo": "micro",
+   "gruppo": "milano",
    "stato": "da"
   },
   {
@@ -226,17 +293,9 @@
    "stato": "da"
   },
   {
-   "n": "A:San Babila",
-   "nome": "San Babila",
-   "path": "/affitto-case/milano/san-babila/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Duomo",
-   "nome": "Duomo",
-   "path": "/affitto-case/milano/duomo/",
+   "n": "A:Ticinese",
+   "nome": "Ticinese",
+   "path": "/affitto-case/milano/ticinese/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -250,9 +309,49 @@
    "stato": "da"
   },
   {
-   "n": "A:Quadrilatero della Moda",
-   "nome": "Quadrilatero della Moda",
-   "path": "/affitto-case/milano/quadrilatero-della-moda/",
+   "n": "A:San Babila",
+   "nome": "San Babila",
+   "path": "/affitto-case/milano/san-babila/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Porta Vittoria",
+   "nome": "Porta Vittoria",
+   "path": "/affitto-case/milano/porta-vittoria/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Indipendenza",
+   "nome": "Indipendenza",
+   "path": "/affitto-case/milano/indipendenza/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Duomo",
+   "nome": "Duomo",
+   "path": "/affitto-case/milano/duomo/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Carrobbio",
+   "nome": "Carrobbio",
+   "path": "/affitto-case/milano/carrobbio/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Palestro",
+   "nome": "Palestro",
+   "path": "/affitto-case/milano/palestro/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -274,17 +373,33 @@
    "stato": "da"
   },
   {
-   "n": "A:Indipendenza",
-   "nome": "Indipendenza",
-   "path": "/affitto-case/milano/indipendenza/",
+   "n": "A:Quadrilatero della Moda",
+   "nome": "Quadrilatero della Moda",
+   "path": "/affitto-case/milano/quadrilatero-della-moda/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Palestro",
-   "nome": "Palestro",
-   "path": "/affitto-case/milano/palestro/",
+   "n": "A:Argonne - Corsica",
+   "nome": "Argonne - Corsica",
+   "path": "/affitto-case/milano/argonne-corsica/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Brera",
+   "nome": "Brera",
+   "path": "/affitto-case/milano/brera/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Corso Genova",
+   "nome": "Corso Genova",
+   "path": "/affitto-case/milano/corso-genova/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -298,9 +413,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Brera",
-   "nome": "Brera",
-   "path": "/affitto-case/milano/brera/",
+   "n": "A:Porta Venezia",
+   "nome": "Porta Venezia",
+   "path": "/affitto-case/milano/porta-venezia/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -322,6 +437,14 @@
    "stato": "da"
   },
   {
+   "n": "A:Morgagni",
+   "nome": "Morgagni",
+   "path": "/affitto-case/milano/morgagni/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
    "n": "A:Lanza",
    "nome": "Lanza",
    "path": "/affitto-case/milano/lanza/",
@@ -330,33 +453,41 @@
    "stato": "da"
   },
   {
-   "n": "A:Porta Venezia",
-   "nome": "Porta Venezia",
-   "path": "/affitto-case/milano/porta-venezia/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Arena",
-   "nome": "Arena",
-   "path": "/affitto-case/milano/arena/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Dezza",
-   "nome": "Dezza",
-   "path": "/affitto-case/milano/dezza/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
    "n": "A:Repubblica",
    "nome": "Repubblica",
    "path": "/affitto-case/milano/repubblica/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:San Vittore",
+   "nome": "San Vittore",
+   "path": "/affitto-case/milano/san-vittore/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Viale Ungheria - Mecenate",
+   "nome": "Viale Ungheria - Mecenate",
+   "path": "/affitto-case/milano/viale-ungheria-mecenate/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Porta Nuova",
+   "nome": "Porta Nuova",
+   "path": "/affitto-case/milano/porta-nuova/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Vincenzo Monti",
+   "nome": "Vincenzo Monti",
+   "path": "/affitto-case/milano/vincenzo-monti/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -378,25 +509,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Morgagni",
-   "nome": "Morgagni",
-   "path": "/affitto-case/milano/morgagni/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Vincenzo Monti",
-   "nome": "Vincenzo Monti",
-   "path": "/affitto-case/milano/vincenzo-monti/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Porta Nuova",
-   "nome": "Porta Nuova",
-   "path": "/affitto-case/milano/porta-nuova/",
+   "n": "A:Quartiere Forlanini",
+   "nome": "Quartiere Forlanini",
+   "path": "/affitto-case/milano/quartiere-forlanini/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -410,65 +525,17 @@
    "stato": "da"
   },
   {
-   "n": "A:Pagano",
-   "nome": "Pagano",
-   "path": "/affitto-case/milano/pagano/",
+   "n": "A:Navigli - Darsena",
+   "nome": "Navigli - Darsena",
+   "path": "/affitto-case/milano/navigli-darsena/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Quartiere Forlanini",
-   "nome": "Quartiere Forlanini",
-   "path": "/affitto-case/milano/quartiere-forlanini/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Arco della Pace",
-   "nome": "Arco della Pace",
-   "path": "/affitto-case/milano/arco-della-pace/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Vercelli - Wagner",
-   "nome": "Vercelli - Wagner",
-   "path": "/affitto-case/milano/vercelli-wagner/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Garibaldi - Corso Como",
-   "nome": "Garibaldi - Corso Como",
-   "path": "/affitto-case/milano/garibaldi-corso-como/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Paolo Sarpi",
-   "nome": "Paolo Sarpi",
-   "path": "/affitto-case/milano/paolo-sarpi/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Washington",
-   "nome": "Washington",
-   "path": "/affitto-case/milano/washington/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Centrale",
-   "nome": "Centrale",
-   "path": "/affitto-case/milano/centrale/",
+   "n": "A:Dezza",
+   "nome": "Dezza",
+   "path": "/affitto-case/milano/dezza/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -482,9 +549,33 @@
    "stato": "da"
   },
   {
-   "n": "A:Frua",
-   "nome": "Frua",
-   "path": "/affitto-case/milano/frua/",
+   "n": "A:Solari",
+   "nome": "Solari",
+   "path": "/affitto-case/milano/solari/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Arena",
+   "nome": "Arena",
+   "path": "/affitto-case/milano/arena/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Garibaldi - Corso Como",
+   "nome": "Garibaldi - Corso Como",
+   "path": "/affitto-case/milano/garibaldi-corso-como/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Centrale",
+   "nome": "Centrale",
+   "path": "/affitto-case/milano/centrale/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -498,9 +589,73 @@
    "stato": "da"
   },
   {
+   "n": "A:Santa Giulia",
+   "nome": "Santa Giulia",
+   "path": "/affitto-case/milano/santa-giulia/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Pagano",
+   "nome": "Pagano",
+   "path": "/affitto-case/milano/pagano/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Vercelli - Wagner",
+   "nome": "Vercelli - Wagner",
+   "path": "/affitto-case/milano/vercelli-wagner/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Arco della Pace",
+   "nome": "Arco della Pace",
+   "path": "/affitto-case/milano/arco-della-pace/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Paolo Sarpi",
+   "nome": "Paolo Sarpi",
+   "path": "/affitto-case/milano/paolo-sarpi/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
    "n": "A:Piazza Napoli",
    "nome": "Piazza Napoli",
    "path": "/affitto-case/milano/piazza-napoli/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Washington",
+   "nome": "Washington",
+   "path": "/affitto-case/milano/washington/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Barona",
+   "nome": "Barona",
+   "path": "/affitto-case/milano/barona/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Famagosta",
+   "nome": "Famagosta",
+   "path": "/affitto-case/milano/famagosta/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -514,33 +669,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Sempione",
-   "nome": "Sempione",
-   "path": "/affitto-case/milano/sempione/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Piazzale Siena",
-   "nome": "Piazzale Siena",
-   "path": "/affitto-case/milano/piazzale-siena/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:De Angeli",
-   "nome": "De Angeli",
-   "path": "/affitto-case/milano/de-angeli/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Amendola - Buonarroti",
-   "nome": "Amendola - Buonarroti",
-   "path": "/affitto-case/milano/amendola-buonarroti/",
+   "n": "A:Lambrate",
+   "nome": "Lambrate",
+   "path": "/affitto-case/milano/lambrate/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -554,89 +685,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Casoretto",
-   "nome": "Casoretto",
-   "path": "/affitto-case/milano/casoretto/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Maggiolina",
-   "nome": "Maggiolina",
-   "path": "/affitto-case/milano/maggiolina/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:City Life",
-   "nome": "City Life",
-   "path": "/affitto-case/milano/city-life/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Lambrate",
-   "nome": "Lambrate",
-   "path": "/affitto-case/milano/lambrate/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Cenisio",
-   "nome": "Cenisio",
-   "path": "/affitto-case/milano/cenisio/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Gambara",
-   "nome": "Gambara",
-   "path": "/affitto-case/milano/gambara/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Cascina dei Pomi",
-   "nome": "Cascina dei Pomi",
-   "path": "/affitto-case/milano/cascina-dei-pomi/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Zara",
-   "nome": "Zara",
-   "path": "/affitto-case/milano/zara/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Farini",
-   "nome": "Farini",
-   "path": "/affitto-case/milano/farini/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Rovereto",
-   "nome": "Rovereto",
-   "path": "/affitto-case/milano/rovereto/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Bande Nere",
-   "nome": "Bande Nere",
-   "path": "/affitto-case/milano/bande-nere/",
+   "n": "A:Cantalupa - San Paolo",
+   "nome": "Cantalupa - San Paolo",
+   "path": "/affitto-case/milano/cantalupa-san-paolo/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -650,9 +701,73 @@
    "stato": "da"
   },
   {
-   "n": "A:Udine",
-   "nome": "Udine",
-   "path": "/affitto-case/milano/udine/",
+   "n": "A:Casoretto",
+   "nome": "Casoretto",
+   "path": "/affitto-case/milano/casoretto/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Frua",
+   "nome": "Frua",
+   "path": "/affitto-case/milano/frua/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Tripoli - Soderini",
+   "nome": "Tripoli - Soderini",
+   "path": "/affitto-case/milano/tripoli-soderini/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:City Life",
+   "nome": "City Life",
+   "path": "/affitto-case/milano/city-life/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:De Angeli",
+   "nome": "De Angeli",
+   "path": "/affitto-case/milano/de-angeli/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Zara",
+   "nome": "Zara",
+   "path": "/affitto-case/milano/zara/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Amendola - Buonarroti",
+   "nome": "Amendola - Buonarroti",
+   "path": "/affitto-case/milano/amendola-buonarroti/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Cascina dei Pomi",
+   "nome": "Cascina dei Pomi",
+   "path": "/affitto-case/milano/cascina-dei-pomi/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Milano",
+   "nome": "Milano",
+   "path": "/affitto-case/milano/milano/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -661,6 +776,118 @@
    "n": "A:Parco Trotter",
    "nome": "Parco Trotter",
    "path": "/affitto-case/milano/parco-trotter/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Ponte Lambro",
+   "nome": "Ponte Lambro",
+   "path": "/affitto-case/milano/ponte-lambro/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Sempione",
+   "nome": "Sempione",
+   "path": "/affitto-case/milano/sempione/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Maggiolina",
+   "nome": "Maggiolina",
+   "path": "/affitto-case/milano/maggiolina/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Rovereto",
+   "nome": "Rovereto",
+   "path": "/affitto-case/milano/rovereto/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Quartiere Feltre",
+   "nome": "Quartiere Feltre",
+   "path": "/affitto-case/milano/quartiere-feltre/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Udine",
+   "nome": "Udine",
+   "path": "/affitto-case/milano/udine/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Gambara",
+   "nome": "Gambara",
+   "path": "/affitto-case/milano/gambara/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Farini",
+   "nome": "Farini",
+   "path": "/affitto-case/milano/farini/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Cenisio",
+   "nome": "Cenisio",
+   "path": "/affitto-case/milano/cenisio/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Tre Castelli - Faenza",
+   "nome": "Tre Castelli - Faenza",
+   "path": "/affitto-case/milano/tre-castelli-faenza/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Quintosole - Chiaravalle",
+   "nome": "Quintosole - Chiaravalle",
+   "path": "/affitto-case/milano/quintosole-chiaravalle/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Giambellino",
+   "nome": "Giambellino",
+   "path": "/affitto-case/milano/giambellino/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Parco Lambro",
+   "nome": "Parco Lambro",
+   "path": "/affitto-case/milano/parco-lambro/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Lorenteggio",
+   "nome": "Lorenteggio",
+   "path": "/affitto-case/milano/lorenteggio/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -690,17 +917,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Portello - Parco Vittoria",
-   "nome": "Portello - Parco Vittoria",
-   "path": "/affitto-case/milano/portello-parco-vittoria/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Primaticcio",
-   "nome": "Primaticcio",
-   "path": "/affitto-case/milano/primaticcio/",
+   "n": "A:Bande Nere",
+   "nome": "Bande Nere",
+   "path": "/affitto-case/milano/bande-nere/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -714,17 +933,17 @@
    "stato": "da"
   },
   {
-   "n": "A:Greco - Segnano",
-   "nome": "Greco - Segnano",
-   "path": "/affitto-case/milano/greco-segnano/",
+   "n": "A:Piazzale Siena",
+   "nome": "Piazzale Siena",
+   "path": "/affitto-case/milano/piazzale-siena/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Prato Centenaro",
-   "nome": "Prato Centenaro",
-   "path": "/affitto-case/milano/prato-centenaro/",
+   "n": "A:Portello - Parco Vittoria",
+   "nome": "Portello - Parco Vittoria",
+   "path": "/affitto-case/milano/portello-parco-vittoria/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -738,25 +957,49 @@
    "stato": "da"
   },
   {
-   "n": "A:Inganni",
-   "nome": "Inganni",
-   "path": "/affitto-case/milano/inganni/",
+   "n": "A:Greco - Segnano",
+   "nome": "Greco - Segnano",
+   "path": "/affitto-case/milano/greco-segnano/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Parco Lambro",
-   "nome": "Parco Lambro",
-   "path": "/affitto-case/milano/parco-lambro/",
+   "n": "A:Dergano",
+   "nome": "Dergano",
+   "path": "/affitto-case/milano/dergano/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Quartiere Feltre",
-   "nome": "Quartiere Feltre",
-   "path": "/affitto-case/milano/quartiere-feltre/",
+   "n": "A:Primaticcio",
+   "nome": "Primaticcio",
+   "path": "/affitto-case/milano/primaticcio/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Ca' Granda",
+   "nome": "Ca' Granda",
+   "path": "/affitto-case/milano/ca-granda/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:San Siro",
+   "nome": "San Siro",
+   "path": "/affitto-case/milano/san-siro/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Monte Stella",
+   "nome": "Monte Stella",
+   "path": "/affitto-case/milano/monte-stella/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -778,17 +1021,17 @@
    "stato": "da"
   },
   {
-   "n": "A:Dergano",
-   "nome": "Dergano",
-   "path": "/affitto-case/milano/dergano/",
+   "n": "A:Prato Centenaro",
+   "nome": "Prato Centenaro",
+   "path": "/affitto-case/milano/prato-centenaro/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Ca' Granda",
-   "nome": "Ca' Granda",
-   "path": "/affitto-case/milano/ca-granda/",
+   "n": "A:Inganni",
+   "nome": "Inganni",
+   "path": "/affitto-case/milano/inganni/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -802,57 +1045,9 @@
    "stato": "da"
   },
   {
-   "n": "A:San Siro",
-   "nome": "San Siro",
-   "path": "/affitto-case/milano/san-siro/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Precotto",
-   "nome": "Precotto",
-   "path": "/affitto-case/milano/precotto/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Monte Stella",
-   "nome": "Monte Stella",
-   "path": "/affitto-case/milano/monte-stella/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
    "n": "A:Crescenzago",
    "nome": "Crescenzago",
    "path": "/affitto-case/milano/crescenzago/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Certosa",
-   "nome": "Certosa",
-   "path": "/affitto-case/milano/certosa/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Bicocca",
-   "nome": "Bicocca",
-   "path": "/affitto-case/milano/bicocca/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Bisceglie",
-   "nome": "Bisceglie",
-   "path": "/affitto-case/milano/bisceglie/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -866,41 +1061,25 @@
    "stato": "da"
   },
   {
-   "n": "A:Niguarda",
-   "nome": "Niguarda",
-   "path": "/affitto-case/milano/niguarda/",
+   "n": "A:Certosa",
+   "nome": "Certosa",
+   "path": "/affitto-case/milano/certosa/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Affori",
-   "nome": "Affori",
-   "path": "/affitto-case/milano/affori/",
+   "n": "A:Precotto",
+   "nome": "Precotto",
+   "path": "/affitto-case/milano/precotto/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:Villa San Giovanni",
-   "nome": "Villa San Giovanni",
-   "path": "/affitto-case/milano/villa-san-giovanni/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Cascina Gobba",
-   "nome": "Cascina Gobba",
-   "path": "/affitto-case/milano/cascina-gobba/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
-   "n": "A:Quarto Cagnino",
-   "nome": "Quarto Cagnino",
-   "path": "/affitto-case/milano/quarto-cagnino/",
+   "n": "A:Bicocca",
+   "nome": "Bicocca",
+   "path": "/affitto-case/milano/bicocca/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -914,9 +1093,33 @@
    "stato": "da"
   },
   {
-   "n": "A:Bignami - Ponale",
-   "nome": "Bignami - Ponale",
-   "path": "/affitto-case/milano/bignami-ponale/",
+   "n": "A:Niguarda",
+   "nome": "Niguarda",
+   "path": "/affitto-case/milano/niguarda/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Villa San Giovanni",
+   "nome": "Villa San Giovanni",
+   "path": "/affitto-case/milano/villa-san-giovanni/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Affori",
+   "nome": "Affori",
+   "path": "/affitto-case/milano/affori/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Bisceglie",
+   "nome": "Bisceglie",
+   "path": "/affitto-case/milano/bisceglie/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -930,9 +1133,17 @@
    "stato": "da"
   },
   {
-   "n": "A:Quartiere Olmi",
-   "nome": "Quartiere Olmi",
-   "path": "/affitto-case/milano/quartiere-olmi/",
+   "n": "A:Quarto Cagnino",
+   "nome": "Quarto Cagnino",
+   "path": "/affitto-case/milano/quarto-cagnino/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Cascina Gobba",
+   "nome": "Cascina Gobba",
+   "path": "/affitto-case/milano/cascina-gobba/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -946,9 +1157,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Musocco",
-   "nome": "Musocco",
-   "path": "/affitto-case/milano/musocco/",
+   "n": "A:Bignami - Ponale",
+   "nome": "Bignami - Ponale",
+   "path": "/affitto-case/milano/bignami-ponale/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -962,9 +1173,25 @@
    "stato": "da"
   },
   {
+   "n": "A:Musocco",
+   "nome": "Musocco",
+   "path": "/affitto-case/milano/musocco/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
    "n": "A:Gallaratese",
    "nome": "Gallaratese",
    "path": "/affitto-case/milano/gallaratese/",
+   "tipo": "micro",
+   "gruppo": "milano",
+   "stato": "da"
+  },
+  {
+   "n": "A:Vialba",
+   "nome": "Vialba",
+   "path": "/affitto-case/milano/vialba/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -994,14 +1221,6 @@
    "stato": "da"
   },
   {
-   "n": "A:Vialba",
-   "nome": "Vialba",
-   "path": "/affitto-case/milano/vialba/",
-   "tipo": "micro",
-   "gruppo": "milano",
-   "stato": "da"
-  },
-  {
    "n": "A:Trenno",
    "nome": "Trenno",
    "path": "/affitto-case/milano/trenno/",
@@ -1026,9 +1245,9 @@
    "stato": "da"
   },
   {
-   "n": "A:Uptown - MIND - Cascina Merlata",
-   "nome": "Uptown - MIND - Cascina Merlata",
-   "path": "/affitto-case/milano/uptown-mind-cascina-merlata/",
+   "n": "A:Quartiere Olmi",
+   "nome": "Quartiere Olmi",
+   "path": "/affitto-case/milano/quartiere-olmi/",
    "tipo": "micro",
    "gruppo": "milano",
    "stato": "da"
@@ -1042,505 +1261,25 @@
    "stato": "da"
   },
   {
-   "n": "A:C:opera",
-   "nome": "Opera",
-   "path": "/affitto-case/opera/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
+   "n": "A:Uptown - Mind - Cascina Merlata",
+   "nome": "Uptown - Mind - Cascina Merlata",
+   "path": "/affitto-case/milano/uptown-mind-cascina-merlata/",
+   "tipo": "micro",
+   "gruppo": "milano",
    "stato": "da"
   },
   {
-   "n": "A:C:assago",
-   "nome": "Assago",
-   "path": "/affitto-case/assago/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:buccinasco",
-   "nome": "Buccinasco",
-   "path": "/affitto-case/buccinasco/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:corsico",
-   "nome": "Corsico",
-   "path": "/affitto-case/corsico/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cesano-boscone",
-   "nome": "Cesano Boscone",
-   "path": "/affitto-case/cesano-boscone/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:trezzano-sul-naviglio",
-   "nome": "Trezzano sul Naviglio",
-   "path": "/affitto-case/trezzano-sul-naviglio/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:san-giuliano-milanese",
-   "nome": "San Giuliano Milanese",
-   "path": "/affitto-case/san-giuliano-milanese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:peschiera-borromeo",
-   "nome": "Peschiera Borromeo",
-   "path": "/affitto-case/peschiera-borromeo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:segrate",
-   "nome": "Segrate",
-   "path": "/affitto-case/segrate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:vimodrone",
-   "nome": "Vimodrone",
-   "path": "/affitto-case/vimodrone/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cologno-monzese",
-   "nome": "Cologno Monzese",
-   "path": "/affitto-case/cologno-monzese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
+   "n": "A:Muggiano",
+   "nome": "Muggiano",
+   "path": "/affitto-case/milano/muggiano/",
+   "tipo": "micro",
+   "gruppo": "milano",
    "stato": "da"
   },
   {
    "n": "A:C:sesto-san-giovanni",
    "nome": "Sesto San Giovanni",
    "path": "/affitto-case/sesto-san-giovanni/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:bresso",
-   "nome": "Bresso",
-   "path": "/affitto-case/bresso/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cinisello-balsamo",
-   "nome": "Cinisello Balsamo",
-   "path": "/affitto-case/cinisello-balsamo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cusano-milanino",
-   "nome": "Cusano Milanino",
-   "path": "/affitto-case/cusano-milanino/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cormano",
-   "nome": "Cormano",
-   "path": "/affitto-case/cormano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:novate-milanese",
-   "nome": "Novate Milanese",
-   "path": "/affitto-case/novate-milanese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:baranzate",
-   "nome": "Baranzate",
-   "path": "/affitto-case/baranzate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:pero",
-   "nome": "Pero",
-   "path": "/affitto-case/pero/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:settimo-milanese",
-   "nome": "Settimo Milanese",
-   "path": "/affitto-case/settimo-milanese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cusago",
-   "nome": "Cusago",
-   "path": "/affitto-case/cusago/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:locate-di-triulzi",
-   "nome": "Locate di Triulzi",
-   "path": "/affitto-case/locate-di-triulzi/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:pieve-emanuele",
-   "nome": "Pieve Emanuele",
-   "path": "/affitto-case/pieve-emanuele/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:basiglio",
-   "nome": "Basiglio",
-   "path": "/affitto-case/basiglio/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:zibido-san-giacomo",
-   "nome": "Zibido San Giacomo",
-   "path": "/affitto-case/zibido-san-giacomo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:bollate",
-   "nome": "Bollate",
-   "path": "/affitto-case/bollate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:rho",
-   "nome": "Rho",
-   "path": "/affitto-case/rho/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cornaredo",
-   "nome": "Cornaredo",
-   "path": "/affitto-case/cornaredo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:arese",
-   "nome": "Arese",
-   "path": "/affitto-case/arese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:garbagnate-milanese",
-   "nome": "Garbagnate Milanese",
-   "path": "/affitto-case/garbagnate-milanese/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:paderno-dugnano",
-   "nome": "Paderno Dugnano",
-   "path": "/affitto-case/paderno-dugnano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:pioltello",
-   "nome": "Pioltello",
-   "path": "/affitto-case/pioltello/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cernusco-sul-naviglio",
-   "nome": "Cernusco sul Naviglio",
-   "path": "/affitto-case/cernusco-sul-naviglio/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cassina-de-pecchi",
-   "nome": "Cassina de' Pecchi",
-   "path": "/affitto-case/cassina-de-pecchi/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:carugate",
-   "nome": "Carugate",
-   "path": "/affitto-case/carugate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:rodano",
-   "nome": "Rodano",
-   "path": "/affitto-case/rodano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:mediglia",
-   "nome": "Mediglia",
-   "path": "/affitto-case/mediglia/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:pantigliate",
-   "nome": "Pantigliate",
-   "path": "/affitto-case/pantigliate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:melegnano",
-   "nome": "Melegnano",
-   "path": "/affitto-case/melegnano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:lacchiarella",
-   "nome": "Lacchiarella",
-   "path": "/affitto-case/lacchiarella/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:binasco",
-   "nome": "Binasco",
-   "path": "/affitto-case/binasco/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:noviglio",
-   "nome": "Noviglio",
-   "path": "/affitto-case/noviglio/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:gaggiano",
-   "nome": "Gaggiano",
-   "path": "/affitto-case/gaggiano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:vittuone",
-   "nome": "Vittuone",
-   "path": "/affitto-case/vittuone/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:sedriano",
-   "nome": "Sedriano",
-   "path": "/affitto-case/sedriano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:bareggio",
-   "nome": "Bareggio",
-   "path": "/affitto-case/bareggio/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:senago",
-   "nome": "Senago",
-   "path": "/affitto-case/senago/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:limbiate",
-   "nome": "Limbiate",
-   "path": "/affitto-case/limbiate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:bussero",
-   "nome": "Bussero",
-   "path": "/affitto-case/bussero/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:gorgonzola",
-   "nome": "Gorgonzola",
-   "path": "/affitto-case/gorgonzola/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:vignate",
-   "nome": "Vignate",
-   "path": "/affitto-case/vignate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:settala",
-   "nome": "Settala",
-   "path": "/affitto-case/settala/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:paullo",
-   "nome": "Paullo",
-   "path": "/affitto-case/paullo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:vizzolo-predabissi",
-   "nome": "Vizzolo Predabissi",
-   "path": "/affitto-case/vizzolo-predabissi/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:cerro-al-lambro",
-   "nome": "Cerro al Lambro",
-   "path": "/affitto-case/cerro-al-lambro/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:carpiano",
-   "nome": "Carpiano",
-   "path": "/affitto-case/carpiano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:siziano",
-   "nome": "Siziano",
-   "path": "/affitto-case/siziano/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:casarile",
-   "nome": "Casarile",
-   "path": "/affitto-case/casarile/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:rosate",
-   "nome": "Rosate",
-   "path": "/affitto-case/rosate/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:vermezzo-con-zelo",
-   "nome": "Vermezzo con Zelo",
-   "path": "/affitto-case/vermezzo-con-zelo/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:abbiategrasso",
-   "nome": "Abbiategrasso",
-   "path": "/affitto-case/abbiategrasso/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:magenta",
-   "nome": "Magenta",
-   "path": "/affitto-case/magenta/",
-   "tipo": "comune",
-   "gruppo": "hinterland",
-   "stato": "da"
-  },
-  {
-   "n": "A:C:corbetta",
-   "nome": "Corbetta",
-   "path": "/affitto-case/corbetta/",
    "tipo": "comune",
    "gruppo": "hinterland",
    "stato": "da"
@@ -1554,9 +1293,521 @@
    "stato": "da"
   },
   {
+   "n": "A:C:rho",
+   "nome": "Rho",
+   "path": "/affitto-case/rho/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cinisello-balsamo",
+   "nome": "Cinisello Balsamo",
+   "path": "/affitto-case/cinisello-balsamo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:san-donato-milanese",
+   "nome": "San Donato Milanese",
+   "path": "/affitto-case/san-donato-milanese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:abbiategrasso",
+   "nome": "Abbiategrasso",
+   "path": "/affitto-case/abbiategrasso/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:san-giuliano-milanese",
+   "nome": "San Giuliano Milanese",
+   "path": "/affitto-case/san-giuliano-milanese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:segrate",
+   "nome": "Segrate",
+   "path": "/affitto-case/segrate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
    "n": "A:C:parabiago",
    "nome": "Parabiago",
    "path": "/affitto-case/parabiago/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:rozzano",
+   "nome": "Rozzano",
+   "path": "/affitto-case/rozzano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:paderno-dugnano",
+   "nome": "Paderno Dugnano",
+   "path": "/affitto-case/paderno-dugnano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cologno-monzese",
+   "nome": "Cologno Monzese",
+   "path": "/affitto-case/cologno-monzese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:garbagnate-milanese",
+   "nome": "Garbagnate Milanese",
+   "path": "/affitto-case/garbagnate-milanese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pioltello",
+   "nome": "Pioltello",
+   "path": "/affitto-case/pioltello/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:limbiate",
+   "nome": "Limbiate",
+   "path": "/affitto-case/limbiate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:peschiera-borromeo",
+   "nome": "Peschiera Borromeo",
+   "path": "/affitto-case/peschiera-borromeo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:magenta",
+   "nome": "Magenta",
+   "path": "/affitto-case/magenta/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:corsico",
+   "nome": "Corsico",
+   "path": "/affitto-case/corsico/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cernusco-sul-naviglio",
+   "nome": "Cernusco sul Naviglio",
+   "path": "/affitto-case/cernusco-sul-naviglio/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:corbetta",
+   "nome": "Corbetta",
+   "path": "/affitto-case/corbetta/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:melegnano",
+   "nome": "Melegnano",
+   "path": "/affitto-case/melegnano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:opera",
+   "nome": "Opera",
+   "path": "/affitto-case/opera/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:bollate",
+   "nome": "Bollate",
+   "path": "/affitto-case/bollate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:trezzano-sul-naviglio",
+   "nome": "Trezzano sul Naviglio",
+   "path": "/affitto-case/trezzano-sul-naviglio/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:sedriano",
+   "nome": "Sedriano",
+   "path": "/affitto-case/sedriano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:arese",
+   "nome": "Arese",
+   "path": "/affitto-case/arese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:gorgonzola",
+   "nome": "Gorgonzola",
+   "path": "/affitto-case/gorgonzola/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pieve-emanuele",
+   "nome": "Pieve Emanuele",
+   "path": "/affitto-case/pieve-emanuele/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:buccinasco",
+   "nome": "Buccinasco",
+   "path": "/affitto-case/buccinasco/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:novate-milanese",
+   "nome": "Novate Milanese",
+   "path": "/affitto-case/novate-milanese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cusano-milanino",
+   "nome": "Cusano Milanino",
+   "path": "/affitto-case/cusano-milanino/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:baranzate",
+   "nome": "Baranzate",
+   "path": "/affitto-case/baranzate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:basiglio",
+   "nome": "Basiglio",
+   "path": "/affitto-case/basiglio/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:senago",
+   "nome": "Senago",
+   "path": "/affitto-case/senago/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:paullo",
+   "nome": "Paullo",
+   "path": "/affitto-case/paullo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:bresso",
+   "nome": "Bresso",
+   "path": "/affitto-case/bresso/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:settimo-milanese",
+   "nome": "Settimo Milanese",
+   "path": "/affitto-case/settimo-milanese/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:assago",
+   "nome": "Assago",
+   "path": "/affitto-case/assago/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cassina-de-pecchi",
+   "nome": "Cassina de' Pecchi",
+   "path": "/affitto-case/cassina-de-pecchi/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vignate",
+   "nome": "Vignate",
+   "path": "/affitto-case/vignate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cornaredo",
+   "nome": "Cornaredo",
+   "path": "/affitto-case/cornaredo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cesano-boscone",
+   "nome": "Cesano Boscone",
+   "path": "/affitto-case/cesano-boscone/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:bareggio",
+   "nome": "Bareggio",
+   "path": "/affitto-case/bareggio/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:siziano",
+   "nome": "Siziano",
+   "path": "/affitto-case/siziano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cormano",
+   "nome": "Cormano",
+   "path": "/affitto-case/cormano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vimodrone",
+   "nome": "Vimodrone",
+   "path": "/affitto-case/vimodrone/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:lacchiarella",
+   "nome": "Lacchiarella",
+   "path": "/affitto-case/lacchiarella/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:mediglia",
+   "nome": "Mediglia",
+   "path": "/affitto-case/mediglia/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pero",
+   "nome": "Pero",
+   "path": "/affitto-case/pero/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:locate-di-triulzi",
+   "nome": "Locate di Triulzi",
+   "path": "/affitto-case/locate-di-triulzi/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:carugate",
+   "nome": "Carugate",
+   "path": "/affitto-case/carugate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vittuone",
+   "nome": "Vittuone",
+   "path": "/affitto-case/vittuone/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:gaggiano",
+   "nome": "Gaggiano",
+   "path": "/affitto-case/gaggiano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:bussero",
+   "nome": "Bussero",
+   "path": "/affitto-case/bussero/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:binasco",
+   "nome": "Binasco",
+   "path": "/affitto-case/binasco/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vermezzo-con-zelo",
+   "nome": "Vermezzo con Zelo",
+   "path": "/affitto-case/vermezzo-con-zelo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:settala",
+   "nome": "Settala",
+   "path": "/affitto-case/settala/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:carpiano",
+   "nome": "Carpiano",
+   "path": "/affitto-case/carpiano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:noviglio",
+   "nome": "Noviglio",
+   "path": "/affitto-case/noviglio/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:rosate",
+   "nome": "Rosate",
+   "path": "/affitto-case/rosate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cusago",
+   "nome": "Cusago",
+   "path": "/affitto-case/cusago/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pantigliate",
+   "nome": "Pantigliate",
+   "path": "/affitto-case/pantigliate/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:rodano",
+   "nome": "Rodano",
+   "path": "/affitto-case/rodano/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:zibido-san-giacomo",
+   "nome": "Zibido San Giacomo",
+   "path": "/affitto-case/zibido-san-giacomo/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cerro-al-lambro",
+   "nome": "Cerro al Lambro",
+   "path": "/affitto-case/cerro-al-lambro/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:casarile",
+   "nome": "Casarile",
+   "path": "/affitto-case/casarile/",
+   "tipo": "comune",
+   "gruppo": "hinterland",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vizzolo-predabissi",
+   "nome": "Vizzolo Predabissi",
+   "path": "/affitto-case/vizzolo-predabissi/",
    "tipo": "comune",
    "gruppo": "hinterland",
    "stato": "da"

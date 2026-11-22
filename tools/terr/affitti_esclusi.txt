@@ -1,0 +1,555 @@
+# affitti esclusi: id;motivo
+57332918;privato: descrizione troppo corta
+60154384;privato: descrizione troppo corta
+74516332;privato: descrizione troppo corta
+75410048;privato: descrizione troppo corta
+76417510;privato: descrizione troppo corta
+81060659;privato: descrizione troppo corta
+81076051;privato: descrizione troppo corta
+84118536;privato: meno di 4 foto
+84571948;privato: descrizione troppo corta
+86131296;privato: descrizione troppo corta
+87104184;privato: descrizione troppo corta
+88135247;privato: descrizione troppo corta
+90082527;privato: descrizione troppo corta
+90395061;privato: meno di 4 foto
+90779627;senza canone o m²
+90779631;senza canone o m²
+90779649;senza canone o m²
+90972270;privato: descrizione troppo corta
+95706498;privato: descrizione troppo corta
+96061698;privato: meno di 4 foto
+98372582;privato: descrizione troppo corta
+98412190;privato: descrizione troppo corta
+99032566;privato: descrizione troppo corta
+99559284;privato: descrizione troppo corta
+100111866;privato: descrizione troppo corta
+102411724;privato: descrizione troppo corta
+103420602;rent to buy
+106172013;privato: descrizione troppo corta
+107329801;privato: descrizione troppo corta
+108171513;privato: descrizione troppo corta
+108865515;privato: descrizione troppo corta
+109556377;m² fuori scala
+110017729;privato: descrizione troppo corta
+110240513;privato: descrizione troppo corta
+110994203;non residenziale
+111134519;privato: descrizione troppo corta
+111804575;non residenziale
+112261079;privato: descrizione troppo corta
+112317197;privato: meno di 4 foto
+112587751;privato: descrizione troppo corta
+112704057;privato: descrizione troppo corta
+113350757;privato: descrizione troppo corta
+114352311;privato: descrizione troppo corta
+114579869;privato: descrizione troppo corta
+114761085;asta
+115003801;privato: descrizione troppo corta
+115088597;privato: descrizione troppo corta
+115103143;privato: descrizione troppo corta
+115205865;privato: meno di 4 foto
+115423001;non residenziale
+115532945;privato: descrizione troppo corta
+115749769;privato: descrizione troppo corta
+115821525;privato: descrizione troppo corta
+116005327;privato: descrizione troppo corta
+116108389;m² fuori scala
+116141585;senza canone o m²
+116287667;privato: descrizione troppo corta
+116444637;privato: descrizione troppo corta
+116510117;privato: descrizione troppo corta
+116623983;privato: descrizione troppo corta
+116819979;privato: descrizione troppo corta
+116839879;privato: descrizione troppo corta
+117080025;privato: descrizione troppo corta
+117140869;privato: descrizione troppo corta
+117371577;privato: descrizione troppo corta
+117435105;privato: descrizione troppo corta
+117791615;senza canone o m²
+117804109;privato: descrizione troppo corta
+118139747;privato: descrizione troppo corta
+118407373;privato: descrizione troppo corta
+118680857;privato: descrizione troppo corta
+119026115;privato: descrizione troppo corta
+119043921;€/m² impossibile
+119181701;privato: descrizione troppo corta
+119478361;privato: descrizione troppo corta
+119479891;privato: descrizione troppo corta
+119485621;privato: meno di 4 foto
+119539363;privato: descrizione troppo corta
+119796782;privato: descrizione troppo corta
+119799698;senza canone o m²
+119891444;privato: descrizione troppo corta
+120226600;senza canone o m²
+120274374;privato: descrizione troppo corta
+120274502;privato: descrizione troppo corta
+120274534;privato: descrizione troppo corta
+120295420;privato: descrizione troppo corta
+120641750;privato: descrizione troppo corta
+120702644;privato: descrizione troppo corta
+120740724;privato: descrizione troppo corta
+120887700;privato: descrizione troppo corta
+121214058;privato: descrizione troppo corta
+121315120;€/m² impossibile
+121499238;senza canone o m²
+121650540;privato: descrizione troppo corta
+121819646;privato: descrizione troppo corta
+121923578;privato: descrizione troppo corta
+122103250;stanza / posto letto
+122204544;privato: descrizione troppo corta
+122204958;privato: descrizione troppo corta
+122218786;€/m² impossibile
+122220786;privato: descrizione troppo corta
+122502250;privato: meno di 4 foto
+122632654;non residenziale
+122665382;privato: descrizione troppo corta
+122897780;privato: descrizione troppo corta
+122911262;privato: descrizione troppo corta
+122982550;stanza / posto letto
+122985770;privato: descrizione troppo corta
+123038577;privato: descrizione troppo corta
+123162471;privato: descrizione troppo corta
+123321507;privato: descrizione troppo corta
+123414077;senza canone o m²
+123466383;privato: descrizione troppo corta
+123511157;privato: descrizione troppo corta
+123585051;privato: descrizione troppo corta
+123624263;privato: descrizione troppo corta
+123661359;senza canone o m²
+123662605;senza canone o m²
+124012623;privato: descrizione troppo corta
+124061441;privato: meno di 4 foto
+124129609;privato: descrizione troppo corta
+124316943;privato: descrizione troppo corta
+124339371;privato: descrizione troppo corta
+124339629;privato: descrizione troppo corta
+124343043;privato: descrizione troppo corta
+124352725;senza canone o m²
+124571577;non residenziale
+124661053;privato: descrizione troppo corta
+124763481;privato: descrizione troppo corta
+124798321;senza canone o m²
+124854105;privato: descrizione troppo corta
+124884389;privato: descrizione troppo corta
+125081991;privato: descrizione troppo corta
+125211827;privato: descrizione troppo corta
+125261357;privato: descrizione troppo corta
+125263777;privato: descrizione troppo corta
+125429171;senza canone o m²
+125454539;stanza / posto letto
+125506391;privato: descrizione troppo corta
+125651439;privato: descrizione troppo corta
+125661957;privato: descrizione troppo corta
+125732931;privato: descrizione troppo corta
+125775547;privato: descrizione troppo corta
+125844789;privato: descrizione troppo corta
+125858827;privato: descrizione troppo corta
+126295201;privato: descrizione troppo corta
+126374141;privato: descrizione troppo corta
+126663511;senza canone o m²
+126794323;privato: meno di 4 foto
+126812817;non residenziale
+126860759;privato: descrizione troppo corta
+126970391;privato: descrizione troppo corta
+127223325;privato: descrizione troppo corta
+127297375;privato: descrizione troppo corta
+127609500;uso non abitativo
+127705984;privato: descrizione troppo corta
+127709022;stanza / posto letto
+128090094;privato: descrizione troppo corta
+128198882;uso non abitativo
+128222520;privato: meno di 4 foto
+128222558;privato: descrizione troppo corta
+128328192;privato: descrizione troppo corta
+128443296;privato: descrizione troppo corta
+128443926;€/m² impossibile
+128444952;€/m² impossibile
+128595968;privato: descrizione troppo corta
+128680172;senza canone o m²
+128761050;privato: descrizione troppo corta
+128774316;privato: meno di 4 foto
+129089272;privato: meno di 4 foto
+129465634;privato: descrizione troppo corta
+129479484;privato: descrizione troppo corta
+129520186;privato: descrizione troppo corta
+129631042;non residenziale
+129717088;uso non abitativo
+129750876;privato: descrizione troppo corta
+129764424;privato: descrizione troppo corta
+129784456;privato: descrizione troppo corta
+129988236;privato: descrizione troppo corta
+130028036;canone fuori scala
+130046434;privato: descrizione troppo corta
+130046798;senza canone o m²
+130055880;non residenziale
+130060928;privato: descrizione troppo corta
+130068604;canone fuori scala
+130094304;privato: descrizione troppo corta
+130099346;privato: meno di 4 foto
+130176314;stanza / posto letto
+130187074;privato: descrizione troppo corta
+130327016;privato: descrizione troppo corta
+130368490;privato: descrizione troppo corta
+130527580;asta
+130660748;privato: meno di 4 foto
+130719968;senza canone o m²
+130720658;senza canone o m²
+130846458;privato: descrizione troppo corta
+130911868;privato: descrizione troppo corta
+130958610;stanza / posto letto
+130959092;senza canone o m²
+130963014;non residenziale
+130966052;privato: descrizione troppo corta
+130970284;privato: meno di 4 foto
+131037028;senza canone o m²
+131037618;senza canone o m²
+131059392;senza canone o m²
+131096518;privato: descrizione troppo corta
+131130250;privato: descrizione troppo corta
+131201764;privato: descrizione troppo corta
+131272266;senza canone o m²
+131273796;stanza / posto letto
+131323618;senza canone o m²
+131336216;stanza / posto letto
+131353872;stanza / posto letto
+131377956;senza canone o m²
+131394030;senza canone o m²
+131397510;senza canone o m²
+131484228;privato: descrizione troppo corta
+131489866;privato: descrizione troppo corta
+131534018;privato: descrizione troppo corta
+131544418;privato: meno di 4 foto
+131553364;affitto breve / turistico
+131615024;senza canone o m²
+131615654;privato: descrizione troppo corta
+131648110;privato: meno di 4 foto
+131676920;privato: descrizione troppo corta
+131737192;privato: meno di 4 foto
+131766146;privato: descrizione troppo corta
+131856032;privato: descrizione troppo corta
+131885826;privato: descrizione troppo corta
+131893410;privato: descrizione troppo corta
+131903486;privato: descrizione troppo corta
+131910186;privato: descrizione troppo corta
+132012668;privato: meno di 4 foto
+132032406;privato: descrizione troppo corta
+132059038;privato: descrizione troppo corta
+132074158;privato: descrizione troppo corta
+132084368;privato: descrizione troppo corta
+132085412;privato: descrizione troppo corta
+132095830;privato: descrizione troppo corta
+132151952;non residenziale
+132162578;privato: descrizione troppo corta
+132185210;privato: descrizione troppo corta
+132206644;privato: descrizione troppo corta
+132257684;privato: descrizione troppo corta
+132327420;privato: descrizione troppo corta
+132376942;privato: descrizione troppo corta
+132394314;privato: descrizione troppo corta
+132416214;privato: descrizione troppo corta
+132445320;privato: meno di 4 foto
+132466494;privato: descrizione troppo corta
+132490180;asta
+132504682;privato: descrizione troppo corta
+132511734;privato: descrizione troppo corta
+132514098;privato: descrizione troppo corta
+132532446;non residenziale
+132614406;privato: descrizione troppo corta
+132668168;uso non abitativo
+132705308;privato: descrizione troppo corta
+132801942;m² fuori scala
+132829048;privato: descrizione troppo corta
+132830914;privato: meno di 4 foto
+132849060;senza canone o m²
+132849330;senza canone o m²
+132849566;senza canone o m²
+132873402;privato: descrizione troppo corta
+132879178;uso non abitativo
+132885736;privato: descrizione troppo corta
+132941868;privato: descrizione troppo corta
+132995148;senza canone o m²
+133013306;privato: descrizione troppo corta
+133023592;privato: descrizione troppo corta
+133091462;privato: descrizione troppo corta
+133116370;senza canone o m²
+133120064;senza canone o m²
+133120272;senza canone o m²
+133125440;senza canone o m²
+133125824;senza canone o m²
+133126050;senza canone o m²
+133126192;senza canone o m²
+133126284;senza canone o m²
+133126286;senza canone o m²
+133126288;senza canone o m²
+133126290;senza canone o m²
+133126296;senza canone o m²
+133126298;senza canone o m²
+133126300;senza canone o m²
+133126302;senza canone o m²
+133126304;senza canone o m²
+133126306;senza canone o m²
+133126308;senza canone o m²
+133126312;senza canone o m²
+133126314;senza canone o m²
+133126316;senza canone o m²
+133126318;senza canone o m²
+133126320;senza canone o m²
+133126322;senza canone o m²
+133126324;senza canone o m²
+133126326;senza canone o m²
+133126328;senza canone o m²
+133126330;senza canone o m²
+133126332;senza canone o m²
+133126334;senza canone o m²
+133126336;senza canone o m²
+133126338;senza canone o m²
+133126340;senza canone o m²
+133126342;senza canone o m²
+133126346;senza canone o m²
+133126348;senza canone o m²
+133126362;senza canone o m²
+133126368;senza canone o m²
+133126492;senza canone o m²
+133137110;privato: descrizione troppo corta
+133162562;non residenziale
+133213280;privato: descrizione troppo corta
+133218114;€/m² impossibile
+133224792;privato: descrizione troppo corta
+133231418;privato: descrizione troppo corta
+133252446;senza canone o m²
+133260606;privato: descrizione troppo corta
+133262236;privato: descrizione troppo corta
+133262834;privato: descrizione troppo corta
+133287604;privato: descrizione troppo corta
+133290792;non residenziale
+133376328;privato: descrizione troppo corta
+133377530;m² fuori scala
+133385134;privato: descrizione troppo corta
+133417152;€/m² impossibile
+133431818;privato: descrizione troppo corta
+133444864;privato: descrizione troppo corta
+133501900;privato: descrizione troppo corta
+133515214;privato: descrizione troppo corta
+133520524;privato: descrizione troppo corta
+133528698;privato: descrizione troppo corta
+133551078;privato: meno di 4 foto
+133570278;privato: descrizione troppo corta
+133614668;€/m² impossibile
+133628430;privato: descrizione troppo corta
+133633946;privato: descrizione troppo corta
+133640612;privato: descrizione troppo corta
+133640718;privato: descrizione troppo corta
+133649140;€/m² impossibile
+133666606;privato: descrizione troppo corta
+133739212;senza canone o m²
+133743332;privato: descrizione troppo corta
+133765128;privato: descrizione troppo corta
+133772806;privato: descrizione troppo corta
+133777264;privato: descrizione troppo corta
+133793362;privato: descrizione troppo corta
+133794522;privato: descrizione troppo corta
+133834634;privato: descrizione troppo corta
+133875054;privato: descrizione troppo corta
+133989913;privato: meno di 4 foto
+133999689;stanza / posto letto
+134001145;privato: descrizione troppo corta
+134001901;privato: descrizione troppo corta
+134052563;privato: descrizione troppo corta
+134053717;senza canone o m²
+134056671;privato: descrizione troppo corta
+134056897;senza canone o m²
+134119851;asta
+134127637;canone fuori scala
+134247927;privato: descrizione troppo corta
+134302327;privato: descrizione troppo corta
+134306415;privato: descrizione troppo corta
+134316219;privato: descrizione troppo corta
+134316443;privato: descrizione troppo corta
+134345891;privato: descrizione troppo corta
+134346255;privato: descrizione troppo corta
+134367807;privato: descrizione troppo corta
+134372149;privato: descrizione troppo corta
+134375911;senza canone o m²
+134387853;privato: descrizione troppo corta
+134393539;privato: descrizione troppo corta
+134393645;privato: descrizione troppo corta
+134417613;uso non abitativo
+134447597;privato: descrizione troppo corta
+134447809;privato: descrizione troppo corta
+134460365;stanza / posto letto
+134474725;stanza / posto letto
+134475017;stanza / posto letto
+134477821;privato: descrizione troppo corta
+134481543;privato: descrizione troppo corta
+134497775;privato: descrizione troppo corta
+134514763;privato: descrizione troppo corta
+134530387;privato: descrizione troppo corta
+134530555;privato: descrizione troppo corta
+134530561;privato: descrizione troppo corta
+134541149;privato: descrizione troppo corta
+134542063;privato: descrizione troppo corta
+134543595;privato: descrizione troppo corta
+134546671;privato: descrizione troppo corta
+134554809;privato: descrizione troppo corta
+134565809;privato: descrizione troppo corta
+134573759;privato: descrizione troppo corta
+134578207;privato: descrizione troppo corta
+134580093;privato: descrizione troppo corta
+134591633;privato: descrizione troppo corta
+134594073;privato: descrizione troppo corta
+134594137;senza canone o m²
+134599155;privato: descrizione troppo corta
+134601837;privato: descrizione troppo corta
+134607307;privato: meno di 4 foto
+134612067;privato: meno di 4 foto
+134634949;privato: descrizione troppo corta
+134646395;canone fuori scala
+134664693;privato: descrizione troppo corta
+134664999;stanza / posto letto
+134667583;privato: descrizione troppo corta
+134671151;non residenziale
+134679869;privato: descrizione troppo corta
+134696363;€/m² impossibile
+134732811;privato: descrizione troppo corta
+134744297;affitto breve / turistico
+134748365;non residenziale
+134761463;privato: descrizione troppo corta
+134762471;privato: descrizione troppo corta
+134762949;privato: descrizione troppo corta
+134763477;privato: descrizione troppo corta
+134763815;privato: descrizione troppo corta
+134777765;uso non abitativo
+134809901;privato: descrizione troppo corta
+134825581;privato: descrizione troppo corta
+134826645;privato: descrizione troppo corta
+134831817;privato: descrizione troppo corta
+134853991;privato: meno di 4 foto
+134855663;privato: descrizione troppo corta
+134878407;€/m² impossibile
+134879127;€/m² impossibile
+134880723;€/m² impossibile
+134881233;€/m² impossibile
+134881299;€/m² impossibile
+134881975;€/m² impossibile
+134881979;€/m² impossibile
+134882061;€/m² impossibile
+134882549;€/m² impossibile
+134883867;€/m² impossibile
+134883941;€/m² impossibile
+134884125;€/m² impossibile
+134884379;€/m² impossibile
+134884453;€/m² impossibile
+134884771;€/m² impossibile
+134885185;€/m² impossibile
+134885331;€/m² impossibile
+134885369;€/m² impossibile
+134885695;€/m² impossibile
+134885759;€/m² impossibile
+134886025;€/m² impossibile
+134886027;€/m² impossibile
+134905989;privato: descrizione troppo corta
+134906989;privato: descrizione troppo corta
+134907089;privato: descrizione troppo corta
+134910991;privato: descrizione troppo corta
+134916917;privato: descrizione troppo corta
+134926659;€/m² impossibile
+134926885;€/m² impossibile
+134944707;privato: descrizione troppo corta
+134948659;privato: descrizione troppo corta
+134955311;€/m² impossibile
+134955381;€/m² impossibile
+134958427;privato: descrizione troppo corta
+134963029;privato: descrizione troppo corta
+134963423;privato: descrizione troppo corta
+114931621;doppione
+118471483;doppione
+123818193;doppione
+126824217;doppione
+127334863;doppione
+128139524;doppione
+129245158;doppione
+129712802;doppione
+129788018;doppione
+129872846;doppione
+130067670;doppione
+130080550;doppione
+130136898;doppione
+130441390;doppione
+130612100;doppione
+130710698;doppione
+130891890;doppione
+131256112;doppione
+131285634;doppione
+131290696;doppione
+131290706;doppione
+131528026;doppione
+131619126;doppione
+131935022;doppione
+132075920;doppione
+132168732;doppione
+132247882;doppione
+132446100;doppione
+132460368;doppione
+132464586;doppione
+132465254;doppione
+132472520;doppione
+132712300;doppione
+133007682;doppione
+133123532;doppione
+133260638;doppione
+133327360;doppione
+133385726;doppione
+133427044;doppione
+133427058;doppione
+133605912;doppione
+133645298;doppione
+133740342;doppione
+133763406;doppione
+133803178;doppione
+133814218;doppione
+133814220;doppione
+133915515;doppione
+133922805;doppione
+134020285;doppione
+134159273;doppione
+134207499;doppione
+134306299;doppione
+134306397;doppione
+134475979;doppione
+134502565;doppione
+134569445;doppione
+134625787;doppione
+134628073;doppione
+134628663;doppione
+134629789;doppione
+134662639;doppione
+134664909;doppione
+134665103;doppione
+134665389;doppione
+134665747;doppione
+134666281;doppione
+134697449;doppione
+134698095;doppione
+134717277;doppione
+134739181;doppione
+134741239;doppione
+134777289;doppione
+134777609;doppione
+134777935;doppione
+134787527;doppione
+134858713;doppione
+134860247;doppione
+134879513;doppione
+134879685;doppione
+134880179;doppione
+134881351;doppione
+134882527;doppione
+134882937;doppione
+134884043;doppione
+134885491;doppione
+134886197;doppione
+134886539;doppione
+134905795;doppione
+134955105;doppione
+134955591;doppione
+134955895;doppione
