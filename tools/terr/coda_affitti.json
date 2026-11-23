@@ -576,7 +576,8 @@
    "path": "/affitto-case/milano/dezza/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Melchiorre Gioia",
@@ -584,7 +585,8 @@
    "path": "/affitto-case/milano/melchiorre-gioia/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Solari",
@@ -592,7 +594,8 @@
    "path": "/affitto-case/milano/solari/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Arena",
@@ -600,7 +603,8 @@
    "path": "/affitto-case/milano/arena/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Garibaldi - Corso Como",
@@ -608,7 +612,8 @@
    "path": "/affitto-case/milano/garibaldi-corso-como/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Centrale",
@@ -616,7 +621,8 @@
    "path": "/affitto-case/milano/centrale/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Ortica",
@@ -624,7 +630,8 @@
    "path": "/affitto-case/milano/ortica/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Santa Giulia",
@@ -632,7 +639,8 @@
    "path": "/affitto-case/milano/santa-giulia/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Pagano",
@@ -640,7 +648,8 @@
    "path": "/affitto-case/milano/pagano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Vercelli - Wagner",
@@ -648,7 +657,8 @@
    "path": "/affitto-case/milano/vercelli-wagner/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Arco della Pace",
@@ -656,7 +666,8 @@
    "path": "/affitto-case/milano/arco-della-pace/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Paolo Sarpi",
@@ -664,7 +675,8 @@
    "path": "/affitto-case/milano/paolo-sarpi/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Piazza Napoli",
@@ -672,7 +684,8 @@
    "path": "/affitto-case/milano/piazza-napoli/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Washington",
