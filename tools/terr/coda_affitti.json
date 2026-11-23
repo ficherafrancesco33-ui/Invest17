@@ -1406,7 +1406,9 @@
    "path": "/affitto-case/milano/muggiano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23",
+   "letti": 0
   },
   {
    "n": "A:C:sesto-san-giovanni",
@@ -1927,7 +1929,9 @@
    "path": "/affitto-case/carpiano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23",
+   "letti": 0
   },
   {
    "n": "A:C:noviglio",
@@ -2007,7 +2011,9 @@
    "path": "/affitto-case/vizzolo-predabissi/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23",
+   "letti": 0
   }
  ]
 }
