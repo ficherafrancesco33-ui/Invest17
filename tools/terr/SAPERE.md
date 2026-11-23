@@ -1,6 +1,6 @@
 # Osservatorio Keystone — aggiornato al 23/11/2026
 
-Dagli annunci letti su Immobiliare.it: 28.778 in vendita e 4.499 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
+Dagli annunci letti su Immobiliare.it: 28.778 in vendita e 6.562 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
 Prezzi e canoni sono quelli CHIESTI: si tratta di solito un 5–10% sotto la vendita e un 5–10% sotto l'affitto.
 
 Legenda: €/m² vendita (25°–mediana–75°), affitto €/m² al mese, resa = rendita lorda delle mediane, anni = prezzo/affitto annuo,
@@ -10,42 +10,42 @@ tensione = affitti offerti ogni 100 case in vendita (bassa = pochi affitti sul m
 
 | zona | vendita €/m² | affitto €/m² | resa | bilocale | anni |
 |---|---|---|---|---|---|
+| Milano · Quartiere Forlanini | 3.614 | 20.5 | 6.8% | 245.000 € | 14.7 |
 | Milano · Martini - Insubria | 5.434 | 26.1 | 5.8% | 330.000 € | 17.3 |
+| Milano · Navigli - Darsena | 5.105 | 23.8 | 5.6% | 279.000 € | 17.9 |
+| Milano · Casoretto | 5.371 | 23.3 | 5.2% | 294.000 € | 19.2 |
+| Milano · Viale Ungheria - Mecenate | 3.913 | 16.8 | 5.2% | 241.000 € | 19.4 |
 | Milano · Porta Vittoria | 5.774 | 22.9 | 4.8% | 315.000 € | 21.0 |
 | Milano · Corso San Gottardo | 6.818 | 26.8 | 4.7% | 495.000 € | 21.2 |
-| Milano · Porta Venezia | 7.565 | 29.0 | 4.6% | 430.000 € | 21.7 |
-| Milano · Buenos Aires | 6.875 | 25.9 | 4.5% | 375.000 € | 22.1 |
+| Milano · Garibaldi - Corso Como | 8.800 | 34.1 | 4.7% | 520.000 € | 21.5 |
+| Milano · Città Studi | 5.818 | 21.7 | 4.5% | 335.000 € | 22.3 |
+| Milano · Porta Venezia | 7.565 | 28.6 | 4.5% | 430.000 € | 22.0 |
 | Milano · Argonne - Corsica | 5.612 | 20.7 | 4.4% | 298.000 € | 22.6 |
 | Milano · Plebisciti - Susa | 6.164 | 22.8 | 4.4% | 345.000 € | 22.5 |
+| Milano · Solari | 6.129 | 22.6 | 4.4% | 368.000 € | 22.6 |
+| Milano · Buenos Aires | 6.875 | 24.4 | 4.3% | 375.000 € | 23.5 |
 | Milano · Cadore | 6.786 | 24.1 | 4.3% | 437.500 € | 23.5 |
-| Milano · Città Studi | 5.818 | 20.3 | 4.2% | 335.000 € | 23.9 |
-| Milano · Guastalla | 9.800 | 33.1 | 4.1% | 579.000 € | 24.7 |
-| Milano · Montenero | 7.093 | 24.4 | 4.1% | 430.000 € | 24.2 |
-| Milano · Porta Romana - Medaglie d'Oro | 7.646 | 26.1 | 4.1% | 395.000 € | 24.4 |
-| Milano · Bocconi | 7.115 | 23.6 | 4.0% | 370.000 € | 25.1 |
-| Milano · Quadronno - Crocetta | 8.357 | 27.9 | 4.0% | 485.000 € | 25.0 |
-| Milano · Cadorna - Castello | 11.667 | 37.5 | 3.9% | 849.500 € | 25.9 |
 
 ## Rese più basse (si compra per patrimonio, non per reddito)
 
 | zona | vendita €/m² | affitto €/m² | resa | bilocale | anni |
 |---|---|---|---|---|---|
 | Milano · Brera | 15.789 | 36.9 | 2.8% | 1.070.000 € | 35.7 |
-| Milano · San Vittore | 10.235 | 24.0 | 2.8% | 695.000 € | 35.5 |
 | Milano · Missori | 11.317 | 28.0 | 3.0% | 760.000 € | 33.7 |
+| Milano · Vincenzo Monti | 11.427 | 28.9 | 3.0% | 720.000 € | 32.9 |
 | Milano · Duomo | 13.125 | 34.3 | 3.1% | 740.000 € | 31.9 |
 | Milano · Palestro | 12.365 | 32.2 | 3.1% | 800.000 € | 32.0 |
 | Milano · San Babila | 14.194 | 37.5 | 3.2% | 825.000 € | 31.5 |
+| Milano · San Vittore | 10.235 | 27.4 | 3.2% | 695.000 € | 31.1 |
+| Milano · Porta Nuova | 10.324 | 28.4 | 3.3% | 670.000 € | 30.3 |
 | Milano · Carrobbio | 10.000 | 28.9 | 3.5% | 680.000 € | 28.8 |
 | Milano · Piave - Tricolore | 9.000 | 26.0 | 3.5% | 530.000 € | 28.8 |
-| Milano · Ticinese | 8.558 | 26.4 | 3.7% | 527.500 € | 27.0 |
-| Milano · Sant'Ambrogio | 10.424 | 33.3 | 3.8% | 480.000 € | 26.1 |
 
 ## Zone che costano meno delle vicine ma si affittano quasi uguale
 Possibili occasioni: verificare il perché (strada, palazzi, servizi) prima di fidarsi.
 
 - **Milano · Martini - Insubria**: vendita -16% rispetto a Argonne - Corsica, Bologna - Sulmona, Cadore, Corvetto; affitto +6%.
-- **Milano · Corso San Gottardo**: vendita -23% rispetto a Bocconi, Borgogna - Largo Augusto, Carrobbio, Cermenate - Abbiategrasso; affitto -4%.
+- **Milano · Corso San Gottardo**: vendita -20% rispetto a Bocconi, Borgogna - Largo Augusto, Carrobbio, Cermenate - Abbiategrasso; affitto -3%.
 - **Milano · Quadronno - Crocetta**: vendita -12% rispetto a Bocconi, Borgogna - Largo Augusto, Brera, Cadore; affitto -3%.
 
 ## Dove conviene comprare da ristrutturare
@@ -66,14 +66,14 @@ Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a 
 
 ## Regole imparate (mediana delle zone)
 
-- Arredato, affitto in più: +2% (su 33 zone)
+- Arredato, affitto in più: -2% (su 47 zone)
 - Terrazzo, prezzo in più: +14% (su 192 zone)
 - Box, prezzo in più: 0% (su 115 zone)
 - Giardino, prezzo in più: +4% (su 92 zone)
 - Piano alto (4°+) con ascensore: +6% (su 173 zone)
 - Piano terra: -3% (su 184 zone)
-- Resa dei piccoli (<50 m²) rispetto ai medi (50–85): +19% (su 18 zone)
-- Resa dei grandi (≥85 m²) rispetto ai medi: -11% (su 24 zone)
+- Resa dei piccoli (<50 m²) rispetto ai medi (50–85): +12% (su 32 zone)
+- Resa dei grandi (≥85 m²) rispetto ai medi: -14% (su 36 zone)
 
 ## Cosa vale di più, in generale
 Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol dire che quel tipo di casa chiede il 10% in più delle altre nello stesso quartiere. Tra parentesi quanti annunci.
@@ -90,17 +90,17 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **venditore**: privato +8% (558) · agenzia 0% (15574)
 - **dotazioni** (chi ce l'ha rispetto a chi no): piscina +23% (224) · classe A +15% (162) · terrazzo +13% (3422) · box / garage +2% (634) · giardino +2% (505) · arredato +2% (7163) · fibra +2% (10584) · balcone 0% (9013) · posto auto 0% (218) · portineria 0% (475) · esposizione interna 0% (3737) · cantina -4% (7289) · doppia esposizione -5% (5050) · aria condizionata -6% (49)
 
-### Affitto · Milano (2.947 annunci)
+### Affitto · Milano (5.015 annunci)
 
-- **tipologia**: Monolocale +16% (297) · Appartamento +12% (525) · Bilocale -2% (1019) · Attico -4% (62) · Quadrilocale -5% (295) · Trilocale -6% (702)
-- **locali**: 1 locali +18% (325) · 5+ locali 0% (52) · 2 locali -2% (1133) · 5 locali -4% (83) · 4 locali -5% (313) · 3 locali -6% (767)
-- **taglia**: sotto 50 m² +22% (571) · 50–85 m² -1% (1254) · 85 m² e oltre -6% (1122)
-- **stato**: Nuovo / In costruzione +12% (74) · Ottimo / Ristrutturato +1% (1840) · Buono / Abitabile -12% (645)
-- **piano**: 3° e oltre SENZA ascensore 0% (123) · 1°–2° -1% (1145) · 3° e oltre con ascensore -2% (1135) · terra / rialzato -5% (211)
-- **riscaldamento**: Assente +20% (393) · Autonomo +4% (1046) · Centralizzato -5% (1508)
-- **bagni**: 1 bagno 0% (1886) · 2+ bagni -3% (795)
-- **venditore**: agenzia 0% (2794) · privato 0% (153)
-- **dotazioni** (chi ce l'ha rispetto a chi no): terrazzo 0% (344) · fibra -2% (1702) · esposizione interna -3% (437) · cantina -5% (389) · arredato -5% (2393) · doppia esposizione -11% (740) · balcone -12% (1191)
+- **tipologia**: Monolocale +15% (535) · Appartamento +11% (923) · Bilocale -2% (1812) · Attico -5% (92) · Quadrilocale -5% (416) · Trilocale -6% (1144) · Loft -7% (31)
+- **locali**: 1 locali +17% (596) · 5+ locali 0% (76) · 2 locali -2% (2053) · 4 locali -5% (444) · 5 locali -6% (142) · 3 locali -6% (1256)
+- **taglia**: sotto 50 m² +20% (1064) · 50–85 m² -2% (2227) · 85 m² e oltre -7% (1724)
+- **stato**: Nuovo / In costruzione +12% (128) · Ottimo / Ristrutturato +2% (3168) · Buono / Abitabile -12% (1115)
+- **piano**: 3° e oltre SENZA ascensore 0% (230) · 1°–2° -1% (1918) · 3° e oltre con ascensore -2% (1872) · terra / rialzato -4% (459)
+- **riscaldamento**: Assente +21% (653) · Autonomo +4% (1770) · Centralizzato -5% (2592)
+- **bagni**: 1 bagno -1% (3339) · 2+ bagni -3% (1252)
+- **venditore**: privato +1% (318) · agenzia 0% (4697)
+- **dotazioni** (chi ce l'ha rispetto a chi no): portineria +5% (51) · box / garage +1% (36) · terrazzo 0% (627) · fibra -1% (2962) · esposizione interna -4% (850) · cantina -5% (757) · arredato -7% (4191) · balcone -11% (2035) · doppia esposizione -12% (1238)
 
 ### Vendita · fuori Milano (12.623 annunci)
 
@@ -139,9 +139,9 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · Affori | 225 | 0 | 3.487–4.098–4.700 | — | — | — | 5% | 20% | 397 € |
 | Milano · Amendola - Buonarroti | 88 | 0 | 6.750–7.841–8.613 | — | — | — | 3% | 6% | -401 € |
 | Milano · Arco della Pace | 79 | 0 | 8.460–9.804–10.708 | — | — | — | 10% | 0% | 209 € |
-| Milano · Arena | 68 | 0 | 7.409–7.892–9.624 | — | — | — | 6% | 25% | 80 € |
+| Milano · Arena | 68 | 3 | 7.409–7.892–9.624 | — | — | — | 6% | 25% | 80 € |
 | Milano · Argonne - Corsica | 49 | 124 | 5.064–5.612–6.167 | 20.7 | 4.4% | 253 | 2% | 4% | -24 € |
-| Milano · Ascanio Sforza | 3 | 5 | — | 23.8 | — | — | — | — | — |
+| Milano · Ascanio Sforza | 3 | 31 | — | 27.0 | — | — | — | — | — |
 | Milano · Baggio | 155 | 0 | 2.799–3.152–3.795 | — | — | — | 4% | 17% | -569 € |
 | Milano · Bande Nere | 123 | 0 | 4.670–5.157–5.978 | — | — | — | 2% | 19% | -652 € |
 | Milano · Barona | 177 | 0 | 4.322–5.111–5.896 | — | — | — | 5% | 22% | -434 € |
@@ -155,21 +155,21 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · Bovisasca | 26 | 0 | 2.827–3.220–3.637 | — | — | — | 8% | 8% | — |
 | Milano · Brera | 37 | 87 | 12.273–15.789–18.095 | 36.9 | 2.8% | 235 | 0% | 0% | -2.335 € |
 | Milano · Bruzzano | 69 | 0 | 3.000–3.440–3.739 | — | — | — | 1% | 13% | -38 € |
-| Milano · Buenos Aires | 287 | 11 | 6.046–6.875–7.823 | 25.9 | 4.5% | 4 | 2% | 11% | 29 € |
+| Milano · Buenos Aires | 287 | 272 | 6.046–6.875–7.823 | 24.4 | 4.3% | 95 | 2% | 11% | 29 € |
 | Milano · Ca' Granda | 61 | 0 | 3.570–4.228–5.073 | — | — | — | 3% | 13% | 636 € |
 | Milano · Cadore | 82 | 142 | 6.131–6.786–7.880 | 24.1 | 4.3% | 173 | 2% | 10% | -1.007 € |
-| Milano · Cadorna - Castello | 30 | 42 | 11.000–11.667–12.528 | 37.5 | 3.9% | 140 | 3% | 7% | -433 € |
+| Milano · Cadorna - Castello | 30 | 81 | 11.000–11.667–12.528 | 37.0 | 3.8% | 270 | 3% | 7% | -433 € |
 | Milano · Cantalupa - San Paolo | 12 | 0 | 4.000–4.450–4.855 | — | — | — | 0% | 0% | — |
 | Milano · Carrobbio | 122 | 255 | 8.623–10.000–12.045 | 28.9 | 3.5% | 209 | 3% | 3% | 66 € |
 | Milano · Cascina dei Pomi | 184 | 1 | 4.507–5.103–6.067 | — | — | — | 4% | 23% | 122 € |
-| Milano · Casoretto | 174 | 0 | 4.606–5.371–6.163 | — | — | — | 4% | 21% | -141 € |
+| Milano · Casoretto | 174 | 21 | 4.606–5.371–6.163 | 23.3 | 5.2% | 12 | 4% | 21% | -141 € |
 | Milano · Cenisio | 235 | 0 | 5.510–6.250–6.987 | — | — | — | 3% | 18% | -4 € |
-| Milano · Centrale | 342 | 0 | 5.313–6.127–7.189 | — | — | — | 3% | 9% | 206 € |
+| Milano · Centrale | 342 | 29 | 5.313–6.127–7.189 | 21.8 | 4.3% | 8 | 3% | 9% | 206 € |
 | Milano · Cermenate - Abbiategrasso | 49 | 0 | 3.861–4.500–4.952 | — | — | — | 4% | 0% | -709 € |
 | Milano · Certosa | 422 | 0 | 3.536–4.158–4.848 | — | — | — | 5% | 15% | -113 € |
 | Milano · Chiesa Rossa | 120 | 0 | 2.721–3.530–4.117 | — | — | — | 2% | 1% | 519 € |
 | Milano · Cimiano | 200 | 0 | 3.354–3.842–4.562 | — | — | — | 6% | 2% | -257 € |
-| Milano · Città Studi | 638 | 35 | 5.067–5.818–6.835 | 20.3 | 4.2% | 5 | 2% | 7% | -165 € |
+| Milano · Città Studi | 638 | 522 | 5.067–5.818–6.835 | 21.7 | 4.5% | 82 | 2% | 7% | -165 € |
 | Milano · City Life | 34 | 0 | 7.761–10.614–17.909 | — | — | — | 0% | 35% | — |
 | Milano · Comasina | 91 | 0 | 2.838–3.141–3.635 | — | — | — | 7% | 11% | -635 € |
 | Milano · Corso Genova | 11 | 222 | 8.333–9.100–9.470 | 26.7 | 3.5% | 2018 | 0% | 0% | — |
@@ -178,15 +178,15 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · Crescenzago | 158 | 0 | 3.281–3.938–4.454 | — | — | — | 4% | 18% | 212 € |
 | Milano · De Angeli | 59 | 0 | 5.450–6.923–8.086 | — | — | — | 0% | 10% | -1.040 € |
 | Milano · Dergano | 374 | 0 | 3.956–4.533–5.317 | — | — | — | 5% | 25% | -418 € |
-| Milano · Dezza | 61 | 0 | 6.207–8.035–9.057 | — | — | — | 3% | 7% | 1.100 € |
+| Milano · Dezza | 61 | 1 | 6.207–8.035–9.057 | — | — | — | 3% | 7% | 1.100 € |
 | Milano · Duomo | 53 | 107 | 10.667–13.125–17.389 | 34.3 | 3.1% | 202 | 2% | 13% | — |
-| Milano · Famagosta | 26 | 0 | 3.799–4.362–5.423 | — | — | — | 0% | 12% | -2.378 € |
+| Milano · Famagosta | 26 | 2 | 3.799–4.362–5.423 | — | — | — | 0% | 12% | -2.378 € |
 | Milano · Farini | 149 | 0 | 4.752–5.382–6.381 | — | — | — | 5% | 17% | -132 € |
 | Milano · Figino | 57 | 0 | 2.989–3.500–4.446 | — | — | — | 0% | 46% | — |
 | Milano · Frua | 66 | 0 | 6.365–6.988–7.681 | — | — | — | 3% | 6% | -791 € |
 | Milano · Gallaratese | 194 | 0 | 3.000–3.315–3.851 | — | — | — | 5% | 3% | -412 € |
 | Milano · Gambara | 109 | 0 | 4.780–5.500–6.250 | — | — | — | 4% | 17% | 256 € |
-| Milano · Garibaldi - Corso Como | 111 | 0 | 7.704–8.800–9.937 | — | — | — | 3% | 4% | 485 € |
+| Milano · Garibaldi - Corso Como | 111 | 16 | 7.704–8.800–9.937 | 34.1 | 4.7% | 14 | 3% | 4% | 485 € |
 | Milano · Ghisolfa - Mac Mahon | 146 | 0 | 4.252–5.220–6.219 | — | — | — | 1% | 29% | 54 € |
 | Milano · Giambellino | 266 | 0 | 4.127–4.814–5.435 | — | — | — | 3% | 20% | -71 € |
 | Milano · Gorla | 103 | 0 | 3.781–4.118–4.587 | — | — | — | 4% | 15% | 508 € |
@@ -197,40 +197,41 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · Isola | 187 | 0 | 6.200–7.000–8.073 | — | — | — | 4% | 13% | -676 € |
 | Milano · Istria | 73 | 0 | 4.318–4.976–5.721 | — | — | — | 3% | 23% | 308 € |
 | Milano · Lambrate | 62 | 0 | 3.816–4.656–5.325 | — | — | — | 3% | 19% | -4 € |
-| Milano · Lanza | 35 | 5 | 10.000–10.421–12.087 | 32.0 | 3.7% | 14 | 3% | 6% | -751 € |
+| Milano · Lanza | 35 | 50 | 10.000–10.421–12.087 | 31.6 | 3.6% | 143 | 3% | 6% | -751 € |
 | Milano · Lodi - Brenta | 159 | 0 | 4.803–5.460–6.310 | — | — | — | 4% | 7% | -736 € |
 | Milano · Lorenteggio | 65 | 0 | 4.238–4.628–4.938 | — | — | — | 3% | 3% | -440 € |
 | Milano · Maggiolina | 210 | 0 | 5.039–5.643–6.361 | — | — | — | 4% | 11% | -265 € |
 | Milano · Martini - Insubria | 142 | 20 | 4.628–5.434–6.079 | 26.1 | 5.8% | 14 | 1% | 6% | 20 € |
-| Milano · Melchiorre Gioia | 60 | 0 | 6.894–8.381–10.000 | — | — | — | 2% | 17% | 1.844 € |
+| Milano · Melchiorre Gioia | 60 | 1 | 6.894–8.381–10.000 | — | — | — | 2% | 17% | 1.844 € |
+| Milano · Milano | 3 | 6 | — | 22.2 | — | — | — | — | — |
 | Milano · Missori | 64 | 106 | 9.017–11.317–13.250 | 28.0 | 3.0% | 166 | 2% | 5% | 625 € |
 | Milano · Molise - Cuoco | 78 | 0 | 3.963–4.555–5.147 | — | — | — | 0% | 24% | -339 € |
 | Milano · Monte Rosa - Lotto | 218 | 0 | 5.321–6.193–7.191 | — | — | — | 2% | 13% | -545 € |
 | Milano · Monte Stella | 20 | 0 | 4.265–4.526–4.835 | — | — | — | 10% | 0% | 133 € |
 | Milano · Montenero | 96 | 328 | 6.414–7.093–8.221 | 24.4 | 4.1% | 342 | 1% | 15% | -522 € |
-| Milano · Morgagni | 115 | 6 | 6.653–7.424–8.671 | 33.2 | 5.4% | 5 | 6% | 3% | 276 € |
-| Milano · Moscova | 111 | 0 | 9.279–10.400–11.787 | — | — | — | 4% | 8% | -176 € |
+| Milano · Morgagni | 115 | 163 | 6.653–7.424–8.671 | 25.0 | 4.0% | 142 | 6% | 3% | 276 € |
+| Milano · Moscova | 111 | 186 | 9.279–10.400–11.787 | 31.3 | 3.6% | 168 | 4% | 8% | -176 € |
 | Milano · Muggiano | 20 | 0 | 2.813–3.018–3.224 | — | — | — | 0% | 0% | — |
 | Milano · Musocco | 65 | 0 | 3.130–3.756–4.227 | — | — | — | 3% | 18% | -254 € |
-| Milano · Navigli - Darsena | 17 | 2 | 4.641–5.105–6.227 | — | — | — | 12% | 18% | — |
+| Milano · Navigli - Darsena | 17 | 198 | 4.641–5.105–6.227 | 23.8 | 5.6% | 1165 | 12% | 18% | — |
 | Milano · Niguarda | 118 | 0 | 3.298–3.600–4.074 | — | — | — | 3% | 4% | -571 € |
 | Milano · Ortica | 42 | 0 | 3.786–4.215–4.838 | — | — | — | 2% | 26% | -73 € |
-| Milano · Pagano | 53 | 0 | 8.759–10.312–11.901 | — | — | — | 0% | 9% | -744 € |
+| Milano · Pagano | 53 | 5 | 8.759–10.312–11.901 | 29.2 | 3.4% | 9 | 0% | 9% | -744 € |
 | Milano · Palestro | 68 | 100 | 9.950–12.365–13.946 | 32.2 | 3.1% | 147 | 3% | 4% | -264 € |
-| Milano · Paolo Sarpi | 193 | 0 | 6.279–7.200–8.250 | — | — | — | 2% | 8% | -348 € |
+| Milano · Paolo Sarpi | 193 | 1 | 6.279–7.200–8.250 | — | — | — | 2% | 8% | -348 € |
 | Milano · Parco Lambro | 9 | 0 | 3.500–5.623–5.952 | — | — | — | 0% | 0% | — |
 | Milano · Parco Trotter | 129 | 0 | 3.917–4.459–5.250 | — | — | — | 4% | 10% | -600 € |
-| Milano · Pasteur | 242 | 0 | 4.511–5.200–5.959 | — | — | — | 5% | 5% | 31 € |
+| Milano · Pasteur | 242 | 3 | 4.511–5.200–5.959 | — | — | — | 5% | 5% | 31 € |
 | Milano · Pezzotti - Meda | 307 | 0 | 4.679–5.441–6.416 | — | — | — | 2% | 21% | 76 € |
-| Milano · Piave - Tricolore | 109 | 135 | 7.627–9.000–10.591 | 26.0 | 3.5% | 124 | 2% | 7% | 649 € |
-| Milano · Piazza Napoli | 85 | 0 | 5.410–5.988–7.500 | — | — | — | 4% | 24% | -263 € |
+| Milano · Piave - Tricolore | 109 | 142 | 7.627–9.000–10.591 | 26.0 | 3.5% | 130 | 2% | 7% | 649 € |
+| Milano · Piazza Napoli | 85 | 1 | 5.410–5.988–7.500 | — | — | — | 4% | 24% | -263 € |
 | Milano · Piazzale Siena | 108 | 0 | 4.166–4.630–5.302 | — | — | — | 4% | 6% | -52 € |
 | Milano · Plebisciti - Susa | 112 | 121 | 5.400–6.164–7.354 | 22.8 | 4.4% | 108 | 0% | 12% | -839 € |
 | Milano · Ponte Lambro | 58 | 0 | 2.419–3.000–3.349 | — | — | — | 5% | 14% | -187 € |
 | Milano · Ponte Nuovo | 135 | 0 | 3.368–4.028–4.481 | — | — | — | 4% | 19% | -432 € |
-| Milano · Porta Nuova | 66 | 2 | 9.282–10.324–13.628 | — | — | — | 3% | 14% | — |
+| Milano · Porta Nuova | 66 | 86 | 9.282–10.324–13.628 | 28.4 | 3.3% | 130 | 3% | 14% | — |
 | Milano · Porta Romana - Medaglie d'Oro | 222 | 28 | 6.674–7.646–8.788 | 26.1 | 4.1% | 13 | 4% | 14% | -279 € |
-| Milano · Porta Venezia | 167 | 140 | 6.492–7.565–8.357 | 29.0 | 4.6% | 84 | 2% | 2% | 153 € |
+| Milano · Porta Venezia | 167 | 208 | 6.492–7.565–8.357 | 28.6 | 4.5% | 125 | 2% | 2% | 153 € |
 | Milano · Porta Vittoria | 74 | 80 | 4.815–5.774–6.863 | 22.9 | 4.8% | 108 | 3% | 14% | 204 € |
 | Milano · Portello - Parco Vittoria | 81 | 0 | 4.675–5.890–7.095 | — | — | — | 5% | 22% | 89 € |
 | Milano · Prato Centenaro | 68 | 0 | 3.695–4.018–4.484 | — | — | — | 6% | 4% | 121 € |
@@ -241,13 +242,13 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · Quadronno - Crocetta | 125 | 244 | 7.293–8.357–10.000 | 27.9 | 4.0% | 195 | 2% | 8% | 1.425 € |
 | Milano · Quartiere Adriano | 87 | 0 | 3.288–3.667–4.058 | — | — | — | 2% | 11% | -197 € |
 | Milano · Quartiere Feltre | 40 | 0 | 4.052–4.482–5.054 | — | — | — | 2% | 5% | -255 € |
-| Milano · Quartiere Forlanini | 67 | 1 | 3.215–3.614–4.467 | — | — | — | 3% | 4% | 42 € |
+| Milano · Quartiere Forlanini | 67 | 36 | 3.215–3.614–4.467 | 20.5 | 6.8% | 54 | 3% | 4% | 42 € |
 | Milano · Quartiere Olmi | 22 | 0 | 2.306–2.479–2.828 | — | — | — | 0% | 5% | — |
 | Milano · Quarto Cagnino | 58 | 0 | 2.974–3.727–4.533 | — | — | — | 10% | 5% | 1.025 € |
 | Milano · Quarto Oggiaro | 113 | 0 | 2.660–3.150–3.618 | — | — | — | 3% | 9% | -165 € |
 | Milano · Quinto Romano | 34 | 0 | 2.589–2.964–3.534 | — | — | — | 18% | 12% | — |
 | Milano · Quintosole - Chiaravalle | 18 | 0 | 2.743–3.161–3.499 | — | — | — | 6% | 33% | — |
-| Milano · Repubblica | 74 | 2 | 6.483–8.204–9.502 | — | — | — | 1% | 1% | -2.497 € |
+| Milano · Repubblica | 74 | 57 | 6.483–8.204–9.502 | 27.0 | 3.9% | 77 | 1% | 1% | -2.497 € |
 | Milano · Ripamonti - Fondazione Prada | 238 | 0 | 4.778–5.485–6.564 | — | — | — | 3% | 21% | 300 € |
 | Milano · Roserio | 56 | 0 | 2.177–2.362–2.666 | — | — | — | 4% | 2% | -830 € |
 | Milano · Rovereto | 129 | 0 | 4.359–4.761–5.229 | — | — | — | 2% | 2% | -748 € |
@@ -255,26 +256,26 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Milano · San Babila | 27 | 35 | 12.045–14.194–16.467 | 37.5 | 3.2% | 130 | 0% | 0% | — |
 | Milano · San Carlo | 77 | 0 | 3.109–3.471–4.037 | — | — | — | 4% | 10% | -733 € |
 | Milano · San Siro | 490 | 0 | 4.144–4.736–5.623 | — | — | — | 3% | 9% | -60 € |
-| Milano · San Vittore | 37 | 12 | 8.989–10.235–11.917 | 24.0 | 2.8% | 32 | 0% | 27% | 1.043 € |
+| Milano · San Vittore | 37 | 85 | 8.989–10.235–11.917 | 27.4 | 3.2% | 230 | 0% | 27% | 1.043 € |
 | Milano · Sant'Ambrogio | 40 | 49 | 8.670–10.424–11.984 | 33.3 | 3.8% | 123 | 0% | 12% | — |
 | Milano · Santa Giulia | 103 | 0 | 3.165–3.960–4.772 | — | — | — | 8% | 1% | 378 € |
 | Milano · Scala - Manzoni | 6 | 24 | 6.938–10.149–15.976 | 45.8 | 5.4% | 400 | 0% | 0% | — |
 | Milano · Sempione | 275 | 0 | 6.326–7.124–7.986 | — | — | — | 2% | 11% | 43 € |
-| Milano · Solari | 57 | 4 | 5.533–6.129–7.308 | — | — | — | 2% | 5% | -204 € |
+| Milano · Solari | 57 | 20 | 5.533–6.129–7.308 | 22.6 | 4.4% | 35 | 2% | 5% | -204 € |
 | Milano · Ticinese | 25 | 147 | 7.784–8.558–9.375 | 26.4 | 3.7% | 588 | 8% | 24% | — |
 | Milano · Tre Castelli - Faenza | 204 | 0 | 3.584–4.063–4.619 | — | — | — | 2% | 4% | 77 € |
 | Milano · Trenno | 23 | 0 | 3.339–3.917–4.506 | — | — | — | 4% | 9% | — |
 | Milano · Tripoli - Soderini | 85 | 0 | 5.100–5.636–6.333 | — | — | — | 2% | 7% | 85 € |
-| Milano · Turati | 49 | 7 | 10.000–12.647–16.435 | 41.7 | 4.0% | 14 | 2% | 6% | -1.665 € |
+| Milano · Turati | 49 | 84 | 10.000–12.647–16.435 | 38.1 | 3.6% | 171 | 2% | 6% | -1.665 € |
 | Milano · Turro | 165 | 0 | 3.875–4.609–5.286 | — | — | — | 5% | 11% | -369 € |
 | Milano · Udine | 97 | 0 | 4.083–4.462–5.098 | — | — | — | 2% | 10% | -483 € |
 | Milano · Uptown - Mind - Cascina Merlata | 84 | 0 | 4.534–4.951–5.662 | — | — | — | 6% | 52% | — |
-| Milano · Vercelli - Wagner | 118 | 0 | 7.550–8.563–9.653 | — | — | — | 1% | 13% | 256 € |
+| Milano · Vercelli - Wagner | 118 | 5 | 7.550–8.563–9.653 | 31.7 | 4.4% | 4 | 1% | 13% | 256 € |
 | Milano · Vialba | 96 | 0 | 2.496–2.818–3.254 | — | — | — | 5% | 7% | -241 € |
-| Milano · Viale Ungheria - Mecenate | 210 | 0 | 3.400–3.913–4.834 | — | — | — | 5% | 18% | -183 € |
+| Milano · Viale Ungheria - Mecenate | 210 | 54 | 3.400–3.913–4.834 | 16.8 | 5.2% | 26 | 5% | 18% | -183 € |
 | Milano · Vigentino - Fatima | 227 | 0 | 3.899–4.350–4.971 | — | — | — | 5% | 16% | -334 € |
 | Milano · Villa San Giovanni | 133 | 0 | 4.048–4.843–5.500 | — | — | — | 2% | 43% | -153 € |
-| Milano · Vincenzo Monti | 74 | 4 | 10.285–11.427–13.244 | — | — | — | 0% | 12% | -45 € |
+| Milano · Vincenzo Monti | 74 | 109 | 10.285–11.427–13.244 | 28.9 | 3.0% | 147 | 0% | 12% | -45 € |
 | Milano · Washington | 144 | 0 | 5.977–6.885–8.201 | — | — | — | 3% | 12% | -817 € |
 | Milano · Zara | 52 | 0 | 4.852–5.639–6.476 | — | — | — | 2% | 4% | -864 € |
 | Abbiategrasso | 448 | 0 | 1.662–2.017–2.402 | — | — | — | 2% | 16% | -97 € |

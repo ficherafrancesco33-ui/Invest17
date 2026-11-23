@@ -450,7 +450,8 @@
    "path": "/affitto-case/milano/cadorna-castello/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Turati",
@@ -458,7 +459,8 @@
    "path": "/affitto-case/milano/turati/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Morgagni",
@@ -466,7 +468,8 @@
    "path": "/affitto-case/milano/morgagni/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Lanza",
@@ -474,7 +477,8 @@
    "path": "/affitto-case/milano/lanza/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Repubblica",
@@ -482,7 +486,8 @@
    "path": "/affitto-case/milano/repubblica/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:San Vittore",
@@ -490,7 +495,8 @@
    "path": "/affitto-case/milano/san-vittore/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Viale Ungheria - Mecenate",
@@ -498,7 +504,8 @@
    "path": "/affitto-case/milano/viale-ungheria-mecenate/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Porta Nuova",
@@ -506,7 +513,8 @@
    "path": "/affitto-case/milano/porta-nuova/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Vincenzo Monti",
@@ -514,7 +522,8 @@
    "path": "/affitto-case/milano/vincenzo-monti/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Moscova",
@@ -522,7 +531,8 @@
    "path": "/affitto-case/milano/moscova/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Buenos Aires",
@@ -530,7 +540,8 @@
    "path": "/affitto-case/milano/buenos-aires/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quartiere Forlanini",
@@ -538,7 +549,8 @@
    "path": "/affitto-case/milano/quartiere-forlanini/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Città Studi",
@@ -546,7 +558,8 @@
    "path": "/affitto-case/milano/citta-studi/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Navigli - Darsena",
@@ -554,7 +567,8 @@
    "path": "/affitto-case/milano/navigli-darsena/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Dezza",
