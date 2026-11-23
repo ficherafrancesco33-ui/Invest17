@@ -2014,6 +2014,406 @@
    "stato": "fatto",
    "data": "2026-11-23",
    "letti": 0
+  },
+  {
+   "n": "A:C:nerviano",
+   "nome": "Nerviano",
+   "path": "/affitto-case/nerviano/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:lainate",
+   "nome": "Lainate",
+   "path": "/affitto-case/lainate/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pogliano-milanese",
+   "nome": "Pogliano Milanese",
+   "path": "/affitto-case/pogliano-milanese/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pregnana-milanese",
+   "nome": "Pregnana Milanese",
+   "path": "/affitto-case/pregnana-milanese/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vanzago",
+   "nome": "Vanzago",
+   "path": "/affitto-case/vanzago/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:arluno",
+   "nome": "Arluno",
+   "path": "/affitto-case/arluno/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:melzo",
+   "nome": "Melzo",
+   "path": "/affitto-case/melzo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:pozzo-d-adda",
+   "nome": "Pozzo d'Adda",
+   "path": "/affitto-case/pozzo-d-adda/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:trezzo-sull-adda",
+   "nome": "Trezzo sull'Adda",
+   "path": "/affitto-case/trezzo-sull-adda/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:inzago",
+   "nome": "Inzago",
+   "path": "/affitto-case/inzago/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cassano-d-adda",
+   "nome": "Cassano d'Adda",
+   "path": "/affitto-case/cassano-d-adda/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:truccazzano",
+   "nome": "Truccazzano",
+   "path": "/affitto-case/truccazzano/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:liscate",
+   "nome": "Liscate",
+   "path": "/affitto-case/liscate/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:san-zenone-al-lambro",
+   "nome": "San Zenone al Lambro",
+   "path": "/affitto-case/san-zenone-al-lambro/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cesano-maderno",
+   "nome": "Cesano Maderno",
+   "path": "/affitto-case/cesano-maderno/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:solaro",
+   "nome": "Solaro",
+   "path": "/affitto-case/solaro/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:canegrate",
+   "nome": "Canegrate",
+   "path": "/affitto-case/canegrate/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:san-vittore-olona",
+   "nome": "San Vittore Olona",
+   "path": "/affitto-case/san-vittore-olona/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cerro-maggiore",
+   "nome": "Cerro Maggiore",
+   "path": "/affitto-case/cerro-maggiore/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:rescaldina",
+   "nome": "Rescaldina",
+   "path": "/affitto-case/rescaldina/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:busto-garolfo",
+   "nome": "Busto Garolfo",
+   "path": "/affitto-case/busto-garolfo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:castano-primo",
+   "nome": "Castano Primo",
+   "path": "/affitto-case/castano-primo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:cuggiono",
+   "nome": "Cuggiono",
+   "path": "/affitto-case/cuggiono/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:robecco-sul-naviglio",
+   "nome": "Robecco sul Naviglio",
+   "path": "/affitto-case/robecco-sul-naviglio/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:motta-visconti",
+   "nome": "Motta Visconti",
+   "path": "/affitto-case/motta-visconti/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:besate",
+   "nome": "Besate",
+   "path": "/affitto-case/besate/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:casorate-primo",
+   "nome": "Casorate Primo",
+   "path": "/affitto-case/casorate-primo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:monza",
+   "nome": "Monza",
+   "path": "/affitto-case/monza/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:brugherio",
+   "nome": "Brugherio",
+   "path": "/affitto-case/brugherio/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:lissone",
+   "nome": "Lissone",
+   "path": "/affitto-case/lissone/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:desio",
+   "nome": "Desio",
+   "path": "/affitto-case/desio/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:seregno",
+   "nome": "Seregno",
+   "path": "/affitto-case/seregno/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:muggio",
+   "nome": "Muggiò",
+   "path": "/affitto-case/muggio/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:nova-milanese",
+   "nome": "Nova Milanese",
+   "path": "/affitto-case/nova-milanese/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:varedo",
+   "nome": "Varedo",
+   "path": "/affitto-case/varedo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:vimercate",
+   "nome": "Vimercate",
+   "path": "/affitto-case/vimercate/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:agrate-brianza",
+   "nome": "Agrate Brianza",
+   "path": "/affitto-case/agrate-brianza/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:concorezzo",
+   "nome": "Concorezzo",
+   "path": "/affitto-case/concorezzo/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:arcore",
+   "nome": "Arcore",
+   "path": "/affitto-case/arcore/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:villasanta",
+   "nome": "Villasanta",
+   "path": "/affitto-case/villasanta/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:biassono",
+   "nome": "Biassono",
+   "path": "/affitto-case/biassono/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:macherio",
+   "nome": "Macherio",
+   "path": "/affitto-case/macherio/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:sovico",
+   "nome": "Sovico",
+   "path": "/affitto-case/sovico/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:giussano",
+   "nome": "Giussano",
+   "path": "/affitto-case/giussano/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:carate-brianza",
+   "nome": "Carate Brianza",
+   "path": "/affitto-case/carate-brianza/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:meda",
+   "nome": "Meda",
+   "path": "/affitto-case/meda/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:seveso",
+   "nome": "Seveso",
+   "path": "/affitto-case/seveso/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:bovisiomasciago",
+   "nome": "Bovisio-Masciago",
+   "path": "/affitto-case/bovisiomasciago/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:lentate-sul-seveso",
+   "nome": "Lentate sul Seveso",
+   "path": "/affitto-case/lentate-sul-seveso/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
+  },
+  {
+   "n": "A:C:besana-in-brianza",
+   "nome": "Besana in Brianza",
+   "path": "/affitto-case/besana-in-brianza/",
+   "tipo": "comune",
+   "gruppo": "provincia",
+   "stato": "da"
   }
  ]
 }
