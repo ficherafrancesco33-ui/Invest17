@@ -693,7 +693,8 @@
    "path": "/affitto-case/milano/washington/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Barona",
@@ -701,7 +702,8 @@
    "path": "/affitto-case/milano/barona/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Famagosta",
@@ -709,7 +711,8 @@
    "path": "/affitto-case/milano/famagosta/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Isola",
@@ -717,7 +720,8 @@
    "path": "/affitto-case/milano/isola/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Lambrate",
@@ -725,7 +729,8 @@
    "path": "/affitto-case/milano/lambrate/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Pasteur",
@@ -733,7 +738,8 @@
    "path": "/affitto-case/milano/pasteur/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Cantalupa - San Paolo",
@@ -741,7 +747,8 @@
    "path": "/affitto-case/milano/cantalupa-san-paolo/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Rubattino",
@@ -749,7 +756,8 @@
    "path": "/affitto-case/milano/rubattino/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Casoretto",
@@ -757,7 +765,8 @@
    "path": "/affitto-case/milano/casoretto/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Frua",
@@ -765,7 +774,8 @@
    "path": "/affitto-case/milano/frua/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Tripoli - Soderini",
@@ -773,7 +783,8 @@
    "path": "/affitto-case/milano/tripoli-soderini/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:City Life",
@@ -781,7 +792,8 @@
    "path": "/affitto-case/milano/city-life/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:De Angeli",
@@ -789,7 +801,8 @@
    "path": "/affitto-case/milano/de-angeli/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Zara",
@@ -797,7 +810,8 @@
    "path": "/affitto-case/milano/zara/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Amendola - Buonarroti",
@@ -805,7 +819,8 @@
    "path": "/affitto-case/milano/amendola-buonarroti/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Cascina dei Pomi",
@@ -813,7 +828,8 @@
    "path": "/affitto-case/milano/cascina-dei-pomi/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Milano",
@@ -829,7 +845,8 @@
    "path": "/affitto-case/milano/parco-trotter/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Ponte Lambro",
@@ -837,7 +854,8 @@
    "path": "/affitto-case/milano/ponte-lambro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Sempione",
@@ -845,7 +863,8 @@
    "path": "/affitto-case/milano/sempione/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Maggiolina",
