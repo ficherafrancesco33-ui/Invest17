@@ -12,7 +12,7 @@ for f in glob.glob('/tmp/kx/lotto*.json'):
 p='tools/terr/coda_milano.json'; d=json.load(open(p)); n=0
 for c in d['coda']:
     slug='C:'+c['path'].strip('/').split('/')[-1]
-    if c['stato']!='fatto' and (c['n'] in Z or slug in Z): c['stato']='fatto'; c['data']='2026-11-22'; n+=1
+    if c['stato']!='fatto' and (c['n'] in Z or slug in Z): c['stato']='fatto'; c['data']='$(date +%F)'; n+=1
 json.dump(d,open(p,'w'),ensure_ascii=False,indent=1)
 print('zone segnate',n,'restano',sum(c['stato']!='fatto' for c in d['coda']))
 PY
