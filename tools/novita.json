@@ -377,6 +377,14 @@
    "priv": [],
    "scartati": 32,
    "nota": "Avviso email di Immobiliare delle 6:01: letti tutti i 43 annunci dalla ricerca salvata (75 senza aste), 2 tenuti (Boario Terme e Seriate); più la ricerca di Claude in tutto il Nord"
+  },
+  {
+   "data": "2026-11-23",
+   "inv": [],
+   "mil": [],
+   "priv": [],
+   "scartati": 10,
+   "nota": "Mac spento: 10 aste dell'email scartate, 33 annunci della ricerca da leggere al prossimo giro"
   }
  ],
  "dal": {
@@ -758,7 +766,8 @@
  },
  "email": [
   "1a1fc7b48ec68fb3",
-  "1a201a1a85365a7b"
+  "1a201a1a85365a7b",
+  "1a206c845a9e4a6c"
  ],
  "pendenti": [
   {
@@ -784,6 +793,30 @@
    "link": "https://clicks.immobiliare.it/f/a/u2NZ1O8FDGgb8-Grd9B12g~~/AAAHahA~/lbriHWUGXnMrGfOh_pWxvMpii-S26Sg5WaXguItjLPfQbrchWy8LLVjE7d7xtojektHa9PTtSH0J-eOZbBUvfqapBFcauD9_4TVzqyX8VsF5gkgx28UUxLfyK4AQ8XEolbaBV4wjdOvXYwwjMu4J3892yKt0LnQjkdr44wgXy0Mi8uR4GIXnvGYgZVnCnsumGOMZI3YQTSabZxi_PG-903jwE9IeyD3nsBDg5re4Q-zL-h0miEig39Qnu4SiP2-R",
    "email": "1a201a1a85365a7b",
    "motivo": "captcha Immobiliare, scheda non aperta"
+  },
+  {
+   "titolo": "Ricerca salvata \"Immobili in vendita nell'area disegnata\" (33 nuovi annunci, avviso del 23/11/2026)",
+   "link": "https://clicks.immobiliare.it/f/a/NSnLEkWJw1iMmo7asiekng~~/AAAHahA~/MJusJIbU32JoEX4BjpVgQtk4ACm0PAV7IrqcdGpAD2ePOfKm0_tGXnIl3xwzLn5X5oI1Hbpy8h3UEqYrDIXJ2gqZ8oesqUwFujO1vSDbxAACYmMDZeb7TrOeiVVDaGHgmsMmxGJe1G7iumASwRT8i6P3HvNTLsobHGKuIc0fr58WcYHzXBYJcAsBxPOhlGylexZb6H7f-7yKZ1VqA_j6pGBodVqfm7Wezf9k9niC8PFY3kPPfW6qyPH2vWTxHeVB7UMg2_VCQ9SU16WGpm-YA9x6QzEVhU_5_aW2PlEcbg0ZvY_nuJ5iCtyB6A2mmlj9POBGuo80cfd-O2aIF754FPrmfWSZ8ti2IYFBaCCiH8NF3uHQgtXhWLL1-0vMb9bylT4_OYosvQ0F8IKhmjEI41XqGBWuauTYmtuvTtG1F-MgtokR2jKu1YQppm748LZ1xEIoYUGY7FVIAUbCovdwIyd3GtcwgjVG6KpYK9_fsVju5Zti6ZQmRNkN60j03U2yJ75f9r2PvmG7Lz7_HxUp8WOl92qEwO9s9-AuoVbJcUH-BdXcrwE-BsS1-gYBFeUWn6zHPy2B51yJSW_kKSdl2p8DwHCrNiJfHG5ahZuvdU9w6RTl0UzJ7FXkw47hfhK1mBfFSot43lHJviDBUT7XjcgdsX_WzVe_BckHtL4jD1F1ieUqwQoSQfISJqgfVee3_IGE6ToLjTUNYFBwzhKSWhP8d3yHNMTwV5I-PC4ev56M-UzU0sBJXuEDXiEp5pMBP5PCA5N-W4xbJLtpcNP40A~~",
+   "email": "1a206c845a9e4a6c",
+   "motivo": "Chrome sul Mac non raggiungibile: Avvia ricerca da aprire al prossimo giro"
+  },
+  {
+   "titolo": "Bilocale buono stato, piano terra, Cameri",
+   "prezzo": 40000,
+   "mq": 60,
+   "locali": 2,
+   "link": "https://clicks.immobiliare.it/f/a/qzFxFWobhrbokxnyAtZjyg~~/AAAHahA~/ZFgG-6WBqr_zHaMSkDj-VpGoib1R9yOazw5KaIiqVtfcu4BCGf2nUedVWDemMXBNws_GUoXLcWyzIhWt-Rrb21JWgWOFYZW0jX7Nqy7S0pkxtpUdIXdmsGeMHeIgV810oEyUy2md2d7-4dm-dpmA4gb2p18CFBZIARV_MIyLuzSBzZtzoWhrRZWM8RBA9Zk90-PjmRlUxTeCdPk7gFpVdArazkmk2D6NvCRBx2BWC8ha9t-vqaST6gAYIKlP3e2jV1x39lHUXR6VMW-ZgHJpJQ~~",
+   "email": "1a206c845a9e4a6c",
+   "motivo": "annuncio in evidenza, Chrome non raggiungibile: scheda non aperta"
+  },
+  {
+   "titolo": "Terratetto unifamiliare via Ticino 22, Centro, Stradella, Centro",
+   "prezzo": 55000,
+   "mq": 57,
+   "locali": 2,
+   "link": "https://clicks.immobiliare.it/f/a/C8835l1akfJ52LSPHlIuMA~~/AAAHahA~/ZFgG-6WBqr_zHaMSkDj-VpGoib1R9yOazw5KaIiqVtcJqjejih050ysepo4myN0bscvyWZgCScxUbkrfqGqSgnULwcAYeNZuyqF-Mz3cN6FMxSggQIiHZdN00E8ouiCkmnI-xFu26TTA9EL4pQnwEnGhoJTUZtMVyavikLhBqcEQweukCS_6nmuHL9rjjiPjx-zoKFA3pkl8YYJLNPY-XwLHIcnNFCotpB4QunqS4dad07p1c66uZezMfUw3S4_3dC9mU-9XZY37l3kT1oqPNg~~",
+   "email": "1a206c845a9e4a6c",
+   "motivo": "annuncio in evidenza, Chrome non raggiungibile: scheda non aperta"
   }
  ],
  "visti": [
