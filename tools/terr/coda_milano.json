@@ -1664,7 +1664,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "Brugherio",
@@ -1672,7 +1673,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "Lissone",
@@ -1680,7 +1682,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "Desio",
@@ -1688,7 +1691,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "Seregno",
@@ -1696,7 +1700,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "Muggiò",
