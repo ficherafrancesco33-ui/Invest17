@@ -837,7 +837,10 @@
    "path": "/affitto-case/milano/milano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23",
+   "letti": 0,
+   "nota": "pagina inesistente (404)"
   },
   {
    "n": "A:Parco Trotter",
@@ -1385,7 +1388,8 @@
    "path": "/affitto-case/milano/figino/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Uptown - Mind - Cascina Merlata",
@@ -1393,7 +1397,8 @@
    "path": "/affitto-case/milano/uptown-mind-cascina-merlata/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Muggiano",
@@ -1409,7 +1414,8 @@
    "path": "/affitto-case/sesto-san-giovanni/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:legnano",
@@ -1417,7 +1423,8 @@
    "path": "/affitto-case/legnano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:rho",
@@ -1425,7 +1432,8 @@
    "path": "/affitto-case/rho/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cinisello-balsamo",
@@ -1433,7 +1441,8 @@
    "path": "/affitto-case/cinisello-balsamo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:san-donato-milanese",
@@ -1441,7 +1450,8 @@
    "path": "/affitto-case/san-donato-milanese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:abbiategrasso",
@@ -1449,7 +1459,8 @@
    "path": "/affitto-case/abbiategrasso/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:san-giuliano-milanese",
@@ -1457,7 +1468,8 @@
    "path": "/affitto-case/san-giuliano-milanese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:segrate",
@@ -1465,7 +1477,8 @@
    "path": "/affitto-case/segrate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:parabiago",
@@ -1473,7 +1486,8 @@
    "path": "/affitto-case/parabiago/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:rozzano",
@@ -1481,7 +1495,8 @@
    "path": "/affitto-case/rozzano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:paderno-dugnano",
@@ -1489,7 +1504,8 @@
    "path": "/affitto-case/paderno-dugnano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cologno-monzese",
@@ -1497,7 +1513,8 @@
    "path": "/affitto-case/cologno-monzese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:garbagnate-milanese",
@@ -1505,7 +1522,8 @@
    "path": "/affitto-case/garbagnate-milanese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:pioltello",
@@ -1513,7 +1531,8 @@
    "path": "/affitto-case/pioltello/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:limbiate",
@@ -1521,7 +1540,8 @@
    "path": "/affitto-case/limbiate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:peschiera-borromeo",
@@ -1529,7 +1549,8 @@
    "path": "/affitto-case/peschiera-borromeo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:magenta",
@@ -1537,7 +1558,8 @@
    "path": "/affitto-case/magenta/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:corsico",
@@ -1545,7 +1567,8 @@
    "path": "/affitto-case/corsico/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cernusco-sul-naviglio",
@@ -1553,7 +1576,8 @@
    "path": "/affitto-case/cernusco-sul-naviglio/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:corbetta",
@@ -1561,7 +1585,8 @@
    "path": "/affitto-case/corbetta/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:melegnano",
@@ -1569,7 +1594,8 @@
    "path": "/affitto-case/melegnano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:opera",
@@ -1577,7 +1603,8 @@
    "path": "/affitto-case/opera/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:bollate",
@@ -1585,7 +1612,8 @@
    "path": "/affitto-case/bollate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:trezzano-sul-naviglio",
@@ -1593,7 +1621,8 @@
    "path": "/affitto-case/trezzano-sul-naviglio/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:sedriano",
@@ -1601,7 +1630,8 @@
    "path": "/affitto-case/sedriano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:arese",
@@ -1609,7 +1639,8 @@
    "path": "/affitto-case/arese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:gorgonzola",
@@ -1617,7 +1648,8 @@
    "path": "/affitto-case/gorgonzola/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:pieve-emanuele",
@@ -1625,7 +1657,8 @@
    "path": "/affitto-case/pieve-emanuele/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:buccinasco",
@@ -1633,7 +1666,8 @@
    "path": "/affitto-case/buccinasco/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:novate-milanese",
@@ -1641,7 +1675,8 @@
    "path": "/affitto-case/novate-milanese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cusano-milanino",
@@ -1649,7 +1684,8 @@
    "path": "/affitto-case/cusano-milanino/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:baranzate",
@@ -1657,7 +1693,8 @@
    "path": "/affitto-case/baranzate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:basiglio",
@@ -1665,7 +1702,8 @@
    "path": "/affitto-case/basiglio/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:senago",
@@ -1673,7 +1711,8 @@
    "path": "/affitto-case/senago/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:paullo",
@@ -1681,7 +1720,8 @@
    "path": "/affitto-case/paullo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:bresso",
@@ -1689,7 +1729,8 @@
    "path": "/affitto-case/bresso/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:settimo-milanese",
@@ -1697,7 +1738,8 @@
    "path": "/affitto-case/settimo-milanese/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:assago",
@@ -1705,7 +1747,8 @@
    "path": "/affitto-case/assago/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cassina-de-pecchi",
@@ -1713,7 +1756,8 @@
    "path": "/affitto-case/cassina-de-pecchi/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:vignate",
@@ -1721,7 +1765,8 @@
    "path": "/affitto-case/vignate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cornaredo",
@@ -1729,7 +1774,8 @@
    "path": "/affitto-case/cornaredo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cesano-boscone",
@@ -1737,7 +1783,8 @@
    "path": "/affitto-case/cesano-boscone/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:bareggio",
@@ -1745,7 +1792,8 @@
    "path": "/affitto-case/bareggio/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:siziano",
@@ -1753,7 +1801,8 @@
    "path": "/affitto-case/siziano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cormano",
@@ -1761,7 +1810,8 @@
    "path": "/affitto-case/cormano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:vimodrone",
@@ -1769,7 +1819,8 @@
    "path": "/affitto-case/vimodrone/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:lacchiarella",
@@ -1777,7 +1828,8 @@
    "path": "/affitto-case/lacchiarella/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:mediglia",
@@ -1785,7 +1837,8 @@
    "path": "/affitto-case/mediglia/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:pero",
@@ -1793,7 +1846,8 @@
    "path": "/affitto-case/pero/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:locate-di-triulzi",
@@ -1801,7 +1855,8 @@
    "path": "/affitto-case/locate-di-triulzi/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:carugate",
@@ -1809,7 +1864,8 @@
    "path": "/affitto-case/carugate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:vittuone",
@@ -1817,7 +1873,8 @@
    "path": "/affitto-case/vittuone/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:gaggiano",
@@ -1825,7 +1882,8 @@
    "path": "/affitto-case/gaggiano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:bussero",
@@ -1833,7 +1891,8 @@
    "path": "/affitto-case/bussero/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:binasco",
@@ -1841,7 +1900,8 @@
    "path": "/affitto-case/binasco/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:vermezzo-con-zelo",
@@ -1849,7 +1909,8 @@
    "path": "/affitto-case/vermezzo-con-zelo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:settala",
@@ -1857,7 +1918,8 @@
    "path": "/affitto-case/settala/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:carpiano",
@@ -1873,7 +1935,8 @@
    "path": "/affitto-case/noviglio/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:rosate",
@@ -1881,7 +1944,8 @@
    "path": "/affitto-case/rosate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cusago",
@@ -1889,7 +1953,8 @@
    "path": "/affitto-case/cusago/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:pantigliate",
@@ -1897,7 +1962,8 @@
    "path": "/affitto-case/pantigliate/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:rodano",
@@ -1905,7 +1971,8 @@
    "path": "/affitto-case/rodano/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:zibido-san-giacomo",
@@ -1913,7 +1980,8 @@
    "path": "/affitto-case/zibido-san-giacomo/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:cerro-al-lambro",
@@ -1921,7 +1989,8 @@
    "path": "/affitto-case/cerro-al-lambro/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:casarile",
@@ -1929,7 +1998,8 @@
    "path": "/affitto-case/casarile/",
    "tipo": "comune",
    "gruppo": "hinterland",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:C:vizzolo-predabissi",
