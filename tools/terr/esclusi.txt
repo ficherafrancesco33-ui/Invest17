@@ -1453,3 +1453,65 @@
 134717899;asta
 134718057;asta
 134942767;progetto / nuova costruzione
+66218233;non residenziale
+80080215;non residenziale
+90650351;non residenziale
+99842072;non residenziale
+103093010;non residenziale
+107764523;non residenziale
+112071589;progetto / nuova costruzione
+113877283;non residenziale
+114412769;progetto / nuova costruzione
+116095189;progetto / nuova costruzione
+116814071;non residenziale
+116851403;progetto / nuova costruzione
+119221675;progetto / nuova costruzione
+119781152;non residenziale
+120605920;progetto / nuova costruzione
+121139250;progetto / nuova costruzione
+121309292;non residenziale
+122219628;progetto / nuova costruzione
+122319828;nuda proprietà
+122963520;non residenziale
+123509367;progetto / nuova costruzione
+123520097;progetto / nuova costruzione
+123826003;nuda proprietà
+124220437;progetto / nuova costruzione
+124336663;uso non abitativo
+124497923;progetto / nuova costruzione
+125268319;non residenziale
+125878845;progetto / nuova costruzione
+127520476;progetto / nuova costruzione
+127835086;uso non abitativo
+127966046;asta
+128026328;progetto / nuova costruzione
+128039376;nuda proprietà
+128651910;uso non abitativo
+129211676;non residenziale
+129401356;progetto / nuova costruzione
+129459948;uso non abitativo
+129492578;progetto / nuova costruzione
+129574850;progetto / nuova costruzione
+129912868;non residenziale
+130061792;nuda proprietà
+130169400;non residenziale
+130442110;non residenziale
+130910070;progetto / nuova costruzione
+131161462;uso non abitativo
+131992426;uso non abitativo
+132163838;uso non abitativo
+132175834;non residenziale
+132430708;non residenziale
+132450454;non residenziale
+132464978;non residenziale
+132669318;uso non abitativo
+132730720;non residenziale
+132809688;uso non abitativo
+133017660;progetto / nuova costruzione
+133142278;non residenziale
+133336982;uso non abitativo
+133518002;uso non abitativo
+133735902;non residenziale
+134047433;non residenziale
+134669119;nuda proprietà
+134916775;non residenziale

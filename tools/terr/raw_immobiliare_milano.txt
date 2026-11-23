@@ -36459,3 +36459,1386 @@
 135006239;200000;60;2;1;T;0;B;Bilocale;45.57130;9.26680;Via Gaetano Casati;San Rocco;Monza;0;ba;0|0|0
 135006359;365000;124;3;2;T;0;B;Trilocale;45.65090;9.21160;Via Massimo D' Azeglio;San Rocco - Sanzio;Seregno;0;gjd;0|0|0
 135007201;158000;57;2;1;2;0;O;Bilocale;45.57690;9.25150;Via Pitagora 9;Triante;Monza;0;bcasd;0|0|0
+57159944;109000;48;1;1;T/ 1;0;O;Monolocale;45.64760;9.20210;Via Magenta;Umberto I - Garibaldi;Seregno;0;;0|0|0
+61521928;300000;130;3;1;3;1;B;Appartamento;45.64690;9.20484;Via Amatore Sciesa;Stazione;Seregno;1;ba;0|0|0
+71608856;480000;230;4;3;;0;N;Villa bifamiliare;45.62860;9.38500;via monte nero;Vimercate;Vimercate;0;bt;0|0|0
+73867578;475000;167;4;3;;0;N;Villa unifamiliare;45.65277;9.20001;Via San Vitale;Ospedale;Seregno;1;;0|0|0
+84528980;160000;70;1;1;2;0;B;Mansarda;45.64760;9.20288;Via Magenta;Umberto I - Garibaldi;Seregno;1;b;0|0|0
+90700845;85000;55;2;1;T;0;O;Appartamento;45.59157;9.20959;Via Don Carlo Mezzera;Nova Milanese;Nova Milanese;1;;0|0|0
+92198436;380000;235;5;3;5;1;R;Appartamento;45.64670;9.20450;Via Amatore Sciesa;Stazione;Seregno;0;bc;0|0|0
+93266168;287000;87;3;1;T;0;N;Trilocale;45.61340;9.35530;via Enrico Fermi;Vimercate;Vimercate;0;c;0|0|0
+96101830;650000;410;5+;3+;S/ 2/ 3;1;O;Attico;45.64160;9.20010;Via Livio Colzani;Sant'Ambrogio;Seregno;0;;0|0|0
+96355882;749000;1;4;2;T;0;R;Quadrilocale;45.64700;9.20815;Corso Matteotti;Matteotti;Seregno;0;ba;0|0|0
+97016474;565000;280;5;3;;0;B;Villa bifamiliare;45.62420;9.37150;Via Claudio Monteverdi;Vimercate;Vimercate;0;;0|0|0
+97719724;150000;60;2;1;3;1;O;Bilocale;45.65030;9.21490;Via montello;San Rocco - Sanzio;Seregno;0;ts;0|0|0
+98498784;900000;569;5+;3+;;0;R;Villa unifamiliare;45.60770;9.36830;Via Milano;Vimercate;Vimercate;0;b;0|0|0
+100542084;380000;155;4;2;2;1;N;Attico;45.58710;9.20510;Via Croce Rossa Italiana;Nova Milanese;Nova Milanese;0;bt;0|0|0
+102642592;275000;86;3;1;S/ T;0;N;Trilocale;45.61080;9.34770;Via del Salaino;Vimercate;Vimercate;0;cjd;0|0|0
+102883718;239000;133;3;2;T;1;B;Trilocale;45.57560;9.22816;piazza Don Giovanni Minzoni;Muggiò;Muggiò;0;c;0|0|0
+103083176;179000;179;4;1;;0;B;Terratetto unifamiliare;45.64640;9.20014;Via Trieste , 15;Sant'Ambrogio;Seregno;0;bc;0|0|0
+103112340;650000;250;5+;3+;;0;O;Villa bifamiliare;45.61370;9.35840;Via Enrico Fermi;Vimercate;Vimercate;0;;0|0|0
+103385298;299000;160;4;2;;0;B;Villa a schiera;45.59160;9.32880;Via Don Giovanni Bosco;Concorezzo;Concorezzo;0;btcjd;0|0|0
+103418592;273000;81;2;1;S/ T;0;N;Bilocale;45.61080;9.34770;Via del Salaino;Vimercate;Vimercate;0;cj;0|0|0
+103843695;267783;102;3;1;T;1;N;Trilocale;45.60110;9.15480;Via Santa Cecilia;Varedo;Varedo;0;cd;0|0|0
+103868397;190000;91;3;2;S/ 1;1;O;Trilocale;45.62330;9.38540;Via Armando Diaz;Vimercate;Vimercate;0;bt;0|0|0
+104850985;480000;248;4;2;;1;N;Villa bifamiliare;45.62870;9.38490;Via Monte Nero;Vimercate;Vimercate;0;b;0|0|0
+107614027;475000;236;5+;3+;6;1;B;Attico;45.64670;9.20450;Via Amatore Sciesa;Stazione;Seregno;0;t;0|0|0
+107919423;278000;135;4;2;R;1;O;Quadrilocale;45.64230;9.20130;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;bcd;0|0|0
+109666451;305000;111;3;2;;0;O;Terratetto unifamiliare;45.61720;9.35510;Via della Madonna;Vimercate;Vimercate;0;bci;0|0|0
+110267439;185000;102;3;2;1;1;B;Trilocale;45.63520;9.35330;Via Tolmino;Vimercate;Vimercate;0;b;0|0|0
+110356099;360000;130;4;3;;0;O;Terratetto unifamiliare;45.61720;9.35490;Via della Madonna;Vimercate;Vimercate;0;cd;0|0|0
+110405179;119000;79;2;1;T/ 1;0;B;Bilocale;45.62790;9.38710;Via Indipendenza;Vimercate;Vimercate;0;cad;0|0|0
+110839001;374000;131;3;2;1;1;O;Trilocale;45.60940;9.36830;Piazza del Linificio;Vimercate;Vimercate;0;bt;0|0|0
+110844145;225000;85;3;1;1;0;O;Trilocale;45.61720;9.35490;Via della Madonna;Vimercate;Vimercate;0;cd;0|0|0
+110900907;253000;120;4;2;1;1;B;Quadrilocale;45.59380;9.33810;Via Libertà;Concorezzo;Concorezzo;0;btai;0|0|0
+111711935;215000;115;4;1;3;0;O;Quadrilocale;45.62370;9.38490;Via Armando Diaz;Vimercate;Vimercate;0;bcd;0|0|0
+111731981;595000;270;5+;3;;0;O;Villa bifamiliare;45.61200;9.34950;Via Louis Pasteur;Vimercate;Vimercate;0;bcd;0|0|0
+112047575;399000;230;4;2;;0;R;Villa unifamiliare;45.61450;9.36700;Via Gaetano De Castillia;Vimercate;Vimercate;0;bcgj;0|0|0
+112177607;175000;81;3;1;2;1;O;Trilocale;45.57920;9.35170;Via Giuseppe Mazzini;Agrate Brianza;Agrate Brianza;0;bcag;0|0|0
+112233247;265000;100;3;2;1;1;N;Trilocale;45.59450;9.34640;Via Adda, 44;Concorezzo;Concorezzo;0;bt;0|0|0
+112318105;339000;175;5;2;S/ T/ 1;1;B;Appartamento;45.61330;9.35810;Via Enrico Fermi;Vimercate;Vimercate;0;btj;0|0|0
+112356955;240000;143;4;2;2;0;B;Quadrilocale;45.65340;9.19610;Via Santa Valeria;Santa Valeria;Seregno;0;bt;0|0|0
+112432259;215000;80;3;1;3;1;O;Trilocale;45.64850;9.20840;Corso Giacomo Matteotti;Matteotti;Seregno;0;bg;0|0|0
+112890985;95000;129;2;1;2;0;N;Mansarda;45.59720;9.14640;Via Gorizia;Varedo;Varedo;0;td;0|0|0
+112916149;730000;294;5+;3+;T/ 1/ 2/ 3;1;N;Appartamento;45.57550;9.35360;Via Gian Matteo Ferrario, 11;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+112951079;307000;114;3;2;T/ 1;0;N;Trilocale;45.57550;9.35360;Via Gian Matteo Ferrario, 11;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+113702829;163000;151;3;1;;0;B;Terratetto plurifamiliare;45.63490;9.19390;Via Borromeo;San Carlo;Seregno;0;bc;0|0|0
+113713813;360000;130;4;2;2;0;N;Quadrilocale;45.64150;9.21780;Via Toscanini;San Giuseppe;Seregno;0;bc;0|0|0
+113743393;534000;185;4;3;;0;N;Villa unifamiliare;45.57740;9.37290;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;tj;0|0|0
+113748789;442000;151;4;2;;0;N;Villa unifamiliare;45.57740;9.37290;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+113791365;339000;120;3;2;;0;N;Villa bifamiliare;45.64580;9.19856;Via TRENTO;Sant'Ambrogio;Seregno;0;;0|0|0
+113840893;1400000;466;5;3+;;1;N;Villa unifamiliare;45.57740;9.37290;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;btj;0|0|0
+114047273;210000;114;4;2;S/ T;1;O;Quadrilocale;45.63570;9.19690;Via Federico Borromeo;San Carlo;Seregno;0;btcd;0|0|0
+114295999;499000;355;4;3;;0;B;Villa unifamiliare;45.64180;9.21537;Via Bergamo;Lazzaretto;Seregno;0;btca;0|0|0
+114578963;149000;131;;;T;0;;Appartamento;45.56920;9.34414;Via Griringhella  7/154;Agrate Brianza;Agrate Brianza;0;;0|0|0
+114873509;78000;26;1;1;5;1;B;Monolocale;45.59230;9.20930;Via Don Carlo Mezzera;Nova Milanese;Nova Milanese;0;bc;0|0|0
+114968559;274000;89;2;1;T;0;N;Bilocale;45.61080;9.34770;Via del Salaino;Vimercate;Vimercate;0;cd;0|0|0
+114968825;352000;103;3;2;1 - 2;0;N;Trilocale;45.60770;9.34730;Via del Salaino;Vimercate;Vimercate;0;btd;0|0|0
+114968861;398000;105;3;2;1 - 2;0;N;Trilocale;45.60770;9.34730;Via del Salaino;Vimercate;Vimercate;0;btcd;0|0|0
+114968887;287000;100;3;1;T;0;N;Trilocale;45.60770;9.34730;Via del Salaino;Vimercate;Vimercate;0;cjd;0|0|0
+115061295;299800;83;2;1;1;1;N;Bilocale;45.61140;9.35920;Via Trieste;Vimercate;Vimercate;0;b;0|0|0
+115110683;370000;215;5;3;;0;B;Villa a schiera;45.63220;9.35060;Via Giuseppe Ungaretti;Vimercate;Vimercate;0;b;0|0|0
+115245085;259800;72;2;1;1;1;N;Bilocale;45.61130;9.35900;Via Alexander Fleming;Vimercate;Vimercate;0;bt;0|0|0
+115246331;373850;98;3;1;2;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;bt;0|0|0
+115315231;259000;164;4;2;S/ 1/ 2;1;B;Quadrilocale;45.61630;9.35530;Via Vallicella;Vimercate;Vimercate;0;ba;0|0|0
+115345117;274000;115;3;1;1;0;O;Trilocale;45.58720;9.21190;Via Giuseppe Parini;Nova Milanese;Nova Milanese;0;bad;0|0|0
+115419051;398000;244;5+;2;;0;B;Villa unifamiliare;45.61830;9.37460;Via Francesco Valcamonica;Vimercate;Vimercate;0;btcd;0|0|0
+115605145;179000;94;3;2;;0;O;Terratetto plurifamiliare;45.58990;9.35690;Via Lambro;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+116065829;99000;44;2;1;1;0;R;Bilocale;45.62790;9.38710;Via Indipendenza;Vimercate;Vimercate;0;i;0|0|0
+116096393;218000;94;3;1;2;0;B;Trilocale;45.65520;9.19170;via Nino Bixio;Santa Valeria;Seregno;0;b;0|0|0
+116133225;351000;121;4;2;S/ 1;1;N;Quadrilocale;45.58850;9.19410;Via 20 Settembre;Nova Milanese;Nova Milanese;0;btg;0|0|0
+116282187;638000;130;5;2;3;1;N;Attico;45.61550;9.36330;Via Alessandro Manzoni;Vimercate;Vimercate;0;t;0|0|0
+116378607;316480;102;3;1;T;1;N;Trilocale;45.61040;9.36660;Piazza Donatori di Sangue;Vimercate;Vimercate;0;bt;0|0|0
+116400583;429000;132;4;2;1;1;N;Quadrilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+116400589;436000;134;3;2;1;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+116400619;364000;112;3;2;1;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;btc;0|0|0
+116464803;595000;163;4;2;T;1;N;Quadrilocale;45.61490;9.37760;Via dei Mille;Vimercate;Vimercate;0;cji;0|0|0
+116469157;180000;65;2;1;T;0;O;Appartamento;45.65039;9.20739;Vicolo Orti;Matteotti;Seregno;1;;0|0|0
+116886663;179000;45;2;1;1;1;O;Bilocale;45.65120;9.22320;Via Montorfano;Quattro Strade;Seregno;0;bt;0|0|0
+116903699;89000;33;1;1;1;0;B;Monolocale;45.61100;9.38060;Via Moriano 10;Vimercate;Vimercate;0;;0|0|0
+117036779;209000;85;2;1;2;1;N;Appartamento;45.64869;9.21889;Via Monte Nero;Montello - San Salvatore;Seregno;1;b;0|0|0
+117598351;280000;244;5+;2;T/ 1;0;B;Appartamento;45.59210;9.33960;Via Edmondo de Amicis;Concorezzo;Concorezzo;0;bcd;0|0|0
+117983971;260000;122;4;2;7;1;B;Quadrilocale;45.65220;9.19430;Viale Santuario;Santa Valeria;Seregno;0;bc;0|0|0
+118078129;590000;300;5;3;;0;O;Villa bifamiliare;45.64910;9.20940;Via Michelangelo Buonarroti;San Rocco - Sanzio;Seregno;0;ti;0|0|0
+118137157;260000;130;3;2;7;1;B;Trilocale;45.65240;9.19380;Viale Santuario;Santa Valeria;Seregno;0;bc;0|0|0
+118151447;150000;115;3;1;1;0;B;Trilocale;45.64170;9.21610;Via cilea 2;Lazzaretto;Seregno;0;bi;0|0|0
+118179737;269000;166;;2;T;0;B;Appartamento;45.62890;9.38710;Via Villanova 14;Vimercate;Vimercate;0;bjd;0|0|0
+118314111;379000;260;4;2;;0;B;Villa unifamiliare;45.59630;9.15530;Via Pietro Volpi;Varedo;Varedo;0;tcd;0|0|0
+118405479;498000;176;4;3+;;0;O;Villa unifamiliare;45.59820;9.22340;Via Libertà;Muggiò;Muggiò;0;ji;0|0|0
+118685275;315000;223;4;1;T/ R;0;B;Quadrilocale;45.64690;9.19870;Via Marsala;Sant'Ambrogio;Seregno;0;bjd;0|0|0
+118721871;265000;190;5;1;T/ 1/ 2;0;B;Appartamento;45.64720;9.19840;Via Calatafimi;Sant'Ambrogio;Seregno;0;bd;0|0|0
+118871475;254000;113;4;2;S/ 1;1;B;Quadrilocale;45.61840;9.37720;Via Luciano Manara;Vimercate;Vimercate;0;bi;0|0|0
+118922967;259000;94;3;2;1 - 2;0;N;Trilocale;45.65070;9.20760;Vicolo Orti;Matteotti;Seregno;0;d;0|0|0
+118956657;390000;130;3;2;T;0;N;Trilocale;45.64930;9.21257;Via San Benedetto;San Rocco - Sanzio;Seregno;0;;0|0|0
+118994019;498000;167;5;3;;0;N;Villa unifamiliare;45.59540;9.37090;Via Adamello;Vimercate;Vimercate;0;;0|0|0
+118996039;645000;213;5;3;;0;N;Villa unifamiliare;45.59540;9.37090;Via Adamello;Vimercate;Vimercate;0;t;0|0|0
+119247531;383000;127;3;2;T;1;N;Trilocale;45.57230;9.34840;Via San Domenico Savio;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+119327339;59000;66;2;;T;0;R;Bilocale;45.59170;9.21700;Via Italia;Muggiò;Muggiò;0;d;0|0|0
+119330417;375000;145;4;2;;0;B;Villa bifamiliare;45.63200;9.34960;Via V. Pratolini 58;Vimercate;Vimercate;0;bgj;0|0|0
+119371375;750000;450;5+;3+;;0;R;Appartamento;45.59360;9.15680;Via Tintoretto, 2;Varedo;Varedo;0;b;0|0|0
+119424483;400000;122;3;2;1;1;N;Trilocale;45.58770;9.20780;Via Eugenio Montale;Nova Milanese;Nova Milanese;0;b;0|0|0
+119438367;479000;145;4;2;1;1;N;Quadrilocale;45.58770;9.20780;Via Eugenio Montale;Nova Milanese;Nova Milanese;0;b;0|0|0
+119487191;419000;123;4;2;3;1;N;Quadrilocale;45.58780;9.20800;Via Eugenio Montale;Nova Milanese;Nova Milanese;0;b;0|0|0
+119511021;595000;150;3;3;;0;O;Villa unifamiliare;45.65100;9.20031;Via Colombo;Umberto I - Garibaldi;Seregno;0;bca;0|0|0
+119560433;570000;150;3;2;;0;N;Villa bifamiliare;45.64120;9.20040;Via Eschilo;Sant'Ambrogio;Seregno;0;bt;0|0|0
+119601593;475900;143;4;1;1;1;N;Quadrilocale;45.61040;9.36660;Piazza Donatori di Sangue;Vimercate;Vimercate;0;bt;0|0|0
+119619545;122000;60;2;1;3;0;B;Bilocale;45.66530;9.20220;Via VERDI;Porada;Seregno;0;d;0|0|0
+119962648;429000;143;4;2;1;0;N;Quadrilocale;45.59210;9.34100;Via Alessandro Volta;Concorezzo;Concorezzo;0;btcd;0|0|0
+119970362;233000;75;2;1;2;1;N;Bilocale;45.59020;9.20390;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120002846;1980000;900;5+;3+;;1;O;Villa unifamiliare;45.65220;9.20230;Via Silvio Pellico;Umberto I - Garibaldi;Seregno;0;bt;0|0|0
+120005186;1500000;750;5+;3+;T;1;O;Appartamento;45.65200;9.20240;Via Silvio Pellico;Umberto I - Garibaldi;Seregno;0;tc;0|0|0
+120063236;233000;75;2;1;2;1;N;Bilocale;45.59030;9.20410;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120063986;309000;95;3;2;2;1;N;Trilocale;45.59020;9.20390;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120084690;180000;96;3;1;1;1;B;Trilocale;45.61350;9.37393;via Camillo Benso Conte di Cavour;Vimercate;Vimercate;0;bcd;0|0|0
+120172042;430000;132;3;2;1;1;N;Trilocale;45.60060;9.15830;Via Monte Tomba;Varedo;Varedo;0;t;0|0|0
+120210800;420000;175;4;2;2;1;N;Attico;45.58710;9.20480;Via Croce Rossa Italiana;Nova Milanese;Nova Milanese;0;bt;0|0|0
+120475380;165000;92;2;1;5;1;B;Appartamento;45.61348;9.37388;Via Camillo Benso di Cavour;Vimercate;Vimercate;1;;0|0|0
+120488854;590000;300;5;3;;0;O;Villa bifamiliare;45.64790;9.21150;Via Raffaello Sanzio;San Rocco - Sanzio;Seregno;0;;0|0|0
+120536612;309000;95;3;2;2;1;N;Trilocale;45.59040;9.20410;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120557236;503000;150;4;2;5;1;N;Quadrilocale;45.59040;9.20410;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120558318;496000;148;4;2;5;1;N;Quadrilocale;45.59040;9.20410;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120559676;470000;140;4;2;5;1;N;Quadrilocale;45.59040;9.20410;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;b;0|0|0
+120668206;238000;100;1;2;S - T;0;O;Appartamento;45.59639;9.22283;Via Monte Grappa;Muggiò;Muggiò;1;a;0|0|0
+120669238;180000;100;3;1;S/ 2;1;O;Trilocale;45.57800;9.35400;Via Antonio Gramsci;Agrate Brianza;Agrate Brianza;0;bcgi;0|0|0
+120791100;385000;135;4;2;2;1;O;Quadrilocale;45.61700;9.36362;via Rota 14;Vimercate;Vimercate;0;btcd;0|0|0
+120819412;165000;80;3;2;1;0;R;Trilocale;45.57590;9.32990;Via Massimo D'Azeglio;Concorezzo;Concorezzo;0;tc;0|0|0
+120875016;79000;39;1;1;;0;R;Terratetto plurifamiliare;45.57590;9.32990;Via Massimo D'Azeglio;Concorezzo;Concorezzo;0;cd;0|0|0
+120887594;350000;187;4;2;;0;B;Appartamento in villa;45.59060;9.35180;Cascina Baragiola;Concorezzo;Concorezzo;0;ba;0|0|0
+120911212;250000;70;3;1;1;0;O;Trilocale;45.64970;9.20360;Via Medici da Seregno;Umberto I - Garibaldi;Seregno;0;bsd;0|0|0
+120990638;140000;100;2;1;S;0;B;Bilocale;45.59080;9.22730;Viale della Repubblica 28/A;Muggiò;Muggiò;0;ad;0|0|0
+121074532;223000;98;3;2;2;1;B;Trilocale;45.61530;9.35541;via isarco;Vimercate;Vimercate;0;bcg;0|0|0
+121149044;260000;115;3;3;;0;B;Terratetto unifamiliare;45.58590;9.22790;Via Milano;Muggiò;Muggiò;0;cd;0|0|0
+121197244;230000;70;3;1;1;0;O;Trilocale;45.64890;9.20410;Via San Pietro;Umberto I - Garibaldi;Seregno;0;b;0|0|0
+121229774;230000;110;3;2;1;0;O;Trilocale;45.62920;9.36971;via Cascina Castellazzo 1;Vimercate;Vimercate;0;btc;0|0|0
+121230660;285000;136;3;2;;0;B;Appartamento in villa;45.57760;9.22350;Via Gioacchino Rossini;Muggiò;Muggiò;0;btc;0|0|0
+121423304;100000;68;2;1;4;0;B;Bilocale;45.59860;9.14719;Via Carso;Varedo;Varedo;0;bcd;0|0|0
+121457578;430000;150;5;2;S - T;0;O;Appartamento;45.64210;9.19940;Via Livio Colzani;Sant'Ambrogio;Seregno;0;cad;0|0|0
+121513956;349800;111;3;2;1;1;N;Trilocale;45.58390;9.33820;Via Marco Polo;Concorezzo;Concorezzo;0;bt;0|0|0
+121518872;315000;126;2;2;;0;N;Villa a schiera;45.60990;9.37760;Via San Giorgio;Vimercate;Vimercate;0;ji;0|0|0
+121527112;374000;131;3;2;1;1;O;Trilocale;45.60950;9.36880;Piazza del Linificio;Vimercate;Vimercate;0;btc;0|0|0
+121599126;374000;131;3;2;1;1;;Trilocale;45.60950;9.36880;Piazza del Linificio;Vimercate;Vimercate;0;bt;0|0|0
+121620092;312000;112;4;2;1;0;N;Quadrilocale;45.60990;9.37760;Via San Giorgio;Vimercate;Vimercate;0;b;0|0|0
+121650538;370150;134;3;2;;0;N;Villa a schiera;45.60990;9.37760;Via San Giorgio;Vimercate;Vimercate;0;ji;0|0|0
+121653054;1500000;548;5+;3+;;1;O;Villa unifamiliare;45.61860;9.35040;Matteotti;Vimercate;Vimercate;0;i;0|0|0
+121667050;459000;176;4;2;;0;B;Villa bifamiliare;45.63210;9.34980;Via V. Pratolini 33;Vimercate;Vimercate;0;btc;0|0|0
+121819538;255000;80;3;1;1;0;O;Trilocale;45.64910;9.20500;Corso del Popolo;Umberto I - Garibaldi;Seregno;0;bt;0|0|0
+121822114;390000;130;4;2;2;0;N;Quadrilocale;45.64140;9.22080;Via Arturo Toscanini;San Giuseppe;Seregno;0;b;0|0|0
+121822692;365000;186;5+;2;;0;;Villa a schiera;45.61170;9.35130;Via Augusto Murri;Vimercate;Vimercate;0;bt;0|0|0
+121828310;270000;109;3;2;2;1;N;Trilocale;45.60110;9.15475;Via Santa Cecilia;Varedo;Varedo;0;btc;0|0|0
+121916032;285000;109;3;2;S/ T/ 1;0;O;Trilocale;45.61720;9.35490;Via della Madonna;Vimercate;Vimercate;0;bcd;0|0|0
+121918304;190000;100;3;1;1;0;O;Trilocale;45.59510;9.15770;Via Andrea Solari;Varedo;Varedo;0;bcgd;0|0|0
+121973038;316000;118;3;2;3;1;N;Trilocale;45.60110;9.15475;Via Santa Cecilia;Varedo;Varedo;0;btc;0|0|0
+122040988;560000;105;5;3;;0;B;Villa unifamiliare;45.65520;9.22230;Via messina;Quattro Strade;Seregno;0;;0|0|0
+122097930;455000;173;3;1;5;1;B;Attico;45.59060;9.19980;Via Roma;Nova Milanese;Nova Milanese;0;btc;0|0|0
+122156644;158000;87;2;2;T;0;O;Bilocale;45.61740;9.35810;Viale Iginio Rota;Vimercate;Vimercate;0;bd;0|0|0
+122159712;399000;121;3;2;S/ 2;1;O;Attico;45.61060;9.35660;Strada Comunale della Roveda 3;Vimercate;Vimercate;0;btc;0|0|0
+122195084;291030;110;3;2;S/ 11;1;N;Trilocale;45.60480;9.37040;Via Giovanni Falcone e Paolo Borsellino;Vimercate;Vimercate;0;b;0|0|0
+122241400;375000;153;4;2;T;0;O;Quadrilocale;45.59470;9.17770;Via Novati;Varedo;Varedo;0;cj;0|0|0
+122289688;159000;60;2;1;1;0;;Bilocale;45.59320;9.22960;Via Luogo Pio;Muggiò;Muggiò;0;cd;0|0|0
+122315820;298043;115;3;2;S2/ T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+122316704;413375;159;4;2;S2/ 1/ 2;1;N;Quadrilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+122340154;195000;75;2;1;2;1;B;Bilocale;45.65050;9.20110;Via Amerigo Vespucci, 14;Umberto I - Garibaldi;Seregno;0;bca;0|0|0
+122368322;590000;375;5+;3;;0;R;Villa bifamiliare;45.64690;9.19870;Via Marsala;Sant'Ambrogio;Seregno;0;bjd;0|0|0
+122408978;280000;110;3;2;T;1;O;Trilocale;45.64360;9.19430;Via Solferino;Sant'Ambrogio;Seregno;0;tcgjd;0|0|0
+122410380;180000;85;3;1;4;1;B;Trilocale;45.59100;9.33520;Via Monsignor Cavezzali;Concorezzo;Concorezzo;0;bci;0|0|0
+122452134;489000;140;4;2;;0;O;Appartamento in villa;45.59600;9.23900;Via 4 novembre 37;Muggiò;Muggiò;0;t;0|0|0
+122470676;267783;103;3;1;S2/ T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;;0|0|0
+122883878;221000;158;4;1;T/ 2;0;B;Quadrilocale;45.58840;9.23250;Via Luciano Manara;Muggiò;Muggiò;0;bgi;0|0|0
+122886480;419000;140;4;2;R;1;N;Quadrilocale;45.65120;9.20000;Via S. Vitale;Santa Valeria;Seregno;0;bt;0|0|0
+122903206;419000;140;4;2;R;1;N;Quadrilocale;45.65530;9.19930;Via Niccolò Copernico;Santa Valeria;Seregno;0;tc;0|0|0
+122936704;199000;120;3;2;6;1;O;Trilocale;45.59740;9.23860;Via San Francesco D'Assisi 60;Muggiò;Muggiò;0;tgi;0|0|0
+123053715;200000;50;2;1;1;0;R;Bilocale;45.65550;9.21890;Via bernina;Consonno - Bivio;Seregno;0;btc;0|0|0
+123117069;379000;215;5;3;T;0;B;Appartamento;45.59080;9.22740;Viale della Repubblica;Muggiò;Muggiò;0;ba;0|0|0
+123146947;134000;73;2;1;R;1;O;Bilocale;45.61140;9.36028;via Galileo Galilei 2;Vimercate;Vimercate;0;bcd;0|0|0
+123149041;350000;160;3;2;T;1;O;Trilocale;45.57660;9.37660;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+123196827;470000;110;3;2;1;1;N;Trilocale;45.61430;9.37240;PIAZZA CASTELLANA;Vimercate;Vimercate;0;t;0|0|0
+123203645;85000;60;2;1;3;0;B;Bilocale;45.64220;9.19914;Via Livio Colzani;Sant'Ambrogio;Seregno;0;;0|0|0
+123239983;74000;30;1;1;T;0;B;Monolocale;45.65390;9.20815;Via Giacomo Leopardi;Ospedale;Seregno;0;a;0|0|0
+123302271;270000;70;3;1;1;0;O;Trilocale;45.64890;9.20410;Via San Pietro;Umberto I - Garibaldi;Seregno;0;bi;0|0|0
+123304239;435000;178;3;2;;0;N;Villa a schiera;45.57300;9.35370;Via Giacomo Matteotti;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+123315895;395000;160;3;2;3 - 4;1;N;Trilocale;45.59060;9.19980;Via Roma;Nova Milanese;Nova Milanese;0;bt;0|0|0
+123322507;340000;130;4;2;;0;R;Villa unifamiliare;45.59150;9.33870;Via Giosuè Carducci;Concorezzo;Concorezzo;0;c;0|0|0
+123516259;268000;109;3;3;1;0;O;Trilocale;45.57860;9.33910;Via Salvo d'Acquisto;Concorezzo;Concorezzo;0;bci;0|0|0
+123523423;155000;100;2;1;S;0;;Loft;45.59090;9.22750;Viale della Repubblica;Muggiò;Muggiò;0;ai;0|0|0
+123527827;150000;90;3;1;1;0;R;Trilocale;45.64590;9.21514;;Lazzaretto;Seregno;0;b;0|0|0
+123531759;368000;117;3;2;T;1;N;Trilocale;45.58390;9.33820;Via Marco Polo;Concorezzo;Concorezzo;0;c;0|0|0
+123533929;394600;122;3;2;3;1;N;Attico;45.58400;9.33830;Via Marco Polo;Concorezzo;Concorezzo;0;bt;0|0|0
+123537711;480000;201;4;3;;0;N;Villa a schiera;45.62850;9.38560;VIA MONTE NERO  ,19;Vimercate;Vimercate;0;bi;0|0|0
+123625373;120000;55;2;1;1;0;O;Appartamento;45.58798;9.33833;Via Cesare Battisti;Concorezzo;Concorezzo;1;a;0|0|0
+123774203;629000;200;5;3;;0;N;Villa unifamiliare;45.62110;9.37950;Via Fratelli Bandiera;Vimercate;Vimercate;0;tc;0|0|0
+123821527;218000;112;3;1;1;1;B;Trilocale;45.61690;9.36863;via XXV Aprile 10;Vimercate;Vimercate;0;bcd;0|0|0
+123844731;178000;90;3;1;4;1;O;Trilocale;45.58670;9.19350;Via Fabio Filzi;Nova Milanese;Nova Milanese;0;bc;0|0|0
+123900995;139000;70;3;1;;0;B;Terratetto unifamiliare;45.57580;9.35210;Via Giovane Italia;Agrate Brianza;Agrate Brianza;0;bd;0|0|0
+123988829;260000;150;3;2;1;0;B;Trilocale;45.63940;9.19040;via Cassina Savina;San Carlo;Seregno;0;b;0|0|0
+124030309;314000;148;4;3;S/ T;1;O;Quadrilocale;45.66130;9.20330;Via Giuseppe Verdi;Consonno - Bivio;Seregno;0;j;0|0|0
+124049593;700000;750;5;3;;0;O;Terratetto unifamiliare;45.58040;9.32454;Strada Provinciale Milano Imbersago;Concorezzo;Concorezzo;0;tc;0|0|0
+124049907;620000;300;4;1;;0;R;Terratetto unifamiliare;45.65680;9.21850;Via Sondrio;Consonno - Bivio;Seregno;0;btc;0|0|0
+124052741;305000;142;4;3;4 - 5;1;O;Attico;45.59870;9.22620;Via Trieste;Muggiò;Muggiò;0;;0|0|0
+124071787;97000;50;1;1;3;0;O;Mansarda;45.64920;9.20140;Via Paolo Ballerini;Umberto I - Garibaldi;Seregno;0;ad;0|0|0
+124091021;640000;212;5;3;1;1;O;Appartamento;45.62260;9.37243;via Fratelli Cervi  7;Vimercate;Vimercate;0;bt;0|0|0
+124128025;310000;300;4;1;;0;R;Terratetto unifamiliare;45.65680;9.21850;Via Sondrio;Consonno - Bivio;Seregno;0;c;0|0|0
+124162155;480000;104;3;2;T;1;N;Trilocale;45.63940;9.20560;Via Milano;Sant'Ambrogio;Seregno;0;tcj;0|0|0
+124305799;375000;198;5+;3;;0;O;Villa bifamiliare;45.57730;9.37410;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;i;0|0|0
+124313033;295000;123;4;2;1;1;O;Quadrilocale;45.57420;9.22540;Via Fratelli Bandiera;Muggiò;Muggiò;0;t;0|0|0
+124334453;630000;206;4;3;;0;O;Villa unifamiliare;45.59440;9.19183;VIA ISONZO;Nova Milanese;Nova Milanese;0;btji;0|0|0
+124338291;145000;81;3;1;5;1;O;Trilocale;45.57660;9.34450;Via Salvo D'Acquisto;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+124341823;392405;115;3;2;T;1;N;Trilocale;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;i;0|0|0
+124342641;405522;120;3;2;1;1;N;Trilocale;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;b;0|0|0
+124343001;319945;95;3;2;1;1;N;Trilocale;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;b;0|0|0
+124343201;398223;118;3;1;1;1;N;Trilocale;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;t;0|0|0
+124343455;544926;160;5;2;2 - 3;1;N;Appartamento;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;b;0|0|0
+124343733;490098;144;3;2;2 - 3;1;N;Trilocale;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;;0|0|0
+124360253;470000;230;4;3;;0;O;Villa unifamiliare;45.59340;9.22120;Via Leonardo da Vinci;Muggiò;Muggiò;0;b;0|0|0
+124368087;30000;54;1;;;0;R;Rustico;45.58940;9.20250;Via Madonnina 26;Nova Milanese;Nova Milanese;0;i;0|0|0
+124388281;995000;332;5+;3+;;0;B;Villa plurifamiliare;45.57950;9.22340;Via Pietro Mascagni;Muggiò;Muggiò;0;j;0|0|0
+124399651;690000;345;5+;3+;;0;B;Villa bifamiliare;45.59950;9.22240;Via Libertà;Muggiò;Muggiò;0;bt;0|0|0
+124401183;380000;211;5+;3;5;1;R;Appartamento;45.64670;9.20450;Via Amatore Sciesa;Stazione;Seregno;0;bc;0|0|0
+124416639;351000;147;4;2;T/ 1/ 2/ 3;0;N;Quadrilocale;45.57550;9.35360;Via Gian Matteo Ferrario, 11;Agrate Brianza;Agrate Brianza;0;btj;0|0|0
+124417173;220000;139;4;2;1;0;R;Quadrilocale;45.59410;9.20130;Via M. Sironi 5;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+124417175;150000;69;3;1;4;0;O;Trilocale;45.58770;9.19570;Via Andrea Doria 3;Nova Milanese;Nova Milanese;0;ba;0|0|0
+124428503;980000;409;5+;3;;1;O;Villa unifamiliare;45.59450;9.34450;Via Adige;Concorezzo;Concorezzo;0;;0|0|0
+124445687;1300000;320;5+;3+;;0;O;Villa unifamiliare;45.60630;9.37220;Via del Buraghino;Vimercate;Vimercate;0;i;0|0|0
+124505833;799000;417;4;3+;T;0;O;Quadrilocale;45.56840;9.33370;Via de Capitanei;Agrate Brianza;Agrate Brianza;0;i;0|0|0
+124508059;215000;70;3;1;T;0;N;Trilocale;45.65750;9.20410;Via Giuseppe Verdi;Consonno - Bivio;Seregno;0;cd;0|0|0
+124543031;469000;161;4;2;T/ 1;1;N;Quadrilocale;45.59500;9.34230;Via Alessandro Volta;Concorezzo;Concorezzo;0;btcg;0|0|0
+124575747;148000;54;2;1;1;1;O;Bilocale;45.61610;9.37030;Largo Pontida;Vimercate;Vimercate;0;bi;0|0|0
+124575803;115000;37;1;1;1;0;O;Monolocale;45.61380;9.37196;Via Pierino Colombo;Vimercate;Vimercate;0;;0|0|0
+124585183;380000;154;3;2;T;1;N;Trilocale;45.59480;9.33590;Via Gramsci;Concorezzo;Concorezzo;0;c;0|0|0
+124632925;332000;112;3;2;2;1;N;Trilocale;45.58350;9.33930;Via San Pio X;Concorezzo;Concorezzo;0;ti;0|0|0
+124633213;72000;72;3;1;T/ 6;1;B;Trilocale;45.63690;9.20980;Via Virgilio;Stadio;Seregno;0;btc;0|0|0
+124640239;450000;150;4;2;1;1;N;Quadrilocale;45.58350;9.33940;Via San Pio X;Concorezzo;Concorezzo;0;tc;0|0|0
+124711975;237000;99;3;1;2;0;B;Trilocale;45.59250;9.20670;Via MANARA 2;Nova Milanese;Nova Milanese;0;bcagd;0|0|0
+124727717;240000;110;4;2;3;0;B;Quadrilocale;45.58490;9.20040;Via Gaetano Donizetti;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+124766267;267000;102;3;1;T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+124774855;89000;50;2;1;1;0;R;Bilocale;45.60120;9.17738;Via Zara;Varedo;Varedo;0;bc;0|0|0
+124851841;900000;770;5+;3+;;0;B;Villa unifamiliare;45.61880;9.37090;Via Giuseppe Mazzini;Vimercate;Vimercate;0;bd;0|0|0
+124856933;418000;562;5+;2;;0;R;Villa unifamiliare;45.65250;9.21280;Via Giuseppe Giacosa;San Rocco - Sanzio;Seregno;0;btc;0|0|0
+124863307;379000;87;4;2;;0;B;Villa a schiera;45.63910;9.20000;Via PLATONE;Sant'Ambrogio;Seregno;0;ba;0|0|0
+124863723;418000;482;5+;3;;0;R;Villa unifamiliare;45.65200;9.21280;Via Giuseppe Giacosa;San Rocco - Sanzio;Seregno;0;b;0|0|0
+124867867;314000;154;5;2;S/ T/ 3;1;O;Appartamento;45.58020;9.35050;Via Giuseppe Pignacca;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+124908171;260000;105;3;2;T;1;B;Trilocale;45.59390;9.34005;VIA DE AMICIS;Concorezzo;Concorezzo;0;;0|0|0
+124936315;486000;277;5+;3;;0;R;Villa unifamiliare;45.60690;9.37050;Via Francesco Baracca 30;Vimercate;Vimercate;0;b;0|0|0
+124979223;298000;115;3;2;T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+125041987;200000;85;3;;T;0;O;Trilocale;45.65360;9.20380;Via Giovanni Virginio Schiaparelli;Ospedale;Seregno;0;cd;0|0|0
+125097315;230000;120;5;2;6;1;O;Appartamento;45.58793;9.33287;Via Milano;Concorezzo;Concorezzo;1;ba;0|0|0
+125117329;560000;120;4;2;;0;O;Villa unifamiliare;45.56920;9.33200;Via de Capitanei;Agrate Brianza;Agrate Brianza;0;;0|0|0
+125127319;449000;600;5+;;;0;B;Villa unifamiliare;45.57800;9.35182;VIA DON MINZONI;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+125147143;130000;90;3;1;4;0;O;Trilocale;45.59600;9.14486;Via Francesco Crispi;Varedo;Varedo;0;bci;0|0|0
+125186289;295000;150;4;2;1;1;O;Quadrilocale;45.57260;9.35550;Via Lecco;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+125187133;428518;158;4;2;2;1;N;Quadrilocale;45.60100;9.15470;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+125188313;99000;60;2;1;4;1;O;Bilocale;45.59310;9.24020;Via Ciro Menotti;Muggiò;Muggiò;0;ca;0|0|0
+125232715;415000;128;4;2;1;1;N;Quadrilocale;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;t;0|0|0
+125233197;311500;96;3;2;1;1;N;Trilocale;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;t;0|0|0
+125233433;351000;109;3;2;1;1;N;Trilocale;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;t;0|0|0
+125237721;285000;85;3;2;S/ T;1;B;Trilocale;45.64740;9.21210;Via SAN BENEDETTO;San Rocco - Sanzio;Seregno;0;j;0|0|0
+125244583;89000;80;3;1;;0;R;Rustico;45.59330;9.22890;Piazza Giacomo Matteotti;Muggiò;Muggiò;0;d;0|0|0
+125257007;271000;83;3;2;1;1;N;Trilocale;45.60120;9.15485;VIA SANTA CECILIA;Varedo;Varedo;0;btc;0|0|0
+125257053;388000;150;3;2;2;1;N;Trilocale;45.60120;9.15485;VIA SANTA CECILIA;Varedo;Varedo;0;btc;0|0|0
+125269955;250000;100;3;1;1;0;O;Trilocale;45.58660;9.18800;Via Giovanni Caboto;Nova Milanese;Nova Milanese;0;bg;0|0|0
+125295491;257000;103;3;2;T;1;N;Trilocale;45.60110;9.15475;Via Santa Cecilia;Varedo;Varedo;0;cj;0|0|0
+125296383;585000;360;5+;3+;;0;O;Terratetto unifamiliare;45.58550;9.19570;Via Giuseppe Garibaldi;Nova Milanese;Nova Milanese;0;ad;0|0|0
+125297207;305000;151;5;2;2;1;N;Appartamento;45.60310;9.17860;Via 8 Marzo;Varedo;Varedo;0;t;0|0|0
+125406617;328743;121;3;2;2;1;N;Trilocale;45.60100;9.15470;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+125406679;298043;114;3;2;T;1;N;Trilocale;45.60100;9.15470;Via Santa Cecilia;Varedo;Varedo;0;tc;0|0|0
+125406687;413375;158;3;2;1;1;N;Trilocale;45.60100;9.15470;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+125429619;120000;55;2;1;T;0;B;Bilocale;45.59090;9.33480;Via de Capitani;Concorezzo;Concorezzo;0;d;0|0|0
+125539669;125000;85;3;1;R;0;B;Trilocale;45.59270;9.14725;Viale Giuseppe Garibaldi;Varedo;Varedo;0;b;0|0|0
+125544315;1800000;644;5+;3+;;0;O;Villa unifamiliare;45.65260;9.20200;Via Francesco Carlini;Umberto I - Garibaldi;Seregno;0;bj;0|0|0
+125595865;196000;119;3;2;T/ 2;1;B;Trilocale;45.60700;9.36360;Via Brianza;Vimercate;Vimercate;0;bti;0|0|0
+125784947;599000;150;4;2;;0;;Villa bifamiliare;45.60938;9.38130;Via Rossino;Vimercate;Vimercate;1;ca;0|0|0
+125788731;424000;324;5+;2;;0;B;Villa unifamiliare;45.65170;9.22170;Via Messina;Quattro Strade;Seregno;0;btcjd;0|0|0
+125792127;350000;113;3;2;T;1;N;Trilocale;45.64490;9.20270;via Milano;Sant'Ambrogio;Seregno;0;cj;0|0|0
+125793641;350000;113;3;2;T;1;N;Trilocale;45.64490;9.20270;Via Milano;Sant'Ambrogio;Seregno;0;cj;0|0|0
+125796675;517000;162;4;2;2;1;N;Quadrilocale;45.64490;9.20270;Via Milano;Sant'Ambrogio;Seregno;0;bt;0|0|0
+125856409;499000;203;4;3;2;1;N;Attico;45.66510;9.20240;Via Giuseppe Verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+125858061;195000;125;3;2;S/ 3;0;O;Trilocale;45.59400;9.33220;Via Monte Sabotino;Concorezzo;Concorezzo;0;bcg;0|0|0
+125886291;185000;96;3;1;S/ 2;1;B;Trilocale;45.58890;9.33940;Via Alessandro Volta;Concorezzo;Concorezzo;0;bca;0|0|0
+125899531;205000;230;4;2;T/ 2;0;B;Quadrilocale;45.60140;9.15540;Via Gaetana Agnesi;Varedo;Varedo;0;btcd;0|0|0
+125914355;75000;43;2;1;T;0;R;Bilocale;45.61700;9.36340;Viale Iginio Rota;Vimercate;Vimercate;0;ci;0|0|0
+125962357;120000;71;3;1;2;0;B;Trilocale;45.58980;9.20960;Via Dante Alighieri;Nova Milanese;Nova Milanese;0;bi;0|0|0
+126016843;176000;70;2;1;2;1;O;Appartamento;45.63618;9.20331;Via Amedeo Avogadro;San Carlo;Seregno;1;bca;0|0|0
+126029361;392000;115;3;2;1;0;O;Trilocale;45.64590;9.20540;Via Palestro;Stazione;Seregno;0;bd;0|0|0
+126086647;170000;65;2;1;T;1;B;Appartamento;45.64220;9.20369;Via Livio Colzani;Sant'Ambrogio;Seregno;1;;0|0|0
+126128509;215000;70;3;1;T;0;O;Trilocale;45.65350;9.20449;Via Trabattoni F.;Ospedale;Seregno;0;ci;0|0|0
+126133129;129000;55;2;1;R;0;B;Bilocale;45.58090;9.19540;Via Milazzo;Nova Milanese;Nova Milanese;0;d;0|0|0
+126178521;159000;86;3;1;3;0;O;Trilocale;45.58640;9.33350;Via Girotti;Concorezzo;Concorezzo;0;bcd;0|0|0
+126222795;155000;70;3;1;5;1;B;Trilocale;45.57250;9.22250;Via Fratelli Bandiera 25;Muggiò;Muggiò;0;b;0|0|0
+126234315;115000;87;3;1;1;0;R;Trilocale;45.59530;9.15560;Via Flaminio Crivelli;Varedo;Varedo;0;cagi;0|0|0
+126251441;382920;123;3;2;T;1;N;Trilocale;45.61060;9.36680;Via Crocefisso;Vimercate;Vimercate;0;btj;0|0|0
+126254599;750000;232;4;3;;0;N;Villa unifamiliare;45.62120;9.37950;Via fratelli Bandiera;Vimercate;Vimercate;0;ci;0|0|0
+126266217;89000;45;1;1;1;0;B;Monolocale;45.63460;9.19340;Via Amedeo Modigliani;San Carlo;Seregno;0;ad;0|0|0
+126277085;447587;143;3;2;S/ T;1;N;Trilocale;45.57370;9.35630;Via Gioacchino Rossini;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+126304201;350000;112;3;2;T;1;N;Trilocale;45.64090;9.20620;Via Pietro Toselli;Sant'Ambrogio;Seregno;0;tcgj;0|0|0
+126304345;480000;155;4;2;T;1;N;Quadrilocale;45.64090;9.20620;Via Pietro Toselli;Sant'Ambrogio;Seregno;0;tgj;0|0|0
+126304729;517000;161;4;2;2;1;N;Quadrilocale;45.64090;9.20620;Via Pietro Toselli;Sant'Ambrogio;Seregno;0;tg;0|0|0
+126308609;289000;129;3;2;T;1;O;Trilocale;45.65570;9.19940;Via San Vitale;Santa Valeria;Seregno;0;ba;0|0|0
+126348597;360000;130;4;1;2;0;O;Attico;45.64120;9.21870;Via Toscanini;San Giuseppe;Seregno;0;tc;0|0|0
+126362757;260000;106;3;1;;0;B;Villa bifamiliare;45.59880;9.19697;Via Bologna;Nova Milanese;Nova Milanese;0;b;0|0|0
+126371409;198000;93;3;2;3;1;O;Trilocale;45.59210;9.21500;Via Michele Robecchi;Muggiò;Muggiò;0;t;0|0|0
+126451479;140000;61;2;1;R;0;B;Bilocale;45.59680;9.19255;Via Vercelli 4;Nova Milanese;Nova Milanese;0;tcad;0|0|0
+126475917;199000;113;3;1;1;1;B;Trilocale;45.59360;9.23280;Via 25 Aprile;Muggiò;Muggiò;0;bcg;0|0|0
+126478699;230000;148;5+;2;R;0;R;Appartamento;45.58590;9.33430;VIA DON GIROTTI;Concorezzo;Concorezzo;0;btcajd;0|0|0
+126580569;410000;140;4;2;4;1;O;Quadrilocale;45.64600;9.20480;Via Amatore Sciesa;Stazione;Seregno;0;tc;0|0|0
+126582791;1400000;750;5+;3+;;0;B;Villa unifamiliare;45.61560;9.36780;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;btc;0|0|0
+126584315;495000;237;5;3;5;1;O;Appartamento;45.57670;9.34640;Via Madre Margherita Panzeri;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+126606979;107000;46;2;1;2;0;B;Bilocale;45.58980;9.21067;Via Dante 10;Nova Milanese;Nova Milanese;0;ba;0|0|0
+126622363;159000;90;3;1;3;0;;Trilocale;45.63820;9.20180;Via Albert Einstein;San Carlo;Seregno;0;bcg;0|0|0
+126640867;210000;87;3;1;1;0;O;Trilocale;45.63390;9.18960;Via Pietro Arienti;San Carlo;Seregno;0;td;0|0|0
+126670551;260000;130;4;1;1;0;B;Quadrilocale;45.59100;9.19334;Via LARIO 12;Nova Milanese;Nova Milanese;0;bcgi;0|0|0
+126715115;750000;514;5+;3+;;0;R;Terratetto plurifamiliare;45.59320;9.15700;Via Madonnina;Varedo;Varedo;0;bcd;0|0|0
+126732599;190000;70;3;1;2;1;;Trilocale;45.57330;9.35220;Via GIAN MATTEO FERRARIO 65;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+126750763;55000;45;1;;T;0;R;Monolocale;45.57880;9.37920;Via Cavour;Agrate Brianza;Agrate Brianza;0;;0|0|0
+126783305;225000;165;4;3;;0;R;Rustico;45.57310;9.35070;Via della Concordia;Agrate Brianza;Agrate Brianza;0;jd;0|0|0
+126811127;299000;122;3;2;1;0;B;Trilocale;45.59180;9.23170;Viale della Repubblica;Muggiò;Muggiò;0;bt;0|0|0
+126855907;1580000;900;4;3+;;0;O;Villa unifamiliare;45.61340;9.37340;Via Camillo Benso di Cavour;Vimercate;Vimercate;0;b;0|0|0
+126898247;100000;50;2;1;1;0;B;Bilocale;45.64950;9.22060;Via reggio;Montello - San Salvatore;Seregno;0;bai;0|0|0
+126918323;270000;117;3;1;S/ 1;0;B;Trilocale;45.57930;9.33050;Via Federico Ozanam;Concorezzo;Concorezzo;0;bcd;0|0|0
+126922631;159000;90;3;1;2;0;B;Trilocale;45.63490;9.34840;Via Giovanni Papini;Vimercate;Vimercate;0;bca;0|0|0
+126925719;210000;105;3;1;S/ 1;0;B;Trilocale;45.59570;9.14450;Via Francesco Crispi;Varedo;Varedo;0;bt;0|0|0
+126930381;218000;112;4;3;R;1;B;Quadrilocale;45.65200;9.19218;Via rismondo;Santa Valeria;Seregno;0;bt;0|0|0
+126933345;120000;50;2;1;T;0;B;Bilocale;45.64950;9.22060;Via reggio;Montello - San Salvatore;Seregno;0;ai;0|0|0
+126944157;445000;95;3;2;1;1;N;Trilocale;45.65110;9.20430;Piazza caprera;Umberto I - Garibaldi;Seregno;0;c;0|0|0
+126964819;220000;89;3;2;S/ T;1;O;Trilocale;45.65030;9.22660;Viale della Repubblica;Montello - San Salvatore;Seregno;0;d;0|0|0
+126973203;152000;80;2;2;1;0;O;Bilocale;45.62970;9.36966;VIA CASCINA CASTELLAZZO;Vimercate;Vimercate;0;c;0|0|0
+126978855;200000;122;4;1;;0;B;Terratetto unifamiliare;45.57310;9.35090;Via della Concordia;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+126990019;218000;85;3;1;T;0;O;Trilocale;45.61400;9.37210;Via Pierino Colombo;Vimercate;Vimercate;0;;0|0|0
+126991187;125000;55;2;1;1;0;B;Bilocale;45.59690;9.19259;Via Vercelli 6;Nova Milanese;Nova Milanese;0;bcad;0|0|0
+127020999;296000;238;4;1;;0;B;Appartamento in villa;45.58490;9.33840;Via Marco Polo;Concorezzo;Concorezzo;0;ba;0|0|0
+127036467;550000;165;4;3;;0;R;Villa unifamiliare;45.57310;9.35070;Via della Concordia;Agrate Brianza;Agrate Brianza;0;jd;0|0|0
+127039733;448000;160;4;2;R;1;N;Quadrilocale;45.65520;9.19950;Via San vitale;Santa Valeria;Seregno;0;btd;0|0|0
+127069191;180000;90;3;1;5;1;B;Trilocale;45.57810;9.37700;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+127118789;85000;61;2;1;;0;;Bilocale;45.60060;9.16042;Via A. Fogazzaro, 16;Varedo;Varedo;0;;0|0|0
+127148337;396000;244;4;3;;0;B;Villa a schiera;45.61120;9.35110;Via Augusto Murri;Vimercate;Vimercate;0;bd;0|0|0
+127149323;125000;51;2;1;T;0;R;Bilocale;45.58940;9.20220;Via Madonnina 16;Nova Milanese;Nova Milanese;0;cai;0|0|0
+127153719;299000;130;3;2;2;0;O;Attico;45.59160;9.23200;Viale della Repubblica;Muggiò;Muggiò;0;bt;0|0|0
+127153849;299000;130;3;2;2;0;O;Trilocale;45.59160;9.23200;Viale della Repubblica;Muggiò;Muggiò;0;bt;0|0|0
+127193643;309000;127;3;2;1;0;O;Trilocale;45.57410;9.35570;Via Gaetano Donizetti;Agrate Brianza;Agrate Brianza;0;btgd;0|0|0
+127193763;350000;1;5+;3+;;0;R;Terratetto plurifamiliare;45.64640;9.18730;Via Saronno;Sant'Ambrogio;Seregno;0;btcd;0|0|0
+127205829;1250000;497;5+;3+;;0;O;Villa plurifamiliare;45.58940;9.21040;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;;0|0|0
+127210887;267783;103;3;1;T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;;0|0|0
+127237841;89000;56;2;1;S/ 3;0;B;Bilocale;45.61650;9.35010;Via Alcide De Gasperi;Vimercate;Vimercate;0;bcd;0|0|0
+127238185;235000;66;2;1;S/ R/ 1;1;N;Bilocale;45.57370;9.35630;Via Gioacchino Rossini;Agrate Brianza;Agrate Brianza;0;bi;0|0|0
+127280845;207735;63;2;2;T;0;N;Bilocale;45.61740;9.37120;Via Giuseppe Mazzini;Vimercate;Vimercate;0;ci;0|0|0
+127280847;211893;65;2;2;T;0;N;Bilocale;45.61740;9.37120;Via Giuseppe Mazzini;Vimercate;Vimercate;0;ci;0|0|0
+127280851;572167;185;4;2;T;0;N;Quadrilocale;45.61740;9.37120;Via Giuseppe Mazzini;Vimercate;Vimercate;0;ti;0|0|0
+127280853;206250;63;2;2;T;0;N;Bilocale;45.61740;9.37120;Via Giuseppe Mazzini;Vimercate;Vimercate;0;ci;0|0|0
+127286397;325000;83;3;1;1;1;N;Trilocale;45.59480;9.33590;Via Gramsci;Concorezzo;Concorezzo;0;btc;0|0|0
+127298591;219000;94;3;1;3;1;O;Trilocale;45.60750;9.37600;Via Ludovico Ariosto 10;Vimercate;Vimercate;0;b;0|0|0
+127323395;310000;100;3;2;3;1;B;Appartamento;45.61690;9.37264;Via Stefanardo da Vimercate;Vimercate;Vimercate;1;ba;0|0|0
+127329127;119000;72;3;1;3;0;B;Trilocale;45.59140;9.34050;Via Alessandro Volta;Concorezzo;Concorezzo;0;b;0|0|0
+127334853;490000;162;4;2;;0;B;Villa bifamiliare;45.59100;9.34200;Via Francesco Petrarca;Concorezzo;Concorezzo;0;bc;0|0|0
+127347689;390000;295;5+;3;;0;B;Terratetto plurifamiliare;45.65690;9.19380;Viale Piave;Santa Valeria;Seregno;0;bt;0|0|0
+127348103;219000;105;3;2;3;1;B;Trilocale;45.64130;9.19980;Via Platone;Sant'Ambrogio;Seregno;0;btcg;0|0|0
+127358931;620000;190;4;2;T;1;N;Quadrilocale;45.61540;9.36970;Via Giosuè Carducci;Vimercate;Vimercate;0;b;0|0|0
+127366749;127000;70;3;1;;0;B;Cascina;45.57510;9.33010;Via Massimo D'Azeglio;Concorezzo;Concorezzo;0;ci;0|0|0
+127379469;209000;102;2;2;1;0;O;Bilocale;45.59830;9.20090;Via Daniele Manin;Nova Milanese;Nova Milanese;0;t;0|0|0
+127379515;377000;135;4;2;S/ 4;1;N;Quadrilocale;45.61470;9.36840;Via Luigi Ponti;Vimercate;Vimercate;0;tcd;0|0|0
+127506418;490000;276;5+;3;3;1;B;Attico;45.61630;9.37277;Via Stefanardo da Vimercate;Vimercate;Vimercate;0;bc;0|0|0
+127516094;368000;123;3;2;1;1;O;Trilocale;45.64330;9.19620;Via Rovereto;Sant'Ambrogio;Seregno;0;bt;0|0|0
+127533262;330000;101;3;1;2;0;B;Trilocale;45.59530;9.19090;Via Adige 12;Nova Milanese;Nova Milanese;0;bcagj;0|0|0
+127535424;267000;124;3;2;1;1;B;Trilocale;45.58110;9.22340;Via Sondrio;Muggiò;Muggiò;0;bt;0|0|0
+127547698;590000;196;4;3;T;1;N;Quadrilocale;45.61640;9.34930;Via Don Luigi Sturzo;Vimercate;Vimercate;0;cgj;0|0|0
+127555248;119000;65;2;1;T;0;B;Bilocale;45.59030;9.18870;Via Achille Grandi;Nova Milanese;Nova Milanese;0;ad;0|0|0
+127556314;399000;235;5;3;;0;O;Villa bifamiliare;45.58450;9.34040;Via Agrate;Concorezzo;Concorezzo;0;;0|0|0
+127559492;170000;80;3;1;2;1;B;Trilocale;45.65100;9.20840;Corso matteotti;Matteotti;Seregno;0;ca;0|0|0
+127565588;190000;111;3;1;2;0;O;Trilocale;45.58850;9.36010;Via sant'anna;Agrate Brianza;Agrate Brianza;0;bcgd;0|0|0
+127578514;650000;300;5;3+;5;0;O;Appartamento;45.65200;9.19020;Via Giudicaria;Santa Valeria;Seregno;0;bc;0|0|0
+127580072;163000;85;3;2;T;0;O;Trilocale;45.65140;9.21270;Via Giuseppe Giacosa;San Rocco - Sanzio;Seregno;0;bcad;0|0|0
+127586490;200000;93;3;1;1;0;B;Trilocale;45.58750;9.18830;Via GIOTTO 7;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+127597332;239000;92;3;2;3;1;B;Trilocale;45.64490;9.20570;Via Fratelli Bandiera;Stazione;Seregno;0;bcd;0|0|0
+127651576;230000;105;3;1;6;1;B;Trilocale;45.59180;9.33360;Via Dante;Concorezzo;Concorezzo;0;bc;0|0|0
+127659306;129000;82;3;1;4;0;O;Trilocale;45.64030;9.20260;Via FERMI ENRICO;Sant'Ambrogio;Seregno;0;i;0|0|0
+127664932;454000;157;4;2;T;1;N;Quadrilocale;45.58350;9.33940;Via San Pio X;Concorezzo;Concorezzo;0;cji;0|0|0
+127702014;420000;175;4;2;2;0;;Quadrilocale;45.58700;9.20545;VIA DELLA CROCE ROSSA ITALIANA, 10;Nova Milanese;Nova Milanese;0;;0|0|0
+127707846;130000;84;3;1;1;0;B;Trilocale;45.63820;9.20180;Via Albert Einstein;San Carlo;Seregno;0;bagjd;0|0|0
+127738014;249000;130;4;2;3;1;B;Quadrilocale;45.61340;9.36310;Via Bice Cremagnani;Vimercate;Vimercate;0;b;0|0|0
+127747530;399000;172;4;2;;0;O;Villa bifamiliare;45.63460;9.34740;Via Giovanni Pascoli 9/A;Vimercate;Vimercate;0;;0|0|0
+127756350;345000;127;3;2;T;1;N;Trilocale;45.57070;9.34310;Via Grazia Deledda;Agrate Brianza;Agrate Brianza;0;j;0|0|0
+127758646;255000;180;4;1;;0;B;Quadrilocale;45.59620;9.15445;Via C. Colombi;Varedo;Varedo;0;ci;0|0|0
+127759870;295000;95;3;2;1;1;O;Trilocale;45.57460;9.23050;Via Vittorio Alfieri;Muggiò;Muggiò;0;btcd;0|0|0
+127774808;280000;80;3;1;T;0;N;Trilocale;45.64730;9.20320;Via Papa Giovanni XXIII;Stazione;Seregno;0;;0|0|0
+127784854;495000;260;5;3;6 - 7;1;B;Attico;45.58690;9.20310;Via Eugenio Villoresi;Nova Milanese;Nova Milanese;0;bt;0|0|0
+127788142;345000;274;4;1;T/ 1;0;B;Quadrilocale;45.60120;9.17660;Vicolo Tagliamento;Varedo;Varedo;0;bcd;0|0|0
+127802100;595000;312;5+;2;;0;;Villa unifamiliare;45.61370;9.36420;Via Bice Cremagnani;Vimercate;Vimercate;0;b;0|0|0
+127833496;257000;103;3;2;2;1;N;Trilocale;45.60110;9.15475;Via Santa Cecilia;Varedo;Varedo;0;c;0|0|0
+127844230;450000;150;4;2;1;1;N;Quadrilocale;45.58350;9.33940;Via San Pio X;Concorezzo;Concorezzo;0;tc;0|0|0
+127845958;570000;131;3;2;T;1;N;Trilocale;45.62140;9.35000;Via Lodovica;Vimercate;Vimercate;0;btj;0|0|0
+127846892;820000;188;3;2;T;1;N;Trilocale;45.62140;9.35000;Via Lodovica;Vimercate;Vimercate;0;btj;0|0|0
+127848470;1110000;255;4;2;1 - 2;1;N;Quadrilocale;45.62140;9.35000;Via Lodovica;Vimercate;Vimercate;0;bt;0|0|0
+127849454;815000;183;3;2;1 - 2;1;N;Trilocale;45.62140;9.35000;Via Lodovica;Vimercate;Vimercate;0;bt;0|0|0
+127852378;189000;112;4;2;R;0;B;Quadrilocale;45.61720;9.37600;Via Luigi Cadorna;Vimercate;Vimercate;0;bca;0|0|0
+127893876;129000;80;3;1;2;0;R;Trilocale;45.59250;9.21330;Via Fratelli Cairoli;Muggiò;Muggiò;0;bc;0|0|0
+127915858;240000;103;4;1;4;1;B;Quadrilocale;45.60740;9.36880;Via 4 Novembre;Vimercate;Vimercate;0;tcd;0|0|0
+127925254;745000;360;5+;3+;;0;O;Villa bifamiliare;45.66200;9.20440;Via Valassina;Consonno - Bivio;Seregno;0;;0|0|0
+127926024;745000;360;5+;3+;;0;O;Villa unifamiliare;45.66200;9.20440;Via Valassina;Consonno - Bivio;Seregno;0;;0|0|0
+127952796;195000;80;3;1;R;0;O;Trilocale;45.57900;9.34910;Via don luigi cantini;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+127985086;219000;96;3;1;3;1;O;Trilocale;45.57890;9.22970;Via Papa Pio XII;Muggiò;Muggiò;0;bc;0|0|0
+127996780;168000;102;3;1;S/ 1;0;B;Trilocale;45.64790;9.20990;Via Raffaello Sanzio;San Rocco - Sanzio;Seregno;0;ca;0|0|0
+128026950;115000;70;2;1;3;0;;Bilocale;45.56770;9.34690;Via Monte Grappa;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+128028186;300000;100;4;1;1;1;O;Quadrilocale;45.60060;9.22610;Via San Carlo;Muggiò;Muggiò;0;tc;0|0|0
+128031068;425000;170;4;2;;0;O;Villa a schiera;45.59660;9.23123;via galilei;Muggiò;Muggiò;0;b;0|0|0
+128038104;130000;73;3;2;1;0;B;Trilocale;45.58930;9.20233;Via MADONNINA;Nova Milanese;Nova Milanese;0;;0|0|0
+128039334;99000;66;2;1;1;0;B;Bilocale;45.58890;9.19997;Piazza Guglielmo Marconi;Nova Milanese;Nova Milanese;0;b;0|0|0
+128084634;420000;156;4;2;;0;O;Villa a schiera;45.61600;9.34840;via Ezio Vanoni 7;Vimercate;Vimercate;0;c;0|0|0
+128103040;119000;46;1;1;1;0;B;Monolocale;45.61370;9.37460;Via Andrea Appiani;Vimercate;Vimercate;0;ai;0|0|0
+128104080;294000;184;;;;0;B;Terratetto unifamiliare;45.64850;9.22050;Via Reggio;Montello - San Salvatore;Seregno;0;bci;0|0|0
+128111790;155000;66;2;1;3;1;B;Bilocale;45.58470;9.33350;Via Don Antonio Girotti;Concorezzo;Concorezzo;0;bca;0|0|0
+128134826;220000;68;2;1;3;1;R;Bilocale;45.59540;9.19197;Via Maddalena di Canossa 1;Nova Milanese;Nova Milanese;0;btag;0|0|0
+128144072;150000;85;3;1;T;0;B;Trilocale;45.58930;9.20039;Don Carlo Mezzera;Nova Milanese;Nova Milanese;0;;0|0|0
+128147178;143000;80;3;1;2;0;O;Trilocale;45.59060;9.19980;Via Roma;Nova Milanese;Nova Milanese;0;cad;0|0|0
+128179854;135000;50;2;1;5;1;O;Bilocale;45.58780;9.19590;Via Andrea Doria 2;Nova Milanese;Nova Milanese;0;bc;0|0|0
+128206478;575000;255;5+;2;;0;B;Villa unifamiliare;45.62470;9.37490;Via Donizetti Gaetano;Vimercate;Vimercate;0;tc;0|0|0
+128209394;120000;87;3;1;3;0;B;Trilocale;45.59190;9.34020;Via Marconi;Concorezzo;Concorezzo;0;bcd;0|0|0
+128247554;930000;525;5+;3+;;1;B;Villa bifamiliare;45.63650;9.21280;Via dei Buttafava;San Giuseppe;Seregno;0;tca;0|0|0
+128273330;1900000;5;5+;3+;;0;N;Villa unifamiliare;45.57110;9.34100;Via Cassignolo;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+128307848;419000;134;4;2;1;1;B;Quadrilocale;45.58240;9.33170;Via Federico Ozanam;Concorezzo;Concorezzo;0;tcag;0|0|0
+128328368;270000;90;2;1;2;1;B;Bilocale;45.65240;9.19030;Via de amicis;Santa Valeria;Seregno;0;ta;0|0|0
+128378288;179000;71;2;1;T/ 1/ 2/ 3;0;N;Bilocale;45.57560;9.35300;Via Gian Matteo Ferrario;Agrate Brianza;Agrate Brianza;0;td;0|0|0
+128427062;120000;80;2;1;8;1;B;Bilocale;45.57390;9.34710;Via G. Matteotti;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+128432224;384000;112;3;2;2;1;O;Trilocale;45.64600;9.20480;Via Amatore Sciesa;Stazione;Seregno;0;btg;0|0|0
+128448076;300000;110;3;2;1;0;N;Trilocale;45.56920;9.33200;Via de Capitanei;Agrate Brianza;Agrate Brianza;0;btc;0|0|0
+128457894;389000;146;4;2;S/ 2;0;O;Quadrilocale;45.61610;9.37590;Via Luigi Cadorna 10/A;Vimercate;Vimercate;0;bcd;0|0|0
+128459884;139000;93;3;1;3;0;B;Trilocale;45.64970;9.21020;Via Dante;San Rocco - Sanzio;Seregno;0;cad;0|0|0
+128460974;395000;195;5;3;R;0;O;Appartamento;45.58550;9.19570;Via Giuseppe Garibaldi;Nova Milanese;Nova Milanese;0;ad;0|0|0
+128461910;560000;400;4;2;;0;B;Terratetto unifamiliare;45.59100;9.22640;Via Silvio Pellico;Muggiò;Muggiò;0;btc;0|0|0
+128462048;207000;92;3;1;4;1;O;Trilocale;45.58670;9.33270;Via Papa Pio XI;Concorezzo;Concorezzo;0;bcd;0|0|0
+128467138;380000;135;4;2;;0;N;Villa a schiera;45.58640;9.19230;Via Giuseppe Mazzini;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+128479372;270000;105;3;1;3;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+128479546;500000;220;4;2;;0;B;Villa a schiera;45.57390;9.34720;Via G. Matteotti;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+128491694;413000;158;4;2;1;1;N;Quadrilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+128492034;428000;158;4;2;2;1;N;Quadrilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+128492056;283000;95;3;2;3;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+128492282;402000;148;4;2;2;1;N;Quadrilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+128492582;328000;121;3;2;2;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;bt;0|0|0
+128508542;1090000;384;5+;3+;;0;O;Villa bifamiliare;45.61530;9.35840;Via Adige 11;Vimercate;Vimercate;0;;0|0|0
+128546248;250000;106;3;2;S/ 3;1;B;Trilocale;45.61940;9.37810;Via Luigi Cadorna;Vimercate;Vimercate;0;bc;0|0|0
+128553580;87000;35;1;1;1;0;O;Monolocale;45.58840;9.18950;Via Assunta;Nova Milanese;Nova Milanese;0;td;0|0|0
+128558484;405000;173;4;3;S/ 2/ 3;1;O;Quadrilocale;45.61470;9.35520;Via Isarco;Vimercate;Vimercate;0;bt;0|0|0
+128571678;384000;112;3;2;2;1;B;Trilocale;45.64790;9.20360;Via Magenta;Umberto I - Garibaldi;Seregno;0;bt;0|0|0
+128572010;380000;100;3;2;1;1;B;Trilocale;45.64690;9.20450;Via Amatore Sciesa;Stazione;Seregno;0;btd;0|0|0
+128572264;381000;108;3;2;1;1;B;Trilocale;45.64760;9.20440;Via magenta;Stazione;Seregno;0;b;0|0|0
+128605532;314000;135;4;3;;0;B;Appartamento in villa;45.57800;9.36870;Via San Martino;Agrate Brianza;Agrate Brianza;0;bj;0|0|0
+128631864;129000;50;2;1;R;1;B;Bilocale;45.57580;9.32970;Via Massimo D'Azeglio;Concorezzo;Concorezzo;0;bc;0|0|0
+128632496;205000;97;3;2;3;1;B;Trilocale;45.59820;9.15020;Via della Libertà;Varedo;Varedo;0;b;0|0|0
+128636770;69000;50;2;1;3;1;;Bilocale;45.65290;9.21470;CIRCONVALLAZIONE;San Rocco - Sanzio;Seregno;0;a;0|0|0
+128636788;198000;105;5;1;1;1;R;Appartamento;45.65190;9.20357;Lombardia;Umberto I - Garibaldi;Seregno;0;bc;0|0|0
+128636968;309000;110;3;2;;0;B;Terratetto unifamiliare;45.65050;9.20830;Vicolo Sole;Matteotti;Seregno;0;b;0|0|0
+128636978;685000;190;4;2;2;1;N;Attico;45.65220;9.21761;via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128636980;375000;100;3;2;T;0;N;Trilocale;45.65220;9.21761;via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128637006;689000;350;5+;3;;0;O;Villa unifamiliare;45.65900;9.20021;via Monte Rosa;Porada;Seregno;0;t;0|0|0
+128637040;234000;125;3;2;1;0;O;Trilocale;45.65130;9.21469;Via Bertacchi;San Rocco - Sanzio;Seregno;0;;0|0|0
+128637042;329000;120;3;2;2;1;B;Trilocale;45.65270;9.20241;Via Carlini;Ospedale;Seregno;0;t;0|0|0
+128637082;235000;90;3;2;T;1;B;Trilocale;45.64970;9.22717;via Montello;Montello - San Salvatore;Seregno;0;;0|0|0
+128637108;385000;115;3;2;1;1;N;Trilocale;45.65220;9.21761;Via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128637110;375000;115;3;2;T;1;N;Trilocale;45.65220;9.21761;via Carlo Porta;Quattro Strade;Seregno;0;;0|0|0
+128637124;225000;150;4;2;T;1;B;Quadrilocale;45.64400;9.19318;via Kolbe;Sant'Ambrogio;Seregno;0;;0|0|0
+128637130;329000;130;3;2;1;0;B;Trilocale;45.66210;9.20723;via dell'Oca;Consonno - Bivio;Seregno;0;btc;0|0|0
+128637162;262000;95;3;2;1;1;B;Trilocale;45.64980;9.22716;via Montello;Montello - San Salvatore;Seregno;0;btca;0|0|0
+128637200;379000;215;4;3;;1;B;Quadrilocale;45.59190;9.22768;Via Santa Elisabetta;Muggiò;Muggiò;0;b;0|0|0
+128637210;549000;125;4;2;2;1;O;Attico;45.64590;9.20545;via Palestro;Stazione;Seregno;0;btc;0|0|0
+128637264;290000;100;3;1;;0;N;Trilocale;45.65230;9.18841;via Carnia;Santa Valeria;Seregno;0;;0|0|0
+128637290;530000;230;5+;1;;0;B;Terratetto unifamiliare;45.66020;9.20351;via Giuseppe Verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+128637294;500000;140;3;2;;0;O;Terratetto unifamiliare;45.65200;9.19398;via Francesco Rismondo;Santa Valeria;Seregno;0;t;0|0|0
+128637346;260000;130;3;1;7;1;B;Trilocale;45.65200;9.19398;via Francesco Rismondo;Santa Valeria;Seregno;0;b;0|0|0
+128637348;260000;130;4;1;7;1;B;Quadrilocale;45.65200;9.19398;via Francesco Rismondo;Santa Valeria;Seregno;0;b;0|0|0
+128637394;420000;230;4;3;;0;O;Villa unifamiliare;45.66020;9.20351;via Giuseppe Verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+128637396;420000;230;4;3;;0;O;Villa unifamiliare;45.66020;9.20351;via Giuseppe Verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+128637400;420000;230;4;3;;0;O;Villa unifamiliare;45.66020;9.20351;via Giuseppe Verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+128637416;197000;63;3;1;T;0;O;Trilocale;45.65360;9.20368;via Giovanni Schiaparelli;Ospedale;Seregno;0;c;0|0|0
+128637418;600000;300;4;3+;;0;B;Villa unifamiliare;45.64790;9.21140;via Sanzio;San Rocco - Sanzio;Seregno;0;bt;0|0|0
+128637438;400000;450;5+;3+;;0;R;Terratetto unifamiliare;45.65290;9.20988;via San Rocco;San Rocco - Sanzio;Seregno;0;t;0|0|0
+128637440;400000;450;5+;3+;;0;R;Rustico;45.65290;9.20988;via San Rocco;San Rocco - Sanzio;Seregno;0;t;0|0|0
+128637472;419000;360;5+;3;;0;R;Villa unifamiliare;45.64190;9.21361;via Bergamo;Lazzaretto;Seregno;0;;0|0|0
+128637642;220000;100;4;1;;0;R;Appartamento in villa;45.59450;9.19380;Via Olindo Favaron;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+128639318;320000;120;4;2;2;1;O;Appartamento;45.65304;9.19179;Via Cadore;Santa Valeria;Seregno;1;bca;0|0|0
+128647830;549000;125;4;2;2;1;N;Quadrilocale;45.64590;9.20545;via Palestro;Stazione;Seregno;0;btc;0|0|0
+128651438;385000;115;3;2;1;1;N;Trilocale;45.65240;9.21764;via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128651440;685000;190;4;2;2;1;N;Attico;45.65220;9.21761;via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128651444;375000;105;3;2;T;1;N;Trilocale;45.65240;9.21764;via Carlo Porta;Quattro Strade;Seregno;0;t;0|0|0
+128652986;375000;115;3;2;T;1;N;Trilocale;45.65240;9.21764;via Carlo Porta;Quattro Strade;Seregno;0;;0|0|0
+128652988;375000;115;3;2;T;1;N;Trilocale;45.65240;9.21764;via Carlo Porta;Quattro Strade;Seregno;0;;0|0|0
+128653158;194000;90;2;2;T;0;O;Bilocale;45.65130;9.21469;Via Bertacchi;San Rocco - Sanzio;Seregno;0;c;0|0|0
+128653160;230000;60;2;1;1;0;O;Bilocale;45.64900;9.20490;Corso del Popolo;Umberto I - Garibaldi;Seregno;0;b;0|0|0
+128663284;349000;223;5;3;S/ 1;1;B;Appartamento;45.59330;9.23110;Via San Rocco;Muggiò;Muggiò;0;btg;0|0|0
+128699928;115000;72;2;1;T;0;R;Bilocale;45.59230;9.22090;Via Antonio Canova;Muggiò;Muggiò;0;bd;0|0|0
+128706268;950000;331;5;3+;S/ 4/ 5;1;O;Appartamento;45.65620;9.19910;Via Antonio Stoppani;Santa Valeria;Seregno;0;b;0|0|0
+128707400;389000;227;5+;2;;0;B;Terratetto plurifamiliare;45.65800;9.19300;Via Nervesa;Santa Valeria;Seregno;0;btc;0|0|0
+128748408;230000;85;3;2;S/ 2;1;N;Trilocale;45.61970;9.37060;Via Giuseppe Mazzini;Vimercate;Vimercate;0;cd;0|0|0
+128773582;169000;90;3;2;1;0;B;Trilocale;45.66600;9.20224;Via Verdi;Consonno - Bivio;Seregno;0;b;0|0|0
+128789162;180000;110;4;1;1;1;B;Quadrilocale;45.57450;9.35943;Via Giuseppe Verdi;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+128803546;139000;80;2;1;2;1;B;Bilocale;45.64920;9.20791;Piazza Risorgimento;Matteotti;Seregno;0;bca;0|0|0
+128803824;445000;150;4;2;;0;O;Villa a schiera;45.58350;9.35360;Via Fratelli Kennedy;Agrate Brianza;Agrate Brianza;0;bjd;0|0|0
+128811594;139000;62;2;1;T;1;O;Bilocale;45.59900;9.15767;Via Dante Alighieri;Varedo;Varedo;0;;0|0|0
+128811760;98000;60;2;1;1;0;B;Bilocale;45.58930;9.33460;Via Alessandro Manzoni;Concorezzo;Concorezzo;0;bi;0|0|0
+128815384;585000;150;4;3;;0;O;Villa unifamiliare;45.64960;9.19878;Via Marco Polo;Santa Valeria;Seregno;0;bc;0|0|0
+128816290;138000;55;2;1;1;0;B;Bilocale;45.57270;9.35180;Via Giacomo Matteotti;Agrate Brianza;Agrate Brianza;0;ai;0|0|0
+128817130;319000;103;3;2;T/ 2;1;N;Attico;45.64780;9.22300;Via Bolsena;Montello - San Salvatore;Seregno;0;b;0|0|0
+128836862;338000;120;4;2;4;1;O;Quadrilocale;45.65090;9.21640;Via Vittorio Alfieri;San Rocco - Sanzio;Seregno;0;bcgi;0|0|0
+128839624;290000;140;4;2;T;1;O;Quadrilocale;45.59300;9.20447;Via Prealpi 6;Nova Milanese;Nova Milanese;0;btgi;0|0|0
+128844616;469000;800;5+;;;0;R;Terratetto unifamiliare;45.64920;9.20044;Via Cristoforo Colombo;Santa Valeria;Seregno;0;bt;0|0|0
+128847868;255000;125;4;2;4;1;O;Quadrilocale;45.65930;9.21240;Via briantina;Consonno - Bivio;Seregno;0;bca;0|0|0
+128848922;148000;86;3;1;T;0;;Trilocale;45.65310;9.20990;Via San Rocco;San Rocco - Sanzio;Seregno;0;j;0|0|0
+128871078;310000;105;4;2;2 - 3;1;O;Quadrilocale;45.59150;9.19760;Via Giuseppe Garibaldi;Nova Milanese;Nova Milanese;0;bt;0|0|0
+128934564;345000;180;5;2;3;1;O;Appartamento;45.61370;9.36320;Via Alessandro Manzoni;Vimercate;Vimercate;0;bcd;0|0|0
+128938298;384000;112;3;2;2;1;B;Trilocale;45.64690;9.20450;Via Amatore Sciesa;Stazione;Seregno;0;btd;0|0|0
+128979832;300000;110;3;2;T;0;N;Trilocale;45.56900;9.33350;Via de Capitanei;Agrate Brianza;Agrate Brianza;0;;0|0|0
+128984730;270000;132;5;2;;0;R;Villa a schiera;45.58020;9.18670;Via Niccolò Copernico 20;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+128985996;149000;80;3;1;2;0;O;Trilocale;45.58910;9.22740;Via Europa;Muggiò;Muggiò;0;bcag;0|0|0
+128992118;125000;71;2;1;6;1;R;Bilocale;45.57180;9.22220;Via Fratelli Bandiera;Muggiò;Muggiò;0;bad;0|0|0
+129040982;190000;63;2;1;S/ S/ 2;1;O;Bilocale;45.61630;9.35200;Via Carlo Borromeo;Vimercate;Vimercate;0;bcagi;0|0|0
+129047832;149000;110;3;1;2;0;O;Trilocale;45.59370;9.23170;Via 1 Maggio;Muggiò;Muggiò;0;a;0|0|0
+129048974;240000;60;2;1;T;0;N;Bilocale;45.66170;9.20719;Via Resegone;Consonno - Bivio;Seregno;0;;0|0|0
+129048976;240000;60;2;1;T;0;N;Bilocale;45.66170;9.20719;Via Resegone;Consonno - Bivio;Seregno;0;;0|0|0
+129048978;240000;60;2;1;1;0;N;Bilocale;45.66170;9.20719;Via Resegone;Consonno - Bivio;Seregno;0;t;0|0|0
+129048984;240000;60;2;1;1;0;N;Bilocale;45.66170;9.20719;Via Resegone;Consonno - Bivio;Seregno;0;t;0|0|0
+129049246;473000;149;3;2;S/ 1;1;N;Trilocale;45.59380;9.34690;Via Don Giovanni Minzoni;Concorezzo;Concorezzo;0;t;0|0|0
+129049826;375000;157;4;2;T;1;N;Quadrilocale;45.57780;9.22490;Via Carlo Marx;Muggiò;Muggiò;0;j;0|0|0
+129058574;199000;80;3;1;4;1;B;Trilocale;45.58080;9.22230;Via sondrio 55;Muggiò;Muggiò;0;bcag;0|0|0
+129070290;138000;66;2;1;T;0;O;Bilocale;45.58940;9.22840;Via 5 Giornate;Muggiò;Muggiò;0;d;0|0|0
+129072062;499000;700;5+;3+;;0;R;Villa unifamiliare;45.65530;9.21865;Via Vincenzo Monti;Consonno - Bivio;Seregno;0;bt;0|0|0
+129085402;415000;500;5;3;;0;R;Villa unifamiliare;45.65300;9.20999;Via carducci;San Rocco - Sanzio;Seregno;0;bt;0|0|0
+129086190;255000;134;3;1;1;0;B;Trilocale;45.57850;9.34060;Via Cesare Battisti;Agrate Brianza;Agrate Brianza;0;d;0|0|0
+129087790;384000;113;3;2;2;1;B;Trilocale;45.64680;9.20440;via sciesa;Stazione;Seregno;0;bt;0|0|0
+129088204;381500;109;3;2;1;1;B;Trilocale;45.64680;9.20440;via sciesa;Stazione;Seregno;0;bt;0|0|0
+129118922;210000;136;4;1;1;1;B;Quadrilocale;45.58990;9.33670;Via Libertà;Concorezzo;Concorezzo;0;btcd;0|0|0
+129126478;159000;80;3;1;2;0;O;Trilocale;45.59030;9.22670;Via Europa 17;Muggiò;Muggiò;0;cagd;0|0|0
+129132050;189000;131;4;1;S/ 8;1;O;Quadrilocale;45.57250;9.35370;Via Giacomo Matteotti;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+129180142;384000;113;3;2;2;1;O;Trilocale;45.64760;9.20478;Piazza Roma;Matteotti;Seregno;0;t;0|0|0
+129182752;223000;85;3;2;T;0;O;Trilocale;45.65100;9.19800;Via Sabatelli;Santa Valeria;Seregno;0;bt;0|0|0
+129195774;89000;200;2;;2;0;R;Soffitta;45.64850;9.20150;Via Paolo Ballerini;Umberto I - Garibaldi;Seregno;0;d;0|0|0
+129195962;230000;70;2;1;1;0;O;Bilocale;45.64890;9.20430;Via San Pietro;Umberto I - Garibaldi;Seregno;0;bsd;0|0|0
+129205980;299000;122;;2;3;1;B;Attico;45.62180;9.38530;via sandro pertini 13;Vimercate;Vimercate;0;bcd;0|0|0
+129206494;217000;65;2;1;T;0;O;Bilocale;45.65070;9.20750;Vicolo Orti;Matteotti;Seregno;0;ai;0|0|0
+129217864;265000;103;3;2;1;1;O;Trilocale;45.63450;9.18920;Via Giuseppe Adami;San Carlo;Seregno;0;b;0|0|0
+129233192;148000;88;3;1;5;1;B;Trilocale;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;bcgi;0|0|0
+129233368;255000;93;3;2;1;1;B;Trilocale;45.65510;9.17890;Via Cadore;Ceredo;Seregno;0;bcgd;0|0|0
+129239834;223000;123;4;2;S/ 3;1;B;Quadrilocale;45.58820;9.34220;Via Achille Grandi;Concorezzo;Concorezzo;0;btg;0|0|0
+129243536;169000;80;3;1;3;1;R;Trilocale;45.61470;9.36840;Via Luigi Ponti;Vimercate;Vimercate;0;bci;0|0|0
+129261394;329000;137;4;2;T;1;O;Quadrilocale;45.59710;9.15400;Via UMBERTO I;Varedo;Varedo;0;c;0|0|0
+129265814;249000;125;4;2;2;1;B;Quadrilocale;45.61740;9.36070;Viale Iginio Rota;Vimercate;Vimercate;0;bc;0|0|0
+129267334;285000;92;3;2;1;1;O;Trilocale;45.59180;9.33240;Via Monte Grappa;Concorezzo;Concorezzo;0;tg;0|0|0
+129267612;167000;95;3;1;S/ R;0;O;Trilocale;45.62470;9.37030;Via Gaetano Donizetti;Vimercate;Vimercate;0;bc;0|0|0
+129273284;120000;60;2;1;2;1;B;Bilocale;45.61620;9.37050;Largo Pontida;Vimercate;Vimercate;0;bci;0|0|0
+129274152;379000;180;5;2;;0;N;Terratetto unifamiliare;45.65390;9.21115;Via giuseppe giusti;San Rocco - Sanzio;Seregno;0;ba;0|0|0
+129274216;379000;180;5;3;1;0;B;Appartamento;45.65390;9.21120;Via giuseppe giusti;San Rocco - Sanzio;Seregno;0;bi;0|0|0
+129275714;2650000;1;5+;3+;;0;B;Villa unifamiliare;45.62730;9.37266;via montalino, 16;Vimercate;Vimercate;0;btc;0|0|0
+129276072;348000;109;3;1;2;1;B;Trilocale;45.62140;9.37230;Via Fratelli Cervi;Vimercate;Vimercate;0;btc;0|0|0
+129276880;259000;140;5;2;2;0;B;Appartamento;45.60040;9.19676;VIA VALGRANDE;Nova Milanese;Nova Milanese;0;btd;0|0|0
+129304686;350000;150;3;2;4;1;O;Trilocale;45.59620;9.22680;Via Piave;Muggiò;Muggiò;0;btg;0|0|0
+129307634;150000;80;3;1;4;1;B;Trilocale;45.65490;9.17980;Via Cadore;Ceredo;Seregno;0;bc;0|0|0
+129310632;145000;61;2;1;5;1;B;Bilocale;45.61170;9.37010;Via Vittorio Emanuele II;Vimercate;Vimercate;0;bc;0|0|0
+129311010;219000;85;3;1;2;1;B;Trilocale;45.65310;9.20077;via Filzi;Ospedale;Seregno;0;bt;0|0|0
+129315858;238000;71;3;1;1;1;O;Trilocale;45.58620;9.19640;Via Eugenio Villoresi;Nova Milanese;Nova Milanese;0;bgd;0|0|0
+129320724;356000;140;4;2;1;1;O;Quadrilocale;45.58940;9.20200;Via Madonnina;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129340600;185000;60;2;1;1;0;O;Appartamento;45.61741;9.35806;Viale Iginio Rota;Vimercate;Vimercate;1;bt;0|0|0
+129357776;149000;91;3;1;S/ R;0;B;Trilocale;45.61690;9.37360;Via Achille Grandi;Vimercate;Vimercate;0;bci;0|0|0
+129391266;638000;130;5;2;3;1;N;Appartamento;45.61550;9.36330;Via Alessandro Manzoni;Vimercate;Vimercate;0;t;0|0|0
+129391602;638000;130;5;2;3;1;N;Attico;45.61550;9.36330;Via Alessandro Manzoni;Vimercate;Vimercate;0;t;0|0|0
+129418102;128000;71;3;1;3;0;R;Trilocale;45.59340;9.20200;Via Orsenigo 12;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+129418930;245000;120;4;1;S/ T/ R;0;O;Quadrilocale;45.59020;9.33260;Via Alessandro Manzoni;Concorezzo;Concorezzo;0;c;0|0|0
+129421560;237000;140;4;1;4;1;;Quadrilocale;45.57460;9.35010;Via Marco d'Agrate;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+129427212;766000;226;4;2;4;1;N;Attico;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;t;0|0|0
+129433284;89000;40;1;1;1;0;O;Appartamento;45.59379;9.22767;Piazza Antonio Gramsci;Muggiò;Muggiò;1;ca;0|0|0
+129438326;155000;80;3;1;6;1;B;Trilocale;45.61800;9.37670;via luigi cadorna;Vimercate;Vimercate;0;bc;0|0|0
+129459404;309000;123;3;2;;0;O;Terratetto unifamiliare;45.65210;9.20860;Via Vignoli;Matteotti;Seregno;0;bd;0|0|0
+129463724;372000;149;4;2;2;1;N;Quadrilocale;45.60110;9.15475;Via Santa Cecilia;Varedo;Varedo;0;btc;0|0|0
+129472212;615000;180;4;2;T;0;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;j;0|0|0
+129473018;455000;131;3;;T;0;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;j;0|0|0
+129473240;525000;144;4;2;1;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129474168;495000;129;3;2;2;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129474890;425000;125;2;2;T;0;N;Bilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;j;0|0|0
+129475298;290000;82;2;1;T;0;N;Bilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;j;0|0|0
+129476400;504000;140;4;2;1;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129476590;400000;110;3;2;1;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129476790;520000;137;4;2;2;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129477020;430000;111;3;2;2;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;btd;0|0|0
+129477204;295000;77;2;1;2;1;N;Bilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129487454;485000;140;4;2;T;0;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;j;0|0|0
+129488028;435000;125;3;2;T;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;;0|0|0
+129488306;455000;125;4;2;1;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129489366;425000;114;3;2;1;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129489640;480000;126;4;2;2;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;bt;0|0|0
+129490122;450000;117;3;2;2;1;N;Trilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;btd;0|0|0
+129493548;160000;93;3;1;S/ 1;1;B;Trilocale;45.58690;9.33300;Via Pio XI;Concorezzo;Concorezzo;0;bcad;0|0|0
+129496214;255000;78;3;1;T/ 1;0;O;Trilocale;45.64890;9.20430;Via San Pietro;Umberto I - Garibaldi;Seregno;0;b;0|0|0
+129500054;529000;315;5+;3+;S/ 2;1;B;Attico;45.62260;9.37240;Via Fratelli Cervi;Vimercate;Vimercate;0;gi;0|0|0
+129528264;239000;184;4;3;;0;;Terratetto plurifamiliare;45.57780;9.34420;Via Cesare Battisti;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+129528548;270000;157;3;2;S/ 1/ 2;0;;Trilocale;45.58640;9.35770;Via Lecco;Agrate Brianza;Agrate Brianza;0;bcai;0|0|0
+129543394;229000;91;3;2;1;0;O;Trilocale;45.65490;9.19640;Via Evangelista Torricelli;Santa Valeria;Seregno;0;t;0|0|0
+129563092;595000;295;5+;3;;0;O;Villa unifamiliare;45.61930;9.36860;Via 25 Aprile;Vimercate;Vimercate;0;t;0|0|0
+129564140;219000;100;3;1;3;1;B;Trilocale;45.59120;9.22800;Via Sant'Elisabetta;Muggiò;Muggiò;0;b;0|0|0
+129565426;231000;69;2;1;1;1;N;Bilocale;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;t;0|0|0
+129573936;225000;60;2;1;T;1;N;Bilocale;45.58920;9.20920;Via Alessandro Manzoni;Nova Milanese;Nova Milanese;0;;0|0|0
+129579626;99000;50;2;2;;0;B;Bilocale;45.63490;9.19568;Via Viale Europa;San Carlo;Seregno;0;ba;0|0|0
+129609876;455000;175;3;1;5;1;O;Trilocale;45.59130;9.19960;Via Roma;Nova Milanese;Nova Milanese;0;btc;0|0|0
+129630898;359000;164;4;2;;0;B;Terratetto unifamiliare;45.59690;9.32570;Cascina Bagordo;Concorezzo;Concorezzo;0;ba;0|0|0
+129631592;239000;178;4;2;2;0;B;Quadrilocale;45.63370;9.18924;Via Adami;San Carlo;Seregno;0;btca;0|0|0
+129640468;169000;72;3;2;S/ 2;1;O;Trilocale;45.59840;9.22600;Via Trieste;Muggiò;Muggiò;0;btcg;0|0|0
+129641832;580000;342;4;3+;;0;B;Villa unifamiliare;45.62760;9.38470;Via al Roccolo;Vimercate;Vimercate;0;cd;0|0|0
+129660518;230000;75;2;1;1;1;N;Bilocale;45.59030;9.20420;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;tc;0|0|0
+129660554;230000;82;3;1;2;0;B;Trilocale;45.59300;9.20398;Via Prealpi 2;Nova Milanese;Nova Milanese;0;bagd;0|0|0
+129661156;230000;75;2;1;1;1;N;Bilocale;45.59030;9.20420;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;tc;0|0|0
+129661692;210000;112;3;2;S/ 1;0;O;Trilocale;45.58910;9.36030;Via Sant'Anna;Agrate Brianza;Agrate Brianza;0;bd;0|0|0
+129664730;143000;79;3;1;2;0;O;Trilocale;45.58970;9.20020;Via Roma;Nova Milanese;Nova Milanese;0;bcad;0|0|0
+129675088;279000;124;4;2;1;1;O;Quadrilocale;45.59120;9.32850;Via Dottor Emilio Zincone;Concorezzo;Concorezzo;0;btcg;0|0|0
+129692276;119000;70;3;1;3;0;B;Trilocale;45.65570;9.20671;Via gian domenico romagnosi;Ospedale;Seregno;0;bca;0|0|0
+129701676;224000;69;2;1;1;1;N;Bilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701866;409000;124;3;2;2;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701888;343000;104;3;2;2;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701898;426000;129;4;2;2;1;N;Quadrilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701916;602000;165;4;2;5;1;N;Attico;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701918;701000;192;4;2;5;1;N;Attico;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701920;723000;198;4;2;5;1;N;Attico;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701966;432000;129;4;2;3;1;N;Quadrilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701986;412000;123;3;2;3;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129701996;381000;112;3;2;4;1;N;Trilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;btc;0|0|0
+129702048;439000;129;4;2;4;1;N;Quadrilocale;45.58930;9.20037;VIALE DELLE RIMEMBRANZE;Nova Milanese;Nova Milanese;0;bt;0|0|0
+129711668;360000;133;4;2;2;0;N;Attico;45.64130;9.21850;Via Arturo Toscanini;San Giuseppe;Seregno;0;bcd;0|0|0
+129722142;433000;135;4;2;T;1;N;Quadrilocale;45.61190;9.37740;Via Renato Pellegatta;Vimercate;Vimercate;0;gj;0|0|0
+129727970;267783;88;3;1;T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;;0|0|0
+129743892;190000;100;3;1;2;1;B;Trilocale;45.63740;9.19468;via Ripamonti;San Carlo;Seregno;0;tc;0|0|0
+129753922;549000;275;5+;3;;0;O;Villa a schiera;45.61180;9.35780;Via Alexander Fleming;Vimercate;Vimercate;0;bt;0|0|0
+129794098;629000;386;5;3+;;0;O;Villa unifamiliare;45.62210;9.37640;Via Passirano;Vimercate;Vimercate;0;btc;0|0|0
+129823492;1200000;1;5;3+;;0;O;Villa unifamiliare;45.66630;9.20420;Strada Vicinale Foinera;Consonno - Bivio;Seregno;0;;0|0|0
+129825224;170000;75;3;1;T;0;O;Trilocale;45.58920;9.20470;Via Montegrappa;Nova Milanese;Nova Milanese;0;cd;0|0|0
+129828238;259000;75;3;1;1;1;O;Trilocale;45.59040;9.22280;Via Magenta;Muggiò;Muggiò;0;b;0|0|0
+129831138;239000;103;4;3;1 - 2;1;O;Quadrilocale;45.64910;9.22220;Via pusiano;Montello - San Salvatore;Seregno;0;ti;0|0|0
+129837024;195000;117;3;2;S/ 3;1;B;Trilocale;45.58160;9.35520;Via Nino Bixio;Agrate Brianza;Agrate Brianza;0;bi;0|0|0
+129839570;610000;152;5;3;;0;N;Villa plurifamiliare;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;;0|0|0
+129839842;850000;210;5;3;;0;N;Villa plurifamiliare;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;;0|0|0
+129840538;457000;127;3;2;T;1;N;Trilocale;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;j;0|0|0
+129840864;487000;125;4;2;T;1;N;Quadrilocale;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;j;0|0|0
+129841140;247000;62;2;1;1;1;N;Bilocale;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;t;0|0|0
+129841444;402000;101;3;2;1;1;N;Trilocale;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;t;0|0|0
+129841662;557000;133;4;2;3;1;N;Quadrilocale;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;t;0|0|0
+129841848;900000;222;5;3;4;1;N;Attico;45.58390;9.33580;Via San Pio X;Concorezzo;Concorezzo;0;t;0|0|0
+129857234;145000;74;3;1;R;1;B;Trilocale;45.61600;9.36870;Via Pinamonte;Vimercate;Vimercate;0;bci;0|0|0
+129858172;149500;50;2;1;1;1;B;Bilocale;45.65770;9.19540;Via Orcelletto;Santa Valeria;Seregno;0;bca;0|0|0
+129865652;470000;266;4;2;;0;B;Villa unifamiliare;45.59690;9.37390;Via Cascina Beretta;Vimercate;Vimercate;0;bj;0|0|0
+129866192;309000;125;3;2;;0;O;Villa a schiera;45.65210;9.20830;Via Vignoli;Matteotti;Seregno;0;bt;0|0|0
+129867510;189000;105;4;1;3;0;O;Quadrilocale;45.62050;9.37690;Via San Giovanni Bosco;Vimercate;Vimercate;0;bcd;0|0|0
+129874868;105000;43;1;1;T;0;O;Monolocale;45.66190;9.20160;Via Adua;Porada;Seregno;0;sjd;0|0|0
+129915054;95000;52;2;1;T/ 2;0;B;Bilocale;45.59580;9.15640;Via Madonnina;Varedo;Varedo;0;sd;0|0|0
+129922848;290000;139;4;2;S/ 1;1;O;Quadrilocale;45.65330;9.19260;Via Cadore;Santa Valeria;Seregno;0;btcd;0|0|0
+129952058;115000;60;1;1;T;0;B;Monolocale;45.65200;9.21170;Via tommaso grossi;San Rocco - Sanzio;Seregno;0;ai;0|0|0
+129955358;135000;64;2;1;T/ 1;0;B;Bilocale;45.57500;9.35380;Via Antonio d'Agrate;Agrate Brianza;Agrate Brianza;0;bajd;0|0|0
+129960698;800000;215;4;3;;0;R;Villa unifamiliare;45.59150;9.33601;Via Monsignor Cavezzali, 24;Concorezzo;Concorezzo;0;btcji;0|0|0
+129968910;210000;120;3;2;3;1;B;Trilocale;45.57470;9.35620;Via Giuseppe Verdi;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+129974784;50000;64;2;1;;0;R;Rustico;45.58960;9.33480;VIA SANTA MARTA;Concorezzo;Concorezzo;0;i;0|0|0
+129979056;240000;114;3;2;2;1;N;Trilocale;45.60310;9.17860;Via 8 Marzo;Varedo;Varedo;0;gi;0|0|0
+129984780;130000;75;3;1;3;0;;Trilocale;45.60100;9.15200;Via Vincenzo Bellini;Varedo;Varedo;0;bc;0|0|0
+130021242;489000;176;5;2;;0;O;Villa unifamiliare;45.59360;9.20231;VIA PASUBIO;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+130021476;142500;103;3;1;S/ R;0;B;Trilocale;45.62830;9.38700;Via Villanova;Vimercate;Vimercate;0;btcd;0|0|0
+130025854;220000;99;3;2;T/ 4;1;B;Trilocale;45.60770;9.37790;Via Montirone;Vimercate;Vimercate;0;bcg;0|0|0
+130035164;199000;106;3;2;T;0;O;Trilocale;45.61570;9.37340;Via Giuseppe Garibaldi;Vimercate;Vimercate;0;i;0|0|0
+130036714;535000;216;4;3;4 - 5;1;B;Attico;45.64910;9.20050;Via Cristoforo Colombo;Umberto I - Garibaldi;Seregno;0;;0|0|0
+130060258;199000;85;3;1;R;0;O;Trilocale;45.58850;9.22680;Via Alcide De Gasperi 2;Muggiò;Muggiò;0;bca;0|0|0
+130060974;169000;85;3;1;2;0;B;Trilocale;45.59490;9.23150;Via C. Colombo 2;Muggiò;Muggiò;0;ca;0|0|0
+130061494;167000;64;3;1;4;1;B;Trilocale;45.58470;9.33370;Via Don Girotti;Concorezzo;Concorezzo;0;bc;0|0|0
+130069300;269000;122;3;2;T/ 3;1;B;Trilocale;45.60710;9.36230;Via BRIANZA 14;Vimercate;Vimercate;0;bgi;0|0|0
+130070228;250000;117;3;2;T/ 2/ 3;0;O;Trilocale;45.58810;9.19840;Via Giovanni Vismara;Nova Milanese;Nova Milanese;0;bcagd;0|0|0
+130078062;375000;164;5;2;;0;B;Villa unifamiliare;45.62470;9.37518;Via Donizetti Gaetano;Vimercate;Vimercate;0;;0|0|0
+130079344;629000;206;5+;2;;0;O;Villa bifamiliare;45.58710;9.22210;Via Enrico De Nicola;Muggiò;Muggiò;0;bcd;0|0|0
+130081290;139000;60;2;2;;0;B;Bilocale;45.59740;9.17586;Via Venezia;Varedo;Varedo;0;d;0|0|0
+130102036;295000;94;3;2;T;1;B;Trilocale;45.59200;9.24170;Via Giuseppe Mazzini;Muggiò;Muggiò;0;btgj;0|0|0
+130102700;320000;104;3;2;5;1;O;Trilocale;45.59430;9.34740;Via Don Giovanni Minzoni;Concorezzo;Concorezzo;0;bta;0|0|0
+130103138;1320000;532;5+;3;;0;O;Villa unifamiliare;45.62750;9.37370;Via Montalino;Vimercate;Vimercate;0;c;0|0|0
+130105950;130000;60;2;1;2;0;O;Bilocale;45.57740;9.37650;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+130111372;238000;101;3;1;T;1;B;Trilocale;45.59900;9.15767;Via Dante Alighieri;Varedo;Varedo;0;td;0|0|0
+130132290;320000;155;4;1;1;0;B;Quadrilocale;45.59920;9.15850;Via Dante Alighieri;Varedo;Varedo;0;btcd;0|0|0
+130136548;570000;210;5;3;T;0;O;Appartamento;45.60690;9.36660;Via Brianza;Vimercate;Vimercate;0;bgji;0|0|0
+130152036;242000;152;3;1;T/ 1;0;B;Trilocale;45.59990;9.17690;Via Montanara;Varedo;Varedo;0;btd;0|0|0
+130152292;140000;80;3;1;1;0;O;Trilocale;45.60040;9.15720;Via Monte Tomba;Varedo;Varedo;0;d;0|0|0
+130154776;155000;90;3;1;1;0;B;Trilocale;45.59300;9.15940;Via Tiziano Vecellio;Varedo;Varedo;0;bc;0|0|0
+130198860;187000;95;3;2;1;1;B;Trilocale;45.62630;9.37340;via Pergolesi;Vimercate;Vimercate;0;btc;0|0|0
+130230480;249000;142;4;2;1;1;B;Quadrilocale;45.58190;9.35450;Via Nino Bixio;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+130233720;765000;187;4;2;4;1;N;Quadrilocale;45.61580;9.36710;Via Pinamonte da Vimercate;Vimercate;Vimercate;0;btj;0|0|0
+130234974;255000;71;3;2;2;1;O;Trilocale;45.58680;9.20250;Via Eugenio Villoresi;Nova Milanese;Nova Milanese;0;bi;0|0|0
+130236276;280000;82;3;1;1;0;O;Trilocale;45.61780;9.35506;via tommaso gallarati scotti;Vimercate;Vimercate;0;ba;0|0|0
+130237750;210000;84;3;1;4;1;O;Trilocale;45.58800;9.34050;Via Padre Tarcisio Massironi;Concorezzo;Concorezzo;0;b;0|0|0
+130308458;328000;132;3;1;1;0;O;Trilocale;45.65780;9.20200;Via Don Orione;Porada;Seregno;0;bt;0|0|0
+130326748;149000;73;2;1;T;0;B;Bilocale;45.61310;9.37380;Vicolo A. Vismara;Vimercate;Vimercate;0;cai;0|0|0
+130330278;125000;52;2;1;1;0;B;Bilocale;45.62730;9.38620;Viale Rimembranza 8;Vimercate;Vimercate;0;cg;0|0|0
+130340952;273000;94;3;1;5;1;O;Trilocale;45.64630;9.20320;Piazzale 25 Aprile;Stazione;Seregno;0;btg;0|0|0
+130350640;140000;95;3;1;3;1;B;Trilocale;45.65110;9.20480;Via Circonvallazione;Umberto I - Garibaldi;Seregno;0;sd;0|0|0
+130441242;195000;125;3;1;1;0;B;Trilocale;45.59370;9.23160;Via 1 Maggio, 5;Muggiò;Muggiò;0;cd;0|0|0
+130446878;132000;45;2;1;4;1;B;Mansarda;45.65124;9.21738;Via Sicilia;Quattro Strade;Seregno;1;ba;0|0|0
+130448248;450000;233;5+;3;S/ 1/ 2;0;O;Appartamento;45.62000;9.37860;Via Luigi Cadorna;Vimercate;Vimercate;0;btg;0|0|0
+130451758;420000;224;4;3;;0;R;Villa unifamiliare;45.65460;9.20420;Via Evangelista Torricelli;Ospedale;Seregno;0;btc;0|0|0
+130455484;339000;127;3;2;T;1;B;Trilocale;45.61290;9.37240;VIA TERRAGGIO MOLGORA;Vimercate;Vimercate;0;ci;0|0|0
+130482444;358000;130;3;2;T;1;O;Trilocale;45.64760;9.20440;Via Magenta;Stazione;Seregno;0;d;0|0|0
+130491216;159000;84;3;1;R;0;B;Trilocale;45.59980;9.19510;Via Torino;Nova Milanese;Nova Milanese;0;cd;0|0|0
+130491702;220000;75;3;2;T;0;O;Trilocale;45.65050;9.20830;Vicolo Sole;Matteotti;Seregno;0;c;0|0|0
+130495354;195000;93;2;1;S/ T/ 1;1;O;Bilocale;45.57730;9.37780;Via Orti;Agrate Brianza;Agrate Brianza;0;btcg;0|0|0
+130513970;335000;120;3;2;1;0;O;Trilocale;45.58920;9.23320;Via Luciano Manara;Muggiò;Muggiò;0;;0|0|0
+130516124;284000;90;3;2;T;0;O;Trilocale;45.64690;9.21032;via Stefano da Seregno;Lazzaretto;Seregno;0;bc;0|0|0
+130516598;210000;135;3;2;T;0;B;Trilocale;45.58960;9.35880;Via lecco;Agrate Brianza;Agrate Brianza;0;bd;0|0|0
+130522056;109000;40;1;1;4;1;B;Monolocale;45.64970;9.22090;Via montello;Montello - San Salvatore;Seregno;0;tca;0|0|0
+130522448;138000;43;1;1;T;1;B;Monolocale;45.65120;9.23670;Via Emma Gramatica;Montello - San Salvatore;Seregno;0;cgji;0|0|0
+130522586;93000;40;1;1;1;0;B;Monolocale;45.65470;9.20912;Via Settembrini;San Rocco - Sanzio;Seregno;0;bca;0|0|0
+130527832;228000;132;3;2;4;1;N;Trilocale;45.59730;9.15532;Via Corte Seveso;Varedo;Varedo;0;tcd;0|0|0
+130529344;168000;74;2;1;S - T;0;O;Bilocale;45.65480;9.20330;Via Evangelista Torricelli;Ospedale;Seregno;0;c;0|0|0
+130562114;499000;205;4;3;2;1;;Attico;45.66490;9.20260;Via verdi;Consonno - Bivio;Seregno;0;bt;0|0|0
+130562816;460000;209;5+;3+;;0;O;Villa a schiera;45.61030;9.34800;Via del Salaino;Vimercate;Vimercate;0;gji;0|0|0
+130566138;650000;245;5+;3;;0;B;Villa bifamiliare;45.59510;9.33830;Via Oreno;Concorezzo;Concorezzo;0;bi;0|0|0
+130567286;259000;123;3;2;2;1;B;Trilocale;45.64770;9.20280;Via Magenta;Umberto I - Garibaldi;Seregno;0;bt;0|0|0
+130567742;318000;120;3;1;6;1;O;Trilocale;45.64590;9.20545;via Palestro;Stazione;Seregno;0;bc;0|0|0
+130591236;218000;88;3;2;T;0;O;Trilocale;45.57680;9.37150;Via alcide de gasperi;Agrate Brianza;Agrate Brianza;0;c;0|0|0
+130605864;330000;140;5;2;;0;B;Villa bifamiliare;45.58580;9.33610;Via Cesare Cantù;Concorezzo;Concorezzo;0;tci;0|0|0
+130618556;210000;105;3;1;6;1;B;Trilocale;45.64920;9.20320;Via Augusto Mariani;Umberto I - Garibaldi;Seregno;0;btcd;0|0|0
+130618704;320000;120;4;2;1;1;B;Quadrilocale;45.57870;9.22672;SANTA CATERINA;Muggiò;Muggiò;0;btc;0|0|0
+130635364;595000;283;4;3;;0;B;Villa unifamiliare;45.61980;9.38120;Via Tonale;Vimercate;Vimercate;0;j;0|0|0
+130640146;295000;109;3;2;1;1;O;Trilocale;45.62770;9.36960;Via Montalino;Vimercate;Vimercate;0;bt;0|0|0
+130669652;180000;100;3;1;6;1;B;Trilocale;45.57460;9.35253;Via Gian Matteo Ferrario, 20864 Agrate Brianza MB, Italia;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+130675066;145000;81;3;1;S/ T/ R;0;O;Trilocale;45.61760;9.35510;Vicolo Belluschi;Vimercate;Vimercate;0;bg;0|0|0
+130707792;200000;93;3;1;T/ 2;1;R;Trilocale;45.65170;9.21200;Via Giovanni Prati;San Rocco - Sanzio;Seregno;0;bcgi;0|0|0
+130710376;312400;129;4;2;S/ 1;1;N;Quadrilocale;45.57720;9.35450;Via Dante Alighieri;Agrate Brianza;Agrate Brianza;0;bti;0|0|0
+130711948;149000;97;2;1;T;0;B;Bilocale;45.57680;9.37040;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;a;0|0|0
+130713222;417000;147;4;2;2;1;O;Quadrilocale;45.57590;9.34470;VIA SALVO D'ACQUISTO;Agrate Brianza;Agrate Brianza;0;bi;0|0|0
+130713292;389000;138;3;2;1;1;O;Trilocale;45.57590;9.34470;VIA SALVO D'ACQUISTO;Agrate Brianza;Agrate Brianza;0;bti;0|0|0
+130713710;366850;155;4;2;S - T;1;;Quadrilocale;45.57690;9.35370;Via Dante Alighieri;Agrate Brianza;Agrate Brianza;0;bj;0|0|0
+130717698;199000;90;4;2;;0;N;Terratetto unifamiliare;45.58780;9.18964;Via Caravaggio;Nova Milanese;Nova Milanese;0;b;0|0|0
+130722014;221000;158;4;1;T/ 2;0;B;Quadrilocale;45.58840;9.23250;Via Luciano Manara;Muggiò;Muggiò;0;bgi;0|0|0
+130722398;120000;65;2;1;T/ 1;0;B;Bilocale;45.59030;9.20200;Vicolo Cortelunga;Nova Milanese;Nova Milanese;0;cad;0|0|0
+130725544;140000;64;2;1;4;1;B;Appartamento;45.65345;9.19057;Via Lombardia;Santa Valeria;Seregno;1;a;0|0|0
+130754684;198000;72;2;1;T;1;O;Bilocale;45.64460;9.20750;Via Fratelli Dandolo;Stazione;Seregno;0;tai;0|0|0
+130765278;149000;98;2;1;1;0;R;Bilocale;45.57680;9.37040;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;i;0|0|0
+130806580;218000;85;3;2;;0;B;Trilocale;45.65720;9.21395;Via Lanzone da Corte;Consonno - Bivio;Seregno;0;tc;0|0|0
+130807186;620000;125;5;2;S/ 2;1;N;Appartamento;45.57280;9.35450;Via Giacomo Matteotti;Agrate Brianza;Agrate Brianza;0;cd;0|0|0
+130811364;99000;90;3;1;T/ 1;0;B;Appartamento;45.57960;9.37900;Via Delli Casati;Agrate Brianza;Agrate Brianza;0;bd;0|0|0
+130813408;249000;199;5;2;;0;B;Terratetto plurifamiliare;45.65130;9.20530;Via Alessandro Volta;Matteotti;Seregno;0;bc;0|0|0
+130823516;219000;78;2;2;T;1;O;Bilocale;45.63420;9.19667;Viale Europa, 22;San Carlo;Seregno;0;gi;0|0|0
+130835828;540000;188;4;2;2 - 3;1;N;Attico;45.64500;9.20530;Via Fratelli Bandiera;Stazione;Seregno;0;tc;0|0|0
+130839144;205000;140;4;1;T/ 4;1;O;Quadrilocale;45.57340;9.35210;Via Gian Matteo Ferrario;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+130839786;125000;86;2;1;2;1;R;Bilocale;45.59300;9.23110;Via San Rocco, 28;Muggiò;Muggiò;0;bd;0|0|0
+130844144;918000;320;5+;3+;;0;B;Villa unifamiliare;45.58740;9.19970;Via PIAVE 39;Nova Milanese;Nova Milanese;0;bj;0|0|0
+130844632;140000;57;2;1;T/ 1;1;B;Bilocale;45.58070;9.35390;Via Rodolfo Morandi;Agrate Brianza;Agrate Brianza;0;bcgi;0|0|0
+130847840;263000;100;3;1;R;0;B;Trilocale;45.65470;9.20330;Via Evangelista Torricelli;Ospedale;Seregno;0;tgd;0|0|0
+130850342;200000;120;4;2;1;1;B;Quadrilocale;45.59280;9.23770;Via Giuseppe Cesare Abba;Muggiò;Muggiò;0;b;0|0|0
+130851628;204000;82;3;1;2;1;B;Trilocale;45.64910;9.20880;Via Buonarroti;San Rocco - Sanzio;Seregno;0;ba;0|0|0
+130917106;199000;85;3;1;1;0;B;Trilocale;45.59050;9.18934;Via G. Pastore;Nova Milanese;Nova Milanese;0;b;0|0|0
+130921426;189000;190;5;1;T;1;R;Appartamento;45.59740;9.23860;Via San Francesco D'Assisi 60;Muggiò;Muggiò;0;i;0|0|0
+130921994;308000;96;3;2;1;1;N;Trilocale;45.59030;9.20420;Via San Michele del Carso;Nova Milanese;Nova Milanese;0;tc;0|0|0
+130957736;320000;120;4;2;1;1;O;Quadrilocale;45.57880;9.22690;via santa caterina;Muggiò;Muggiò;0;b;0|0|0
+130961760;85000;56;2;1;1;0;;Bilocale;45.58020;9.32210;Cascina Malcantone Brambilla;Concorezzo;Concorezzo;0;d;0|0|0
+130972190;150000;103;4;1;4;1;B;Quadrilocale;45.61990;9.38130;Via Tonale;Vimercate;Vimercate;0;bca;0|0|0
+130980716;990000;713;5+;3+;;0;B;Villa bifamiliare;45.59510;9.33820;Via Oreno;Concorezzo;Concorezzo;0;;0|0|0
+130981992;99000;54;2;1;5;0;;Bilocale;45.58270;9.19390;VIA PER INCIRANO;Nova Milanese;Nova Milanese;0;d;0|0|0
+130982574;360000;132;4;2;2;0;N;Quadrilocale;45.64140;9.22080;Via Arturo Toscanini;San Giuseppe;Seregno;0;bt;0|0|0
+131027976;264000;132;4;3;;0;B;Villa a schiera;45.65240;9.18440;Via Giuseppe Viviani;Ceredo;Seregno;0;bcd;0|0|0
+131031672;155000;62;2;1;2;0;O;Appartamento;45.64509;9.21515;Via Privata Sant'Antonio;Lazzaretto;Seregno;1;bca;0|0|0
+131039912;730000;299;5+;3+;S/ 3;1;N;Appartamento;45.57260;9.34690;Via San Domenico Savio;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+131040356;229000;80;3;1;1;0;O;Trilocale;45.64500;9.21285;via Oliveti;Lazzaretto;Seregno;0;t;0|0|0
+131040876;299000;105;3;2;T;0;O;Trilocale;45.64570;9.21108;via Lazzaretto;Lazzaretto;Seregno;0;t;0|0|0
+131041084;150000;94;3;1;2;0;B;Trilocale;45.58480;9.33550;VIA MARTIN LUTHER KING;Concorezzo;Concorezzo;0;bci;0|0|0
+131041442;360000;160;4;2;6;1;;Quadrilocale;45.58690;9.20310;Via Eugenio Villoresi;Nova Milanese;Nova Milanese;0;bt;0|0|0
+131068752;290000;125;4;2;3 - 4;1;B;Attico;45.58240;9.32930;Via Giorgio La Pira;Concorezzo;Concorezzo;0;bg;0|0|0
+131071434;180000;90;3;1;5;1;B;Trilocale;45.61790;9.37620;Via Luigi Cadorna;Vimercate;Vimercate;0;bc;0|0|0
+131074314;410000;160;4;2;T;1;O;Quadrilocale;45.64230;9.20510;Via L. Colzani;Sant'Ambrogio;Seregno;0;;0|0|0
+131078408;278000;118;3;2;3;1;B;Trilocale;45.61350;9.36220;Via Bice Cremagnani;Vimercate;Vimercate;0;bcd;0|0|0
+131093962;390000;138;4;2;;1;B;Quadrilocale;45.64570;9.21108;Via Lazzaretto;Lazzaretto;Seregno;0;btc;0|0|0
+131094104;110000;50;2;1;3;1;B;Bilocale;45.65390;9.17770;Via Vicenza;Ceredo;Seregno;0;c;0|0|0
+131095508;204000;82;3;1;2;1;B;Trilocale;45.64700;9.21030;Via Dante Alighieri;San Rocco - Sanzio;Seregno;0;ba;0|0|0
+131124702;320000;133;4;2;S/ 1;1;O;Quadrilocale;45.57910;9.22760;Via Santa Caterina;Muggiò;Muggiò;0;btcg;0|0|0
+131129996;298000;115;4;2;R;1;O;Quadrilocale;45.58160;9.35720;via Monte resegone;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+131152972;220000;87;3;2;T;1;O;Trilocale;45.58890;9.33880;Via A. Volta;Concorezzo;Concorezzo;0;bc;0|0|0
+131161428;165000;90;3;1;2;0;O;Trilocale;45.58870;9.19410;Via 20 Settembre;Nova Milanese;Nova Milanese;0;bai;0|0|0
+131174182;365000;111;3;2;3;1;B;Trilocale;45.64300;9.21560;Via ticino;Lazzaretto;Seregno;0;tcgd;0|0|0
+131177356;386000;245;5+;2;;0;B;Villa unifamiliare;45.65830;9.19740;Via Genova;Santa Valeria;Seregno;0;bcj;0|0|0
+131178692;149000;80;2;1;S - T;0;O;Bilocale;45.58980;9.19890;Via A. Vertua;Nova Milanese;Nova Milanese;0;cd;0|0|0
+131181672;168000;60;2;1;2;0;B;Bilocale;45.65140;9.20870;Corso Giacomo Matteotti;Matteotti;Seregno;0;bc;0|0|0
+131192462;179000;101;4;1;1;1;B;Quadrilocale;45.61990;9.38150;Via Tonale 1;Vimercate;Vimercate;0;bcs;0|0|0
+131199988;310000;131;3;2;T;0;O;Trilocale;45.58960;9.23220;Via Amedeo Modigliani;Muggiò;Muggiò;0;b;0|0|0
+131201226;360000;108;3;1;1;0;O;Trilocale;45.58960;9.23220;Via Amedeo Modigliani;Muggiò;Muggiò;0;b;0|0|0
+131201428;320000;117;3;2;1;0;O;Trilocale;45.58960;9.23220;Via Amedeo Modigliani;Muggiò;Muggiò;0;b;0|0|0
+131206762;270000;117;4;2;S/ 2;1;B;Quadrilocale;45.57320;9.34560;Via Papa Giovanni XXIII;Agrate Brianza;Agrate Brianza;0;tc;0|0|0
+131241284;399000;180;4;3;;0;N;Villa plurifamiliare;45.65210;9.19640;Via Rismondo;Santa Valeria;Seregno;0;bsji;0|0|0
+131244350;60000;65;2;1;1;0;R;Bilocale;45.57880;9.37770;Piazza Trivulzio;Agrate Brianza;Agrate Brianza;0;d;0|0|0
+131250290;375000;249;4;3;;0;O;Villa a schiera;45.57720;9.22630;Via Ottorino Respighi;Muggiò;Muggiò;0;btcjd;0|0|0
+131255068;399000;160;4;2;T;0;N;Quadrilocale;45.58770;9.18700;Via Assunta;Nova Milanese;Nova Milanese;0;bcgi;0|0|0
+131268698;130000;95;4;1;R;1;B;Quadrilocale;45.63320;9.34913;Via Velasca;Vimercate;Vimercate;0;b;0|0|0
+131274050;139000;65;2;1;2;1;R;Bilocale;45.59710;9.22910;Via Luigi Galvani 18;Muggiò;Muggiò;0;bcg;0|0|0
+131276350;1350000;500;5+;3+;;0;O;Villa plurifamiliare;45.58960;9.23220;Via Amedeo Modigliani;Muggiò;Muggiò;0;b;0|0|0
+131300218;415000;89;5+;3;3;1;B;Appartamento;45.61960;9.34560;Via Monsignor Adriano Bernareggi;Vimercate;Vimercate;0;;0|0|0
+131300560;160000;78;3;1;1;0;B;Trilocale;45.64240;9.21920;Via Scarlatti, 28;San Giuseppe;Seregno;0;cd;0|0|0
+131311300;295000;130;4;2;5;1;B;Attico;45.65262;9.19599;Via Gaetano Previati;Santa Valeria;Seregno;1;btca;0|0|0
+131335518;199000;120;3;2;2;0;B;Trilocale;45.59680;9.19060;Via Venezia, 50, 20834 Nova Milanese MB, Italia;Nova Milanese;Nova Milanese;0;tad;0|0|0
+131340676;335000;115;3;2;S/ T/ 2;1;O;Trilocale;45.60750;9.36880;Via 4 Novembre;Vimercate;Vimercate;0;bt;0|0|0
+131345344;170000;91;3;1;3;1;B;Trilocale;45.58570;9.33240;Via Federico Ozanam;Concorezzo;Concorezzo;0;bcag;0|0|0
+131345874;320000;120;4;2;1;1;O;Quadrilocale;45.57900;9.22766;santa caterina;Muggiò;Muggiò;0;btc;0|0|0
+131346614;329000;110;3;2;;0;B;Villa a schiera;45.65040;9.20610;Via Cavour;Matteotti;Seregno;0;bcgi;0|0|0
+131369398;730000;200;4;3;;0;N;Villa a schiera;45.61995;9.36885;Via Francesco Vigo Pellizzari;Vimercate;Vimercate;1;bt;0|0|0
+131370204;525000;145;3;2;;0;N;Villa a schiera;45.61995;9.36885;Via Francesco Vigo Pellizzari;Vimercate;Vimercate;1;bt;0|0|0
+131371520;170000;77;3;1;T/ 2;0;;Trilocale;45.58320;9.23320;Via Pavia;Muggiò;Muggiò;0;bti;0|0|0
+131374340;270000;90;3;1;2;1;O;Trilocale;45.64900;9.20348;via Medici da Seregno;Umberto I - Garibaldi;Seregno;0;bc;0|0|0
+131377782;320000;100;4;2;1;0;N;Quadrilocale;45.64730;9.20320;Via Papa Giovanni XXIII;Stazione;Seregno;0;;0|0|0
+131380772;270000;125;4;2;1;0;O;Quadrilocale;45.59320;9.22940;Piazza Giacomo Matteotti;Muggiò;Muggiò;0;bd;0|0|0
+131393256;447000;157;4;2;4;1;N;Attico;45.60460;9.17360;Via Merano;Varedo;Varedo;0;tj;0|0|0
+131394006;306000;115;4;2;2;1;N;Quadrilocale;45.60460;9.17360;Via Merano;Varedo;Varedo;0;bt;0|0|0
+131395674;99000;100;2;1;T;0;R;Loft;45.59530;9.15670;Via Madonnina;Varedo;Varedo;0;i;0|0|0
+131395782;99000;100;2;1;T;0;R;Loft;45.59530;9.15670;Via Madonnina;Varedo;Varedo;0;i;0|0|0
+131396248;249000;97;3;2;T;1;O;Trilocale;45.59160;9.33213;VIA MONTE GRAPPA;Concorezzo;Concorezzo;0;tc;0|0|0
+131397830;165000;65;2;1;1;1;O;Bilocale;45.64410;9.19730;Via TURATI;Sant'Ambrogio;Seregno;0;cgd;0|0|0
+131403048;930000;525;5+;3+;;1;O;Villa unifamiliare;45.63650;9.21280;Via dei Buttafava;San Giuseppe;Seregno;0;btc;0|0|0
+131403336;249000;117;4;2;3;1;B;Quadrilocale;45.60810;9.36260;Via Martiri di Boves;Vimercate;Vimercate;0;bcg;0|0|0
+131435560;189000;75;3;1;T;0;B;Trilocale;45.63960;9.20290;Via Fermi;Sant'Ambrogio;Seregno;0;ti;0|0|0
+131442914;393500;133;4;2;1;1;N;Quadrilocale;45.61210;9.36080;Via Galileo Galilei;Vimercate;Vimercate;0;;0|0|0
+131443226;239000;76;2;1;4;1;N;Bilocale;45.61210;9.36080;Via Galileo Galilei;Vimercate;Vimercate;0;;0|0|0
+131447510;334500;113;3;2;1;1;N;Trilocale;45.61210;9.36080;Via Galileo Galilei;Vimercate;Vimercate;0;;0|0|0
+131501830;320000;130;4;2;5 - 6;1;B;Quadrilocale;45.64570;9.21102;Via lazzaretto;Lazzaretto;Seregno;0;bg;0|0|0
+131507454;259000;115;4;1;2;1;B;Quadrilocale;45.59000;9.22020;Viale della Repubblica;Muggiò;Muggiò;0;t;0|0|0
+131507490;239000;52;2;1;5;1;O;Bilocale;45.60140;9.36055;Via Torri Bianche;Vimercate;Vimercate;0;ta;0|0|0
+131510246;285000;146;4;2;S/ 4;1;B;Quadrilocale;45.58900;9.20060;Piazza Guglielmo Marconi;Nova Milanese;Nova Milanese;0;bd;0|0|0
+131521616;229000;100;4;2;R;0;O;Quadrilocale;45.61720;9.37600;Via Luigi Cadorna;Vimercate;Vimercate;0;bcd;0|0|0
+131522686;296000;110;3;2;1;1;O;Trilocale;45.64890;9.22210;Via Pusiano;Montello - San Salvatore;Seregno;0;;0|0|0
+131523896;160000;93;3;1;1;1;B;Trilocale;45.58160;9.35460;Via N.Bixio;Agrate Brianza;Agrate Brianza;0;tcd;0|0|0
+131541778;122000;55;2;1;R;1;R;Bilocale;45.58770;9.19560;Via Andrea Doria;Nova Milanese;Nova Milanese;0;ci;0|0|0
+131546100;249000;99;3;1;1;1;O;Trilocale;45.59680;9.22020;Via Monte Grappa;Muggiò;Muggiò;0;t;0|0|0
+131550082;250000;91;3;2;2;0;O;Trilocale;45.62050;9.37290;Via Giacomo Puccini;Vimercate;Vimercate;0;ba;0|0|0
+131591764;430000;152;4;2;T;1;O;Quadrilocale;45.61430;9.36050;Via Brenta;Vimercate;Vimercate;0;cgjd;0|0|0
+131591944;260000;87;3;2;R;1;B;Trilocale;45.64520;9.21159;via Lazzaretto;Lazzaretto;Seregno;0;btg;0|0|0
+131595698;157000;110;3;1;R;0;B;Trilocale;45.59030;9.18830;Via Giambattista Vico;Nova Milanese;Nova Milanese;0;bcai;0|0|0
+131596660;349000;212;5;2;S/ 1;0;O;Attico;45.57880;9.36150;VIA DANTE ALIGHIERI;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+131613518;163000;96;3;1;2;0;O;Trilocale;45.58860;9.19740;Via San Sebastiano;Nova Milanese;Nova Milanese;0;bad;0|0|0
+131613686;269000;108;3;2;T;1;B;Trilocale;45.59910;9.15723;Via Dante Alighieri;Varedo;Varedo;0;t;0|0|0
+131619962;249000;80;3;2;T;0;B;Trilocale;45.60340;9.15759;Via Sempione;Varedo;Varedo;0;tcai;0|0|0
+131686036;127000;77;2;1;1;0;B;Bilocale;45.64970;9.22090;Via reggio;Montello - San Salvatore;Seregno;0;bi;0|0|0
+131854590;89000;50;2;1;1;0;B;Bilocale;45.59870;9.15808;Via Bagatti Valsecchi;Varedo;Varedo;0;i;0|0|0
+131868498;98000;35;1;1;;0;B;Terratetto plurifamiliare;45.57890;9.37943;Via camillo cavour;Agrate Brianza;Agrate Brianza;0;ba;0|0|0
+131887220;480000;250;4;3;;0;N;Villa bifamiliare;45.66370;9.20764;via dell'oca, 38;Consonno - Bivio;Seregno;0;b;0|0|0
+131887222;425000;150;4;2;;0;N;Villa a schiera;45.66310;9.20748;VIA VERNE, 11;Consonno - Bivio;Seregno;0;b;0|0|0
+131893838;255000;147;4;2;4;1;O;Quadrilocale;45.57340;9.35210;Via Gian Matteo Ferrario;Agrate Brianza;Agrate Brianza;0;bd;0|0|0
+131911784;90000;49;1;1;2;1;B;Monolocale;45.62490;9.38650;Via Don Pietro Lualdi;Vimercate;Vimercate;0;bcgd;0|0|0
+131919512;210000;125;3;2;1;1;B;Trilocale;45.58170;9.35490;Via Nino Bixio;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+131919562;208000;125;3;2;1;1;B;Trilocale;45.57450;9.35990;Via giuseppe verdi;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+131920310;249000;135;4;2;1;0;O;Quadrilocale;45.59770;9.32560;Cascina Bagordo;Concorezzo;Concorezzo;0;bg;0|0|0
+131961830;320000;138;4;2;S/ 1;1;O;Quadrilocale;45.57910;9.22760;Via Santa Caterina;Muggiò;Muggiò;0;btcg;0|0|0
+131963390;285000;111;3;1;3;1;O;Attico;45.59270;9.19130;Via A. Locatelli;Nova Milanese;Nova Milanese;0;bt;0|0|0
+131994052;195000;71;2;2;T;0;O;Bilocale;45.60990;9.37760;Via San Giorgio;Vimercate;Vimercate;0;ad;0|0|0
+132001022;380000;91;3;2;1;1;O;Trilocale;45.61760;9.35390;Via della Madonna;Vimercate;Vimercate;0;a;0|0|0
+132012680;270000;91;3;1;R;1;O;Appartamento;45.62017;9.37503;Via Duca degli Abruzzi;Vimercate;Vimercate;1;b;0|0|0
+132047588;280000;80;3;1;1;1;N;Trilocale;45.58850;9.19410;Via 20 Settembre;Nova Milanese;Nova Milanese;0;bti;0|0|0
+132052252;525710;155;5;2;2 - 3;1;N;Appartamento;45.64220;9.19410;Via Solferino;Sant'Ambrogio;Seregno;0;t;0|0|0
+132053660;750000;199;4;2;S/ T;1;O;Quadrilocale;45.62590;9.34690;Via Lodovica;Vimercate;Vimercate;0;tcji;0|0|0
+132057612;237000;90;3;2;T;0;O;Trilocale;45.65330;9.19160;Via Bixio;Santa Valeria;Seregno;0;b;0|0|0
+132059842;439000;132;3;2;T;1;N;Trilocale;45.59890;9.22280;via Libertà;Muggiò;Muggiò;0;;0|0|0
+132059844;420000;127;3;2;T;1;N;Trilocale;45.59890;9.22280;Via libertà;Muggiò;Muggiò;0;c;0|0|0
+132059846;348000;104;3;2;1;1;N;Trilocale;45.59890;9.22280;via libertà;Muggiò;Muggiò;0;bt;0|0|0
+132059848;442000;134;3;2;T;1;N;Trilocale;45.59890;9.22280;Via libertà;Muggiò;Muggiò;0;;0|0|0
+132059850;366000;109;3;2;1;1;N;Trilocale;45.59890;9.22280;Via libertà ;Muggiò;Muggiò;0;bt;0|0|0
+132059852;366000;109;3;2;1;1;N;Trilocale;45.59020;9.22800;Via libertà;Muggiò;Muggiò;0;bt;0|0|0
+132059854;420000;123;3;2;2;1;N;Trilocale;45.59890;9.22280;Via libertà;Muggiò;Muggiò;0;b;0|0|0
+132059856;441000;129;3;2;2;1;N;Trilocale;45.59020;9.22820;Via libertà;Muggiò;Muggiò;0;b;0|0|0
+132059860;440000;129;3;2;2;1;N;Trilocale;45.59890;9.22280;Via libertà;Muggiò;Muggiò;0;b;0|0|0
+132081312;290000;132;3;2;S/ 5/ 6;1;O;Trilocale;45.57990;9.36070;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+132105984;160000;90;3;1;3;0;B;Trilocale;45.58760;9.19780;Via Piave;Nova Milanese;Nova Milanese;0;tcgd;0|0|0
+132111752;315000;150;4;2;2;1;B;Quadrilocale;45.62200;9.37130;Via Fratelli Cervi;Vimercate;Vimercate;0;bt;0|0|0
+132112738;265000;100;3;2;1;1;O;Appartamento;45.57807;9.37461;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;1;bta;0|0|0
+132114266;309000;123;3;2;;0;O;Terratetto unifamiliare;45.65190;9.20870;Corso Matteotti, 113;Matteotti;Seregno;0;b;0|0|0
+132114992;220000;369;1;;;0;R;Rustico;45.59290;9.15950;Via Tiziano Vecellio;Varedo;Varedo;0;bd;0|0|0
+132115758;340000;136;5;3;;0;O;Terratetto unifamiliare;45.59760;9.15170;Via Bainsizza;Varedo;Varedo;0;b;0|0|0
+132115764;315000;135;5;2;;0;O;Terratetto unifamiliare;45.59760;9.15170;Via Bainsizza;Varedo;Varedo;0;bc;0|0|0
+132121152;620000;350;5+;3+;;0;O;Terratetto unifamiliare;45.59860;9.16040;Via Giuseppe Giusti;Varedo;Varedo;0;bca;0|0|0
+132126564;121600;65;2;1;1;0;B;Bilocale;45.59850;9.14880;Via Napoli;Varedo;Varedo;0;ba;0|0|0
+132126568;131100;60;2;1;R;0;B;Bilocale;45.59850;9.14880;Via Napoli;Varedo;Varedo;0;ca;0|0|0
+132126570;99750;48;2;1;1;0;B;Bilocale;45.59850;9.14880;Via Napoli;Varedo;Varedo;0;ca;0|0|0
+132126586;319900;110;3;2;T;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126588;368300;127;3;2;T;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126592;295800;102;3;2;1;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126596;319200;110;3;2;1;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126600;284000;98;3;1;2;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126602;319000;110;3;2;2;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126606;440800;152;3;2;;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132126610;461700;158;3;2;;1;N;Trilocale;45.59650;9.15430;Via Colombi;Varedo;Varedo;0;tc;0|0|0
+132154164;133000;75;2;1;1;0;B;Bilocale;45.59850;9.14880;Via Napoli;Varedo;Varedo;0;a;0|0|0
+132162490;279000;98;3;1;T;1;O;Trilocale;45.57910;9.35520;Via Lecco;Agrate Brianza;Agrate Brianza;0;i;0|0|0
+132162752;199000;98;4;1;S/ R/ 3;0;B;Quadrilocale;45.59940;9.22680;Via Padova;Muggiò;Muggiò;0;bcs;0|0|0
+132169296;435000;178;3;2;;0;N;Villa a schiera;45.57300;9.35370;Via Giacomo Matteotti;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+132181238;830000;238;4;;1;1;N;Quadrilocale;45.61790;9.36840;Via 25 Aprile;Vimercate;Vimercate;0;t;0|0|0
+132181732;725000;203;4;2;1;1;N;Quadrilocale;45.61790;9.36840;Via 25 Aprile;Vimercate;Vimercate;0;t;0|0|0
+132182088;635000;176;4;2;1;0;N;Quadrilocale;45.61790;9.36840;Via 25 Aprile;Vimercate;Vimercate;0;t;0|0|0
+132192268;159000;90;3;1;7;1;;Trilocale;45.63690;9.20980;Via Virgilio;Stadio;Seregno;0;bcd;0|0|0
+132192918;398000;175;5;3;;0;B;Villa a schiera;45.62180;9.37160;Via Fratelli Cervi;Vimercate;Vimercate;0;bc;0|0|0
+132193572;690000;155;4;2;3;1;O;Quadrilocale;45.64760;9.20480;Piazza roma;Matteotti;Seregno;0;bgi;0|0|0
+132194836;165000;95;3;1;3;0;B;Trilocale;45.58450;9.19310;Via Giuseppe Mazzini;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+132202170;128000;50;2;1;2;1;B;Bilocale;45.64910;9.20880;Via buonarroti;San Rocco - Sanzio;Seregno;0;b;0|0|0
+132202924;89000;46;2;1;T;0;;Bilocale;45.59380;9.22770;Via Don Giovanni Ferrario;Muggiò;Muggiò;0;d;0|0|0
+132226774;225000;86;3;2;2;0;O;Trilocale;45.64560;9.20540;Via Palestro;Stazione;Seregno;0;ba;0|0|0
+132229128;260000;83;3;2;2;1;B;Trilocale;45.59090;9.18740;Piazza Salvo D'Acquisto 7/B;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+132231298;199000;95;3;1;R;0;B;Trilocale;45.59290;9.21188;Via Walter Tobagi;Nova Milanese;Nova Milanese;0;b;0|0|0
+132233566;124000;79;3;;2;0;B;Trilocale;45.59530;9.15660;Via Madonnina;Varedo;Varedo;0;d;0|0|0
+132235200;168000;111;3;1;S/ 2;1;B;Trilocale;45.61390;9.35660;Via Enrico Fermi;Vimercate;Vimercate;0;bcd;0|0|0
+132235572;409000;124;3;2;2;1;N;Trilocale;45.59340;9.19890;Viale delle Rimembranze;Nova Milanese;Nova Milanese;0;b;0|0|0
+132236568;350000;90;3;2;S - T;1;N;Trilocale;45.63990;9.20550;Via Milano;Sant'Ambrogio;Seregno;0;btj;0|0|0
+132237858;545000;238;5;3;S/ 2;1;B;Appartamento;45.62000;9.37720;Via San Giovanni Bosco;Vimercate;Vimercate;0;bt;0|0|0
+132239470;230000;105;3;1;2;1;B;Trilocale;45.61780;9.37160;Via Giuseppe Verdi;Vimercate;Vimercate;0;bc;0|0|0
+132258840;250000;80;3;1;T;0;O;Trilocale;45.65850;9.20840;Via Valassina;Consonno - Bivio;Seregno;0;caji;0|0|0
+132266440;269000;85;3;1;T;0;B;Appartamento;45.61077;9.34774;Via del Salaino;Vimercate;Vimercate;1;t;0|0|0
+132290178;439000;129;4;2;4;1;N;Quadrilocale;45.59320;9.19910;Viale delle Rimembranze;Nova Milanese;Nova Milanese;0;bt;0|0|0
+132291018;420000;210;3;3+;;0;O;Villa bifamiliare;45.63510;9.34718;via giovanni pascoli , 22;Vimercate;Vimercate;0;btagj;0|0|0
+132296318;701000;192;4;2;5;1;N;Attico;45.59320;9.19910;Viale delle Rimembranze;Nova Milanese;Nova Milanese;0;bt;0|0|0
+132338082;339000;91;2;2;T;0;N;Loft;45.65350;9.20690;via ariosto;Ospedale;Seregno;0;j;0|0|0
+132344678;269000;120;3;2;1;0;O;Trilocale;45.65210;9.20860;Via Vignoli;Matteotti;Seregno;0;bd;0|0|0
+132345358;517000;142;4;;2;1;N;Quadrilocale;45.63990;9.20550;Via Milano;Sant'Ambrogio;Seregno;0;bt;0|0|0
+132365036;189000;71;2;1;1;1;B;Bilocale;45.59330;9.22811;Via conte camillo benso di cavour;Muggiò;Muggiò;0;b;0|0|0
+132365438;130000;72;2;1;1;1;B;Bilocale;45.58800;9.22510;Via Achille Grandi;Muggiò;Muggiò;0;bca;0|0|0
+132371562;277000;119;3;2;1;1;O;Trilocale;45.59820;9.17896;Via Mestre;Varedo;Varedo;0;bc;0|0|0
+132380640;124000;99;3;1;S/ T/ 3;0;R;Trilocale;45.58110;9.37960;Via Fabio Filzi;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+132381734;170000;55;2;1;T;1;O;Bilocale;45.60310;9.17770;Via Bolzano;Varedo;Varedo;0;cgji;0|0|0
+132384524;250000;96;3;2;3;1;O;Appartamento;45.59067;9.33874;Via Repubblica;Concorezzo;Concorezzo;1;b;0|0|0
+132400652;128000;51;2;1;2;0;O;Bilocale;45.58960;9.19615;BARACCA;Nova Milanese;Nova Milanese;0;b;0|0|0
+132408180;938000;305;5+;3+;;0;N;Villa unifamiliare;45.61520;9.37020;Via Giosuè Carducci;Vimercate;Vimercate;0;tc;0|0|0
+132412520;450000;215;5;2;1;0;O;Appartamento;45.65040;9.20740;Vicolo Orti;Matteotti;Seregno;0;bt;0|0|0
+132412912;145000;90;3;1;R;0;R;Trilocale;45.61780;9.35330;Via Piave;Vimercate;Vimercate;0;ad;0|0|0
+132415158;345000;150;4;2;3;1;O;Quadrilocale;45.64120;9.19513;via Colzani;Sant'Ambrogio;Seregno;0;tc;0|0|0
+132415820;320000;100;3;2;2;1;O;Trilocale;45.65800;9.21420;Via Victor Hugo;Consonno - Bivio;Seregno;0;bg;0|0|0
+132418544;269000;90;3;2;T;1;B;Trilocale;45.57570;9.22450;Via Martin Luther King;Muggiò;Muggiò;0;caj;0|0|0
+132419198;274000;90;3;2;1;1;N;Trilocale;45.65670;9.21740;Via Adda;Consonno - Bivio;Seregno;0;t;0|0|0
+132428330;177000;85;3;1;1;0;O;Trilocale;45.65400;9.19730;Via Enrico Toti;Santa Valeria;Seregno;0;bcad;0|0|0
+132429510;115000;45;2;1;T;0;O;Bilocale;45.59280;9.20170;Via Bainsizza;Nova Milanese;Nova Milanese;0;cad;0|0|0
+132429922;261000;94;3;2;S/ 3;1;O;Trilocale;45.59520;9.34370;Via Adda;Concorezzo;Concorezzo;0;bc;0|0|0
+132439230;280000;85;3;1;T;0;N;Trilocale;45.64760;9.20474;piazza Roma;Matteotti;Seregno;0;;0|0|0
+132440002;180000;105;3;2;1;1;B;Trilocale;45.58170;9.35490;Via Nino Bixio;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+132445368;197000;95;3;1;R;0;O;Trilocale;45.65600;9.20670;Via Giandomenico Romagnosi;Ospedale;Seregno;0;cd;0|0|0
+132446632;146000;105;3;1;3;0;R;Trilocale;45.62080;9.37700;Via San Giovanni Bosco;Vimercate;Vimercate;0;btcd;0|0|0
+132448686;243000;108;4;2;S - T;0;B;Quadrilocale;45.58950;9.36110;Via Sant'Anna;Agrate Brianza;Agrate Brianza;0;bgji;0|0|0
+132449226;138000;90;3;1;2;0;O;Trilocale;45.65720;9.20660;Via CORRENTI;Consonno - Bivio;Seregno;0;;0|0|0
+132460030;770000;686;;;;0;B;Terratetto plurifamiliare;45.59610;9.23500;Via Indipendenza;Muggiò;Muggiò;0;bt;0|0|0
+132462510;320000;120;4;2;;0;N;Quadrilocale;45.64760;9.20482;piazza Roma;Matteotti;Seregno;0;;0|0|0
+132471808;1000000;423;5;3;;0;O;Villa unifamiliare;45.65220;9.21360;Via circonvallazione;San Rocco - Sanzio;Seregno;0;;0|0|0
+132487106;389500;117;3;2;T;1;N;Trilocale;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;t;0|0|0
+132487646;249000;77;2;1;T;1;N;Bilocale;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;t;0|0|0
+132489734;345000;105;3;2;1;1;N;Trilocale;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;bt;0|0|0
+132490904;144000;92;3;1;S/ 2;0;B;Trilocale;45.64220;9.19260;Via Andrea Costa;Sant'Ambrogio;Seregno;0;bcad;0|0|0
+132502778;253000;77;2;1;R;1;N;Bilocale;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;t;0|0|0
+132503316;514545;138;4;2;1;0;N;Quadrilocale;45.62040;9.37960;Via L. Cadorna;Vimercate;Vimercate;0;td;0|0|0
+132503318;488329;145;3;2;T;0;N;Trilocale;45.62040;9.37960;Via L. Cadorna;Vimercate;Vimercate;0;d;0|0|0
+132503320;438273;130;3;1;T;0;N;Trilocale;45.62040;9.37960;Via L. Cadorna;Vimercate;Vimercate;0;d;0|0|0
+132503322;511904;138;4;2;1;0;N;Quadrilocale;45.62040;9.37960;Via L. Cadorna;Vimercate;Vimercate;0;td;0|0|0
+132504154;500000;152;4;2;;0;N;Villa unifamiliare;45.60770;9.36830;Via Milano;Vimercate;Vimercate;0;t;0|0|0
+132506530;715000;225;4;3;1;1;N;Attico;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;t;0|0|0
+132507388;525000;165;4;2;1;1;N;Attico;45.63940;9.20560;Viale Thomas Alva Edison;Sant'Ambrogio;Seregno;0;t;0|0|0
+132512024;119000;40;1;1;T;0;O;Monolocale;45.65540;9.20530;Via Giovanni Pascoli;Ospedale;Seregno;0;j;0|0|0
+132514396;179000;89;3;1;2;0;O;Trilocale;45.58650;9.33440;via Don Girotti;Concorezzo;Concorezzo;0;bcg;0|0|0
+132517792;270000;100;3;2;1;1;N;Trilocale;45.59630;9.14800;Via Armando Diaz;Varedo;Varedo;0;bgi;0|0|0
+132528758;279000;100;3;2;T;1;B;Trilocale;45.64020;9.19570;Via Francesco Bacone;Sant'Ambrogio;Seregno;0;j;0|0|0
+132529602;130000;70;2;1;3;1;B;Bilocale;45.57740;9.35650;Via Dante Alighieri;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+132531508;136000;75;2;1;8;1;O;Bilocale;45.57200;9.22200;Via Fratelli Bandiera;Muggiò;Muggiò;0;bd;0|0|0
+132532864;35000;21;;;;0;B;Rustico;45.61800;9.35260;Via Piave;Vimercate;Vimercate;0;ad;0|0|0
+132533074;620000;250;5;3+;;0;O;Villa bifamiliare;45.60800;9.37887;Via Montirone;Vimercate;Vimercate;0;bt;0|0|0
+132541374;240000;90;3;1;1;0;O;Trilocale;45.65220;9.19690;Via baracca;Santa Valeria;Seregno;0;bti;0|0|0
+132542214;235000;90;3;1;2;1;B;Trilocale;45.64240;9.18060;Via Enrico De Nicola;Sant'Ambrogio;Seregno;0;btci;0|0|0
+132597464;360000;150;3;3;T;1;O;Trilocale;45.59850;9.17520;Via Venezia;Varedo;Varedo;0;cjd;0|0|0
+132597906;395000;238;5+;3;;0;R;Villa bifamiliare;45.59220;9.22580;Via Roma;Muggiò;Muggiò;0;btcj;0|0|0
+132598332;119000;60;2;1;2;0;B;Bilocale;45.59470;9.19615;Via O. Favaron;Nova Milanese;Nova Milanese;0;b;0|0|0
+132598682;320000;137;3;2;;0;O;Appartamento in villa;45.58420;9.34460;Via Agrate;Concorezzo;Concorezzo;0;c;0|0|0
+132602386;169000;100;3;1;2;0;B;Trilocale;45.59580;9.14340;via Francesco Crispi, 36;Varedo;Varedo;0;bcgd;0|0|0
+132627880;379000;122;3;2;S/ T;1;O;Trilocale;45.64150;9.19880;Via Livio Colzani;Sant'Ambrogio;Seregno;0;aj;0|0|0
+132628246;234000;198;4;3;1;1;B;Quadrilocale;45.57470;9.35620;Via Giuseppe Verdi;Agrate Brianza;Agrate Brianza;0;ba;0|0|0
+132633012;159000;111;3;1;R;1;B;Trilocale;45.63380;9.34950;Via Velasca 43;Vimercate;Vimercate;0;bgi;0|0|0
+132633254;219000;104;3;1;T/ 2;1;B;Trilocale;45.63330;9.34870;Via Velasca 45;Vimercate;Vimercate;0;bci;0|0|0
+132634756;259000;129;4;2;T/ 1;0;B;Quadrilocale;45.59640;9.14590;Via Giuseppe Mazzini;Varedo;Varedo;0;btg;0|0|0
+132634882;129000;52;2;1;R;0;O;Bilocale;45.61660;9.34950;Via Asiago;Vimercate;Vimercate;0;bc;0|0|0
+132635398;220000;88;3;2;S/ 3;1;O;Trilocale;45.56600;9.35780;Via dell'artigianato 28;Agrate Brianza;Agrate Brianza;0;btag;0|0|0
+132635488;195000;54;2;1;T;1;B;Bilocale;45.63490;9.18950;Via Pellegrino Matteucci;San Carlo;Seregno;0;gj;0|0|0
+132639460;240000;90;2;2;2;1;B;Attico;45.65650;9.19997;SAN VITALE;Porada;Seregno;0;ba;0|0|0
+132639644;625000;9;5+;3+;;0;R;Rustico;45.58240;9.22010;del Parco, 0;Muggiò;Muggiò;0;btd;0|0|0
+132640152;545000;159;4;2;T;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132641716;665000;194;4;2;T;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132642552;565000;165;3;2;T;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132642746;647000;189;4;2;T;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132642948;547000;159;3;2;T;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132643050;781000;228;4;2;T;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132659100;390000;155;4;2;S2/ 2/ 4;1;B;Quadrilocale;45.58710;9.20120;Via Eugenio Villoresi;Nova Milanese;Nova Milanese;0;tc;0|0|0
+132659474;689000;208;4;3;2;1;O;Quadrilocale;45.65120;9.21080;Via Massimo d'Azeglio;San Rocco - Sanzio;Seregno;0;tag;0|0|0
+132661580;635000;230;5;2;4;1;O;Appartamento;45.64980;9.20210;VIA MANZONI , 4;Umberto I - Garibaldi;Seregno;0;b;0|0|0
+132663704;163000;65;2;1;1;1;O;Bilocale;45.59840;9.22200;Via Salvador Allende;Muggiò;Muggiò;0;bai;0|0|0
+132669818;140000;82;2;1;T;0;B;Bilocale;45.58860;9.19380;Via 20 Settembre;Nova Milanese;Nova Milanese;0;i;0|0|0
+132670600;679000;358;5+;2;;0;B;Terratetto unifamiliare;45.64680;9.20920;Via Stefano da Seregno;Lazzaretto;Seregno;0;btcd;0|0|0
+132674014;200000;60;2;1;1;0;O;Bilocale;45.65020;9.22350;Via Montorfano;Quattro Strade;Seregno;0;bs;0|0|0
+132674822;155000;104;3;1;T/ 5;1;B;Trilocale;45.57220;9.35090;Via Monte Grappa;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+132675048;371500;115;3;2;1;0;O;Trilocale;45.65020;9.22350;Via Montorfano;Quattro Strade;Seregno;0;b;0|0|0
+132675838;195000;90;3;1;5;1;O;Trilocale;45.63510;9.19035;via Aleardi;San Carlo;Seregno;0;tc;0|0|0
+132676298;175000;81;3;1;2;0;B;Trilocale;45.57920;9.34880;luigi cantini , 27;Agrate Brianza;Agrate Brianza;0;bcagd;0|0|0
+132697646;280000;140;4;2;4;1;R;Quadrilocale;45.60080;9.15389;Via Boito , 4;Varedo;Varedo;0;bca;0|0|0
+132697946;269000;85;3;;S/ T;1;B;Trilocale;45.61180;9.38080;Via Moriano;Vimercate;Vimercate;0;cj;0|0|0
+132700764;185000;105;2;1;2;0;R;Bilocale;45.59300;9.23110;Via San Rocco, 28;Muggiò;Muggiò;0;b;0|0|0
+132705714;670000;150;4;2;;0;N;Villa unifamiliare;45.65570;9.18140;Via Domenico Induno;Ceredo;Seregno;0;t;0|0|0
+132707286;562000;164;4;2;1;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132708758;599000;175;4;2;1;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+132724202;169000;57;2;1;1;0;N;Bilocale;45.65510;9.20534;via pascoli, 6;Ospedale;Seregno;0;;0|0|0
+132725104;690000;150;4;2;;0;N;Villa unifamiliare;45.65570;9.18140;Via Domenico Induno;Ceredo;Seregno;0;t;0|0|0
+132736926;395000;182;4;2;R;0;O;Quadrilocale;45.57950;9.22340;Via Pietro Mascagni;Muggiò;Muggiò;0;cd;0|0|0
+132752784;385000;250;5;3+;;0;B;Villa a schiera;45.58710;9.22210;Via Enrico De Nicola;Muggiò;Muggiò;0;b;0|0|0
+132796274;133000;48;2;1;1;1;O;Bilocale;45.65270;9.22640;Via Bevera;Montello - San Salvatore;Seregno;0;b;0|0|0
+132807328;220000;127;4;2;3;1;B;Quadrilocale;45.59840;9.15820;Via Bagatti Valsecchi;Varedo;Varedo;0;bcgd;0|0|0
+132808556;95000;40;1;1;5;1;O;Monolocale;45.59740;9.23860;Via San Francesco d'Assisi;Muggiò;Muggiò;0;bc;0|0|0
+132809916;200000;75;2;1;R;0;B;Bilocale;45.65490;9.21611;Via Salvo D'Acquisto;San Rocco - Sanzio;Seregno;0;bcd;0|0|0
+132811242;177000;82;3;1;S/ 2;1;B;Trilocale;45.64130;9.21230;Via Bergamo;Lazzaretto;Seregno;0;tcg;0|0|0
+132811826;267700;103;3;1;T;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+132812100;290000;95;3;2;2;1;B;Trilocale;45.64760;9.20440;Via magenta;Stazione;Seregno;0;bt;0|0|0
+132812424;145000;79;3;1;S/ 1;0;R;Trilocale;45.57650;9.37510;Via Alessandro Manzoni;Agrate Brianza;Agrate Brianza;0;bcagd;0|0|0
+132814488;290000;102;3;2;3;1;B;Trilocale;45.59730;9.19318;Via Pisa;Nova Milanese;Nova Milanese;0;bta;0|0|0
+132814708;589000;303;5+;3;;0;B;Villa unifamiliare;45.62120;9.38350;Via Armando Diaz 2/A;Vimercate;Vimercate;0;i;0|0|0
+132853256;110000;56;2;1;S/ R;0;B;Bilocale;45.62260;9.37000;Via Aldo Motta;Vimercate;Vimercate;0;gd;0|0|0
+132857936;639000;180;5;3;;0;O;Villa bifamiliare;45.59020;9.19470;Via Luigi Cadorna;Nova Milanese;Nova Milanese;0;t;0|0|0
+132870272;190000;96;3;1;1;0;B;Trilocale;45.57770;9.37552;Via Alcide De Gasperi 10, ;Agrate Brianza;Agrate Brianza;0;tcgd;0|0|0
+132878192;540000;147;4;2;S/ T;1;N;Quadrilocale;45.65830;9.20190;Via Damiano Chiesa;Porada;Seregno;0;bj;0|0|0
+132879204;235000;80;3;1;3;1;O;Trilocale;45.59570;9.20230;Via Fiume 35;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+132880050;198000;103;4;2;S/ 5;1;B;Quadrilocale;45.65430;9.18300;Via Cadore;Ceredo;Seregno;0;bcd;0|0|0
+132881372;723000;198;4;2;5;1;N;Attico;45.59340;9.19910;Viale delle Rimembranze;Nova Milanese;Nova Milanese;0;bt;0|0|0
+132921522;387000;177;4;3;R;0;O;Quadrilocale;45.59720;9.14910;via san michele, 4;Varedo;Varedo;0;a;0|0|0
+132924128;85000;44;1;1;1;0;O;Monolocale;45.57830;9.37820;Via Orti;Agrate Brianza;Agrate Brianza;0;ba;0|0|0
+132928282;590000;193;4;3;1;0;O;Attico;45.61940;9.35660;Via Santa Caterina da Siena;Vimercate;Vimercate;0;b;0|0|0
+132930436;698000;356;5;3;;0;O;Villa unifamiliare;45.63330;9.38710;Strada Comunale di Ponente a Villanova;Vimercate;Vimercate;0;;0|0|0
+132934974;185000;92;3;1;1;1;O;Trilocale;45.58680;9.19360;Via Fabio Filzi 15/D;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+132937254;349000;225;5+;3;;0;B;Villa a schiera;45.56960;9.34450;Via Grazia Deledda;Agrate Brianza;Agrate Brianza;0;;0|0|0
+132942024;158000;90;3;1;2;1;B;Trilocale;45.57550;9.35100;Via Marco d'Agrate;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+132945946;200000;75;3;2;2;1;O;Trilocale;45.56690;9.35780;Via dell'Artigianato;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+132948858;510000;175;5;2;5 - 6;1;O;Attico;45.66250;9.20180;Via Thomas Jefferson;Porada;Seregno;0;bt;0|0|0
+132996292;299000;140;4;2;;0;B;Villa unifamiliare;45.65180;9.22180;Via C. Porta;Quattro Strade;Seregno;0;ad;0|0|0
+133012520;189000;300;5;1;;0;R;Terratetto unifamiliare;45.66180;9.20300;Via verdi;Porada;Seregno;0;d;0|0|0
+133012578;315000;153;4;2;R;0;O;Quadrilocale;45.59720;9.14910;via san michele, 4;Varedo;Varedo;0;a;0|0|0
+133017190;335000;104;3;2;1;1;O;Trilocale;45.61620;9.36230;Via Giuseppe Giusti;Vimercate;Vimercate;0;bcg;0|0|0
+133017280;509000;148;3;2;T;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133020142;604000;176;3;2;T;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133020296;621000;181;4;2;1;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133089370;714000;208;4;2;1;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133089904;484000;141;3;2;1;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133090376;566000;165;3;2;1;1;N;Trilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133091090;625000;175;4;2;2;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133091690;639000;181;4;2;2;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133091984;735000;208;4;2;2;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133110292;165000;90;3;1;6;1;;Trilocale;45.59220;9.24100;Via Giuseppe Mazzini;Muggiò;Muggiò;0;bci;0|0|0
+133111648;530000;151;4;2;2;1;N;Quadrilocale;45.61220;9.37690;Via Renato Pellegatta;Vimercate;Vimercate;0;btd;0|0|0
+133112132;290000;268;4;3;T;1;B;Quadrilocale;45.61570;9.36580;Via Luigi Ronchi;Vimercate;Vimercate;0;c;0|0|0
+133138548;364600;90;3;2;T;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;tj;0|0|0
+133140682;337300;88;3;2;T;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;tj;0|0|0
+133140774;210000;90;3;1;1;0;O;Trilocale;45.59430;9.17767;via Novati;Varedo;Varedo;0;bca;0|0|0
+133140972;400850;104;3;2;T;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;tj;0|0|0
+133141924;381700;99;3;2;T;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;tj;0|0|0
+133142296;427350;134;4;2;T;1;N;Quadrilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;tj;0|0|0
+133142942;378300;89;3;2;1;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;bt;0|0|0
+133143162;454750;93;3;2;2;1;N;Trilocale;45.61130;9.35920;Via Trieste;Vimercate;Vimercate;0;bt;0|0|0
+133159390;950000;474;5+;3+;;0;B;Villa bifamiliare;45.58670;9.20500;Via Vincenzo Bellini;Nova Milanese;Nova Milanese;0;btcd;0|0|0
+133159648;155000;74;3;1;S/ 1;0;B;Trilocale;45.59110;9.18770;Via Leonardo da Vinci;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+133159800;82000;50;1;1;1;1;B;Monolocale;45.64970;9.22780;Viale Cicerone;Montello - San Salvatore;Seregno;0;b;0|0|0
+133174126;559000;154;4;2;3;1;N;Quadrilocale;45.61690;9.35950;Via Trieste;Vimercate;Vimercate;0;btc;0|0|0
+133174630;315000;90;3;2;1;1;N;Trilocale;45.65490;9.19630;Via Evangelista Torricelli;Santa Valeria;Seregno;0;td;0|0|0
+133176730;890000;271;5+;3;;0;N;Villa unifamiliare;45.65630;9.20010;Via Antonio Stoppani;Ospedale;Seregno;0;bt;0|0|0
+133176810;219000;100;3;2;1;0;B;Trilocale;45.63190;9.34640;Via Velasca;Vimercate;Vimercate;0;bad;0|0|0
+133179452;145000;75;3;1;2;0;O;Trilocale;45.58530;9.19220;Via Vittorio Alfieri 43;Nova Milanese;Nova Milanese;0;bad;0|0|0
+133179942;243000;152;4;2;4;1;B;Quadrilocale;45.62740;9.37340;via Giambattista Pergolesi, 12;Vimercate;Vimercate;0;bcg;0|0|0
+133182272;370000;137;3;2;T;1;N;Trilocale;45.59470;9.15810;Via Andrea Solari;Varedo;Varedo;0;cj;0|0|0
+133185916;249000;100;3;2;2;1;B;Trilocale;45.59900;9.19520;VIA NOVARA;Nova Milanese;Nova Milanese;0;btci;0|0|0
+133187058;119000;42;1;1;2;0;B;Monolocale;45.61780;9.36531;Via V. Pellizzari, 32;Vimercate;Vimercate;0;bt;0|0|0
+133190146;99000;70;3;1;3;0;B;Trilocale;45.59390;9.18980;Via Olindo Favaron, 66;Nova Milanese;Nova Milanese;0;ai;0|0|0
+133206386;229000;129;3;1;S/ T/ 1;0;B;Trilocale;45.59730;9.22670;Via Thomas Alva Edison;Muggiò;Muggiò;0;btcd;0|0|0
+133245738;260000;177;4;2;1;1;B;Quadrilocale;45.57610;9.35080;Via san paolo;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+133248868;256000;92;3;2;2;1;N;Trilocale;45.60460;9.17360;Via Merano;Varedo;Varedo;0;t;0|0|0
+133252332;105000;40;1;1;1;1;O;Monolocale;45.58240;9.32930;Via Giorgio La Pira;Concorezzo;Concorezzo;0;btcag;0|0|0
+133273794;157000;71;2;1;1;1;B;Bilocale;45.63300;9.35010;Via Vasco Pratolini;Vimercate;Vimercate;0;bcg;0|0|0
+133274006;158000;90;3;1;2;0;B;Trilocale;45.58570;9.19620;Via Gaetano Salvemini;Nova Milanese;Nova Milanese;0;bcad;0|0|0
+133283866;232000;93;3;1;1;0;O;Trilocale;45.61670;9.34850;Via Asiago;Vimercate;Vimercate;0;bcd;0|0|0
+133286242;219000;88;3;1;T;1;O;Trilocale;45.58050;9.38260;Via della Cascinetta, 6, 20864 Agrate Brianza MB, Italia;Agrate Brianza;Agrate Brianza;0;bcgji;0|0|0
+133287544;165000;64;3;1;T/ 1;0;N;Trilocale;45.61240;9.37590;Via Renato Pellegatta;Vimercate;Vimercate;0;d;0|0|0
+133289214;290000;150;4;2;2;1;B;Quadrilocale;45.57610;9.35080;Via san paolo;Agrate Brianza;Agrate Brianza;0;btcd;0|0|0
+133300238;397000;144;3;2;5;1;O;Trilocale;45.60900;9.36730;Viale Risorgimento;Vimercate;Vimercate;0;btca;0|0|0
+133312496;159000;75;2;1;6;1;B;Bilocale;45.59760;9.23900;Via Gabriele D'Annunzio;Muggiò;Muggiò;0;bca;0|0|0
+133313254;260000;120;4;2;2;1;B;Appartamento;45.61510;9.34567;Via Luigi Einaudi;Vimercate;Vimercate;1;a;0|0|0
+133327346;155000;77;2;1;S/ 2;1;B;Bilocale;45.61020;9.38050;Via Moriano;Vimercate;Vimercate;0;btca;0|0|0
+133336790;249000;137;3;2;1;0;O;Trilocale;45.59700;9.15100;Via Umberto I;Varedo;Varedo;0;agi;0|0|0
+133337080;520000;960;4;1;;0;B;Terratetto unifamiliare;45.59000;9.22020;Viale della Repubblica;Muggiò;Muggiò;0;bt;0|0|0
+133346602;195000;75;3;1;5;1;O;Trilocale;45.58310;9.22990;Via Mantova 5;Muggiò;Muggiò;0;bc;0|0|0
+133346778;539000;257;4;2;S/ 2/ 3;1;B;Quadrilocale;45.61260;9.37230;Via Terraggio Molgora;Vimercate;Vimercate;0;btc;0|0|0
+133364204;139000;55;2;1;R;1;O;Bilocale;45.58780;9.19580;Via Andrea Doria;Nova Milanese;Nova Milanese;0;cji;0|0|0
+133372870;139000;61;2;1;2;1;B;Bilocale;45.61800;9.37750;via luigi cadorna, 24;Vimercate;Vimercate;0;bas;0|0|0
+133374456;245000;170;3;2;1;0;B;Trilocale;45.61830;9.35620;via Santa Caterina da Siena  ,1;Vimercate;Vimercate;0;bci;0|0|0
+133382742;69000;40;2;1;1;0;B;Bilocale;45.62810;9.38800;Via Indipendenza 28;Vimercate;Vimercate;0;bi;0|0|0
+133383722;435000;160;3;2;;0;;Villa unifamiliare;45.57240;9.35355;Via G. Matteotti;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+133389334;190000;81;3;1;6;1;O;Trilocale;45.57900;9.22940;via Pio XII;Muggiò;Muggiò;0;bc;0|0|0
+133410460;350000;112;3;2;2;1;N;Trilocale;45.57330;9.34710;Via Marzabotto;Agrate Brianza;Agrate Brianza;0;tc;0|0|0
+133414838;289000;134;4;2;S/ 1;1;B;Quadrilocale;45.57920;9.33490;Via Cesare Battisti;Concorezzo;Concorezzo;0;b;0|0|0
+133416698;470000;222;5;3+;;0;B;Villa bifamiliare;45.59200;9.21360;Via Enrico Toti;Muggiò;Muggiò;0;bcd;0|0|0
+133427388;590000;195;4;3;1 - 2;0;O;Quadrilocale;45.61950;9.35640;via santa caterina;Vimercate;Vimercate;0;;0|0|0
+133432722;207000;75;3;1;S/ 1;1;B;Trilocale;45.57840;9.22230;Via Santa Croce;Muggiò;Muggiò;0;bt;0|0|0
+133433960;149000;65;2;1;2;0;B;Bilocale;45.57520;9.22690;Via Giacomo Leopardi;Muggiò;Muggiò;0;bca;0|0|0
+133465558;199000;90;3;1;1;1;B;Trilocale;45.58670;9.19350;Via Fabio Filzi;Nova Milanese;Nova Milanese;0;btd;0|0|0
+133474044;370000;159;4;2;;0;O;Villa unifamiliare;45.58620;9.36165;VIA MINO REITANO;Agrate Brianza;Agrate Brianza;0;;0|0|0
+133475574;618000;216;4;3;;0;O;Villa a schiera;45.59430;9.23660;Via Cesare Battisti;Muggiò;Muggiò;0;caj;0|0|0
+133479016;143000;45;2;1;T;0;N;Bilocale;45.59050;9.19710;Via Luigi Cadorna;Nova Milanese;Nova Milanese;0;cj;0|0|0
+133479176;185000;65;2;1;1;0;N;Bilocale;45.59050;9.19710;Via Luigi Cadorna;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+133479184;365000;150;4;2;1;0;N;Quadrilocale;45.65300;9.21120;Via Giosuè Carducci;San Rocco - Sanzio;Seregno;0;bd;0|0|0
+133479206;185000;88;3;1;T/ 1;0;O;Trilocale;45.57380;9.35000;Via Marco d'Agrate;Agrate Brianza;Agrate Brianza;0;cai;0|0|0
+133479372;298000;96;3;2;T;0;N;Trilocale;45.59050;9.19710;Via Luigi Cadorna;Nova Milanese;Nova Milanese;0;jd;0|0|0
+133479892;245000;80;3;2;1;0;N;Trilocale;45.59050;9.19710;Via Luigi Cadorna;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+133482788;750000;150;4;2;2;1;O;Quadrilocale;45.58630;9.19820;Via Francesco Cilea;Nova Milanese;Nova Milanese;0;btg;0|0|0
+133499348;230000;78;2;2;S/ 1;1;N;Bilocale;45.57910;9.33420;Via Cesare Battisti;Concorezzo;Concorezzo;0;b;0|0|0
+133499864;399000;197;4;2;T;1;B;Quadrilocale;45.58920;9.23300;Via Luciano Manara;Muggiò;Muggiò;0;jd;0|0|0
+133502362;180000;95;3;1;2;0;B;Trilocale;45.59390;9.19668;VIA BENEDETTO CROCE, 7;Nova Milanese;Nova Milanese;0;bc;0|0|0
+133509884;159000;86;3;1;2;0;B;Trilocale;45.59250;9.23070;Via Luogo Pio;Muggiò;Muggiò;0;bad;0|0|0
+133517892;680000;320;5;3;;0;R;Terratetto plurifamiliare;45.58400;9.33820;Via Marco Polo;Concorezzo;Concorezzo;0;bci;0|0|0
+133527628;300000;130;4;3;3;1;B;Quadrilocale;45.58580;9.19567;via Garibaldi;Nova Milanese;Nova Milanese;0;bc;0|0|0
+133527630;160000;80;3;2;3;1;O;Trilocale;45.59150;9.20252;via Segantini;Nova Milanese;Nova Milanese;0;bc;0|0|0
+133527638;185000;67;2;1;1;0;N;Bilocale;45.64810;9.20373;Seregno via Radice;Umberto I - Garibaldi;Seregno;0;ba;0|0|0
+133527640;165000;80;3;1;1;1;B;Trilocale;45.58760;9.19619;via Garibaldi;Nova Milanese;Nova Milanese;0;b;0|0|0
+133527648;120000;45;1;1;T;0;B;Monolocale;45.59800;9.16012;Varedo via Vittorio Emanuele 2;Varedo;Varedo;0;s;0|0|0
+133527652;159000;62;2;1;5;1;B;Bilocale;45.59390;9.19105;Olivo Favaron;Nova Milanese;Nova Milanese;0;tc;0|0|0
+133527654;75000;65;2;1;4;0;B;Bilocale;45.58700;9.20172;via incirano;Nova Milanese;Nova Milanese;0;ba;0|0|0
+133527658;249000;120;3;2;2;1;B;Trilocale;45.59410;9.19306;via Favaron;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+133527660;210000;110;3;2;1;1;B;Trilocale;45.59040;9.18705;Nova Milanese piazza Salvo D&#039,Acquisto;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+133541372;185000;79;3;1;4;1;B;Trilocale;45.58530;9.19690;Via Palmiro Togliatti 7;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+133546240;298000;135;4;2;1;0;B;Quadrilocale;45.59780;9.15179;Via Alessandro Manzoni;Varedo;Varedo;0;bgi;0|0|0
+133547806;345000;112;3;2;T;1;N;Trilocale;45.59140;9.15680;Via Giovanni Segantini;Varedo;Varedo;0;b;0|0|0
+133551066;265000;89;3;2;S/ 4/ 5;1;O;Trilocale;45.57940;9.35930;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;;0|0|0
+133551156;185000;118;5;1;3;0;B;Appartamento;45.59390;9.19660;Via Benedetto Croce;Nova Milanese;Nova Milanese;0;bcgi;0|0|0
+133553912;255000;80;3;1;3;1;O;Trilocale;45.60100;9.15828;Via Vincenzo Monti;Varedo;Varedo;0;ti;0|0|0
+133557564;163000;87;3;1;3;0;B;Trilocale;45.58860;9.22686;Via Alcide De Gasperi, 2;Muggiò;Muggiò;0;b;0|0|0
+133557796;195000;89;3;1;2;0;O;Trilocale;45.58930;9.20150;Via Madonnina;Nova Milanese;Nova Milanese;0;bi;0|0|0
+133572198;595000;230;5;3+;2;1;B;Appartamento;45.64980;9.20220;Via Alessandro Manzoni;Umberto I - Garibaldi;Seregno;0;b;0|0|0
+133587966;180000;100;3;1;3;0;B;Trilocale;45.58680;9.18858;GIOTTO;Nova Milanese;Nova Milanese;0;b;0|0|0
+133588008;229000;91;3;2;2;0;B;Trilocale;45.57860;9.33140;Via Salvo D'Acquisto;Concorezzo;Concorezzo;0;tag;0|0|0
+133599862;950000;541;5+;3+;;0;B;Villa bifamiliare;45.58670;9.20500;Via Vincenzo Bellini;Nova Milanese;Nova Milanese;0;b;0|0|0
+133601188;420000;190;4;3;T/ 1;1;O;Quadrilocale;45.61550;9.36330;Via Alessandro Manzoni;Vimercate;Vimercate;0;bj;0|0|0
+133601328;449000;261;5+;3+;;0;B;Villa unifamiliare;45.57770;9.34510;Via Cesare Battisti;Agrate Brianza;Agrate Brianza;0;btgj;0|0|0
+133617956;565000;324;5;2;T;0;B;Appartamento;45.61750;9.36493;via Banfi, 6/8;Vimercate;Vimercate;0;agj;0|0|0
+133618102;94000;66;2;1;3;0;B;Bilocale;45.60750;9.37070;Via Francesco Baracca;Vimercate;Vimercate;0;bcd;0|0|0
+133622608;225000;112;3;2;T;0;O;Trilocale;45.57880;9.37840;Via Pozzo;Agrate Brianza;Agrate Brianza;0;d;0|0|0
+133626178;140000;41;1;1;1;1;O;Monolocale;45.59520;9.20080;Viale delle Rimembranze;Nova Milanese;Nova Milanese;0;bi;0|0|0
+133634370;195000;108;3;1;R;1;B;Trilocale;45.59490;9.34040;Via Edmondo de Amicis;Concorezzo;Concorezzo;0;bca;0|0|0
+133643434;180000;89;3;1;T/ 1;0;B;Trilocale;45.59300;9.21070;Via Fratelli Bandiera;Nova Milanese;Nova Milanese;0;bcgd;0|0|0
+133652250;565000;166;4;2;;0;N;Villa unifamiliare;45.59700;9.37410;Via Cascina Beretta;Vimercate;Vimercate;0;bt;0|0|0
+133652680;298000;180;4;2;;0;B;Quadrilocale;45.64280;9.21477;Via Macallè, 70;Lazzaretto;Seregno;0;btc;0|0|0
+133653668;179000;99;3;1;7;1;B;Trilocale;45.58270;9.19520;Via Aspromonte;Nova Milanese;Nova Milanese;0;b;0|0|0
+133670040;430000;145;4;2;T;1;N;Quadrilocale;45.57330;9.34710;Via Marzabotto;Agrate Brianza;Agrate Brianza;0;cjd;0|0|0
+133670072;350000;118;3;2;T;1;N;Trilocale;45.57330;9.34710;Via Marzabotto;Agrate Brianza;Agrate Brianza;0;cjd;0|0|0
+133670134;420000;140;4;2;1;1;N;Quadrilocale;45.57330;9.34710;Via Marzabotto;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+133683794;119000;45;1;1;2;0;O;Open space;45.61950;9.36680;Via Francesco Vigo Pellizzari;Vimercate;Vimercate;0;bti;0|0|0
+133685792;157000;129;3;1;T/ 1/ 2;0;R;Trilocale;45.59140;9.33940;Via Giosuè Carducci;Concorezzo;Concorezzo;0;b;0|0|0
+133691990;285000;130;4;2;6;1;O;Quadrilocale;45.59130;9.22410;VIA FELICE CAVALLOTTI 5;Muggiò;Muggiò;0;bd;0|0|0
+133702228;328000;170;5;2;2 - 3;1;B;Attico;45.58970;9.23030;Via Aldo Moro;Muggiò;Muggiò;0;bt;0|0|0
+133706608;345000;111;4;2;2;1;O;Quadrilocale;45.57640;9.34640;Via Madre Margherita Panzeri;Agrate Brianza;Agrate Brianza;0;i;0|0|0
+133715794;260000;121;3;2;1;0;;Trilocale;45.58990;9.20899;Via Giacomo Leopardi, 2;Nova Milanese;Nova Milanese;0;b;0|0|0
+133728024;189000;70;2;1;1;1;B;Bilocale;45.58310;9.22890;Via Milano 12;Muggiò;Muggiò;0;b;0|0|0
+133733292;115000;67;2;1;2;1;R;Bilocale;45.57540;9.35220;Via Madonnina;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+133733510;195000;94;3;1;T;1;B;Trilocale;45.58480;9.33540;Via Martin Luther King;Concorezzo;Concorezzo;0;bi;0|0|0
+133765650;140000;85;3;1;R;0;B;Trilocale;45.62030;9.37490;Via Duca degli Abruzzi;Vimercate;Vimercate;0;bd;0|0|0
+133766232;185000;87;3;1;R;0;B;Trilocale;45.61760;9.35010;Via Alcide De Gasperi;Vimercate;Vimercate;0;bcd;0|0|0
+133772820;185000;101;3;1;S/ 2;0;B;Trilocale;45.58480;9.19310;Via Giuseppe Mazzini;Nova Milanese;Nova Milanese;0;bagd;0|0|0
+133772874;145000;69;2;1;2;0;B;Bilocale;45.59430;9.19130;Via Adige;Nova Milanese;Nova Milanese;0;bca;0|0|0
+133774202;189000;105;3;2;5;1;R;Trilocale;45.59860;9.15840;Via Bagatti Valsecchi;Varedo;Varedo;0;bcgi;0|0|0
+133786196;270000;88;3;2;S/ 1;1;N;Trilocale;45.57910;9.33420;Via Cesare Battisti;Concorezzo;Concorezzo;0;b;0|0|0
+133788312;450000;150;4;2;1;1;N;Quadrilocale;45.58320;9.34130;VIA PIO X ,24;Concorezzo;Concorezzo;0;bt;0|0|0
+133789626;372000;146;3;2;S/ 1;0;O;Trilocale;45.61150;9.37020;Via Vittorio Emanuele II;Vimercate;Vimercate;0;bgi;0|0|0
+133792474;189000;80;3;1;2;0;;Trilocale;45.57780;9.22300;Via Francesco Cilea;Muggiò;Muggiò;0;bc;0|0|0
+133793350;495000;278;4;3;;0;O;Villa unifamiliare;45.61390;9.36660;Via Dante Alighieri;Vimercate;Vimercate;0;bj;0|0|0
+133794640;329000;214;5;3+;;0;B;Villa a schiera;45.65290;9.18930;Via Marco d'Oggiono;Santa Valeria;Seregno;0;btcjd;0|0|0
+133803098;215000;125;3;2;1;1;R;Trilocale;45.58020;9.35050;Via Giuseppe Pignacca;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+133805532;105000;65;2;1;T;0;B;Bilocale;45.62820;9.38860;VIA INDIPENDENZA;Vimercate;Vimercate;0;bai;0|0|0
+133807354;209000;103;4;2;3;1;B;Quadrilocale;45.59300;9.18640;Via Mario Vanzati;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+133807566;113000;44;2;1;T;0;B;Bilocale;45.58960;9.33480;SANTA MARTA;Concorezzo;Concorezzo;0;bai;0|0|0
+133808458;377000;140;3;2;T;1;N;Trilocale;45.59260;9.33310;VIA SAN RAINALDO;Concorezzo;Concorezzo;0;cd;0|0|0
+133808460;353000;141;3;2;1;1;N;Trilocale;45.59260;9.33310;SAN RAINALDO;Concorezzo;Concorezzo;0;bt;0|0|0
+133808462;407000;147;4;2;1;1;N;Quadrilocale;45.59260;9.33310;VIA SAN RAINALDO;Concorezzo;Concorezzo;0;bt;0|0|0
+133808464;427000;150;4;2;2;1;N;Quadrilocale;45.59260;9.33310;VIA SAN RAINALDO;Concorezzo;Concorezzo;0;bt;0|0|0
+133808466;547000;185;4;2;3;1;N;Attico;45.59260;9.33310;VIA SAN RAINALDO;Concorezzo;Concorezzo;0;tc;0|0|0
+133808932;587000;188;4;2;3;1;N;Attico;45.59260;9.33310;VIA SAN RAINALDO;Concorezzo;Concorezzo;0;tc;0|0|0
+133818798;139000;64;2;1;S/ T;0;R;Bilocale;45.59110;9.20310;Via Vittorio Veneto;Nova Milanese;Nova Milanese;0;d;0|0|0
+133822198;250000;122;3;1;1;1;B;Trilocale;45.57710;9.34710;via battisti;Agrate Brianza;Agrate Brianza;0;btaj;0|0|0
+133823686;240000;80;3;2;1;0;B;Trilocale;45.59020;9.23510;Via Tiziano 14;Muggiò;Muggiò;0;bg;0|0|0
+133831624;289000;141;4;2;S/ T;0;O;Quadrilocale;45.65370;9.19980;Via San Vitale;Ospedale;Seregno;0;btcd;0|0|0
+133832674;298000;106;3;2;R;1;N;Trilocale;45.60120;9.15500;Via Santa Cecilia;Varedo;Varedo;0;t;0|0|0
+133834160;249000;105;3;2;2 - 3;0;O;Appartamento;45.59084;9.22736;Viale della Repubblica;Muggiò;Muggiò;1;a;0|0|0
+133834976;145000;80;3;1;1;0;B;Trilocale;45.57480;9.32970;Via Massimo d'Azeglio;Concorezzo;Concorezzo;0;agd;0|0|0
+133853830;209000;80;3;1;1;0;O;Trilocale;45.61670;9.36460;Via Iginio Rota 8;Vimercate;Vimercate;0;bi;0|0|0
+133857476;185000;80;2;1;1;1;B;Bilocale;45.61930;9.37700;Via Luigi Cadorna;Vimercate;Vimercate;0;bt;0|0|0
+133883316;205000;88;3;1;1;0;O;Appartamento;45.58910;9.20302;Via Giorgio Biondi;Nova Milanese;Nova Milanese;1;bta;0|0|0
+133886240;550000;179;5;2;;0;O;Villa unifamiliare;45.59440;9.19230;Via O. Favaron;Nova Milanese;Nova Milanese;0;ta;0|0|0
+133889534;950000;541;5+;3+;;0;R;Villa bifamiliare;45.58670;9.20490;Via Vincenzo Bellini;Nova Milanese;Nova Milanese;0;;0|0|0
+133897443;265000;74;2;1;T;1;B;Bilocale;45.58630;9.19820;Via Francesco Cilea;Nova Milanese;Nova Milanese;0;cjd;0|0|0
+133899641;207000;115;4;1;1;0;O;Quadrilocale;45.62290;9.36990;Via Aldo Motta;Vimercate;Vimercate;0;a;0|0|0
+133901907;195000;90;3;1;T;0;B;Trilocale;45.59390;9.33090;Via Vittorio Veneto;Concorezzo;Concorezzo;0;;0|0|0
+133927375;465000;291;5+;2;;0;B;Villa bifamiliare;45.61380;9.36350;Via B. Cremagnani;Vimercate;Vimercate;0;;0|0|0
+133960203;132000;85;3;1;4/ 7;1;B;Trilocale;45.59140;9.22410;Via Felice Cavallotti;Muggiò;Muggiò;0;bcd;0|0|0
+133997563;145000;80;3;1;R;0;R;Trilocale;45.59780;9.23170;Via Giuseppe Verdi;Muggiò;Muggiò;0;bcd;0|0|0
+133997857;449000;261;5;3+;;0;B;Villa plurifamiliare;45.57770;9.34510;Via Cesare Battisti;Agrate Brianza;Agrate Brianza;0;btgj;0|0|0
+134000189;163000;109;3;1;1;1;O;Trilocale;45.57220;9.35120;Via Monte Grappa;Agrate Brianza;Agrate Brianza;0;btc;0|0|0
+134021831;950000;547;5+;3+;;0;B;Villa bifamiliare;45.58670;9.20500;Via Vincenzo Bellini;Nova Milanese;Nova Milanese;0;bj;0|0|0
+134021989;270000;82;3;2;1;1;N;Trilocale;45.59030;9.33670;Via Libertà;Concorezzo;Concorezzo;0;bci;0|0|0
+134022137;329000;118;3;2;2;1;O;Trilocale;45.59440;9.34650;VIA ADDA ,44;Concorezzo;Concorezzo;0;tca;0|0|0
+134023177;94000;55;2;1;2;0;B;Bilocale;45.61720;9.37120;Via giuseppe mazzini;Vimercate;Vimercate;0;cd;0|0|0
+134023593;310000;165;5;2;;0;B;Villa a schiera;45.59670;9.23880;Via Giuseppe Giusti;Muggiò;Muggiò;0;bj;0|0|0
+134042971;295000;100;3;2;S/ 1;0;O;Trilocale;45.59680;9.15380;Via Umberto I;Varedo;Varedo;0;btcd;0|0|0
+134045043;447700;139;3;2;T;1;N;Trilocale;45.57360;9.35760;Via Gioacchino Rossini, 27;Agrate Brianza;Agrate Brianza;0;tc;0|0|0
+134045045;235000;71;2;1;1;1;N;Bilocale;45.57360;9.35760;Via Gioacchino Rossini, 27;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+134045047;389300;117;3;2;1;1;N;Trilocale;45.57360;9.35760;Via Gioacchino Rossini, 27;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+134045049;395650;115;3;2;2;1;N;Trilocale;45.57360;9.35760;Via Gioacchino Rossini, 27;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+134045051;411350;120;3;2;2;1;N;Trilocale;45.57360;9.35760;Via Gioacchino Rossini, 27;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+134046025;230000;74;2;1;1;1;N;Bilocale;45.59030;9.33670;Via Libertà;Concorezzo;Concorezzo;0;bc;0|0|0
+134051811;630000;250;5+;3+;;0;B;Villa unifamiliare;45.66060;9.20700;Via dell'Oca;Consonno - Bivio;Seregno;0;j;0|0|0
+134072221;225000;95;3;1;4;1;O;Trilocale;45.60900;9.37214;Via Carnia;Vimercate;Vimercate;0;b;0|0|0
+134080933;279000;105;3;1;1;0;O;Trilocale;45.61680;9.36530;Viale Iginio Rota;Vimercate;Vimercate;0;btca;0|0|0
+134100389;119000;67;2;1;T;0;B;Bilocale;45.59650;9.15700;Via Madonnina;Varedo;Varedo;0;bi;0|0|0
+134128827;529000;125;3;2;;0;B;Terratetto unifamiliare;45.65130;9.20390;Vicolo Sant'Agostino;Umberto I - Garibaldi;Seregno;0;ad;0|0|0
+134132015;130000;56;2;2;;0;O;Terratetto plurifamiliare;45.58940;9.20060;Piazza Guglielmo Marconi;Nova Milanese;Nova Milanese;0;bad;0|0|0
+134132579;225000;111;3;1;S/ R;1;O;Trilocale;45.59940;9.15760;Via Fausto Bagatti Valsecchi;Varedo;Varedo;0;bcg;0|0|0
+134159247;349000;158;4;3;3;1;B;Quadrilocale;45.58780;9.33502;Via Verdi;Concorezzo;Concorezzo;0;btc;0|0|0
+134254663;230000;64;2;1;T;0;O;Bilocale;45.61910;9.35570;Via San Francesco d'Assisi;Vimercate;Vimercate;0;ji;0|0|0
+134256735;440000;190;5;3;;0;O;Villa unifamiliare;45.57360;9.35960;Via Giacomo Puccini;Agrate Brianza;Agrate Brianza;0;bj;0|0|0
+134257419;450000;127;4;2;2;1;O;Quadrilocale;45.59670;9.19490;Via Venezia 31;Nova Milanese;Nova Milanese;0;tg;0|0|0
+134272585;155000;70;2;1;4;1;B;Bilocale;45.61330;9.36490;Via Bice Cremagnani;Vimercate;Vimercate;0;bcd;0|0|0
+134274261;225000;121;4;2;;0;O;Terratetto unifamiliare;45.58800;9.18860;Via Marco Polo 1;Nova Milanese;Nova Milanese;0;bg;0|0|0
+134330403;160000;89;3;1;2;1;B;Trilocale;45.58670;9.19350;Via Fabio Filzi;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+134333039;395000;214;5;3;;0;B;Villa bifamiliare;45.63300;9.35450;Via kennedy;Vimercate;Vimercate;0;bc;0|0|0
+134336167;950000;540;5+;3+;;0;B;Villa bifamiliare;45.58670;9.20500;Via Vincenzo Bellini;Nova Milanese;Nova Milanese;0;btcd;0|0|0
+134336451;119000;80;2;1;T;0;B;Bilocale;45.57420;9.22910;Via Giovanni Pascoli 7;Muggiò;Muggiò;0;d;0|0|0
+134338785;255000;100;3;2;2;0;B;Trilocale;45.58980;9.22680;Via Europa;Muggiò;Muggiò;0;ba;0|0|0
+134344307;392000;176;4;2;;0;;Villa unifamiliare;45.58520;9.20513;Via Per Cinisello, 12;Nova Milanese;Nova Milanese;0;tcd;0|0|0
+134345421;145000;80;3;1;2;1;R;Trilocale;45.59690;9.23630;Via San Francesco d'Assisi;Muggiò;Muggiò;0;b;0|0|0
+134346357;398000;147;4;3;;0;B;Villa a schiera;45.62180;9.37160;Via Fratelli Cervi;Vimercate;Vimercate;0;bgj;0|0|0
+134351263;280000;105;3;2;2;1;R;Trilocale;45.60650;9.36890;Via Brianza;Vimercate;Vimercate;0;tcd;0|0|0
+134354201;397000;150;4;2;1;1;O;Quadrilocale;45.60150;9.15580;VIA Giovanni Paolo II;Varedo;Varedo;0;tcg;0|0|0
+134368155;215000;87;3;1;R;0;B;Trilocale;45.59090;9.33820;VARISCO;Concorezzo;Concorezzo;0;bca;0|0|0
+134369011;339000;95;3;2;T;1;O;Trilocale;45.64370;9.21510;Via Tevere;Lazzaretto;Seregno;0;bji;0|0|0
+134375135;95000;51;2;1;2;0;R;Bilocale;45.58950;9.22610;Via della Ricostruzione;Muggiò;Muggiò;0;bca;0|0|0
+134386157;249000;105;2;;2;0;;Bilocale;45.59000;9.22020;Viale della Repubblica;Muggiò;Muggiò;0;;0|0|0
+134387361;230000;79;3;2;2;1;O;Trilocale;45.61970;9.37060;Via Giuseppe Mazzini;Vimercate;Vimercate;0;c;0|0|0
+134389791;420000;130;4;2;S/ 1;1;N;Quadrilocale;45.57230;9.34850;Via San Domenico Savio;Agrate Brianza;Agrate Brianza;0;bt;0|0|0
+134390093;350000;114;3;1;S/ 2;1;N;Trilocale;45.57230;9.34850;Via San Domenico Savio;Agrate Brianza;Agrate Brianza;0;;0|0|0
+134394287;259000;153;3;2;S/ T/ R;0;B;Trilocale;45.59990;9.16050;Via Antonio Fogazzaro;Varedo;Varedo;0;tsi;0|0|0
+134405453;198000;100;3;2;2;1;B;Trilocale;45.60010;9.22500;Via Fiume;Muggiò;Muggiò;0;bcg;0|0|0
+134407709;210000;76;3;1;2;1;O;Trilocale;45.57600;9.37110;Via alcide de gasperi;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+134410143;495000;455;5+;3+;;0;R;Villa unifamiliare;45.62460;9.36960;Via Aldo Motta;Vimercate;Vimercate;0;btc;0|0|0
+134410951;2500000;750;5+;3+;;0;O;Villa unifamiliare;45.62460;9.36960;Via Aldo Motta;Vimercate;Vimercate;0;bt;0|0|0
+134411185;3000000;850;5+;3;;0;O;Villa unifamiliare;45.62460;9.36960;Via Aldo Motta;Vimercate;Vimercate;0;cd;0|0|0
+134411975;159000;118;3;1;S/ 2;1;R;Trilocale;45.61840;9.36430;Via Antonio Banfi 17B;Vimercate;Vimercate;0;btcgd;0|0|0
+134412371;130000;65;2;1;2;0;B;Bilocale;45.58320;9.23320;Via Pavia;Muggiò;Muggiò;0;bcad;0|0|0
+134420105;429000;152;3;2;;0;B;Villa unifamiliare;45.63650;9.21280;Via dei Buttafava;San Giuseppe;Seregno;0;cj;0|0|0
+134420973;339000;110;4;2;3;1;O;Quadrilocale;45.59060;9.23560;Via Tiziano Vecellio;Muggiò;Muggiò;0;tg;0|0|0
+134440657;195000;114;4;2;T/ 3;1;B;Quadrilocale;45.57430;9.35950;Via Giuseppe Verdi;Agrate Brianza;Agrate Brianza;0;btcg;0|0|0
+134447879;235000;122;3;1;1;0;B;Trilocale;45.62100;9.37321;Via Puccini;Vimercate;Vimercate;0;bc;0|0|0
+134462703;194000;85;3;1;2;0;O;Trilocale;45.62010;9.37490;Via duca degli abruzzi;Vimercate;Vimercate;0;bcd;0|0|0
+134463801;245000;135;4;2;1;0;O;Quadrilocale;45.62540;9.36860;Via Vittorio Veneto;Vimercate;Vimercate;0;bcd;0|0|0
+134472317;195000;90;3;1;5;1;B;Attico;45.59220;9.20900;Via Don Carlo Mezzera;Nova Milanese;Nova Milanese;0;btcg;0|0|0
+134476327;115000;62;2;1;5;1;R;Bilocale;45.59210;9.24103;Via Giuseppe Mazzini;Muggiò;Muggiò;0;b;0|0|0
+134480043;72000;35;2;1;T;0;O;Appartamento;45.57994;9.37944;Via Delli Casati;Agrate Brianza;Agrate Brianza;1;;0|0|0
+134480089;129000;79;2;1;S/ 5;1;R;Bilocale;45.58820;9.22490;Via Achille Grandi;Muggiò;Muggiò;0;bcd;0|0|0
+134494483;270000;107;3;1;3;1;O;Trilocale;45.59370;9.32720;Via Remo Brambilla;Concorezzo;Concorezzo;0;tca;0|0|0
+134496445;155000;93;3;1;1;0;B;Trilocale;45.61810;9.35260;Via Piave;Vimercate;Vimercate;0;bcag;0|0|0
+134496471;235000;85;3;1;1;1;O;Trilocale;45.65340;9.18830;Via Beato Angelico;Santa Valeria;Seregno;0;bcg;0|0|0
+134505165;270000;85;3;1;2;1;B;Trilocale;45.59370;9.33810;Via Libertà, 9;Concorezzo;Concorezzo;0;bcgd;0|0|0
+134506689;148000;104;3;1;3;0;B;Trilocale;45.62570;9.36880;Via Vittorio Veneto;Vimercate;Vimercate;0;btcd;0|0|0
+134507297;220000;77;3;1;T;0;B;Trilocale;45.61730;9.35276;Via Carlo Borromeo, 8;Vimercate;Vimercate;0;asj;0|0|0
+134510575;145000;55;2;1;T;0;B;Bilocale;45.58040;9.19480;Via Cava Madonnina;Nova Milanese;Nova Milanese;0;d;0|0|0
+134526521;450000;198;4;3+;;0;B;Villa a schiera;45.58930;9.22140;Via della Ricostruzione;Muggiò;Muggiò;0;b;0|0|0
+134529897;129000;84;3;1;4;0;B;Trilocale;45.65160;9.19988;Via Torino;Santa Valeria;Seregno;0;bc;0|0|0
+134530119;229000;132;3;1;;0;R;Appartamento in villa;45.60690;9.37050;Via Francesco Baracca;Vimercate;Vimercate;0;cgj;0|0|0
+134530987;257000;122;3;2;;0;B;Appartamento in villa;45.60690;9.37050;Via Francesco Baracca;Vimercate;Vimercate;0;bc;0|0|0
+134531565;299000;97;3;2;3;1;N;Trilocale;45.59160;9.22342;Via Roma, 35;Muggiò;Muggiò;0;btc;0|0|0
+134531569;299000;97;3;2;3;1;N;Attico;45.59160;9.22342;Via Roma, 35;Muggiò;Muggiò;0;btc;0|0|0
+134557443;369000;164;3;3;;0;B;Villa bifamiliare;45.63210;9.34700;Via Luigi Pirandello 2;Vimercate;Vimercate;0;j;0|0|0
+134559003;150000;95;2;1;T;1;R;Bilocale;45.59460;9.23290;Via 25 Aprile;Muggiò;Muggiò;0;i;0|0|0
+134561535;169000;75;2;1;R;1;O;Bilocale;45.58810;9.33460;VIA VERDI;Concorezzo;Concorezzo;0;bca;0|0|0
+134562937;145000;57;2;1;3;0;O;Bilocale;45.59330;9.20240;Via Pasubio 23;Nova Milanese;Nova Milanese;0;ba;0|0|0
+134565539;130000;58;2;1;R;0;B;Bilocale;45.58270;9.19380;Via PER INCIRANO 7;Nova Milanese;Nova Milanese;0;bcai;0|0|0
+134565759;265000;80;2;1;2;1;O;Bilocale;45.59480;9.19840;Via Armando Diaz 7;Nova Milanese;Nova Milanese;0;tg;0|0|0
+134572319;430000;215;4;3+;2;0;R;Quadrilocale;45.61740;9.35500;Vicolo Belluschi;Vimercate;Vimercate;0;bcd;0|0|0
+134573197;214000;90;3;1;4;1;O;Trilocale;45.63210;9.34570;via Velasca;Vimercate;Vimercate;0;ba;0|0|0
+134573651;320000;120;4;2;1;1;O;Appartamento;45.57907;9.22761;Via Santa Caterina;Muggiò;Muggiò;1;;0|0|0
+134573769;259000;110;3;1;R;0;B;Trilocale;45.59010;9.22300;Viale della Repubblica;Muggiò;Muggiò;0;bcd;0|0|0
+134574343;290000;100;3;2;T;1;O;Trilocale;45.64740;9.21040;Via Dante Alighieri;San Rocco - Sanzio;Seregno;0;b;0|0|0
+134578717;365000;120;3;1;1;1;O;Appartamento;45.61386;9.37238;Via Francesco Crispi;Vimercate;Vimercate;1;;0|0|0
+134579483;345000;155;4;2;S/ R;1;B;Quadrilocale;45.61600;9.36600;Via Monte Grappa;Vimercate;Vimercate;0;bi;0|0|0
+134594951;139000;56;2;1;1;0;O;Bilocale;45.62230;9.38340;Via Generale Antonio Cantore;Vimercate;Vimercate;0;ti;0|0|0
+134596779;230000;110;3;1;2;1;B;Trilocale;45.61630;9.37570;Via Luigi Cadorna;Vimercate;Vimercate;0;bci;0|0|0
+134597233;160000;103;3;1;3;0;O;Trilocale;45.60760;9.37036;VIA BARACCA;Vimercate;Vimercate;0;bc;0|0|0
+134605551;115000;68;2;1;S/ 2;1;B;Bilocale;45.58890;9.19160;Vicolo dei Fiori;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+134606029;590000;210;5;3;;0;O;Villa unifamiliare;45.65080;9.23670;Via Emma Gramatica;Montello - San Salvatore;Seregno;0;btj;0|0|0
+134608007;139000;72;2;1;S/ 2;1;B;Bilocale;45.61340;9.36310;Via Bice Cremagnani;Vimercate;Vimercate;0;bci;0|0|0
+134610453;190000;55;2;1;T;1;O;Bilocale;45.61060;9.37060;Piazzale Guglielmo Marconi;Vimercate;Vimercate;0;bji;0|0|0
+134612103;285000;106;4;1;4;1;O;Quadrilocale;45.60250;9.15200;Via Vincenzo Bellini 41;Varedo;Varedo;0;bca;0|0|0
+134612141;399000;161;5;3;;0;B;Villa bifamiliare;45.57840;9.33050;Via Salvo D'Acquisto;Concorezzo;Concorezzo;0;j;0|0|0
+134613415;305000;114;4;2;3;1;B;Appartamento;45.57640;9.34640;Via Madre Margherita Panzeri;Agrate Brianza;Agrate Brianza;1;bt;0|0|0
+134613991;374500;267;4;2;T;0;R;Quadrilocale;45.59710;9.37346;Via Cascina Beretta;Vimercate;Vimercate;0;btca;0|0|0
+134627163;129000;47;1;1;S/ 5;1;O;Monolocale;45.58280;9.22870;Via Milano;Muggiò;Muggiò;0;t;0|0|0
+134627253;260000;123;3;2;S/ T/ R;0;B;Trilocale;45.60000;9.19700;Via Val Grande;Nova Milanese;Nova Milanese;0;btcd;0|0|0
+134628251;105000;43;1;;1;1;B;Appartamento;45.59052;9.33680;Via Libertà;Concorezzo;Concorezzo;1;ca;0|0|0
+134628523;145000;250;1;;;0;R;Rustico;45.57840;9.37918;Via Camillo Benso Conte di Cavour;Agrate Brianza;Agrate Brianza;0;;0|0|0
+134629561;269000;94;2;1;S/ T;1;N;Bilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134629603;349000;119;3;2;S/ 1;1;N;Trilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134629683;369000;125;3;2;S/ 1;1;N;Trilocale;45.57970;9.35790;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134629785;375000;124;4;2;S/ 1;1;N;Quadrilocale;45.57970;9.35790;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134630011;419000;138;4;2;S/ 3;1;N;Quadrilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134630081;169000;88;3;2;1;1;R;Trilocale;45.58750;9.33890;VIA UGO LA MALFA;Concorezzo;Concorezzo;0;bca;0|0|0
+134630801;629000;204;4;2;S/ 5;1;N;Quadrilocale;45.57970;9.35790;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134630851;479000;162;5;3;S/ 5/ 6;1;N;Appartamento;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134630951;315000;110;3;2;S/ T;1;N;Trilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;ti;0|0|0
+134630993;329000;114;3;2;S/ T;1;N;Trilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134631405;500000;145;3;2;1;1;B;Trilocale;45.57570;9.34870;Via Salvo d'Acquisto;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+134631961;349000;120;3;2;S/ 1;1;N;Trilocale;45.57940;9.35930;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134638007;369000;125;3;2;S/ 1;1;N;Trilocale;45.57900;9.35860;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134638933;375000;124;4;2;S/ 1;1;N;Quadrilocale;45.57940;9.35930;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639011;315000;105;3;2;S/ 2;1;N;Trilocale;45.57940;9.35930;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639037;405000;138;4;2;S/ 2;1;N;Quadrilocale;45.57940;9.35930;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639063;379000;124;4;2;S/ 3;1;N;Quadrilocale;45.57900;9.35860;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639087;325000;104;3;2;S/ 4;1;N;Trilocale;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639125;389000;124;4;2;S/ 4;1;N;Quadrilocale;45.57900;9.35860;Via Jan Palach;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639163;629000;204;4;2;S/ 5;1;N;Quadrilocale;45.57970;9.35790;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134639209;479000;162;5;3;S/ 5/ 6;1;N;Appartamento;45.58010;9.35820;Via Padre Clemente Vismara;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134640059;149000;77;3;1;2;0;O;Trilocale;45.59260;9.33300;Via San Rainaldo;Concorezzo;Concorezzo;0;ba;0|0|0
+134644403;259000;88;3;2;1;1;O;Trilocale;45.59050;9.19020;Via Achille Grandi;Nova Milanese;Nova Milanese;0;bcd;0|0|0
+134653527;329000;100;4;2;1;1;O;Quadrilocale;45.59460;9.24051;VIA CIRO MENOTTI;Muggiò;Muggiò;0;bta;0|0|0
+134657551;249000;199;5;2;;0;B;Terratetto plurifamiliare;45.65130;9.20530;Via Alessandro Volta;Matteotti;Seregno;0;bc;0|0|0
+134658483;1700000;1;5+;3+;S/ R/ 1;1;O;Appartamento;45.62460;9.36960;Via Aldo Motta;Vimercate;Vimercate;0;i;0|0|0
+134660161;410000;160;4;2;S/ 2;1;O;Quadrilocale;45.58920;9.37220;Via Santa Maria Molgora;Vimercate;Vimercate;0;i;0|0|0
+134660799;190000;83;3;2;3;1;O;Mansarda;45.57990;9.19340;Via Giuseppe Garibaldi;Nova Milanese;Nova Milanese;0;t;0|0|0
+134662143;179000;70;3;2;1;0;O;Trilocale;45.58950;9.35710;Via Lambro;Agrate Brianza;Agrate Brianza;0;bg;0|0|0
+134665617;88000;50;2;1;T;0;B;Bilocale;45.65420;9.21030;Via Boccacio;San Rocco - Sanzio;Seregno;0;ad;0|0|0
+134669477;80000;65;2;1;3;0;R;Bilocale;45.58980;9.20960;Via Dante Alighieri;Nova Milanese;Nova Milanese;0;d;0|0|0
+134669483;269000;110;3;2;1;1;B;Trilocale;45.57600;9.35740;Via Santa Caterina da Siena;Agrate Brianza;Agrate Brianza;0;bagi;0|0|0
+134678577;228000;109;3;1;2;1;B;Trilocale;45.62140;9.37230;Via Fratelli Cervi;Vimercate;Vimercate;0;btc;0|0|0
+134712843;476000;190;4;3;;0;N;Villa bifamiliare;45.60230;9.17740;Viale Lombardia;Varedo;Varedo;0;bd;0|0|0
+134716721;429000;160;4;1;1;0;O;Quadrilocale;45.58740;9.19970;Via PIAVE 39;Nova Milanese;Nova Milanese;0;btai;0|0|0
+134716723;489000;160;5;2;T;0;B;Appartamento;45.58740;9.19970;Via PIAVE 39;Nova Milanese;Nova Milanese;0;cai;0|0|0
+134717093;259000;110;2;1;S/ T;1;O;Bilocale;45.58500;9.34190;Via Agrate;Concorezzo;Concorezzo;0;gji;0|0|0
+134718657;225000;97;4;2;2;0;O;Quadrilocale;45.61620;9.36460;Via Antonio Stoppani;Vimercate;Vimercate;0;bcgd;0|0|0
+134719247;309000;114;4;2;T/ 1;0;N;Quadrilocale;45.57550;9.35360;Via Gian Matteo Ferrario, 11;Agrate Brianza;Agrate Brianza;0;t;0|0|0
+134726597;205000;100;3;2;1;1;B;Trilocale;45.61340;9.36040;Via Bice Cremagnani;Vimercate;Vimercate;0;bcgd;0|0|0
+134731787;270000;140;3;2;1;0;B;Trilocale;45.59010;9.22400;Viale della Repubblica;Muggiò;Muggiò;0;bcd;0|0|0
+134745607;169000;90;3;1;1;0;B;Trilocale;45.58850;9.22640;Via Alcide De Gasperi;Muggiò;Muggiò;0;bcd;0|0|0
+134745689;300000;105;3;2;3;1;O;Trilocale;45.59040;9.21155;via Foscolo;Nova Milanese;Nova Milanese;0;tcg;0|0|0
+134746897;95000;71;2;1;S/ 1;0;B;Bilocale;45.62810;9.38690;Via Indipendenza;Vimercate;Vimercate;0;bcd;0|0|0
+134748423;105000;43;1;;1;0;;Monolocale;45.59170;9.33720;Via Libertà;Concorezzo;Concorezzo;0;;0|0|0
+134770101;260000;100;3;2;1;0;O;Trilocale;45.58840;9.20080;Via Giovanni Giussani;Nova Milanese;Nova Milanese;0;btc;0|0|0
+134776741;168000;81;3;1;2;1;B;Trilocale;45.57450;9.35500;Via Lecco;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+134781931;300000;106;3;2;1;1;N;Trilocale;45.60530;9.37094;Via Falcone e Borsellino;Vimercate;Vimercate;0;bt;0|0|0
+134782069;119000;65;2;1;2;0;B;Bilocale;45.58840;9.19030;Via Assunta;Nova Milanese;Nova Milanese;0;a;0|0|0
+134786683;325000;183;5;3;2 - 3;0;B;Appartamento;45.60400;9.17620;Via Zara;Varedo;Varedo;0;btcd;0|0|0
+134788187;243000;121;4;2;3;1;O;Quadrilocale;45.59700;9.17460;Viale Europa;Varedo;Varedo;0;tcgd;0|0|0
+134788499;199000;85;3;1;1;0;B;Trilocale;45.59100;9.21440;Via Italia;Muggiò;Muggiò;0;td;0|0|0
+134792055;149000;105;3;1;5;1;B;Trilocale;45.57610;9.34960;Piazza San Paolo ,2;Agrate Brianza;Agrate Brianza;0;ba;0|0|0
+134792069;229000;125;3;2;R;0;B;Trilocale;45.61830;9.35620;via Santa Caterina da Siena  ,1;Vimercate;Vimercate;0;bdi;0|0|0
+134795555;195000;64;2;1;S/ 1;1;O;Bilocale;45.57650;9.34620;Via Madre Margherita Panzeri;Agrate Brianza;Agrate Brianza;0;ti;0|0|0
+134797515;93000;60;3;1;2;0;R;Trilocale;45.59290;9.20640;Via Luciano Manara;Nova Milanese;Nova Milanese;0;ba;0|0|0
+134799413;225000;90;3;1;S/ T/ 4;1;O;Trilocale;45.59560;9.20230;Via Fiume;Nova Milanese;Nova Milanese;0;bcg;0|0|0
+134811843;82000;37;1;1;S/ 2;1;B;Monolocale;45.61340;9.36310;Via Bice Cremagnani;Vimercate;Vimercate;0;ca;0|0|0
+134814441;470000;307;5+;2;;0;R;Villa unifamiliare;45.59010;9.20750;Via Maurizio Macciantelli 22;Nova Milanese;Nova Milanese;0;tca;0|0|0
+134816431;398000;197;5;2;;0;B;Villa unifamiliare;45.59190;9.16020;Via Caravaggio;Varedo;Varedo;0;bcd;0|0|0
+134816435;139000;80;3;1;2;0;R;Trilocale;45.59600;9.14486;Via Francesco Crispi;Varedo;Varedo;0;bc;0|0|0
+134817545;159000;58;2;1;1;1;B;Bilocale;45.59320;9.18620;Via Mario Vanzati 8;Nova Milanese;Nova Milanese;0;bcagi;0|0|0
+134818127;240000;90;3;2;3;1;O;Trilocale;45.59880;9.19520;Via Novara;Nova Milanese;Nova Milanese;0;bag;0|0|0
+134825619;219000;118;4;1;1;0;R;Quadrilocale;45.57790;9.37591;Via Alcide De Gasperi 8;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+134829927;120000;70;2;1;3;0;B;Bilocale;45.59070;9.19986;VIA ROMA;Nova Milanese;Nova Milanese;0;b;0|0|0
+134834245;179000;85;3;1;S/ 1;1;B;Trilocale;45.57650;9.37630;Via Alcide De Gasperi;Agrate Brianza;Agrate Brianza;0;b;0|0|0
+134851819;268000;112;3;1;S/ T/ 1;0;O;Trilocale;45.61700;9.36340;Viale Iginio Rota;Vimercate;Vimercate;0;btcad;0|0|0
+134852271;100000;48;2;1;2;0;B;Bilocale;45.59580;9.15640;Via Madonnina;Varedo;Varedo;0;ai;0|0|0
+134855903;349000;135;3;2;S/ 2;0;O;Trilocale;45.58990;9.22360;Viale della Repubblica;Muggiò;Muggiò;0;btc;0|0|0
+134868055;139000;76;2;1;2;0;B;Bilocale;45.57530;9.35060;Via Marco d'Agrate;Agrate Brianza;Agrate Brianza;0;bcd;0|0|0
+134869317;200000;160;4;2;T;0;O;Quadrilocale;45.57610;9.35077;Via san paolo;Agrate Brianza;Agrate Brianza;0;j;0|0|0
+134902699;249000;100;3;2;1;1;O;Trilocale;45.60150;9.15660;Via Giovanni Paolo II;Varedo;Varedo;0;ti;0|0|0
+134903629;580000;168;4;2;3;1;N;Attico;45.59460;9.19740;Via Olindo Favaron;Nova Milanese;Nova Milanese;0;bt;0|0|0
+134905543;179000;91;3;1;2;0;B;Trilocale;45.59220;9.33910;Via Guglielmo Marconi;Concorezzo;Concorezzo;0;bca;0|0|0
+134910737;185000;63;2;1;S2/ 4;1;O;Bilocale;45.61330;9.36490;Via Bice Cremagnani;Vimercate;Vimercate;0;bi;0|0|0
+134912973;410000;230;4;;;0;R;Terratetto unifamiliare;45.57470;9.22865;Via Massimo d\'Azeglio;Muggiò;Muggiò;0;b;0|0|0
+134916857;200000;105;3;1;1;1;B;Trilocale;45.62010;9.37930;Via Luigi Cadorna;Vimercate;Vimercate;0;tcd;0|0|0
+134917745;130000;60;2;1;1;0;B;Bilocale;45.58990;9.34020;Via Sant'Agata;Concorezzo;Concorezzo;0;bcagi;0|0|0
+134930447;225000;110;3;2;T;0;B;Trilocale;45.60670;9.34000;Via per Villasanta;Vimercate;Vimercate;0;bcji;0|0|0
+134934179;315000;100;4;1;1;1;O;Quadrilocale;45.59100;9.21160;Via Ugo Foscolo 15;Nova Milanese;Nova Milanese;0;ba;0|0|0
+134934237;135000;54;2;1;1;0;O;Bilocale;45.58770;9.34070;via Massironi, 20;Concorezzo;Concorezzo;0;bca;0|0|0
+134941687;140000;110;3;3;;0;B;Villa a schiera;45.62860;9.39510;Via San Nazzaro;Vimercate;Vimercate;0;ba;0|0|0
+134941869;550000;217;5+;3;;0;B;Villa bifamiliare;45.63410;9.35250;VIA CONI ZUGNA;Vimercate;Vimercate;0;bcai;0|0|0
+134942029;69000;43;2;1;T;0;R;Bilocale;45.61740;9.35810;Viale Iginio Rota;Vimercate;Vimercate;0;c;0|0|0
+134945703;259000;128;3;2;T/ 1;1;O;Trilocale;45.57600;9.35740;Via Santa Caterina da Siena;Agrate Brianza;Agrate Brianza;0;bci;0|0|0
+134945765;300000;105;3;2;3;1;O;Trilocale;45.59090;9.21280;Via Ugo Foscolo;Nova Milanese;Nova Milanese;0;tcg;0|0|0
+134946231;290000;110;3;2;2;0;O;Trilocale;45.58840;9.20080;Via Giovanni Giussani;Nova Milanese;Nova Milanese;0;btc;0|0|0
+134947219;249000;90;3;2;2;0;O;Trilocale;45.64710;9.20881;corso matteotti;San Rocco - Sanzio;Seregno;0;bc;0|0|0
+134947821;650000;220;5;2;;0;O;Villa unifamiliare;45.61110;9.36800;Via Ospedale;Vimercate;Vimercate;0;;0|0|0
+134958835;125000;90;3;1;8;1;B;Trilocale;45.58460;9.19540;via Garibaldi;Nova Milanese;Nova Milanese;0;bc;0|0|0
+134962529;200000;105;3;1;T;0;B;Trilocale;45.58650;9.33410;Via Girotti;Concorezzo;Concorezzo;0;bcd;0|0|0
+134963371;120000;58;2;1;1;0;B;Bilocale;45.62020;9.37580;Via Passirano;Vimercate;Vimercate;0;bci;0|0|0
+134963563;273000;150;4;3;;0;B;Villa a schiera;45.56980;9.34422;Via Deledda;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+134984909;250000;85;3;1;3;1;B;Attico;45.61130;9.37020;Via Vittorio Emanuele II;Vimercate;Vimercate;0;ti;0|0|0
+134993683;219000;85;3;2;;0;R;Terratetto unifamiliare;45.61190;9.37773;Via Renato Pellegatta;Vimercate;Vimercate;0;tcgjd;0|0|0
+134994307;228000;100;3;1;2;1;B;Trilocale;45.57570;9.34880;via ugo foscolo;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
+134995551;160000;55;2;1;4;1;B;Bilocale;45.58570;9.19673;TOGLIATTI;Nova Milanese;Nova Milanese;0;bc;0|0|0
+135003365;770000;473;5+;3+;;0;B;Villa bifamiliare;45.59640;9.23510;Via Indipendenza;Muggiò;Muggiò;0;bt;0|0|0
