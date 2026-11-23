@@ -344,6 +344,440 @@
 134913437;€/m² impossibile
 134955347;€/m² impossibile
 134955549;€/m² impossibile
+57548400;€/m² impossibile
+59423926;senza canone o m²
+70917372;non residenziale
+81784520;€/m² impossibile
+90499373;non residenziale
+99338080;senza canone o m²
+100514098;canone fuori scala
+102970642;senza canone o m²
+107201147;€/m² impossibile
+107201155;€/m² impossibile
+107201159;€/m² impossibile
+113007727;senza canone o m²
+113355063;€/m² impossibile
+114118487;€/m² impossibile
+115582843;€/m² impossibile
+115710661;non residenziale
+119817052;€/m² impossibile
+120244970;canone fuori scala
+120712542;€/m² impossibile
+120903588;privato: troppe poche foto
+120938802;privato: troppe poche foto
+122021188;m² fuori scala
+122021190;€/m² impossibile
+122091248;€/m² impossibile
+122754602;non residenziale
+122840616;€/m² impossibile
+122873644;€/m² impossibile
+122880026;€/m² impossibile
+122979840;€/m² impossibile
+123307775;non residenziale
+123447695;€/m² impossibile
+123484887;€/m² impossibile
+123665969;€/m² impossibile
+123665971;€/m² impossibile
+124013127;senza canone o m²
+124698337;canone fuori scala
+124709883;€/m² impossibile
+125233389;€/m² impossibile
+125883789;€/m² impossibile
+125909459;€/m² impossibile
+125953329;€/m² impossibile
+126037769;€/m² impossibile
+126045841;€/m² impossibile
+126191837;senza canone o m²
+126214985;€/m² impossibile
+126908165;€/m² impossibile
+126908427;€/m² impossibile
+126908463;€/m² impossibile
+126908479;€/m² impossibile
+126908633;€/m² impossibile
+126969399;senza canone o m²
+127054167;non residenziale
+127301267;€/m² impossibile
+127418169;canone fuori scala
+127797102;€/m² impossibile
+128040826;non residenziale
+128053568;senza canone o m²
+128258984;senza canone o m²
+128290542;senza canone o m²
+128463438;senza canone o m²
+128681782;non residenziale
+128681788;non residenziale
+128707690;senza canone o m²
+129012782;€/m² impossibile
+129017722;€/m² impossibile
+129175076;€/m² impossibile
+129180746;€/m² impossibile
+129252124;€/m² impossibile
+129553972;non residenziale
+129554034;non residenziale
+129561954;non residenziale
+129579568;m² fuori scala
+129662564;senza canone o m²
+129911486;€/m² impossibile
+129922968;senza canone o m²
+129946128;senza canone o m²
+129976558;m² fuori scala
+130055568;non residenziale
+130056866;€/m² impossibile
+130179212;non residenziale
+130238456;€/m² impossibile
+130491948;senza canone o m²
+130501088;€/m² impossibile
+130872826;senza canone o m²
+130876464;non residenziale
+130923454;non residenziale
+130965886;canone fuori scala
+131039538;non residenziale
+131041174;senza canone o m²
+131160912;senza canone o m²
+131252974;m² fuori scala
+131400832;€/m² impossibile
+131871852;canone fuori scala
+132182952;senza canone o m²
+132291000;€/m² impossibile
+132355466;€/m² impossibile
+132407542;€/m² impossibile
+132410696;€/m² impossibile
+132438876;€/m² impossibile
+132439104;€/m² impossibile
+132447466;canone fuori scala
+132447768;€/m² impossibile
+132592792;€/m² impossibile
+132747590;senza canone o m²
+132833218;€/m² impossibile
+132845326;€/m² impossibile
+132846164;senza canone o m²
+132846222;senza canone o m²
+132846676;senza canone o m²
+132846714;senza canone o m²
+132846718;senza canone o m²
+132846826;senza canone o m²
+132847118;senza canone o m²
+132847296;€/m² impossibile
+132848078;€/m² impossibile
+132848124;senza canone o m²
+132848156;senza canone o m²
+132848668;senza canone o m²
+132848702;senza canone o m²
+132848736;senza canone o m²
+132848928;senza canone o m²
+132848944;senza canone o m²
+132848960;senza canone o m²
+132849092;senza canone o m²
+132849096;senza canone o m²
+132849098;senza canone o m²
+132849296;senza canone o m²
+132849308;senza canone o m²
+132849324;senza canone o m²
+132849350;senza canone o m²
+132849352;senza canone o m²
+132849354;senza canone o m²
+132849410;senza canone o m²
+132849612;senza canone o m²
+132849616;senza canone o m²
+132849620;senza canone o m²
+132849622;senza canone o m²
+132849624;senza canone o m²
+132849656;senza canone o m²
+132849750;senza canone o m²
+132849752;senza canone o m²
+132849768;senza canone o m²
+132849776;senza canone o m²
+132849892;senza canone o m²
+132849896;senza canone o m²
+132850124;senza canone o m²
+132851154;senza canone o m²
+132851272;€/m² impossibile
+132851528;€/m² impossibile
+132985590;senza canone o m²
+132985592;senza canone o m²
+132986434;€/m² impossibile
+132986500;senza canone o m²
+132986992;senza canone o m²
+132987290;senza canone o m²
+132987472;senza canone o m²
+132987624;senza canone o m²
+132988048;€/m² impossibile
+132988376;€/m² impossibile
+133009472;senza canone o m²
+133117464;senza canone o m²
+133117538;senza canone o m²
+133119516;senza canone o m²
+133119530;senza canone o m²
+133119702;senza canone o m²
+133120104;senza canone o m²
+133123650;senza canone o m²
+133123876;€/m² impossibile
+133123992;senza canone o m²
+133124054;senza canone o m²
+133124150;senza canone o m²
+133124324;senza canone o m²
+133124720;senza canone o m²
+133124722;senza canone o m²
+133124826;senza canone o m²
+133124878;senza canone o m²
+133124992;€/m² impossibile
+133125248;senza canone o m²
+133125406;senza canone o m²
+133125478;senza canone o m²
+133125544;senza canone o m²
+133125582;senza canone o m²
+133125632;senza canone o m²
+133125650;senza canone o m²
+133125652;senza canone o m²
+133125666;senza canone o m²
+133125740;senza canone o m²
+133125832;senza canone o m²
+133125854;senza canone o m²
+133125896;senza canone o m²
+133125900;senza canone o m²
+133125904;senza canone o m²
+133125914;senza canone o m²
+133126000;senza canone o m²
+133126002;senza canone o m²
+133126008;senza canone o m²
+133126010;senza canone o m²
+133126014;senza canone o m²
+133126020;senza canone o m²
+133126194;senza canone o m²
+133126398;senza canone o m²
+133126402;senza canone o m²
+133126410;senza canone o m²
+133126412;senza canone o m²
+133126414;senza canone o m²
+133126446;senza canone o m²
+133126448;senza canone o m²
+133126458;senza canone o m²
+133126462;senza canone o m²
+133126464;senza canone o m²
+133126472;senza canone o m²
+133126512;senza canone o m²
+133126516;senza canone o m²
+133126518;senza canone o m²
+133126520;senza canone o m²
+133126524;senza canone o m²
+133126526;senza canone o m²
+133126530;senza canone o m²
+133126532;senza canone o m²
+133126534;senza canone o m²
+133126536;senza canone o m²
+133126540;senza canone o m²
+133126552;senza canone o m²
+133126564;senza canone o m²
+133126570;senza canone o m²
+133126572;senza canone o m²
+133126574;senza canone o m²
+133126578;senza canone o m²
+133126588;senza canone o m²
+133126592;senza canone o m²
+133126594;senza canone o m²
+133126596;senza canone o m²
+133126598;senza canone o m²
+133126600;senza canone o m²
+133126602;senza canone o m²
+133126604;senza canone o m²
+133126606;senza canone o m²
+133126608;senza canone o m²
+133126612;senza canone o m²
+133126614;senza canone o m²
+133126624;senza canone o m²
+133126636;senza canone o m²
+133126680;senza canone o m²
+133126986;senza canone o m²
+133132210;€/m² impossibile
+133133050;€/m² impossibile
+133136406;€/m² impossibile
+133266764;€/m² impossibile
+133277360;€/m² impossibile
+133340280;€/m² impossibile
+133385798;€/m² impossibile
+133395830;senza canone o m²
+133415602;m² fuori scala
+133444444;€/m² impossibile
+133444468;€/m² impossibile
+133543448;€/m² impossibile
+133546016;€/m² impossibile
+133547718;canone fuori scala
+133568900;€/m² impossibile
+133568944;€/m² impossibile
+133668736;stanza / posto letto
+133680762;€/m² impossibile
+133681402;non residenziale
+133686084;€/m² impossibile
+133686198;€/m² impossibile
+133798194;€/m² impossibile
+133829222;senza canone o m²
+133844584;€/m² impossibile
+133844586;€/m² impossibile
+133997617;canone fuori scala
+133999739;uso non abitativo
+134127779;€/m² impossibile
+134132543;€/m² impossibile
+134133417;€/m² impossibile
+134341299;uso non abitativo
+134345865;€/m² impossibile
+134410777;€/m² impossibile
+134421639;non residenziale
+134478033;canone fuori scala
+134519767;senza canone o m²
+134589675;non residenziale
+134604845;€/m² impossibile
+134695619;€/m² impossibile
+134697241;canone fuori scala
+134704255;€/m² impossibile
+134717619;€/m² impossibile
+134791087;€/m² impossibile
+134804267;uso non abitativo
+134814975;stanza / posto letto
+134856677;€/m² impossibile
+134878435;€/m² impossibile
+134879125;€/m² impossibile
+134879139;€/m² impossibile
+134879193;€/m² impossibile
+134879349;€/m² impossibile
+134879351;€/m² impossibile
+134879353;€/m² impossibile
+134879355;€/m² impossibile
+134879357;€/m² impossibile
+134879359;€/m² impossibile
+134879379;€/m² impossibile
+134879507;€/m² impossibile
+134879509;€/m² impossibile
+134879511;€/m² impossibile
+134879525;€/m² impossibile
+134879555;€/m² impossibile
+134879567;€/m² impossibile
+134879569;€/m² impossibile
+134879571;€/m² impossibile
+134879573;€/m² impossibile
+134879699;€/m² impossibile
+134879701;€/m² impossibile
+134879703;€/m² impossibile
+134879705;€/m² impossibile
+134879707;€/m² impossibile
+134879709;€/m² impossibile
+134879711;€/m² impossibile
+134879765;€/m² impossibile
+134879897;€/m² impossibile
+134879913;€/m² impossibile
+134879919;€/m² impossibile
+134879921;€/m² impossibile
+134879923;€/m² impossibile
+134879925;€/m² impossibile
+134879927;€/m² impossibile
+134879929;€/m² impossibile
+134879931;€/m² impossibile
+134879933;€/m² impossibile
+134879935;€/m² impossibile
+134879937;€/m² impossibile
+134879939;€/m² impossibile
+134879941;€/m² impossibile
+134880093;€/m² impossibile
+134880095;€/m² impossibile
+134880435;€/m² impossibile
+134880479;€/m² impossibile
+134880487;€/m² impossibile
+134880713;canone fuori scala
+134881017;€/m² impossibile
+134881021;€/m² impossibile
+134881023;€/m² impossibile
+134881025;€/m² impossibile
+134881027;€/m² impossibile
+134881029;€/m² impossibile
+134881031;€/m² impossibile
+134881033;€/m² impossibile
+134881035;€/m² impossibile
+134881039;€/m² impossibile
+134881257;€/m² impossibile
+134881831;canone fuori scala
+134881951;€/m² impossibile
+134882071;€/m² impossibile
+134882195;€/m² impossibile
+134882279;€/m² impossibile
+134882505;€/m² impossibile
+134882543;€/m² impossibile
+134882607;€/m² impossibile
+134882715;€/m² impossibile
+134882787;€/m² impossibile
+134882811;€/m² impossibile
+134882901;€/m² impossibile
+134882941;€/m² impossibile
+134883049;€/m² impossibile
+134883091;€/m² impossibile
+134883157;€/m² impossibile
+134883237;€/m² impossibile
+134883249;€/m² impossibile
+134883329;€/m² impossibile
+134883757;€/m² impossibile
+134883823;€/m² impossibile
+134883907;€/m² impossibile
+134883913;€/m² impossibile
+134884069;€/m² impossibile
+134884117;€/m² impossibile
+134884177;€/m² impossibile
+134884299;€/m² impossibile
+134884357;€/m² impossibile
+134884441;€/m² impossibile
+134884639;€/m² impossibile
+134884649;€/m² impossibile
+134884675;€/m² impossibile
+134884831;€/m² impossibile
+134885057;€/m² impossibile
+134885237;€/m² impossibile
+134885251;€/m² impossibile
+134885513;€/m² impossibile
+134885523;€/m² impossibile
+134885683;€/m² impossibile
+134885697;€/m² impossibile
+134885721;€/m² impossibile
+134885747;€/m² impossibile
+134885755;€/m² impossibile
+134885773;€/m² impossibile
+134885901;€/m² impossibile
+134886037;€/m² impossibile
+134886045;€/m² impossibile
+134886059;€/m² impossibile
+134886261;€/m² impossibile
+134886501;€/m² impossibile
+134886507;€/m² impossibile
+134886511;€/m² impossibile
+134886517;€/m² impossibile
+134886621;€/m² impossibile
+134907559;€/m² impossibile
+134917335;€/m² impossibile
+134926479;€/m² impossibile
+134926483;€/m² impossibile
+134926531;€/m² impossibile
+134926551;€/m² impossibile
+134926745;€/m² impossibile
+134926813;€/m² impossibile
+134926815;€/m² impossibile
+134926965;canone fuori scala
+134936079;€/m² impossibile
+134955153;€/m² impossibile
+134955175;€/m² impossibile
+134955183;€/m² impossibile
+134955189;€/m² impossibile
+134955283;€/m² impossibile
+134955295;canone fuori scala
+134955417;€/m² impossibile
+134955439;€/m² impossibile
+134959029;€/m² impossibile
+134970731;€/m² impossibile
+134970939;senza canone o m²
+134988075;senza canone o m²
+134988077;senza canone o m²
+134989457;€/m² impossibile
+134989521;€/m² impossibile
+134989593;€/m² impossibile
+134989969;€/m² impossibile
+134990007;€/m² impossibile
+134990037;€/m² impossibile
+134990129;€/m² impossibile
 114931621;doppione
 118471483;doppione
 123818193;doppione
@@ -567,6 +1001,217 @@
 134937901;doppione
 134942627;doppione
 134959381;doppione
+78857733;doppione
+92930044;doppione
+107754249;doppione
+108062883;doppione
+114823619;doppione
+114824155;doppione
+114931655;doppione
+119649954;doppione
+122157230;doppione
+122645966;doppione
+122815242;doppione
+123206265;doppione
+123226343;doppione
+123227413;doppione
+123404435;doppione
+123688395;doppione
+123717895;doppione
+123914323;doppione
+124414967;doppione
+124698635;doppione
+124698639;doppione
+125407701;doppione
+125966403;doppione
+126070371;doppione
+126131607;doppione
+126146561;doppione
+126231319;doppione
+126263733;doppione
+126304975;doppione
+126589407;doppione
+126647685;doppione
+126750373;doppione
+126750497;doppione
+126803019;doppione
+126976323;doppione
+127102937;doppione
+127149181;doppione
+127181691;doppione
+128364560;doppione
+128602444;doppione
+128777906;doppione
+128930502;doppione
+128980844;doppione
+129241328;doppione
+129393594;doppione
+129610048;doppione
+129612418;doppione
+129754686;doppione
+129783774;doppione
+129789734;doppione
+129791818;doppione
+129831068;doppione
+129833926;doppione
+129856174;doppione
+129866432;doppione
+129891556;doppione
+130035908;doppione
+130102784;doppione
+130327670;doppione
+130739122;doppione
+131030800;doppione
+131035886;doppione
+131187508;doppione
+131290688;doppione
+131290722;doppione
+131290738;doppione
+131290740;doppione
+131290746;doppione
+131290748;doppione
+131400608;doppione
+131400764;doppione
+132063524;doppione
+132124062;doppione
+132180764;doppione
+132231284;doppione
+132239632;doppione
+132249162;doppione
+132267738;doppione
+132331034;doppione
+132333330;doppione
+132360238;doppione
+132373258;doppione
+132447192;doppione
+132447204;doppione
+132499804;doppione
+132509308;doppione
+132669492;doppione
+132880932;doppione
+132884332;doppione
+132933628;doppione
+132939990;doppione
+132955264;doppione
+133133316;doppione
+133152518;doppione
+133227060;doppione
+133229008;doppione
+133274206;doppione
+133403956;doppione
+133413614;doppione
+133414398;doppione
+133414402;doppione
+133468082;doppione
+133508178;doppione
+133547092;doppione
+133568940;doppione
+133599842;doppione
+133620322;doppione
+133717650;doppione
+133732560;doppione
+133747916;doppione
+133765622;doppione
+133765624;doppione
+133837882;doppione
+133892873;doppione
+133904147;doppione
+134001203;doppione
+134053141;doppione
+134115939;doppione
+134132611;doppione
+134408547;doppione
+134408765;doppione
+134441229;doppione
+134456117;doppione
+134467267;doppione
+134467503;doppione
+134470393;doppione
+134496047;doppione
+134507505;doppione
+134558601;doppione
+134568569;doppione
+134595941;doppione
+134604935;doppione
+134610597;doppione
+134622269;doppione
+134627185;doppione
+134641773;doppione
+134659347;doppione
+134662643;doppione
+134695233;doppione
+134701129;doppione
+134719721;doppione
+134779169;doppione
+134781521;doppione
+134796113;doppione
+134817435;doppione
+134819407;doppione
+134841933;doppione
+134849991;doppione
+134857379;doppione
+134857401;doppione
+134878615;doppione
+134879687;doppione
+134879691;doppione
+134879767;doppione
+134879833;doppione
+134880053;doppione
+134880853;doppione
+134881099;doppione
+134881353;doppione
+134881779;doppione
+134881919;doppione
+134883651;doppione
+134883661;doppione
+134883905;doppione
+134884905;doppione
+134885149;doppione
+134885193;doppione
+134885319;doppione
+134885343;doppione
+134885559;doppione
+134885651;doppione
+134885699;doppione
+134885725;doppione
+134885819;doppione
+134886163;doppione
+134886231;doppione
+134886267;doppione
+134886307;doppione
+134886355;doppione
+134886367;doppione
+134886985;doppione
+134887063;doppione
+134888913;doppione
+134888987;doppione
+134898595;doppione
+134903443;doppione
+134905443;doppione
+134926561;doppione
+134926889;doppione
+134926895;doppione
+134955213;doppione
+134955243;doppione
+134955253;doppione
+134955395;doppione
+134955567;doppione
+134955611;doppione
+134955631;doppione
+134955669;doppione
+134955675;doppione
+134955679;doppione
+134955723;doppione
+134955741;doppione
+134955945;doppione
+134962115;doppione
+134982461;doppione
+134989611;doppione
+134989833;doppione
+134990139;doppione
+134990197;doppione
+134990199;doppione
+134990211;doppione
 98412190;doppione
 115749769;doppione
 117371577;doppione
@@ -581,11 +1226,17 @@
 134056671;doppione
 134664693;doppione
 127008805;doppione
+131176406;doppione
 132420886;doppione
 132659358;doppione
 132908990;doppione
 133641236;doppione
 133796432;doppione
+122599532;doppione
+127597428;doppione
+132382496;doppione
+133827300;doppione
+134745919;doppione
 86131296;privato: canone troppo basso per la zona
 90082527;privato: canone troppo basso per la zona
 100111866;privato: canone troppo basso per la zona
@@ -606,3 +1257,5 @@
 132737368;privato: canone troppo basso per la zona
 133694506;privato: canone troppo basso per la zona
 134933715;privato: canone troppo basso per la zona
+134312159;privato: canone troppo basso per la zona
+134907467;privato: canone troppo basso per la zona
