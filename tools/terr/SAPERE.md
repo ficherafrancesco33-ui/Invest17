@@ -78,7 +78,7 @@ Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a 
 
 ## Regole imparate (mediana delle zone)
 
-- Arredato, affitto in più: -10% (su 89 zone)
+- Arredato, affitto in più: -8% (su 92 zone)
 - Terrazzo, prezzo in più: +14% (su 192 zone)
 - Box, prezzo in più: 0% (su 115 zone)
 - Giardino, prezzo in più: +4% (su 92 zone)
@@ -112,7 +112,7 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **riscaldamento**: Assente +23% (1539) · Autonomo +4% (3773) · Centralizzato -6% (5737)
 - **bagni**: 1 bagno -1% (7859) · 2+ bagni -5% (2116)
 - **venditore**: privato +1% (978) · agenzia 0% (10071)
-- **dotazioni** (chi ce l'ha rispetto a chi no): piscina +41% (51) · terrazzo 0% (1390) · portineria 0% (75) · box / garage -1% (107) · esposizione interna -4% (1844) · fibra -4% (6176) · giardino -5% (65) · posto auto -7% (51) · cantina -8% (1793) · arredato -11% (9369) · aria condizionata -11% (47) · balcone -14% (4554) · doppia esposizione -14% (2504)
+- **dotazioni** (chi ce l'ha rispetto a chi no): piscina +34% (44) · terrazzo 0% (1380) · portineria 0% (75) · box / garage -1% (107) · esposizione interna -4% (1844) · fibra -4% (6176) · giardino -5% (65) · posto auto -7% (51) · cantina -8% (1672) · arredato -10% (9243) · aria condizionata -11% (47) · balcone -14% (4544) · doppia esposizione -14% (2373)
 
 ### Vendita · fuori Milano (12.623 annunci)
 
