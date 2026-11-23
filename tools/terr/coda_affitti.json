@@ -1061,7 +1061,8 @@
    "path": "/affitto-case/milano/dergano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Primaticcio",
@@ -1069,7 +1070,8 @@
    "path": "/affitto-case/milano/primaticcio/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Ca' Granda",
@@ -1077,7 +1079,8 @@
    "path": "/affitto-case/milano/ca-granda/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:San Siro",
@@ -1085,7 +1088,8 @@
    "path": "/affitto-case/milano/san-siro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Monte Stella",
@@ -1093,7 +1097,8 @@
    "path": "/affitto-case/milano/monte-stella/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Gorla",
@@ -1101,7 +1106,8 @@
    "path": "/affitto-case/milano/gorla/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:QT8",
@@ -1109,7 +1115,8 @@
    "path": "/affitto-case/milano/qt8/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Prato Centenaro",
@@ -1117,7 +1124,8 @@
    "path": "/affitto-case/milano/prato-centenaro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Inganni",
@@ -1125,7 +1133,8 @@
    "path": "/affitto-case/milano/inganni/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bovisa",
@@ -1133,7 +1142,8 @@
    "path": "/affitto-case/milano/bovisa/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Crescenzago",
@@ -1141,7 +1151,8 @@
    "path": "/affitto-case/milano/crescenzago/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Ponte Nuovo",
@@ -1149,7 +1160,8 @@
    "path": "/affitto-case/milano/ponte-nuovo/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Certosa",
@@ -1157,7 +1169,8 @@
    "path": "/affitto-case/milano/certosa/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Precotto",
@@ -1165,7 +1178,8 @@
    "path": "/affitto-case/milano/precotto/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bicocca",
@@ -1173,7 +1187,8 @@
    "path": "/affitto-case/milano/bicocca/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:San Carlo",
@@ -1181,7 +1196,8 @@
    "path": "/affitto-case/milano/san-carlo/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Niguarda",
@@ -1189,7 +1205,8 @@
    "path": "/affitto-case/milano/niguarda/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Villa San Giovanni",
@@ -1197,7 +1214,8 @@
    "path": "/affitto-case/milano/villa-san-giovanni/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Affori",
@@ -1205,7 +1223,8 @@
    "path": "/affitto-case/milano/affori/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bisceglie",
@@ -1213,7 +1232,8 @@
    "path": "/affitto-case/milano/bisceglie/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quartiere Adriano",
@@ -1221,7 +1241,8 @@
    "path": "/affitto-case/milano/quartiere-adriano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quarto Cagnino",
@@ -1229,7 +1250,8 @@
    "path": "/affitto-case/milano/quarto-cagnino/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Cascina Gobba",
@@ -1237,7 +1259,8 @@
    "path": "/affitto-case/milano/cascina-gobba/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bovisasca",
@@ -1245,7 +1268,8 @@
    "path": "/affitto-case/milano/bovisasca/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bignami - Ponale",
@@ -1253,7 +1277,8 @@
    "path": "/affitto-case/milano/bignami-ponale/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quarto Oggiaro",
@@ -1261,7 +1286,8 @@
    "path": "/affitto-case/milano/quarto-oggiaro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Musocco",
@@ -1269,7 +1295,8 @@
    "path": "/affitto-case/milano/musocco/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Gallaratese",
@@ -1277,7 +1304,8 @@
    "path": "/affitto-case/milano/gallaratese/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Vialba",
@@ -1285,7 +1313,8 @@
    "path": "/affitto-case/milano/vialba/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bruzzano",
@@ -1293,7 +1322,8 @@
    "path": "/affitto-case/milano/bruzzano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Comasina",
@@ -1301,7 +1331,8 @@
    "path": "/affitto-case/milano/comasina/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Baggio",
@@ -1309,7 +1340,8 @@
    "path": "/affitto-case/milano/baggio/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Trenno",
@@ -1317,7 +1349,8 @@
    "path": "/affitto-case/milano/trenno/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Roserio",
@@ -1325,7 +1358,8 @@
    "path": "/affitto-case/milano/roserio/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quinto Romano",
@@ -1333,7 +1367,8 @@
    "path": "/affitto-case/milano/quinto-romano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quartiere Olmi",
@@ -1341,7 +1376,8 @@
    "path": "/affitto-case/milano/quartiere-olmi/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Figino",
