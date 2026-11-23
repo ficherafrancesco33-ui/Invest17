@@ -872,7 +872,8 @@
    "path": "/affitto-case/milano/maggiolina/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Rovereto",
@@ -880,7 +881,8 @@
    "path": "/affitto-case/milano/rovereto/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quartiere Feltre",
@@ -888,7 +890,8 @@
    "path": "/affitto-case/milano/quartiere-feltre/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Udine",
@@ -896,7 +899,8 @@
    "path": "/affitto-case/milano/udine/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Gambara",
@@ -904,7 +908,8 @@
    "path": "/affitto-case/milano/gambara/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Farini",
@@ -912,7 +917,8 @@
    "path": "/affitto-case/milano/farini/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Cenisio",
@@ -920,7 +926,8 @@
    "path": "/affitto-case/milano/cenisio/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Tre Castelli - Faenza",
@@ -928,7 +935,8 @@
    "path": "/affitto-case/milano/tre-castelli-faenza/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Quintosole - Chiaravalle",
@@ -936,7 +944,8 @@
    "path": "/affitto-case/milano/quintosole-chiaravalle/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Giambellino",
@@ -944,7 +953,8 @@
    "path": "/affitto-case/milano/giambellino/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Parco Lambro",
@@ -952,7 +962,8 @@
    "path": "/affitto-case/milano/parco-lambro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Lorenteggio",
@@ -960,7 +971,8 @@
    "path": "/affitto-case/milano/lorenteggio/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Monte Rosa - Lotto",
@@ -968,7 +980,8 @@
    "path": "/affitto-case/milano/monte-rosa-lotto/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Turro",
@@ -976,7 +989,8 @@
    "path": "/affitto-case/milano/turro/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Istria",
@@ -984,7 +998,8 @@
    "path": "/affitto-case/milano/istria/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Bande Nere",
@@ -992,7 +1007,8 @@
    "path": "/affitto-case/milano/bande-nere/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Ghisolfa - Mac Mahon",
@@ -1000,7 +1016,8 @@
    "path": "/affitto-case/milano/ghisolfa-mac-mahon/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Piazzale Siena",
@@ -1008,7 +1025,8 @@
    "path": "/affitto-case/milano/piazzale-siena/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Portello - Parco Vittoria",
@@ -1016,7 +1034,8 @@
    "path": "/affitto-case/milano/portello-parco-vittoria/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Cimiano",
@@ -1024,7 +1043,8 @@
    "path": "/affitto-case/milano/cimiano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Greco - Segnano",
@@ -1032,7 +1052,8 @@
    "path": "/affitto-case/milano/greco-segnano/",
    "tipo": "micro",
    "gruppo": "milano",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-23"
   },
   {
    "n": "A:Dergano",
