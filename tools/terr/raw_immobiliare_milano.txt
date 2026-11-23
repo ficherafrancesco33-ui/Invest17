@@ -32632,3 +32632,1081 @@
 134994957;200000;188;4;2;T/ 1;0;R;Quadrilocale;45.54250;9.48170;Via Adolfo Fumagalli;Inzago;Inzago;0;btci;0|0|0
 134995485;290000;118;3;2;S/ 1/ 2;0;B;Trilocale;45.53770;9.47590;Via Padre David Maria Turoldo;Inzago;Inzago;0;btg;0|0|0
 134997911;475000;177;3;2;;0;B;Villa unifamiliare;45.52510;9.46460;Via dei Tulipani;Inzago;Inzago;0;i;0|0|0
+73925392;650000;200;5+;3;;0;O;Villa unifamiliare;45.59370;9.06897;Via Giacomo Puccini;Cesate;Cesate;1;ba;0|0|0
+76951548;127000;57;2;1;R;0;O;Bilocale;45.59650;9.07910;via caravaggio 4;Cesate;Cesate;0;a;0|0|0
+89650895;680000;290;5+;3;;0;O;Villa unifamiliare;45.41840;8.88310;Via Fratelli Bandiera;Robecco sul Naviglio;Robecco sul Naviglio;0;i;0|0|0
+93518084;225000;101;3;1;S/ 1;1;O;Trilocale;45.59700;9.07800;Via Carlo Romanò;Cesate;Cesate;0;bcg;0|0|0
+93602606;65000;35;2;1;3;0;O;Appartamento;45.59661;9.08068;Via dei Martiri;Cesate;Cesate;1;a;0|0|0
+93972950;44000;400;1;;;0;R;Rustico;45.54680;8.88480;Via Parini;Busto Garolfo;Busto Garolfo;0;;0|0|0
+94407728;115000;80;3;1;2;0;B;Trilocale;45.55040;8.77960;Via Acerbi;Castano Primo;Castano Primo;0;bci;0|0|0
+94466672;250000;143;5;2;;0;B;Villa unifamiliare;45.28390;8.99000;Via Ticino;Motta Visconti;Motta Visconti;0;cad;0|0|0
+94819372;500000;400;;;;0;;Villa unifamiliare;45.50720;8.81950;Viale Roma;Cuggiono;Cuggiono;0;;0|0|0
+98712582;115000;95;3;2;1;0;O;Trilocale;45.44370;8.89970;Via Alessandro Manzoni;Robecco sul Naviglio;Robecco sul Naviglio;0;bsd;0|0|0
+99251950;55000;180;5+;1;;0;R;Terratetto unifamiliare;45.55230;8.78110;Corso Martiri Patrioti;Castano Primo;Castano Primo;0;bd;0|0|0
+99406534;195000;159;3;1;;0;R;Terratetto unifamiliare;45.58470;8.94480;Via Sempione;San Vittore Olona;San Vittore Olona;0;bcd;0|0|0
+100898545;195000;218;4;1;;0;R;Villa unifamiliare;45.58760;8.93950;Via Cesare Cantù;San Vittore Olona;San Vittore Olona;0;bcjd;0|0|0
+101962972;490000;212;4;3;;0;N;Villa a schiera;45.60050;9.07360;Via Adige;Cesate;Cesate;0;c;0|0|0
+102122104;229000;130;5;2;;0;O;Terratetto plurifamiliare;45.55153;8.77773;Piazza Giuseppe Mazzini;Castano Primo;Castano Primo;1;btca;0|0|0
+102482348;29000;114;1;;;0;R;Rustico;45.44330;8.89976;Via A. Manzoni;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+102482536;64000;111;1;1;T;0;R;Monolocale;45.44340;8.89970;Via A. Manzoni;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+102845282;260000;150;4;2;;0;B;Villa unifamiliare;45.50440;8.81535;Via Beolchi;Cuggiono;Cuggiono;0;c;0|0|0
+103105520;22000;25;2;1;;0;R;Rustico;45.56950;8.92910;Via Roma;Canegrate;Canegrate;0;i;0|0|0
+104825299;80000;65;2;1;1;0;B;Bilocale;45.57030;8.93120;Largo Sant'Angelo;Canegrate;Canegrate;0;d;0|0|0
+105163445;112000;46;1;1;2;1;N;Monolocale;45.57260;8.93570;Via Enrico Toti;Canegrate;Canegrate;0;bi;0|0|0
+105209043;548000;2;5+;1;T;0;R;Loft;45.50900;8.81880;Viale G. Rossetti;Cuggiono;Cuggiono;0;d;0|0|0
+105324381;440000;253;5+;3;;0;O;Villa unifamiliare;45.56370;8.91840;Via Venezia;Canegrate;Canegrate;0;gj;0|0|0
+105741877;25000;60;2;;;0;R;Rustico;45.55120;8.77530;Corso San Rocco;Castano Primo;Castano Primo;0;bi;0|0|0
+105807145;259000;135;4;2;;0;B;Villa unifamiliare;45.28310;8.99050;Via Ticinello;Motta Visconti;Motta Visconti;0;btgji;0|0|0
+106039663;95000;60;2;1;2;0;O;Mansarda;45.59530;9.07780;Via Carlo Romanò;Cesate;Cesate;0;d;0|0|0
+106407993;690000;400;5+;3+;;0;O;Villa unifamiliare;45.61720;8.95790;Via Brianza;Rescaldina;Rescaldina;0;;0|0|0
+107453891;470000;270;5;2;;0;B;Villa unifamiliare;45.56580;8.90980;Via Belluno;Canegrate;Canegrate;0;bci;0|0|0
+107458173;208000;180;3;3+;;0;R;Cascina;45.41900;8.88580;Frazione cascinazza;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+107560463;70000;35;1;1;1;0;O;Monolocale;45.56760;8.92450;Via Gran Paradiso;Canegrate;Canegrate;0;d;0|0|0
+107650325;428000;152;5;2;3;1;;Attico;45.58860;8.94030;Via Generale Antonio Cantore;San Vittore Olona;San Vittore Olona;0;tc;0|0|0
+107679037;45000;255;5+;1;;0;R;Cascina;45.54680;8.88540;Via PARINI, 6;Busto Garolfo;Busto Garolfo;0;bji;0|0|0
+107760863;225000;133;5;1;2 - 3;0;B;Attico;45.59300;9.07990;Via Giacomo Matteotti;Cesate;Cesate;0;bt;0|0|0
+107808757;549000;321;5+;2;;0;B;Terratetto unifamiliare;45.55540;8.78160;Via Matteotti 24;Castano Primo;Castano Primo;0;tcd;0|0|0
+107962241;120000;70;2;1;2;1;B;Bilocale;45.58850;8.93650;Via Roma;San Vittore Olona;San Vittore Olona;0;ba;0|0|0
+108908429;199000;115;3;2;1;0;O;Trilocale;45.50550;8.81590;via gualdoni;Cuggiono;Cuggiono;0;c;0|0|0
+108935337;450000;150;4;2;;0;N;Villa unifamiliare;45.56910;8.91740;Via Ortisei;Canegrate;Canegrate;0;tgj;0|0|0
+109425535;330000;160;5+;;;0;;Villa unifamiliare;45.55570;8.77340;Via Alessandro Manzoni;Castano Primo;Castano Primo;0;;0|0|0
+109629679;195000;144;3;1;;0;;Terratetto unifamiliare;45.58760;8.93960;via cantù;San Vittore Olona;San Vittore Olona;0;c;0|0|0
+109918489;525000;182;5;3;;0;N;Villa unifamiliare;45.56940;8.93450;Via Giuseppe Parini;Canegrate;Canegrate;0;d;0|0|0
+110184343;1390000;497;5+;3+;;0;O;Casale;45.42350;8.85700;Cascina Visconta;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+110393629;148000;115;3;2;S/ 3;1;O;Trilocale;45.28660;8.99330;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;btcagi;0|0|0
+110452889;320000;145;4;3;1;0;B;Quadrilocale;45.59920;8.95860;Via Ettore Majorana;Cerro Maggiore;Cerro Maggiore;0;btgj;0|0|0
+111187645;550000;398;5+;2;;0;R;Villa unifamiliare;45.50550;8.81920;Piazza San Maurizio;Cuggiono;Cuggiono;0;bci;0|0|0
+111188135;600000;480;5+;3+;;0;O;Villa unifamiliare;45.59170;8.94730;Via Andrea Bernocchi;Cerro Maggiore;Cerro Maggiore;0;bci;0|0|0
+111313225;140000;88;3;1;S/ R;0;B;Trilocale;45.59380;8.96250;Via Giordano Bruno;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+111623389;240000;76;3;2;1;1;N;Trilocale;45.49760;8.79590;Via Don Angelo Ferrario;Cuggiono;Cuggiono;0;cgi;0|0|0
+111813087;386000;162;4;2;T;0;N;Quadrilocale;45.59100;9.07220;Via Trieste;Cesate;Cesate;0;cd;0|0|0
+112097901;365000;160;3;2;;0;N;Villa unifamiliare;45.54440;8.89036;Via Ariosto;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+112456165;395000;215;5+;3+;;0;B;Villa unifamiliare;45.62220;8.94210;Via Ravello;Rescaldina;Rescaldina;0;t;0|0|0
+112475721;150000;113;3;1;;0;B;Terratetto unifamiliare;45.56756;8.92158;Via Giuseppe Garibaldi;Canegrate;Canegrate;1;tca;0|0|0
+112499471;23000;95;2;2;;0;R;Rustico;45.44270;8.89930;Vicolo Longoni;Robecco sul Naviglio;Robecco sul Naviglio;0;d;0|0|0
+112509891;185000;90;2;2;;0;O;Villa a schiera;45.44600;8.89850;Via alle Fornaci;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+112737647;1200000;620;5;3;;0;B;Villa unifamiliare;45.56610;8.91900;Via Giuseppe Garibaldi;Canegrate;Canegrate;0;;0|0|0
+112800953;439000;259;5+;3;;0;O;Villa unifamiliare;45.59860;8.94820;Via Agostino Bertani;Cerro Maggiore;Cerro Maggiore;0;g;0|0|0
+112861899;93000;60;2;1;1;1;B;Bilocale;45.28490;8.99980;Via Piemonte;Motta Visconti;Motta Visconti;0;bt;0|0|0
+112913291;350000;186;4;2;;0;;Terratetto unifamiliare;45.59360;8.95480;via xx settembre, 71;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+113093313;169000;148;4;;;0;R;Cascina;45.43020;8.86790;Via Sant'Ambrogio;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+113107705;1590000;2;5+;3+;;0;O;Villa unifamiliare;45.42140;8.85100;Cascina Barcella;Robecco sul Naviglio;Robecco sul Naviglio;0;bad;0|0|0
+113215445;149000;70;2;1;1;1;N;Bilocale;45.28180;8.99620;Piazza Donna Contessa Giuseppina del Maino;Motta Visconti;Motta Visconti;0;bd;0|0|0
+113630741;129000;80;2;1;1;0;O;Bilocale;45.28560;8.98300;Via Vittime della Mafia;Motta Visconti;Motta Visconti;0;tca;0|0|0
+113729561;490000;1;5+;;;0;R;Terratetto unifamiliare;45.54500;8.88322;PIAZZA LOMBARDIA;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+114674107;57000;100;2;1;;0;R;Terratetto plurifamiliare;45.55150;8.77780;Piazza Giuseppe Mazzini;Castano Primo;Castano Primo;0;b;0|0|0
+114748219;64000;61;2;1;1;0;B;Bilocale;45.58540;8.94270;Via Giuseppe Verdi 3;San Vittore Olona;San Vittore Olona;0;bci;0|0|0
+114941413;179000;178;5+;2;;0;R;Terratetto unifamiliare;45.55060;8.88595;Via Tagliamento , 18;Busto Garolfo;Busto Garolfo;0;;0|0|0
+115133945;395000;132;4;2;;0;N;Villa unifamiliare;45.56910;8.91740;Via Ortisei;Canegrate;Canegrate;0;bgj;0|0|0
+115298115;165000;110;3;2;1;1;O;Appartamento;45.54660;8.87768;Via Giovanni Randaccio;Busto Garolfo;Busto Garolfo;1;ba;0|0|0
+115312785;380000;144;4;2;S/ T/ 1;1;N;Quadrilocale;45.58290;8.93260;Via 24 Maggio;San Vittore Olona;San Vittore Olona;0;bcd;0|0|0
+115576463;250000;81;3;2;1;1;N;Trilocale;45.49770;8.79590;Via Don Angelo Ferrario, 29;Cuggiono;Cuggiono;0;cg;0|0|0
+115776689;420000;490;5+;3;;0;R;Terratetto unifamiliare;45.58560;8.94390;via riva, 20;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+115914271;380000;144;4;2;1;1;N;Quadrilocale;45.58270;8.93270;Via 24 Maggio;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+116634887;390000;140;4;2;;0;B;Villa unifamiliare;45.53850;8.87511;Via Inveruno S.N.C.;Busto Garolfo;Busto Garolfo;0;;0|0|0
+116706993;520000;800;5;3;;0;R;Terratetto unifamiliare;45.55080;8.78180;Via Giardino, 1;Castano Primo;Castano Primo;0;btj;0|0|0
+116727313;359000;191;5;2;;0;O;Villa a schiera;45.44520;8.90046;Via Della Pace;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+116914353;308500;147;3;2;;0;N;Villa a schiera;45.50460;8.81280;via Saint Louis;Cuggiono;Cuggiono;0;btc;0|0|0
+116935763;450000;145;4;2;;0;N;Villa bifamiliare;45.58590;8.93590;Via Fornasone;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+116999133;220000;180;5;2;2;0;B;Appartamento;45.61230;8.95440;Via Roma;Rescaldina;Rescaldina;0;btcd;0|0|0
+117154973;100000;200;4;3;;0;R;Rustico;45.41841;8.88311;Via Fratelli Bandiera;Robecco sul Naviglio;Robecco sul Naviglio;1;;0|0|0
+117257655;85000;75;3;1;2;0;;Trilocale;45.55040;8.77840;Via Walter Tobagi;Castano Primo;Castano Primo;0;tcg;0|0|0
+117563107;220000;180;4;2;;0;R;Villa unifamiliare;45.29240;8.98820;Via Vigevano;Motta Visconti;Motta Visconti;0;bc;0|0|0
+117614781;455000;301;5+;3;;0;B;Terratetto plurifamiliare;45.55290;8.77310;Viale Francesca De Maestri Colleoni;Castano Primo;Castano Primo;0;bt;0|0|0
+117778461;475000;206;4;2;;0;N;Villa unifamiliare;45.50330;8.80780;Via Novara;Cuggiono;Cuggiono;0;bd;0|0|0
+117778495;433000;193;4;2;;0;N;Villa unifamiliare;45.50330;8.80780;Via Novara;Cuggiono;Cuggiono;0;bd;0|0|0
+117806359;387000;138;4;2;1;1;N;Quadrilocale;45.57430;8.92390;Piazza Unità d'Italia;Canegrate;Canegrate;0;b;0|0|0
+117806699;532000;214;4;3;6 - 7;1;N;Attico;45.57430;8.92390;Piazza Unità d'Italia;Canegrate;Canegrate;0;;0|0|0
+117859857;339000;140;4;2;;0;N;Villa a schiera;45.53560;8.87340;Via per Inveruno;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+117947329;550000;311;5+;3+;;0;O;Villa unifamiliare;45.58270;8.94040;Via Luigi Pirandello;San Vittore Olona;San Vittore Olona;0;;0|0|0
+117959997;135000;240;5+;2;;0;;Terratetto unifamiliare;45.55120;8.77531;Corso San Rocco;Castano Primo;Castano Primo;0;bj;0|0|0
+118179779;349000;124;3;2;;0;N;Villa bifamiliare;45.53560;8.87340;Via per Inveruno;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+118492733;79000;72;3;1;;0;R;Rustico;45.43730;8.88660;Via Roma;Robecco sul Naviglio;Robecco sul Naviglio;0;i;0|0|0
+118613359;95000;70;2;1;2;0;B;Bilocale;45.59350;8.95840;Via Cristoforo Colombo;Cerro Maggiore;Cerro Maggiore;0;bci;0|0|0
+118726925;549000;280;5;3;;0;B;Villa unifamiliare;45.43910;8.89000;Via Gorizia, 5;Robecco sul Naviglio;Robecco sul Naviglio;0;btc;0|0|0
+118790803;349000;263;5;2;;0;B;Villa plurifamiliare;45.56520;8.92330;Via Rovereto;Canegrate;Canegrate;0;b;0|0|0
+118877049;350000;124;3;2;T;1;N;Trilocale;45.59660;8.95530;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+118937373;105000;60;2;1;2;1;B;Bilocale;45.61360;8.95430;Via della Libertà;Rescaldina;Rescaldina;0;bc;0|0|0
+119018237;309000;1;5+;3+;;0;R;Rustico;45.55120;8.78020;VIA SANT'ANTONIO;Castano Primo;Castano Primo;0;;0|0|0
+119214371;253000;92;4;2;2;1;N;Quadrilocale;45.55140;8.78510;Via Luciano Manara;Castano Primo;Castano Primo;0;t;0|0|0
+119433703;68000;68;3;1;;0;R;Terratetto unifamiliare;45.57010;8.92830;Via Cesare Battisti;Canegrate;Canegrate;0;bi;0|0|0
+119466447;55000;50;2;1;;0;R;Terratetto unifamiliare;45.28570;8.99430;Via F. Tacconi;Motta Visconti;Motta Visconti;0;;0|0|0
+119525105;359000;250;5;3+;;0;B;Villa unifamiliare;45.31280;8.97500;Via dei Mulini;Besate;Besate;0;a;0|0|0
+119733988;369000;215;5+;2;;0;O;Villa unifamiliare;45.56721;8.92567;Via Luigi Cadorna;Canegrate;Canegrate;1;ba;0|0|0
+119797342;285000;110;3;2;1;1;N;Trilocale;45.63120;8.93772;Via Papa Giovanni XXIII;Rescaldina;Rescaldina;0;btc;0|0|0
+119823358;440000;206;4;2;;0;N;Villa unifamiliare;45.54940;8.76280;Via Marche, snc;Castano Primo;Castano Primo;0;;0|0|0
+119823452;340000;164;4;2;;0;N;Villa unifamiliare;45.54940;8.76280;Via Marche, snc;Castano Primo;Castano Primo;0;c;0|0|0
+119823492;350000;170;4;2;;0;N;Villa unifamiliare;45.54940;8.76280;Via Marche, snc;Castano Primo;Castano Primo;0;cd;0|0|0
+119859710;225000;100;3;1;;0;B;Terratetto unifamiliare;45.29000;8.98830;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;bgd;0|0|0
+119905654;110000;170;4;3;;0;R;Cascina;45.62700;8.94400;Via Alberto da Giussano;Rescaldina;Rescaldina;0;btji;0|0|0
+120013778;120000;91;2;1;T;0;O;Bilocale;45.54600;8.87970;Via Tommaso Grossi;Busto Garolfo;Busto Garolfo;0;tad;0|0|0
+120038992;329000;193;4;3;;0;B;Villa bifamiliare;45.43140;8.87720;Via Aldo Moro, Casterno;Robecco sul Naviglio;Robecco sul Naviglio;0;j;0|0|0
+120423752;208000;81;2;2;3;1;O;Attico;45.59270;8.96090;Via Antonio Meucci;Cerro Maggiore;Cerro Maggiore;0;bta;0|0|0
+120476818;350000;124;4;2;1;1;N;Quadrilocale;45.59660;8.95530;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;btj;0|0|0
+120477150;291000;104;3;2;T;1;N;Trilocale;45.59660;8.95530;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;tc;0|0|0
+120829462;159000;80;2;1;1;1;N;Appartamento;45.62189;8.94904;Via Piave;Rescaldina;Rescaldina;1;btc;0|0|0
+120884342;160000;93;3;2;S2/ 1/ 2;0;B;Trilocale;45.57020;8.92900;Piazza Giacomo Matteotti;Canegrate;Canegrate;0;bcd;0|0|0
+121110420;135000;110;3;2;4;1;B;Trilocale;45.56130;8.77240;Via Lonate Pozzolo;Castano Primo;Castano Primo;0;btcagd;0|0|0
+121130794;340000;201;3;2;;0;B;Villa unifamiliare;45.43460;8.88398;Via S. Giovanni;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+121147340;223000;151;4;2;;0;B;Terratetto unifamiliare;45.57080;8.92790;Via Milite Ignoto;Canegrate;Canegrate;0;bcd;0|0|0
+121227612;375000;180;3;2;;0;R;Villa unifamiliare;45.59830;8.95040;Via varese;Cerro Maggiore;Cerro Maggiore;0;bd;0|0|0
+121230300;180000;464;5+;;;0;R;Villa unifamiliare;45.31590;8.96740;Vicolo al Sabbione;Besate;Besate;0;i;0|0|0
+121236508;285000;106;3;2;1;1;N;Trilocale;45.43520;8.88460;via Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;t;0|0|0
+121281446;239000;468;5;2;;0;R;Terratetto unifamiliare;45.55000;8.77560;Via Acerbi;Castano Primo;Castano Primo;0;btcd;0|0|0
+121316576;400000;220;5+;2;;0;O;Villa a schiera;45.63101;8.93100;Via Don Luigi Repetti;Rescaldina;Rescaldina;1;ta;0|0|0
+121344938;375000;250;4;3;;0;B;Villa a schiera;45.51100;8.81570;Via Sandro Pertini 18;Cuggiono;Cuggiono;0;bt;0|0|0
+121358936;280000;480;5+;3;;0;R;Villa plurifamiliare;45.50825;8.81767;Via San Fermo;Cuggiono;Cuggiono;1;tc;0|0|0
+121487974;215000;132;4;2;;0;B;Villa a schiera;45.31020;8.97269;Via Papa Giovanni XXIII;Besate;Besate;0;bc;0|0|0
+121526612;45000;69;1;;;0;R;Rustico;45.43570;8.88654;Via S. Giovanni;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+121553612;265000;129;3;1;;0;B;Villa unifamiliare;45.59820;8.95030;Via Varese;Cerro Maggiore;Cerro Maggiore;0;bd;0|0|0
+121691986;310000;120;4;2;;0;B;Villa unifamiliare;45.28310;8.99047;Via Ticinello;Motta Visconti;Motta Visconti;1;a;0|0|0
+121710082;870000;300;4;3;;0;B;Villa unifamiliare;45.63320;8.93472;Via Leopardi;Rescaldina;Rescaldina;0;bt;0|0|0
+121740922;130000;86;3;1;S/ T/ 2;0;O;Trilocale;45.55440;8.85750;Via Salvo d'Acquisto;Busto Garolfo;Busto Garolfo;0;bc;0|0|0
+121759470;180000;120;3;2;1;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;c;0|0|0
+121760050;170000;120;3;2;1;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;a;0|0|0
+121772466;115000;76;3;1;1;0;B;Trilocale;45.55200;8.77680;via Rugabella, 13;Castano Primo;Castano Primo;0;bcd;0|0|0
+121826612;119000;80;4;1;;0;B;Terratetto unifamiliare;45.55120;8.77530;Corso San Rocco;Castano Primo;Castano Primo;0;btc;0|0|0
+121836372;260000;200;3;1;;0;B;Villa unifamiliare;45.56760;8.93220;Via Olona;Canegrate;Canegrate;0;cgd;0|0|0
+121861034;280000;132;4;2;1;0;B;Quadrilocale;45.58540;8.94340;Via Magenta;San Vittore Olona;San Vittore Olona;0;bgi;0|0|0
+121863532;109000;50;2;1;T;0;O;Bilocale;45.41990;8.88320;Via Martiri delle Foibe;Robecco sul Naviglio;Robecco sul Naviglio;0;bt;0|0|0
+121885536;290000;105;3;2;T;1;N;Trilocale;45.63060;8.93777;Via Papa Giovanni XXIII;Rescaldina;Rescaldina;0;;0|0|0
+121888308;890000;3;5+;;;0;R;Terratetto unifamiliare;45.54560;8.88751;mazzini;Busto Garolfo;Busto Garolfo;0;;0|0|0
+121919370;119000;100;3;1;3;0;B;Trilocale;45.51000;8.81979;Via Varese;Cuggiono;Cuggiono;0;bc;0|0|0
+121968130;390000;200;4;2;T;1;N;Quadrilocale;45.61310;8.94930;Via G. Rossini;Rescaldina;Rescaldina;0;j;0|0|0
+121976588;498000;208;4;3;;0;O;Villa unifamiliare;45.56430;8.92518;Via Modena, 5;Canegrate;Canegrate;0;bt;0|0|0
+121986006;245000;305;5;1;S/ T/ 1;0;B;Appartamento;45.62820;8.94450;Via Cardinale Federico Borromeo;Rescaldina;Rescaldina;0;bc;0|0|0
+122010958;550000;468;5+;2;;0;O;Villa unifamiliare;45.29240;8.98740;Via Giulio Pastore;Motta Visconti;Motta Visconti;0;g;0|0|0
+122057858;98000;55;2;1;;0;B;Casa colonica;45.61290;8.95095;Via Mozzoni;Rescaldina;Rescaldina;0;b;0|0|0
+122102984;290000;115;3;2;1;1;N;Trilocale;45.58820;8.94000;via cantore, 0;San Vittore Olona;San Vittore Olona;0;tci;0|0|0
+122160852;250000;194;4;2;3;1;N;Attico;45.56470;8.92060;Via Adamello;Canegrate;Canegrate;0;bt;0|0|0
+122340714;598000;298;5+;3+;;0;O;Villa unifamiliare;45.62510;8.94070;Via Castellanza;Rescaldina;Rescaldina;0;b;0|0|0
+122416894;390000;150;4;2;2;1;N;Attico;45.57390;8.97990;Via Eugenio Montale;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+122810076;145000;85;3;1;1;0;O;Trilocale;45.58420;8.94880;Via Alessandro Manzoni;San Vittore Olona;San Vittore Olona;0;bcd;0|0|0
+122848972;185000;95;4;1;1;0;B;Quadrilocale;45.57200;8.93890;Via Vincenzo Bellini;Canegrate;Canegrate;0;bd;0|0|0
+122947912;95000;80;3;1;2;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;bc;0|0|0
+122952842;425000;162;4;2;2;1;N;Attico;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+123003180;65000;35;1;1;T;0;O;Monolocale;45.56760;8.92450;Via Gran Paradiso;Canegrate;Canegrate;0;d;0|0|0
+123031675;240000;72;3;2;1;1;N;Trilocale;45.49760;8.79590;Via Don Angelo Ferrario;Cuggiono;Cuggiono;0;bcgd;0|0|0
+123133651;115000;97;3;1;R;0;B;Trilocale;45.50970;8.81988;Via Varese;Cuggiono;Cuggiono;0;bc;0|0|0
+123138889;230000;488;5;;;0;R;Terratetto plurifamiliare;45.59510;8.95300;Via 20 Settembre;Cerro Maggiore;Cerro Maggiore;0;d;0|0|0
+123150393;265000;219;3;2;;0;R;Villa unifamiliare;45.56690;8.92070;Via Garibaldi;Canegrate;Canegrate;0;bcd;0|0|0
+123306723;239000;112;3;1;T;0;O;Trilocale;45.55230;8.78340;vicolo arco antico;Castano Primo;Castano Primo;0;btc;0|0|0
+123320129;297000;160;4;2;;0;O;Villa unifamiliare;45.43490;8.88820;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;ji;0|0|0
+123418217;324000;180;4;2;;0;O;Villa unifamiliare;45.41960;8.88080;Via Leone XIII;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+123538533;415000;145;4;2;;0;N;Villa bifamiliare;45.62038;8.95446;Via Giotto;Rescaldina;Rescaldina;1;;0|0|0
+123547843;295000;175;5+;3;2;1;B;Appartamento;45.62130;8.94734;Via Piave;Rescaldina;Rescaldina;0;btc;0|0|0
+123613209;495000;180;4;2;;0;N;Villa unifamiliare;45.56810;8.92245;este;Canegrate;Canegrate;0;;0|0|0
+123752775;135000;82;3;1;3;0;O;Mansarda;45.62768;8.93410;Via Don Antonio Balbi;Rescaldina;Rescaldina;1;ba;0|0|0
+123794169;700000;527;5+;3+;;0;O;Villa plurifamiliare;45.55020;8.78260;Via Bezzecca;Castano Primo;Castano Primo;0;bi;0|0|0
+123817443;55000;450;5+;2;T;0;R;Appartamento;45.54650;8.88580;Via Alessandro Volta;Busto Garolfo;Busto Garolfo;0;;0|0|0
+123820923;115000;65;2;1;T;0;O;Bilocale;45.55180;8.88480;Via Monte Nevoso;Busto Garolfo;Busto Garolfo;0;ti;0|0|0
+123874659;145000;127;;;1 - 2;1;B;Appartamento;45.54809;8.87568;Via Arconate;Busto Garolfo;Busto Garolfo;1;b;0|0|0
+123919319;165000;134;3;1;S/ T/ 1;1;B;Trilocale;45.57250;8.92600;Via Alessandro Manzoni;Canegrate;Canegrate;0;btcag;0|0|0
+123941809;270000;170;5;2;;0;B;Villa unifamiliare;45.55430;8.79450;Saronna, 6;Castano Primo;Castano Primo;0;bc;0|0|0
+123992965;300000;330;5+;3;;0;R;Villa unifamiliare;45.54860;8.77944;via carso;Castano Primo;Castano Primo;0;bca;0|0|0
+124152415;275000;210;5;2;;0;B;Villa unifamiliare;45.56170;8.77440;Via San Fedele;Castano Primo;Castano Primo;0;btci;0|0|0
+124166719;125000;72;2;2;T;0;B;Bilocale;45.28560;8.99710;Via Fratelli Rosselli;Motta Visconti;Motta Visconti;0;;0|0|0
+124184913;105000;53;1;1;S/ 1;1;B;Monolocale;45.56290;8.93220;Via Bormio;Canegrate;Canegrate;0;bcag;0|0|0
+124217147;229000;243;5+;3+;;0;R;Villa bifamiliare;45.54540;8.89460;Via Alfredo di Dio;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+124223885;99000;85;3;;1;0;B;Trilocale;45.62770;8.93360;Via Don Antonio Balbi;Rescaldina;Rescaldina;0;c;0|0|0
+124252923;370000;540;5;2;;0;;Terratetto unifamiliare;45.58890;8.96213;Via Vittorio Veneto;Cerro Maggiore;Cerro Maggiore;0;tc;0|0|0
+124287241;140000;85;2;;1;0;B;Appartamento;45.28494;8.98765;Via Giuseppe Vigoni;Motta Visconti;Motta Visconti;1;tca;0|0|0
+124297035;269000;270;5+;3;;0;B;Villa bifamiliare;45.54740;8.76270;Via Po;Castano Primo;Castano Primo;0;bci;0|0|0
+124336717;325000;118;3;2;;0;N;Villa a schiera;45.54450;8.87720;Via Antonio Gramsci;Busto Garolfo;Busto Garolfo;0;bcd;0|0|0
+124352325;105000;87;3;1;R;0;O;Trilocale;45.29210;8.99270;Via Dante Alighieri;Motta Visconti;Motta Visconti;0;;0|0|0
+124402233;530000;947;;;;0;;Villa unifamiliare;45.28370;8.99318;Via Don Minzoni;Motta Visconti;Motta Visconti;0;;0|0|0
+124462175;150000;107;3;1;T/ 2;0;B;Appartamento;45.61264;8.95077;Via Giuseppe Mozzoni;Rescaldina;Rescaldina;1;b;0|0|0
+124506687;82000;65;2;1;T;0;B;Bilocale;45.50590;8.81760;Vittorio Emanuele;Cuggiono;Cuggiono;0;c;0|0|0
+124585041;126000;80;3;1;2;0;B;Trilocale;45.55000;8.77774;Via Acerbi 40;Castano Primo;Castano Primo;0;bcad;0|0|0
+124587599;239000;207;5+;;;0;;Villa unifamiliare;45.58720;8.94099;sempione;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+124588313;169000;100;3;1;1;1;O;Trilocale;45.54780;8.87660;Via Arconate;Busto Garolfo;Busto Garolfo;0;bcad;0|0|0
+124682209;58000;58;2;1;T/ R;0;R;Appartamento;45.55022;8.88870;Via San Remigio;Busto Garolfo;Busto Garolfo;1;a;0|0|0
+124689719;79000;82;3;2;T;0;O;Trilocale;45.55310;8.77990;Via Solferino, 26;Castano Primo;Castano Primo;0;;0|0|0
+124704857;165000;112;3;1;2;1;B;Appartamento;45.59258;8.94910;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;1;b;0|0|0
+124706485;378000;136;4;2;;0;N;Villa a schiera;45.56370;8.91670;Via Vesuvio;Canegrate;Canegrate;0;ti;0|0|0
+124763171;225000;180;5+;1;2;0;O;Appartamento;45.57630;8.98340;Via Giacomo Puccini 28;Cerro Maggiore;Cerro Maggiore;0;cagjd;0|0|0
+124848803;428000;150;4;2;3;1;N;Quadrilocale;45.58030;8.95060;via cantore, 0;San Vittore Olona;San Vittore Olona;0;btc;0|0|0
+124850015;275000;89;3;2;1;1;N;Trilocale;45.56400;8.92660;Via Firenze;Canegrate;Canegrate;0;bt;0|0|0
+124896011;190000;105;4;1;;0;R;Villa unifamiliare;45.61790;8.94230;Via Conciliazione;Rescaldina;Rescaldina;0;b;0|0|0
+124946349;269000;256;4;1;;0;R;Villa unifamiliare;45.55130;8.88910;Via Monte Santo;Busto Garolfo;Busto Garolfo;0;bcji;0|0|0
+124975807;285000;200;4;3;;0;B;Villa a schiera;45.62200;8.95230;Via Giorgio de Chirico 2//4;Rescaldina;Rescaldina;0;bcagjd;0|0|0
+125032185;298000;358;5+;2;;0;B;Villa bifamiliare;45.55020;8.87520;Via Monte Rosa;Busto Garolfo;Busto Garolfo;0;cd;0|0|0
+125145607;530000;480;5+;3;;0;O;Villa unifamiliare;45.59070;8.94750;Via Eugenio Curiel;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+125199445;65000;50;2;1;1;0;B;Bilocale;45.31160;8.96920;Via Giacomo Matteotti;Besate;Besate;0;d;0|0|0
+125241953;265000;220;5;3;;0;R;Villa unifamiliare;45.56310;8.91050;Via Vercelli;Canegrate;Canegrate;0;bcjd;0|0|0
+125263113;395000;197;4;2;;0;N;Villa unifamiliare;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;btcd;0|0|0
+125263131;350000;183;4;2;;0;N;Villa unifamiliare;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;btcd;0|0|0
+125263133;450000;219;4;2;;0;N;Villa unifamiliare;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;cd;0|0|0
+125263137;300000;151;4;2;T/ 1;0;N;Quadrilocale;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;btcjd;0|0|0
+125263159;495000;266;5;3;;0;N;Villa unifamiliare;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;cd;0|0|0
+125263163;250000;131;3;1;T;0;N;Trilocale;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;cjd;0|0|0
+125263181;610000;330;5;3;;0;N;Villa unifamiliare;45.54760;8.78860;Via per Cuggiono, snc;Castano Primo;Castano Primo;0;cd;0|0|0
+125300429;165000;100;3;2;R;0;O;Trilocale;45.58890;8.93630;Via Goffredo Mameli 2;San Vittore Olona;San Vittore Olona;0;bcgd;0|0|0
+125409589;135000;85;3;1;1;0;O;Trilocale;45.54830;8.79330;Via Piero Maroncelli;Castano Primo;Castano Primo;0;bt;0|0|0
+125448329;155000;85;3;1;3;1;B;Trilocale;45.61360;8.95427;Via Libertà;Rescaldina;Rescaldina;0;b;0|0|0
+125456759;305000;130;4;2;T;1;N;Quadrilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;btj;0|0|0
+125479711;155000;70;3;1;1;0;O;Trilocale;45.55320;8.77518;Viale IV Novembre 7;Castano Primo;Castano Primo;0;bcad;0|0|0
+125490667;286000;107;3;2;1;1;N;Trilocale;45.61710;8.94420;Via Monte Grappa;Rescaldina;Rescaldina;0;btcgi;0|0|0
+125490923;335000;128;4;2;1;1;N;Quadrilocale;45.61710;8.94420;Via Monte Grappa;Rescaldina;Rescaldina;0;btcgi;0|0|0
+125518521;269000;150;3;2;;0;B;Terratetto plurifamiliare;45.61790;8.95638;Viale dei Kennedy;Rescaldina;Rescaldina;0;b;0|0|0
+125535681;295000;109;3;2;2;1;N;Trilocale;45.61710;8.94420;Via Monte Grappa;Rescaldina;Rescaldina;0;btcgi;0|0|0
+125673299;163000;128;3;2;2;0;B;Trilocale;45.55270;8.78200;Corso Martiri Patrioti, 73;Castano Primo;Castano Primo;0;d;0|0|0
+125728139;185000;100;3;2;1;1;B;Trilocale;45.31530;8.97390;Via del Campo Breve;Besate;Besate;0;bca;0|0|0
+125781977;225000;140;4;2;1;0;O;Quadrilocale;45.31260;8.97410;Via dei Mulini;Besate;Besate;0;b;0|0|0
+125782843;240000;132;4;2;;0;O;Terratetto unifamiliare;45.58540;8.94350;Via Magenta;San Vittore Olona;San Vittore Olona;0;btc;0|0|0
+125788409;195000;144;3;1;;0;;Terratetto unifamiliare;45.58760;8.93957;via cantù, 8;San Vittore Olona;San Vittore Olona;0;c;0|0|0
+125828869;695000;350;5+;3+;;0;O;Villa unifamiliare;45.54958;8.76705;Via Ponte Castano;Castano Primo;Castano Primo;1;a;0|0|0
+125829225;228000;86;3;2;3;1;N;Trilocale;45.59070;8.96610;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+125838715;175000;135;3;2;;0;O;Terratetto unifamiliare;45.54740;8.88470;via Parini, 20;Busto Garolfo;Busto Garolfo;0;bc;0|0|0
+125840593;89000;75;2;1;1;0;B;Bilocale;45.50570;8.81800;Via Vittorio Emanuele II;Cuggiono;Cuggiono;0;a;0|0|0
+125863809;195000;85;3;1;1;1;B;Trilocale;45.56290;8.93130;Via Bormio 12;Canegrate;Canegrate;0;bcag;0|0|0
+125864473;93000;80;3;1;1;0;B;Loft;45.59330;8.95120;Via San Carlo Borromeo;Cerro Maggiore;Cerro Maggiore;0;ad;0|0|0
+125878209;110000;95;3;1;1;1;B;Trilocale;45.50660;8.81720;Piazza della Vittoria;Cuggiono;Cuggiono;0;bc;0|0|0
+125902405;219000;150;4;1;R;0;;Quadrilocale;45.56890;8.93020;Via Filippo Corridoni;Canegrate;Canegrate;0;tcgd;0|0|0
+125963923;50000;145;3;;T;0;R;Trilocale;45.54410;8.88230;Via Vincenzo Monti;Busto Garolfo;Busto Garolfo;0;i;0|0|0
+125976661;99000;85;3;1;R;0;R;Trilocale;45.62770;8.93360;Via Don Antonio Balbi 55;Rescaldina;Rescaldina;0;bcad;0|0|0
+126010425;240000;130;3;2;1 - 2;1;N;Attico;45.29170;8.99850;Via Contessa Carolina del Maino;Motta Visconti;Motta Visconti;0;bt;0|0|0
+126026209;290000;120;4;2;;0;O;Villa unifamiliare;45.28300;8.99060;Via Ticinello;Motta Visconti;Motta Visconti;0;b;0|0|0
+126066845;285000;113;3;2;1;1;N;Trilocale;45.43520;8.88440;Via Vincenzo Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;bt;0|0|0
+126068937;325000;130;3;2;T;1;N;Trilocale;45.43520;8.88440;Via Vincenzo Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;bcj;0|0|0
+126094241;295000;142;4;2;;0;O;Terratetto unifamiliare;45.63280;8.93890;Via Edmondo De Amicis;Rescaldina;Rescaldina;0;btcd;0|0|0
+126096721;249000;173;3;2;;0;O;Villa unifamiliare;45.28440;8.99110;Via Antonio Gramsci;Motta Visconti;Motta Visconti;0;cj;0|0|0
+126098669;39000;74;3;1;;0;R;Rustico;45.59500;8.95340;Via 20 Settembre;Cerro Maggiore;Cerro Maggiore;0;i;0|0|0
+126105573;189000;142;4;2;S/ S/ 1;1;O;Quadrilocale;45.58400;8.94960;Via Alessandro Manzoni;San Vittore Olona;San Vittore Olona;0;bcd;0|0|0
+126231899;109000;95;3;1;2;0;B;Trilocale;45.44010;8.88770;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+126233551;30000;70;2;1;T;0;R;Appartamento;45.31216;8.96883;Via 4 Novembre;Besate;Besate;1;;0|0|0
+126248913;450000;246;5;3+;;0;B;Villa unifamiliare;45.55080;8.87280;Via Europa 25;Busto Garolfo;Busto Garolfo;0;btj;0|0|0
+126278895;250000;115;3;2;1;1;O;Trilocale;45.55040;8.88010;Via Alberto Battaglia;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+126335349;330000;283;5+;3;;0;B;Villa unifamiliare;45.58370;8.94950;Via Alessandro Manzoni;San Vittore Olona;San Vittore Olona;0;btg;0|0|0
+126346305;297000;139;3;;;0;N;Villa a schiera;45.50620;8.81430;Via San Gregorio;Cuggiono;Cuggiono;0;b;0|0|0
+126370981;250000;132;4;2;T;1;N;Quadrilocale;45.59040;8.94880;Piazza Concordia;Cerro Maggiore;Cerro Maggiore;0;cd;0|0|0
+126373079;349000;170;4;2;;0;B;Villa unifamiliare;45.44190;8.88760;Via per Magenta;Robecco sul Naviglio;Robecco sul Naviglio;0;bt;0|0|0
+126393759;325000;90;3;2;T;1;N;Trilocale;45.43520;8.88460;Via Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+126394095;339000;140;4;2;;0;N;Villa a schiera;45.53500;8.87360;Via per Inveruno;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+126396635;109000;80;2;1;T/ 1;0;B;Bilocale;45.54670;8.88610;Via Alessandro Volta;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+126402507;500000;300;5+;3;;0;O;Villa bifamiliare;45.60980;8.94790;Via Carroccio;Rescaldina;Rescaldina;0;bt;0|0|0
+126427351;95000;55;1;1;4;1;B;Monolocale;45.58140;8.94000;Via Madre Teresa di Calcutta;San Vittore Olona;San Vittore Olona;0;bai;0|0|0
+126452349;178000;117;4;2;1;1;B;Appartamento;45.61332;8.95477;Via della Libertà;Rescaldina;Rescaldina;1;b;0|0|0
+126459483;208000;116;3;1;1;0;O;Trilocale;45.54210;8.89539;Colle della Maddalena, 21;Busto Garolfo;Busto Garolfo;0;btg;0|0|0
+126468325;28000;48;2;1;T;0;R;Bilocale;45.54640;8.88590;Via Alessandro Volta;Busto Garolfo;Busto Garolfo;0;s;0|0|0
+126492161;189000;135;3;2;1;0;O;Trilocale;45.55310;8.77727;Via San Gerolamo 27;Castano Primo;Castano Primo;0;ba;0|0|0
+126541309;105000;110;3;1;3;1;B;Trilocale;45.55560;8.77540;Via Lonate Pozzolo;Castano Primo;Castano Primo;0;bc;0|0|0
+126559745;275000;220;5+;2;;0;R;Villa unifamiliare;45.56170;8.77440;Via San Fedele;Castano Primo;Castano Primo;0;btjd;0|0|0
+126598079;169000;90;2;2;2;0;B;Bilocale;45.56620;8.91130;Via mantova 30;Canegrate;Canegrate;0;ta;0|0|0
+126607455;290000;156;4;3;;0;B;Villa a schiera;45.44460;8.88480;Via Carlo Alberto Dalla Chiesa;Robecco sul Naviglio;Robecco sul Naviglio;0;i;0|0|0
+126649029;395000;155;4;2;2;1;N;Attico;45.58740;8.96040;Via Giovanni Amendola;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+126672791;148000;58;2;1;S/ 2;1;;Bilocale;45.62330;8.94530;Via Vincenzo Bellini;Rescaldina;Rescaldina;0;ca;0|0|0
+126705279;235000;126;3;2;T;1;O;Trilocale;45.56910;8.93000;Via Filippo Corridoni;Canegrate;Canegrate;0;bc;0|0|0
+126715605;129000;137;3;2;;0;O;Terratetto unifamiliare;45.43670;8.90880;Cascina Tangola;Robecco sul Naviglio;Robecco sul Naviglio;0;d;0|0|0
+126718491;180000;83;3;1;1;1;B;Trilocale;45.43620;8.88500;Via Don Sironi;Robecco sul Naviglio;Robecco sul Naviglio;0;btcd;0|0|0
+126725621;190000;230;5+;3;T/ 1;0;R;Appartamento;45.58650;8.94440;Via Mentana;San Vittore Olona;San Vittore Olona;0;bd;0|0|0
+126813187;124000;80;3;1;1;0;O;Trilocale;45.55270;8.77940;Vicolo Annunciata;Castano Primo;Castano Primo;0;bti;0|0|0
+126819517;220000;100;3;1;2;1;B;Trilocale;45.62360;8.94520;Via Vincenzo Bellini 2;Rescaldina;Rescaldina;0;bcgi;0|0|0
+126854631;150000;121;3;1;S/ 2;1;R;Trilocale;45.59200;8.94930;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;0;bcagd;0|0|0
+126855599;395000;151;5;2;;0;N;Villa a schiera;45.50320;8.80780;Via Novara;Cuggiono;Cuggiono;0;b;0|0|0
+126868805;380000;151;5;2;;0;N;Villa a schiera;45.50320;8.80780;Via Novara;Cuggiono;Cuggiono;0;b;0|0|0
+126979205;399000;217;5;2;;0;O;Villa unifamiliare;45.58080;8.94610;Via Giuseppe Mazzini;San Vittore Olona;San Vittore Olona;0;;0|0|0
+126987639;68000;50;2;1;2;0;B;Bilocale;45.54590;8.88150;Via Alessandro Manzoni;Busto Garolfo;Busto Garolfo;0;bcasd;0|0|0
+126994677;119000;121;3;2;R;0;B;Trilocale;45.50670;8.82000;Via Rossetti;Cuggiono;Cuggiono;0;bcd;0|0|0
+127067187;128000;110;4;2;R;0;R;Quadrilocale;45.43920;8.87960;Via Fratelli di Dio;Robecco sul Naviglio;Robecco sul Naviglio;0;bca;0|0|0
+127069277;175000;227;2;1;;0;B;Villa a schiera;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;;0|0|0
+127073557;159000;65;3;1;R;1;B;Trilocale;45.58830;8.93950;Corso Sempione 57;San Vittore Olona;San Vittore Olona;0;bgd;0|0|0
+127097895;109000;65;2;1;4;0;O;Bilocale;45.58820;9.07650;Via FRATELLI CERVI 2;Cesate;Cesate;0;bc;0|0|0
+127111059;250000;115;3;2;1;0;O;Trilocale;45.56970;8.92315;Via Zara 2;Canegrate;Canegrate;0;bcd;0|0|0
+127150061;180000;95;3;2;R;0;O;Trilocale;45.55040;8.87630;Via Cevedale;Busto Garolfo;Busto Garolfo;0;cg;0|0|0
+127161475;285000;141;3;2;;0;O;Terratetto unifamiliare;45.59130;8.95210;Via Regina Margherita;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+127239915;549000;148;3;2;;0;N;Villa unifamiliare;45.59510;8.95510;Via Isonzo;Cerro Maggiore;Cerro Maggiore;0;bj;0|0|0
+127241767;125000;78;3;1;1;1;O;Appartamento;45.54785;8.87975;Via Monte Bianco;Busto Garolfo;Busto Garolfo;1;ba;0|0|0
+127249149;125000;106;3;1;S - T;0;B;Trilocale;45.29240;8.98770;Via Giulio Pastore;Motta Visconti;Motta Visconti;0;bcag;0|0|0
+127308091;290000;210;5;2;;0;O;Villa a schiera;45.29120;9.00160;Via Salvo D'Acquisto;Motta Visconti;Motta Visconti;0;b;0|0|0
+127314961;230000;147;3;2;T/ 1;0;O;Trilocale;45.54600;8.88320;Piazza Lombardia;Busto Garolfo;Busto Garolfo;0;ba;0|0|0
+127329395;189000;137;3;2;S/ 1;0;O;Trilocale;45.58330;8.94900;Via Concordia;San Vittore Olona;San Vittore Olona;0;btg;0|0|0
+127333935;375000;311;5+;2;;0;R;Villa unifamiliare;45.61390;8.95530;Via Tommaso Grossi;Rescaldina;Rescaldina;0;btcd;0|0|0
+127358435;329000;200;4;2;;0;O;Villa unifamiliare;45.54500;8.78130;Via Adua;Castano Primo;Castano Primo;0;;0|0|0
+127371471;179000;140;3;2;;0;B;Appartamento in villa;45.55500;8.76940;Via 26 Febbraio 1945;Castano Primo;Castano Primo;0;bt;0|0|0
+127371971;532800;166;5;3;3;1;N;Appartamento;45.58990;8.93290;Via Roma;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+127372265;343650;119;3;2;1;1;N;Trilocale;45.58990;8.93290;Via Roma;San Vittore Olona;San Vittore Olona;0;tc;0|0|0
+127373075;361200;129;3;2;T;1;N;Trilocale;45.58990;8.93290;Via Roma;San Vittore Olona;San Vittore Olona;0;btj;0|0|0
+127373415;279850;96;3;2;1;1;N;Trilocale;45.58990;8.93290;Via Roma;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+127373631;192850;66;2;1;1;1;N;Bilocale;45.58990;8.93290;Via Roma;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+127376223;498000;210;5;3;;0;O;Villa unifamiliare;45.56430;8.92520;Via Modena;Canegrate;Canegrate;0;;0|0|0
+127394365;381000;185;4;2;;0;O;Villa a schiera;45.50430;8.81330;Via Saint Louis;Cuggiono;Cuggiono;0;bc;0|0|0
+127402777;180000;85;3;2;R;0;O;Trilocale;45.55000;8.87670;Via Adamello;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+127406145;369000;166;4;3+;;0;O;Villa a schiera;45.51120;8.81470;Via Sandro Pertini;Cuggiono;Cuggiono;0;b;0|0|0
+127420339;168000;65;2;1;1;1;N;Bilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+127442788;390000;180;5;2;3;1;N;Appartamento;45.56630;8.92064; ;Canegrate;Canegrate;0;bt;0|0|0
+127472328;299000;210;5;2;;0;O;Villa a schiera;45.29120;9.00160;Via Salvo D'Acquisto;Motta Visconti;Motta Visconti;0;b;0|0|0
+127478226;285000;358;5+;2;;0;R;Villa unifamiliare;45.54640;8.88600;Via Alessandro Volta 12;Busto Garolfo;Busto Garolfo;0;bcjd;0|0|0
+127482784;245000;200;4;2;;0;B;Villa a schiera;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;b;0|0|0
+127482962;290000;111;3;2;T/ 1;1;N;Trilocale;45.58550;8.94410;Via Sempione;San Vittore Olona;San Vittore Olona;0;tc;0|0|0
+127494962;165000;97;3;2;R;0;;Trilocale;45.43970;8.88050;Via Don Giovanni Minzoni;Robecco sul Naviglio;Robecco sul Naviglio;0;btci;0|0|0
+127523100;289000;100;3;2;2;1;N;Trilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+127547050;320000;200;5+;2;2;1;N;Attico;45.59144;8.93818;Via Giuseppe Parini;San Vittore Olona;San Vittore Olona;1;bt;0|0|0
+127547248;230000;100;3;1;S/ R;1;O;Trilocale;45.59320;8.96320;Via G. Bruno 39;Cerro Maggiore;Cerro Maggiore;0;tgd;0|0|0
+127554598;60000;100;;;;0;R;Rustico;45.59115;8.95005;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;1;;0|0|0
+127558538;165000;80;3;1;1;0;;Trilocale;45.56900;8.92280;Via Cervino 14;Canegrate;Canegrate;0;bcd;0|0|0
+127579624;85000;45;1;1;T;1;B;Monolocale;45.28100;8.99260;Via Po;Motta Visconti;Motta Visconti;0;bi;0|0|0
+127595350;285000;90;3;1;T;1;N;Trilocale;45.54210;8.87770;Via Pergolesi, 1;Busto Garolfo;Busto Garolfo;0;c;0|0|0
+127604628;189000;165;5+;2;;0;B;Villa a schiera;45.29300;8.99810;Via Gianni Rodari;Motta Visconti;Motta Visconti;0;btcaj;0|0|0
+127608920;140000;76;2;1;T/ 1;0;B;Bilocale;45.56940;8.92960;Via Goffredo Mameli;Canegrate;Canegrate;0;d;0|0|0
+127609670;50000;30;1;1;1;0;B;Monolocale;45.56970;8.93000;Via Goffredo Mameli;Canegrate;Canegrate;0;;0|0|0
+127625158;160000;79;2;1;S - T;1;O;Bilocale;45.57550;8.92640;Via Madre Teresa di Calcutta;Canegrate;Canegrate;0;t;0|0|0
+127668846;130000;66;2;1;1;0;B;Bilocale;45.59070;8.95060;Via San Giovanni Battista;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+127669306;319000;115;3;2;2;1;N;Trilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+127701518;269000;143;3;1;;0;B;Villa a schiera;45.63100;8.93103;Via Don Luigi Repetti;Rescaldina;Rescaldina;0;t;0|0|0
+127703574;169000;108;3;1;1;0;B;Trilocale;45.43600;8.88350;Via Don Ballabio;Robecco sul Naviglio;Robecco sul Naviglio;0;btai;0|0|0
+127710702;119000;63;2;1;T;0;B;Bilocale;45.57160;8.92960;Via Federico Confalonieri;Canegrate;Canegrate;0;i;0|0|0
+127717126;114000;55;2;1;;0;O;Terratetto unifamiliare;45.59820;9.07850;Via VERDI 6;Cesate;Cesate;0;d;0|0|0
+127729880;189000;85;3;1;R;0;O;Trilocale;45.57150;8.93970;Via Ruggero Leoncavallo 6;Canegrate;Canegrate;0;bg;0|0|0
+127760784;110000;70;2;1;T/ 1;0;B;Bilocale;45.59520;8.95150;Via Marelli;Cerro Maggiore;Cerro Maggiore;0;d;0|0|0
+127784114;199000;291;5+;2;;0;B;Villa unifamiliare;45.28440;8.99160;Via Antonio Gramsci;Motta Visconti;Motta Visconti;0;bc;0|0|0
+127845412;280000;133;3;2;S/ 2;1;N;Trilocale;45.56360;8.92660;Via Firenze;Canegrate;Canegrate;0;;0|0|0
+127847700;55000;200;5+;3;;0;R;Rustico;45.54790;8.87670;Via Fiume;Busto Garolfo;Busto Garolfo;0;bci;0|0|0
+127849936;145000;65;2;1;R;1;B;Bilocale;45.54770;8.87954;via monte bianco , 16;Busto Garolfo;Busto Garolfo;0;ca;0|0|0
+127878404;245000;141;3;1;;0;O;Villa unifamiliare;45.29150;8.98890;Via Vigevano;Motta Visconti;Motta Visconti;0;cgjd;0|0|0
+127886628;320000;208;4;2;T/ 1;0;O;Quadrilocale;45.50630;8.81180;Piazza Giovanni Gualdoni;Cuggiono;Cuggiono;0;ba;0|0|0
+127893530;98000;87;2;1;2;0;B;Bilocale;45.50690;8.81690;via cavour;Cuggiono;Cuggiono;0;;0|0|0
+127895122;450000;348;5+;3+;;0;B;Villa bifamiliare;45.56940;8.92520;Via 24 Maggio;Canegrate;Canegrate;0;;0|0|0
+127898022;335000;115;4;2;T;1;N;Quadrilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;j;0|0|0
+127928932;122000;83;3;1;1;0;B;Trilocale;45.55270;8.78064;Vicolo del Torchio 16;Castano Primo;Castano Primo;0;bad;0|0|0
+127935694;95000;80;2;1;;0;O;Terratetto unifamiliare;45.54930;8.88993; ;Busto Garolfo;Busto Garolfo;0;c;0|0|0
+127961730;280000;106;3;2;T;1;N;Trilocale;45.56400;8.92660;Via Firenze;Canegrate;Canegrate;0;btj;0|0|0
+127962010;125000;92;3;1;T;0;B;Trilocale;45.54610;8.88093;via manzoni, 25;Busto Garolfo;Busto Garolfo;0;c;0|0|0
+127990402;265000;90;3;1;1;1;N;Trilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;btg;0|0|0
+127999508;218000;177;5;1;;0;B;Villa unifamiliare;45.54930;8.78564;Via Cristoforo Colombo 14;Castano Primo;Castano Primo;0;btgj;0|0|0
+128025878;115000;130;3;1;;0;R;Trilocale;45.54510;8.88180;vicolo Gesù , 15;Busto Garolfo;Busto Garolfo;0;cj;0|0|0
+128026758;239000;90;3;1;1;1;N;Trilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+128051384;27000;35;1;1;T;1;R;Appartamento;45.57650;8.97811;Via Edmondo De Amicis;Cerro Maggiore;Cerro Maggiore;1;;0|0|0
+128087924;284000;100;3;2;1;1;N;Trilocale;45.54370;8.87580;Via Giovan Battista Pergolesi;Busto Garolfo;Busto Garolfo;0;bg;0|0|0
+128100188;218000;177;4;1;;0;R;Villa bifamiliare;45.54900;8.78590;Via Cristoforo Colombo;Castano Primo;Castano Primo;0;btc;0|0|0
+128110864;205000;159;5;2;1;0;B;Appartamento;45.61550;8.94600;Via ai Campi;Rescaldina;Rescaldina;0;bc;0|0|0
+128114684;250000;198;5;2;;0;R;Villa unifamiliare;45.57620;8.97910;Via Carlo Cattaneo;Cerro Maggiore;Cerro Maggiore;0;bd;0|0|0
+128118046;849000;270;5+;3;;1;O;Villa unifamiliare;45.55500;8.77460;Via Padre Giuliano;Castano Primo;Castano Primo;0;t;0|0|0
+128131058;419000;279;3;2;;0;R;Villa unifamiliare;45.56270;8.92800;Via Firenze 34;Canegrate;Canegrate;0;cjd;0|0|0
+128137808;259000;155;4;2;1;0;O;Quadrilocale;45.57770;8.98120;Via Luigi Zerbi 12;Cerro Maggiore;Cerro Maggiore;0;bi;0|0|0
+128144378;85000;90;3;1;3;0;B;Trilocale;45.55040;8.87590;via cevedale, 1;Busto Garolfo;Busto Garolfo;0;ba;0|0|0
+128181204;395000;182;4;2;;0;N;Villa bifamiliare;45.50990;8.81440;Via Decimo Fossati;Cuggiono;Cuggiono;0;t;0|0|0
+128182194;349000;225;5;2;;0;B;Villa unifamiliare;45.57310;8.92880;Via Francesco Petrarca;Canegrate;Canegrate;0;btj;0|0|0
+128192674;255000;180;5;2;;0;O;Villa bifamiliare;45.28600;8.99870;Via Piemonte;Motta Visconti;Motta Visconti;0;b;0|0|0
+128207326;82000;65;2;1;T;0;O;Bilocale;45.41750;8.88570;Vicolo Albani, 2;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+128213240;20000;42;2;;;0;R;Rustico;45.54590;8.88290;Piazza Lombardia;Busto Garolfo;Busto Garolfo;0;s;0|0|0
+128221824;138000;106;3;2;2;1;B;Trilocale;45.31410;8.96658;Via Angelo Mainetti;Besate;Besate;0;bc;0|0|0
+128221844;500000;800;5+;3+;;0;R;Villa plurifamiliare;45.28740;8.99276;Via Soriani;Motta Visconti;Motta Visconti;0;c;0|0|0
+128231374;240000;129;3;2;;1;B;Villa unifamiliare;45.58860;8.95380;VIA VOLTA;Cerro Maggiore;Cerro Maggiore;0;tc;0|0|0
+128241984;135000;105;4;2;1;1;B;Quadrilocale;45.56100;8.78050;Via Giovanni Giolitti;Castano Primo;Castano Primo;0;bcd;0|0|0
+128243524;199000;170;4;1;1;0;B;Quadrilocale;45.55040;8.77970;Via Acerbi;Castano Primo;Castano Primo;0;btcd;0|0|0
+128265908;240000;120;3;1;;0;O;Villa bifamiliare;45.56643;8.92470;Via Armando Diaz;Canegrate;Canegrate;1;tca;0|0|0
+128266966;219000;153;3;2;1;0;O;Trilocale;45.58450;8.94560;Via Sempione;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+128268108;120000;72;3;1;3;1;B;Trilocale;45.58970;8.94620;Via Eugenio Curiel;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+128293526;360000;168;4;2;S/ 3;1;O;Quadrilocale;45.58650;8.94290;Via Europa;San Vittore Olona;San Vittore Olona;0;bcgd;0|0|0
+128297084;130000;200;5+;1;;0;R;Cascina;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;c;0|0|0
+128303134;350000;133;4;2;T;1;N;Quadrilocale;45.57390;8.97990;Via Eugenio Montale;Cerro Maggiore;Cerro Maggiore;0;btj;0|0|0
+128306608;365000;220;4;2;;0;O;Villa bifamiliare;45.63170;8.93150;Via Monviso;Rescaldina;Rescaldina;0;tj;0|0|0
+128320070;149000;111;3;2;3;1;B;Trilocale;45.55520;8.77568;Via Lonate Pozzolo 22;Castano Primo;Castano Primo;0;bcad;0|0|0
+128321314;235000;91;3;1;S/ R;1;O;Trilocale;45.61610;8.95080;Via Barbara Melzi;Rescaldina;Rescaldina;0;bc;0|0|0
+128382514;249000;243;5+;2;;0;B;Villa unifamiliare;45.28840;8.99710;Via Sant'Anna;Motta Visconti;Motta Visconti;0;btcgjd;0|0|0
+128392040;198000;112;3;2;T;0;O;Trilocale;45.55140;8.78170;Via Acerbi, 26;Castano Primo;Castano Primo;0;d;0|0|0
+128394108;129000;85;3;1;T;0;B;Trilocale;45.55160;8.77790;Piazza Giuseppe Mazzini;Castano Primo;Castano Primo;0;bi;0|0|0
+128418672;249000;200;5;2;;0;R;Villa unifamiliare;45.28920;9.00040;Via Sant'Anna;Motta Visconti;Motta Visconti;0;bgd;0|0|0
+128430302;185000;105;3;2;R;1;O;Trilocale;45.28800;8.99708;Via del Cavo;Motta Visconti;Motta Visconti;0;;0|0|0
+128445856;92000;130;4;1;1;0;R;Quadrilocale;45.28770;8.99220;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;td;0|0|0
+128447760;485000;240;5;3;;0;B;Villa bifamiliare;45.61820;8.95564;Viale Kennedy;Rescaldina;Rescaldina;0;b;0|0|0
+128450132;290000;115;3;2;1;1;N;Trilocale;45.58860;8.94030;Via Generale Antonio Cantore;San Vittore Olona;San Vittore Olona;0;bcd;0|0|0
+128452994;320000;120;3;2;;1;N;Trilocale;45.58820;8.94232;Via San Francesco;San Vittore Olona;San Vittore Olona;0;t;0|0|0
+128465538;125000;92;3;1;3;1;B;Trilocale;45.61750;8.94800;Via San Bernardo;Rescaldina;Rescaldina;0;bcg;0|0|0
+128486742;695000;565;5+;3+;;0;B;Villa unifamiliare;45.54960;8.76710;Via Ponte Castano;Castano Primo;Castano Primo;0;bt;0|0|0
+128494420;219000;184;3;1;;0;B;Villa bifamiliare;45.50560;8.82203;Via Giuseppe Garibaldi 58;Cuggiono;Cuggiono;0;btca;0|0|0
+128497724;400000;283;5;2;;0;O;Villa unifamiliare;45.58330;8.94020;Via Magenta;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+128507262;540000;205;4;2;;0;N;Villa unifamiliare;45.56810;8.92245;este;Canegrate;Canegrate;0;btc;0|0|0
+128507264;495000;188;4;2;;0;N;Villa unifamiliare;45.56810;8.92245;este;Canegrate;Canegrate;0;btc;0|0|0
+128507266;540000;205;4;2;;0;N;Villa unifamiliare;45.56810;8.92245;este;Canegrate;Canegrate;0;btc;0|0|0
+128558458;99000;87;3;1;2;0;;Trilocale;45.56350;8.91090;Via Treviso;Canegrate;Canegrate;0;bc;0|0|0
+128560316;145000;80;3;1;2;0;B;Trilocale;45.62410;8.94410;Via Antonio Meucci;Rescaldina;Rescaldina;0;bcag;0|0|0
+128572724;500000;1;5+;3+;;0;R;Villa unifamiliare;45.56070;8.74804;Cascina Cornarina;Castano Primo;Castano Primo;0;t;0|0|0
+128601596;390000;159;2;1;S/ 3;1;O;Attico;45.56410;8.91220;Via Goito;Canegrate;Canegrate;0;t;0|0|0
+128612784;135000;90;3;1;1;0;B;Trilocale;45.55230;8.78110;Corso Martiri Patrioti;Castano Primo;Castano Primo;0;bcd;0|0|0
+128614546;120000;90;3;1;1;0;B;Trilocale;45.59060;8.95010;Via San Giovanni Battista;Cerro Maggiore;Cerro Maggiore;0;bd;0|0|0
+128637676;149000;90;3;2;1;0;O;Trilocale;45.57840;8.98250;Via Luigi Zerbi;Cerro Maggiore;Cerro Maggiore;0;td;0|0|0
+128649944;315000;205;4;2;;0;B;Villa unifamiliare;45.55490;8.85820;Via Mariani Don G.;Busto Garolfo;Busto Garolfo;0;bcd;0|0|0
+128681560;219000;155;4;2;2;0;O;Quadrilocale;45.43570;8.88400;Via Don Ballabio;Robecco sul Naviglio;Robecco sul Naviglio;0;bta;0|0|0
+128708340;70000;60;2;1;;0;;Terratetto unifamiliare;45.54570;8.88643;Via abbazia ;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+128708600;95000;50;2;1;1;0;O;Bilocale;45.57720;8.93989;Via Giuseppe Verdi, 14;Canegrate;Canegrate;0;bg;0|0|0
+128787706;285000;131;4;2;S/ 2;1;O;Quadrilocale;45.54580;8.87880;Via Antonio Gramsci;Busto Garolfo;Busto Garolfo;0;tc;0|0|0
+128816920;115000;91;3;2;;0;B;Terratetto unifamiliare;45.54740;8.88290;Via Giuseppe Garibaldi;Busto Garolfo;Busto Garolfo;0;ci;0|0|0
+128853512;60000;118;3;1;1;0;R;Trilocale;45.43580;8.88766;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+128864086;259000;217;4;1;;0;R;Villa unifamiliare;45.56410;8.92840;via Cuneo;Canegrate;Canegrate;0;btcd;0|0|0
+128868190;385000;168;4;2;;0;B;Villa unifamiliare;45.63180;8.94410;Via G. Rusconi Clerici;Rescaldina;Rescaldina;0;btcad;0|0|0
+128878168;145000;92;3;1;2;0;B;Trilocale;45.62440;8.94320;Via delle Vigne;Rescaldina;Rescaldina;0;bci;0|0|0
+128931086;199000;85;3;2;;0;N;Appartamento in villa;45.54820;8.87670;Via Fiume;Busto Garolfo;Busto Garolfo;0;bcsi;0|0|0
+128950722;80000;75;2;1;3;0;B;Bilocale;45.59870;8.95180;Via Venezia;Cerro Maggiore;Cerro Maggiore;0;btcgd;0|0|0
+128975658;157000;150;3;2;;0;R;Villa bifamiliare;45.55370;8.77440;Viale 4 Novembre;Castano Primo;Castano Primo;0;btcj;0|0|0
+128976172;119000;75;2;1;1;1;B;Mansarda;45.55010;8.78670;Via Tadini;Castano Primo;Castano Primo;0;bg;0|0|0
+128990938;235000;96;3;2;R;0;B;Trilocale;45.58800;8.95410;Via XXIV Maggio;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+129010748;95000;61;3;1;1;0;B;Trilocale;45.54880;8.88070;Via Michelangelo Buonarroti 5;Busto Garolfo;Busto Garolfo;0;bcgd;0|0|0
+129024794;118000;83;3;1;1;0;B;Trilocale;45.62780;8.93410;Via Don Antonio Balbi;Rescaldina;Rescaldina;0;bcgi;0|0|0
+129031486;507000;420;5+;3;;0;B;Villa unifamiliare;45.57050;8.92900;Piazza Giacomo Matteotti;Canegrate;Canegrate;0;;0|0|0
+129034512;185000;69;2;1;R;1;B;Bilocale;45.56830;8.93410;Via Giacomo Leopardi;Canegrate;Canegrate;0;tci;0|0|0
+129056286;149000;75;2;1;1;1;N;Bilocale;45.28730;8.99272;Via del Maino;Motta Visconti;Motta Visconti;0;b;0|0|0
+129066488;287000;173;4;2;;0;N;Villa a schiera;45.28600;8.98290;Via Vittime della Mafia;Motta Visconti;Motta Visconti;0;b;0|0|0
+129080846;125000;77;3;1;1;0;O;Trilocale;45.43490;8.88825;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+129088784;210000;105;2;1;;0;B;Villa bifamiliare;45.59128;8.93990;Via San Giovanni Bosco;San Vittore Olona;San Vittore Olona;1;ca;0|0|0
+129118602;285000;247;3;2;;0;B;Villa unifamiliare;45.55830;8.77220;VIa Lorenzo De' Medici, 2;Castano Primo;Castano Primo;0;bc;0|0|0
+129150914;418000;145;4;2;;0;N;Villa unifamiliare;45.57870;8.98300;Via Luigi Zerbi;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+129167840;330000;204;4;2;;0;O;Villa unifamiliare;45.44500;8.89952;Via della Pace 3/5;Robecco sul Naviglio;Robecco sul Naviglio;0;bcd;0|0|0
+129175302;350000;214;4;1;;0;R;Villa unifamiliare;45.50230;8.81140;Via A. Annoni;Cuggiono;Cuggiono;0;bcj;0|0|0
+129175622;500000;214;4;1;;0;R;Villa unifamiliare;45.50230;8.81140;Via A. Annoni;Cuggiono;Cuggiono;0;bc;0|0|0
+129175924;149000;70;2;1;1;1;N;Bilocale;45.29170;8.99850;Via Contessa Carolina del Maino;Motta Visconti;Motta Visconti;0;bd;0|0|0
+129177022;299000;109;3;2;3;1;N;Attico;45.61480;8.94940;Via Cavalieri di Vittorio Veneto;Rescaldina;Rescaldina;0;bti;0|0|0
+129196752;295000;170;4;2;T;1;B;Quadrilocale;45.57330;8.92900;via petraca, 12;Canegrate;Canegrate;0;t;0|0|0
+129196916;130000;100;3;1;1;0;B;Trilocale;45.58470;8.94650;Via Resegone;San Vittore Olona;San Vittore Olona;0;cd;0|0|0
+129199796;139000;104;3;1;1;0;B;Trilocale;45.50890;8.80970;Via Matteotti;Cuggiono;Cuggiono;0;bc;0|0|0
+129203922;130000;117;4;1;1;0;R;Quadrilocale;45.63130;8.93970;Via Alberto da Giussano;Rescaldina;Rescaldina;0;bd;0|0|0
+129217290;149000;78;2;1;S/ 1;1;N;Bilocale;45.28720;8.99270;contessa clotilde;Motta Visconti;Motta Visconti;0;bd;0|0|0
+129231642;735000;355;5+;3;;0;B;Villa a schiera;45.58900;8.93550;Via Roma;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+129236980;295000;170;3;2;;1;N;Villa bifamiliare;45.29170;8.99850;Via Contessa Carolina del Maino;Motta Visconti;Motta Visconti;0;;0|0|0
+129260838;195000;87;3;1;2;1;B;Trilocale;45.62690;8.94248;Via Prealpi;Rescaldina;Rescaldina;0;bt;0|0|0
+129262302;195000;83;3;1;S/ R;1;O;Trilocale;45.61610;8.95080;Via Barbara Melzi;Rescaldina;Rescaldina;0;bc;0|0|0
+129263232;203106;75;2;1;T;1;N;Bilocale;45.44090;8.88829;Via Auda;Robecco sul Naviglio;Robecco sul Naviglio;0;c;0|0|0
+129267766;193000;100;4;2;1;1;B;Quadrilocale;45.55730;8.77930;Via San Francesco d'Assisi;Castano Primo;Castano Primo;0;btcag;0|0|0
+129305124;270000;105;4;2;T;1;B;Quadrilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;c;0|0|0
+129310416;350500;214;5;1;;0;B;Villa unifamiliare;45.55520;8.88300;Via Papa Giovanni XXIII;Busto Garolfo;Busto Garolfo;0;cj;0|0|0
+129315294;230418;92;3;2;T;1;N;Trilocale;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+129315296;315531;126;3;2;T;1;N;Trilocale;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+129335008;165000;68;2;1;2;1;N;Bilocale;45.59080;8.96600;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+129340110;160000;74;3;1;1;1;B;Trilocale;45.54700;8.88040;Via Giuseppe Verdi 21;Busto Garolfo;Busto Garolfo;0;tc;0|0|0
+129340870;85000;66;2;1;2;0;O;Bilocale;45.58470;8.94650;Via Resegone;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+129359894;129000;65;2;1;1;1;B;Bilocale;45.54250;8.88230;Viale dei Tigli;Busto Garolfo;Busto Garolfo;0;btcd;0|0|0
+129371024;395000;424;5;3+;;0;B;Villa unifamiliare;45.62300;8.94070;Via Ravello;Rescaldina;Rescaldina;0;;0|0|0
+129404082;189000;55;3;2;R;0;B;Trilocale;45.57550;8.97590;Via Carlo Calvi 61/B;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+129415772;89000;123;2;1;;0;R;Terratetto unifamiliare;45.49390;8.79340;Via Case Alte;Cuggiono;Cuggiono;0;bi;0|0|0
+129433010;149000;75;2;1;1;1;N;Bilocale;45.28730;8.99272;Via del Maino;Motta Visconti;Motta Visconti;0;b;0|0|0
+129466898;560000;539;5+;2;;0;B;Villa unifamiliare;45.54910;8.87870;Via Busto Arsizio;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+129473396;380000;152;4;2;1;1;B;Quadrilocale;45.58970;8.94200;Via S. G. Bosco;San Vittore Olona;San Vittore Olona;0;btca;0|0|0
+129476640;184856;71;2;1;1;1;N;Bilocale;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129477946;248811;92;3;2;1;1;N;Trilocale;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129478002;343436;127;4;2;1;1;N;Quadrilocale;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129493120;95000;124;4;1;T/ 1;0;R;Quadrilocale;45.58670;8.94110;Vicolo 24 Maggio;San Vittore Olona;San Vittore Olona;0;bd;0|0|0
+129493142;145000;100;3;1;S/ 2;0;B;Trilocale;45.62460;8.94410;via delle vigne;Rescaldina;Rescaldina;0;bcad;0|0|0
+129493366;345000;174;4;2;;0;O;Villa a schiera;45.61140;8.95490;Via Generale Carlo Alberto Dalla Chiesa;Rescaldina;Rescaldina;0;;0|0|0
+129496360;390000;200;4;2;1;0;O;Quadrilocale;45.57400;8.97857;via Cardinale Ferrari;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+129496362;695000;400;5+;3+;;0;O;Villa unifamiliare;45.57400;8.97857;via Cardinale Ferrari;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+129501294;140000;113;3;2;T;0;O;Trilocale;45.59110;8.94990;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+129514914;368000;150;5;2;;0;N;Villa a schiera;45.50320;8.80780;Via Novara;Cuggiono;Cuggiono;0;b;0|0|0
+129515024;235000;205;4;2;;0;R;Villa unifamiliare;45.44390;8.88872;Via Isonzo;Robecco sul Naviglio;Robecco sul Naviglio;0;btc;0|0|0
+129516144;173000;80;3;2;1;1;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;b;0|0|0
+129518280;285000;105;3;2;1;0;N;Trilocale;45.43520;8.88430;Via Vincenzo Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;bt;0|0|0
+129518328;325000;126;3;2;T;1;N;Trilocale;45.43520;8.88430;Via Vincenzo Bellini;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+129528806;170000;100;5;1;T/ 2;1;B;Appartamento;45.54422;8.88133;Via Tommaso Grossi;Busto Garolfo;Busto Garolfo;1;b;0|0|0
+129535380;235000;130;3;2;;0;B;Villa a schiera;45.55040;8.85430;Via Vittorio Alfieri;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+129535390;259000;160;3;3;;0;B;Villa a schiera;45.55040;8.85427;Via Vittorio Alfieri;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+129535394;379000;240;4;3;;0;B;Villa a schiera;45.55040;8.85427;Via Vittorio Alfieri;Busto Garolfo;Busto Garolfo;0;btd;0|0|0
+129543690;540000;360;5+;3+;;0;O;Villa bifamiliare;45.31270;8.96592;Via Gramsci Antonio;Besate;Besate;0;t;0|0|0
+129543742;270000;180;4;2;;0;B;Villa bifamiliare;45.31270;8.96592;Via Gramsci Antonio;Besate;Besate;0;t;0|0|0
+129551360;900000;530;5+;3;;0;O;Villa plurifamiliare;45.50122;8.80817;Via A. Annoni;Cuggiono;Cuggiono;1;ba;0|0|0
+129552226;490000;306;5+;3;;0;B;Villa bifamiliare;45.54460;8.89740;Via Mauro Venegoni;Busto Garolfo;Busto Garolfo;0;bgj;0|0|0
+129564168;104000;73;2;1;3;0;R;Bilocale;45.59870;8.95173;via Venezia;Cerro Maggiore;Cerro Maggiore;0;btcad;0|0|0
+129567864;300000;230;3;1;;0;B;Villa unifamiliare;45.54650;8.88490;Corso Milano;Busto Garolfo;Busto Garolfo;0;tcd;0|0|0
+129570154;199000;140;4;2;2;1;O;Quadrilocale;45.55730;8.77930;Via San Francesco d'Assisi;Castano Primo;Castano Primo;0;;0|0|0
+129576160;139000;85;3;1;1;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;a;0|0|0
+129633574;98000;83;3;1;1;0;O;Trilocale;45.59230;8.95230;Via Roma;Cerro Maggiore;Cerro Maggiore;0;bcsd;0|0|0
+129641028;286000;205;5+;2;;0;O;Villa unifamiliare;45.28440;8.98650;Via Pino Bay;Motta Visconti;Motta Visconti;0;btcagj;0|0|0
+129643604;400000;150;5;2;;0;R;Villa unifamiliare;45.59150;8.95800;Via 4 Novembre;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+129660578;131000;63;2;1;2;1;B;Bilocale;45.59630;8.95490;Via San Clemente;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+129661370;169000;120;3;1;2;1;B;Trilocale;45.57960;8.97980;Via Regina Elena;Cerro Maggiore;Cerro Maggiore;0;tcg;0|0|0
+129671448;115000;70;3;1;1;1;B;Trilocale;45.54720;8.88490;Via Parini, 16;Busto Garolfo;Busto Garolfo;0;bcg;0|0|0
+129688340;189000;115;3;2;;0;B;Terratetto unifamiliare;45.61290;8.95100;Via Giuseppe Mozzoni;Rescaldina;Rescaldina;0;bg;0|0|0
+129688540;149000;80;3;1;T;0;B;Trilocale;45.59110;8.94992;Via Giuseppe Garibaldi 11;Cerro Maggiore;Cerro Maggiore;0;tcd;0|0|0
+129694626;449000;276;4;;;0;O;Villa unifamiliare;45.59440;8.95990;Via Piave 9;Cerro Maggiore;Cerro Maggiore;0;bj;0|0|0
+129711808;190000;70;3;2;1;0;B;Trilocale;45.56670;8.92090;Via Gran Sasso;Canegrate;Canegrate;0;bcd;0|0|0
+129714582;139000;90;3;1;1;0;B;Trilocale;45.50640;8.81590;Piazza San Giorgio;Cuggiono;Cuggiono;0;d;0|0|0
+129723580;361000;129;3;2;S - T;1;N;Trilocale;45.59010;8.93320;Via Roma;San Vittore Olona;San Vittore Olona;0;cj;0|0|0
+129744682;125000;100;4;2;R;0;B;Quadrilocale;45.55180;8.78230;Vicolo Arco Antico 20;Castano Primo;Castano Primo;0;cd;0|0|0
+129749594;85000;65;2;1;T;0;B;Bilocale;45.28830;8.99660;Via Camillo Benso di Cavour;Motta Visconti;Motta Visconti;0;d;0|0|0
+129753860;145000;85;3;1;2;0;O;Trilocale;45.62520;8.94310;Via Galileo Galilei;Rescaldina;Rescaldina;0;ba;0|0|0
+129757534;290000;180;5+;3;;0;B;Villa a schiera;45.61050;8.94691;Via Carroccio;Rescaldina;Rescaldina;0;b;0|0|0
+129761442;129000;84;3;2;1;0;B;Trilocale;45.31370;8.97480;Via Marcello Prestinari;Besate;Besate;0;b;0|0|0
+129764652;89000;77;2;1;T/ 1;0;O;Bilocale;45.56230;8.91440;Via Col di Nava;Canegrate;Canegrate;0;bcagd;0|0|0
+129775334;279000;240;5;3;;0;B;Villa a schiera;45.54890;8.77820;Via Magenta;Castano Primo;Castano Primo;0;bt;0|0|0
+129783444;225000;128;4;2;;0;B;Villa bifamiliare;45.55290;8.89000;Via Giovanni Pascoli;Busto Garolfo;Busto Garolfo;0;bcd;0|0|0
+129793044;440000;155;4;2;;0;N;Villa bifamiliare;45.57520;8.94030;Via Cascinette;Canegrate;Canegrate;0;btj;0|0|0
+129823764;85000;40;1;;1;0;B;Monolocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;;0|0|0
+129832778;270000;80;2;1;2;1;O;Bilocale;45.43720;8.88960;Via Matteotti;Robecco sul Naviglio;Robecco sul Naviglio;0;a;0|0|0
+129839172;150000;120;3;1;S/ 1;0;B;Trilocale;45.62530;8.94310;Via Galileo Galilei;Rescaldina;Rescaldina;0;b;0|0|0
+129860574;449395;149;4;2;4;1;N;Attico;45.44100;8.88822;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129860914;549895;183;4;2;3;1;N;Attico;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129861218;518257;172;4;2;4;1;N;Attico;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129861246;417307;139;4;2;4;1;N;Attico;45.44090;8.88829;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+129870258;190000;111;4;1;R;0;B;Quadrilocale;45.55200;8.86820;Via Lario;Busto Garolfo;Busto Garolfo;0;bg;0|0|0
+129872016;180000;102;3;2;1;1;O;Trilocale;45.59500;8.95630;Via Cristoforo Colombo;Cerro Maggiore;Cerro Maggiore;0;bci;0|0|0
+129911038;110000;75;3;1;1;0;;Trilocale;45.62030;8.94538;Via Giacomo Matteotti 108;Rescaldina;Rescaldina;0;btd;0|0|0
+129922316;398000;265;5;3+;;0;B;Villa unifamiliare;45.58920;8.95690;Via Cesare Beccaria, 10;Cerro Maggiore;Cerro Maggiore;0;bi;0|0|0
+129922454;300000;310;5+;3;;0;R;Villa bifamiliare;45.50452;8.82532;Via Fratelli di Dio;Cuggiono;Cuggiono;1;b;0|0|0
+129955250;498000;247;3;3;;0;B;Villa unifamiliare;45.56430;8.92530;via modena, 5;Canegrate;Canegrate;0;bta;0|0|0
+129968802;188000;103;4;2;1;1;O;Appartamento;45.55904;8.77897;Via John Fitzgerald Kennedy;Castano Primo;Castano Primo;1;bta;0|0|0
+129971762;165000;125;3;1;;0;B;Villa unifamiliare;45.54490;8.77160;Via Luigi Einaudi;Castano Primo;Castano Primo;0;bcd;0|0|0
+129972472;135000;85;2;1;T;0;O;Bilocale;45.61400;8.94890;Via Legnano;Rescaldina;Rescaldina;0;cd;0|0|0
+129982404;440000;216;4;2;;0;O;Villa a schiera;45.44160;8.90100;Via della Vandea;Robecco sul Naviglio;Robecco sul Naviglio;0;j;0|0|0
+129985402;146000;64;2;1;2;0;O;Bilocale;45.57510;8.97710;Via Cardinal Ferrari, 16;Cerro Maggiore;Cerro Maggiore;0;tc;0|0|0
+129985420;145000;65;2;1;2;0;O;Bilocale;45.57510;8.97710;Via Cardinal Ferrari, 16;Cerro Maggiore;Cerro Maggiore;0;tci;0|0|0
+129985440;111000;55;2;1;T;0;B;Bilocale;45.57510;8.97710;Via Cardinal Ferrari, 16;Cerro Maggiore;Cerro Maggiore;0;ci;0|0|0
+129985876;233000;108;3;2;1;0;O;Trilocale;45.57510;8.97710;Via Cardinal Ferrari, 16;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+129986408;250000;101;3;2;3;1;B;Trilocale;45.57580;8.92640;Via Madre Teresa di Calcutta;Canegrate;Canegrate;0;bt;0|0|0
+130009532;130000;165;4;2;T;0;R;Quadrilocale;45.28710;8.99160;Via San Giovanni;Motta Visconti;Motta Visconti;0;;0|0|0
+130028822;135000;68;2;1;R;0;O;Bilocale;45.59870;8.95180;Via Venezia;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+130031664;330000;190;4;2;;0;O;Villa unifamiliare;45.44300;8.90060;Via Per Corbetta, 4;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+130036592;149000;90;3;1;1;1;B;Trilocale;45.59170;8.95354;Via Lampugnani;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+130045346;420000;220;3;3;T;0;O;Loft;45.59520;8.94000;VIA FIRENZE;Cerro Maggiore;Cerro Maggiore;0;d;0|0|0
+130059324;79000;86;3;1;;0;B;Trilocale;45.55200;8.77356;Via Ospedale 48;Castano Primo;Castano Primo;0;cad;0|0|0
+130103962;256000;103;3;2;1;1;N;Trilocale;45.63170;8.93390;Via Monte Ceneri;Rescaldina;Rescaldina;0;bti;0|0|0
+130106296;130000;116;3;1;1;0;R;Trilocale;45.61430;8.95102;Vicolo Dossena;Rescaldina;Rescaldina;0;btc;0|0|0
+130114240;385000;315;5+;3;;0;O;Villa bifamiliare;45.53930;8.87376;VIA GORIZIA , 12;Busto Garolfo;Busto Garolfo;0;bc;0|0|0
+130118438;318000;300;5+;2;;0;B;Villa unifamiliare;45.54280;8.87909;VIA DONIZETTI, 5;Busto Garolfo;Busto Garolfo;0;btc;0|0|0
+130118726;230000;170;3;2;1;0;O;Trilocale;45.53530;8.87395;Via Inveruno;Busto Garolfo;Busto Garolfo;0;bca;0|0|0
+130132512;245000;240;5+;2;;0;B;Villa bifamiliare;45.55690;8.77310;Via Ludovico Ariosto;Castano Primo;Castano Primo;0;bcd;0|0|0
+130145758;1150000;373;4;3;;0;O;Villa unifamiliare;45.54250;8.88020;Via Inveruno;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+130152210;249000;168;4;2;;0;O;Rustico;45.43690;8.88709;vicolo merlo;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+130164614;168000;54;2;2;S/ T/ R;0;B;Bilocale;45.56700;8.92060;Via Giuseppe Garibaldi;Canegrate;Canegrate;0;tci;0|0|0
+130180064;235000;99;3;1;R;0;O;Trilocale;45.55560;8.88520;Via San Pietro 21/F;Busto Garolfo;Busto Garolfo;0;btgj;0|0|0
+130186992;370000;490;5+;3;1;0;O;Appartamento;45.55010;8.77940;Via Maria Montessori;Castano Primo;Castano Primo;0;btc;0|0|0
+130196082;245000;184;3;2;;0;B;Terratetto unifamiliare;45.58850;8.95250;Via Pastrengo;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+130223468;169000;110;3;2;;0;B;Terratetto unifamiliare;45.30940;8.96986;Via Giacomo Matteotti;Besate;Besate;0;b;0|0|0
+130233670;350000;420;5;2;;0;B;Terratetto unifamiliare;45.59020;8.96600;Via Don Giovanni Minzoni 47;Cerro Maggiore;Cerro Maggiore;0;bcjd;0|0|0
+130300460;155000;85;3;1;2;0;;Trilocale;45.28880;8.99615;Via A. Negri, 10;Motta Visconti;Motta Visconti;0;t;0|0|0
+130338412;123000;119;3;2;1;0;O;Trilocale;45.59420;8.95020;Via San Carlo Borromeo;Cerro Maggiore;Cerro Maggiore;0;ci;0|0|0
+130359058;139000;85;3;1;1;0;;Trilocale;45.50600;8.81709;;Cuggiono;Cuggiono;0;;0|0|0
+130451316;390000;189;4;3;;0;B;Villa unifamiliare;45.58720;8.95640;Via Regina Margherita;Cerro Maggiore;Cerro Maggiore;0;gj;0|0|0
+130488552;369000;160;4;2;;0;O;Villa unifamiliare;45.57110;8.93860;Via Giovanni Papini;Canegrate;Canegrate;0;bta;0|0|0
+130521652;275000;109;3;2;3;1;N;Attico;45.63170;8.93390;Via Monte Ceneri;Rescaldina;Rescaldina;0;bti;0|0|0
+130530134;55000;50;2;1;2;1;B;Bilocale;45.58670;8.94310;Piazza Europa;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+130562514;240000;136;3;2;T/ 1;0;O;Trilocale;45.56710;8.92400;Via Armando Diaz;Canegrate;Canegrate;0;t;0|0|0
+130564370;159000;88;3;2;T;0;B;Trilocale;45.56740;8.92470;Via Gran Paradiso;Canegrate;Canegrate;0;tcaj;0|0|0
+130569280;220000;90;3;1;1;1;O;Trilocale;45.58390;8.94300;via cesare battisti, 72;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+130604022;195000;140;3;2;;0;O;Villa a schiera;45.56110;8.77250;Via Lonate Pozzolo;Castano Primo;Castano Primo;0;cd;0|0|0
+130617640;335000;290;5+;2;;0;B;Villa unifamiliare;45.50380;8.82253;Via Borsa;Cuggiono;Cuggiono;0;tc;0|0|0
+130622956;145000;92;3;1;2;0;B;Trilocale;45.62470;8.94403;Via delle Vigne 5;Rescaldina;Rescaldina;0;bcagd;0|0|0
+130632858;285000;212;4;2;;0;B;Villa bifamiliare;45.55330;8.78270;Via Gallarate;Castano Primo;Castano Primo;0;bc;0|0|0
+130635084;295000;110;3;2;2;1;O;Trilocale;45.56370;8.92660;Via Firenze 20;Canegrate;Canegrate;0;bcg;0|0|0
+130637320;435000;246;4;2;;0;B;Villa bifamiliare;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;bcd;0|0|0
+130663460;245000;100;4;2;R;1;O;Quadrilocale;45.61520;8.95810;Via Bozzente 30;Rescaldina;Rescaldina;0;btcg;0|0|0
+130674390;190000;95;3;1;T;0;O;Trilocale;45.62090;8.94439;Via Giacomo Matteotti;Rescaldina;Rescaldina;0;tc;0|0|0
+130689666;990000;12;5+;3+;;0;O;Cascina;45.49580;8.77280;Via del Fiume;Cuggiono;Cuggiono;0;bd;0|0|0
+130692344;100000;81;3;1;;0;R;Terratetto plurifamiliare;45.57480;8.92220;Via Alberto da Giussano;Canegrate;Canegrate;0;bjd;0|0|0
+130693436;169000;60;2;1;1;1;;Bilocale;45.58860;8.94070;Via Giuseppe Garibaldi 5;San Vittore Olona;San Vittore Olona;0;tg;0|0|0
+130718366;298000;116;4;2;1;1;N;Quadrilocale;45.54980;8.89890;Via 24 Maggio;Busto Garolfo;Busto Garolfo;0;ti;0|0|0
+130719528;155000;110;3;1;4;1;B;Trilocale;45.59260;8.94910;via garibaldi, 54;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+130739612;310000;193;4;2;;0;O;Villa bifamiliare;45.43170;8.86990;Via Aldo Moro;Robecco sul Naviglio;Robecco sul Naviglio;0;btcjd;0|0|0
+130761286;329000;220;4;3;;0;B;Villa a schiera;45.55040;8.85427;Via Vittorio Alfieri;Busto Garolfo;Busto Garolfo;0;bd;0|0|0
+130765846;298000;335;4;3;;0;B;Villa unifamiliare;45.31460;8.97000;Vicolo Francesco Pietra, 7, 20080 Besate MI, Italia;Besate;Besate;0;tgj;0|0|0
+130806140;280000;110;4;2;1;0;O;Quadrilocale;45.61160;8.95498;Via Roma, 42;Rescaldina;Rescaldina;0;bcj;0|0|0
+130836728;105000;81;2;1;T;0;B;Bilocale;45.59580;8.94880;Via Col di Lana;Cerro Maggiore;Cerro Maggiore;0;cd;0|0|0
+130853910;295000;146;4;2;;0;B;Villa bifamiliare;45.59340;8.96090;Via Piave;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+130869230;289000;230;4;3;;0;R;Villa bifamiliare;45.43150;8.87161;Via Bruno Buozzi;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+130869788;1000;81;2;1;T;1;N;Bilocale;45.59050;8.96590;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+130919720;107000;57;2;1;1;0;B;Bilocale;45.28540;8.99690;Via Fratelli Rosselli;Motta Visconti;Motta Visconti;0;b;0|0|0
+130920178;97000;60;3;1;T;0;B;Trilocale;45.58530;8.94340;Via Magenta, 10;San Vittore Olona;San Vittore Olona;0;a;0|0|0
+130959970;380000;301;5;3;;0;B;Terratetto unifamiliare;45.55120;8.77420;Viale Francesca De Maestri Colleoni;Castano Primo;Castano Primo;0;bcgj;0|0|0
+130967382;140000;80;3;1;4;1;O;Appartamento;45.61539;8.95143;Via Silvio Pellico;Rescaldina;Rescaldina;1;t;0|0|0
+130967898;39000;40;2;1;T;0;R;Bilocale;45.31430;8.96850;VIA IV NOVEMBRE;Besate;Besate;0;bi;0|0|0
+130969598;265000;129;3;2;4;1;O;Trilocale;45.59510;8.95599;VIA CRISTOFORO COLOMBO;Cerro Maggiore;Cerro Maggiore;0;btc;0|0|0
+130982742;118000;55;2;1;T;0;O;Bilocale;45.62270;8.94236;Viale Lombardia;Rescaldina;Rescaldina;0;c;0|0|0
+130991420;98000;113;3;1;S5/ 1;1;B;Trilocale;45.28830;8.99190;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;btci;0|0|0
+130992840;115000;85;3;1;1;1;O;Trilocale;45.55910;8.77910;Via John Fitzgerald Kennedy;Castano Primo;Castano Primo;0;bcd;0|0|0
+130994474;140000;55;2;1;2;1;O;Bilocale;45.62540;8.94590;Via Alessandro Volta;Rescaldina;Rescaldina;0;tc;0|0|0
+130997084;95000;77;2;1;T;0;B;Bilocale;45.31070;8.97291;Via Pietro Nenni;Besate;Besate;0;;0|0|0
+130998648;241000;116;3;2;;0;N;Trilocale;45.55380;8.78345;Via Fanti;Castano Primo;Castano Primo;0;b;0|0|0
+130998740;136500;58;2;1;T;0;O;Bilocale;45.55380;8.78345;via fanti;Castano Primo;Castano Primo;0;;0|0|0
+131028956;199000;115;3;2;S/ 1;1;O;Trilocale;45.58510;8.94320;Via Magenta;San Vittore Olona;San Vittore Olona;0;bag;0|0|0
+131031650;335000;129;4;2;3;1;N;Attico;45.59080;8.96610;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+131033100;188000;100;4;2;1;1;O;Quadrilocale;45.55910;8.77910;Via John Fitzgerald Kennedy;Castano Primo;Castano Primo;0;bag;0|0|0
+131041132;180000;121;3;2;2;1;B;Trilocale;45.54780;8.88580;Via Giuseppe Mazzini;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+131042866;420000;253;5+;3+;;0;O;Villa unifamiliare;45.29120;8.98440;Via Pietro Nenni;Motta Visconti;Motta Visconti;0;t;0|0|0
+131043362;950000;450;5+;3+;;0;O;Villa plurifamiliare;45.54770;8.76109;Via Ponte Castano 100;Castano Primo;Castano Primo;0;bt;0|0|0
+131059326;110000;102;3;1;2;1;R;Trilocale;45.59380;8.94910;Via Alcide De Gasperi;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+131064374;310000;105;3;1;1;1;N;Trilocale;45.63220;8.93209;Via Monte Rosa;Rescaldina;Rescaldina;0;t;0|0|0
+131065664;128000;60;2;1;T;0;O;Bilocale;45.54890;8.77820;Via Magenta;Castano Primo;Castano Primo;0;ji;0|0|0
+131070500;98000;55;2;1;S/ 2;0;O;Bilocale;45.50550;8.80900;VIA TICINO, 0;Cuggiono;Cuggiono;0;bca;0|0|0
+131079394;475000;173;4;2;;0;N;Villa bifamiliare;45.56370;8.91670;Via Vesuvio;Canegrate;Canegrate;0;t;0|0|0
+131096392;195000;145;5;2;1;1;B;Appartamento;45.58990;8.93932;via don giovanni battista riva;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+131122752;450000;341;5+;2;2;0;R;Appartamento;45.43700;8.88767;Piazza XXI Luglio;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+131139810;199000;118;3;2;1;0;O;Trilocale;45.59340;8.95480;Via 20 Settembre;Cerro Maggiore;Cerro Maggiore;0;bcsd;0|0|0
+131161636;450000;369;3;1;;0;B;Villa unifamiliare;45.54510;8.89500;Via Alfredo di Dio;Busto Garolfo;Busto Garolfo;0;bcd;0|0|0
+131175726;179000;90;3;1;1;0;B;Trilocale;45.58960;8.93730;via libertà, 12;San Vittore Olona;San Vittore Olona;0;;0|0|0
+131178332;150000;215;4;1;;0;R;Villa unifamiliare;45.59240;8.95120;Via Ventimiglia;Cerro Maggiore;Cerro Maggiore;0;i;0|0|0
+131182028;189000;90;3;1;R;1;B;Trilocale;45.59890;8.95100;Via Monte Rosa 28;Cerro Maggiore;Cerro Maggiore;0;bgd;0|0|0
+131182042;299000;160;4;;R;1;B;Quadrilocale;45.58980;8.94570;Via Galvani 7/C;Cerro Maggiore;Cerro Maggiore;0;bcg;0|0|0
+131206970;94000;67;2;1;S/ 2;0;B;Bilocale;45.57050;8.92900;Piazza Giacomo Matteotti;Canegrate;Canegrate;0;bcd;0|0|0
+131208318;79000;50;2;1;T;0;R;Bilocale;45.55220;8.77959;Corso Martiri Patrioti 3;Castano Primo;Castano Primo;0;d;0|0|0
+131209528;418000;164;4;2;;0;N;Villa unifamiliare;45.57920;8.98370;Via Luigi Zerbi;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+131272884;195000;140;4;2;;0;B;Villa unifamiliare;45.31060;8.97240;Via Pietro Nenni;Besate;Besate;0;b;0|0|0
+131327442;238000;113;3;2;1 - 2;1;O;Appartamento;45.63052;8.94270;Via Riccardo Lombardi;Rescaldina;Rescaldina;1;ba;0|0|0
+131331728;60000;40;1;1;1;0;O;Monolocale;45.58030;8.97950;Via Felice Cavllotti;Cerro Maggiore;Cerro Maggiore;0;i;0|0|0
+131340694;39000;74;3;1;;0;R;Rustico;45.59500;8.95340;Via 20 Settembre;Cerro Maggiore;Cerro Maggiore;0;i;0|0|0
+131342260;280000;240;5+;3;;0;R;Villa unifamiliare;45.56780;8.91700;Via Bolzano;Canegrate;Canegrate;0;bcd;0|0|0
+131367750;173000;79;3;1;T;0;O;Trilocale;45.51010;8.81660;Via delle Alpi;Cuggiono;Cuggiono;0;c;0|0|0
+131373280;450000;150;5+;2;;0;B;Villa bifamiliare;45.57200;8.98580;Via Risorgimento;Cerro Maggiore;Cerro Maggiore;0;btj;0|0|0
+131376198;192000;89;3;1;1;0;O;Trilocale;45.51010;8.81660;Via delle Alpi;Cuggiono;Cuggiono;0;c;0|0|0
+131376404;178000;71;3;1;1;1;N;Trilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+131377066;178000;71;3;1;T;1;N;Trilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+131377878;293000;117;4;2;1;1;N;Quadrilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+131394708;320000;270;5+;2;;0;R;Villa unifamiliare;45.62700;8.93920;Viale Lombardia;Rescaldina;Rescaldina;0;b;0|0|0
+131402648;100000;79;2;1;S/ 3;1;O;Bilocale;45.58550;8.94410;Via Sempione;San Vittore Olona;San Vittore Olona;0;bci;0|0|0
+131404420;269000;170;4;2;;0;B;Villa bifamiliare;45.28470;8.99114;Via C. Monguzzi;Motta Visconti;Motta Visconti;0;d;0|0|0
+131491786;95000;100;3;1;5;1;R;Trilocale;45.28580;8.99531;Piazza della Repubblica;Motta Visconti;Motta Visconti;0;b;0|0|0
+131491788;108000;60;3;1;T;0;B;Trilocale;45.28660;8.99577;Via Gian Paolo Annoni;Motta Visconti;Motta Visconti;0;;0|0|0
+131499504;169000;160;4;2;;0;R;Terratetto unifamiliare;45.43190;8.86760;Via Sant'Ambrogio;Robecco sul Naviglio;Robecco sul Naviglio;0;bjd;0|0|0
+131500446;235000;115;3;2;2;0;B;Trilocale;45.59200;8.94900;via giuseppe garibaldi, 41;Cerro Maggiore;Cerro Maggiore;0;bti;0|0|0
+131500616;260000;116;4;2;;0;B;Villa a schiera;45.56370;8.93120;Via Livigno;Canegrate;Canegrate;0;bj;0|0|0
+131503076;103000;96;3;1;1;1;R;Trilocale;45.58670;8.94300;Via Europa;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+131522594;490000;300;5+;3+;;1;B;Villa unifamiliare;45.50710;8.81800;Viale Roma;Cuggiono;Cuggiono;0;;0|0|0
+131542686;69000;73;2;1;S/ 2;0;B;Bilocale;45.54630;8.87990;Via Antonio Gramsci;Busto Garolfo;Busto Garolfo;0;bcsd;0|0|0
+131551380;129000;90;2;1;3;0;B;Bilocale;45.58770;8.95620;Via Regina Margherita 79;Cerro Maggiore;Cerro Maggiore;0;tcgd;0|0|0
+131551556;119000;73;2;1;R;0;B;Bilocale;45.59580;8.94880;Via Col di Lana;Cerro Maggiore;Cerro Maggiore;0;cgd;0|0|0
+131551842;145000;95;3;2;R;0;;Trilocale;45.61470;8.95062;Via legnano 9;Rescaldina;Rescaldina;0;bcd;0|0|0
+131554834;199000;150;4;2;;0;B;Terratetto plurifamiliare;45.54990;8.76871;VIA LIGURIA;Castano Primo;Castano Primo;0;bc;0|0|0
+131686998;110000;44;1;1;1;1;O;Monolocale;45.56420;8.92610;Via Firenze;Canegrate;Canegrate;0;t;0|0|0
+131689586;119000;85;3;1;2;1;O;Trilocale;45.31270;8.96673;Via Duchessa Marianna;Besate;Besate;0;bcd;0|0|0
+131902992;18000;94;2;;;0;R;Rustico;45.43700;8.88716;Via Manzoni;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+131918850;168000;100;3;1;1;0;B;Trilocale;45.43520;8.88810;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;bcd;0|0|0
+131929354;173000;74;3;1;1;0;O;Trilocale;45.54230;8.88430;Viale dei Tigli;Busto Garolfo;Busto Garolfo;0;btcd;0|0|0
+131961150;329000;134;4;2;1;1;N;Quadrilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131961366;298000;120;3;2;1;1;N;Trilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131964142;405000;187;5;3;;0;B;Villa unifamiliare;45.56020;8.77130;Via Ugo Foscolo;Castano Primo;Castano Primo;0;bt;0|0|0
+131997776;195000;78;2;1;1;1;N;Bilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;t;0|0|0
+131997876;308000;122;4;2;2;1;N;Quadrilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131997922;179000;70;2;1;2;1;N;Bilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131997982;288000;115;3;2;2;1;N;Trilocale;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131998110;329000;131;4;2;3;1;N;Attico;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+131998160;299000;118;3;2;3;1;N;Attico;45.63080;8.94350;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+132004218;249000;110;3;2;1;1;O;Trilocale;45.43510;8.88520;Via Giuseppe Verdi;Robecco sul Naviglio;Robecco sul Naviglio;0;tcag;0|0|0
+132010104;405000;184;4;2;;0;N;Villa bifamiliare;45.50970;8.81447;Via Decimo Fossati;Cuggiono;Cuggiono;0;bt;0|0|0
+132047362;279000;219;4;1;;0;R;Villa unifamiliare;45.54960;8.76340;Via Marche;Castano Primo;Castano Primo;0;bcj;0|0|0
+132048312;199000;114;3;2;2;0;B;Trilocale;45.62090;8.95960;Via Barbara Melzi;Rescaldina;Rescaldina;0;btgd;0|0|0
+132054436;325000;129;4;2;1;1;N;Quadrilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+132054694;293000;117;4;2;1;1;N;Quadrilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+132054750;293000;117;3;2;1;1;N;Trilocale;45.56450;8.92490;Via Modena;Canegrate;Canegrate;0;bt;0|0|0
+132056100;277000;106;3;2;2;1;N;Trilocale;45.56700;8.91610;Via Pisa;Canegrate;Canegrate;0;tcd;0|0|0
+132058358;155000;93;3;1;T/ 2;0;O;Trilocale;45.59390;8.96240;Via G. Bruno 30;Cerro Maggiore;Cerro Maggiore;0;bcgi;0|0|0
+132060710;439000;319;5+;2;;0;O;Villa bifamiliare;45.57700;8.97790;Via Carlo Calvi;Cerro Maggiore;Cerro Maggiore;0;btgj;0|0|0
+132074112;199000;65;2;1;R;1;O;Bilocale;45.62200;8.94410;Via Guglielmo Oberdan 2;Rescaldina;Rescaldina;0;btcg;0|0|0
+132083896;14000;29;1;;;0;;Rustico;45.50780;8.81480;Via A. Pellegatta;Cuggiono;Cuggiono;0;;0|0|0
+132118500;1490000;536;5+;3;;0;O;Villa unifamiliare;45.55070;8.77807;v.lo tortuoso;Castano Primo;Castano Primo;0;a;0|0|0
+132121428;149000;70;2;1;1;1;N;Bilocale;45.28180;8.99540;Via C.G. del Maino;Motta Visconti;Motta Visconti;0;btd;0|0|0
+132122208;235000;120;4;2;1;0;N;Quadrilocale;45.28180;8.99500;Via C.G. del Maino;Motta Visconti;Motta Visconti;0;b;0|0|0
+132122418;249000;125;4;2;2;1;B;Quadrilocale;45.50620;8.82590;Via G. Garibaldi;Cuggiono;Cuggiono;0;bt;0|0|0
+132158066;299000;198;4;1;;0;B;Villa unifamiliare;45.61120;8.94600;Via Carroccio;Rescaldina;Rescaldina;0;bgji;0|0|0
+132158918;165000;69;2;1;1;1;N;Bilocale;45.59070;8.96590;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+132159740;249000;261;5+;2;;0;R;Villa unifamiliare;45.28720;8.99260;Via San Giovanni;Motta Visconti;Motta Visconti;0;cag;0|0|0
+132160994;115000;100;3;2;3;0;B;Trilocale;45.51040;8.80996;Via Matteotti 10;Cuggiono;Cuggiono;0;bcg;0|0|0
+132166846;405000;146;3;2;;0;N;Villa unifamiliare;45.57870;8.98280;Via Luigi Zerbi;Cerro Maggiore;Cerro Maggiore;0;bgj;0|0|0
+132170100;135000;100;3;1;3;0;B;Trilocale;45.58890;8.93630;Via Goffredo Mameli 2;San Vittore Olona;San Vittore Olona;0;bcg;0|0|0
+132179492;115000;87;3;1;1;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;btc;0|0|0
+132186738;165000;77;3;1;2;0;B;Trilocale;45.56530;8.92690;Via Milano;Canegrate;Canegrate;0;tca;0|0|0
+132187758;295000;145;3;2;;0;N;Villa bifamiliare;45.28180;8.99510;Via C.G. del Maino;Motta Visconti;Motta Visconti;0;d;0|0|0
+132191474;155000;83;3;1;2;1;O;Trilocale;45.28020;8.99090;Via Po;Motta Visconti;Motta Visconti;0;tc;0|0|0
+132194890;140000;70;2;1;1;0;B;Bilocale;45.57020;8.92900;Piazza Giacomo Matteotti;Canegrate;Canegrate;0;bcagd;0|0|0
+132202158;139000;135;5;2;2;1;B;Appartamento;45.56380;8.92330;Via Bologna;Canegrate;Canegrate;0;d;0|0|0
+132203514;155000;105;3;1;1;1;B;Trilocale;45.58740;8.93886;Via Roma;San Vittore Olona;San Vittore Olona;0;bd;0|0|0
+132221842;225000;135;3;2;;0;N;Terratetto unifamiliare;45.29000;8.99880;Via Camillo Benso di Cavour;Motta Visconti;Motta Visconti;0;td;0|0|0
+132224062;435000;255;5+;1;;0;B;Villa bifamiliare;45.63200;8.93210;Via Monte Rosa;Rescaldina;Rescaldina;0;bti;0|0|0
+132232534;130000;105;3;1;1;0;B;Trilocale;45.57730;8.93960;Via Giuseppe Verdi;Canegrate;Canegrate;0;bi;0|0|0
+132234530;112000;90;3;1;R;0;O;Trilocale;45.28650;8.99446;Via Pizzo;Motta Visconti;Motta Visconti;0;b;0|0|0
+132234536;218000;120;3;2;;0;O;Villa unifamiliare;45.29040;8.99917;Via Cavour;Motta Visconti;Motta Visconti;0;;0|0|0
+132234538;95000;155;4;1;T;0;B;Quadrilocale;45.28830;8.99262;Piazza San Rocco;Motta Visconti;Motta Visconti;0;;0|0|0
+132235556;98000;40;1;1;2;1;O;Monolocale;45.58940;8.94380;Via Cappuccini;San Vittore Olona;San Vittore Olona;0;bagi;0|0|0
+132247172;130000;98;4;2;4;1;B;Quadrilocale;45.56070;8.77826;Via Giovanni Giolitti 16;Castano Primo;Castano Primo;0;bcad;0|0|0
+132248168;247000;115;3;2;1;1;N;Trilocale;45.62620;8.94030;Via Prealpi;Rescaldina;Rescaldina;0;bt;0|0|0
+132257660;280000;180;3;3;;0;B;Villa bifamiliare;45.63390;8.94210;Via Cislago;Rescaldina;Rescaldina;0;b;0|0|0
+132260358;90000;59;2;1;1;0;B;Bilocale;45.57760;8.97712;Via Gaio;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+132261614;335000;421;5+;2;;0;B;Villa plurifamiliare;45.61710;8.95360;Via Camillo Benso di Cavour;Rescaldina;Rescaldina;0;btc;0|0|0
+132262150;109000;120;3;1;;0;R;Terratetto unifamiliare;45.54420;8.88990;Via Ludovico Ariosto;Busto Garolfo;Busto Garolfo;0;bci;0|0|0
+132262532;75000;95;3;1;;0;R;Trilocale;45.54510;8.88180;vicolo Gesù , 15;Busto Garolfo;Busto Garolfo;0;j;0|0|0
+132262870;418000;166;4;1;;0;N;Villa unifamiliare;45.57920;8.98370;Via Luigi Zerbi;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+132262886;41000;90;3;;;0;R;Rustico;45.54510;8.88180;vicolo Gesù , 15;Busto Garolfo;Busto Garolfo;0;cj;0|0|0
+132288750;148000;90;3;1;2;0;B;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;bt;0|0|0
+132292140;158000;81;3;1;1;0;B;Trilocale;45.31020;9.01740;Via Anselmo dall'Orto;Casorate Primo;Casorate Primo;0;agd;0|0|0
+132293228;240000;176;4;3;;0;B;Villa a schiera;45.31520;9.02220;Via 1 Maggio;Casorate Primo;Casorate Primo;0;btcjd;0|0|0
+132293728;89000;60;2;;;0;B;Bilocale;45.59240;8.95309;via immacolata, 21;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+132293928;219000;111;3;;;0;O;Villa a schiera;45.29210;8.99496;VIA EUGENIO MONTALE , 28;Motta Visconti;Motta Visconti;0;;0|0|0
+132296596;695000;610;5+;3;;0;B;Casale;45.50080;8.81310;Via Ugo Foscolo;Cuggiono;Cuggiono;0;bt;0|0|0
+132296790;129000;110;3;1;1;0;B;Trilocale;45.54870;8.79080;Via per Buscate;Castano Primo;Castano Primo;0;bi;0|0|0
+132302468;159000;94;3;1;2;1;B;Trilocale;45.54910;8.88500;Via XXV Aprile;Busto Garolfo;Busto Garolfo;0;bca;0|0|0
+132303396;89000;68;3;1;3;1;B;Trilocale;45.59700;8.95490;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;bca;0|0|0
+132333566;228000;123;3;1;T;0;B;Trilocale;45.57740;8.93340;Via San Pietro;Canegrate;Canegrate;0;d;0|0|0
+132339472;140000;122;3;2;1;0;R;Trilocale;45.56680;8.91530;Via Siena;Canegrate;Canegrate;0;bd;0|0|0
+132343074;275000;160;5;2;;0;B;Villa bifamiliare;45.58270;8.95250;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+132346014;399000;134;4;2;;0;N;Villa unifamiliare;45.56550;8.91460;Via Sant'Ambrogio;Canegrate;Canegrate;0;;0|0|0
+132359094;398000;292;3;2;;0;O;Villa unifamiliare;45.55730;8.89160;Via Cefalonia;Busto Garolfo;Busto Garolfo;0;btc;0|0|0
+132373700;149000;110;3;1;2;0;B;Trilocale;45.50340;8.81529;Via Cicogna;Cuggiono;Cuggiono;0;bc;0|0|0
+132378746;250000;102;3;2;1;1;N;Trilocale;45.59070;8.96600;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+132378972;250000;101;3;2;1;1;N;Trilocale;45.59080;8.96610;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+132416878;198000;95;3;1;1;0;O;Trilocale;45.59900;8.95160;Via Venezia;Cerro Maggiore;Cerro Maggiore;0;tcd;0|0|0
+132428538;285000;220;5+;2;;0;B;Villa unifamiliare;45.56300;8.92970;Via Cuneo;Canegrate;Canegrate;0;bcj;0|0|0
+132430930;198000;105;3;1;;0;;Villa unifamiliare;45.59706;8.95000;Via Don Aquilino Marelli;Cerro Maggiore;Cerro Maggiore;1;ba;0|0|0
+132434140;139000;105;3;2;4;1;O;Trilocale;45.50550;8.82000;Via Giuseppe Garibaldi;Cuggiono;Cuggiono;0;bca;0|0|0
+132438466;178000;74;2;1;T;0;O;Bilocale;45.50930;8.81670;Via Camillo Benso di Cavour;Cuggiono;Cuggiono;0;jd;0|0|0
+132438626;149000;67;2;1;1;0;O;Bilocale;45.50930;8.81670;Via Camillo Benso di Cavour;Cuggiono;Cuggiono;0;d;0|0|0
+132438702;149000;67;2;1;2;0;O;Bilocale;45.50930;8.81670;Via Camillo Benso di Cavour;Cuggiono;Cuggiono;0;d;0|0|0
+132438798;55000;25;1;1;1;0;O;Monolocale;45.50930;8.81670;Via Camillo Benso di Cavour;Cuggiono;Cuggiono;0;d;0|0|0
+132440746;90000;50;2;1;1;0;B;Bilocale;45.55270;8.77940;Vicolo Annunciata;Castano Primo;Castano Primo;0;bcas;0|0|0
+132446316;475000;175;4;2;;0;N;Villa bifamiliare;45.56370;8.91670;Via Vesuvio;Canegrate;Canegrate;0;t;0|0|0
+132458352;160000;122;3;1;S/ T/ 2;0;B;Trilocale;45.54430;8.88250;Via Vincenzo Monti;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+132460156;195000;136;3;2;;0;B;Villa unifamiliare;45.54640;8.89560;Via Fosse Ardeatine;Busto Garolfo;Busto Garolfo;0;bcjd;0|0|0
+132462536;140000;82;3;1;1;0;O;Trilocale;45.50950;8.81330;VIA SAN ROCCO;Cuggiono;Cuggiono;0;ca;0|0|0
+132464128;119000;73;2;1;S/ 1;0;O;Bilocale;45.28850;8.99330;Via Papa Giovanni XXIII;Motta Visconti;Motta Visconti;0;tca;0|0|0
+132467396;209000;100;3;2;3;1;O;Trilocale;45.54680;8.88340;Piazza Camillo Benso di Cavour;Busto Garolfo;Busto Garolfo;0;bgd;0|0|0
+132472794;197000;110;3;2;R;1;B;Trilocale;45.61560;8.94930;Via Bassetti;Rescaldina;Rescaldina;0;bt;0|0|0
+132503646;304000;91;3;2;4;1;N;Trilocale;45.57370;8.93660;Via Enrico Toti;Canegrate;Canegrate;0;;0|0|0
+132505600;149000;96;3;1;T/ R;0;B;Trilocale;45.58340;8.94870;Via Concordia;San Vittore Olona;San Vittore Olona;0;cgd;0|0|0
+132505778;165000;75;2;1;3;1;O;Bilocale;45.59050;8.94540;Via Cappuccini;Cerro Maggiore;Cerro Maggiore;0;btci;0|0|0
+132517134;360000;222;5;3+;;0;O;Villa unifamiliare;45.28590;8.99520;Via Gianpaolo Annoni;Motta Visconti;Motta Visconti;0;btad;0|0|0
+132529384;169000;118;3;1;1;0;O;Trilocale;45.50990;8.81922;Via Varese;Cuggiono;Cuggiono;0;bc;0|0|0
+132538198;85000;75;3;1;2 - 3;0;B;Trilocale;45.57050;8.92760;Largo Giovane Italia;Canegrate;Canegrate;0;ai;0|0|0
+132542272;235000;149;4;2;;0;B;Appartamento in villa;45.31320;8.97420;Via dei Mulini;Besate;Besate;0;agj;0|0|0
+132597594;95000;92;3;1;T;0;B;Trilocale;45.54610;8.88093;via manzoni, 25;Busto Garolfo;Busto Garolfo;0;;0|0|0
+132598184;250000;130;3;1;;0;R;Villa unifamiliare;45.59450;8.95760;Via Privata Giovanni Boccaccio 49;Cerro Maggiore;Cerro Maggiore;0;tcjd;0|0|0
+132598316;25000;120;5+;;;0;;Rustico;45.54610;8.88093;via manzoni, 25;Busto Garolfo;Busto Garolfo;0;;0|0|0
+132598562;198000;100;3;2;2;1;O;Trilocale;45.62210;8.95060;Via Montello 55;Rescaldina;Rescaldina;0;bcgd;0|0|0
+132622982;295000;338;3;1;;0;R;Villa unifamiliare;45.55030;8.89260;Via Nazario Sauro;Busto Garolfo;Busto Garolfo;0;tcd;0|0|0
+132625458;179000;124;3;2;S/ 1;1;O;Trilocale;45.50140;8.81460;Via Don Giuseppe Albeni;Cuggiono;Cuggiono;0;btcgi;0|0|0
+132627058;310000;102;4;2;1;1;N;Quadrilocale;45.57370;8.93660;Via Enrico Toti;Canegrate;Canegrate;0;;0|0|0
+132627540;140000;109;3;1;S/ T/ 1;0;B;Trilocale;45.55220;8.88840;Via Giovanni Pascoli;Busto Garolfo;Busto Garolfo;0;bca;0|0|0
+132628494;89000;93;3;1;2;1;N;Mansarda;45.57120;8.92190;Via Zara;Canegrate;Canegrate;0;bg;0|0|0
+132630304;318000;98;4;2;T;1;N;Quadrilocale;45.57370;8.93660;Via Enrico Toti;Canegrate;Canegrate;0;b;0|0|0
+132635428;379000;231;5;3;;0;B;Villa bifamiliare;45.63080;8.93694;viale lombardia;Rescaldina;Rescaldina;0;bt;0|0|0
+132654556;269000;110;3;2;1;1;B;Trilocale;45.58760;8.94140;Via San Francesco 1;San Vittore Olona;San Vittore Olona;0;btcgd;0|0|0
+132654560;305000;100;3;2;T;1;N;Trilocale;45.59160;8.94781;Via Bernocchi 10/B;Cerro Maggiore;Cerro Maggiore;0;gj;0|0|0
+132660748;169000;107;3;1;S/ 1;1;N;Trilocale;45.55830;8.76700;Via Prealpi, 6;Castano Primo;Castano Primo;0;bcd;0|0|0
+132661564;150000;91;3;1;1;0;B;Trilocale;45.59260;8.95920;Via Cristoforo Colombo;Cerro Maggiore;Cerro Maggiore;0;bcag;0|0|0
+132662678;310000;210;4;2;;0;B;Villa a schiera;45.50160;8.82220;Via Magenta;Cuggiono;Cuggiono;0;bgj;0|0|0
+132665710;285000;186;4;3;;0;O;Villa a schiera;45.60890;8.94910;Via Sant'Ambrogio;Rescaldina;Rescaldina;0;bc;0|0|0
+132665960;265000;183;3;3+;;0;N;Villa a schiera;45.30720;9.01090;Via Tiziano;Casorate Primo;Casorate Primo;0;bcgd;0|0|0
+132670626;395000;250;4;3;T;0;;Quadrilocale;45.44020;8.89091;Via S. Pellico;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+132673482;160000;118;3;1;S/ T/ R;0;B;Trilocale;45.56280;8.92980;Via Cuneo;Canegrate;Canegrate;0;bcgd;0|0|0
+132678404;149000;110;3;2;T/ 1;1;B;Trilocale;45.29300;8.98900;Via Giulio Pastore;Motta Visconti;Motta Visconti;0;bca;0|0|0
+132700730;395000;147;4;3;;0;O;Villa a schiera;45.57700;8.98380;Via Damiano Chiesa;Cerro Maggiore;Cerro Maggiore;0;g;0|0|0
+132706380;235000;92;3;1;T;1;N;Trilocale;45.59050;8.96590;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;t;0|0|0
+132706542;290000;115;3;2;2;1;N;Trilocale;45.59090;8.96610;Via Don Primo Mazzolari;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+132734226;160000;160;4;;;0;;Terratetto unifamiliare;45.58090;8.97890;Via Fabio Filzi 15;Cerro Maggiore;Cerro Maggiore;0;bd;0|0|0
+132739600;285000;220;3;2;;0;R;Villa unifamiliare;45.56300;8.92970;Via Cuneo;Canegrate;Canegrate;0;bcjd;0|0|0
+132796032;420000;490;5+;3;;0;R;Terratetto unifamiliare;45.58560;8.94388;via riva, 20;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+132796684;129000;67;2;1;T;1;N;Bilocale;45.28180;8.99620;Piazza Donna Contessa Giuseppina del Maino;Motta Visconti;Motta Visconti;0;i;0|0|0
+132799274;119000;79;2;1;S/ R;0;B;Bilocale;45.28380;8.99320;Via Don Giovanni Minzoni;Motta Visconti;Motta Visconti;0;bcd;0|0|0
+132801588;361000;129;3;2;T;1;N;Trilocale;45.59030;8.93240;Via Roma;San Vittore Olona;San Vittore Olona;0;cd;0|0|0
+132811462;95000;90;3;1;3;0;B;Trilocale;45.31290;9.02460;Via Giacomo Matteotti;Casorate Primo;Casorate Primo;0;bcd;0|0|0
+132813584;155000;59;2;1;T;1;O;Bilocale;45.43750;8.87880;Via Santa Croce;Robecco sul Naviglio;Robecco sul Naviglio;0;cgji;0|0|0
+132813744;235000;100;3;2;T;0;O;Trilocale;45.57480;8.94230;Via Cascinette;Canegrate;Canegrate;0;btj;0|0|0
+132814824;285000;114;3;2;3;1;B;Trilocale;45.58420;8.93956;Via Divisione Sforzesca;San Vittore Olona;San Vittore Olona;0;tca;0|0|0
+132816826;299000;246;5+;2;;0;O;Villa unifamiliare;45.29020;8.99110;Via Mulini;Motta Visconti;Motta Visconti;0;taj;0|0|0
+132834426;250000;180;4;2;3;1;N;Attico;45.56530;8.92020;Via Adamello;Canegrate;Canegrate;0;bt;0|0|0
+132835210;145000;85;3;1;1;0;O;Trilocale;45.58420;8.94880;Via Alessandro Manzoni;San Vittore Olona;San Vittore Olona;0;bd;0|0|0
+132836738;279000;91;3;2;S/ 1;1;N;Trilocale;45.59010;8.93320;Via Roma;San Vittore Olona;San Vittore Olona;0;t;0|0|0
+132838166;129000;76;2;1;2;0;O;Bilocale;45.59350;8.95840;Via Cristoforo Colombo;Cerro Maggiore;Cerro Maggiore;0;bcai;0|0|0
+132841656;155000;157;4;2;T;0;B;Quadrilocale;45.28370;8.98540;Via Alcide De Gasperi, 71;Motta Visconti;Motta Visconti;0;bca;0|0|0
+132843620;230000;140;4;2;1;1;O;Appartamento;45.44379;8.88303;Via Carlo Alberto Dalla Chiesa;Robecco sul Naviglio;Robecco sul Naviglio;1;bt;0|0|0
+132855438;498000;133;5;2;;0;N;Villa unifamiliare;45.51190;8.81330;Via Vittorio Bachelet;Cuggiono;Cuggiono;0;d;0|0|0
+132855522;67000;44;2;1;;0;B;Terratetto unifamiliare;45.58530;8.94340;Via Magenta;San Vittore Olona;San Vittore Olona;0;asd;0|0|0
+132859362;192850;67;2;1;1;1;N;Bilocale;45.59050;8.93230;Via Roma;San Vittore Olona;San Vittore Olona;0;t;0|0|0
+132878112;155000;99;3;1;2;1;O;Trilocale;45.54800;8.87610;Via Arconate;Busto Garolfo;Busto Garolfo;0;bcgd;0|0|0
+132878548;279850;97;3;2;1;1;N;Trilocale;45.59060;8.93240;Via Roma;San Vittore Olona;San Vittore Olona;0;tc;0|0|0
+132880668;532800;167;4;3;3;1;N;Quadrilocale;45.59050;8.93240;Via Roma;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+132882754;110000;80;3;1;3;0;B;Trilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;bcd;0|0|0
+132930546;235000;95;3;2;1;1;B;Trilocale;45.60020;8.94760;Via F. Turati;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+132937330;439000;358;5+;2;;0;B;Villa unifamiliare;45.54880;8.89266; ;Busto Garolfo;Busto Garolfo;0;bc;0|0|0
+132945164;165000;100;3;1;1;0;B;Trilocale;45.55910;8.77834;Via Kennedy 3;Castano Primo;Castano Primo;0;bcgd;0|0|0
+132950434;138000;112;3;1;S/ 4;1;;Trilocale;45.57280;8.92570;Via Alessandro Manzoni;Canegrate;Canegrate;0;bc;0|0|0
+132959552;179000;130;3;2;1 - 2;0;O;Trilocale;45.54590;8.88707; ;Busto Garolfo;Busto Garolfo;0;bcag;0|0|0
+132995874;299000;180;3;2;;0;O;Villa unifamiliare;45.56490;8.91740;Via Venezia 26;Canegrate;Canegrate;0;bagjd;0|0|0
+133016724;249000;98;3;1;T;0;B;Trilocale;45.55560;8.88520;Via San Pietro 21/D;Busto Garolfo;Busto Garolfo;0;btj;0|0|0
+133017810;159000;70;2;1;T;1;N;Bilocale;45.29170;8.99850;Via Contessa Carolina del Maino;Motta Visconti;Motta Visconti;0;ji;0|0|0
+133021484;109000;126;4;1;2;0;R;Quadrilocale;45.43540;8.88630;Via S. Giovanni;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+133023758;45000;72;2;1;T;0;R;Bilocale;45.56200;8.77485;Via Don Giovanni Minzoni 4;Castano Primo;Castano Primo;0;cad;0|0|0
+133072428;112000;44;1;1;2;1;N;Monolocale;45.57370;8.93660;Via Enrico Toti;Canegrate;Canegrate;0;bc;0|0|0
+133092076;190000;183;3;1;T;0;R;Trilocale;45.43610;8.88720;Piazza XXI Luglio;Robecco sul Naviglio;Robecco sul Naviglio;0;ca;0|0|0
+133093992;135000;123;3;2;;0;O;Terratetto plurifamiliare;45.59020;8.95080;Via XXIV Maggio;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+133096604;565000;197;4;2;T/ 4;1;N;Attico;45.58550;8.94370;Via Magenta;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+133096720;565000;197;4;2;T/ 4;1;N;Attico;45.58810;8.95010;Via Pietro Ottolini;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+133096830;565000;197;4;2;T/ 4;1;N;Attico;45.56190;8.93420;Via Carroccio;Canegrate;Canegrate;0;bt;0|0|0
+133103286;470000;380;5+;3+;;0;B;Villa bifamiliare;45.57280;8.92740;Via Monte Nero;Canegrate;Canegrate;0;btcj;0|0|0
+133106090;49000;44;2;1;T;0;B;Bilocale;45.57020;8.93090;Largo Sant'Angelo;Canegrate;Canegrate;0;ad;0|0|0
+133142038;225000;145;3;1;T;1;O;Trilocale;45.44230;8.88274;Via Diaz;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+133143514;79000;49;2;1;T;1;B;Bilocale;45.55160;8.77910;Via del Pozzo;Castano Primo;Castano Primo;0;ag;0|0|0
+133146582;138000;75;3;1;T;0;B;Trilocale;45.31300;9.01880;Via Giuseppe Garibaldi;Casorate Primo;Casorate Primo;0;i;0|0|0
+133148048;172000;88;3;2;S/ 5;1;B;Trilocale;45.54560;8.87550;Via Randaccio;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+133152378;495000;265;5;3;;0;O;Villa unifamiliare;45.57520;8.94030;Via Cascinette;Canegrate;Canegrate;0;c;0|0|0
+133155150;189000;120;4;2;2;0;B;Quadrilocale;45.30800;9.01130;Via Leonardo Da Vinci;Casorate Primo;Casorate Primo;0;bc;0|0|0
+133168180;179000;90;3;2;;0;O;Terratetto unifamiliare;45.28690;8.98915;Via San Giovanni;Motta Visconti;Motta Visconti;0;b;0|0|0
+133177862;164000;95;3;1;1;0;B;Trilocale;45.62810;8.94194;Via Pineta;Rescaldina;Rescaldina;0;bc;0|0|0
+133179316;85000;82;3;1;1;0;B;Trilocale;45.59530;8.95282;Via XXV Aprile, 1;Cerro Maggiore;Cerro Maggiore;0;a;0|0|0
+133179426;98000;65;2;1;1;0;B;Bilocale;45.54560;8.88330;Piazza Lombardia;Busto Garolfo;Busto Garolfo;0;bcas;0|0|0
+133180164;32000;71;2;;;0;R;Terratetto unifamiliare;45.28720;8.98740;Via San Giovanni;Motta Visconti;Motta Visconti;0;bd;0|0|0
+133184746;690000;397;5+;3+;;0;O;Villa bifamiliare;45.55490;8.77890;Via Giacomo Matteotti;Castano Primo;Castano Primo;0;;0|0|0
+133185096;359000;215;3;3+;;0;B;Villa unifamiliare;45.31320;8.97420;Via dei Mulini;Besate;Besate;0;a;0|0|0
+133190780;179000;109;3;2;1;1;O;Trilocale;45.50140;8.81470;Via Don Giuseppe Albeni 3/C;Cuggiono;Cuggiono;0;btcad;0|0|0
+133192560;195000;120;4;2;1;1;B;Quadrilocale;45.54640;8.88700;Via Giuseppe Mazzini;Busto Garolfo;Busto Garolfo;0;bcg;0|0|0
+133193332;138000;60;2;1;R;1;O;Appartamento;45.61363;8.95430;Via della Libertà;Rescaldina;Rescaldina;1;ca;0|0|0
+133205498;59000;35;1;1;1;0;O;Monolocale;45.44220;8.90030;Via Giovanni Testori;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+133205886;150000;63;2;1;1;0;B;Bilocale;45.57020;8.92900;Piazza Giacomo Matteotti;Canegrate;Canegrate;0;bci;0|0|0
+133233882;275000;156;3;2;2;0;O;Trilocale;45.62820;8.94450;Via Cardinale Federico Borromeo;Rescaldina;Rescaldina;0;bcd;0|0|0
+133249724;183000;94;3;1;2;1;B;Trilocale;45.58900;8.93660;Via Goffredo Mameli;San Vittore Olona;San Vittore Olona;0;bca;0|0|0
+133258060;90000;63;2;1;S/ 3;1;R;Bilocale;45.58750;8.94370;Via Generale Luigi Cadorna;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+133262012;129000;100;3;1;T;0;O;Trilocale;45.41840;8.88310;Via Fratelli Bandiera;Robecco sul Naviglio;Robecco sul Naviglio;0;d;0|0|0
+133270870;325000;143;3;2;;0;O;Villa unifamiliare;45.54020;8.87910;Via Stromboli;Busto Garolfo;Busto Garolfo;0;tgjd;0|0|0
+133273588;179000;129;4;2;1;0;B;Quadrilocale;45.55310;8.77727;Via San Gerolamo 27;Castano Primo;Castano Primo;0;bad;0|0|0
+133275050;345000;151;4;3;;0;B;Villa bifamiliare;45.56280;8.91810;Via Magenta;Canegrate;Canegrate;0;btci;0|0|0
+133277178;119000;82;2;1;1;0;B;Bilocale;45.62730;8.94140;Via Don Luigi Sormani;Rescaldina;Rescaldina;0;cgi;0|0|0
+133280076;190000;108;3;1;S/ R;1;O;Trilocale;45.61490;8.94910;Via Cavalieri di Vittorio Veneto;Rescaldina;Rescaldina;0;bca;0|0|0
+133285822;265000;119;3;1;S/ T;1;N;Trilocale;45.62340;8.94780;Via Caduti di Nassirya;Rescaldina;Rescaldina;0;cagj;0|0|0
+133286524;180000;121;3;2;2;1;B;Trilocale;45.56330;8.91880;Via Magenta;Canegrate;Canegrate;0;bt;0|0|0
+133288068;350000;194;4;2;;0;O;Villa a schiera;45.28480;8.99647;Via Fratelli Rosselli 3 A;Motta Visconti;Motta Visconti;0;;0|0|0
+133292626;74000;50;2;1;1;0;B;Bilocale;45.55260;8.77970;Vicolo Solferino;Castano Primo;Castano Primo;0;bgd;0|0|0
+133292890;348000;127;3;2;;1;N;Trilocale;45.43520;8.88460;via bellini, 3;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+133292976;285000;106;3;2;;1;N;Trilocale;45.43520;8.88460;via bellini, 3;Robecco sul Naviglio;Robecco sul Naviglio;0;bt;0|0|0
+133294094;152000;87;3;1;S/ 3;1;B;Trilocale;45.58170;8.94870;Via Sempione;San Vittore Olona;San Vittore Olona;0;ta;0|0|0
+133298106;520000;208;4;3;;0;N;Villa unifamiliare;45.58250;8.93900;Via Magenta;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+133308916;230000;93;3;2;1;0;O;Trilocale;45.59840;8.95130;Via Monte Rosa;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+133314070;289000;105;3;2;2;1;O;Trilocale;45.56300;8.92970;Via Cuneo;Canegrate;Canegrate;0;bta;0|0|0
+133331446;125000;100;4;1;R;0;B;Quadrilocale;45.43980;8.88717;Via Adua;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+133333690;190000;103;4;1;1;0;O;Quadrilocale;45.56670;8.91910;Via Asiago;Canegrate;Canegrate;0;bcad;0|0|0
+133338454;154000;110;3;1;R;1;B;Trilocale;45.43560;8.88472;Via Giuseppe Verdi;Robecco sul Naviglio;Robecco sul Naviglio;0;btc;0|0|0
+133339028;137000;101;3;2;S/ S/ 1;0;O;Trilocale;45.54700;8.77450;Via Gemona;Castano Primo;Castano Primo;0;bcagd;0|0|0
+133340246;180000;70;3;2;1;0;O;Trilocale;45.42700;8.86990;Via della Valle;Robecco sul Naviglio;Robecco sul Naviglio;0;tc;0|0|0
+133345762;180000;101;3;2;S - T;0;O;Trilocale;45.55030;8.87580;Via Cevedale;Busto Garolfo;Busto Garolfo;0;bcgi;0|0|0
+133360724;139000;80;3;1;2;0;B;Trilocale;45.57160;8.92650;Via Alessandro Manzoni;Canegrate;Canegrate;0;bagd;0|0|0
+133369042;109000;65;2;1;;0;O;Terratetto unifamiliare;45.31480;8.96760;Via Angelo Mainetti;Besate;Besate;0;b;0|0|0
+133371156;150000;60;2;1;1;1;N;Bilocale;45.56700;8.91600;Via Pisa;Canegrate;Canegrate;0;bci;0|0|0
+133371328;225000;227;5+;2;;0;B;Appartamento in villa;45.54790;8.76260;Via Po, 1;Castano Primo;Castano Primo;0;bcd;0|0|0
+133372234;269000;107;3;2;1;1;N;Trilocale;45.56700;8.91610;Via Pisa;Canegrate;Canegrate;0;btc;0|0|0
+133372600;109000;137;4;1;;0;R;Terratetto unifamiliare;45.28620;8.99620;Via Gianpaolo Annoni;Motta Visconti;Motta Visconti;0;b;0|0|0
+133374646;269000;155;4;2;;0;B;Villa a schiera;45.31490;9.01690;Via Pionnio;Casorate Primo;Casorate Primo;0;bti;0|0|0
+133384568;380000;227;3;2;;0;O;Villa bifamiliare;45.30590;9.01860;Via Virginio Bianchi;Casorate Primo;Casorate Primo;0;bcj;0|0|0
+133388046;125000;55;2;1;S/ 1;1;B;Bilocale;45.54930;8.76000;Via della Meridiana, 7;Castano Primo;Castano Primo;0;bcg;0|0|0
+133388072;149000;75;3;1;T;0;B;Trilocale;45.59280;8.94878;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;0;bc;0|0|0
+133389134;130000;78;2;1;R;0;O;Bilocale;45.59280;8.94880;via garibaldi;Cerro Maggiore;Cerro Maggiore;0;cd;0|0|0
+133389718;150000;75;3;1;R;0;O;Trilocale;45.59280;8.94880;via Garibaldi;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+133402460;177000;133;3;2;S/ 1;0;O;Trilocale;45.55840;8.77390;Via Giovanni Pascoli;Castano Primo;Castano Primo;0;bc;0|0|0
+133416998;315000;184;3;2;;0;O;Appartamento in villa;45.56730;8.92130;Via Giuseppe Garibaldi;Canegrate;Canegrate;0;;0|0|0
+133435748;412000;140;3;2;T;0;N;Trilocale;45.57340;8.93540;Via Silvio Pellico;Canegrate;Canegrate;0;d;0|0|0
+133435948;419000;232;4;2;1 - 2;0;O;Attico;45.57340;8.93540;Via Silvio Pellico;Canegrate;Canegrate;0;;0|0|0
+133436030;412000;150;3;2;T;0;N;Trilocale;45.57340;8.93540;Via Silvio Pellico;Canegrate;Canegrate;0;d;0|0|0
+133461404;249000;130;4;2;;0;O;Villa bifamiliare;45.30670;9.01960;Via Carlo Tosi;Casorate Primo;Casorate Primo;0;btji;0|0|0
+133463078;65000;60;2;1;1;0;B;Bilocale;45.50510;8.81900;Via G. Bellotti;Cuggiono;Cuggiono;0;bc;0|0|0
+133463854;519000;160;4;2;;0;O;Villa unifamiliare;45.56410;8.91640;Via Vesuvio;Canegrate;Canegrate;0;bcgj;0|0|0
+133469456;430000;180;3;2;;0;O;Villa unifamiliare;45.54280;8.88010;Via Inveruno 15/C;Busto Garolfo;Busto Garolfo;0;bcgjd;0|0|0
+133499268;273000;119;3;2;1;1;N;Trilocale;45.56700;8.92720;Via Magenta;Canegrate;Canegrate;0;tci;0|0|0
+133499296;360000;169;3;2;S/ 4/ 5;1;B;Trilocale;45.57380;8.92470;Piazza Unità d'Italia;Canegrate;Canegrate;0;bt;0|0|0
+133499418;259000;185;4;2;;0;O;Villa unifamiliare;45.63190;8.93757;Via Don Luigi Repetti;Rescaldina;Rescaldina;0;tcd;0|0|0
+133501702;287000;106;3;2;3;1;N;Trilocale;45.56690;8.91600;Via Pisa;Canegrate;Canegrate;0;tci;0|0|0
+133505270;143000;90;3;1;1;0;B;Trilocale;45.31160;9.01894;Via Anselmo Dall'Orto;Casorate Primo;Casorate Primo;0;gd;0|0|0
+133508712;169000;160;3;1;;0;R;Villa unifamiliare;45.43190;8.86760;Via Sant'Ambrogio;Robecco sul Naviglio;Robecco sul Naviglio;0;bj;0|0|0
+133510752;273000;119;3;2;1;1;N;Trilocale;45.56700;8.92720;Via Magenta;Canegrate;Canegrate;0;tci;0|0|0
+133533242;320000;128;4;2;T/ 1;0;N;Quadrilocale;45.56550;8.91460;Via Sant'Ambrogio;Canegrate;Canegrate;0;;0|0|0
+133547354;299000;107;3;2;T;0;N;Trilocale;45.56550;8.91460;Via Sant'Ambrogio;Canegrate;Canegrate;0;j;0|0|0
+133547632;137000;115;3;2;5 - 6;1;B;Trilocale;45.51040;8.80940;Via Giacomo Matteotti;Cuggiono;Cuggiono;0;bcg;0|0|0
+133549830;82000;88;3;1;R;0;B;Trilocale;45.55020;8.77710;Via Moroni;Castano Primo;Castano Primo;0;cd;0|0|0
+133550052;270000;105;2;1;5;1;O;Attico;45.57050;8.93190;Via Enrico Toti;Canegrate;Canegrate;0;tg;0|0|0
+133550072;195000;152;4;2;S/ 3;1;;Quadrilocale;45.58840;8.94390;Via Emilio Tazzoli;San Vittore Olona;San Vittore Olona;0;btc;0|0|0
+133551870;175000;95;3;1;2;1;O;Trilocale;45.58900;8.96670;Via Ilaria Alpi;Cerro Maggiore;Cerro Maggiore;0;tc;0|0|0
+133573302;363000;210;5;3;;0;B;Villa bifamiliare;45.41940;8.88430;Via Martiri delle Foibe;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+133591578;83500;44;2;1;T;0;O;Bilocale;45.57010;8.92980;Via Fratelli Cairoli;Canegrate;Canegrate;0;ad;0|0|0
+133595780;298000;191;5;3;;0;R;Villa unifamiliare;45.63070;8.93600;Via Como;Rescaldina;Rescaldina;0;bcd;0|0|0
+133596526;193000;80;3;2;2;1;O;Trilocale;45.57380;8.92470;Piazza Unità d'Italia;Canegrate;Canegrate;0;ad;0|0|0
+133622568;335000;203;4;2;;0;O;Villa unifamiliare;45.43170;8.86900;Via Giovanni Falcone;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+133623106;129000;136;3;1;;0;R;Villa bifamiliare;45.29000;8.99880;Via Camillo Benso di Cavour;Motta Visconti;Motta Visconti;0;cjd;0|0|0
+133626210;155000;97;3;2;T;0;;Trilocale;45.31270;8.97410;Via dei Mulini;Besate;Besate;0;;0|0|0
+133628394;570000;270;5+;3;;0;O;Villa unifamiliare;45.63280;8.94340;Via Giovanni Verga;Rescaldina;Rescaldina;0;btj;0|0|0
+133635524;649000;216;5;2;;0;N;Villa unifamiliare;45.56710;8.92400;Via Armando Diaz;Canegrate;Canegrate;0;d;0|0|0
+133636020;119000;137;3;1;T/ 1;0;R;Trilocale;45.57100;8.92830;Via Milite Ignoto, 6;Canegrate;Canegrate;0;bi;0|0|0
+133636874;255000;90;3;1;T;0;O;Trilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;d;0|0|0
+133641160;189000;73;2;2;T;1;O;Bilocale;45.56850;8.93396;via Giacomo Leopardi;Canegrate;Canegrate;0;;0|0|0
+133653410;304000;160;4;2;1 - 2;0;O;Quadrilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;bd;0|0|0
+133657758;498000;155;4;2;2;1;O;Attico;45.59360;8.94814;VIA CAPPUCCINI;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+133683158;168000;80;3;1;1;1;B;Trilocale;45.62910;8.93890;Via Don Erasmo Valenti;Rescaldina;Rescaldina;0;bcg;0|0|0
+133685172;85000;80;2;1;1;0;B;Bilocale;45.55190;8.88770;Via Asiago;Busto Garolfo;Busto Garolfo;0;c;0|0|0
+133689062;95000;410;;;;0;R;Rustico;45.57700;8.98100;Via Risorgimento;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+133703090;118000;90;3;1;2;0;;Trilocale;45.62780;8.93410;Via Don Antonio Balbi;Rescaldina;Rescaldina;0;bcd;0|0|0
+133716036;55000;60;2;1;2;0;B;Bilocale;45.30540;9.01680;Via Monte Grappa;Casorate Primo;Casorate Primo;0;;0|0|0
+133722418;45000;29;1;1;R;0;R;Monolocale;45.54340;8.87520;Via Antonio Gramsci;Busto Garolfo;Busto Garolfo;0;ad;0|0|0
+133723044;129000;53;2;1;R;0;B;Bilocale;45.59280;8.94878;Via Giuseppe Garibaldi;Cerro Maggiore;Cerro Maggiore;0;c;0|0|0
+133724796;95000;110;3;1;3;0;;Trilocale;45.50550;8.81920;;Cuggiono;Cuggiono;0;;0|0|0
+133735396;269000;126;3;1;;0;R;Villa unifamiliare;45.56890;8.91680;Via Asiago 21;Canegrate;Canegrate;0;bcjd;0|0|0
+133735770;198000;115;3;2;R;1;O;Trilocale;45.58740;8.94080;Via Sempione;San Vittore Olona;San Vittore Olona;0;bt;0|0|0
+133736918;270000;123;3;2;1;1;B;Trilocale;45.59040;8.95420;Via Nobili Lampugnani;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+133737234;174000;118;4;2;2;1;B;Quadrilocale;45.62430;8.94955;Via Aldo Moro;Rescaldina;Rescaldina;0;btc;0|0|0
+133737482;248000;130;3;2;;0;O;Villa a schiera;45.31520;9.01490;Via Besate;Casorate Primo;Casorate Primo;0;btcd;0|0|0
+133739294;153000;80;3;1;2;0;B;Trilocale;45.58980;8.94430;Via san francesco d' assisi;San Vittore Olona;San Vittore Olona;0;bcad;0|0|0
+133741118;269000;110;4;2;;0;O;Villa unifamiliare;45.28419;8.99271;Via Ticino;Motta Visconti;Motta Visconti;1;a;0|0|0
+133757508;198000;104;3;2;2;1;O;Trilocale;45.50550;8.82029;Via Garibaldi, 20;Cuggiono;Cuggiono;0;b;0|0|0
+133759658;99000;206;4;1;;0;R;Terratetto unifamiliare;45.55350;8.77878;Via Eugenio Villoresi 33;Castano Primo;Castano Primo;0;bjd;0|0|0
+133761392;105000;97;4;1;3;1;R;Quadrilocale;45.56290;8.92380;Via Bologna;Canegrate;Canegrate;0;d;0|0|0
+133769982;119000;65;2;1;R;1;O;Bilocale;45.61490;8.95380;Via Antonio Gramsci 25;Rescaldina;Rescaldina;0;bcgi;0|0|0
+133788448;145000;65;2;1;T;0;O;Bilocale;45.61660;8.95181;Via Barbara Melzi;Rescaldina;Rescaldina;0;;0|0|0
+133789650;89000;78;2;1;R;0;R;Bilocale;45.56460;8.92130;Via Magenta;Canegrate;Canegrate;0;bc;0|0|0
+133790846;145000;60;2;1;T;0;O;Bilocale;45.61660;8.95181;Via Barbara Melzi;Rescaldina;Rescaldina;0;;0|0|0
+133795468;145000;65;2;1;1;0;O;Bilocale;45.61660;8.95181;Via Barbara Melzi;Rescaldina;Rescaldina;0;b;0|0|0
+133796948;149000;69;2;1;1;0;O;Bilocale;45.61660;8.95181;Via Barbara Melzi;Rescaldina;Rescaldina;0;b;0|0|0
+133803670;159000;96;3;2;T/ 1;0;B;Trilocale;45.28360;8.99770;Via Fiume;Motta Visconti;Motta Visconti;0;bad;0|0|0
+133819962;95000;46;2;1;2;0;O;Bilocale;45.30990;9.01270;Via Cesare Battisti;Casorate Primo;Casorate Primo;0;b;0|0|0
+133822770;185000;122;4;1;T/ 1;0;B;Quadrilocale;45.30540;9.01680;via monte grappa, 11;Casorate Primo;Casorate Primo;0;bgi;0|0|0
+133824034;498000;210;4;3+;;0;O;Villa unifamiliare;45.58030;8.94369;Toniolo;San Vittore Olona;San Vittore Olona;0;td;0|0|0
+133827188;110000;70;2;1;S - T;1;O;Bilocale;45.57970;8.97870;Via San Bartolomeo;Cerro Maggiore;Cerro Maggiore;0;c;0|0|0
+133839196;225000;131;3;1;1;0;O;Trilocale;45.54640;8.89093;via san francesco ;Busto Garolfo;Busto Garolfo;0;j;0|0|0
+133854126;180000;94;3;2;1;1;B;Trilocale;45.58600;8.94630;Via Alessandro Manzoni;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+133857958;235000;100;3;2;1;1;O;Trilocale;45.54660;8.88188;via busto arsizio;Busto Garolfo;Busto Garolfo;0;btcg;0|0|0
+133884060;120000;67;2;1;S/ T;0;B;Bilocale;45.55210;8.88870;Via Giovanni Pascoli;Busto Garolfo;Busto Garolfo;0;cg;0|0|0
+133886578;385000;153;4;2;;0;O;Villa a schiera;45.44210;8.88820;Via Piave;Robecco sul Naviglio;Robecco sul Naviglio;0;bji;0|0|0
+133888002;239000;207;4;2;;0;B;Villa a schiera;45.53910;8.77370;Via del Lavoro;Castano Primo;Castano Primo;0;bcd;0|0|0
+133894785;270000;107;3;2;1;1;B;Trilocale;45.59380;8.95080;Piazza Don Luigi Oltolina;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+133897029;110000;80;3;1;1;1;B;Trilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;bcd;0|0|0
+133897283;108000;95;3;1;2;0;;Trilocale;45.54910;8.87666;via grigna, 22;Busto Garolfo;Busto Garolfo;0;bc;0|0|0
+133901115;315000;138;3;2;S/ 1;1;B;Trilocale;45.63030;8.94240;Via Riccardo Lombardi;Rescaldina;Rescaldina;0;bt;0|0|0
+133902475;98000;70;2;1;S/ T/ 2;0;O;Bilocale;45.55100;8.88610;Via Tagliamento;Busto Garolfo;Busto Garolfo;0;bca;0|0|0
+133904441;175000;160;5+;2;;0;B;Terratetto plurifamiliare;45.57950;8.97890;Via San Bartolomeo;Cerro Maggiore;Cerro Maggiore;0;bci;0|0|0
+133918099;95000;145;5;2;;0;B;Terratetto unifamiliare;45.55200;8.77081;Via Malpaga 9;Castano Primo;Castano Primo;0;bad;0|0|0
+133935689;260000;94;3;2;1;0;B;Trilocale;45.58880;8.95610;Via Antonio Gramsci;Cerro Maggiore;Cerro Maggiore;0;btcg;0|0|0
+133993115;129000;85;3;1;R;1;O;Trilocale;45.58930;8.96310;Via IV Novembre 121;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+133998893;220000;117;3;1;2;0;;Trilocale;45.56120;8.93180;Via Asti 8;Canegrate;Canegrate;0;bgd;0|0|0
+134002901;175000;100;3;2;2;1;B;Trilocale;45.62390;8.95007;Via Aldo Moro 5;Rescaldina;Rescaldina;0;btcgd;0|0|0
+134016515;489000;521;4;3;;0;B;Villa unifamiliare;45.54280;8.88180;Viale dei Tigli;Busto Garolfo;Busto Garolfo;0;bt;0|0|0
+134022001;179000;160;4;2;S/ T/ 2;0;B;Quadrilocale;45.54910;8.88650;Via Tagliamento;Busto Garolfo;Busto Garolfo;0;btcd;0|0|0
+134022559;169000;102;3;2;S/ T/ R;0;O;Trilocale;45.29000;8.98470;Via Campese;Motta Visconti;Motta Visconti;0;bagj;0|0|0
+134044319;168000;92;3;1;T;0;O;Trilocale;45.58270;8.95280;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;bc;0|0|0
+134051269;79000;49;2;1;2;0;R;Bilocale;45.54620;8.88050;Via Alessandro Manzoni 71;Busto Garolfo;Busto Garolfo;0;bcd;0|0|0
+134054665;600000;288;4;3+;;0;B;Villa unifamiliare;45.59830;8.95041;Via Varese;Cerro Maggiore;Cerro Maggiore;0;b;0|0|0
+134068809;134000;118;3;2;S/ 2;1;B;Trilocale;45.51030;8.80890;Via Giacomo Matteotti;Cuggiono;Cuggiono;0;bt;0|0|0
+134072939;77000;59;2;1;2;0;B;Bilocale;45.54600;8.88090;Via Alessandro Manzoni 69;Busto Garolfo;Busto Garolfo;0;bcgd;0|0|0
+134074351;155000;85;3;1;2;0;B;Appartamento;45.28873;8.99598;Via Ada Negri;Motta Visconti;Motta Visconti;1;a;0|0|0
+134077775;119000;70;3;1;T;0;B;Trilocale;45.61550;8.95094;Via Silvio Pellico;Rescaldina;Rescaldina;0;c;0|0|0
+134084745;320000;130;3;2;2;1;;Trilocale;45.62620;8.94030;Via Prealpi;Rescaldina;Rescaldina;0;bti;0|0|0
+134085057;262000;100;3;2;2;1;N;Trilocale;45.56700;8.91620;Via Pisa;Canegrate;Canegrate;0;btc;0|0|0
+134086033;345000;145;4;2;2;1;N;Quadrilocale;45.62620;8.94030;Via Prealpi;Rescaldina;Rescaldina;0;bti;0|0|0
+134127805;68000;49;2;1;S/ 2;0;B;Bilocale;45.54620;8.88050;Via Alessandro Manzoni;Busto Garolfo;Busto Garolfo;0;bcad;0|0|0
+134252795;99000;39;1;1;T;0;B;Monolocale;45.54810;8.78270;Via Padre Agostino Gemelli;Castano Primo;Castano Primo;0;cj;0|0|0
+134253967;235000;75;3;1;2;1;N;Trilocale;45.55450;8.88880;Via Tolmezzo;Busto Garolfo;Busto Garolfo;0;t;0|0|0
+134265639;119000;66;2;1;4;1;B;Bilocale;45.54800;8.87535;via arconate ;Busto Garolfo;Busto Garolfo;0;cg;0|0|0
+134276255;248000;109;3;1;;0;O;Villa unifamiliare;45.31380;8.96680;Via Angelo Mainetti;Besate;Besate;0;cd;0|0|0
+134289551;169000;143;4;2;S/ T;0;B;Quadrilocale;45.54730;8.77330;Via F. Baracca, 11;Castano Primo;Castano Primo;0;bi;0|0|0
+134299305;188000;106;3;1;;0;O;Terratetto unifamiliare;45.59130;8.93990;Via San Giovanni Bosco;San Vittore Olona;San Vittore Olona;0;bca;0|0|0
+134338301;248000;170;3;2;;0;B;Terratetto unifamiliare;45.63290;8.93271;Via Prandona;Rescaldina;Rescaldina;0;b;0|0|0
+134347019;85000;75;3;1;4;1;B;Trilocale;45.58570;8.94134;via  Vittorio veneto, 13;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+134348249;189000;103;3;2;S/ 1;1;O;Trilocale;45.58180;8.93740;Via Magenta;San Vittore Olona;San Vittore Olona;0;bcg;0|0|0
+134369119;166000;102;3;1;S - T;0;O;Trilocale;45.28890;8.98440;Via Campese;Motta Visconti;Motta Visconti;0;bcgji;0|0|0
+134370289;490000;361;5+;3;;0;R;Villa unifamiliare;45.31110;9.02030;Via Alessandro Santagostino;Casorate Primo;Casorate Primo;0;btcj;0|0|0
+134375741;125000;85;3;1;3;0;B;Trilocale;45.59170;8.95813;Via Torino 4;Cerro Maggiore;Cerro Maggiore;0;gd;0|0|0
+134387587;180000;98;3;2;T;0;B;Trilocale;45.56920;8.92601;Via Volontari della Libertà, 30;Canegrate;Canegrate;0;bi;0|0|0
+134388117;75000;50;2;1;T;0;O;Bilocale;45.57760;8.98180;Via Giacomo Puccini;Cerro Maggiore;Cerro Maggiore;0;ca;0|0|0
+134391843;199000;75;3;1;T;0;O;Trilocale;45.58700;8.96800;Via 4 Novembre;Cerro Maggiore;Cerro Maggiore;0;tg;0|0|0
+134406761;120000;240;3;;;0;R;Rustico;45.43010;8.86834;Via Monastero;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+134407637;195000;120;3;1;1;0;B;Trilocale;45.58940;8.94070;Via Don Giovan Battista Riva;San Vittore Olona;San Vittore Olona;0;btd;0|0|0
+134409323;70000;91;1;;4;1;R;Mansarda;45.54610;8.88130;Via Alessandro Manzoni;Busto Garolfo;Busto Garolfo;0;;0|0|0
+134409899;248000;113;3;2;1;1;N;Trilocale;45.63040;8.94220;via Riccardo Lombardi;Rescaldina;Rescaldina;0;b;0|0|0
+134414515;189000;90;3;1;2;1;B;Trilocale;45.62880;8.93635;Via Don Antonio Balbi;Rescaldina;Rescaldina;0;bc;0|0|0
+134442965;340000;223;4;1;;0;B;Quadrilocale;45.56470;8.92349;Via Rovereto;Canegrate;Canegrate;0;bc;0|0|0
+134444343;420000;308;;;;0;B;Villa unifamiliare;45.62098;8.94296;Via Olona;Rescaldina;Rescaldina;1;;0|0|0
+134445007;85000;65;2;1;2;0;B;Bilocale;45.54550;8.88270;Via Alessandro Manzoni;Busto Garolfo;Busto Garolfo;0;;0|0|0
+134454981;389000;300;5;2;;0;O;Villa unifamiliare;45.59490;8.94660;Via Vittorio Alfieri, 39;Cerro Maggiore;Cerro Maggiore;0;g;0|0|0
+134458887;285000;186;4;3;S/ T/ 1;0;O;Quadrilocale;45.60890;8.94910;Via Sant'Ambrogio;Rescaldina;Rescaldina;0;bc;0|0|0
+134459305;465000;150;4;2;;0;O;Villa unifamiliare;45.31040;9.02540;Via Don Severino Maestri;Casorate Primo;Casorate Primo;0;cjd;0|0|0
+134460961;259000;110;3;1;;0;O;Villa unifamiliare;45.58840;8.93530;Via Martiri d Ungheria ;San Vittore Olona;San Vittore Olona;0;caj;0|0|0
+134463291;280000;480;5;3;;0;R;Villa unifamiliare;45.50850;8.81930;Via San Fermo;Cuggiono;Cuggiono;0;b;0|0|0
+134465115;297000;180;4;2;;0;B;Villa unifamiliare;45.43490;8.88820;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;c;0|0|0
+134465833;40000;35;1;1;T;0;;Monolocale;45.56770;8.92450;Via Gran Paradiso;Canegrate;Canegrate;0;;0|0|0
+134467397;230000;230;3;1;;0;R;Villa unifamiliare;45.44520;8.90046;Via della pace;Robecco sul Naviglio;Robecco sul Naviglio;0;c;0|0|0
+134471999;158000;101;3;2;3 - 4;1;B;Trilocale;45.59000;8.93890;Via L. Cialdini;San Vittore Olona;San Vittore Olona;0;b;0|0|0
+134476801;199000;100;3;2;1;1;O;Trilocale;45.54780;8.88519;via Cadorna, 32;Busto Garolfo;Busto Garolfo;0;bca;0|0|0
+134494129;155000;99;3;1;1;0;B;Trilocale;45.43940;8.87950;Via Fratelli di Dio;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+134494791;215000;85;3;2;R;0;B;Trilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;bcjd;0|0|0
+134494821;315000;204;5;3;;0;O;Appartamento in villa;45.53640;8.87730;Via Etna;Busto Garolfo;Busto Garolfo;0;bi;0|0|0
+134495481;488000;270;5+;3;;0;B;Villa unifamiliare;45.59460;8.94690;Via Vittorio Alfieri;Cerro Maggiore;Cerro Maggiore;0;;0|0|0
+134496019;177000;61;2;1;1;0;B;Bilocale;45.56800;8.91490;Via Pisa;Canegrate;Canegrate;0;td;0|0|0
+134496429;310000;105;3;1;1;1;N;Trilocale;45.63220;8.93209;Via Monte Rosa;Rescaldina;Rescaldina;0;t;0|0|0
+134499651;315000;105;3;1;2;1;N;Trilocale;45.63220;8.93209;Via Monte Rosa;Rescaldina;Rescaldina;0;t;0|0|0
+134505003;209000;95;3;1;T;0;N;Trilocale;45.30550;9.01860;Via Virginio Bianchi;Casorate Primo;Casorate Primo;0;ji;0|0|0
+134506259;115000;62;2;1;S/ 1;0;B;Bilocale;45.58180;8.93990;Via Grazia Deledda;San Vittore Olona;San Vittore Olona;0;bg;0|0|0
+134507425;150000;100;3;2;1;0;N;Trilocale;45.56220;8.76930;Via Piemonte;Castano Primo;Castano Primo;0;bi;0|0|0
+134512553;129000;50;2;1;T;0;B;Bilocale;45.58850;8.94936;Via Francesco Baracca;Cerro Maggiore;Cerro Maggiore;0;a;0|0|0
+134514753;78000;59;2;1;1;0;O;Appartamento;45.50853;8.81521;Via Santa Maria;Cuggiono;Cuggiono;1;b;0|0|0
+134555295;105000;68;2;1;S/ 5;1;O;Bilocale;45.59700;8.95490;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+134555405;175000;110;4;1;1;1;B;Quadrilocale;45.44480;8.88550;Via Carlo Alberto Dalla Chiesa;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+134567867;153000;63;2;1;2;1;B;Bilocale;45.58540;8.95000;Via Ingegner Emilio Celaschi;Cerro Maggiore;Cerro Maggiore;0;ti;0|0|0
+134567935;750000;250;5;2;;0;O;Villa unifamiliare;45.59450;8.94210;via rossini;Cerro Maggiore;Cerro Maggiore;0;btc;0|0|0
+134573817;119000;80;3;1;T;0;R;Trilocale;45.50500;8.81618;Via Benedetto Gualdoni 15;Cuggiono;Cuggiono;0;cd;0|0|0
+134587185;250000;120;5+;2;;0;O;Villa a schiera;45.56127;8.77374;Via Sant'Ambrogio;Castano Primo;Castano Primo;1;a;0|0|0
+134591039;149000;84;3;2;1;1;B;Trilocale;45.55840;8.78230;Via San Francesco , 47;Castano Primo;Castano Primo;0;btcagi;0|0|0
+134592057;250000;180;4;2;1 - 2;0;O;Quadrilocale;45.59210;8.94780;Via Monsignor Celestino Cattaneo;Cerro Maggiore;Cerro Maggiore;0;bt;0|0|0
+134593039;209000;94;3;1;T;0;B;Trilocale;45.44060;8.88500;Via San Michele del Carso;Robecco sul Naviglio;Robecco sul Naviglio;0;j;0|0|0
+134593615;275000;100;3;2;T;1;O;Trilocale;45.49890;8.79520;Via Don Angelo Ferrario;Cuggiono;Cuggiono;0;ji;0|0|0
+134596491;165000;80;3;1;4;1;B;Trilocale;45.59700;8.95490;Via Filippo Turati;Cerro Maggiore;Cerro Maggiore;0;tca;0|0|0
+134603577;170000;91;3;1;3;0;O;Trilocale;45.31290;9.01720;Via Cesare Battisti, 3, 27022 Casorate Primo PV, Italia;Casorate Primo;Casorate Primo;0;bi;0|0|0
+134607151;147000;103;3;2;;0;O;Terratetto unifamiliare;45.31450;9.02210;Via Gottardo Delfinoni;Casorate Primo;Casorate Primo;0;bgi;0|0|0
+134607327;690000;397;5;3;;0;O;Villa unifamiliare;45.55480;8.77913;Via Giacomo Matteotti;Castano Primo;Castano Primo;0;b;0|0|0
+134607689;105000;130;4;1;1;0;B;Quadrilocale;45.28740;8.99270;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;bc;0|0|0
+134611101;149000;57;2;1;2;1;O;Bilocale;45.59020;8.94170;Via San Giovanni Bosco;San Vittore Olona;San Vittore Olona;0;btg;0|0|0
+134626933;410000;149;3;2;S/ T;0;O;Trilocale;45.56570;8.92090;Via Col di Lana;Canegrate;Canegrate;0;gjd;0|0|0
+134630775;189000;100;3;2;2;1;O;Trilocale;45.56330;8.93050;Via Livigno 8;Canegrate;Canegrate;0;tcd;0|0|0
+134638325;69000;45;2;1;;0;R;Terratetto unifamiliare;45.55800;8.77491;Via Lonate Pozzolo 67;Castano Primo;Castano Primo;0;ad;0|0|0
+134638345;315000;105;3;1;2;1;N;Trilocale;45.63220;8.93209;Via Monte Rosa;Rescaldina;Rescaldina;0;t;0|0|0
+134644437;70000;85;2;1;1;1;O;Bilocale;45.55600;8.77579;Via Gian Lorenzo Bernini 1;Castano Primo;Castano Primo;0;bcad;0|0|0
+134645339;120000;64;2;1;S/ 1;1;O;Bilocale;45.54880;8.77700;Via Magenta, 28/B;Castano Primo;Castano Primo;0;bc;0|0|0
+134659383;105000;70;2;1;R;0;B;Bilocale;45.58910;8.95040;Via Armando Diaz;Cerro Maggiore;Cerro Maggiore;0;bcd;0|0|0
+134660059;150000;85;3;2;T;0;B;Trilocale;45.43510;8.88540;Via San Giovanni;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+134661855;230400;107;3;1;T;1;B;Trilocale;45.30880;9.02640;Via Giovanni Di Bella;Casorate Primo;Casorate Primo;0;b;0|0|0
+134662005;68000;50;2;1;S/ 2;0;B;Bilocale;45.54620;8.88050;Via Alessandro Manzoni;Busto Garolfo;Busto Garolfo;0;bcai;0|0|0
+134667421;119000;65;2;1;T;0;O;Bilocale;45.28780;8.99903;Via Lombardia;Motta Visconti;Motta Visconti;0;;0|0|0
+134669825;93000;100;3;1;R;0;B;Trilocale;45.55090;8.88976;via Monte Santo , 2;Busto Garolfo;Busto Garolfo;0;bcag;0|0|0
+134673337;279000;184;4;2;;0;O;Villa unifamiliare;45.28850;8.98850;Via Palmiro Togliatti;Motta Visconti;Motta Visconti;0;ji;0|0|0
+134674929;279000;158;4;2;1;0;N;Quadrilocale;45.58250;8.95280;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;btd;0|0|0
+134675331;299000;103;3;1;;0;N;Villa bifamiliare;45.58250;8.95250;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;ci;0|0|0
+134676557;339000;139;4;2;;0;N;Villa bifamiliare;45.58240;8.95270;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;i;0|0|0
+134689571;480000;220;5;2;;0;N;Villa unifamiliare;45.28640;8.99304;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;d;0|0|0
+134689581;390000;160;4;2;;0;N;Villa unifamiliare;45.28640;8.99304;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;d;0|0|0
+134715305;99000;58;2;1;1;0;B;Bilocale;45.31520;9.02690;Via Sandro Pertini;Casorate Primo;Casorate Primo;0;bca;0|0|0
+134716609;103000;45;2;1;3;1;B;Bilocale;45.61530;8.95792;Via Bozzente;Rescaldina;Rescaldina;0;bc;0|0|0
+134716987;255000;169;4;2;;0;B;Villa a schiera;45.41640;8.88550;Via Maria Ticozzelli;Robecco sul Naviglio;Robecco sul Naviglio;0;;0|0|0
+134719353;149000;75;2;1;;0;O;Casa colonica;45.61410;8.95107;Vicolo Dossena;Rescaldina;Rescaldina;0;a;0|0|0
+134730485;500000;1;5+;3+;;0;B;Casale;45.56350;8.74740;Via Tornavento;Castano Primo;Castano Primo;0;btcad;0|0|0
+134748003;390000;125;4;2;;0;N;Villa unifamiliare;45.50633;8.81499;Piazza San Giorgio;Cuggiono;Cuggiono;1;;0|0|0
+134760579;165000;119;3;1;S/ T/ 1;1;B;Trilocale;45.59250;8.95100;Via Ventimiglia;Cerro Maggiore;Cerro Maggiore;0;bcgd;0|0|0
+134779721;129000;55;2;1;1;0;O;Bilocale;45.30750;9.01410;Via Cavalieri di Vittorio Veneto;Casorate Primo;Casorate Primo;0;b;0|0|0
+134780457;112000;93;3;1;3;1;B;Trilocale;45.50140;8.81467;Via Don Giuseppe Albeni;Cuggiono;Cuggiono;0;bci;0|0|0
+134790451;185000;100;3;1;1;0;O;Trilocale;45.50670;8.81500;Via San Rocco;Cuggiono;Cuggiono;0;bcsd;0|0|0
+134790971;189000;105;3;2;T/ 1;1;B;Trilocale;45.56130;8.91390;Via Spluga;Canegrate;Canegrate;0;bg;0|0|0
+134795459;95000;62;3;1;2;1;B;Trilocale;45.56210;8.77024;Via Piemonte 5;Castano Primo;Castano Primo;0;btad;0|0|0
+134796225;219000;116;3;;3;1;;Trilocale;45.58900;8.96670;Via Ilaria Alpi;Cerro Maggiore;Cerro Maggiore;0;tcgjd;0|0|0
+134799537;139000;91;3;1;T/ 3;1;B;Trilocale;45.58710;8.93920;Via Roma;San Vittore Olona;San Vittore Olona;0;bcag;0|0|0
+134813737;235000;75;3;1;T;0;O;Trilocale;45.61320;8.95350;Via Roma;Rescaldina;Rescaldina;0;d;0|0|0
+134816505;137000;100;3;1;1;1;O;Trilocale;45.54510;8.77750;Via Venezia Giulia;Castano Primo;Castano Primo;0;bt;0|0|0
+134818187;218000;156;5;2;1;0;O;Appartamento;45.55270;8.78200;Corso Martiri Patrioti, 73;Castano Primo;Castano Primo;0;ad;0|0|0
+134820751;80000;68;2;1;2;0;B;Bilocale;45.50610;8.82110;Via Varese;Cuggiono;Cuggiono;0;d;0|0|0
+134828473;88000;65;2;1;T;0;;Bilocale;45.50550;8.81807;;Cuggiono;Cuggiono;0;;0|0|0
+134830717;160000;100;3;1;4;1;B;Trilocale;45.59040;8.94710;Via Eugenio Curiel;Cerro Maggiore;Cerro Maggiore;0;g;0|0|0
+134850869;198000;245;2;1;;0;O;Terratetto unifamiliare;45.43550;8.88755;Via Dante Alighieri;Robecco sul Naviglio;Robecco sul Naviglio;0;c;0|0|0
+134857443;219000;131;4;;S/ R;0;B;Quadrilocale;45.30860;9.01880;Via dei Cedri;Casorate Primo;Casorate Primo;0;ci;0|0|0
+134863769;295000;260;5;2;;0;B;Villa unifamiliare;45.55130;8.86810;Via Verbano;Busto Garolfo;Busto Garolfo;0;btcd;0|0|0
+134864159;169000;160;4;1;;0;R;Terratetto unifamiliare;45.43020;8.86801;via sant'ambrogio, 2;Robecco sul Naviglio;Robecco sul Naviglio;0;b;0|0|0
+134869075;169000;62;2;1;1;1;O;Bilocale;45.58400;8.95030;Via Cesare Battisti;San Vittore Olona;San Vittore Olona;0;bcgd;0|0|0
+134869217;299000;178;3;3;;0;B;Villa bifamiliare;45.57090;8.92200;Via Zara;Canegrate;Canegrate;0;bagj;0|0|0
+134899279;145000;120;4;2;3;1;;Quadrilocale;45.56270;8.92315;Via Bologna 17/M;Canegrate;Canegrate;0;gd;0|0|0
+134904165;199000;85;3;1;T;1;B;Trilocale;45.62930;8.93875;Via Don Erasmo Valenti;Rescaldina;Rescaldina;0;c;0|0|0
+134904573;420000;250;4;;;0;;Villa unifamiliare;45.62450;8.94123;Viale Lombardia 38;Rescaldina;Rescaldina;0;cd;0|0|0
+134914965;189000;170;5+;2;;0;B;Terratetto unifamiliare;45.30940;8.96986;Via Giacomo Matteotti;Besate;Besate;0;;0|0|0
+134918807;169000;62;2;1;1;1;O;Bilocale;45.58860;8.94720;Via Dante Alighieri;Cerro Maggiore;Cerro Maggiore;0;bcgd;0|0|0
+134931539;219000;115;3;2;T;0;B;Trilocale;45.44020;8.90600;Via per Cascina Tangola;Robecco sul Naviglio;Robecco sul Naviglio;0;bc;0|0|0
+134934113;288000;120;3;2;T;1;N;Trilocale;45.55410;8.88920;Via Tolmezzo;Busto Garolfo;Busto Garolfo;0;c;0|0|0
+134935119;419000;328;5;3;;0;B;Villa unifamiliare;45.55130;8.88120;Via Benvenuto Cellini;Busto Garolfo;Busto Garolfo;0;b;0|0|0
+134936193;85000;45;2;1;1;0;O;Bilocale;45.28900;8.99050;Via Gigi Borgomaneri;Motta Visconti;Motta Visconti;0;a;0|0|0
+134936781;265000;90;3;1;T;1;O;Trilocale;45.62350;8.94835;Caduti di Nassirya;Rescaldina;Rescaldina;0;c;0|0|0
+134940039;425000;154;4;2;;0;N;Appartamento in villa;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;bt;0|0|0
+134943429;425000;154;4;2;1;0;N;Attico;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;bt;0|0|0
+134943651;425000;178;4;2;T;0;N;Quadrilocale;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;btj;0|0|0
+134944255;425000;184;4;2;;0;N;Appartamento in villa;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;btj;0|0|0
+134944505;150000;500;5+;2;;0;R;Villa unifamiliare;45.31530;8.96847;Via IV Novembre;Besate;Besate;0;c;0|0|0
+134946693;362000;134;4;2;1;1;N;Quadrilocale;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;bt;0|0|0
+134946753;214000;78;2;1;1;1;N;Bilocale;45.56460;8.93430;Via Adda;Canegrate;Canegrate;0;t;0|0|0
+134959591;182000;108;3;1;S/ 1;1;O;Trilocale;45.50860;8.81240;Via Giacomo Leopardi;Cuggiono;Cuggiono;0;btcg;0|0|0
+134960097;695000;428;5+;3+;;0;B;Villa unifamiliare;45.54910;8.76570;Via Ponte Castano;Castano Primo;Castano Primo;0;;0|0|0
+134960685;109000;47;1;1;1;1;O;Monolocale;45.58410;8.93910;Via Divisione Sforzesca;San Vittore Olona;San Vittore Olona;0;t;0|0|0
+134961971;699000;387;5+;3+;;0;O;Villa bifamiliare;45.53640;8.87730;Via Etna;Busto Garolfo;Busto Garolfo;0;btcj;0|0|0
+134965447;158000;54;2;1;4;1;O;Appartamento;45.58549;8.94976;Via Ingegner Emilio Celaschi;Cerro Maggiore;Cerro Maggiore;1;t;0|0|0
+134993365;109000;77;3;1;;0;B;Terratetto unifamiliare;45.50820;8.81751;Via San Fermo 10;Cuggiono;Cuggiono;0;bad;0|0|0
+134996409;120000;41;1;1;1;0;B;Monolocale;45.43860;8.88539;Via Pietrasanta;Robecco sul Naviglio;Robecco sul Naviglio;0;a;0|0|0
+134998003;200000;140;4;2;;0;B;Terratetto unifamiliare;45.30950;9.01870;Via Carlo Mira;Casorate Primo;Casorate Primo;0;bjd;0|0|0

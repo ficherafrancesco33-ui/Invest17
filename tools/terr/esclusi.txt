@@ -1289,3 +1289,29 @@
 134725915;non residenziale
 134792841;progetto / nuova costruzione
 134901735;progetto / nuova costruzione
+94934356;non residenziale
+109536507;non residenziale
+112403781;non residenziale
+113579715;non residenziale
+117450023;non residenziale
+118172805;progetto / nuova costruzione
+123845611;non residenziale
+125245663;non residenziale
+126726181;non residenziale
+128453088;non residenziale
+129387482;uso non abitativo
+129981984;progetto / nuova costruzione
+130756698;uso non abitativo
+131913076;progetto / nuova costruzione
+132230142;progetto / nuova costruzione
+132232518;non residenziale
+132342876;asta
+132392500;uso non abitativo
+132401666;progetto / nuova costruzione
+132513178;uso non abitativo
+132743690;uso non abitativo
+132835388;nuda proprietà
+132880338;uso non abitativo
+133683578;asta
+133914343;progetto / nuova costruzione
+134330399;asta

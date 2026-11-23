@@ -1,6 +1,6 @@
 # Osservatorio Keystone — aggiornato al 23/11/2026
 
-Dagli annunci letti su Immobiliare.it: 31.070 in vendita e 16.072 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
+Dagli annunci letti su Immobiliare.it: 32.131 in vendita e 16.072 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
 Prezzi e canoni sono quelli CHIESTI: si tratta di solito un 5–10% sotto la vendita e un 5–10% sotto l'affitto.
 
 Legenda: €/m² vendita (25°–mediana–75°), affitto €/m² al mese, resa = rendita lorda delle mediane, anni = prezzo/affitto annuo,
@@ -49,7 +49,6 @@ Possibili occasioni: verificare il perché (strada, palazzi, servizi) prima di f
 - **Milano · Roserio**: vendita -26% rispetto a Bovisasca, Musocco, Quarto Oggiaro, Vialba; affitto +1%.
 - **Milano · Navigli - Darsena**: vendita -26% rispetto a Barona, Bocconi, Carrobbio, Cermenate - Abbiategrasso; affitto -1%.
 - **Milano · Bignami - Ponale**: vendita -10% rispetto a Bicocca, Niguarda, Prato Centenaro, Precotto; affitto +13%.
-- **Magenta**: vendita -9% rispetto a Abbiategrasso, Arluno, Bareggio, Corbetta; affitto +13%.
 - **Milano · Arena**: vendita -23% rispetto a Arco della Pace, Brera, Cadorna - Castello, Cenisio; affitto -1%.
 - **Milano · Martini - Insubria**: vendita -16% rispetto a Argonne - Corsica, Bologna - Sulmona, Cadore, Corvetto; affitto +6%.
 - **Pantigliate**: vendita -18% rispetto a Bussero, Cassina de' Pecchi, Cernusco sul Naviglio, Cerro al Lambro; affitto +4%.
@@ -59,6 +58,7 @@ Possibili occasioni: verificare il perché (strada, palazzi, servizi) prima di f
 - **Milano · Comasina**: vendita -9% rispetto a Affori, Bovisasca, Bruzzano; affitto +9%.
 - **Milano · Corso San Gottardo**: vendita -19% rispetto a Bocconi, Borgogna - Largo Augusto, Carrobbio, Cermenate - Abbiategrasso; affitto -1%.
 - **Milano · Parco Trotter**: vendita -10% rispetto a Buenos Aires, Cascina dei Pomi, Casoretto, Centrale; affitto +6%.
+- **Milano · Tre Castelli - Faenza**: vendita -18% rispetto a Barona, Famagosta, Giambellino, Lorenteggio; affitto -2%.
 
 ## Dove conviene comprare da ristrutturare
 Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a Milano, 800 fuori).
@@ -79,11 +79,11 @@ Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a 
 ## Regole imparate (mediana delle zone)
 
 - Arredato, affitto in più: -10% (su 123 zone)
-- Terrazzo, prezzo in più: +14% (su 209 zone)
-- Box, prezzo in più: 0% (su 131 zone)
-- Giardino, prezzo in più: +4% (su 105 zone)
-- Piano alto (4°+) con ascensore: +6% (su 179 zone)
-- Piano terra: -3% (su 200 zone)
+- Terrazzo, prezzo in più: +15% (su 219 zone)
+- Box, prezzo in più: -1% (su 140 zone)
+- Giardino, prezzo in più: +4% (su 113 zone)
+- Piano alto (4°+) con ascensore: +6% (su 180 zone)
+- Piano terra: -3% (su 209 zone)
 - Resa dei piccoli (<50 m²) rispetto ai medi (50–85): +14% (su 124 zone)
 - Resa dei grandi (≥85 m²) rispetto ai medi: -13% (su 145 zone)
 
@@ -114,17 +114,17 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **venditore**: privato +1% (1271) · agenzia 0% (11849)
 - **dotazioni** (chi ce l'ha rispetto a chi no): piscina +27% (89) · box / garage 0% (155) · terrazzo -1% (1747) · portineria -2% (80) · posto auto -4% (63) · fibra -4% (7139) · esposizione interna -5% (2205) · giardino -6% (88) · cantina -9% (2232) · aria condizionata -10% (52) · arredato -12% (11104) · doppia esposizione -14% (2821) · balcone -15% (5417)
 
-### Vendita · fuori Milano (14.915 annunci)
+### Vendita · fuori Milano (15.976 annunci)
 
-- **tipologia**: Attico +10% (475) · Monolocale +6% (381) · Bilocale +2% (3346) · Quadrilocale +1% (2096) · Mansarda +1% (51) · Trilocale 0% (5487) · Appartamento in villa 0% (72)
-- **locali**: 1 locali +4% (434) · 2 locali +2% (3627) · 4 locali +1% (3144) · 3 locali 0% (6139) · 5 locali -6% (834) · 5+ locali -16% (679)
-- **taglia**: sotto 50 m² +9% (642) · 50–85 m² +1% (4328) · 85 m² e oltre -1% (9945)
-- **stato**: Nuovo / In costruzione +22% (2974) · Ottimo / Ristrutturato +3% (4866) · Buono / Abitabile -9% (5753) · Da ristrutturare -23% (932)
-- **piano**: 1°–2° +3% (5410) · terra / rialzato +2% (2665) · 3° e oltre con ascensore +1% (3029) · 3° e oltre SENZA ascensore -16% (451)
-- **riscaldamento**: Autonomo +1% (8835) · Centralizzato -1% (5601) · Assente -3% (479)
-- **bagni**: 2+ bagni +4% (7464) · 1 bagno -4% (7276)
-- **venditore**: privato +4% (519) · agenzia 0% (14396)
-- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +16% (176) · terrazzo +13% (5028) · piscina +8% (235) · giardino +4% (1144) · fibra +4% (7045) · esposizione interna 0% (1703) · posto auto -1% (209) · box / garage -2% (1669) · arredato -2% (2898) · cantina -6% (6732) · balcone -8% (9461) · doppia esposizione -9% (3489)
+- **tipologia**: Attico +12% (503) · Monolocale +6% (401) · Bilocale +2% (3492) · Quadrilocale +1% (2181) · Trilocale 0% (5845) · Appartamento in villa 0% (80) · Loft 0% (36)
+- **locali**: 1 locali +4% (458) · 4 locali +2% (3380) · 2 locali +2% (3806) · 3 locali 0% (6598) · 5 locali -6% (901) · 5+ locali -17% (771)
+- **taglia**: sotto 50 m² +9% (676) · 50–85 m² +1% (4554) · 85 m² e oltre -1% (10746)
+- **stato**: Nuovo / In costruzione +23% (3185) · Ottimo / Ristrutturato +3% (5169) · Buono / Abitabile -9% (6147) · Da ristrutturare -25% (1047)
+- **piano**: 1°–2° +3% (5750) · terra / rialzato +2% (2853) · 3° e oltre con ascensore +1% (3082) · 3° e oltre SENZA ascensore -17% (466)
+- **riscaldamento**: Autonomo +1% (9625) · Centralizzato -1% (5817) · Assente -6% (534)
+- **bagni**: 2+ bagni +4% (8035) · 1 bagno -4% (7735)
+- **venditore**: privato +3% (562) · agenzia 0% (15414)
+- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +18% (197) · terrazzo +14% (5361) · piscina +8% (246) · giardino +4% (1258) · fibra +4% (7343) · esposizione interna 0% (1818) · box / garage -2% (1825) · posto auto -2% (224) · arredato -3% (3057) · cantina -6% (7192) · balcone -8% (10108) · doppia esposizione -9% (3760)
 
 ### Affitto · fuori Milano (2.881 annunci)
 
@@ -300,24 +300,30 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Baranzate | 159 | 9 | 2.010–2.216–2.412 | 14.5 | 7.9% | 6 | 7% | 1% | -325 € |
 | Bareggio | 114 | 5 | 1.790–2.147–2.449 | 11.1 | 6.2% | 4 | 4% | 17% | 234 € |
 | Basiglio | 145 | 54 | 2.823–3.170–3.642 | 16.6 | 6.3% | 37 | 3% | 14% | 65 € |
+| Besate | 25 | 0 | 1.112–1.436–1.598 | — | — | — | 4% | 0% | 419 € |
 | Biella | 0 | 59 | — | 6.7 | — | — | — | — | — |
 | Binasco | 66 | 10 | 1.823–2.039–2.239 | 11.2 | 6.6% | 15 | 5% | 20% | -222 € |
 | Bollate | 210 | 29 | 2.153–2.498–3.000 | 10.4 | 5.0% | 14 | 3% | 20% | -123 € |
 | Bresso | 136 | 19 | 2.488–2.767–3.053 | 13.6 | 5.9% | 14 | 5% | 8% | -603 € |
 | Buccinasco | 164 | 19 | 2.761–3.173–3.657 | 13.8 | 5.2% | 12 | 2% | 8% | -255 € |
 | Bussero | 73 | 6 | 2.327–2.650–3.130 | 17.0 | 7.7% | 8 | 3% | 21% | -255 € |
+| Busto Garolfo | 119 | 0 | 1.221–1.557–2.104 | — | — | — | 4% | 14% | 64 € |
+| Canegrate | 153 | 0 | 1.502–2.105–2.613 | — | — | — | 2% | 35% | 33 € |
 | Cantù | 0 | 42 | — | 12.7 | — | — | — | — | — |
 | Carpiano | 60 | 0 | 1.850–2.146–2.529 | — | — | — | 0% | 30% | 269 € |
 | Carugate | 87 | 7 | 2.201–2.597–3.182 | 13.8 | 6.4% | 8 | 3% | 28% | -537 € |
 | Casale Monferrato | 0 | 26 | — | 7.6 | — | — | — | — | — |
 | Casarile | 27 | 2 | 1.441–1.762–1.995 | — | — | — | 7% | 11% | -469 € |
+| Casorate Primo | 24 | 0 | 1.443–1.690–1.924 | — | — | — | 0% | 8% | — |
 | Cassano d'Adda | 165 | 0 | 1.593–2.100–2.695 | — | — | — | 2% | 31% | 222 € |
 | Cassina de' Pecchi | 122 | 11 | 2.238–2.734–3.149 | 12.7 | 5.6% | 9 | 3% | 20% | -551 € |
+| Castano Primo | 111 | 0 | 1.231–1.480–1.837 | — | — | — | 4% | 13% | 29 € |
 | Cernusco sul Naviglio | 226 | 82 | 3.010–3.502–3.949 | 14.7 | 5.0% | 36 | 1% | 17% | 258 € |
+| Cerro Maggiore | 140 | 0 | 1.431–1.884–2.449 | — | — | — | 4% | 16% | -161 € |
 | Cerro al Lambro | 36 | 1 | 1.803–2.021–2.344 | — | — | — | 3% | 3% | — |
 | Cesano Boscone | 116 | 20 | 2.595–2.937–3.425 | 10.0 | 4.1% | 17 | 5% | 9% | 98 € |
 | Cesano Maderno | 444 | 0 | 1.888–2.457–2.926 | — | — | — | 1% | 41% | -133 € |
-| Cesate | 141 | 2 | 1.750–2.298–2.667 | — | — | — | 2% | 34% | -94 € |
+| Cesate | 151 | 2 | 1.737–2.292–2.660 | — | — | — | 3% | 33% | -147 € |
 | Cinisello Balsamo | 483 | 52 | 2.188–2.474–2.794 | 13.8 | 6.7% | 11 | 4% | 6% | -386 € |
 | Codogno | 0 | 12 | — | 7.9 | — | — | — | — | — |
 | Cologno Monzese | 282 | 43 | 2.375–2.687–3.072 | 14.3 | 6.4% | 15 | 2% | 10% | -526 € |
@@ -325,6 +331,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Cormano | 104 | 13 | 2.401–2.635–2.902 | 14.0 | 6.4% | 12 | 2% | 8% | -699 € |
 | Cornaredo | 113 | 8 | 2.011–2.408–2.968 | 15.6 | 7.8% | 7 | 1% | 23% | 429 € |
 | Corsico | 243 | 31 | 2.355–2.764–3.119 | 15.4 | 6.7% | 13 | 3% | 2% | -198 € |
+| Cuggiono | 83 | 0 | 1.198–1.633–2.166 | — | — | — | 6% | 17% | 48 € |
 | Cusago | 51 | 10 | 2.564–3.150–3.677 | 14.4 | 5.5% | 20 | 2% | 8% | 522 € |
 | Cusano Milanino | 155 | 13 | 2.607–3.074–3.600 | 13.0 | 5.1% | 8 | 8% | 9% | 196 € |
 | Erba | 0 | 7 | — | 11.2 | — | — | — | — | — |
@@ -345,6 +352,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Melegnano | 241 | 19 | 2.158–2.593–3.143 | 11.7 | 5.4% | 8 | 7% | 29% | -13 € |
 | Melzo | 178 | 0 | 1.989–2.327–2.674 | — | — | — | 2% | 33% | -138 € |
 | Mortara | 0 | 8 | — | 8.5 | — | — | — | — | — |
+| Motta Visconti | 81 | 0 | 1.244–1.656–1.889 | — | — | — | 5% | 20% | -119 € |
 | Nerviano | 153 | 0 | 1.656–2.115–2.560 | — | — | — | 6% | 30% | 20 € |
 | Novara | 0 | 173 | — | 9.9 | — | — | — | — | — |
 | Novate Milanese | 156 | 14 | 2.650–3.218–3.384 | 12.8 | 4.8% | 9 | 1% | 42% | -590 € |
@@ -361,12 +369,15 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Pogliano Milanese | 48 | 0 | 1.705–2.038–2.617 | — | — | — | 4% | 21% | -158 € |
 | Pozzo d'Adda | 177 | 0 | 2.006–2.385–2.709 | — | — | — | 1% | 54% | — |
 | Pregnana Milanese | 71 | 0 | 1.992–2.467–2.804 | — | — | — | 6% | 25% | 448 € |
+| Rescaldina | 133 | 0 | 1.532–1.831–2.417 | — | — | — | 8% | 20% | 28 € |
 | Rho | 488 | 80 | 2.110–2.525–3.110 | 14.6 | 6.9% | 16 | 5% | 24% | -290 € |
+| Robecco sul Naviglio | 87 | 0 | 1.259–1.692–2.504 | — | — | — | 2% | 21% | -145 € |
 | Rodano | 44 | 3 | 1.765–2.100–2.621 | — | — | — | 5% | 0% | -258 € |
 | Rosate | 57 | 7 | 1.870–2.218–2.638 | 12.7 | 6.9% | 12 | 2% | 39% | 264 € |
 | Rozzano | 365 | 36 | 2.362–2.842–3.182 | 16.4 | 6.9% | 10 | 5% | 13% | -235 € |
 | San Donato Milanese | 443 | 82 | 2.710–3.194–3.586 | 14.4 | 5.4% | 19 | 3% | 19% | -235 € |
 | San Giuliano Milanese | 406 | 21 | 2.242–2.548–2.909 | 15.6 | 7.3% | 5 | 6% | 14% | -279 € |
+| San Vittore Olona | 95 | 0 | 1.421–1.826–2.522 | — | — | — | 2% | 26% | 98 € |
 | San Zenone al Lambro | 52 | 0 | 1.601–1.878–2.118 | — | — | — | 4% | 8% | — |
 | Sedriano | 192 | 4 | 1.883–2.288–2.683 | — | — | — | 2% | 24% | -363 € |
 | Segrate | 348 | 85 | 3.042–3.752–4.309 | 16.7 | 5.3% | 24 | 3% | 13% | 474 € |
