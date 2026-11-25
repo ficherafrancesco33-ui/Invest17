@@ -1,5 +1,5 @@
 {
- "data": "2026-11-21",
+ "data": "2026-11-25",
  "controllati": {
   "Lasnigo|CO": 0,
   "Garzeno|CO": 0,
@@ -101,7 +101,14 @@
   "Ponte San Pietro|BG": 1,
   "Cantù|CO": 1,
   "Malnate|VA": 1,
-  "Olginate|LC": 1
+  "Olginate|LC": 1,
+  "Torre d'Arese|PV": 0,
+  "Sant'Angelo Lodigiano|LO": 0,
+  "Castelletto Sopra Ticino|NO": 3,
+  "Valleve|BG": 1,
+  "Mezzanino|PV": 0,
+  "Sant'Omobono Terme|BG": 1,
+  "Vergiate|VA": 1
  },
  "coord": {
   "Edolo": [
@@ -3964,6 +3971,347 @@
      "stato": ""
     }
    ]
+  },
+  {
+   "id": "135009339",
+   "comune": "Castelletto Sopra Ticino",
+   "p": "NO",
+   "prezzo": 45000,
+   "mq": 50,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "buono",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Glisente, Castelletto Sopra Ticino",
+   "titolo": "Bilocale con terrazza di 20 m², giardino e box",
+   "lat": 45.7188,
+   "lon": 8.58132,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2063548561/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063548957/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063548967/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063548971/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063548981/m-c.jpg"
+   ],
+   "galleria": [
+    "2063548561",
+    "2063548957",
+    "2063548967",
+    "2063548971",
+    "2063548981",
+    "2063548987",
+    "2063548997",
+    "2063549003",
+    "2063549009",
+    "2063549015",
+    "2063549027",
+    "2063549031",
+    "2063549041",
+    "2063549045",
+    "2063549051",
+    "2063549063",
+    "2063549069",
+    "2063549075"
+   ],
+   "aggiornato": "24/11/2026",
+   "agenzia": "dove.it",
+   "pro": [
+    "Terrazza 20 m², giardino 30 m² e box",
+    "Lago Maggiore a pochi minuti, niente spese"
+   ],
+   "contro": [
+    "Classe G",
+    "Affitto stimato sugli annunci entro 5 km (Sesto Calende, Arona)"
+   ],
+   "trovato": "2026-11-25",
+   "lavori": 5000
+  },
+  {
+   "id": "135009349",
+   "comune": "Castelletto Sopra Ticino",
+   "p": "NO",
+   "prezzo": 45000,
+   "mq": 51,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Glisente, Castelletto Sopra Ticino",
+   "titolo": "Bilocale ristrutturato con giardino privato e box",
+   "lat": 45.7188,
+   "lon": 8.58132,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2063548721/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063549593/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063549599/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063549607/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063549613/m-c.jpg"
+   ],
+   "galleria": [
+    "2063548721",
+    "2063549593",
+    "2063549599",
+    "2063549607",
+    "2063549613",
+    "2063549621",
+    "2063549625",
+    "2063549631",
+    "2063549639",
+    "2063549643",
+    "2063549653",
+    "2063549659",
+    "2063549663",
+    "2063549669",
+    "2063549675",
+    "2063549689",
+    "2063549693",
+    "2063549695"
+   ],
+   "aggiornato": "23/11/2026",
+   "agenzia": "dove.it",
+   "pro": [
+    "Giardino privato 30 m² e box",
+    "Lago Maggiore a pochi minuti, niente spese"
+   ],
+   "contro": [
+    "Classe G",
+    "Affitto stimato sugli annunci entro 5 km (Sesto Calende, Arona)"
+   ],
+   "trovato": "2026-11-25",
+   "lavori": 5000
+  },
+  {
+   "id": "135009353",
+   "comune": "Castelletto Sopra Ticino",
+   "p": "NO",
+   "prezzo": 55000,
+   "mq": 63,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "1",
+   "ascensore": false,
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": false,
+   "indirizzo": "Via Glisente, Castelletto Sopra Ticino",
+   "titolo": "Bilocale ristrutturato nel 2016 con giardino di 100 m² e box",
+   "lat": 45.7188,
+   "lon": 8.58132,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2063548851/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063569023/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063569027/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063569031/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063569033/m-c.jpg"
+   ],
+   "galleria": [
+    "2063548851",
+    "2063569023",
+    "2063569027",
+    "2063569031",
+    "2063569033",
+    "2063569035",
+    "2063569041",
+    "2063569045",
+    "2063569049",
+    "2063569051",
+    "2063569055",
+    "2063569061",
+    "2063569067",
+    "2063569069",
+    "2063569073",
+    "2063569075",
+    "2063569081",
+    "2063569087"
+   ],
+   "aggiornato": "25/11/2026",
+   "agenzia": "dove.it",
+   "pro": [
+    "Ristrutturato 2016, libero su tre lati",
+    "Giardino 100 m², box, niente spese"
+   ],
+   "contro": [
+    "Classe G",
+    "Affitto stimato sugli annunci entro 5 km (Sesto Calende, Arona)"
+   ],
+   "trovato": "2026-11-25",
+   "lavori": 6000
+  },
+  {
+   "id": "135016445",
+   "comune": "Valleve",
+   "p": "BG",
+   "prezzo": 45000,
+   "mq": 48,
+   "locali": 1,
+   "bagni": 1,
+   "piano": "2",
+   "ascensore": true,
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "San Simone, Valleve",
+   "titolo": "Monolocale arredato sulle piste da sci di San Simone",
+   "lat": 46.0422,
+   "lon": 9.70724,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2063704271/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063704863/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063704867/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063704871/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2063704877/m-c.jpg"
+   ],
+   "galleria": [
+    "2063704271",
+    "2063704863",
+    "2063704867",
+    "2063704871",
+    "2063704877",
+    "2063704881",
+    "2063704885",
+    "2063704891",
+    "2063704895",
+    "2063704897",
+    "2063704903",
+    "2063704907",
+    "2063704911",
+    "2063704913",
+    "2063704915",
+    "2063704925",
+    "2063704929",
+    "2063704931"
+   ],
+   "aggiornato": "23/11/2026",
+   "agenzia": "Agenzia Immobiliare Mangili",
+   "pro": [
+    "Sul piazzale delle piste, arredato",
+    "Posto auto in autorimessa e cantina"
+   ],
+   "contro": [
+    "Località turistica: affitto lungo difficile",
+    "Classe G",
+    "Affitti di zona pochi (14) e molto variabili"
+   ],
+   "trovato": "2026-11-25",
+   "spese_mese": 65
+  },
+  {
+   "id": "135045595",
+   "comune": "Sant'Omobono Terme",
+   "p": "BG",
+   "prezzo": 44000,
+   "mq": 60,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "T",
+   "ascensore": false,
+   "stato": "buono",
+   "classe": "D",
+   "arredato": true,
+   "indirizzo": "Valsecca, Sant'Omobono Terme",
+   "titolo": "Bilocale del 2010 arredato con portico e giardino",
+   "lat": 45.8242,
+   "lon": 9.4892,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2064565181/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064565197/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064565211/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064565225/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064565235/m-c.jpg"
+   ],
+   "galleria": [
+    "2064565181",
+    "2064565197",
+    "2064565211",
+    "2064565225",
+    "2064565235",
+    "2064565249",
+    "2064565259",
+    "2064565269",
+    "2064565277",
+    "2064565285",
+    "2064565295",
+    "2064565303",
+    "2064565309",
+    "2064565313",
+    "2064565321",
+    "2064565329",
+    "2064565337"
+   ],
+   "aggiornato": "24/11/2026",
+   "agenzia": "Agenzia Immobiliare Locatelli",
+   "pro": [
+    "Del 2010, arredato",
+    "Giardino 60 m², portico e posto auto"
+   ],
+   "contro": [
+    "Interni 40 m² (60 con esterni)",
+    "Valle Imagna, lontano dai servizi",
+    "Solo 7 annunci d'affitto entro 5 km"
+   ],
+   "trovato": "2026-11-25"
+  },
+  {
+   "id": "135047403",
+   "comune": "Vergiate",
+   "p": "VA",
+   "prezzo": 49000,
+   "mq": 74,
+   "locali": 2,
+   "bagni": 1,
+   "piano": "R",
+   "ascensore": false,
+   "stato": "ottimo",
+   "classe": "G",
+   "arredato": true,
+   "indirizzo": "Via Belvedere, Centro, Vergiate",
+   "titolo": "Bilocale arredato indipendente, niente spese condominiali",
+   "lat": 45.7162,
+   "lon": 8.686,
+   "foto": [
+    "https://pwm.im-cdn.it/image/2064611819/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064638737/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064638751/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064638763/m-c.jpg",
+    "https://pwm.im-cdn.it/image/2064638771/m-c.jpg"
+   ],
+   "galleria": [
+    "2064611819",
+    "2064638737",
+    "2064638751",
+    "2064638763",
+    "2064638771",
+    "2064638787",
+    "2064638797",
+    "2064638809",
+    "2064638821",
+    "2064638833",
+    "2064638853",
+    "2064638865",
+    "2064638877",
+    "2064638883",
+    "2064638897",
+    "2064638905",
+    "2064638921"
+   ],
+   "aggiornato": "24/11/2026",
+   "agenzia": "Tempocasa Sesto Calende",
+   "pro": [
+    "Arredato, autonomo, niente spese",
+    "Lago di Comabbio e Lago Maggiore vicini"
+   ],
+   "contro": [
+    "Classe G",
+    "Ristrutturato nel 2001",
+    "Canone stimato su annunci entro 5 km (anche Sesto Calende): da verificare"
+   ],
+   "trovato": "2026-11-25"
   }
  ],
  "scartati": [
@@ -4551,6 +4899,191 @@
    "id": "134370441",
    "comune": "Olginate",
    "motivo": "Lago di Garlate: rendita netta 5,5% con il canone in corso, sotto il 6%"
+  },
+  {
+   "id": "134964039",
+   "comune": "Torre d'Arese",
+   "motivo": "Rendita netta 3,3% e 66.000 € tutto compreso: oltre il budget"
+  },
+  {
+   "id": "135008775",
+   "comune": "Sant'Angelo Lodigiano",
+   "motivo": "Rendita netta 5,2% (sotto il 7%) e 66.500 € tutto compreso con l'arredo"
+  },
+  {
+   "id": "135009337",
+   "comune": "Castelletto Sopra Ticino",
+   "motivo": "Lago Maggiore: 73.000 € tutto compreso con l'arredo, oltre i 70.000 €; camere a catasto ripostigli"
+  },
+  {
+   "id": "135016523",
+   "comune": "Vigevano",
+   "motivo": "65.500 € tutto compreso con l'arredo: oltre i 60.000 €"
+  },
+  {
+   "id": "135033453",
+   "comune": "Castiglione d'Adda",
+   "motivo": "Rendita netta 2,8%: sotto il 7% (pochi affitti in zona)"
+  },
+  {
+   "id": "135043669",
+   "comune": "Mezzanino",
+   "motivo": "Rendita netta 1,6%: sotto il 7%"
+  },
+  {
+   "id": "135072065",
+   "comune": "Vigevano",
+   "motivo": "63.800 € tutto compreso: oltre i 60.000 €"
+  },
+  {
+   "id": "135029341",
+   "comune": "Cesano Maderno",
+   "motivo": "locale a destinazione commerciale, non un'abitazione"
+  },
+  {
+   "id": "134965103",
+   "comune": "Taleggio",
+   "motivo": "foto: bagno e cucina datati"
+  },
+  {
+   "id": "134974353",
+   "comune": "Moggio",
+   "motivo": "foto: cucina datata, piastrelle vecchie"
+  },
+  {
+   "id": "135013013",
+   "comune": "Cassolnovo",
+   "motivo": "foto: ambienti vuoti e datati (pavimenti in graniglia)"
+  },
+  {
+   "id": "135029211",
+   "comune": "Valbrona",
+   "motivo": "foto: casa datata, sopra un locale commerciale"
+  },
+  {
+   "id": "135060745",
+   "comune": "Offlaga",
+   "motivo": "foto: solo esterni di casa vecchia, nessuna foto degli interni"
+  },
+  {
+   "id": "135060433",
+   "comune": "Castiraga Vidardo",
+   "motivo": "foto: interni datati e disordinati"
+  },
+  {
+   "id": "135069325",
+   "comune": "Olmo al Brembo",
+   "motivo": "foto: edificio vecchio, interni datati"
+  },
+  {
+   "id": "135004085",
+   "comune": "Gallarate",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021301",
+   "comune": "Valle Cannobina",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021427",
+   "comune": "Cerano",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021483",
+   "comune": "Settala",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021495",
+   "comune": "Casaletto Vaprio",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021513",
+   "comune": "Mortara",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021581",
+   "comune": "Cerano",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021585",
+   "comune": "Maggiora",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021603",
+   "comune": "Caravaggio",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021649",
+   "comune": "Valganna",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135021653",
+   "comune": "Albizzate",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135045835",
+   "comune": "San Colombano al Lambro",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135045851",
+   "comune": "San Colombano al Lambro",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135045955",
+   "comune": "San Colombano al Lambro",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135045973",
+   "comune": "San Colombano al Lambro",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135046021",
+   "comune": "Vigevano",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135046039",
+   "comune": "Lardirago",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135051389",
+   "comune": "Vespolate",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135051429",
+   "comune": "Pavia",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135051451",
+   "comune": "Novara",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135051497",
+   "comune": "Gardone Val Trompia",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
+  },
+  {
+   "id": "135051531",
+   "comune": "Nave",
+   "motivo": "asta giudiziaria (scritto nella descrizione)"
   }
  ]
 }
