@@ -1,6 +1,6 @@
 # Osservatorio Keystone — aggiornato al 25/11/2026
 
-Dagli annunci letti su Immobiliare.it: 36.247 in vendita e 16.804 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
+Dagli annunci letti su Immobiliare.it: 36.771 in vendita e 16.804 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
 Prezzi e canoni sono quelli CHIESTI: si tratta di solito un 5–10% sotto la vendita e un 5–10% sotto l'affitto.
 
 Legenda: €/m² vendita (25°–mediana–75°), affitto €/m² al mese, resa = rendita lorda delle mediane, anni = prezzo/affitto annuo,
@@ -24,7 +24,7 @@ tensione = affitti offerti ogni 100 case in vendita (bassa = pochi affitti sul m
 | Milano · Comasina | 3.141 | 18.5 | 7.1% | 220.000 € | 14.1 |
 | Milano · Quintosole - Chiaravalle | 3.161 | 18.4 | 7.0% | 205.000 € | 14.3 |
 | Abbiategrasso | 2.017 | 11.6 | 6.9% | 140.000 € | 14.5 |
-| Legnano | 2.070 | 11.9 | 6.9% | 136.000 € | 14.5 |
+| Arcore | 2.267 | 13.0 | 6.9% | 147.000 € | 14.5 |
 
 ## Rese più basse (si compra per patrimonio, non per reddito)
 
@@ -54,11 +54,11 @@ Possibili occasioni: verificare il perché (strada, palazzi, servizi) prima di f
 - **Milano · Martini - Insubria**: vendita -16% rispetto a Argonne - Corsica, Bologna - Sulmona, Cadore, Corvetto; affitto +6%.
 - **Pieve Emanuele**: vendita -10% rispetto a Assago, Basiglio, Binasco, Buccinasco; affitto +10%.
 - **Pioltello**: vendita -12% rispetto a Agrate Brianza, Bresso, Brugherio, Bussero; affitto +8%.
+- **Agrate Brianza**: vendita -11% rispetto a Arcore, Biassono, Brugherio, Bussero; affitto +8%.
 - **Milano · Porta Venezia**: vendita -20% rispetto a Borgogna - Largo Augusto, Brera, Buenos Aires, Centrale; affitto -1%.
 - **Milano · Comasina**: vendita -9% rispetto a Affori, Bovisasca, Bruzzano; affitto +9%.
 - **Milano · Corso San Gottardo**: vendita -19% rispetto a Bocconi, Borgogna - Largo Augusto, Carrobbio, Cermenate - Abbiategrasso; affitto -1%.
-- **Agrate Brianza**: vendita -12% rispetto a Brugherio, Bussero, Carugate, Cassina de' Pecchi; affitto +5%.
-- **Concorezzo**: vendita -8% rispetto a Agrate Brianza, Brugherio, Bussero, Carugate; affitto +9%.
+- **Milano · Parco Trotter**: vendita -10% rispetto a Buenos Aires, Cascina dei Pomi, Casoretto, Centrale; affitto +6%.
 
 ## Dove conviene comprare da ristrutturare
 Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a Milano, 800 fuori).
@@ -73,19 +73,19 @@ Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a 
 - Milano · Missori: da ristrutturare 10.348 €/m², finito 12.073 €/m² → margine 625 €/m²
 - Cusago: da ristrutturare 2.000 €/m², finito 3.322 €/m² → margine 522 €/m²
 - Milano · Chiesa Rossa: da ristrutturare 2.310 €/m², finito 3.929 €/m² → margine 519 €/m²
+- Macherio: da ristrutturare 1.218 €/m², finito 2.534 €/m² → margine 516 €/m²
 - Milano · Gorla: da ristrutturare 2.667 €/m², finito 4.275 €/m² → margine 508 €/m²
-- Milano · Garibaldi - Corso Como: da ristrutturare 7.500 €/m², finito 9.085 €/m² → margine 485 €/m²
 
 ## Regole imparate (mediana delle zone)
 
 - Arredato, affitto in più: -10% (su 125 zone)
-- Terrazzo, prezzo in più: +15% (su 230 zone)
-- Box, prezzo in più: -1% (su 151 zone)
-- Giardino, prezzo in più: +6% (su 124 zone)
-- Piano alto (4°+) con ascensore: +6% (su 191 zone)
-- Piano terra: -2% (su 221 zone)
+- Terrazzo, prezzo in più: +15% (su 235 zone)
+- Box, prezzo in più: -1% (su 156 zone)
+- Giardino, prezzo in più: +6% (su 128 zone)
+- Piano alto (4°+) con ascensore: +6% (su 193 zone)
+- Piano terra: -2% (su 226 zone)
 - Resa dei piccoli (<50 m²) rispetto ai medi (50–85): +14% (su 132 zone)
-- Resa dei grandi (≥85 m²) rispetto ai medi: -13% (su 153 zone)
+- Resa dei grandi (≥85 m²) rispetto ai medi: -13% (su 155 zone)
 
 ## Cosa vale di più, in generale
 Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol dire che quel tipo di casa chiede il 10% in più delle altre nello stesso quartiere. Tra parentesi quanti annunci.
@@ -114,17 +114,17 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **venditore**: privato +1% (1271) · agenzia 0% (11849)
 - **dotazioni** (chi ce l'ha rispetto a chi no): piscina +27% (89) · box / garage 0% (155) · terrazzo -1% (1747) · portineria -2% (80) · posto auto -4% (63) · fibra -4% (7139) · esposizione interna -5% (2205) · giardino -6% (88) · cantina -9% (2232) · aria condizionata -10% (52) · arredato -12% (11104) · doppia esposizione -14% (2821) · balcone -15% (5417)
 
-### Vendita · fuori Milano (20.092 annunci)
+### Vendita · fuori Milano (20.616 annunci)
 
-- **tipologia**: Attico +14% (695) · Monolocale +6% (522) · Quadrilocale +2% (2826) · Bilocale +1% (4235) · Loft +1% (51) · Trilocale 0% (7474) · Appartamento in villa -1% (91)
-- **locali**: 1 locali +4% (596) · 4 locali +2% (4284) · 2 locali +1% (4614) · 3 locali 0% (8379) · 5 locali -6% (1164) · 5+ locali -17% (982)
-- **taglia**: sotto 50 m² +7% (844) · 50–85 m² +1% (5556) · 85 m² e oltre -1% (13692)
-- **stato**: Nuovo / In costruzione +22% (4385) · Ottimo / Ristrutturato +2% (6374) · Buono / Abitabile -11% (7455) · Da ristrutturare -26% (1310)
-- **piano**: 1°–2° +3% (7335) · terra / rialzato +2% (3733) · 3° e oltre con ascensore 0% (3762) · 3° e oltre SENZA ascensore -19% (571)
-- **riscaldamento**: Autonomo +1% (12095) · Centralizzato -1% (7322) · Assente -6% (675)
-- **bagni**: 2+ bagni +5% (10337) · 1 bagno -4% (9493)
-- **venditore**: privato +3% (666) · agenzia 0% (19426)
-- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +17% (270) · terrazzo +15% (6854) · piscina +10% (299) · giardino +6% (1654) · portineria +5% (31) · fibra +5% (9125) · esposizione interna 0% (2436) · posto auto -3% (271) · box / garage -4% (2245) · arredato -4% (3682) · cantina -7% (8908) · balcone -8% (12540) · doppia esposizione -10% (4598)
+- **tipologia**: Attico +14% (720) · Monolocale +6% (529) · Quadrilocale +2% (2920) · Bilocale +1% (4317) · Loft +1% (58) · Trilocale 0% (7631) · Appartamento in villa -2% (95)
+- **locali**: 1 locali +4% (604) · 4 locali +2% (4441) · 2 locali +1% (4702) · 3 locali 0% (8561) · 5 locali -6% (1208) · 5+ locali -17% (1024)
+- **taglia**: sotto 50 m² +7% (862) · 50–85 m² +1% (5652) · 85 m² e oltre -1% (14102)
+- **stato**: Nuovo / In costruzione +22% (4517) · Ottimo / Ristrutturato +2% (6544) · Buono / Abitabile -11% (7629) · Da ristrutturare -26% (1344)
+- **piano**: 1°–2° +3% (7526) · terra / rialzato +2% (3845) · 3° e oltre con ascensore 0% (3794) · 3° e oltre SENZA ascensore -19% (584)
+- **riscaldamento**: Autonomo +1% (12475) · Centralizzato -1% (7449) · Assente -7% (692)
+- **bagni**: 2+ bagni +5% (10674) · 1 bagno -4% (9674)
+- **venditore**: privato +3% (674) · agenzia 0% (19942)
+- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +17% (272) · terrazzo +15% (7097) · piscina +11% (316) · giardino +6% (1720) · portineria +5% (31) · fibra +5% (9359) · esposizione interna 0% (2473) · posto auto -3% (277) · box / garage -4% (2332) · arredato -4% (3805) · cantina -7% (9247) · balcone -8% (12862) · doppia esposizione -9% (4851)
 
 ### Affitto · fuori Milano (3.555 annunci)
 
@@ -294,7 +294,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Abbiategrasso | 448 | 14 | 1.662–2.017–2.402 | 11.6 | 6.9% | 3 | 2% | 16% | -97 € |
 | Agrate Brianza | 163 | 6 | 1.752–2.308–2.886 | 14.9 | 7.7% | 4 | 2% | 31% | -156 € |
 | Alessandria | 0 | 113 | — | 7.6 | — | — | — | — | — |
-| Arcore | 0 | 13 | — | 13.0 | — | — | — | — | — |
+| Arcore | 199 | 13 | 1.881–2.267–2.790 | 13.0 | 6.9% | 7 | 2% | 24% | -337 € |
 | Arese | 190 | 33 | 2.584–2.950–3.615 | 16.0 | 6.5% | 17 | 3% | 27% | -372 € |
 | Arluno | 92 | 4 | 1.612–2.075–2.454 | — | — | — | 8% | 16% | 355 € |
 | Assago | 127 | 23 | 3.475–3.988–4.471 | 16.9 | 5.1% | 18 | 4% | 19% | 200 € |
@@ -304,7 +304,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Basiglio | 145 | 54 | 2.823–3.170–3.642 | 16.6 | 6.3% | 37 | 3% | 14% | 65 € |
 | Besana in Brianza | 0 | 5 | — | 13.0 | — | — | — | — | — |
 | Besate | 25 | 0 | 1.112–1.436–1.598 | — | — | — | 4% | 0% | 419 € |
-| Biassono | 0 | 9 | — | 11.5 | — | — | — | — | — |
+| Biassono | 112 | 9 | 2.309–2.801–3.285 | 11.5 | 4.9% | 8 | 1% | 35% | — |
 | Biella | 0 | 59 | — | 6.7 | — | — | — | — | — |
 | Binasco | 66 | 10 | 1.823–2.039–2.239 | 11.2 | 6.6% | 15 | 5% | 20% | -222 € |
 | Bollate | 210 | 29 | 2.153–2.498–3.000 | 10.4 | 5.0% | 14 | 3% | 20% | -123 € |
@@ -358,6 +358,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Liscate | 39 | 2 | 2.007–2.222–2.638 | — | — | — | 3% | 8% | — |
 | Lissone | 510 | 65 | 2.267–2.784–3.148 | 13.6 | 5.9% | 13 | 2% | 40% | 80 € |
 | Locate di Triulzi | 85 | 2 | 2.083–2.362–2.940 | — | — | — | 2% | 5% | — |
+| Macherio | 45 | 4 | 1.619–2.156–2.541 | — | — | — | 4% | 13% | 516 € |
 | Magenta | 256 | 12 | 1.553–1.963–2.704 | 12.5 | 7.6% | 5 | 3% | 22% | 13 € |
 | Meda | 0 | 10 | — | 14.3 | — | — | — | — | — |
 | Mediglia | 102 | 6 | 1.848–2.150–2.581 | 11.4 | 6.4% | 6 | 5% | 19% | -157 € |
@@ -405,6 +406,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Seveso | 0 | 6 | — | 11.4 | — | — | — | — | — |
 | Siziano | 112 | 1 | 1.838–2.427–2.965 | — | — | — | 2% | 46% | -508 € |
 | Solaro | 131 | 3 | 1.713–2.232–2.719 | — | — | — | 2% | 33% | 145 € |
+| Sovico | 68 | 4 | 1.576–1.972–2.883 | — | — | — | 1% | 32% | 65 € |
 | Tortona | 0 | 6 | — | 8.8 | — | — | — | — | — |
 | Trezzano sul Naviglio | 189 | 14 | 2.273–2.524–2.879 | 14.5 | 6.9% | 7 | 3% | 7% | -404 € |
 | Trezzo sull'Adda | 112 | 6 | 1.317–1.676–2.107 | 9.4 | 6.7% | 5 | 4% | 16% | -3 € |
@@ -416,7 +418,7 @@ Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima
 | Vermezzo con Zelo | 59 | 2 | 1.762–1.988–2.291 | — | — | — | 2% | 10% | — |
 | Vigevano | 0 | 28 | — | 11.5 | — | — | — | — | — |
 | Vignate | 119 | 4 | 2.230–2.706–3.071 | — | — | — | 1% | 39% | — |
-| Villasanta | 0 | 10 | — | 11.0 | — | — | — | — | — |
+| Villasanta | 100 | 10 | 2.228–2.602–2.988 | 11.0 | 5.1% | 10 | 1% | 18% | -296 € |
 | Vimercate | 318 | 26 | 1.961–2.582–3.297 | 12.1 | 5.6% | 8 | 3% | 33% | 71 € |
 | Vimodrone | 98 | 20 | 2.682–3.089–3.694 | 16.4 | 6.4% | 20 | 3% | 14% | -230 € |
 | Vittuone | 77 | 2 | 1.667–1.967–2.294 | — | — | — | 0% | 9% | 211 € |

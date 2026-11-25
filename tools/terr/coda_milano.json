@@ -1763,7 +1763,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "Villasanta",
@@ -1771,7 +1772,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "Biassono",
@@ -1779,7 +1781,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "Macherio",
@@ -1787,7 +1790,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "Sovico",
@@ -1795,7 +1799,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "Giussano",
@@ -1831,7 +1836,7 @@
   },
   {
    "n": "Bovisio-Masciago",
-   "path": "/vendita-case/bovisiomasciago/",
+   "path": "/vendita-case/bovisio-masciago/",
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,

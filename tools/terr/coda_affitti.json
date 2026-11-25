@@ -2138,7 +2138,9 @@
    "path": "/affitto-case/san-zenone-al-lambro/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25",
+   "letti": 0
   },
   {
    "n": "A:C:cesano-maderno",
@@ -2245,7 +2247,9 @@
    "path": "/affitto-case/besate/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25",
+   "letti": 0
   },
   {
    "n": "A:C:casorate-primo",

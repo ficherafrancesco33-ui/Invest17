@@ -37842,3 +37842,533 @@
 134994307;228000;100;3;1;2;1;B;Trilocale;45.57570;9.34880;via ugo foscolo;Agrate Brianza;Agrate Brianza;0;bc;0|0|0
 134995551;160000;55;2;1;4;1;B;Bilocale;45.58570;9.19673;TOGLIATTI;Nova Milanese;Nova Milanese;0;bc;0|0|0
 135003365;770000;473;5+;3+;;0;B;Villa bifamiliare;45.59640;9.23510;Via Indipendenza;Muggiò;Muggiò;0;bt;0|0|0
+95167146;348000;120;4;2;1;0;B;Appartamento;45.63410;9.27601;Via Leonardo da Vinci;Biassono;Biassono;1;bca;0|0|0
+103080444;450000;176;5;3;;0;N;Appartamento in villa;45.62670;9.32490;Via Trento Trieste;Arcore;Arcore;0;bt;0|0|0
+106236927;175000;106;3;2;R;0;B;Trilocale;45.63230;9.26900;Via dei Mille;Biassono;Biassono;0;bcag;0|0|0
+108099821;22000;25;;;3;1;R;Open space;45.64180;9.26500;Corso Giacomo Matteotti;Macherio;Macherio;0;;0|0|0
+110811017;205000;98;3;1;4;1;O;Trilocale;45.65030;9.26050;Via Goffredo Mameli;Sovico;Sovico;0;btcgd;0|0|0
+111398135;440000;155;3;2;S/ T/ 2;1;N;Trilocale;45.62110;9.27160;Via Toscana;Biassono;Biassono;0;btc;0|0|0
+111516611;480000;162;4;2;S/ T/ 2;1;N;Quadrilocale;45.62130;9.27160;Via Toscana;Biassono;Biassono;0;tcd;0|0|0
+112688709;490000;194;4;2;;0;N;Villa unifamiliare;45.61400;9.32290;Via Enrico Forlanini;Arcore;Arcore;0;t;0|0|0
+114501143;460000;180;4;2;;0;N;Villa a schiera;45.61700;9.32250;Via Belvedere;Arcore;Arcore;0;btgjd;0|0|0
+114922647;29000;50;1;;;0;R;Rustico;45.63800;9.33650;Via San Giacomo;Arcore;Arcore;0;;0|0|0
+115081639;1100000;335;4;3;;0;N;Villa unifamiliare;45.60000;9.31340;Via Luigi Settembrini;Villasanta;Villasanta;0;tcad;0|0|0
+115705797;1100000;335;4;3;;0;O;Villa unifamiliare;45.60000;9.31340;LUIGI SETTEMBRINI;Villasanta;Villasanta;0;bti;0|0|0
+115941757;530000;162;4;2;1;1;N;Quadrilocale;45.62950;9.26771;Via Filippo Turati;Biassono;Biassono;0;btc;0|0|0
+116578485;518000;148;4;2;1;1;N;Quadrilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;btc;0|0|0
+116578881;518000;148;4;2;1;1;N;Quadrilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;btc;0|0|0
+116581259;503000;148;3;2;T;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;c;0|0|0
+116581649;530000;156;3;2;T;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;c;0|0|0
+116946791;164000;60;2;1;2;1;B;Bilocale;45.62390;9.32120;Via Alfonso Casati;Arcore;Arcore;0;btcgd;0|0|0
+117086851;780000;225;5;3;;0;N;Villa unifamiliare;45.62038;9.31963;Via San Francesco d'Assisi;Arcore;Arcore;1;bt;0|0|0
+117403353;489000;163;4;2;T/ 1/ 2;0;N;Quadrilocale;45.60050;9.31580;Via Ciro Menotti;Villasanta;Villasanta;0;bt;0|0|0
+117404411;489000;163;4;2;T/ 1/ 2;0;N;Quadrilocale;45.60050;9.31580;Via Ciro Menotti;Villasanta;Villasanta;0;bt;0|0|0
+117405381;459000;152;4;2;T;0;N;Quadrilocale;45.60050;9.31580;Via Ciro Menotti;Villasanta;Villasanta;0;j;0|0|0
+118049333;99000;55;2;1;1;0;;Bilocale;45.64850;9.26302;piazza garibaldi, 2;Sovico;Sovico;0;;0|0|0
+118069951;450000;312;5+;3+;;0;;Villa unifamiliare;45.63770;9.33530;Via Sant'Agnese;Arcore;Arcore;0;btcji;0|0|0
+118142743;360000;114;3;2;2;1;N;Trilocale;45.62950;9.26771;Via Filippo Turati;Biassono;Biassono;0;btc;0|0|0
+118142745;480000;145;4;2;2;1;N;Quadrilocale;45.62950;9.26771;Via Filippo Turati;Biassono;Biassono;0;btc;0|0|0
+118142749;360000;117;3;2;1;1;N;Trilocale;45.62950;9.26771;Via Filippo Turati;Biassono;Biassono;0;btc;0|0|0
+118399153;419000;165;4;2;2;1;N;Quadrilocale;45.62510;9.33240;Via Cesare Battisti;Arcore;Arcore;0;btcd;0|0|0
+118527711;540000;161;4;2;2;1;N;Quadrilocale;45.62950;9.26771;Via Filippo Turati;Biassono;Biassono;0;btc;0|0|0
+118759109;204000;95;3;2;1;1;B;Trilocale;45.62600;9.33490;Via Cascina Maria;Arcore;Arcore;0;btcd;0|0|0
+119160561;330000;139;4;2;;0;B;Villa a schiera;45.62860;9.26680;Via Antonio Gramsci;Biassono;Biassono;0;bci;0|0|0
+119571337;780000;220;5;3;;0;N;Villa unifamiliare;45.62050;9.31930;Via San Francesco D'Assisi, 56;Arcore;Arcore;0;bt;0|0|0
+119632408;139000;75;3;1;1;0;O;Trilocale;45.63480;9.33780;Via Achille Grandi;Arcore;Arcore;0;ad;0|0|0
+119711908;700000;202;5;2;S/ 3;1;N;Attico;45.62090;9.27100;Via Toscana;Biassono;Biassono;0;tcd;0|0|0
+119766222;700000;250;5;3+;;0;O;Villa unifamiliare;45.63220;9.31232;Via , Gran Sasso;Arcore;Arcore;0;b;0|0|0
+120332060;450000;150;4;2;1;0;N;Quadrilocale;45.63450;9.34130;Via Carlo Cattaneo;Arcore;Arcore;0;t;0|0|0
+120366454;159000;50;2;1;T;0;O;Bilocale;45.62720;9.32260;via umberto i;Arcore;Arcore;0;a;0|0|0
+120668276;209000;88;3;1;1;0;B;Trilocale;45.62560;9.32850;Via San Marco;Arcore;Arcore;0;btcgd;0|0|0
+121140522;419000;280;5+;2;;0;B;Villa plurifamiliare;45.63010;9.26700;Via Giuseppe Mazzini;Biassono;Biassono;0;bcd;0|0|0
+121261314;160000;72;2;1;T;0;B;Bilocale;45.62480;9.33500;Via Ciro Menotti;Arcore;Arcore;0;btcjd;0|0|0
+121261624;530000;162;4;2;1;1;N;Quadrilocale;45.62970;9.26740;Via Filippo Turati;Biassono;Biassono;0;btcd;0|0|0
+121565472;275000;150;5;2;;0;O;Terratetto plurifamiliare;45.62400;9.31860;Via Giuseppe Centemero;Arcore;Arcore;0;btd;0|0|0
+121659060;475000;144;4;2;T;1;N;Quadrilocale;45.64510;9.26400;Via Don Cazzaniga;Sovico;Sovico;0;cjd;0|0|0
+121661454;405000;128;4;2;1;1;N;Quadrilocale;45.64510;9.26400;Via Don Cazzaniga;Sovico;Sovico;0;tcd;0|0|0
+121663176;370000;113;4;2;2;1;N;Quadrilocale;45.64510;9.26400;Via Don Cazzaniga;Sovico;Sovico;0;tcd;0|0|0
+121771900;239000;85;3;2;1;0;O;Appartamento;45.62560;9.27570;Via Cesana e Villa;Biassono;Biassono;0;b;0|0|0
+121772844;149000;72;2;1;1;0;B;Bilocale;45.62170;9.31230;Via Giuseppe Parini;Arcore;Arcore;0;bcgd;0|0|0
+121908092;455200;151;4;2;;0;N;Villa unifamiliare;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;bcd;0|0|0
+122189148;219000;97;2;2;S - T;0;O;Bilocale;45.63470;9.33410;Via Lorenzo Perosi;Arcore;Arcore;0;btcjd;0|0|0
+122364770;400000;170;5+;3;;0;B;Villa a schiera;45.61000;9.32920;VIA BERGAMINA;Arcore;Arcore;0;btd;0|0|0
+122393426;195000;81;2;1;T;0;N;Bilocale;45.63140;9.33150;Via Ferruccio Gilera;Arcore;Arcore;0;;0|0|0
+122395762;230000;107;3;1;1 - 2;0;N;Trilocale;45.63140;9.33150;Via Ferruccio Gilera;Arcore;Arcore;0;bt;0|0|0
+122483070;175000;77;3;2;1;1;O;Trilocale;45.62630;9.32420;Via 4 Novembre;Arcore;Arcore;0;bcad;0|0|0
+123005644;270000;149;3;1;S/ T/ R;0;B;Trilocale;45.63050;9.32890;Via Alessandro Volta;Arcore;Arcore;0;agj;0|0|0
+123268391;229000;90;3;2;S - T;0;B;Trilocale;45.61890;9.32670;Via Michelangelo Buonarroti;Arcore;Arcore;0;btcjd;0|0|0
+123308985;449000;197;5;3+;3 - 4;1;B;Attico;45.62740;9.32420;Via Umberto I;Arcore;Arcore;0;tcgd;0|0|0
+123316491;550000;382;4;1;;0;R;Villa unifamiliare;45.65180;9.26170;Viale Brianza;Sovico;Sovico;0;cd;0|0|0
+123352793;780000;212;4;3;;0;N;Villa bifamiliare;45.62060;9.31990;Via S. Francesco D'Assisi;Arcore;Arcore;0;bt;0|0|0
+123389021;149000;65;2;1;1;0;B;Bilocale;45.63090;9.27070;Via CIRO MENOTTI;Biassono;Biassono;0;ba;0|0|0
+123577597;535000;140;3;2;3;1;O;Attico;45.60110;9.29853;VIA VESPUCCI;Villasanta;Villasanta;0;t;0|0|0
+123852791;395000;146;4;2;;0;O;Villa a schiera;45.63540;9.33930;via Tarantelli;Arcore;Arcore;0;bcd;0|0|0
+124083755;280000;107;3;2;1;0;B;Trilocale;45.64270;9.32540;Via Liguria;Arcore;Arcore;0;t;0|0|0
+124111607;126000;45;2;1;1;1;B;Bilocale;45.63370;9.33010;Via Camillo Golgi;Arcore;Arcore;0;bca;0|0|0
+124130551;274000;180;4;2;R;0;B;Quadrilocale;45.63030;9.32930;Via Alessandro Volta;Arcore;Arcore;0;tc;0|0|0
+124164377;254000;100;3;2;2;1;B;Attico;45.63420;9.32620;Via Renato Espedito Teruzzi;Arcore;Arcore;0;btgd;0|0|0
+124222149;125000;526;5+;;;0;;Rustico;45.62600;9.29830;Cascina Molino;Biassono;Biassono;0;btcd;0|0|0
+124320237;75000;45;2;1;T - R;0;R;Bilocale;45.64290;9.28510;Cascina San Giuseppe 2;Biassono;Biassono;0;gd;0|0|0
+124331691;530000;156;3;2;T;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;c;0|0|0
+124331827;518000;148;3;2;T/ 1;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;btc;0|0|0
+124331957;503000;148;3;2;T;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;c;0|0|0
+124332071;518000;148;3;2;T/ 1;1;N;Trilocale;45.62090;9.27310;Via Piemonte;Biassono;Biassono;0;btc;0|0|0
+124371399;185000;76;2;1;1;1;N;Bilocale;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;tcd;0|0|0
+124371923;189700;80;2;1;1;1;N;Bilocale;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;tcd;0|0|0
+124372047;188700;78;2;1;2;1;N;Bilocale;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;tcd;0|0|0
+124372347;318000;121;3;2;1;1;N;Trilocale;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;tcd;0|0|0
+124372563;322800;124;3;2;2;1;N;Trilocale;45.60750;9.30840;Via Alessandro Manzoni;Villasanta;Villasanta;0;tcd;0|0|0
+124598377;459000;150;4;2;T/ 1;1;;Quadrilocale;45.63490;9.34060;via Cattaneo;Arcore;Arcore;0;btg;0|0|0
+124661121;325000;200;4;2;;0;B;Villa a schiera;45.63310;9.26760;VIA ALBERTO DA GIUSSANO;Biassono;Biassono;0;btcd;0|0|0
+124974621;269000;140;3;1;R/ 2;0;B;Trilocale;45.62980;9.24790;Via XXV Aprile 32;Macherio;Macherio;0;cd;0|0|0
+125080371;1890000;730;5+;3+;;1;O;Villa unifamiliare;45.60500;9.31127;Via Sciesa;Villasanta;Villasanta;0;bta;0|0|0
+125100109;275000;72;2;1;1;1;O;Bilocale;45.63830;9.26470;Viale Regina Margherita 3;Macherio;Macherio;0;btcd;0|0|0
+125104777;150000;95;3;2;;0;O;Terratetto plurifamiliare;45.61110;9.30800;Via Antonio Meucci;Villasanta;Villasanta;0;bcad;0|0|0
+125122561;323000;134;4;2;1;1;O;Quadrilocale;45.62760;9.32440;Via Umberto I;Arcore;Arcore;0;bcgd;0|0|0
+125160519;235000;91;3;2;S/ T;1;B;Trilocale;45.63130;9.26690;Via Carlo Pisacane;Biassono;Biassono;0;j;0|0|0
+125364915;230000;57;2;1;T;1;B;Bilocale;45.63530;9.24930;Via Raffaello Sanzio 7;Macherio;Macherio;0;cgjd;0|0|0
+125435405;340000;150;4;2;S/ 4;1;B;Quadrilocale;45.62330;9.32200;Via San Francesco d'Assisi;Arcore;Arcore;0;btca;0|0|0
+125488211;180000;100;3;1;S/ 3;0;O;Trilocale;45.62430;9.33460;Via Cesare Battisti;Arcore;Arcore;0;bcsd;0|0|0
+125501575;260000;100;3;1;S/ 1;1;O;Trilocale;45.60480;9.30360;Via Fratelli Camperio;Villasanta;Villasanta;0;bc;0|0|0
+125544899;340000;150;4;2;S/ 4;1;B;Attico;45.62330;9.32200;Via San Francesco d'Assisi;Arcore;Arcore;0;btca;0|0|0
+125699569;348000;135;4;2;1;1;O;Quadrilocale;45.60630;9.31080;Via Amatore Sciesa;Villasanta;Villasanta;0;tc;0|0|0
+125713277;399000;106;3;2;;0;B;Villa a schiera;45.63400;9.27690;Via Galileo Galilei 25;Biassono;Biassono;0;bj;0|0|0
+125739275;119000;82;3;1;1;1;R;Trilocale;45.64320;9.26410;Via Vittorio Veneto 31;Sovico;Sovico;0;bcgd;0|0|0
+125778581;134000;93;3;1;1;0;B;Trilocale;45.63050;9.34380;Via Achille Grandi;Arcore;Arcore;0;d;0|0|0
+125795099;450000;132;4;2;T;1;N;Quadrilocale;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;d;0|0|0
+125802939;360000;108;3;2;T;1;N;Trilocale;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;d;0|0|0
+125803243;345000;100;3;2;1;1;N;Trilocale;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;t;0|0|0
+125803387;595000;180;5;3;2;1;N;Attico;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;btd;0|0|0
+125803531;535000;155;4;3;2;1;N;Attico;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;btd;0|0|0
+125858021;230000;110;3;1;1;0;N;Trilocale;45.63730;9.33460;Via Rodolfo Fumagalli;Arcore;Arcore;0;bti;0|0|0
+125922063;136000;52;2;1;2;0;B;Bilocale;45.62590;9.33540;Via Cascina Maria;Arcore;Arcore;0;btcg;0|0|0
+125959663;189000;90;3;2;1 - 2;0;O;Trilocale;45.61220;9.32860;Via Val di Scalve;Arcore;Arcore;0;btcgd;0|0|0
+126013327;219000;99;3;2;;0;N;Trilocale;45.64660;9.26539;via giovanni da sovico, 49;Sovico;Sovico;0;b;0|0|0
+126109963;700000;177;5;3;;0;O;Villa unifamiliare;45.63400;9.27000;Via Alberto da Giussano;Biassono;Biassono;0;bgj;0|0|0
+126146311;168000;85;3;1;R;0;B;Trilocale;45.62190;9.31390;Via Carso;Arcore;Arcore;0;bcgd;0|0|0
+126230123;395000;180;5;3;;0;B;Villa unifamiliare;45.63440;9.33882;via Giulio Pastore 12;Arcore;Arcore;0;btcad;0|0|0
+126289901;234000;105;4;2;5;1;B;Quadrilocale;45.61080;9.30430;Via Galileo Galilei;Villasanta;Villasanta;0;bc;0|0|0
+126314751;365000;150;4;2;;0;B;Villa a schiera;45.63590;9.29600;Via Madonna delle Nevi 11;Biassono;Biassono;0;bjd;0|0|0
+126392573;1890000;577;5+;3+;;1;N;Villa unifamiliare;45.60500;9.31120;Via Amatore Sciesa;Villasanta;Villasanta;0;btcad;0|0|0
+126404915;540000;420;5+;3+;;0;;Villa unifamiliare;45.62460;9.31810;Via Natale Beretta;Arcore;Arcore;0;bc;0|0|0
+126422409;195000;115;3;2;2;0;R;Trilocale;45.62550;9.31810;Via Giuseppe Parini;Arcore;Arcore;0;btcd;0|0|0
+126426765;765000;500;5+;3+;;0;R;Villa unifamiliare;45.63690;9.32370;Viale Brianza;Arcore;Arcore;0;td;0|0|0
+126431529;5200000;1;5+;3+;;0;O;Villa unifamiliare;45.63690;9.32370;Viale Brianza;Arcore;Arcore;0;cd;0|0|0
+126432381;5200000;1;5+;3+;;0;O;Villa unifamiliare;45.63690;9.32370;Viale Brianza;Arcore;Arcore;0;cd;0|0|0
+126543599;325000;107;3;2;1;0;N;Trilocale;45.60810;9.30670;Via Alessandro Manzoni;Villasanta;Villasanta;0;t;0|0|0
+126545507;560000;180;4;2;4;1;N;Attico;45.62160;9.27330;Via Po;Biassono;Biassono;0;t;0|0|0
+126546351;290000;90;2;1;4;1;O;Bilocale;45.62160;9.27330;Via Po;Biassono;Biassono;0;t;0|0|0
+126571421;149000;89;3;1;3;0;B;Trilocale;45.64100;9.26290;Via Giacomo Matteotti 9/B;Macherio;Macherio;0;bcgd;0|0|0
+126585439;305000;105;3;2;T;1;O;Trilocale;45.63540;9.32810;Via Umbria;Arcore;Arcore;0;btcjd;0|0|0
+126610883;410000;135;3;2;T;1;N;Trilocale;45.62520;9.32140;via Alessandro Manzoni, 5;Arcore;Arcore;0;btji;0|0|0
+126619237;495000;177;3;2;S/ 3;1;O;Trilocale;45.62510;9.27350;Via Gianfranco Miglio;Biassono;Biassono;0;btcd;0|0|0
+126647007;530000;400;5;3+;;0;B;Villa unifamiliare;45.64160;9.32390;Via Cacciatori, 5, 20862 Cacciatori MB, Italia;Arcore;Arcore;0;caji;0|0|0
+126648689;62000;54;2;1;T;0;O;Bilocale;45.64860;9.26440;Vicolo Legnani 3;Sovico;Sovico;0;ca;0|0|0
+126679273;410000;135;3;2;T;1;N;Trilocale;45.62530;9.32140;Via Alessandro Manzoni;Arcore;Arcore;0;cjd;0|0|0
+126798849;260000;98;3;2;1;1;O;Trilocale;45.60900;9.30480;Via Leonardo da Vinci;Villasanta;Villasanta;0;btcgd;0|0|0
+126832579;129000;86;3;1;;0;R;Villa unifamiliare;45.65450;9.26680;Via Molino Bassi 5;Sovico;Sovico;0;btcj;0|0|0
+126866341;235000;97;3;1;R;0;B;Trilocale;45.63070;9.25380;Via Giuseppe di Vittorio 4;Macherio;Macherio;0;bcgjd;0|0|0
+127024231;248000;100;3;1;R;0;B;Trilocale;45.62110;9.31340;Via Natale Beretta;Arcore;Arcore;0;btcgd;0|0|0
+127224687;948000;286;5+;3+;;0;O;Villa unifamiliare;45.62940;9.27790;Via al Parco;Biassono;Biassono;0;bc;0|0|0
+127225103;1422000;510;5+;3+;;0;B;Villa unifamiliare;45.62940;9.27770;Via al Parco;Biassono;Biassono;0;btc;0|0|0
+127225591;2370000;860;5+;3+;;0;O;Villa unifamiliare;45.62940;9.27770;Via al Parco;Biassono;Biassono;0;btc;0|0|0
+127226919;199000;92;3;1;R;1;B;Trilocale;45.62730;9.27440;Via Antonio Locatelli 4;Biassono;Biassono;0;bcd;0|0|0
+127240143;255000;115;3;2;;0;O;Terratetto unifamiliare;45.64360;9.26810;Via Sabotino;Sovico;Sovico;0;d;0|0|0
+127253695;157000;92;3;2;1 - 2;0;B;Trilocale;45.61180;9.32630;Via Luigi Galvani;Arcore;Arcore;0;d;0|0|0
+127255641;270000;124;3;2;2 - 3;0;B;Attico;45.62670;9.32300;Via Isonzo;Arcore;Arcore;0;bti;0|0|0
+127305409;129000;65;3;1;2;0;B;Trilocale;45.62360;9.31870;Via Alessandro Manzoni;Arcore;Arcore;0;bcagd;0|0|0
+127338881;115000;76;3;1;3;0;B;Trilocale;45.63010;9.26800;Via Camillo Benso di Cavour;Biassono;Biassono;0;bci;0|0|0
+127347687;219000;90;3;2;1;0;O;Trilocale;45.59910;9.30390;Strada Vicinale del Sole;Villasanta;Villasanta;0;bcasd;0|0|0
+127363423;2800000;577;5+;3;;1;O;Villa unifamiliare;45.60650;9.31150;Via Amatore Sciesa;Villasanta;Villasanta;0;btcad;0|0|0
+127372237;470000;185;5;3;;0;N;Villa unifamiliare;45.63390;9.26060;Via Sentiero delle Valli;Macherio;Macherio;0;;0|0|0
+127484414;485000;348;5+;3+;;0;R;Villa plurifamiliare;45.61550;9.30890;Via Cimabue;Villasanta;Villasanta;0;bcad;0|0|0
+127531756;295000;118;3;2;1;1;O;Trilocale;45.60710;9.30220;Via Giuseppe Mazzini;Villasanta;Villasanta;0;b;0|0|0
+127532006;295000;118;3;2;1;1;O;Trilocale;45.62740;9.32420;Via Umberto I;Arcore;Arcore;0;b;0|0|0
+127534016;190000;95;3;1;S/ 4;1;B;Trilocale;45.60290;9.29960;Via Giacomo Matteotti;Villasanta;Villasanta;0;bcd;0|0|0
+127577292;229000;105;4;2;1;0;B;Quadrilocale;45.64810;9.25050;Vicolo I Flavio Gioia 12;Sovico;Sovico;0;btcagd;0|0|0
+127614492;849000;706;5+;3+;;0;O;Terratetto plurifamiliare;45.63310;9.27850;Via Sant'Antonio;Biassono;Biassono;0;bcd;0|0|0
+127618402;849000;691;5+;3+;;0;O;Villa unifamiliare;45.63310;9.27850;Via Sant'Antonio;Biassono;Biassono;0;bcd;0|0|0
+127678308;105000;65;2;1;1;0;;Bilocale;45.62910;9.27550;Via Pietro Verri;Biassono;Biassono;0;;0|0|0
+127727706;560000;157;4;2;4;1;N;Attico;45.62100;9.27411;via Pò;Biassono;Biassono;0;t;0|0|0
+127728028;375000;174;4;2;1;1;O;Quadrilocale;45.63210;9.29710;Via Regina Margherita;Biassono;Biassono;0;td;0|0|0
+127772860;210000;76;2;1;S/ 2;1;O;Bilocale;45.62000;9.26970;Via Padania;Biassono;Biassono;0;bc;0|0|0
+127842986;254000;149;4;2;;0;B;Villa a schiera;45.63000;9.24820;Via Montello;Macherio;Macherio;0;bcd;0|0|0
+127924122;549000;181;5;3;;0;O;Villa bifamiliare;45.62550;9.26760;Via Europa;Biassono;Biassono;0;tcaj;0|0|0
+127943082;145000;157;3;1;;0;R;Appartamento in villa;45.64280;9.26690;Via Piave;Sovico;Sovico;0;btcgd;0|0|0
+127943334;255000;225;4;2;;0;R;Appartamento in villa;45.64270;9.26700;Via Piave;Sovico;Sovico;0;bcg;0|0|0
+127947088;380000;180;3;2;S - T;0;O;Trilocale;45.63350;9.32820;Via Calabria;Arcore;Arcore;0;btcad;0|0|0
+127972974;410000;190;3;2;T;1;N;Trilocale;45.62520;9.32140;Via Manzoni;Arcore;Arcore;0;c;0|0|0
+128040812;370000;100;3;2;2;1;O;Trilocale;45.59900;9.29832;Via Edison;Villasanta;Villasanta;0;btca;0|0|0
+128073716;390000;150;4;2;1;0;O;Quadrilocale;45.63350;9.32820;Via Calabria;Arcore;Arcore;0;bt;0|0|0
+128173818;208000;80;3;1;T;0;O;Trilocale;45.62910;9.32520;Via Fabio Filzi;Arcore;Arcore;0;tcai;0|0|0
+128190410;219000;103;3;1;T;0;B;Trilocale;45.64780;9.26180;Via Pasubio 17;Sovico;Sovico;0;bca;0|0|0
+128230040;770000;450;5+;3+;;0;O;Villa bifamiliare;45.63350;9.32820;Via Calabria;Arcore;Arcore;0;btcad;0|0|0
+128275422;464000;211;5+;2;;0;O;Villa a schiera;45.62410;9.27500;Via dell'Olmo;Biassono;Biassono;0;btcaj;0|0|0
+128290778;179000;68;2;1;S/ T;1;O;Bilocale;45.63280;9.26220;Via Pietro Mascagni;Biassono;Biassono;0;agd;0|0|0
+128296866;128000;111;4;2;1 - 2;0;B;Quadrilocale;45.63930;9.33230;Piazza Conte Durini;Arcore;Arcore;0;bd;0|0|0
+128328676;464000;211;5+;2;;0;O;Villa unifamiliare;45.62410;9.27500;Via dell'Olmo;Biassono;Biassono;0;btcaj;0|0|0
+128332792;209000;100;3;2;1;1;B;Trilocale;45.63070;9.32730;Piazza Sandro Pertini;Arcore;Arcore;0;btc;0|0|0
+128446734;368000;271;5+;3;;0;O;Villa unifamiliare;45.63760;9.33970;SP58;Arcore;Arcore;0;bd;0|0|0
+128451982;135000;367;5+;3+;;0;R;Villa bifamiliare;45.64420;9.26900;Via Sabotino;Sovico;Sovico;0;btd;0|0|0
+128487412;215000;101;3;1;4;1;R;Trilocale;45.63410;9.33000;Via Camillo Golgi;Arcore;Arcore;0;bc;0|0|0
+128496222;179000;102;3;2;T/ 2;0;B;Trilocale;45.62870;9.27480;VIA CESANA E VILLA;Biassono;Biassono;0;bcad;0|0|0
+128619982;144000;72;2;1;1;0;B;Bilocale;45.62310;9.31620;Via Natale Beretta;Arcore;Arcore;0;bcsi;0|0|0
+128631294;160000;47;2;1;T;0;O;Bilocale;45.60510;9.30530;Via Giuseppe Garibaldi;Villasanta;Villasanta;0;d;0|0|0
+128633326;130000;44;1;1;T;0;O;Monolocale;45.60510;9.30530;Via Giuseppe Garibaldi;Villasanta;Villasanta;0;d;0|0|0
+128648770;130000;43;1;1;T;0;O;Monolocale;45.60510;9.30530;Via Giuseppe Garibaldi;Villasanta;Villasanta;0;d;0|0|0
+128652300;395000;240;4;2;;0;B;Villa unifamiliare;45.63400;9.26520;Via Gioacchino Rossini 18;Biassono;Biassono;0;bjd;0|0|0
+128680144;135000;45;1;1;T;0;O;Monolocale;45.60510;9.30530;Via Giuseppe Garibaldi;Villasanta;Villasanta;0;d;0|0|0
+128821658;354000;140;4;2;1;1;B;Quadrilocale;45.60490;9.30050;Via Federico Confalonieri;Villasanta;Villasanta;0;btcad;0|0|0
+128878360;202000;130;4;2;1;0;B;Quadrilocale;45.63610;9.33570;Via Lorenzo Perosi;Arcore;Arcore;0;btcgd;0|0|0
+128925142;190000;86;3;2;R;1;O;Trilocale;45.64230;9.27410;Via Visconti di Modrone;Macherio;Macherio;0;;0|0|0
+128990920;300000;129;3;2;S2/ S/ 2;1;O;Trilocale;45.62760;9.32440;Via Umberto I;Arcore;Arcore;0;bcad;0|0|0
+128991342;195000;78;2;1;T;0;R;Bilocale;45.60690;9.31500;VIA SAN FIORANO;Villasanta;Villasanta;0;i;0|0|0
+128993032;189000;116;4;1;S/ 3;0;B;Quadrilocale;45.62630;9.32170;Via Roma;Arcore;Arcore;0;btcad;0|0|0
+129010890;405000;121;;2;T;1;N;Appartamento;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;tcd;0|0|0
+129011636;387000;115;3;2;T;1;N;Trilocale;45.62530;9.32310;Via Alfonso Casati;Arcore;Arcore;0;btjd;0|0|0
+129012228;465000;141;4;3;1;1;N;Quadrilocale;45.62530;9.32310;Via Alfonso Casati;Arcore;Arcore;0;btcd;0|0|0
+129021484;219000;101;4;1;R;0;B;Quadrilocale;45.63270;9.27690;Vicolo Montagnetta 6;Biassono;Biassono;0;tcgd;0|0|0
+129048548;407000;115;3;2;T;1;N;Trilocale;45.62960;9.32720;Via Thomas Alva Edison;Arcore;Arcore;0;d;0|0|0
+129048830;699000;207;4;2;2;1;N;Attico;45.62960;9.32720;Via Thomas Alva Edison;Arcore;Arcore;0;tcd;0|0|0
+129048842;459000;139;4;2;T;1;N;Quadrilocale;45.62960;9.32720;Via Thomas Alva Edison;Arcore;Arcore;0;cd;0|0|0
+129048852;456000;141;4;2;1;1;N;Quadrilocale;45.62960;9.32720;Via Thomas Alva Edison;Arcore;Arcore;0;tcd;0|0|0
+129048862;397000;124;3;2;1;1;N;Trilocale;45.62960;9.32720;Via Thomas Alva Edison;Arcore;Arcore;0;tcd;0|0|0
+129059200;120000;50;2;1;T;0;O;Bilocale;45.60700;9.31430;Via San Fiorano;Villasanta;Villasanta;0;d;0|0|0
+129117322;680000;459;5;2;;0;R;Villa unifamiliare;45.64540;9.26610;Via Giovanni da Sovico;Sovico;Sovico;0;btcd;0|0|0
+129118632;535000;196;4;3;;0;B;Villa unifamiliare;45.61770;9.30430;Via Tiziano Vecellio;Villasanta;Villasanta;0;btgjd;0|0|0
+129120388;890000;476;5+;3+;;0;O;Villa unifamiliare;45.63030;9.31530;Via Aldo De Ponti;Arcore;Arcore;0;btcad;0|0|0
+129128874;200000;60;2;1;3;1;O;Bilocale;45.62500;9.32220;Via Roma;Arcore;Arcore;0;ca;0|0|0
+129148778;649000;220;5;3;;0;O;Villa unifamiliare;45.61210;9.30160;Via Montello;Villasanta;Villasanta;0;btcagjd;0|0|0
+129149300;620000;678;5+;3+;;0;R;Terratetto plurifamiliare;45.60510;9.31190;Via Massimo d'Azeglio;Villasanta;Villasanta;0;btcd;0|0|0
+129164748;192000;62;2;1;T;0;N;Loft;45.63050;9.34380;Via Achille Grandi;Arcore;Arcore;0;td;0|0|0
+129167736;110000;39;1;1;T;0;N;Monolocale;45.63050;9.34380;Via Achille Grandi;Arcore;Arcore;0;;0|0|0
+129180174;265000;95;3;2;1;1;O;Trilocale;45.61370;9.30240;Via Monte Sabotino;Villasanta;Villasanta;0;bcd;0|0|0
+129183846;207000;106;3;1;T/ 3;1;B;Trilocale;45.62730;9.27400;VIA LOCATELLI;Biassono;Biassono;0;bcd;0|0|0
+129206916;154000;85;3;1;4;1;B;Trilocale;45.64400;9.26290;Via Giuseppe Verdi 14;Sovico;Sovico;0;bag;0|0|0
+129257720;250000;105;3;1;1;0;O;Trilocale;45.63050;9.34380;Via Achille Grandi;Arcore;Arcore;0;bd;0|0|0
+129257928;320000;165;4;3;1;0;O;Quadrilocale;45.64420;9.26050;Vicolo Alessandro Manzoni;Sovico;Sovico;0;btcd;0|0|0
+129275170;675000;250;5;3;;0;B;Villa unifamiliare;45.61490;9.30360;VIA MARINETTI;Villasanta;Villasanta;0;ca;0|0|0
+129305958;460000;177;4;2;;0;B;Villa a schiera;45.63070;9.28180;Via Francesco Borromini;Biassono;Biassono;0;btcgd;0|0|0
+129307964;259000;145;5;2;;0;R;Terratetto unifamiliare;45.61160;9.32720;Via Giambattista Morgagni;Arcore;Arcore;0;btd;0|0|0
+129413786;169000;55;2;1;T;0;B;Bilocale;45.62790;9.32230;VIA MONTE GRAPPA, 21;Arcore;Arcore;0;c;0|0|0
+129417688;368000;290;5+;3;;0;B;Villa bifamiliare;45.63240;9.32410;Via Marche;Arcore;Arcore;0;bc;0|0|0
+129417764;269000;210;5;2;;0;B;Villa bifamiliare;45.63240;9.32410;Via Marche;Arcore;Arcore;0;bcgj;0|0|0
+129477242;380000;133;3;2;1;1;O;Trilocale;45.62150;9.30260;Via Molino Sesto Giovine;Arcore;Arcore;0;btcd;0|0|0
+129502528;115000;54;2;1;1;0;B;Bilocale;45.61480;9.30690;Via Mosè Bianchi;Villasanta;Villasanta;0;bcad;0|0|0
+129505654;160000;100;3;1;2;0;R;Trilocale;45.63810;9.24940;Via Giacomo Leopardi;Sovico;Sovico;0;bc;0|0|0
+129536890;114000;72;2;1;1;0;B;Bilocale;45.63950;9.26760;Via Roma;Macherio;Macherio;0;ca;0|0|0
+129539192;224000;118;4;2;2;1;B;Quadrilocale;45.64750;9.26440;Via Mons. G. Terruzzi;Sovico;Sovico;0;bca;0|0|0
+129549786;245000;112;4;2;T;0;O;Quadrilocale;45.64180;9.27360;Via S. Cassiano;Macherio;Macherio;0;ta;0|0|0
+129564426;198000;83;3;2;R/ 1;0;O;Trilocale;45.63090;9.30330;Via Monte Cervino;Arcore;Arcore;0;bcagd;0|0|0
+129578956;600000;285;5;3;;0;B;Villa unifamiliare;45.61120;9.32807;via Morgagni, 32;Arcore;Arcore;0;;0|0|0
+129608264;157000;92;3;2;1 - 2;0;B;Trilocale;45.61180;9.32630;Via Luigi Galvani;Arcore;Arcore;0;d;0|0|0
+129610902;2570000;560;5+;3+;;0;;Villa unifamiliare;45.62590;9.31070;Via Monte Rosa No Number;Arcore;Arcore;0;bt;0|0|0
+129610904;2540000;520;5;3;;0;;Villa unifamiliare;45.62590;9.31070;Via Monte Rosa No Number;Arcore;Arcore;0;bt;0|0|0
+129637434;149000;80;3;1;1;0;O;Trilocale;45.63890;9.33330;Via Pier Giovanni Varisco;Arcore;Arcore;0;d;0|0|0
+129675086;145000;58;2;2;S/ 1;0;B;Bilocale;45.61670;9.30750;Piazza Antonio Canova;Villasanta;Villasanta;0;tci;0|0|0
+129723690;250000;125;4;2;1;0;O;Quadrilocale;45.62690;9.33260;Via Francesco Baracca;Arcore;Arcore;0;bcd;0|0|0
+129728024;545000;251;4;3;R;0;O;Quadrilocale;45.62910;9.32820;Via Dante;Arcore;Arcore;0;btc;0|0|0
+129729776;247000;145;4;2;T;1;B;Quadrilocale;45.61880;9.31590;Via Papina;Arcore;Arcore;0;tcai;0|0|0
+129839694;179000;93;3;1;3;0;B;Trilocale;45.60140;9.30170;Via Galileo Vercesi;Villasanta;Villasanta;0;bcad;0|0|0
+129861762;209000;94;3;2;1;0;B;Trilocale;45.61280;9.30670;Via Giovanni Segantini;Villasanta;Villasanta;0;tcag;0|0|0
+129875002;304000;150;5;2;;0;B;Terratetto plurifamiliare;45.63330;9.27750;Via Cascina Carolina;Biassono;Biassono;0;bc;0|0|0
+129877330;448000;142;3;2;T;1;N;Trilocale;45.62160;9.27336;via Pò;Biassono;Biassono;0;tc;0|0|0
+129877332;488000;162;4;2;2;1;N;Quadrilocale;45.62160;9.27336;via Pò;Biassono;Biassono;0;tc;0|0|0
+129885938;249000;86;3;1;R;0;B;Trilocale;45.62500;9.27050;Via Galileo Galilei 5;Biassono;Biassono;0;td;0|0|0
+129887072;379000;245;4;3;;0;B;Villa unifamiliare;45.63090;9.28230;Via Francesco Borromini 19;Biassono;Biassono;0;bd;0|0|0
+129887542;149000;85;3;1;T;0;B;Trilocale;45.62650;9.32160;Via Roma;Arcore;Arcore;0;gj;0|0|0
+129887630;1200000;350;5+;3+;;0;B;Villa unifamiliare;45.62349;9.30963;Via Resegone;Arcore;Arcore;1;ca;0|0|0
+129887710;183000;113;3;2;R/ 2;0;B;Trilocale;45.63020;9.24860;Via Montello 8;Macherio;Macherio;0;bd;0|0|0
+129914768;145000;112;3;2;1;0;B;Trilocale;45.64390;9.26600;Via vittorio veneto;Sovico;Sovico;0;bd;0|0|0
+129922066;179000;113;3;1;1;1;B;Trilocale;45.65140;9.26220;Viale Brianza 21;Sovico;Sovico;0;bcag;0|0|0
+129941518;229000;100;3;2;2;1;O;Trilocale;45.62090;9.31120;Via Monviso;Arcore;Arcore;0;btcd;0|0|0
+129941818;270000;130;4;3;4 - 5;1;B;Quadrilocale;45.63370;9.33010;Via Camillo Golgi;Arcore;Arcore;0;btcd;0|0|0
+129949950;277000;104;3;1;S/ 1;0;O;Trilocale;45.60380;9.30700;Via Giacomo Puccini;Villasanta;Villasanta;0;bcd;0|0|0
+129952230;750000;314;5+;3+;;0;O;Villa bifamiliare;45.64730;9.26900;Vicolo 1 della Valle;Sovico;Sovico;0;bcd;0|0|0
+129955752;330000;271;5+;3;;0;R;Appartamento in villa;45.63150;9.25370;Via della Resistenza;Macherio;Macherio;0;bci;0|0|0
+129987444;225000;105;3;2;3;1;B;Trilocale;45.63590;9.25980;Via Valentino Rivolta 5;Macherio;Macherio;0;bcgd;0|0|0
+130036296;299000;110;3;2;1;0;O;Trilocale;45.60240;9.29890;Via Federico Confalonieri;Villasanta;Villasanta;0;t;0|0|0
+130052088;795000;226;5+;3+;;0;O;Villa unifamiliare;45.59860;9.29890;Via Thomas Alva Edison;Villasanta;Villasanta;0;tc;0|0|0
+130102922;285000;117;3;2;S - T;1;N;Trilocale;45.63060;9.30840;Via 25 Aprile;Arcore;Arcore;0;jd;0|0|0
+130150070;450000;195;4;3;3;1;B;Quadrilocale;45.60610;9.30320;Via Giacomo Leopardi;Villasanta;Villasanta;0;btc;0|0|0
+130171762;186000;86;3;1;R;0;B;Trilocale;45.63250;9.33660;Via Niccolò Copernico;Arcore;Arcore;0;btcg;0|0|0
+130186166;385000;150;5;2;;0;B;Villa a schiera;45.62670;9.26890;Via A. Casiraghi E. A. Riboldi;Biassono;Biassono;0;bcd;0|0|0
+130189878;1150000;350;5+;3+;;1;O;Villa unifamiliare;45.64200;9.26680;Piazza Visconti;Macherio;Macherio;0;cjd;0|0|0
+130198184;383000;140;4;2;2;1;N;Quadrilocale;45.63140;9.26700;VIA Pisacane;Biassono;Biassono;0;bt;0|0|0
+130234800;277000;96;3;2;T - R;0;N;Loft;45.64460;9.26580;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+130236506;287000;96;3;2;T - R;0;N;Loft;45.64460;9.26580;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+130249356;670000;167;4;3;;0;N;Villa a schiera;45.64370;9.26540;Via Vittorio Veneto;Sovico;Sovico;0;btcd;0|0|0
+130257244;362000;192;3;2;S/ T/ R;0;N;Loft;45.64460;9.26580;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+130301084;500000;193;5;3;;0;N;Villa bifamiliare;45.62160;9.27330;Via Po;Biassono;Biassono;0;btcd;0|0|0
+130416616;630000;149;4;3;;0;N;Villa a schiera;45.64370;9.26540;Via Vittorio Veneto;Sovico;Sovico;0;td;0|0|0
+130420352;630000;147;4;3;;0;N;Villa a schiera;45.64370;9.26540;Via Vittorio Veneto;Sovico;Sovico;0;td;0|0|0
+130452668;185000;62;2;1;1;1;O;Bilocale;45.60300;9.31110;Via Padre Dino Beretta;Villasanta;Villasanta;0;btcd;0|0|0
+130455790;630000;147;4;3;;0;N;Villa a schiera;45.64370;9.26540;Via Vittorio Veneto;Sovico;Sovico;0;td;0|0|0
+130482084;410000;136;3;2;S/ T;1;N;Trilocale;45.62530;9.32140;Via Alessandro Manzoni 5;Arcore;Arcore;0;tcjd;0|0|0
+130490784;230000;105;3;1;R;1;B;Trilocale;45.60300;9.30970;Via Dante Alighieri;Villasanta;Villasanta;0;btcad;0|0|0
+130524842;130000;85;3;1;1;0;B;Trilocale;45.61520;9.29810;Via Regina Margherita;Villasanta;Villasanta;0;d;0|0|0
+130590778;105000;58;2;1;4;0;R;Bilocale;45.62360;9.31870;Via Alessandro Manzoni;Arcore;Arcore;0;bc;0|0|0
+130593100;670000;154;4;3;;0;N;Villa a schiera;45.64370;9.26540;Via Vittorio Veneto;Sovico;Sovico;0;td;0|0|0
+130594088;188000;75;2;1;1;1;O;Bilocale;45.63520;9.33730;Via Gilera;Arcore;Arcore;0;tca;0|0|0
+130607814;276500;100;3;2;1;1;N;Trilocale;45.62720;9.33080;Via Margherita Hack;Arcore;Arcore;0;btc;0|0|0
+130635784;159000;90;3;1;1;0;B;Trilocale;45.62350;9.31140;Via Monviso;Arcore;Arcore;0;bcd;0|0|0
+130693682;250000;84;3;1;T/ 3;1;N;Mansarda;45.62420;9.31970;Via Alessandro Manzoni;Arcore;Arcore;0;d;0|0|0
+130718750;491000;153;4;2;T;1;N;Quadrilocale;45.62030;9.27233;misericordia;Biassono;Biassono;0;tcj;0|0|0
+130719268;477000;149;4;2;T;1;N;Quadrilocale;45.62040;9.27257;misericordia;Biassono;Biassono;0;tcj;0|0|0
+130720974;145000;105;4;1;3;0;B;Quadrilocale;45.61580;9.30740;Via Mosè Bianchi 38;Villasanta;Villasanta;0;bcd;0|0|0
+130721328;245000;81;3;1;1;0;O;Trilocale;45.60670;9.30210;Via Giuseppe Mazzini;Villasanta;Villasanta;0;basd;0|0|0
+130721546;374000;109;3;;2;1;N;Trilocale;45.62030;9.27233;misericordia;Biassono;Biassono;0;btc;0|0|0
+130725284;623000;213;4;2;;0;N;Villa unifamiliare;45.64440;9.25070;VIA MATTEOTTI;Sovico;Sovico;0;bd;0|0|0
+130769764;2800000;595;5+;3+;;1;O;Villa unifamiliare;45.60470;9.31123;Via Sciesa;Villasanta;Villasanta;0;bta;0|0|0
+130806094;89000;55;2;1;T;0;O;Appartamento;45.64010;9.26968;Via Visconti di Modrone;Macherio;Macherio;1;;0|0|0
+130846404;280000;147;3;1;;0;B;Villa a schiera;45.63620;9.25534; ;Macherio;Macherio;0;;0|0|0
+130918650;175000;65;3;1;1;0;O;Trilocale;45.60240;9.29893;Via Federico Confalonieri;Villasanta;Villasanta;0;a;0|0|0
+130918866;150000;45;2;1;1;0;N;Bilocale;45.60240;9.29893;Via Federico Confalonieri;Villasanta;Villasanta;0;a;0|0|0
+130918872;150000;45;2;1;2;0;O;Bilocale;45.60240;9.29893;Via F. Confalonieri;Villasanta;Villasanta;0;a;0|0|0
+130919288;285000;105;4;2;1;1;O;Quadrilocale;45.63260;9.26620;Via Alberto da Giussano;Biassono;Biassono;0;bc;0|0|0
+130963902;265000;98;3;1;1;1;O;Trilocale;45.61490;9.30190;Via Cesare Beccaria;Villasanta;Villasanta;0;bci;0|0|0
+130985106;229000;115;3;1;1;1;B;Trilocale;45.60760;9.30250;Via Giuseppe Mazzini;Villasanta;Villasanta;0;btcd;0|0|0
+130996010;150000;54;2;1;T;1;B;Bilocale;45.63380;9.33820;Via Giovanni Keplero;Arcore;Arcore;0;btcaj;0|0|0
+131031690;82000;55;2;1;T;0;;Bilocale;45.64140;9.27190;Via Visconti di Modrone;Macherio;Macherio;0;c;0|0|0
+131045664;329000;80;3;2;1;1;N;Trilocale;45.63570;9.25540;VIALE REGINA MARGHERITA;Macherio;Macherio;0;btcgd;0|0|0
+131174370;195000;110;3;2;1;0;B;Trilocale;45.62570;9.27560;Via Cesana e Villa;Biassono;Biassono;0;bcai;0|0|0
+131179460;160000;115;4;1;3;0;B;Quadrilocale;45.62960;9.32478;via San Gregorio 17;Arcore;Arcore;0;bc;0|0|0
+131288042;420000;153;4;3;;0;B;Villa a schiera;45.63030;9.28094;Via F. Brunelleschi 9;Biassono;Biassono;0;bd;0|0|0
+131320256;225000;90;3;1;2;1;O;Trilocale;45.63500;9.33360;Via Contardo Ferrini;Arcore;Arcore;0;bcad;0|0|0
+131340892;309000;135;4;2;1;0;N;Quadrilocale;45.63160;9.25316;Via Resistenza;Macherio;Macherio;0;bc;0|0|0
+131346642;299000;135;4;2;1;0;N;Quadrilocale;45.63160;9.25316;Via Resistenza;Macherio;Macherio;0;btc;0|0|0
+131346644;309000;135;4;2;1;0;N;Quadrilocale;45.63160;9.25316;Via Resistenza;Macherio;Macherio;0;bc;0|0|0
+131346646;299000;135;4;2;1;0;N;Quadrilocale;45.63160;9.25316;Via Resistenza;Macherio;Macherio;0;btc;0|0|0
+131368760;455000;253;5+;2;T;0;O;Appartamento;45.64560;9.25960;Via alessandro volta;Sovico;Sovico;0;ba;0|0|0
+131468994;285000;100;4;2;R/ 3;1;B;Quadrilocale;45.63620;9.26477;Via FRATELLI CERVI 11;Macherio;Macherio;0;btcgd;0|0|0
+131509500;150000;88;3;1;1;0;B;Trilocale;45.63730;9.26480;Via Achille Grandi;Macherio;Macherio;0;bc;0|0|0
+131544742;134000;70;2;1;1;0;B;Bilocale;45.64110;9.26740;Via Piave;Macherio;Macherio;0;bc;0|0|0
+131646002;139000;77;3;1;2;0;B;Trilocale;45.62390;9.31120;Via Monviso;Arcore;Arcore;0;bci;0|0|0
+131898510;265000;158;4;2;T/ 1;0;O;Quadrilocale;45.62440;9.33370;Via Cesare Battisti;Arcore;Arcore;0;tgd;0|0|0
+131932068;58000;84;2;1;;0;;Rustico;45.60050;9.31580;Via Ciro Menotti;Villasanta;Villasanta;0;;0|0|0
+131932608;280000;150;3;2;2;1;O;Trilocale;45.60490;9.30050;Via Federico Confalonieri;Villasanta;Villasanta;0;bad;0|0|0
+131933658;995000;400;5+;3+;;0;O;Villa unifamiliare;45.63680;9.25520;via meucci, 10;Macherio;Macherio;0;cj;0|0|0
+131943366;255000;125;3;2;2;1;B;Trilocale;45.59830;9.29620;Via Angelo Farina;Villasanta;Villasanta;0;btcgd;0|0|0
+131961044;289000;105;3;2;T;1;B;Trilocale;45.60980;9.30950;Via Donatori di Sangue;Villasanta;Villasanta;0;cagjd;0|0|0
+131999272;265000;130;4;2;3;1;O;Quadrilocale;45.62010;9.31120;Via Natale Beretta;Arcore;Arcore;0;bcd;0|0|0
+132002458;279000;117;4;2;S/ 2;1;R;Quadrilocale;45.62390;9.26960;Via della Fornace;Biassono;Biassono;0;tcg;0|0|0
+132062584;159000;47;2;1;T;0;O;Bilocale;45.60510;9.30530;Via Giuseppe Garibaldi;Villasanta;Villasanta;0;cd;0|0|0
+132066998;145000;80;3;1;1;0;B;Trilocale;45.62570;9.27250;Via Don Minzoni;Biassono;Biassono;0;bcad;0|0|0
+132077236;985000;280;4;2;5;1;O;Attico;45.62290;9.27720;Via Santa Maria delle Selve;Biassono;Biassono;0;btcd;0|0|0
+132085302;460000;160;4;2;;0;B;Villa a schiera;45.62750;9.26750;Via Enrico De Nicola;Biassono;Biassono;0;bcgjd;0|0|0
+132114600;328000;180;4;2;;0;R;Villa unifamiliare;45.62500;9.31870;via Beretta 25;Arcore;Arcore;0;;0|0|0
+132118378;225000;235;4;2;T/ 1/ 2;0;R;Quadrilocale;45.64400;9.26620;Via Vittorio Veneto 8;Sovico;Sovico;0;s;0|0|0
+132118762;140000;54;2;1;T;0;O;Bilocale;45.62570;9.31580;Viale San Martino;Arcore;Arcore;0;cd;0|0|0
+132121610;230000;80;3;2;T;0;N;Trilocale;45.62570;9.31580;Viale San Martino;Arcore;Arcore;0;bcd;0|0|0
+132192802;108000;65;2;1;4;0;B;Bilocale;45.62690;9.33260;Via Francesco Baracca;Arcore;Arcore;0;;0|0|0
+132194716;220000;93;3;1;1;1;B;Appartamento;45.60748;9.30683;Via Alessandro Volta;Villasanta;Villasanta;1;bca;0|0|0
+132223566;149000;100;2;2;T;0;N;Bilocale;45.60390;9.29930;Via Don Gaetano Galli;Villasanta;Villasanta;0;cd;0|0|0
+132298724;195000;90;3;1;4;1;B;Trilocale;45.60730;9.30240;Via Giuseppe Mazzini;Villasanta;Villasanta;0;bcd;0|0|0
+132329550;547000;273;4;2;;0;B;Villa unifamiliare;45.65100;9.27080;Vicolo Filippo Meda;Sovico;Sovico;0;bcgj;0|0|0
+132339240;235000;61;2;2;1;1;N;Bilocale;45.62550;9.32340;Via Alfonso Casati;Arcore;Arcore;0;btd;0|0|0
+132341648;230000;83;3;1;2;1;O;Trilocale;45.62290;9.27770;Via Santa Maria delle Selve;Biassono;Biassono;0;bcg;0|0|0
+132341972;405000;150;4;2;1;1;;Quadrilocale;45.64420;9.26435;via don ettore cazzaniga;Sovico;Sovico;0;bt;0|0|0
+132342040;475000;180;4;2;T;1;;Quadrilocale;45.64420;9.26435;via don ettore cazzaniga;Sovico;Sovico;0;btj;0|0|0
+132344608;235000;67;2;1;1;1;N;Bilocale;45.62530;9.32310;Via Alfonso Casati;Arcore;Arcore;0;btcg;0|0|0
+132345492;499000;290;5;2;;0;B;Villa a schiera;45.61720;9.30410;via carrà, 13;Villasanta;Villasanta;0;tj;0|0|0
+132357436;85000;67;2;1;2;0;B;Bilocale;45.64090;9.26710;Via Piave;Macherio;Macherio;0;bcg;0|0|0
+132360888;185000;81;3;1;6;1;B;Trilocale;45.60590;9.30157;Piazza Manfredo Camperio;Villasanta;Villasanta;0;;0|0|0
+132368750;915000;334;5+;3+;;0;O;Villa bifamiliare;45.62900;9.27090;Via 4 Novembre;Biassono;Biassono;0;bcj;0|0|0
+132400822;170000;90;3;1;3;0;B;Trilocale;45.62260;9.31060;Viale Monte Rosa;Arcore;Arcore;0;bcd;0|0|0
+132416054;145000;65;2;1;1;0;O;Bilocale;45.62310;9.31465;VIA PARINI;Arcore;Arcore;0;c;0|0|0
+132419586;155000;97;4;1;2;0;O;Quadrilocale;45.62430;9.33480;Via Cesare Battisti;Arcore;Arcore;0;bcad;0|0|0
+132439532;589000;283;5+;3;;0;B;Villa unifamiliare;45.63340;9.33170;Via Contardo Ferrini;Arcore;Arcore;0;bcd;0|0|0
+132463044;133000;72;2;1;R;0;B;Bilocale;45.62180;9.31410;Via Carso;Arcore;Arcore;0;bcad;0|0|0
+132503424;379000;117;3;2;T;1;;Trilocale;45.62490;9.27270;via Gianfranco Miglio;Biassono;Biassono;0;tcd;0|0|0
+132510976;178000;80;3;1;;0;B;Terratetto unifamiliare;45.61110;9.30790;Via Antonio Meucci;Villasanta;Villasanta;0;ad;0|0|0
+132515440;449000;250;4;2;;0;O;Villa a schiera;45.59880;9.29840;Via Thomas Alva Edison;Villasanta;Villasanta;0;btcd;0|0|0
+132531978;606000;170;4;2;3;1;;Quadrilocale;45.62490;9.27270;via Gianfranco Miglio;Biassono;Biassono;0;btcd;0|0|0
+132532628;239000;67;2;1;2;1;;Bilocale;45.62490;9.27270;via Gianfranco Miglio;Biassono;Biassono;0;tc;0|0|0
+132533306;195000;89;3;1;T;1;O;Trilocale;45.64190;9.26190;Via Bruno Buozzi;Sovico;Sovico;0;bca;0|0|0
+132535042;349000;187;4;2;;0;O;Villa a schiera;45.63060;9.30270;Via 24 Maggio;Arcore;Arcore;0;bcaj;0|0|0
+132535194;390000;155;4;2;5;1;O;Quadrilocale;45.60630;9.30423;Via Giosuè Carducci;Villasanta;Villasanta;0;bcg;0|0|0
+132599350;295000;117;3;2;1;1;O;Trilocale;45.62860;9.31870;Via Col di Lana;Arcore;Arcore;0;ba;0|0|0
+132601258;289000;115;3;2;1;1;R;Trilocale;45.60610;9.30320;Via Giacomo Leopardi;Villasanta;Villasanta;0;btcagd;0|0|0
+132601264;280000;150;3;2;2;1;O;Trilocale;45.60490;9.30050;Via Federico Confalonieri;Villasanta;Villasanta;0;bad;0|0|0
+132626086;420000;149;4;2;R;1;O;Quadrilocale;45.59740;9.29830;Via Flavio Gioia;Villasanta;Villasanta;0;btcaj;0|0|0
+132630226;1900000;577;5+;3+;;1;N;Villa unifamiliare;45.60500;9.31120;Via Amatore Sciesa;Villasanta;Villasanta;0;btcai;0|0|0
+132644020;159000;65;2;1;2;1;B;Bilocale;45.63550;9.32780;Via Umbria;Arcore;Arcore;0;tcad;0|0|0
+132671946;319000;120;3;2;T;1;O;Trilocale;45.61290;9.30330;Via Manuela Loi;Villasanta;Villasanta;0;cagjd;0|0|0
+132686746;248000;167;5+;3;T;0;B;Appartamento;45.64660;9.26087;Via Monte Grappa, 21;Sovico;Sovico;0;bc;0|0|0
+132736938;230000;87;3;1;T;1;O;Trilocale;45.64360;9.25800;Via Antonio Gramsci 5;Sovico;Sovico;0;cagi;0|0|0
+132772016;219000;68;2;1;1;1;N;Bilocale;45.62420;9.27320;Via Gianfranco Miglio;Biassono;Biassono;0;tc;0|0|0
+132798942;385000;170;4;2;S - T;1;O;Quadrilocale;45.63060;9.30840;Via 25 Aprile;Arcore;Arcore;0;jd;0|0|0
+132801676;405000;183;5;2;1 - 2;1;O;Appartamento;45.63060;9.30840;Via 25 Aprile;Arcore;Arcore;0;td;0|0|0
+132807836;324000;140;4;3;2;0;O;Quadrilocale;45.63320;9.26595;gioacchino rossini, 4;Biassono;Biassono;0;bt;0|0|0
+132809786;147000;60;2;1;1;0;O;Bilocale;45.60810;9.30330;Via Giuseppe Mazzini;Villasanta;Villasanta;0;bd;0|0|0
+132811822;280000;134;4;2;S/ 1/ 2;1;O;Quadrilocale;45.63190;9.25090;Via Giacomo Leopardi;Macherio;Macherio;0;bcgd;0|0|0
+132813530;139000;61;2;1;3;0;O;Bilocale;45.62340;9.31520;Via Giuseppe Parini;Arcore;Arcore;0;bca;0|0|0
+132834868;445000;105;4;2;T;1;N;Quadrilocale;45.62440;9.32150;Via Alfonso Casati;Arcore;Arcore;0;cagjd;0|0|0
+132841336;195000;59;2;1;T;1;O;Bilocale;45.63350;9.26980;Via Alberto da Giussano;Biassono;Biassono;0;tgjd;0|0|0
+132855456;550000;231;5;3;;0;N;Villa a schiera;45.63150;9.28110;Via Filippo Brunelleschi;Biassono;Biassono;0;bc;0|0|0
+132862394;550000;200;4;3;;0;O;Villa unifamiliare;45.62870;9.27310;Via Vittorio Veneto;Biassono;Biassono;0;bc;0|0|0
+132863200;410000;136;3;2;T;1;N;Trilocale;45.62310;9.31820;Via Alessandro Manzoni;Arcore;Arcore;0;cji;0|0|0
+132930684;175000;101;3;1;3;1;B;Trilocale;45.64330;9.26420;Via Vittorio Veneto 29;Sovico;Sovico;0;ba;0|0|0
+133017980;199000;126;5;1;2;0;O;Attico;45.62220;9.31310;Via Carso;Arcore;Arcore;0;bcd;0|0|0
+133018166;950000;327;5+;3+;;0;O;Villa unifamiliare;45.61960;9.26680;Via dei Gelsi;Biassono;Biassono;0;ca;0|0|0
+133099008;93000;60;2;1;2;0;O;Bilocale;45.64470;9.25126;via Torricelli;Sovico;Sovico;0;;0|0|0
+133141020;780000;235;4;2;;1;N;Villa bifamiliare;45.62060;9.31993;Via S. Francesco D'Assisi;Arcore;Arcore;0;bt;0|0|0
+133141336;539000;203;4;2;;0;O;Villa unifamiliare;45.63160;9.25650;Via della Resistenza;Macherio;Macherio;0;bcd;0|0|0
+133141934;410000;140;3;2;T;1;N;Trilocale;45.62540;9.32137;Via alessandro manzoni;Arcore;Arcore;0;;0|0|0
+133156812;410000;145;4;2;2;1;N;Quadrilocale;45.60620;9.30161;Via Donne Della Costituente;Villasanta;Villasanta;0;t;0|0|0
+133159750;390000;139;3;2;2;1;N;Trilocale;45.60620;9.30161;Via Donne Della Costituente;Villasanta;Villasanta;0;t;0|0|0
+133161214;129000;65;2;1;T;0;N;Bilocale;45.63140;9.27597;Piazza San Francesco 23;Biassono;Biassono;0;c;0|0|0
+133169392;184000;100;3;2;1 - 2;0;B;Trilocale;45.62020;9.31030;Viale Monte Rosa;Arcore;Arcore;0;btcgi;0|0|0
+133169410;329000;110;4;2;;0;R;Villa plurifamiliare;45.63530;9.32490;Via Toscana;Arcore;Arcore;0;tcad;0|0|0
+133176840;465000;135;4;2;1;1;O;Quadrilocale;45.59860;9.29830;Via Thomas Alva Edison;Villasanta;Villasanta;0;bcd;0|0|0
+133177646;235000;110;3;1;T;1;O;Trilocale;45.63420;9.32620;Via Renato Espedito Teruzzi;Arcore;Arcore;0;cd;0|0|0
+133192036;165000;70;2;1;S/ 1/ 2;1;O;Bilocale;45.62310;9.27910;Via Santa Maria delle Selve;Biassono;Biassono;0;bcd;0|0|0
+133207204;365000;144;4;2;4;1;B;Quadrilocale;45.60660;9.30350;Via Giacomo Leopardi;Villasanta;Villasanta;0;bcd;0|0|0
+133241774;250000;493;5+;3+;;0;R;Rustico;45.64420;9.26660;Vicolo Giovanni da Sovico;Sovico;Sovico;0;td;0|0|0
+133241980;599000;205;3;3;;0;B;Villa a schiera;45.62940;9.26550;Via Giuseppe Mazzini, 79, 20853 Biassono MB, Italia;Biassono;Biassono;0;btcad;0|0|0
+133252964;637000;221;4;2;;0;N;Villa bifamiliare;45.64440;9.25070;via matteotti;Sovico;Sovico;0;btc;0|0|0
+133276664;210000;99;3;2;S/ 3;1;O;Trilocale;45.63300;9.33770;Via Giovanni Keplero;Arcore;Arcore;0;ba;0|0|0
+133290432;148000;60;2;1;2;1;O;Bilocale;45.60290;9.29920;Piazza Andrea Oggioni;Villasanta;Villasanta;0;bc;0|0|0
+133306680;599000;345;5;3;;0;B;Villa unifamiliare;45.63990;9.32310;Via Piemonte;Arcore;Arcore;0;bcad;0|0|0
+133311960;570000;288;5+;3;;0;O;Villa unifamiliare;45.64100;9.32370;Via dei Cacciatori;Arcore;Arcore;0;btca;0|0|0
+133331784;440000;500;5+;3;;0;R;Villa unifamiliare;45.64580;9.26066;viale Monza;Sovico;Sovico;0;btcd;0|0|0
+133403400;129000;50;2;1;T;0;O;Bilocale;45.62980;9.24787;Via XXV Aprile 32;Macherio;Macherio;0;d;0|0|0
+133408244;396000;151;5;2;2 - 3;1;O;Appartamento;45.63750;9.26530;Via Achille Grandi;Macherio;Macherio;0;bt;0|0|0
+133410898;298000;145;4;1;2;0;B;Quadrilocale;45.62370;9.30949;Via resegone;Arcore;Arcore;0;b;0|0|0
+133411286;140000;80;2;1;T;0;B;Bilocale;45.62380;9.30958;Via Resegone;Arcore;Arcore;0;;0|0|0
+133412736;280000;145;4;2;1;0;B;Quadrilocale;45.62370;9.30946;Via resegone;Arcore;Arcore;0;b;0|0|0
+133432602;158000;95;3;1;1;0;O;Trilocale;45.61160;9.32730;Via Giambattista Morgagni;Arcore;Arcore;0;bd;0|0|0
+133472394;2800000;595;5+;3+;;1;N;Villa unifamiliare;45.60650;9.31150;Via Amatore Sciesa;Villasanta;Villasanta;0;btcad;0|0|0
+133477772;430000;131;4;2;S/ T;1;O;Quadrilocale;45.63420;9.26500;Via Antonio Vivaldi;Biassono;Biassono;0;g;0|0|0
+133478408;175000;60;2;1;T;1;O;Bilocale;45.62670;9.32120;Via Monte Bianco;Arcore;Arcore;0;tc;0|0|0
+133497794;69000;30;1;1;T;0;B;Monolocale;45.61440;9.31040;Piazza Sant'Alessandro;Villasanta;Villasanta;0;cad;0|0|0
+133503856;163000;90;3;1;2;1;B;Trilocale;45.64160;9.26220;Via Bruno Buozzi;Sovico;Sovico;0;bcgd;0|0|0
+133512914;290000;136;4;2;1;0;O;Quadrilocale;45.62970;9.30530;Via Giuseppe Mazzini;Arcore;Arcore;0;bcgd;0|0|0
+133535160;455000;400;4;3;T;0;B;Quadrilocale;45.64210;9.26802;via italia , 53;Macherio;Macherio;0;b;0|0|0
+133535198;190000;150;4;1;2;0;R;Quadrilocale;45.64210;9.26802;via italia, 53;Macherio;Macherio;0;b;0|0|0
+133536778;849000;250;4;3;;0;B;Villa a schiera;45.64450;9.25070;Via Giacomo Matteotti;Sovico;Sovico;0;btcgjd;0|0|0
+133541008;570000;210;5;3;;0;O;Villa a schiera;45.61000;9.32950;Via Bergamina;Arcore;Arcore;0;bcgji;0|0|0
+133571634;66000;35;1;1;2;0;O;Monolocale;45.64130;9.26877;via italia, 38;Macherio;Macherio;0;;0|0|0
+133593436;325000;160;4;2;2;0;B;Quadrilocale;45.62560;9.27664;Via Papa Giovanni XXIII, 4/6;Biassono;Biassono;0;bcj;0|0|0
+133593488;325000;160;4;2;1;0;B;Quadrilocale;45.62560;9.27664;Via Papa Giovanni XXIII, 4/6;Biassono;Biassono;0;bcj;0|0|0
+133593498;650000;375;5+;3+;;0;B;Villa unifamiliare;45.62560;9.27664;Via Papa Giovanni XXIII, 4/6;Biassono;Biassono;0;bcj;0|0|0
+133617790;105000;86;2;1;3;0;B;Bilocale;45.64100;9.26280;via Matteotti ;Macherio;Macherio;0;bca;0|0|0
+133629884;230000;100;3;1;2;1;B;Trilocale;45.63270;9.33150;Via C. Golgi;Arcore;Arcore;0;tcad;0|0|0
+133635008;195000;129;4;2;1;0;B;Quadrilocale;45.64150;9.26700;Via piave;Macherio;Macherio;0;bad;0|0|0
+133638564;167000;65;2;1;2;1;B;Bilocale;45.60770;9.30150;Via Giuseppe Verdi;Villasanta;Villasanta;0;bi;0|0|0
+133653408;138000;81;3;1;1;0;B;Trilocale;45.63920;9.27310;Via Vincenzo Bellini;Macherio;Macherio;0;bcai;0|0|0
+133685246;134000;82;2;1;S/ 3;1;B;Bilocale;45.64650;9.26360;Via Principe Eugenio di Savoia;Sovico;Sovico;0;bcg;0|0|0
+133693120;389000;158;4;3+;;0;B;Villa a schiera;45.63090;9.28235;Via Francesco Borromini, 19, 20853 Biassono MB, Italia;Biassono;Biassono;0;btcad;0|0|0
+133703078;210000;120;3;1;1;1;B;Trilocale;45.60540;9.30100;Via Federico Confalonieri;Villasanta;Villasanta;0;bcd;0|0|0
+133732720;540000;190;5;3;;0;O;Villa bifamiliare;45.64290;9.27790;Via Pasubio;Macherio;Macherio;0;bcd;0|0|0
+133734162;57000;52;;;;0;R;Rustico;45.62730;9.32402;Via Umberto I, 20862 Arcore MB, Italia;Arcore;Arcore;0;i;0|0|0
+133735424;249000;100;3;1;1;1;B;Trilocale;45.63530;9.33008;via golgi;Arcore;Arcore;0;btc;0|0|0
+133736446;540000;253;5;3;;0;B;Terratetto plurifamiliare;45.62370;9.31617;via raffaello sanzio;Arcore;Arcore;0;btcagj;0|0|0
+133757168;280000;100;3;2;1;1;B;Trilocale;45.61540;9.30030;Via Francesco Baracca;Villasanta;Villasanta;0;td;0|0|0
+133789222;179000;88;3;1;1;1;O;Trilocale;45.63500;9.32840;Via Toscana;Arcore;Arcore;0;bc;0|0|0
+133791990;150000;95;3;1;;0;B;Trilocale;45.62620;9.32123;Via roma;Arcore;Arcore;0;;0|0|0
+133795358;160000;79;3;1;S/ 3;0;O;Trilocale;45.63010;9.26800;Via Camillo Benso Cavour 19;Biassono;Biassono;0;tcad;0|0|0
+133795938;220000;106;3;2;3;0;O;Trilocale;45.62320;9.31809;Via Alessandro Manzoni;Arcore;Arcore;0;bd;0|0|0
+133820168;719000;243;4;2;;0;O;Villa unifamiliare;45.60420;9.31680;Via Goffredo Mameli;Villasanta;Villasanta;0;td;0|0|0
+133820996;410000;155;3;2;S - T;1;N;Trilocale;45.62530;9.32140;Via Alessandro Manzoni;Arcore;Arcore;0;tcjd;0|0|0
+133825672;189000;88;2;2;T;0;B;Bilocale;45.63010;9.27640;Via Umberto I, 18, 20853 Biassono MB, Italia;Biassono;Biassono;0;bcad;0|0|0
+133830806;290000;118;3;1;;0;O;Villa unifamiliare;45.63110;9.30820;Via 24 Maggio;Arcore;Arcore;0;bc;0|0|0
+133835810;235000;108;3;1;4;1;B;Trilocale;45.60940;9.30741;Via A. Pacinotti;Villasanta;Villasanta;0;b;0|0|0
+133884490;157000;60;2;1;1;1;O;Bilocale;45.62670;9.33350;Via Cascina Maria;Arcore;Arcore;0;btc;0|0|0
+133884800;97000;45;2;1;T;0;O;Bilocale;45.64110;9.26380;Via Luigi Cadorna;Macherio;Macherio;0;bd;0|0|0
+133885686;740000;180;4;2;12;1;N;Quadrilocale;45.62740;9.32910;Via Margherita Hack;Arcore;Arcore;0;btcad;0|0|0
+133888414;585000;172;4;2;3 - 4;1;O;Attico;45.63260;9.27610;Via Guglielmo Marconi;Biassono;Biassono;0;bta;0|0|0
+133896175;171000;81;3;1;T;1;B;Trilocale;45.63050;9.30330;Via Monte Cervino;Arcore;Arcore;0;btc;0|0|0
+133901593;244000;101;3;2;3;1;O;Trilocale;45.62090;9.31680;Via Alfonso Casati;Arcore;Arcore;0;btcagd;0|0|0
+133902847;319000;98;3;2;2;1;B;Trilocale;45.60590;9.30130;Via Federico Confalonieri;Villasanta;Villasanta;0;btcad;0|0|0
+133923283;790000;247;5+;2;;0;O;Villa unifamiliare;45.63400;9.27000;Via Alberto da Giussano;Biassono;Biassono;0;bcji;0|0|0
+133985983;295000;100;3;1;2;1;O;Trilocale;45.60680;9.30360;Via Giacomo Leopardi;Villasanta;Villasanta;0;btcad;0|0|0
+134004377;187000;86;2;2;S/ 2/ 3;1;B;Bilocale;45.61260;9.32370;Via Galileo Galilei;Arcore;Arcore;0;btca;0|0|0
+134017031;143000;75;2;1;T;0;B;Bilocale;45.64810;9.26460;Via Giovanni da Sovico;Sovico;Sovico;0;;0|0|0
+134024249;90000;40;1;;T;0;R;Monolocale;45.62380;9.30953;Via Resegone;Arcore;Arcore;0;;0|0|0
+134072467;162000;90;3;1;4;1;O;Trilocale;45.64170;9.26210;Via Bruno Buozzi;Sovico;Sovico;0;btcd;0|0|0
+134073515;780000;160;4;3;;0;N;Villa unifamiliare;45.62060;9.31967;via san francesco d'assisi;Arcore;Arcore;0;t;0|0|0
+134095775;105000;71;2;1;1;1;B;Bilocale;45.64000;9.26940;Via Roma;Macherio;Macherio;0;c;0|0|0
+134126483;570000;178;5+;2;4;1;O;Appartamento;45.62280;9.27740;Via Santa Maria delle Selve;Biassono;Biassono;0;btcd;0|0|0
+134130169;780000;210;4;3;;0;N;Villa unifamiliare;45.62570;9.32210;Via Roma;Arcore;Arcore;0;tjd;0|0|0
+134250439;950000;302;5;3;2;1;O;Appartamento;45.64050;9.26450;Via Giuseppe Verdi;Macherio;Macherio;0;btc;0|0|0
+134270089;55000;87;3;;;0;R;Rustico;45.64840;9.26310;Piazza Garibaldi;Sovico;Sovico;0;b;0|0|0
+134295145;81000;40;2;1;1;0;O;Bilocale;45.64810;9.26196;VIA CAMILLO BENSO CONTE DI CAVOUR;Sovico;Sovico;0;;0|0|0
+134304911;370000;135;4;2;S/ T;1;N;Quadrilocale;45.65100;9.26250;Viale Brianza;Sovico;Sovico;0;bt;0|0|0
+134337297;465000;205;5;3;2;0;O;Attico;45.60410;9.29990;Via Federico Confalonieri;Villasanta;Villasanta;0;btcd;0|0|0
+134352833;1480000;486;5+;3+;;0;O;Villa unifamiliare;45.63300;9.33620;Via Giosuè Carducci;Arcore;Arcore;0;btad;0|0|0
+134359437;98000;60;2;1;T/ 1;0;B;Bilocale;45.63890;9.33305;via varisco;Arcore;Arcore;0;;0|0|0
+134407417;318000;110;3;2;1;1;B;Trilocale;45.62300;9.27847;via Santa Maria delle Selve, 9;Biassono;Biassono;0;ba;0|0|0
+134408095;229000;100;3;1;1;1;O;Trilocale;45.63210;9.27220;Via Giuseppe Mazzini;Biassono;Biassono;0;btcai;0|0|0
+134418803;139000;64;2;1;2;0;B;Bilocale;45.63250;9.33660;Via Niccolò Copernico;Arcore;Arcore;0;ba;0|0|0
+134423487;195000;99;4;2;1;0;R;Quadrilocale;45.61320;9.30010;Via della Resega;Villasanta;Villasanta;0;tgd;0|0|0
+134441547;399000;232;4;3;;0;O;Terratetto unifamiliare;45.64540;9.26610;Via Giovanni da Sovico;Sovico;Sovico;0;tcd;0|0|0
+134473177;252000;148;5;3;1 - 2;0;O;Attico;45.64800;9.25000;Via Flavio Gioia;Sovico;Sovico;0;btcad;0|0|0
+134479469;460000;150;4;2;;0;N;Villa unifamiliare;45.60980;9.33020;Via Bergamina;Arcore;Arcore;0;d;0|0|0
+134481827;257000;77;2;1;1;1;N;Bilocale;45.62040;9.27257;misericordia;Biassono;Biassono;0;btc;0|0|0
+134481829;497000;151;4;2;1;1;N;Attico;45.62030;9.27233;misericordia;Biassono;Biassono;0;tc;0|0|0
+134481831;513000;151;4;2;2;1;N;Attico;45.62030;9.27233;misericordia;Biassono;Biassono;0;tc;0|0|0
+134481879;477000;149;4;2;T;1;N;Quadrilocale;45.62040;9.27257;misericordia;Biassono;Biassono;0;tcj;0|0|0
+134481883;491000;153;4;2;T;1;N;Quadrilocale;45.62030;9.27233;misericordia;Biassono;Biassono;0;tcj;0|0|0
+134481899;513000;151;4;2;2;1;N;Quadrilocale;45.62030;9.27233;misericordia;Biassono;Biassono;0;tc;0|0|0
+134493739;719000;243;4;2;;0;O;Villa unifamiliare;45.60420;9.31680;Via Goffredo Mameli;Villasanta;Villasanta;0;td;0|0|0
+134493823;179000;100;3;1;T;0;B;Trilocale;45.62480;9.31968;Via Centemero, 23;Arcore;Arcore;0;c;0|0|0
+134496773;355000;91;4;2;2;1;O;Quadrilocale;45.60160;9.29976;Via Cristoforo Colombo;Villasanta;Villasanta;0;cg;0|0|0
+134498979;229000;75;3;1;1;1;O;Trilocale;45.62900;9.32530;Via Fabio Filzi;Arcore;Arcore;0;btcgd;0|0|0
+134561849;980000;450;5+;3+;;0;O;Villa unifamiliare;45.64170;9.32420;Via dei Cacciatori;Arcore;Arcore;0;btcd;0|0|0
+134569381;145000;75;2;1;S/ 1;0;O;Bilocale;45.63910;9.33260;Via Giotto;Arcore;Arcore;0;cd;0|0|0
+134569985;469000;187;5;2;;0;B;Villa unifamiliare;45.62870;9.27303;Via Vittorio Veneto;Biassono;Biassono;0;;0|0|0
+134572447;110000;50;2;1;1;0;B;Bilocale;45.62740;9.32220;Via Monte Grappa;Arcore;Arcore;0;ad;0|0|0
+134576255;198000;95;3;2;5;1;O;Trilocale;45.61040;9.30520;Via Galileo Galilei;Villasanta;Villasanta;0;bcd;0|0|0
+134592137;199000;120;4;2;2;0;O;Quadrilocale;45.62220;9.31310;Via Carso;Arcore;Arcore;0;bcgd;0|0|0
+134595313;480000;174;5;2;;0;O;Villa unifamiliare;45.62260;9.27320;Via Lombardia;Biassono;Biassono;0;bj;0|0|0
+134609669;560000;280;5;3;;0;B;Villa a schiera;45.63320;9.32440;Via Lombardia;Arcore;Arcore;0;bcgjd;0|0|0
+134612471;513000;151;4;2;2;1;N;Attico;45.62030;9.27233;misericordia;Biassono;Biassono;0;tc;0|0|0
+134612787;513000;151;4;2;2;1;N;Attico;45.62040;9.27257;misericordia;Biassono;Biassono;0;tc;0|0|0
+134612843;512000;151;4;2;2;1;N;Attico;45.62040;9.27257;via misecordia;Biassono;Biassono;0;tc;0|0|0
+134658177;460000;187;4;3;;0;O;Villa unifamiliare;45.63570;9.28120;Via Pitagora 15;Biassono;Biassono;0;bjd;0|0|0
+134661561;150000;69;2;1;1;1;B;Bilocale;45.63610;9.26500;Via Fratelli Cervi;Macherio;Macherio;0;btcgd;0|0|0
+134664291;499000;185;5;2;;0;B;Villa unifamiliare;45.63480;9.28065;Via delle Vigne;Biassono;Biassono;0;bcd;0|0|0
+134665373;278000;100;3;2;2;1;O;Trilocale;45.62760;9.32440;Via Umberto I;Arcore;Arcore;0;btcgd;0|0|0
+134665811;630000;230;5;3;;0;O;Villa unifamiliare;45.60860;9.31729;via aurelio saffi;Villasanta;Villasanta;0;;0|0|0
+134667657;108000;75;2;1;4;0;B;Bilocale;45.62700;9.33167;via baracca;Arcore;Arcore;0;;0|0|0
+134719577;219000;93;3;2;2;0;B;Trilocale;45.61280;9.30670;Via Giovanni Segantini;Villasanta;Villasanta;0;tcagi;0|0|0
+134775445;280000;130;3;2;1 - 2;1;O;Trilocale;45.63060;9.30840;Via 25 Aprile;Arcore;Arcore;0;td;0|0|0
+134777213;119000;45;2;1;T;1;B;Bilocale;45.62330;9.32210;Via San Francesco d'Assisi;Arcore;Arcore;0;aj;0|0|0
+134778009;195000;70;2;1;2;1;B;Bilocale;45.60340;9.30580;Via Francesco Petrarca;Villasanta;Villasanta;0;tcag;0|0|0
+134816061;349000;125;4;2;S/ 3;1;O;Quadrilocale;45.62160;9.27330;Via Po;Biassono;Biassono;0;btcgd;0|0|0
+134816403;129000;59;2;1;T;0;O;Bilocale;45.60770;9.30770;Via Alessandro Manzoni;Villasanta;Villasanta;0;d;0|0|0
+134826141;238000;127;3;2;S/ 3;1;B;Attico;45.62570;9.32950;Via Cesare Battisti;Arcore;Arcore;0;btci;0|0|0
+134846889;360000;155;4;3;1;0;B;Attico;45.63140;9.27960;Via Giuseppe Piermarini;Biassono;Biassono;0;btcagd;0|0|0
+134848415;559000;275;4;3;;0;O;Villa bifamiliare;45.61630;9.30390;via Morandi, 38;Villasanta;Villasanta;0;tc;0|0|0
+134852571;390000;122;4;2;2;1;N;Quadrilocale;45.64510;9.26400;Via Don Cazzaniga;Sovico;Sovico;0;btcd;0|0|0
+134860139;235000;70;3;1;1;1;O;Appartamento;45.63682;9.25495;Via Antonio Meucci;Macherio;Macherio;1;a;0|0|0
+134898185;360000;203;3;2;;0;B;Villa a schiera;45.62260;9.27320;Via Lombardia 19;Biassono;Biassono;0;bgd;0|0|0
+134898373;105000;43;2;1;T;0;O;Bilocale;45.63910;9.26610;Via roma;Macherio;Macherio;0;;0|0|0
+134903765;155000;88;3;1;3;0;B;Trilocale;45.62990;9.30540;Via Giuseppe Mazzini;Arcore;Arcore;0;bcgd;0|0|0
+134909351;168000;73;3;1;S/ 1;0;B;Trilocale;45.61800;9.32420;Via Leonardo da Vinci;Arcore;Arcore;0;bcag;0|0|0
+134911093;875000;400;4;3+;;0;O;Villa unifamiliare;45.64670;9.32550;Viale Brianza;Arcore;Arcore;0;btcd;0|0|0
+134934273;345000;123;4;2;S/ 3;1;O;Quadrilocale;45.62160;9.27330;Via Po;Biassono;Biassono;0;tcg;0|0|0
+134939003;415000;180;5;2;1;0;O;Appartamento;45.62680;9.32370;Via IV Novembre;Arcore;Arcore;0;btcad;0|0|0
+134939005;130000;50;2;1;1;0;O;Bilocale;45.62680;9.32370;Via IV Novembre;Arcore;Arcore;0;cad;0|0|0
+134939007;545000;230;5+;3;;0;O;Terratetto plurifamiliare;45.62680;9.32370;Via IV Novembre;Arcore;Arcore;0;btcad;0|0|0
+134942795;279000;130;3;1;3;1;O;Trilocale;45.62740;9.32750;Via Ferruccio Gilera;Arcore;Arcore;0;btcag;0|0|0
+134959965;277000;97;2;1;T;0;N;Loft;45.64500;9.26600;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+134960189;287000;96;2;2;T;0;N;Loft;45.64500;9.26600;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+134960539;362000;192;2;2;T;0;N;Loft;45.64500;9.26600;Piazza Edmondo Frette;Sovico;Sovico;0;ci;0|0|0
+134973807;210000;90;3;1;1;0;O;Appartamento;45.62246;9.33617;Via Enrico Toti;Arcore;Arcore;1;ba;0|0|0
+134992847;495000;190;5;2;3;1;B;Attico;45.60100;9.30050;Via Monte Grappa;Villasanta;Villasanta;0;btc;0|0|0
+134993557;475000;183;4;2;2 - 3;1;N;Attico;45.62440;9.32150;Via Alfonso Casati;Arcore;Arcore;0;btcgd;0|0|0
+134993559;125000;526;5+;3;;0;R;Cascina;45.62570;9.29840;Cascina Molino;Biassono;Biassono;0;btcd;0|0|0
+134996383;169000;116;4;2;;0;R;Terratetto unifamiliare;45.61170;9.32700;Via Giambattista Morgagni;Arcore;Arcore;0;bcad;0|0|0
+135008687;371100;116;4;2;2;1;N;Quadrilocale;45.64320;9.26850;Via Laghetto;Sovico;Sovico;0;btcgd;0|0|0
+135008873;382000;119;4;2;1;1;N;Quadrilocale;45.64320;9.26850;Via Laghetto;Sovico;Sovico;0;btcgd;0|0|0
+135029387;390000;195;5;3;;0;O;Villa a schiera;45.62020;9.31250;Via Natale Beretta;Arcore;Arcore;0;bcaji;0|0|0
+135033347;228000;85;3;2;;0;N;Terratetto unifamiliare;45.63350;9.27320;Via Via Dante Alighieri;Biassono;Biassono;0;tca;0|0|0
+135041755;285000;125;3;2;3;1;B;Trilocale;45.59830;9.29620;Via Angelo Farina 25;Villasanta;Villasanta;0;btca;0|0|0
+135043047;143000;75;3;1;T;0;B;Trilocale;45.64810;9.26460;Via Giovanni da Sovico;Sovico;Sovico;0;;0|0|0
+135044907;290000;130;4;1;;0;B;Villa unifamiliare;45.64760;9.27024;Via San Francesco d'Assisi;Sovico;Sovico;0;bd;0|0|0
+135049161;149000;115;4;1;1;0;B;Quadrilocale;45.62930;9.27560;Via Pietro Verri;Biassono;Biassono;0;;0|0|0
+135059541;255000;134;3;1;;0;R;Villa unifamiliare;45.62180;9.31997;Via Giuseppe Verdi 7;Arcore;Arcore;0;j;0|0|0
+135065801;269000;88;3;1;1;1;N;Trilocale;45.64720;9.27220;Vicolo 2 S. Francesco;Sovico;Sovico;0;bci;0|0|0
+135073963;135000;105;4;2;1;0;B;Quadrilocale;45.64800;9.26149;Via Camillo Benso Conte di Cavour;Sovico;Sovico;0;b;0|0|0
