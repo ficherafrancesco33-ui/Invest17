@@ -1799,8 +1799,9 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "fatto",
-   "data": "2026-11-25"
+   "stato": "bloccato",
+   "data": "2026-11-25",
+   "nota": "75/77, 403 il 25/11"
   },
   {
    "n": "Giussano",
