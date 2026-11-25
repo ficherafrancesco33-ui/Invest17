@@ -2076,6 +2076,65 @@
 134989527;€/m² impossibile
 134989575;€/m² impossibile
 134990095;€/m² impossibile
+81652596;senza canone o m²
+83766889;affitto breve / turistico
+90650231;non residenziale
+90650233;non residenziale
+98072584;non residenziale
+100656645;non residenziale
+115538487;non residenziale
+118524063;senza canone o m²
+118627089;affitto breve / turistico
+118789237;affitto breve / turistico
+118789241;affitto breve / turistico
+119199175;privato: troppe poche foto
+120959090;non residenziale
+121096702;non residenziale
+122076022;affitto breve / turistico
+122117660;non residenziale
+122910332;privato: troppe poche foto
+124075959;m² fuori scala
+124456615;affitto breve / turistico
+124456633;affitto breve / turistico
+125523559;non residenziale
+126033859;m² fuori scala
+126225771;privato: troppe poche foto
+126843107;non residenziale
+127836784;€/m² impossibile
+127936120;m² fuori scala
+128429694;privato: troppe poche foto
+130455916;non residenziale
+130589078;uso non abitativo
+130993706;privato: troppe poche foto
+131899198;privato: troppe poche foto
+132030064;privato: troppe poche foto
+132128420;non residenziale
+132364222;non residenziale
+133287222;non residenziale
+133437204;m² fuori scala
+133480094;m² fuori scala
+133536868;privato: troppe poche foto
+133694590;privato: troppe poche foto
+133740602;senza canone o m²
+133823994;privato: troppe poche foto
+133903279;m² fuori scala
+134068237;non residenziale
+134259243;uso non abitativo
+134319847;privato: troppe poche foto
+134387639;senza canone o m²
+134502055;privato: troppe poche foto
+134551801;privato: troppe poche foto
+134569829;privato: troppe poche foto
+134605385;non residenziale
+134613003;non residenziale
+134613005;non residenziale
+134881747;€/m² impossibile
+134883045;€/m² impossibile
+134914863;€/m² impossibile
+134926439;€/m² impossibile
+134947797;privato: troppe poche foto
+135033029;canone fuori scala
+135051143;privato: troppe poche foto
 114931621;doppione
 118471483;doppione
 123818193;doppione
@@ -3482,6 +3541,29 @@
 134955569;doppione
 134989677;doppione
 134990113;doppione
+55859176;doppione
+87224896;doppione
+87226080;doppione
+87229932;doppione
+124382111;doppione
+132760508;doppione
+133486798;doppione
+133486832;doppione
+133888312;doppione
+134507955;doppione
+134530489;doppione
+134608235;doppione
+134609097;doppione
+134609187;doppione
+134638291;doppione
+134661145;doppione
+134780667;doppione
+134793885;doppione
+134898905;doppione
+134899673;doppione
+134989721;doppione
+135008861;doppione
+135056031;doppione
 98412190;doppione
 115749769;doppione
 117371577;doppione
@@ -3612,6 +3694,11 @@
 134369491;doppione
 134720719;doppione
 134725133;doppione
+124007765;doppione
+133798364;doppione
+133819380;doppione
+133870502;doppione
+134492719;doppione
 86131296;privato: canone troppo basso per la zona
 90082527;privato: canone troppo basso per la zona
 100111866;privato: canone troppo basso per la zona
@@ -3667,3 +3754,6 @@
 134907619;privato: canone troppo basso per la zona
 134907669;privato: canone troppo basso per la zona
 134907951;privato: canone troppo basso per la zona
+133448274;privato: canone troppo basso per la zona
+134907351;privato: canone troppo basso per la zona
+135048941;privato: canone troppo basso per la zona

@@ -2021,7 +2021,8 @@
    "path": "/affitto-case/nerviano/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:lainate",
@@ -2029,7 +2030,8 @@
    "path": "/affitto-case/lainate/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:pogliano-milanese",
@@ -2037,7 +2039,8 @@
    "path": "/affitto-case/pogliano-milanese/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:pregnana-milanese",
@@ -2045,7 +2048,8 @@
    "path": "/affitto-case/pregnana-milanese/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:vanzago",
@@ -2053,7 +2057,8 @@
    "path": "/affitto-case/vanzago/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:arluno",
@@ -2061,7 +2066,8 @@
    "path": "/affitto-case/arluno/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:melzo",
@@ -2069,7 +2075,8 @@
    "path": "/affitto-case/melzo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:pozzo-d-adda",
@@ -2077,7 +2084,8 @@
    "path": "/affitto-case/pozzo-d-adda/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:trezzo-sull-adda",
@@ -2085,7 +2093,8 @@
    "path": "/affitto-case/trezzo-sull-adda/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:inzago",
@@ -2093,7 +2102,8 @@
    "path": "/affitto-case/inzago/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:cassano-d-adda",
@@ -2101,7 +2111,8 @@
    "path": "/affitto-case/cassano-d-adda/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:truccazzano",
@@ -2109,7 +2120,8 @@
    "path": "/affitto-case/truccazzano/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:liscate",
@@ -2117,7 +2129,8 @@
    "path": "/affitto-case/liscate/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:san-zenone-al-lambro",
@@ -2133,7 +2146,8 @@
    "path": "/affitto-case/cesano-maderno/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:solaro",
@@ -2141,7 +2155,8 @@
    "path": "/affitto-case/solaro/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:canegrate",
@@ -2149,7 +2164,8 @@
    "path": "/affitto-case/canegrate/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:san-vittore-olona",
@@ -2157,7 +2173,8 @@
    "path": "/affitto-case/san-vittore-olona/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:cerro-maggiore",
@@ -2165,7 +2182,8 @@
    "path": "/affitto-case/cerro-maggiore/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:rescaldina",
@@ -2173,7 +2191,8 @@
    "path": "/affitto-case/rescaldina/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:busto-garolfo",
@@ -2181,7 +2200,8 @@
    "path": "/affitto-case/busto-garolfo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:castano-primo",
@@ -2189,7 +2209,8 @@
    "path": "/affitto-case/castano-primo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:cuggiono",
@@ -2197,7 +2218,8 @@
    "path": "/affitto-case/cuggiono/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:robecco-sul-naviglio",
@@ -2205,7 +2227,8 @@
    "path": "/affitto-case/robecco-sul-naviglio/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:motta-visconti",
@@ -2213,7 +2236,8 @@
    "path": "/affitto-case/motta-visconti/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:besate",
@@ -2229,7 +2253,8 @@
    "path": "/affitto-case/casorate-primo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:monza",
@@ -2237,7 +2262,8 @@
    "path": "/affitto-case/monza/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:brugherio",
@@ -2245,7 +2271,8 @@
    "path": "/affitto-case/brugherio/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:lissone",
@@ -2253,7 +2280,8 @@
    "path": "/affitto-case/lissone/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:desio",
@@ -2261,7 +2289,8 @@
    "path": "/affitto-case/desio/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:seregno",
@@ -2269,7 +2298,8 @@
    "path": "/affitto-case/seregno/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:muggio",
@@ -2277,7 +2307,8 @@
    "path": "/affitto-case/muggio/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:nova-milanese",
@@ -2285,7 +2316,8 @@
    "path": "/affitto-case/nova-milanese/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:varedo",
@@ -2293,7 +2325,8 @@
    "path": "/affitto-case/varedo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:vimercate",
@@ -2301,7 +2334,8 @@
    "path": "/affitto-case/vimercate/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:agrate-brianza",
@@ -2309,7 +2343,8 @@
    "path": "/affitto-case/agrate-brianza/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:concorezzo",
@@ -2317,7 +2352,8 @@
    "path": "/affitto-case/concorezzo/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:arcore",
@@ -2325,7 +2361,8 @@
    "path": "/affitto-case/arcore/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:villasanta",
@@ -2333,7 +2370,8 @@
    "path": "/affitto-case/villasanta/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:biassono",
@@ -2341,7 +2379,8 @@
    "path": "/affitto-case/biassono/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:macherio",
@@ -2349,7 +2388,8 @@
    "path": "/affitto-case/macherio/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:sovico",
@@ -2357,7 +2397,8 @@
    "path": "/affitto-case/sovico/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:giussano",
@@ -2365,7 +2406,8 @@
    "path": "/affitto-case/giussano/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:carate-brianza",
@@ -2373,7 +2415,8 @@
    "path": "/affitto-case/carate-brianza/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:meda",
@@ -2381,7 +2424,8 @@
    "path": "/affitto-case/meda/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:seveso",
@@ -2389,15 +2433,17 @@
    "path": "/affitto-case/seveso/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
-   "n": "A:C:bovisiomasciago",
+   "n": "A:C:bovisio-masciago",
    "nome": "Bovisio-Masciago",
-   "path": "/affitto-case/bovisiomasciago/",
+   "path": "/affitto-case/bovisio-masciago/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:lentate-sul-seveso",
@@ -2405,7 +2451,8 @@
    "path": "/affitto-case/lentate-sul-seveso/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   },
   {
    "n": "A:C:besana-in-brianza",
@@ -2413,7 +2460,8 @@
    "path": "/affitto-case/besana-in-brianza/",
    "tipo": "comune",
    "gruppo": "provincia",
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-25"
   }
  ]
 }
