@@ -1799,8 +1799,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "bloccato",
-   "data": "2026-11-25",
+   "stato": "fatto",
+   "data": "2026-11-26",
    "nota": "75/77, 403 il 25/11"
   },
   {
@@ -1809,7 +1809,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Carate Brianza",
@@ -1817,7 +1818,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Meda",
@@ -1825,7 +1827,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Seveso",
@@ -1833,7 +1836,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Bovisio-Masciago",
@@ -1841,7 +1845,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Lentate sul Seveso",
@@ -1849,7 +1854,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   },
   {
    "n": "Besana in Brianza",
@@ -1857,7 +1863,8 @@
    "tipo": "comune",
    "prov": "MB",
    "anello": 4,
-   "stato": "da"
+   "stato": "fatto",
+   "data": "2026-11-26"
   }
  ]
 }
