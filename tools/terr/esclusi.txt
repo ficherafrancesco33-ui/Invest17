@@ -5,6 +5,7 @@
 127598188;locale C/2 (deposito) venduto come non abitativo
 133177096;quota / comproprietà
 134389767;uso non abitativo
+134961547;nuda proprietà
 98104068;progetto / nuova costruzione
 99954196;non residenziale
 99954200;non residenziale
@@ -436,7 +437,6 @@
 134910693;non residenziale
 134911525;uso non abitativo
 134924447;uso non abitativo
-134961547;nuda proprietà
 134961787;non residenziale
 89129331;non residenziale
 96130614;non residenziale
@@ -1629,3 +1629,6 @@
 135014829;non residenziale
 135044069;nuda proprietà
 135078767;nuda proprietà
+134964403;nuda proprietà
+135049055;progetto / nuova costruzione
+135063385;nuda proprietà

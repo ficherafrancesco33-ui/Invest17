@@ -296,7 +296,8 @@
    "path": "/vendita-case/milano/pagano/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quartiere Forlanini",
@@ -325,14 +326,16 @@
    "path": "/vendita-case/milano/garibaldi-corso-como/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Paolo Sarpi",
    "path": "/vendita-case/milano/paolo-sarpi/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Washington",
@@ -354,7 +357,8 @@
    "path": "/vendita-case/milano/melchiorre-gioia/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Frua",
@@ -369,7 +373,8 @@
    "path": "/vendita-case/milano/ortica/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Piazza Napoli",
@@ -383,7 +388,8 @@
    "path": "/vendita-case/milano/isola/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Sempione",
@@ -420,7 +426,8 @@
    "path": "/vendita-case/milano/pasteur/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Casoretto",
@@ -435,7 +442,8 @@
    "path": "/vendita-case/milano/maggiolina/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "City Life",
@@ -450,7 +458,8 @@
    "path": "/vendita-case/milano/lambrate/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cenisio",
@@ -465,7 +474,8 @@
    "path": "/vendita-case/milano/gambara/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cascina dei Pomi",
@@ -524,14 +534,16 @@
    "path": "/vendita-case/milano/parco-trotter/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Monte Rosa - Lotto",
    "path": "/vendita-case/milano/monte-rosa-lotto/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Turro",
@@ -545,7 +557,8 @@
    "path": "/vendita-case/milano/istria/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Portello - Parco Vittoria",
@@ -566,14 +579,16 @@
    "path": "/vendita-case/milano/ghisolfa-mac-mahon/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Greco - Segnano",
    "path": "/vendita-case/milano/greco-segnano/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Prato Centenaro",
@@ -595,14 +610,16 @@
    "path": "/vendita-case/milano/inganni/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Parco Lambro",
    "path": "/vendita-case/milano/parco-lambro/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quartiere Feltre",
@@ -616,7 +633,8 @@
    "path": "/vendita-case/milano/gorla/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "QT8",
@@ -668,7 +686,8 @@
    "path": "/vendita-case/milano/monte-stella/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Crescenzago",
@@ -714,7 +733,8 @@
    "path": "/vendita-case/milano/niguarda/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Affori",
@@ -788,7 +808,8 @@
    "path": "/vendita-case/milano/musocco/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quarto Oggiaro",
