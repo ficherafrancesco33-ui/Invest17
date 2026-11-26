@@ -346,7 +346,8 @@
    "path": "/vendita-case/milano/centrale/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Melchiorre Gioia",
@@ -360,7 +361,8 @@
    "path": "/vendita-case/milano/frua/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Ortica",
@@ -402,7 +404,8 @@
    "path": "/vendita-case/milano/de-angeli/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Amendola - Buonarroti",
@@ -439,7 +442,8 @@
    "path": "/vendita-case/milano/city-life/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Lambrate",
@@ -453,7 +457,8 @@
    "path": "/vendita-case/milano/cenisio/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Gambara",
@@ -482,7 +487,8 @@
    "path": "/vendita-case/milano/farini/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Rovereto",
@@ -581,7 +587,8 @@
    "path": "/vendita-case/milano/cimiano/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Inganni",
@@ -623,7 +630,8 @@
    "path": "/vendita-case/milano/dergano/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Ca' Granda",
@@ -667,14 +675,16 @@
    "path": "/vendita-case/milano/crescenzago/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Certosa",
    "path": "/vendita-case/milano/certosa/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bicocca",
@@ -792,7 +802,8 @@
    "path": "/vendita-case/milano/gallaratese/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bruzzano",
@@ -807,7 +818,8 @@
    "path": "/vendita-case/milano/comasina/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Baggio",
@@ -857,7 +869,8 @@
    "path": "/vendita-case/milano/figino/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Opera",

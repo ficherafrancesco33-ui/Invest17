@@ -1624,3 +1624,8 @@
 135051563;asta
 135062057;asta
 135062737;asta
+134997481;nuda proprietà
+135006569;progetto / nuova costruzione
+135014829;non residenziale
+135044069;nuda proprietà
+135078767;nuda proprietà
