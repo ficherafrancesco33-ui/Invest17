@@ -1,6 +1,6 @@
 # Osservatorio Keystone — aggiornato al 26/11/2026
 
-Dagli annunci letti su Immobiliare.it: 38.661 in vendita e 17.042 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
+Dagli annunci letti su Immobiliare.it: 38.751 in vendita e 17.042 in affitto, affidabili (aste, quote, stanze, truffe e doppioni già tolti).
 Prezzi e canoni sono quelli CHIESTI: si tratta di solito un 5–10% sotto la vendita e un 5–10% sotto l'affitto.
 
 Legenda: €/m² vendita (25°–mediana–75°), affitto €/m² al mese, resa = rendita lorda delle mediane, anni = prezzo/affitto annuo,
@@ -18,10 +18,10 @@ tensione = affitti offerti ogni 100 case in vendita (bassa = pochi affitti sul m
 | Baranzate | 2.216 | 14.5 | 7.9% | 130.000 € | 12.7 |
 | Cornaredo | 2.426 | 15.6 | 7.7% | 150.000 € | 13.0 |
 | Concorezzo | 2.450 | 15.5 | 7.6% | 130.000 € | 13.2 |
-| Magenta | 1.963 | 12.5 | 7.6% | 125.000 € | 13.1 |
-| Paderno Dugnano | 2.500 | 15.6 | 7.5% | 165.000 € | 13.4 |
+| Magenta | 1.966 | 12.5 | 7.6% | 125.000 € | 13.1 |
+| Paderno Dugnano | 2.492 | 15.6 | 7.5% | 159.000 € | 13.3 |
 | San Giuliano Milanese | 2.548 | 15.6 | 7.3% | 151.000 € | 13.6 |
-| Garbagnate Milanese | 2.304 | 13.9 | 7.2% | 160.000 € | 13.8 |
+| Garbagnate Milanese | 2.318 | 13.9 | 7.2% | 160.000 € | 13.9 |
 | Milano · Comasina | 3.141 | 18.5 | 7.1% | 220.000 € | 14.1 |
 | Milano · Quintosole - Chiaravalle | 3.161 | 18.4 | 7.0% | 205.000 € | 14.3 |
 | Abbiategrasso | 2.007 | 11.6 | 6.9% | 140.000 € | 14.4 |
@@ -79,11 +79,11 @@ Differenza tra ristrutturato e da ristrutturare, meno i lavori (1.100 €/m² a 
 ## Regole imparate (mediana delle zone)
 
 - Arredato, affitto in più: -10% (su 125 zone)
-- Terrazzo, prezzo in più: +16% (su 242 zone)
+- Terrazzo, prezzo in più: +15% (su 242 zone)
 - Box, prezzo in più: -1% (su 164 zone)
 - Giardino, prezzo in più: +6% (su 136 zone)
 - Piano alto (4°+) con ascensore: +6% (su 197 zone)
-- Piano terra: -2% (su 234 zone)
+- Piano terra: -2% (su 235 zone)
 - Resa dei piccoli (<50 m²) rispetto ai medi (50–85): +15% (su 132 zone)
 - Resa dei grandi (≥85 m²) rispetto ai medi: -14% (su 156 zone)
 
@@ -114,17 +114,17 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **venditore**: privato +1% (1283) · agenzia 0% (11953)
 - **dotazioni** (chi ce l'ha rispetto a chi no): piscina +27% (89) · terrazzo -1% (1765) · box / garage -1% (157) · portineria -2% (83) · fibra -4% (7215) · posto auto -5% (64) · esposizione interna -5% (2227) · giardino -6% (89) · aria condizionata -8% (53) · cantina -9% (2289) · arredato -13% (11261) · balcone -14% (5458) · doppia esposizione -14% (2915)
 
-### Vendita · fuori Milano (22.190 annunci)
+### Vendita · fuori Milano (22.280 annunci)
 
-- **tipologia**: Attico +16% (788) · Monolocale +6% (564) · Quadrilocale +2% (3097) · Bilocale +1% (4587) · Loft +1% (60) · Trilocale 0% (8226) · Appartamento in villa -2% (109)
-- **locali**: 1 locali +4% (641) · 4 locali +2% (4788) · 2 locali +1% (4995) · 3 locali 0% (9238) · 5 locali -6% (1304) · 5+ locali -17% (1146)
-- **taglia**: sotto 50 m² +7% (922) · 50–85 m² +1% (6029) · 85 m² e oltre -1% (15239)
-- **stato**: Nuovo / In costruzione +23% (4926) · Ottimo / Ristrutturato +2% (7030) · Buono / Abitabile -11% (8144) · Da ristrutturare -27% (1469)
-- **piano**: 1°–2° +3% (8067) · terra / rialzato +2% (4198) · 3° e oltre con ascensore 0% (3942) · 3° e oltre SENZA ascensore -19% (609)
-- **riscaldamento**: Autonomo +1% (13656) · Centralizzato -1% (7764) · Assente -8% (770)
-- **bagni**: 2+ bagni +5% (11597) · 1 bagno -5% (10294)
-- **venditore**: privato +2% (702) · agenzia 0% (21488)
-- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +17% (296) · terrazzo +15% (7881) · piscina +11% (389) · giardino +8% (1926) · fibra +5% (9916) · portineria +4% (32) · esposizione interna 0% (2649) · posto auto -3% (292) · arredato -3% (4400) · box / garage -4% (2513) · cantina -7% (10910) · doppia esposizione -8% (6279) · balcone -9% (13997)
+- **tipologia**: Attico +15% (793) · Monolocale +6% (563) · Quadrilocale +2% (3099) · Loft +1% (60) · Bilocale +1% (4613) · Trilocale 0% (8265) · Appartamento in villa -2% (110)
+- **locali**: 1 locali +4% (640) · 4 locali +2% (4800) · 2 locali +1% (5025) · 3 locali 0% (9281) · 5 locali -6% (1308) · 5+ locali -17% (1148)
+- **taglia**: sotto 50 m² +6% (928) · 50–85 m² +1% (6052) · 85 m² e oltre -1% (15300)
+- **stato**: Nuovo / In costruzione +23% (4938) · Ottimo / Ristrutturato +2% (7061) · Buono / Abitabile -11% (8182) · Da ristrutturare -27% (1474)
+- **piano**: 1°–2° +3% (8092) · terra / rialzato +2% (4215) · 3° e oltre con ascensore 0% (3958) · 3° e oltre SENZA ascensore -19% (619)
+- **riscaldamento**: Autonomo +1% (13710) · Centralizzato -1% (7797) · Assente -8% (773)
+- **bagni**: 2+ bagni +5% (11634) · 1 bagno -5% (10347)
+- **venditore**: privato +2% (705) · agenzia 0% (21575)
+- **dotazioni** (chi ce l'ha rispetto a chi no): classe A +17% (297) · terrazzo +16% (8022) · piscina +11% (403) · giardino +8% (1936) · fibra +5% (9964) · portineria +4% (32) · esposizione interna 0% (2663) · box / garage -3% (2528) · posto auto -3% (296) · arredato -3% (4568) · cantina -6% (11414) · doppia esposizione -7% (6752) · balcone -9% (14147)
 
 ### Affitto · fuori Milano (3.681 annunci)
 
@@ -138,13 +138,13 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 - **venditore**: privato +7% (559) · agenzia 0% (3122)
 - **dotazioni** (chi ce l'ha rispetto a chi no): arredato +17% (3165) · esposizione interna +4% (328) · piscina +3% (95) · fibra +1% (1236) · giardino 0% (72) · terrazzo -2% (761) · posto auto -5% (48) · box / garage -6% (153) · cantina -6% (1115) · doppia esposizione -6% (748) · balcone -14% (1984)
 
-### Cosa va di più · vendita (8.160 annunci riletti)
+### Cosa va di più · vendita (10.915 annunci riletti)
 
-- **tipologia** (spariti tra una lettura e l'altra): Bilocale 5% · Monolocale 5% · Loft 4% · Appartamento 4% · Quadrilocale 3% · Villa bifamiliare 3% · Trilocale 3%
-- **taglia** (spariti tra una lettura e l'altra): sotto 50 m² 6% · 50–85 m² 4% · 85 m² e oltre 3%
-- **stato** (spariti tra una lettura e l'altra): Da ristrutturare 4% · Ottimo / Ristrutturato 4% · Buono / Abitabile 3% · Nuovo / In costruzione 3%
-- **piano** (spariti tra una lettura e l'altra): terra / rialzato 4% · 3° e oltre con ascensore 4% · 1°–2° 4% · 3° e oltre SENZA ascensore 3%
-- **locali** (spariti tra una lettura e l'altra): 2 locali 5% · 5 locali 5% · 1 locali 4% · 4 locali 3% · 3 locali 3% · 5+ locali 1%
+- **tipologia** (spariti tra una lettura e l'altra): Monolocale 5% · Bilocale 4% · Loft 4% · Villa bifamiliare 4% · Appartamento 3% · Quadrilocale 3% · Trilocale 3%
+- **taglia** (spariti tra una lettura e l'altra): sotto 50 m² 5% · 50–85 m² 3% · 85 m² e oltre 3%
+- **stato** (spariti tra una lettura e l'altra): Da ristrutturare 4% · Ottimo / Ristrutturato 3% · Buono / Abitabile 3% · Nuovo / In costruzione 2%
+- **piano** (spariti tra una lettura e l'altra): 3° e oltre con ascensore 4% · terra / rialzato 4% · 1°–2° 3% · 3° e oltre SENZA ascensore 3%
+- **locali** (spariti tra una lettura e l'altra): 1 locali 5% · 2 locali 4% · 5 locali 4% · 3 locali 3% · 4 locali 3% · 5+ locali 1%
 
 ### Cosa va di più · affitto (2.995 annunci riletti)
 
@@ -355,26 +355,26 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 | Darfo Boario Terme | 0 | 5 | — | 11.8 | — | — | — | — | — |
 | Desio | 289 | 17 | 1.793–2.147–2.663 | 11.5 | 6.4% | 6 | 3% | 16% | 1 € |
 | Erba | 0 | 10 | — | 11.8 | — | — | — | — | — |
-| Gaggiano | 73 | 4 | 1.991–2.333–2.706 | — | — | — | 3% | 11% | -130 € |
-| Garbagnate Milanese | 295 | 14 | 1.929–2.304–2.741 | 13.9 | 7.2% | 5 | 2% | 27% | -116 € |
+| Gaggiano | 76 | 4 | 1.987–2.345–2.705 | — | — | — | 3% | 11% | -130 € |
+| Garbagnate Milanese | 303 | 14 | 1.938–2.318–2.742 | 13.9 | 7.2% | 5 | 2% | 26% | -158 € |
 | Genova | 0 | 937 | — | 12.0 | — | — | — | — | — |
 | Giussano | 255 | 8 | 1.642–2.099–2.608 | 11.5 | 6.6% | 3 | 1% | 26% | 91 € |
-| Gorgonzola | 177 | 14 | 2.244–2.625–3.130 | 14.2 | 6.5% | 8 | 3% | 25% | -11 € |
+| Gorgonzola | 179 | 14 | 2.236–2.625–3.122 | 14.2 | 6.5% | 8 | 3% | 25% | 131 € |
 | Inzago | 131 | 3 | 2.098–2.532–2.906 | — | — | — | 2% | 53% | 437 € |
-| Lacchiarella | 99 | 5 | 1.997–2.440–2.972 | 11.3 | 5.6% | 5 | 1% | 32% | -519 € |
+| Lacchiarella | 100 | 5 | 1.998–2.436–2.971 | 11.3 | 5.6% | 5 | 2% | 32% | -519 € |
 | Lainate | 262 | 18 | 1.984–2.482–2.961 | 11.3 | 5.5% | 7 | 1% | 39% | -69 € |
 | Leggiuno | 0 | 11 | — | 12.1 | — | — | — | — | — |
-| Legnano | 631 | 64 | 1.613–2.070–2.522 | 11.9 | 6.9% | 10 | 5% | 15% | -69 € |
+| Legnano | 655 | 64 | 1.610–2.059–2.500 | 11.9 | 6.9% | 10 | 5% | 15% | -79 € |
 | Lentate sul Seveso | 188 | 10 | 1.561–1.982–2.552 | 10.8 | 6.5% | 5 | 1% | 21% | -30 € |
-| Limbiate | 278 | 4 | 1.645–1.953–2.255 | — | — | — | 6% | 7% | -249 € |
+| Limbiate | 284 | 4 | 1.636–1.944–2.255 | — | — | — | 6% | 7% | -206 € |
 | Liscate | 39 | 2 | 2.007–2.222–2.638 | — | — | — | 3% | 8% | — |
 | Lissone | 510 | 65 | 2.267–2.784–3.148 | 13.6 | 5.9% | 13 | 2% | 40% | 80 € |
-| Locate di Triulzi | 85 | 2 | 2.083–2.362–2.940 | — | — | — | 2% | 5% | — |
+| Locate di Triulzi | 89 | 2 | 2.089–2.372–2.941 | — | — | — | 2% | 4% | — |
 | Macherio | 45 | 4 | 1.619–2.156–2.541 | — | — | — | 4% | 13% | 516 € |
-| Magenta | 256 | 12 | 1.553–1.963–2.704 | 12.5 | 7.6% | 5 | 3% | 22% | 13 € |
+| Magenta | 267 | 12 | 1.553–1.966–2.699 | 12.5 | 7.6% | 4 | 3% | 22% | 13 € |
 | Meda | 202 | 10 | 1.545–1.857–2.410 | 14.3 | 9.2% | 5 | 2% | 20% | 58 € |
-| Mediglia | 102 | 6 | 1.848–2.150–2.581 | 11.4 | 6.4% | 6 | 5% | 19% | -157 € |
-| Melegnano | 241 | 19 | 2.158–2.593–3.143 | 11.7 | 5.4% | 8 | 7% | 29% | -13 € |
+| Mediglia | 107 | 6 | 1.893–2.151–2.590 | 11.4 | 6.4% | 6 | 5% | 19% | -174 € |
+| Melegnano | 243 | 19 | 2.156–2.593–3.142 | 11.7 | 5.4% | 8 | 7% | 30% | -13 € |
 | Melzo | 178 | 11 | 1.989–2.327–2.674 | 13.0 | 6.7% | 6 | 2% | 33% | -138 € |
 | Monza | 1403 | 330 | 2.488–3.188–3.897 | 14.6 | 5.5% | 24 | 2% | 29% | 6 € |
 | Mortara | 0 | 9 | — | 8.4 | — | — | — | — | — |
@@ -383,10 +383,10 @@ Ogni annuncio è confrontato con la mediana €/m² della sua zona: +10% vuol di
 | Nerviano | 153 | 6 | 1.656–2.115–2.560 | 14.4 | 8.2% | 4 | 6% | 30% | 20 € |
 | Nova Milanese | 195 | 4 | 1.965–2.451–3.107 | — | — | — | 1% | 26% | -88 € |
 | Novara | 0 | 188 | — | 9.9 | — | — | — | — | — |
-| Novate Milanese | 156 | 14 | 2.650–3.218–3.384 | 12.8 | 4.8% | 9 | 1% | 42% | -590 € |
-| Noviglio | 59 | 1 | 1.561–1.842–2.308 | — | — | — | 5% | 8% | — |
-| Opera | 233 | 22 | 2.562–2.980–3.282 | 13.6 | 5.5% | 9 | 4% | 27% | 232 € |
-| Paderno Dugnano | 328 | 19 | 2.062–2.500–3.065 | 15.6 | 7.5% | 6 | 3% | 29% | -141 € |
+| Novate Milanese | 159 | 14 | 2.645–3.218–3.377 | 12.8 | 4.8% | 9 | 1% | 41% | -590 € |
+| Noviglio | 61 | 1 | 1.560–1.842–2.316 | — | — | — | 5% | 8% | — |
+| Opera | 238 | 22 | 2.549–2.973–3.281 | 13.6 | 5.5% | 9 | 5% | 28% | 197 € |
+| Paderno Dugnano | 342 | 19 | 2.065–2.492–3.061 | 15.6 | 7.5% | 6 | 3% | 28% | -141 € |
 | Pantigliate | 49 | 5 | 1.967–2.118–2.547 | 14.9 | 8.4% | 10 | 6% | 6% | — |
 | Parabiago | 369 | 28 | 1.719–2.164–2.759 | 10.0 | 5.5% | 8 | 4% | 33% | 163 € |
 | Paullo | 139 | 5 | 1.787–2.126–2.626 | 13.3 | 7.5% | 4 | 4% | 14% | — |

@@ -768,6 +768,8 @@
 129914546;nuda proprietà
 129977636;nuda proprietà
 130123744;non residenziale
+130503516;affitto con riscatto
+130503528;affitto con riscatto
 130513228;nuda proprietà
 130764134;progetto / nuova costruzione
 131120526;nuda proprietà
@@ -1614,3 +1616,6 @@
 135051411;asta
 135061739;uso non abitativo
 135062651;asta
+135008127;nuda proprietà
+135021385;asta
+135062889;asta
