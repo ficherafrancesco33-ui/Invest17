@@ -162,6 +162,7 @@
 134460365;stanza / posto letto
 134474725;stanza / posto letto
 134475017;stanza / posto letto
+134546671;senza canone o m²
 134594137;senza canone o m²
 134607307;privato: troppe poche foto
 134612067;privato: troppe poche foto
@@ -312,13 +313,14 @@
 133595440;€/m² impossibile
 133625906;non residenziale
 134019571;asta
+134045931;senza canone o m²
 134399973;senza canone o m²
 134521567;€/m² impossibile
 134639571;affitto breve / turistico
 134716837;non residenziale
 134781483;privato: troppe poche foto
-134826121;affitto breve / turistico
 134828391;€/m² impossibile
+134828817;affitto breve / turistico
 134861539;asta
 134879549;€/m² impossibile
 134880091;€/m² impossibile
@@ -2140,6 +2142,16 @@
 135055929;€/m² impossibile
 135055933;€/m² impossibile
 135056113;€/m² impossibile
+122021244;€/m² impossibile
+134993875;asta
+135030563;€/m² impossibile
+135052691;€/m² impossibile
+135056009;€/m² impossibile
+135059765;asta
+135072295;affitto breve / turistico
+135089905;€/m² impossibile
+135090047;€/m² impossibile
+135090051;€/m² impossibile
 114931621;doppione
 118471483;doppione
 123818193;doppione
@@ -2182,7 +2194,6 @@
 133605912;doppione
 133645298;doppione
 133740342;doppione
-133763406;doppione
 133803178;doppione
 133814218;doppione
 133814220;doppione
@@ -2241,7 +2252,6 @@
 125449309;doppione
 126039057;doppione
 126214997;doppione
-126908627;doppione
 126909371;doppione
 127473590;doppione
 128268300;doppione
@@ -2250,7 +2260,6 @@
 130150890;doppione
 130440388;doppione
 130564274;doppione
-130611316;doppione
 130691576;doppione
 130988772;doppione
 130994146;doppione
@@ -2290,7 +2299,6 @@
 133414906;doppione
 133414910;doppione
 133492440;doppione
-133568934;doppione
 133602336;doppione
 133631398;doppione
 133690080;doppione
@@ -2335,11 +2343,8 @@
 134883297;doppione
 134883299;doppione
 134883951;doppione
-134884023;doppione
 134885333;doppione
 134885427;doppione
-134885465;doppione
-134885611;doppione
 134885839;doppione
 134885893;doppione
 134885995;doppione
@@ -2432,7 +2437,6 @@
 131290748;doppione
 131400608;doppione
 131400764;doppione
-132063524;doppione
 132124062;doppione
 132180764;doppione
 132231284;doppione
@@ -3594,6 +3598,71 @@
 135090215;doppione
 135090465;doppione
 135092723;doppione
+95612140;doppione
+122163324;doppione
+125108165;doppione
+125410373;doppione
+126908553;doppione
+130527986;doppione
+134936517;doppione
+134981459;doppione
+134989401;doppione
+134989495;doppione
+134989835;doppione
+134989999;doppione
+134990111;doppione
+134990495;doppione
+134993585;doppione
+134995667;doppione
+135005965;doppione
+135006177;doppione
+135007191;doppione
+135007823;doppione
+135012301;doppione
+135012311;doppione
+135013979;doppione
+135014193;doppione
+135030535;doppione
+135030557;doppione
+135030697;doppione
+135030843;doppione
+135030865;doppione
+135030889;doppione
+135031075;doppione
+135037599;doppione
+135042667;doppione
+135044569;doppione
+135054003;doppione
+135055825;doppione
+135055905;doppione
+135055921;doppione
+135055923;doppione
+135056017;doppione
+135056035;doppione
+135056037;doppione
+135056053;doppione
+135056157;doppione
+135056159;doppione
+135056183;doppione
+135056871;doppione
+135060389;doppione
+135061321;doppione
+135063389;doppione
+135066899;doppione
+135069871;doppione
+135071013;doppione
+135072841;doppione
+135074039;doppione
+135074053;doppione
+135079525;doppione
+135090007;doppione
+135090055;doppione
+135090093;doppione
+135090163;doppione
+135090225;doppione
+135090261;doppione
+135090303;doppione
+135090305;doppione
 98412190;doppione
 115749769;doppione
 117371577;doppione
@@ -3606,12 +3675,12 @@
 133875054;doppione
 134001901;doppione
 134056671;doppione
+134542063;doppione
 134664693;doppione
 127008805;doppione
 131176406;doppione
 132420886;doppione
 132659358;doppione
-132908990;doppione
 133641236;doppione
 133796432;doppione
 122599532;doppione
@@ -3737,6 +3806,7 @@
 122204544;privato: canone troppo basso per la zona
 129750876;privato: canone troppo basso per la zona
 132162578;privato: canone troppo basso per la zona
+132185210;privato: canone troppo basso per la zona
 132394314;privato: canone troppo basso per la zona
 132416214;privato: canone troppo basso per la zona
 132829048;privato: canone troppo basso per la zona

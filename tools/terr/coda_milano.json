@@ -310,7 +310,8 @@
    "path": "/vendita-case/milano/arco-della-pace/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Vercelli - Wagner",
@@ -408,7 +409,8 @@
    "path": "/vendita-case/milano/amendola-buonarroti/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Pasteur",
@@ -702,7 +704,8 @@
    "path": "/vendita-case/milano/affori/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Villa San Giovanni",
