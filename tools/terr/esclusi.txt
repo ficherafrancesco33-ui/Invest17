@@ -1600,3 +1600,5 @@
 135006575;uso non abitativo
 135028633;uso non abitativo
 135080293;uso non abitativo
+135029985;progetto / nuova costruzione
+135062435;asta
