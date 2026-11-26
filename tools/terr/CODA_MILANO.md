@@ -56,3 +56,10 @@ e aggiunge una riga a `sapere_storia.jsonl` (mediane per zona e data, per vedere
 - regole generali (ogni annuncio confrontato con la mediana della sua zona): quanto valgono tipologia, taglia, stato, piano, bagni, dotazioni,
   in vendita e in affitto, Milano e fuori; con le riletture: cosa sparisce prima (si vende o si affitta più in fretta).
 Prima di valutare un investimento o rispondere a Imma su prezzi e rendite, leggere SAPERE.md.
+
+## Riletture (dal 26/11/2026, code di vendite e affitti finite)
+Quando `coda_affitti.json` e `coda_milano.json` sono tutte "fatto": `python3 tools/terr/riletture.py` scrive `tools/terr/coda_riletture.js`
+(window.__CODAR: le 60 zone lette da più tempo, vendite e affitti insieme, nomi con "#R"). In Chrome: `__giro(__CODAR, 90)`.
+Si carica con lo script giusto (le zone "A:" sono affitti → carica_affitti.sh, le altre → carica_vendite.sh; un lotto misto va bene
+in tutti e due perché ogni archivio tiene solo i suoi). I caricamenti segnano la data di rilettura e l'osservatorio impara
+cosa sparisce prima (venduto/affittato), i ribassi e i giorni online.

@@ -188,16 +188,17 @@ for etichetta, filtro in (("Milano", lambda a: (a.get("comune") or "Milano") == 
 def va_di_piu(L, titolo):
     ult = {}
     for a in L:
-        z, l = a.get("zonaLetta"), gg(a.get("letto"))
+        z, l = (a.get("zonaLetta") or "").split("#")[0], gg(a.get("letto"))
         if z and l and (z not in ult or l > ult[z]): ult[z] = l
-    riletti = [a for a in L if gg(a.get("primo")) and ult.get(a.get("zonaLetta")) and ult[a["zonaLetta"]] > gg(a["primo"])]
+    zl = lambda a: (a.get("zonaLetta") or "").split("#")[0]
+    riletti = [a for a in L if gg(a.get("primo")) and ult.get(zl(a)) and ult[zl(a)] > gg(a["primo"])]
     if len(riletti) < 300: G.extend([f"### Cosa va di più · {titolo}", "Serve almeno una rilettura delle zone: si capirà quali annunci spariscono prima (venduti o affittati) dai prossimi giri.", ""]); return
     G.extend([f"### Cosa va di più · {titolo} ({len(riletti):,} annunci riletti)".replace(",", "."), ""])
     for nome in ("tipologia", "taglia", "stato", "piano", "locali"):
         g = defaultdict(list)
         for a in riletti:
             k = CRIT[nome](a)
-            if k: g[k].append(1 if gg(a.get("letto")) < ult[a["zonaLetta"]] else 0)
+            if k: g[k].append(1 if gg(a.get("letto")) < ult[zl(a)] else 0)
         r = sorted([(k, sum(v) / len(v), len(v)) for k, v in g.items() if len(v) >= 30], key=lambda x: -x[1])
         if r: G.append(f"- **{nome}** (spariti tra una lettura e l'altra): " + " · ".join(f"{k} {round(100 * p)}%" for k, p, n in r[:7]))
     G.append("")
