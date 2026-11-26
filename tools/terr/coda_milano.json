@@ -494,7 +494,8 @@
    "path": "/vendita-case/milano/bande-nere/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Rubattino",
@@ -634,7 +635,8 @@
    "path": "/vendita-case/milano/bovisa/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "San Siro",
@@ -676,14 +678,16 @@
    "path": "/vendita-case/milano/bicocca/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bisceglie",
    "path": "/vendita-case/milano/bisceglie/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Ponte Nuovo",
@@ -740,7 +744,8 @@
    "path": "/vendita-case/milano/bignami-ponale/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quartiere Adriano",
@@ -761,7 +766,8 @@
    "path": "/vendita-case/milano/bovisasca/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Musocco",
@@ -789,7 +795,8 @@
    "path": "/vendita-case/milano/bruzzano/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Comasina",
@@ -803,7 +810,8 @@
    "path": "/vendita-case/milano/baggio/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Vialba",
@@ -863,7 +871,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Buccinasco",
@@ -1007,7 +1016,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Pero",
@@ -1061,7 +1071,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Zibido San Giacomo",
@@ -1079,7 +1090,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Rho",
@@ -1106,7 +1118,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Garbagnate Milanese",
@@ -1214,7 +1227,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Noviglio",
@@ -1259,7 +1273,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Senago",
@@ -1394,7 +1409,8 @@
    "prov": "MI",
    "anello": 3,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Magenta",
