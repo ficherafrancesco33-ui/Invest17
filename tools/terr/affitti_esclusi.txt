@@ -2135,6 +2135,11 @@
 134947797;privato: troppe poche foto
 135033029;canone fuori scala
 135051143;privato: troppe poche foto
+135026879;senza canone o m²
+135033395;non residenziale
+135055929;€/m² impossibile
+135055933;€/m² impossibile
+135056113;€/m² impossibile
 114931621;doppione
 118471483;doppione
 123818193;doppione
@@ -2162,7 +2167,6 @@
 132075920;doppione
 132168732;doppione
 132247882;doppione
-132446100;doppione
 132460368;doppione
 132464586;doppione
 132465254;doppione
@@ -2221,7 +2225,6 @@
 134882937;doppione
 134884043;doppione
 134885491;doppione
-134886197;doppione
 134886539;doppione
 134905795;doppione
 134955105;doppione
@@ -3564,6 +3567,33 @@
 134989721;doppione
 135008861;doppione
 135056031;doppione
+134989581;doppione
+134989687;doppione
+134989841;doppione
+134989923;doppione
+134990041;doppione
+134990165;doppione
+134990509;doppione
+134999727;doppione
+135010377;doppione
+135026517;doppione
+135030625;doppione
+135030633;doppione
+135030753;doppione
+135030829;doppione
+135030835;doppione
+135033925;doppione
+135055897;doppione
+135056029;doppione
+135070941;doppione
+135076677;doppione
+135089835;doppione
+135089903;doppione
+135089943;doppione
+135090079;doppione
+135090215;doppione
+135090465;doppione
+135092723;doppione
 98412190;doppione
 115749769;doppione
 117371577;doppione

@@ -112,7 +112,8 @@
    "path": "/vendita-case/milano/san-babila/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Duomo",
@@ -135,7 +136,8 @@
    "path": "/vendita-case/milano/quadrilatero-della-moda/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Plebisciti - Susa",
@@ -150,7 +152,8 @@
    "path": "/vendita-case/milano/scala-manzoni/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Indipendenza",
@@ -197,7 +200,8 @@
    "path": "/vendita-case/milano/turati/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Lanza",
@@ -212,7 +216,8 @@
    "path": "/vendita-case/milano/porta-venezia/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Arena",
@@ -235,7 +240,8 @@
    "path": "/vendita-case/milano/repubblica/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Moscova",
@@ -266,14 +272,16 @@
    "path": "/vendita-case/milano/vincenzo-monti/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Porta Nuova",
    "path": "/vendita-case/milano/porta-nuova/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Città Studi",
