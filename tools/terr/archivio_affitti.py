@@ -19,6 +19,7 @@ if os.path.exists(ARC):
 nuovi = json.load(open(sys.argv[1], encoding="utf-8")) if len(sys.argv) > 1 else []
 for a in nuovi:
     if a.get("contr") != "A" and not str(a.get("zonaLetta", "")).startswith("A:"): continue
+    a["zonaLetta"] = str(a.get("zonaLetta", "")).split("#")[0]
     k = str(a["id"]); old = arc.get(k)
     if old and old.get("prezzo") and a.get("prezzo") and old["prezzo"] != a["prezzo"]:
         a["storico"] = (old.get("storico") or [[old.get("letto"), old["prezzo"]]]) + [[a.get("letto"), a["prezzo"]]]

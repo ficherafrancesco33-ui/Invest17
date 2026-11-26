@@ -1393,6 +1393,16 @@
 134935743;550000;70;2;1;1;1;O;Bilocale;45.4582;9.17648;;Corso Genova;Milano;0;
 134940865;770000;180;3;3;2;1;O;Trilocale;45.4149;9.1773;Via Selvanesco;Gratosoglio;Milano;0;a
 134948311;265000;55;1;1;1;1;O;Monolocale;45.4143;9.17691;Via Selvanesco;Gratosoglio;Milano;0;a
+94302968;1000;40;1;1;2;0;O;Monolocale;45.36230;9.13280;ss35 dei Giovi;Zibido San Giacomo;Zibido San Giacomo;0;a;0|0|0
+112431623;750;100;2;1;S;0;B;Bilocale;45.33290;9.33370;Via Provinciale Sant'Angelo;Cerro al Lambro;Cerro al Lambro;0;ai;0|0|0
+129195874;950;91;3;2;2;0;;Trilocale;45.35820;9.11110;Via Papa Giovanni 23;Zibido San Giacomo;Zibido San Giacomo;0;bt;0|0|0
+130190822;900;122;3;1;2;0;O;Trilocale;45.31740;9.10590;Via Binasco;Casarile;Casarile;0;bta;0|0|0
+130721090;1600;147;4;2;T - R;1;O;Quadrilocale;45.46490;9.33830;Via Firenze;Rodano;Rodano;0;bg;0|0|0
+133766520;900;99;2;1;R;0;B;Bilocale;45.31730;9.10370;Via Giuseppe Garibaldi;Casarile;Casarile;0;ca;0|0|0
+134349347;1500;130;3;2;;1;B;Appartamento in villa;45.37063;9.13973;Via Aldo Moro;Zibido San Giacomo;Zibido San Giacomo;1;bta;0|0|0
+134881523;1400;94;3;2;2;1;O;Trilocale;45.46770;9.33905;Via delle Querce;Rodano;Rodano;0;a;0|0|0
+134957643;820;60;;;S3;1;O;Appartamento;45.36870;9.10930;Via Giacomo Matteotti;Zibido San Giacomo;Zibido San Giacomo;1;ba;0|0|0
+134989621;1300;90;3;1;1;0;O;Trilocale;45.46760;9.34014;Via delle Querce;Rodano;Rodano;0;a;0|0|0
 65030046;275000;35;1;1;3;1;O;Monolocale;45.44760;9.20800;Via Passo Buole;Porta Romana - Medaglie d'Oro;Milano;0;ai;0|0|0
 69220948;425000;75;2;1;5;1;B;Appartamento;45.46250;9.23174;Viale Corsica;Argonne - Corsica;Milano;1;bca;0|0|0
 72081462;270000;55;2;1;4;1;B;Bilocale;45.45040;9.22120;via carabelli 1;Martini - Insubria;Milano;0;bd;0|0|0
@@ -30318,7 +30328,6 @@
 91739856;278000;116;4;2;1;1;O;Appartamento;45.50523;8.95497;Via Luigi Einaudi;Arluno;Arluno;1;t;0|0|0
 93567390;18000;30;1;;;0;R;Rustico;45.50750;8.92130;Cascina Malpensa;Arluno;Arluno;0;;0|0|0
 93569694;345000;133;4;2;1;1;N;Quadrilocale;45.52670;9.50831;Via Rita Levi Montalcini;Cassano d'Adda;Cassano d'Adda;0;t;0|0|0
-94302968;1000;40;1;1;2;0;O;Monolocale;45.36230;9.13280;ss35 dei Giovi;Zibido San Giacomo;Zibido San Giacomo;0;a;0|0|0
 95621942;280000;94;4;2;1;1;N;Quadrilocale;45.53740;9.47510;Via Padre David Maria Turoldo;Inzago;Inzago;0;t;0|0|0
 96893098;330000;120;3;2;S - T;1;B;Appartamento;45.52980;8.99811;Via Giuseppe Di Vittorio;Vanzago;Vanzago;1;a;0|0|0
 97317960;456200;177;3;3;;0;N;Villa bifamiliare;45.51070;9.00240;Viale XXV Aprile;Pregnana Milanese;Pregnana Milanese;0;bt;0|0|0
@@ -30397,7 +30406,6 @@
 112112635;550000;166;5+;2;;0;O;Villa unifamiliare;45.50900;8.93570;Via Armando Diaz;Arluno;Arluno;0;;0|0|0
 112228615;115000;50;2;1;1;0;O;Bilocale;45.63650;9.18440;Via Podgora;Cesano Maderno;Cesano Maderno;0;tad;0|0|0
 112355267;650000;194;5;2;;0;N;Villa unifamiliare;45.52680;9.50835;Via Rita Levi Montalcini;Cassano d'Adda;Cassano d'Adda;0;b;0|0|0
-112431623;750;100;2;1;S;0;B;Bilocale;45.33290;9.33370;Via Provinciale Sant'Angelo;Cerro al Lambro;Cerro al Lambro;0;ai;0|0|0
 112461541;550000;800;;;;0;R;Rustico;45.57540;9.02430;Via Giuseppe Mazzini;Lainate;Lainate;0;;0|0|0
 112671021;320000;145;3;2;;0;B;Villa a schiera;45.61980;9.13660;Via Molise;Cesano Maderno;Cesano Maderno;0;cd;0|0|0
 112885201;495000;275;4;2;;0;B;Villa unifamiliare;45.55710;9.02780;Via Calabria, 13;Lainate;Lainate;0;;0|0|0
@@ -31230,7 +31238,6 @@
 129185214;449650;183;4;2;8;1;O;Attico;45.52670;9.52150;Via Giosuè Carducci;Cassano d'Adda;Cassano d'Adda;0;btcd;0|0|0
 129194594;320000;168;3;2;;0;B;Villa unifamiliare;45.32660;9.35492;via Europa;San Zenone al Lambro;San Zenone al Lambro;0;bc;0|0|0
 129194636;650000;200;5;2;;0;N;Villa unifamiliare;45.54650;9.01690;Via Carabelli;Lainate;Lainate;0;bt;0|0|0
-129195874;950;91;3;2;2;0;;Trilocale;45.35820;9.11110;Via Papa Giovanni 23;Zibido San Giacomo;Zibido San Giacomo;0;bt;0|0|0
 129199436;220000;55;2;1;T;1;N;Bilocale;45.62820;9.15130;Via Venezia;Cesano Maderno;Cesano Maderno;0;caji;0|0|0
 129202708;489000;298;3;2;;0;O;Villa unifamiliare;45.54620;9.00640;Via Liguria;Pogliano Milanese;Pogliano Milanese;0;;0|0|0
 129207354;133000;86;3;1;4;0;O;Trilocale;45.50420;9.42380;Via Edmondo de Amicis, 3, 20066 Melzo MI, Italia;Melzo;Melzo;0;bcd;0|0|0
@@ -31432,7 +31439,6 @@
 130171916;155000;90;3;1;1;0;B;Trilocale;45.50880;8.97350;Via Roma;Vanzago;Vanzago;0;bcgd;0|0|0
 130186858;649000;456;5+;3;;0;B;Villa plurifamiliare;45.59460;9.08240;Via per Senago;Cesate;Cesate;0;t;0|0|0
 130188660;335000;116;4;2;T;0;O;Quadrilocale;45.56520;9.02413;via Val Camonica;Lainate;Lainate;0;cagj;0|0|0
-130190822;900;122;3;1;2;0;O;Trilocale;45.31740;9.10590;Via Binasco;Casarile;Casarile;0;bta;0|0|0
 130196750;99000;59;2;1;1;0;B;Bilocale;45.60150;9.52470;via Giotto;Trezzo sull'Adda;Trezzo sull'Adda;0;bc;0|0|0
 130235260;340000;187;4;2;S/ 5/ 6;1;B;Attico;45.50540;9.43030;Via Carlo Oreglio;Melzo;Melzo;0;btgi;0|0|0
 130236184;400000;182;5+;3+;;0;O;Villa bifamiliare;45.53610;8.98750;Via A. Chaniach;Pogliano Milanese;Pogliano Milanese;0;bci;0|0|0
@@ -31489,7 +31495,6 @@
 130716934;275000;124;4;2;S/ 2;1;N;Quadrilocale;45.56970;9.50140;Via Unità d'Italia;Pozzo d'Adda;Pozzo d'Adda;0;bg;0|0|0
 130719498;349000;344;5+;3+;;0;B;Terratetto unifamiliare;45.52480;9.53730;Via Treviglio;Cassano d'Adda;Cassano d'Adda;0;bc;0|0|0
 130720130;495000;150;4;2;;0;N;Villa a schiera;45.56760;8.98610;Via Don Luigi Orione;Nerviano;Nerviano;0;;0|0|0
-130721090;1600;147;4;2;T - R;1;O;Quadrilocale;45.46490;9.33830;Via Firenze;Rodano;Rodano;0;bg;0|0|0
 130723558;270000;120;4;2;5;1;B;Quadrilocale;45.63590;9.16188;via Giovanni De Medici;Cesano Maderno;Cesano Maderno;0;btc;0|0|0
 130724626;249000;140;4;1;3;1;B;Quadrilocale;45.63580;9.15191;Via D.Manin;Cesano Maderno;Cesano Maderno;0;bci;0|0|0
 130725972;200000;105;3;2;3;1;B;Appartamento;45.55000;9.02173;Via Prima Strada;Lainate;Lainate;1;bc;0|0|0
@@ -32179,7 +32184,6 @@
 133762490;489000;166;4;2;2;1;N;Attico;45.57680;9.50280;Via Antonio Gramsci;Pozzo d'Adda;Pozzo d'Adda;0;t;0|0|0
 133763976;110000;61;2;1;T/ 1;0;B;Bilocale;45.63320;9.14640;Via Novara;Cesano Maderno;Cesano Maderno;0;bsi;0|0|0
 133766064;159000;80;3;1;1;1;B;Trilocale;45.32620;9.35290;Via Chinnici;San Zenone al Lambro;San Zenone al Lambro;0;bcg;0|0|0
-133766520;900;99;2;1;R;0;B;Bilocale;45.31730;9.10370;Via Giuseppe Garibaldi;Casarile;Casarile;0;ca;0|0|0
 133767742;389000;197;5;1;;0;B;Villa unifamiliare;45.50690;8.97250;Via Sant'Isaia;Arluno;Arluno;0;btcjd;0|0|0
 133768006;260000;84;3;2;1;1;O;Trilocale;45.61860;9.07824;Via Varese;Solaro;Solaro;0;btc;0|0|0
 133768562;175000;100;3;1;3;0;O;Trilocale;45.50280;8.94600;Via Caduti del Lavoro, 20004 Arluno MI, Italia;Arluno;Arluno;0;ba;0|0|0
@@ -32324,7 +32328,6 @@
 134346533;128000;67;2;1;4;1;R;Bilocale;45.62660;9.15170;via Monte Grappa, 24;Cesano Maderno;Cesano Maderno;0;bad;0|0|0
 134347151;135000;90;3;1;4;0;O;Trilocale;45.49580;9.42146;via Leoncavallo;Melzo;Melzo;0;bc;0|0|0
 134348581;259000;105;3;2;1;0;O;Trilocale;45.62780;9.14780;Via Milano;Cesano Maderno;Cesano Maderno;0;bgi;0|0|0
-134349347;1500;130;3;2;;1;B;Appartamento in villa;45.37063;9.13973;Via Aldo Moro;Zibido San Giacomo;Zibido San Giacomo;1;bta;0|0|0
 134350453;118000;75;2;1;T;1;B;Bilocale;45.63930;9.17830;VIA FRATELLI KENNEDY, 3/A;Cesano Maderno;Cesano Maderno;0;b;0|0|0
 134352899;139000;84;3;1;3;0;B;Trilocale;45.57440;9.03300;Via Antonio Labriola;Lainate;Lainate;0;b;0|0|0
 134354403;68000;161;3;2;;0;R;Terratetto unifamiliare;45.55494;8.97407;Via della Croce;Nerviano;Nerviano;1;t;0|0|0
@@ -32573,7 +32576,6 @@
 134868309;128000;67;2;1;S/ 5;1;R;Bilocale;45.50550;9.42540;Via Dolomiti;Melzo;Melzo;0;bc;0|0|0
 134870711;150000;62;2;1;1;1;O;Bilocale;45.52670;9.51400;SP11;Cassano d'Adda;Cassano d'Adda;0;tcag;0|0|0
 134870721;159000;65;2;1;T;0;O;Bilocale;45.49770;9.42300;;Melzo;Melzo;0;a;0|0|0
-134881523;1400;94;3;2;2;1;O;Trilocale;45.46770;9.33905;Via delle Querce;Rodano;Rodano;0;a;0|0|0
 134899479;167000;80;2;1;T;1;O;Bilocale;45.52130;9.50866;Via C. Colombo;Cassano d'Adda;Cassano d'Adda;0;;0|0|0
 134899805;155000;85;3;1;1;0;B;Trilocale;45.47790;9.41231;Via Don Enrico Cazzaniga 2;Liscate;Liscate;0;bt;0|0|0
 134899919;699000;350;5;3+;;0;B;Villa unifamiliare;45.63260;9.13627;VICENZA;Cesano Maderno;Cesano Maderno;0;td;0|0|0
@@ -32614,7 +32616,6 @@
 134947233;144000;85;2;1;2;0;B;Bilocale;45.62520;9.14390;Corso Roma;Cesano Maderno;Cesano Maderno;0;bd;0|0|0
 134947271;136000;68;2;1;S/ T;1;B;Bilocale;45.61850;9.14940;Via Santa Maria;Cesano Maderno;Cesano Maderno;0;c;0|0|0
 134948509;197000;75;4;2;1;0;N;Quadrilocale;45.49950;9.42350;;Melzo;Melzo;0;bc;0|0|0
-134957643;820;60;;;S3;1;O;Appartamento;45.36870;9.10930;Via Giacomo Matteotti;Zibido San Giacomo;Zibido San Giacomo;1;ba;0|0|0
 134958329;350000;126;4;2;S/ 1;1;N;Quadrilocale;45.54420;9.52230;Piazza Caprara;Cassano d'Adda;Cassano d'Adda;0;btcg;0|0|0
 134959857;482000;154;4;2;1;1;N;Quadrilocale;45.62380;9.13930;Via Gioacchino Rossini;Cesano Maderno;Cesano Maderno;0;tc;0|0|0
 134959979;520000;163;4;2;1;1;N;Quadrilocale;45.62380;9.13930;Via Gioacchino Rossini;Cesano Maderno;Cesano Maderno;0;tc;0|0|0
@@ -32627,7 +32628,6 @@
 134976459;589000;312;4;3;;0;O;Villa unifamiliare;45.56210;9.48870;Via Jan Palach;Pozzo d'Adda;Pozzo d'Adda;0;j;0|0|0
 134982653;110000;88;2;1;S/ T/ R;0;B;Bilocale;45.57310;9.03100;Via Weil Weiss;Lainate;Lainate;0;bc;0|0|0
 134984997;450000;160;4;2;3;1;N;Quadrilocale;45.61700;9.07713;Via Manzoni, 6;Solaro;Solaro;0;btc;0|0|0
-134989621;1300;90;3;1;1;0;O;Trilocale;45.46760;9.34014;Via delle Querce;Rodano;Rodano;0;a;0|0|0
 134993871;173000;104;3;1;1;1;O;Trilocale;45.60540;9.51717;Via del chioso;Trezzo sull'Adda;Trezzo sull'Adda;0;bc;0|0|0
 134994957;200000;188;4;2;T/ 1;0;R;Quadrilocale;45.54250;9.48170;Via Adolfo Fumagalli;Inzago;Inzago;0;btci;0|0|0
 134995485;290000;118;3;2;S/ 1/ 2;0;B;Trilocale;45.53770;9.47590;Via Padre David Maria Turoldo;Inzago;Inzago;0;btg;0|0|0

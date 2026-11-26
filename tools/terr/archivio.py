@@ -12,6 +12,9 @@ H = os.path.dirname(os.path.abspath(__file__))
 ARC = os.path.join(H, "archivio_milano.json.gz")
 
 nuovi = json.load(open(sys.argv[1], encoding="utf-8")) if len(sys.argv) > 1 else []   # senza file: rigenera le righe dall'archivio
+# solo vendite: gli affitti (contr "A", zone "A:…") vanno in archivio_affitti.py
+nuovi = [a for a in nuovi if a.get("contr") != "A" and not str(a.get("zonaLetta", "")).startswith("A:")]
+for a in nuovi: a["zonaLetta"] = str(a.get("zonaLetta", "")).split("#")[0]   # le riletture ("#R") contano come la stessa zona
 arc = {}
 if os.path.exists(ARC):
     for a in json.load(gzip.open(ARC, "rt", encoding="utf-8")): arc[str(a["id"])] = a
