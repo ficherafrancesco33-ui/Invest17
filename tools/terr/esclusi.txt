@@ -3,6 +3,8 @@
 88543591;magazzino seminterrato, non abitazione
 127365567;asta pubblica
 127598188;locale C/2 (deposito) venduto come non abitativo
+133177096;quota / comproprietà
+134389767;uso non abitativo
 98104068;progetto / nuova costruzione
 99954196;non residenziale
 99954200;non residenziale
@@ -351,7 +353,6 @@
 132250696;progetto / nuova costruzione
 132252802;progetto / nuova costruzione
 132991540;nuda proprietà
-133177096;quota / comproprietà
 133274082;uso non abitativo
 133547754;non residenziale
 133624772;non residenziale
@@ -362,7 +363,6 @@
 133822976;non residenziale
 134004633;uso non abitativo
 134315317;non residenziale
-134389767;uso non abitativo
 134480071;non residenziale
 134502633;progetto / nuova costruzione
 134540761;uso non abitativo
@@ -1594,3 +1594,9 @@
 134726021;non residenziale
 134958299;uso non abitativo
 135066341;progetto / nuova costruzione
+132732130;progetto / nuova costruzione
+134977347;uso non abitativo
+135002151;uso non abitativo
+135006575;uso non abitativo
+135028633;uso non abitativo
+135080293;uso non abitativo

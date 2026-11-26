@@ -104,7 +104,8 @@
    "path": "/vendita-case/milano/borgogna-largo-augusto/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "San Babila",
@@ -118,14 +119,16 @@
    "path": "/vendita-case/milano/duomo/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Piave - Tricolore",
    "path": "/vendita-case/milano/piave-tricolore/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quadrilatero della Moda",
@@ -139,7 +142,8 @@
    "path": "/vendita-case/milano/plebisciti-susa/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Scala - Manzoni",
@@ -153,14 +157,16 @@
    "path": "/vendita-case/milano/indipendenza/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Palestro",
    "path": "/vendita-case/milano/palestro/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Sant'Ambrogio",
@@ -175,14 +181,16 @@
    "path": "/vendita-case/milano/brera/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cadorna - Castello",
    "path": "/vendita-case/milano/cadorna-castello/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Turati",
@@ -196,7 +204,8 @@
    "path": "/vendita-case/milano/lanza/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Porta Venezia",
@@ -210,14 +219,16 @@
    "path": "/vendita-case/milano/arena/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Dezza",
    "path": "/vendita-case/milano/dezza/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Repubblica",
@@ -231,21 +242,24 @@
    "path": "/vendita-case/milano/moscova/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Buenos Aires",
    "path": "/vendita-case/milano/buenos-aires/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Morgagni",
    "path": "/vendita-case/milano/morgagni/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Vincenzo Monti",
@@ -266,7 +280,8 @@
    "path": "/vendita-case/milano/citta-studi/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-21"
+   "data": "2026-11-21",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Pagano",
