@@ -400,6 +400,14 @@
    "priv": [],
    "scartati": 63,
    "nota": "Avvisi del 22-25/11 letti con Chrome: 69 annunci nuovi (senza aste), 6 tenuti (Castelletto Sopra Ticino ×3, Valleve, Sant'Omobono Terme, Vergiate); 4 annunci in evidenza restano da aprire (captcha)"
+  },
+  {
+   "data": "2026-11-26",
+   "inv": [],
+   "mil": [],
+   "priv": [],
+   "scartati": 10,
+   "nota": "Mac spento: 10 aste dell'email scartate, 121 annunci della ricerca da leggere al prossimo giro"
   }
  ],
  "dal": {
@@ -790,9 +798,16 @@
   "1a201a1a85365a7b",
   "1a206c845a9e4a6c",
   "1a20bf38a293dc50",
-  "1a2111664b0dd94c"
+  "1a2111664b0dd94c",
+  "1a21640c907f20d2"
  ],
  "pendenti": [
+  {
+   "titolo": "Ricerca salvata \"Immobili in vendita nell'area disegnata\" (121 nuovi annunci, avviso del 26/11/2026)",
+   "link": "https://clicks.immobiliare.it/f/a/NP4UC_p84dw4l67y8IWo9Q~~/AAAHahA~/Qx7kjdbx8IXm93HljfWR_4fNYRf_dbFcPI_DL_YWvdyg8SEuWlz9dsO6KBCeQNXZX50oTMACUkEgcJQjLkUverDeXwus4MlVnep1UkkI-42WH9wSWqN5OeQLrlgqbtM7zILcIK-4kuLv9SlKo3wC_KTzz8yI8Nle6GUeigpaMQnG1X_fgh1Q-0bFHdCaZIr3yUpDIa5IvQXO8tCJrs9bB0cPPjl2sLSTbTRzhMR8JNuVt3ot7AD5nT0lAbWLXhK95_jBA5NXF4oUUA0Dqtnbjz58yXWJP3yVT0J5viuX40fAZYiazAP8BNYt7Ethyfnzk-f00q30lPq41xH8NUWglQ2bl3mOTthUYTWMSB65b3hGqMlyiazFcm6863B3wPrHWUpvpQDOdvGDyo7HkD1Dx2XqL9BDA8Cl-ZLMJbeJELojrWtRcNxTM4B2x6hqUHhqrfduTIOmsvUW9Q7RcgQw2oecpntr6GUCYHLeFznCA8ZPDt6Nu1JecDWpCRcFmWsskeWEvGLXnrBcBByCYahd2mWvbAgRo9q4XOwYWOATIL5CIQhJWMp4S-Xm1u8vjUUrwE1bCgVSA7IOwrW-rLv1dLNEcZHlnsDOupslpms0trSIJ5vdTD--khumqLfvk3kBYMYP4J8yYyq6guSYGMO1EU_QfONd6xKfAXmN5elC7VRbcKwK-6NKK5jjRZiRLWvcdGTyxSLubHpO4IZexZ8V9AkHtPYKsoT0EYyrAHjsOfsgIQS78TZSazZalgojQiJiq2n06cXixhTuklOQ5_mIsA~~",
+   "email": "1a21640c907f20d2",
+   "motivo": "Chrome sul Mac non raggiungibile: Avvia ricerca da aprire al prossimo giro"
+  },
   {
    "titolo": "Bilocale buono stato, piano terra, Cameri",
    "prezzo": 40000,
@@ -832,6 +847,15 @@
    "email": "1a2111664b0dd94c",
    "motivo": "scheda non letta: captcha Immobiliare il 25/11 alle 16:15 (annuncio in evidenza, id 133788490); da riprovare al prossimo giro",
    "id": "133788490"
+  },
+  {
+   "titolo": "Bilocale via Amedeo Duca d'Aosta 13, Centro, Ardesio",
+   "prezzo": 48000,
+   "mq": 55,
+   "locali": 2,
+   "link": "https://clicks.immobiliare.it/f/a/wLYe_svtiKTCag63m7Y88w~~/AAAHahA~/EqguljyzUijlNV6_peCcLQLRllMVTjL90FnMCCFwGNJQ3i5MZnyRrmlUt3PfPVK-fwraBeyg3V4fSN7kRe5nG-xuX30KgbDNJ0lamvLsNl82VhErCTdy_VZ_6Q9ifANyIOyLuwA_c8SO6DzxbTR9eYOgV9pA1DJIAIMys0t0hSDV_y55Sw9WLxxmodjXfnCMTd4eNHHpUqEar54zIkG3v83F3vW-d_e_hl9ztIXdm0SQk2jX4X4ONvp5R_oiI6CfY3yVpqnryEhskfJyrQCIuw~~",
+   "email": "1a21640c907f20d2",
+   "motivo": "annuncio in evidenza, Chrome non raggiungibile: scheda non aperta"
   }
  ],
  "visti": [
