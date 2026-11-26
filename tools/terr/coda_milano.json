@@ -424,7 +424,8 @@
    "path": "/vendita-case/milano/casoretto/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Maggiolina",
@@ -466,7 +467,8 @@
    "path": "/vendita-case/milano/cascina-dei-pomi/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Zara",
@@ -628,7 +630,8 @@
    "path": "/vendita-case/milano/ca-granda/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bovisa",
@@ -723,7 +726,8 @@
    "path": "/vendita-case/milano/cascina-gobba/",
    "tipo": "micro",
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Quarto Cagnino",
@@ -912,7 +916,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "San Giuliano Milanese",
@@ -941,7 +946,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Vimodrone",
@@ -950,7 +956,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cologno Monzese",
@@ -969,7 +976,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bresso",
@@ -1048,7 +1056,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cusago",
@@ -1097,7 +1106,8 @@
    "prov": "MI",
    "anello": 1,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Bollate",
@@ -1286,7 +1296,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Sedriano",
@@ -1315,7 +1326,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Limbiate",
@@ -1354,7 +1366,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Settala",
@@ -1363,7 +1376,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Paullo",
@@ -1382,7 +1396,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Cerro al Lambro",
@@ -1411,7 +1426,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Casarile",
@@ -1440,7 +1456,8 @@
    "prov": "MI",
    "anello": 2,
    "stato": "fatto",
-   "data": "2026-11-22"
+   "data": "2026-11-22",
+   "riletta": "2026-11-26"
   },
   {
    "n": "Abbiategrasso",
